@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Banking Mock Test (GitHub)</title>
+    <title>Banking Mock Test</title>
     
     <!-- KaTeX for Math -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 
     <style>
-        /* CSS RESET & VARIABLES */
+        /* CSS RESET */
         :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
@@ -29,11 +29,12 @@
         #view-list { align-items: center; padding: 20px; }
         .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
 
-        /* EXAM HEADER */
+        /* EXAM HEADER - FIXED */
         header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
-        .timer { font-family: monospace; font-size: 18px; font-weight: bold; background: #555; padding: 5px 10px; border-radius: 4px; }
-        .header-controls { display: flex; gap: 8px; }
-        .btn-header { padding: 6px 12px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
+        #exam-title { font-weight: bold; font-size: 1.1rem; max-width: 40%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .timer-box { display: flex; align-items: center; gap: 8px; }
+        .timer { font-family: monospace; font-size: 16px; font-weight: bold; background: #555; padding: 5px 8px; border-radius: 4px; }
+        .btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
         .btn-pause { background: var(--yellow); color: #222; }
         .btn-exit { background: var(--red); color: white; }
 
@@ -80,7 +81,7 @@
     <!-- HOME -->
     <div id="view-home" class="view active">
         <h2 style="color: var(--dark); margin-bottom: 30px;">Banking Mock Tests</h2>
-        <div style="margin-bottom:15px; color:#666; font-size:0.9em;">Mode: <strong style="color:green">GITHUB / ONLINE</strong></div>
+        <div style="margin-bottom:15px; color:#666; font-size:0.9em;">Mode: <strong style="color:green">GITHUB</strong></div>
 
         <div class="subject-card" onclick="window.app.showList('quant')">
             <div style="display:flex; align-items:center;">
@@ -109,10 +110,11 @@
     <!-- EXAM -->
     <div id="view-exam" class="view">
         <header>
-            <div class="timer" id="timer-display">00:00</div>
-            <div class="header-controls">
-                <button class="btn-header btn-pause" onclick="window.app.togglePause()">⏸ Pause</button>
-                <button class="btn-header btn-exit" onclick="window.app.exitTest()">Exit</button>
+            <div id="exam-title">Mock Test</div> <!-- THIS WAS MISSING BEFORE! -->
+            <div class="timer-box">
+                <div class="timer" id="timer-display">00:00</div>
+                <button class="btn-header btn-pause" onclick="window.app.togglePause()">⏸</button>
+                <button class="btn-header btn-exit" onclick="window.app.exitTest()">✖</button>
                 <button class="btn-outline" style="background:white; padding: 5px 10px;" onclick="window.app.toggleSidebar()">☰</button>
             </div>
         </header>
@@ -179,18 +181,19 @@
 
     <script>
     // --- GITHUB FILE CONFIGURATION ---
-    // Make sure these paths match exactly what you have in GitHub. 
-    // Case Sensitive! "Tests" is different from "tests".
+    // Using Absolute URLs to avoid relative path errors on sub-pages
+    var BASE_URL = "https://nitingit7.github.io/Mock-Test/";
+    
     var GITHUB_FILES = {
         'quant': [
-            { name: "Quant Mock 1", file: "tests/quant/mock1.json" },
-            { name: "Quant Mock 2", file: "tests/quant/mock2.json" }
+            { name: "Quant Mock 1", file: BASE_URL + "tests/quant/mock1.json" },
+            // Note: mock2.json is NOT in your screenshot, so I removed it to prevent 404
         ],
         'reasoning': [
-            { name: "Reasoning Mock 1", file: "tests/reasoning/mock1.json" }
+            { name: "Reasoning Mock 1", file: BASE_URL + "tests/reasoning/mock1.json" }
         ],
         'english': [
-            { name: "English Mock 1", file: "tests/english/mock1.json" }
+            { name: "English Mock 1", file: BASE_URL + "tests/english/mock1.json" }
         ]
     };
 
@@ -234,7 +237,7 @@
 
         fetchTest: function(url) {
             var self = this;
-            // Add timestamp to prevent caching issues on GitHub
+            // Add timestamp to prevent caching issues
             var cleanUrl = url + "?t=" + new Date().getTime();
             
             fetch(cleanUrl)
@@ -244,7 +247,7 @@
                 })
                 .then(function(json) { self.startExam(json); })
                 .catch(function(err) { 
-                    alert("⚠️ Error loading test file!\n\nPath: " + url + "\nError: " + err.message + "\n\nCheck if the file exists in your GitHub 'tests' folder."); 
+                    alert("Error loading test!\n\nPath: " + url + "\n\nError: " + err.message); 
                 });
         },
 
@@ -262,7 +265,10 @@
             this.timeLeft = (this.data.timeLimit || 20) * 60;
             this.startTimer();
             
-            document.getElementById('exam-title').innerText = this.data.title || "Mock Test";
+            // This line crashed before because 'exam-title' was missing from HTML
+            var titleEl = document.getElementById('exam-title');
+            if(titleEl) titleEl.innerText = this.data.title || "Mock Test";
+            
             document.getElementById('exam-footer').style.display = 'flex';
             document.getElementById('review-footer').style.display = 'none';
             document.getElementById('pause-overlay').style.display = 'none';
