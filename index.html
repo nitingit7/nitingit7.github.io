@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Banking Mock Test Pro</title>
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <style>
+        /* CSS STYLES */
+        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
+
+        .view { display: none; width: 100%; height: 100%; flex-direction: column; }
+        .view.active { display: flex; }
+
+        /* HOME */
+        #view-home { align-items: center; padding: 20px; overflow-y: auto; }
+        .subject-card { background: white; width: 100%; max-width: 500px; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; }
+        .subject-card:active { background-color: #e9ecef; }
+        .icon { font-size: 24px; margin-right: 15px; }
+
+        /* LIST */
+        #view-list { align-items: center; padding: 20px; }
+        .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
+
+        /* EXAM HEADER */
+        header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
+        .timer { font-family: monospace; font-size: 18px; font-weight: bold; background: #555; padding: 4px 8px; border-radius: 4px; }
+        
+        .header-controls { display: flex; gap: 10px; align-items: center; }
+        .btn-header { padding: 5px 10px; font-size: 12px; border-radius: 3px; border: none; cursor: pointer; font-weight: bold; }
+        .btn-pause { background: var(--yellow); color: black; }
+        .btn-exit { background: var(--red); color: white; }
+
+        /* EXAM BODY */
+        .exam-body { display: flex; flex: 1; overflow: hidden; position: relative; }
+        .q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: white; }
+        .q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; }
+        .q-footer { padding: 10px; background: #f8f9fa; border-top: 1px solid #ddd; display: flex; justify-content: space-between; }
+
+        .opt-row { display: flex; padding: 12px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; cursor: pointer; align-items: center; }
+        .opt-row.selected { background: #e3f2fd; border-color: var(--blue); border-width: 2px; }
+        .opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; }
+        .opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; }
+        
+        .solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
+
+        /* SIDEBAR */
+        #sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: white; border-left: 1px solid #ccc; transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; }
+        #sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
+        .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
+        .pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #ccc; display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; }
+        .p-ans { background: var(--green); color: white; border: none; }
+        .p-not { background: var(--red); color: white; border: none; }
+        .p-rev { background: #6f42c1; color: white; border: none; }
+
+        /* PAUSE MODAL */
+        #pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100; display: none; justify-content: center; align-items: center; flex-direction: column; color: white; }
+
+        /* RESULT */
+        #view-result { justify-content: center; align-items: center; background: white; }
+        .score-card { text-align: center; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 10px; width: 90%; max-width: 400px; }
+
+        .btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
+        .btn-green { background: var(--green); }
+        .btn-red { background: var(--red); }
+        .btn-blue { background: var(--blue); }
+        .btn-outline { background: transparent; border: 1px solid #ccc; color: #333; }
+        .back-btn { margin-bottom: 20px; cursor: pointer; color: var(--blue); font-weight: bold; display: block; }
+        .katex { font-size: 1.1em; }
+    </style>
+</head>
+<body>
+
+    <!-- HOME -->
+    <div id="view-home" class="view active">
+        <h2 style="color: var(--dark); margin-bottom: 30px;">Banking Mock Tests</h2>
+        <div class="subject-card" onclick="window.app.showList('quant')">
+            <div style="display:flex; align-items:center;">
+                <span class="icon">📊</span> <div><strong>Quantitative Aptitude</strong></div>
+            </div> <span>➜</span>
+        </div>
+        <div class="subject-card" onclick="window.app.showList('reasoning')">
+            <div style="display:flex; align-items:center;">
+                <span class="icon">🧩</span> <div><strong>Reasoning Ability</strong></div>
+            </div> <span>➜</span>
+        </div>
+        <div class="subject-card" onclick="window.app.showList('english')">
+            <div style="display:flex; align-items:center;">
+                <span class="icon">📖</span> <div><strong>English Language</strong></div>
+            </div> <span>➜</span>
+        </div>
+    </div>
+
+    <!-- LIST -->
+    <div id="view-list" class="view">
+        <div class="back-btn" onclick="window.app.switchView('view-home')">← Back</div>
+        <h2 id="list-title">Select Test</h2>
+        <div id="test-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
+    </div>
+
+    <!-- EXAM -->
+    <div id="view-exam" class="view">
+        <header>
+            <div class="timer" id="timer-display">00:00</div>
+            <div class="header-controls">
+                <button class="btn-header btn-pause" onclick="window.app.togglePause()">⏸ Pause</button>
+                <button class="btn-header btn-exit" onclick="window.app.exitTest()">Exit</button>
+                <button class="btn-outline" style="background:white; padding: 2px 8px;" onclick="window.app.toggleSidebar()">☰</button>
+            </div>
+        </header>
+        <div class="exam-body">
+            <main class="q-area">
+                <div class="q-content">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                        <strong style="color:var(--blue);" id="q-number">Q1</strong>
+                        <span style="font-size:0.8rem; background:#eee; padding:2px 6px; border-radius:4px;">Marks: +1 / -0.25</span>
+                    </div>
+                    <div id="q-text" style="margin-bottom:20px;">Loading...</div>
+                    <div id="options-box"></div>
+                    <div id="solution-box" class="solution-box">
+                        <strong>Solution:</strong> <div id="sol-text"></div>
+                    </div>
+                </div>
+                <div class="q-footer" id="exam-footer">
+                    <button class="btn btn-red" onclick="window.app.clearResponse()">Clear</button>
+                    <button class="btn" style="background:#6f42c1;" onclick="window.app.markReview()">Review</button>
+                    <button class="btn btn-green" onclick="window.app.saveNext()">Save & Next</button>
+                </div>
+                <div class="q-footer" id="review-footer" style="display:none;">
+                    <button class="btn btn-outline" onclick="window.app.prevQ()">Prev</button>
+                    <button class="btn btn-blue" onclick="window.app.nextQ()">Next</button>
+                    <button class="btn btn-red" onclick="window.app.exitReview()">Exit</button>
+                </div>
+            </main>
+            <aside id="sidebar">
+                <div style="padding:10px; font-weight:bold; border-bottom:1px solid #eee;">
+                    Palette <span style="float:right; cursor:pointer;" onclick="window.app.toggleSidebar()">✖</span>
+                </div>
+                <div class="palette-grid" id="palette-grid"></div>
+                <div style="margin-top:auto; padding:15px;">
+                    <button class="btn btn-green" style="width:100%;" onclick="window.app.submitTest(false)">SUBMIT TEST</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- PAUSE OVERLAY -->
+    <div id="pause-overlay">
+        <h1>Test Paused</h1>
+        <p>Your timer is stopped.</p>
+        <button class="btn btn-green" style="font-size:1.2rem; padding: 15px 30px;" onclick="window.app.togglePause()">RESUME TEST</button>
+    </div>
+
+    <!-- RESULT -->
+    <div id="view-result" class="view">
+        <div class="score-card">
+            <h2>Test Result</h2>
+            <div style="font-size:3rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
+            <p>Total Marks</p>
+            <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
+                <span style="color:green;">Correct: <b id="final-correct">0</b></span>
+                <span style="color:red;">Wrong: <b id="final-wrong">0</b></span>
+                <span>Unatt: <b id="final-unatt">0</b></span>
+            </div>
+            <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" onclick="window.app.startReviewMode()">Review Solutions</button>
+            <button class="btn btn-outline" style="width:100%;" onclick="location.reload()">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+    // --- 1. FILE CONFIGURATION ---
+    // ADD YOUR NEW FILES HERE
+    var AVAILABLE_TESTS = {
+        'quant': [
+            { name: "Quant Mock 1", file: "./tests/quant/mock1.json" },
+            { name: "Quant Mock 2", file: "./tests/quant/mock2.json" }
+        ],
+        'reasoning': [
+            { name: "Reasoning Mock 1", file: "./tests/reasoning/mock1.json" }
+        ],
+        'english': [
+            { name: "English Mock 1", file: "./tests/english/mock1.json" }
+        ]
+    };
+
+    // --- 2. APP LOGIC ---
+    window.app = {
+        data: null,
+        responses: {},
+        currQ: 0,
+        timer: null,
+        timeLeft: 0,
+        isReview: false,
+        isPaused: false,
+
+        switchView: function(id) {
+            var views = document.querySelectorAll('.view');
+            for(var i=0; i<views.length; i++) { views[i].classList.remove('active'); }
+            document.getElementById(id).classList.add('active');
+        },
+
+        showList: function(subj) {
+            var list = document.getElementById('test-container');
+            list.innerHTML = '';
+            document.getElementById('list-title').innerText = subj.toUpperCase();
+            
+            var tests = AVAILABLE_TESTS[subj] || [];
+            
+            if(tests.length === 0) {
+                list.innerHTML = "<p>No tests found in configuration.</p>";
+            }
+
+            var self = this;
+            tests.forEach(function(t) {
+                var div = document.createElement('div');
+                div.className = 'test-item';
+                
+                var btn = document.createElement('button');
+                btn.className = 'btn btn-green';
+                btn.innerText = "Start";
+                btn.onclick = function() { self.fetchAndStart(t.file); };
+
+                var span = document.createElement('span');
+                span.innerText = t.name;
+
+                div.appendChild(span);
+                div.appendChild(btn);
+                list.appendChild(div);
+            });
+            this.switchView('view-list');
+        },
+
+        fetchAndStart: function(url) {
+            var self = this;
+            fetch(url)
+                .then(function(res) {
+                    if(!res.ok) throw new Error("File not found: " + url);
+                    return res.json();
+                })
+                .then(function(json) {
+                    self.startExam(json);
+                })
+                .catch(function(err) {
+                    alert("Error loading test.\nMake sure the file exists in the folder!\n" + err.message);
+                });
+        },
+
+        startExam: function(json) {
+            this.data = json;
+            this.responses = {};
+            this.currQ = 0;
+            this.isReview = false;
+            this.isPaused = false;
+            
+            for(var i=0; i<this.data.questions.length; i++) {
+                this.responses[i] = { sel: null, status: 'not-visited' };
+            }
+            
+            this.timeLeft = (this.data.timeLimit || 20) * 60;
+            this.startTimer();
+            
+            document.getElementById('exam-title').innerText = this.data.title || "Mock Test";
+            document.getElementById('exam-footer').style.display = 'flex';
+            document.getElementById('review-footer').style.display = 'none';
+            document.getElementById('pause-overlay').style.display = 'none';
+            
+            this.switchView('view-exam');
+            this.loadQ();
+        },
+
+        startTimer: function() {
+            if(this.timer) clearInterval(this.timer);
+            var disp = document.getElementById('timer-display');
+            var self = this;
+            this.timer = setInterval(function() {
+                if(self.isPaused) return; // Do nothing if paused
+
+                if(self.timeLeft <= 0) {
+                    clearInterval(self.timer);
+                    self.submitTest(true);
+                    return;
+                }
+                self.timeLeft--;
+                var m = Math.floor(self.timeLeft / 60).toString().padStart(2,'0');
+                var s = (self.timeLeft % 60).toString().padStart(2,'0');
+                disp.innerText = m + ":" + s;
+            }, 1000);
+        },
+
+        togglePause: function() {
+            this.isPaused = !this.isPaused;
+            var overlay = document.getElementById('pause-overlay');
+            if(this.isPaused) {
+                overlay.style.display = 'flex';
+            } else {
+                overlay.style.display = 'none';
+            }
+        },
+
+        exitTest: function() {
+            if(confirm("Are you sure you want to EXIT? All progress will be lost.")) {
+                clearInterval(this.timer);
+                this.switchView('view-home');
+            }
+        },
+
+        loadQ: function() {
+            var q = this.data.questions[this.currQ];
+            var r = this.responses[this.currQ];
+            
+            if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
+            
+            document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
+            document.getElementById('q-text').innerText = q.text;
+            
+            var box = document.getElementById('options-box');
+            box.innerHTML = '';
+            
+            var self = this;
+            q.options.forEach(function(opt, i) {
+                var row = document.createElement('div');
+                row.className = 'opt-row';
+                if(self.isReview) {
+                    row.style.pointerEvents = 'none';
+                    if(i === q.correctIndex) row.classList.add('correct');
+                    if(r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
+                } else {
+                    if(r.sel === i) row.classList.add('selected');
+                    row.onclick = function() {
+                        r.sel = i;
+                        self.loadQ();
+                    };
+                }
+                row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
+                box.appendChild(row);
+            });
+
+            var solBox = document.getElementById('solution-box');
+            if(this.isReview) {
+                solBox.style.display = 'block';
+                document.getElementById('sol-text').innerText = q.solution || "No solution";
+            } else {
+                solBox.style.display = 'none';
+            }
+
+            this.renderPalette();
+            if(window.renderMathInElement) {
+                 renderMathInElement(document.getElementById('q-text'));
+                 renderMathInElement(document.getElementById('options-box'));
+                 renderMathInElement(document.getElementById('sol-text'));
+            }
+        },
+
+        saveNext: function() {
+            var r = this.responses[this.currQ];
+            if(r.sel !== null) r.status = 'ans';
+            else r.status = 'not-answered';
+            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
+        },
+
+        markReview: function() {
+            var r = this.responses[this.currQ];
+            if(r.sel !== null) r.status = 'ans-rev';
+            else r.status = 'rev';
+            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
+        },
+
+        clearResponse: function() {
+            this.responses[this.currQ].sel = null;
+            this.responses[this.currQ].status = 'not-answered';
+            this.loadQ();
+        },
+
+        prevQ: function() { if(this.currQ > 0) { this.currQ--; this.loadQ(); } },
+        nextQ: function() { if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); } },
+
+        renderPalette: function() {
+            var grid = document.getElementById('palette-grid');
+            grid.innerHTML = '';
+            var self = this;
+            
+            this.data.questions.forEach(function(_, i) {
+                var btn = document.createElement('div');
+                btn.className = 'pal-btn';
+                btn.innerText = i + 1;
+                var s = self.responses[i].status;
+                
+                if(self.isReview) {
+                    var r = self.responses[i];
+                    if(r.sel === self.data.questions[i].correctIndex) btn.style.background = '#28a745';
+                    else if(r.sel !== null) btn.style.background = '#dc3545';
+                    else btn.style.background = '#ccc';
+                    btn.style.color = 'white';
+                } else {
+                    if(s === 'ans' || s === 'ans-rev') btn.classList.add('p-ans');
+                    else if(s === 'not-answered') btn.classList.add('p-not');
+                    else if(s === 'rev') btn.classList.add('p-rev');
+                }
+                if(i === self.currQ) btn.style.border = '2px solid black';
+                btn.onclick = function() { self.currQ = i; self.loadQ(); self.toggleSidebar(); };
+                grid.appendChild(btn);
+            });
+        },
+
+        toggleSidebar: function() { 
+            var sb = document.getElementById('sidebar');
+            if(sb.classList.contains('open')) sb.classList.remove('open');
+            else sb.classList.add('open');
+        },
+        
+        submitTest: function(force) {
+            if(!force && !confirm("Submit Test?")) return;
+            clearInterval(this.timer);
+            
+            var score = 0, corr = 0, wrong = 0, unatt = 0;
+            var self = this;
+            this.data.questions.forEach(function(q, i) {
+                var r = self.responses[i];
+                if(r.sel !== null) {
+                    if(r.sel === q.correctIndex) { score += 1; corr++; }
+                    else { score -= 0.25; wrong++; }
+                } else unatt++;
+            });
+
+            document.getElementById('final-score').innerText = score.toFixed(2);
+            document.getElementById('final-correct').innerText = corr;
+            document.getElementById('final-wrong').innerText = wrong;
+            document.getElementById('final-unatt').innerText = unatt;
+            this.switchView('view-result');
+        },
+
+        startReviewMode: function() {
+            this.isReview = true;
+            this.currQ = 0;
+            document.getElementById('exam-footer').style.display = 'none';
+            document.getElementById('review-footer').style.display = 'flex';
+            this.switchView('view-exam');
+            this.loadQ();
+        },
+
+        exitReview: function() { this.switchView('view-result'); }
+    };
+    </script>
+</body>
+</html>
