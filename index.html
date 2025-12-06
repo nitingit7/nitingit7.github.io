@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Banking Mock Test Pro</title>
+    <title>Banking Mock Test (GitHub)</title>
     
-    <!-- KaTeX for Math Rendering -->
+    <!-- KaTeX for Math -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 
     <style>
-        /* CSS STYLES */
+        /* CSS RESET & VARIABLES */
         :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
@@ -21,8 +21,8 @@
 
         /* HOME */
         #view-home { align-items: center; padding: 20px; overflow-y: auto; }
-        .subject-card { background: white; width: 100%; max-width: 500px; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; }
-        .subject-card:active { background-color: #e9ecef; }
+        .subject-card { background: white; width: 100%; max-width: 500px; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; transition: 0.2s; }
+        .subject-card:active { transform: scale(0.98); background: #f8f9fa; }
         .icon { font-size: 24px; margin-right: 15px; }
 
         /* LIST */
@@ -31,11 +31,10 @@
 
         /* EXAM HEADER */
         header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
-        .timer { font-family: monospace; font-size: 18px; font-weight: bold; background: #555; padding: 4px 8px; border-radius: 4px; }
-        
-        .header-controls { display: flex; gap: 10px; align-items: center; }
-        .btn-header { padding: 5px 10px; font-size: 12px; border-radius: 3px; border: none; cursor: pointer; font-weight: bold; }
-        .btn-pause { background: var(--yellow); color: black; }
+        .timer { font-family: monospace; font-size: 18px; font-weight: bold; background: #555; padding: 5px 10px; border-radius: 4px; }
+        .header-controls { display: flex; gap: 8px; }
+        .btn-header { padding: 6px 12px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
+        .btn-pause { background: var(--yellow); color: #222; }
         .btn-exit { background: var(--red); color: white; }
 
         /* EXAM BODY */
@@ -60,8 +59,8 @@
         .p-not { background: var(--red); color: white; border: none; }
         .p-rev { background: #6f42c1; color: white; border: none; }
 
-        /* PAUSE MODAL */
-        #pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100; display: none; justify-content: center; align-items: center; flex-direction: column; color: white; }
+        /* PAUSE OVERLAY */
+        #pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 100; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
 
         /* RESULT */
         #view-result { justify-content: center; align-items: center; background: white; }
@@ -81,6 +80,8 @@
     <!-- HOME -->
     <div id="view-home" class="view active">
         <h2 style="color: var(--dark); margin-bottom: 30px;">Banking Mock Tests</h2>
+        <div style="margin-bottom:15px; color:#666; font-size:0.9em;">Mode: <strong style="color:green">GITHUB / ONLINE</strong></div>
+
         <div class="subject-card" onclick="window.app.showList('quant')">
             <div style="display:flex; align-items:center;">
                 <span class="icon">📊</span> <div><strong>Quantitative Aptitude</strong></div>
@@ -112,7 +113,7 @@
             <div class="header-controls">
                 <button class="btn-header btn-pause" onclick="window.app.togglePause()">⏸ Pause</button>
                 <button class="btn-header btn-exit" onclick="window.app.exitTest()">Exit</button>
-                <button class="btn-outline" style="background:white; padding: 2px 8px;" onclick="window.app.toggleSidebar()">☰</button>
+                <button class="btn-outline" style="background:white; padding: 5px 10px;" onclick="window.app.toggleSidebar()">☰</button>
             </div>
         </header>
         <div class="exam-body">
@@ -151,11 +152,12 @@
         </div>
     </div>
 
-    <!-- PAUSE OVERLAY -->
+    <!-- PAUSE -->
     <div id="pause-overlay">
         <h1>Test Paused</h1>
-        <p>Your timer is stopped.</p>
-        <button class="btn btn-green" style="font-size:1.2rem; padding: 15px 30px;" onclick="window.app.togglePause()">RESUME TEST</button>
+        <p style="margin-bottom:30px;">Timer stopped.</p>
+        <button class="btn btn-green" style="padding:15px 30px;" onclick="window.app.togglePause()">RESUME</button>
+        <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #555;" onclick="window.app.exitTest()">Quit Test</button>
     </div>
 
     <!-- RESULT -->
@@ -176,12 +178,13 @@
     </div>
 
     <script>
-    // --- 1. FILE CONFIGURATION ---
-    // ADD YOUR NEW FILES HERE
-    var AVAILABLE_TESTS = {
+    // --- GITHUB FILE CONFIGURATION ---
+    // Make sure these paths match exactly what you have in GitHub. 
+    // Case Sensitive! "Tests" is different from "tests".
+    var GITHUB_FILES = {
         'quant': [
-            { name: "Quant Mock 1", file: "./tests/quant/mock1.json" },
-            { name: "Quant Mock 2", file: "./tests/quant/mock2.json" }
+            { name: "Quant Mock 1", file: "tests/quant/mock1.json" },
+            { name: "Quant Mock 2", file: "tests/quant/mock2.json" }
         ],
         'reasoning': [
             { name: "Reasoning Mock 1", file: "tests/reasoning/mock1.json" }
@@ -191,15 +194,9 @@
         ]
     };
 
-    // --- 2. APP LOGIC ---
+    // --- APP LOGIC ---
     window.app = {
-        data: null,
-        responses: {},
-        currQ: 0,
-        timer: null,
-        timeLeft: 0,
-        isReview: false,
-        isPaused: false,
+        data: null, responses: {}, currQ: 0, timer: null, timeLeft: 0, isReview: false, isPaused: false,
 
         switchView: function(id) {
             var views = document.querySelectorAll('.view');
@@ -212,49 +209,47 @@
             list.innerHTML = '';
             document.getElementById('list-title').innerText = subj.toUpperCase();
             
-            var tests = AVAILABLE_TESTS[subj] || [];
+            var files = GITHUB_FILES[subj];
+            if(!files || files.length === 0) { list.innerHTML = "<p>No files configured.</p>"; }
             
-            if(tests.length === 0) {
-                list.innerHTML = "<p>No tests found in configuration.</p>";
-            }
-
             var self = this;
-            tests.forEach(function(t) {
-                var div = document.createElement('div');
-                div.className = 'test-item';
-                
-                var btn = document.createElement('button');
-                btn.className = 'btn btn-green';
-                btn.innerText = "Start";
-                btn.onclick = function() { self.fetchAndStart(t.file); };
-
-                var span = document.createElement('span');
-                span.innerText = t.name;
-
-                div.appendChild(span);
-                div.appendChild(btn);
-                list.appendChild(div);
-            });
+            for (var j = 0; j < files.length; j++) {
+                (function(idx) {
+                    var f = files[idx];
+                    var div = document.createElement('div');
+                    div.className = 'test-item';
+                    div.innerHTML = "<span>" + f.name + "</span>";
+                    
+                    var btn = document.createElement('button');
+                    btn.className = 'btn btn-green';
+                    btn.innerText = "Start";
+                    btn.onclick = function() { self.fetchTest(f.file); };
+                    
+                    div.appendChild(btn);
+                    list.appendChild(div);
+                })(j);
+            }
             this.switchView('view-list');
         },
 
-        fetchAndStart: function(url) {
+        fetchTest: function(url) {
             var self = this;
-            fetch(url)
-                .then(function(res) {
-                    if(!res.ok) throw new Error("File not found: " + url);
-                    return res.json();
+            // Add timestamp to prevent caching issues on GitHub
+            var cleanUrl = url + "?t=" + new Date().getTime();
+            
+            fetch(cleanUrl)
+                .then(function(res) { 
+                    if(!res.ok) throw new Error("HTTP " + res.status + " Not Found"); 
+                    return res.json(); 
                 })
-                .then(function(json) {
-                    self.startExam(json);
-                })
-                .catch(function(err) {
-                    alert("Error loading test.\nMake sure the file exists in the folder!\n" + err.message);
+                .then(function(json) { self.startExam(json); })
+                .catch(function(err) { 
+                    alert("⚠️ Error loading test file!\n\nPath: " + url + "\nError: " + err.message + "\n\nCheck if the file exists in your GitHub 'tests' folder."); 
                 });
         },
 
-        startExam: function(json) {
-            this.data = json;
+        startExam: function(jsonObj) {
+            this.data = jsonObj;
             this.responses = {};
             this.currQ = 0;
             this.isReview = false;
@@ -281,8 +276,8 @@
             var disp = document.getElementById('timer-display');
             var self = this;
             this.timer = setInterval(function() {
-                if(self.isPaused) return; // Do nothing if paused
-
+                if(self.isPaused) return; 
+                
                 if(self.timeLeft <= 0) {
                     clearInterval(self.timer);
                     self.submitTest(true);
@@ -297,18 +292,15 @@
 
         togglePause: function() {
             this.isPaused = !this.isPaused;
-            var overlay = document.getElementById('pause-overlay');
-            if(this.isPaused) {
-                overlay.style.display = 'flex';
-            } else {
-                overlay.style.display = 'none';
-            }
+            var el = document.getElementById('pause-overlay');
+            el.style.display = this.isPaused ? 'flex' : 'none';
         },
 
         exitTest: function() {
-            if(confirm("Are you sure you want to EXIT? All progress will be lost.")) {
+            if(confirm("Exit Test? Progress will be lost.")) {
                 clearInterval(this.timer);
                 this.switchView('view-home');
+                document.getElementById('pause-overlay').style.display = 'none';
             }
         },
 
@@ -346,7 +338,7 @@
             var solBox = document.getElementById('solution-box');
             if(this.isReview) {
                 solBox.style.display = 'block';
-                document.getElementById('sol-text').innerText = q.solution || "No solution";
+                document.getElementById('sol-text').innerText = q.solution || "No solution.";
             } else {
                 solBox.style.display = 'none';
             }
@@ -387,27 +379,29 @@
             grid.innerHTML = '';
             var self = this;
             
-            this.data.questions.forEach(function(_, i) {
-                var btn = document.createElement('div');
-                btn.className = 'pal-btn';
-                btn.innerText = i + 1;
-                var s = self.responses[i].status;
-                
-                if(self.isReview) {
-                    var r = self.responses[i];
-                    if(r.sel === self.data.questions[i].correctIndex) btn.style.background = '#28a745';
-                    else if(r.sel !== null) btn.style.background = '#dc3545';
-                    else btn.style.background = '#ccc';
-                    btn.style.color = 'white';
-                } else {
-                    if(s === 'ans' || s === 'ans-rev') btn.classList.add('p-ans');
-                    else if(s === 'not-answered') btn.classList.add('p-not');
-                    else if(s === 'rev') btn.classList.add('p-rev');
-                }
-                if(i === self.currQ) btn.style.border = '2px solid black';
-                btn.onclick = function() { self.currQ = i; self.loadQ(); self.toggleSidebar(); };
-                grid.appendChild(btn);
-            });
+            for(var i=0; i<this.data.questions.length; i++) {
+                (function(idx){
+                    var btn = document.createElement('div');
+                    btn.className = 'pal-btn';
+                    btn.innerText = idx + 1;
+                    var s = self.responses[idx].status;
+                    
+                    if(self.isReview) {
+                        var r = self.responses[idx];
+                        if(r.sel === self.data.questions[idx].correctIndex) btn.style.background = '#28a745';
+                        else if(r.sel !== null) btn.style.background = '#dc3545';
+                        else btn.style.background = '#ccc';
+                        btn.style.color = 'white';
+                    } else {
+                        if(s === 'ans' || s === 'ans-rev') btn.classList.add('p-ans');
+                        else if(s === 'not-answered') btn.classList.add('p-not');
+                        else if(s === 'rev') btn.classList.add('p-rev');
+                    }
+                    if(idx === self.currQ) btn.style.border = '2px solid black';
+                    btn.onclick = function() { self.currQ = idx; self.loadQ(); self.toggleSidebar(); };
+                    grid.appendChild(btn);
+                })(i);
+            }
         },
 
         toggleSidebar: function() { 
@@ -451,7 +445,3 @@
     </script>
 </body>
 </html>
-
-
-
-
