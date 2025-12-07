@@ -1,6 +1,6 @@
 {
   "title": "Quant Mock 1: Math Special",
-  "timeLimit": 20,
+  "timeLimit": 1,
   "questions": [
     {
       "text": "Solve: $$\\sqrt{144} + 12^{2}$$",
@@ -22,3 +22,4 @@
     }
   ]
 }
+
