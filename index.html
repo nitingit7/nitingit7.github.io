@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Banking Mock Test</title>
+    <title>Banking Mock Test Pro</title>
     
     <!-- KaTeX for Math -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -12,7 +12,7 @@
 
     <style>
         /* CSS RESET */
-        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; }
+        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; --orange: #fd7e14; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
 
@@ -29,7 +29,7 @@
         #view-list { align-items: center; padding: 20px; }
         .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
 
-        /* EXAM HEADER - FIXED */
+        /* EXAM HEADER */
         header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
         #exam-title { font-weight: bold; font-size: 1.1rem; max-width: 40%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .timer-box { display: flex; align-items: center; gap: 8px; }
@@ -65,12 +65,14 @@
 
         /* RESULT */
         #view-result { justify-content: center; align-items: center; background: white; }
-        .score-card { text-align: center; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 10px; width: 90%; max-width: 400px; }
+        .score-card { text-align: center; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; }
+        .feedback-badge { display:inline-block; padding:8px 16px; border-radius:20px; color:white; font-weight:bold; margin-bottom:15px; font-size:0.9rem; }
 
         .btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
         .btn-green { background: var(--green); }
         .btn-red { background: var(--red); }
         .btn-blue { background: var(--blue); }
+        .btn-orange { background: var(--orange); }
         .btn-outline { background: transparent; border: 1px solid #ccc; color: #333; }
         .back-btn { margin-bottom: 20px; cursor: pointer; color: var(--blue); font-weight: bold; display: block; }
         .katex { font-size: 1.1em; }
@@ -81,7 +83,7 @@
     <!-- HOME -->
     <div id="view-home" class="view active">
         <h2 style="color: var(--dark); margin-bottom: 30px;">Banking Mock Tests</h2>
-
+        
         <div class="subject-card" onclick="window.app.showList('quant')">
             <div style="display:flex; align-items:center;">
                 <span class="icon">📊</span> <div><strong>Quantitative Aptitude</strong></div>
@@ -109,7 +111,7 @@
     <!-- EXAM -->
     <div id="view-exam" class="view">
         <header>
-            <div id="exam-title">Mock Test</div> <!-- THIS WAS MISSING BEFORE! -->
+            <div id="exam-title">Mock Test</div>
             <div class="timer-box">
                 <div class="timer" id="timer-display">00:00</div>
                 <button class="btn-header btn-pause" onclick="window.app.togglePause()">⏸</button>
@@ -165,6 +167,9 @@
     <div id="view-result" class="view">
         <div class="score-card">
             <h2>Test Result</h2>
+            
+            <div id="feedback-badge" class="feedback-badge" style="background:#ccc;">Processing...</div>
+            
             <div style="font-size:3rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
             <p>Total Marks</p>
             <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
@@ -173,21 +178,26 @@
                 <span style="color:red;">Wrong: <b id="final-wrong">0</b></span>
                 <span>Unatt: <b id="final-unatt">0</b></span>
             </div>
+            
+            <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" onclick="window.app.reattemptTest()">Re-attempt Test</button>
+            
+            <!-- Hidden in Result Mode, Visible in Review Mode? No, this is for Review Analysis button -->
+            <!-- We just use the Home button to exit -->
+            
             <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" onclick="window.app.startReviewMode()">Review Solutions</button>
             <button class="btn btn-outline" style="width:100%;" onclick="location.reload()">Back to Home</button>
         </div>
     </div>
 
     <script>
-    // --- GITHUB FILE CONFIGURATION ---
-    // Using Absolute URLs to avoid relative path errors on sub-pages
+    // --- CONFIGURATION ---
+    // Ensure these paths match your GitHub folder names EXACTLY
     var BASE_URL = "https://nitingit7.github.io/Mock-Test/";
     
     var GITHUB_FILES = {
         'quant': [
-            { name: "Testing", file: BASE_URL + "tests/quant/mock1.json" },
-            { name: "Speed Math", file: BASE_URL + "tests/quant/mock2.json" }
-            // Note: mock2.json is NOT in your screenshot, so I removed it to prevent 404
+            { name: "Quant Mock 1", file: BASE_URL + "tests/quant/mock1.json" },
+            // Add more tests here
         ],
         'reasoning': [
             { name: "Reasoning Mock 1", file: BASE_URL + "tests/reasoning/mock1.json" }
@@ -199,7 +209,13 @@
 
     // --- APP LOGIC ---
     window.app = {
-        data: null, responses: {}, currQ: 0, timer: null, timeLeft: 0, isReview: false, isPaused: false,
+        data: null, responses: {}, currQ: 0, timer: null, timeLeft: 0, isReview: false, isPaused: false, currentFileUrl: "",
+
+        // HELPER: Safely set text
+        setText: function(id, text) {
+            var el = document.getElementById(id);
+            if (el) { el.innerText = text; }
+        },
 
         switchView: function(id) {
             var views = document.querySelectorAll('.view');
@@ -207,10 +223,11 @@
             document.getElementById(id).classList.add('active');
         },
 
+        // --- LIST LOGIC (UPDATED) ---
         showList: function(subj) {
             var list = document.getElementById('test-container');
             list.innerHTML = '';
-            document.getElementById('list-title').innerText = subj.toUpperCase();
+            this.setText('list-title', subj.toUpperCase());
             
             var files = GITHUB_FILES[subj];
             if(!files || files.length === 0) { list.innerHTML = "<p>No files configured.</p>"; }
@@ -221,13 +238,25 @@
                     var f = files[idx];
                     var div = document.createElement('div');
                     div.className = 'test-item';
-                    div.innerHTML = "<span>" + f.name + "</span>";
+                    
+                    // CHECK STORAGE FOR PREVIOUS RESULT
+                    var savedResult = localStorage.getItem(f.file);
                     
                     var btn = document.createElement('button');
-                    btn.className = 'btn btn-green';
-                    btn.innerText = "Start";
-                    btn.onclick = function() { self.fetchTest(f.file); };
                     
+                    if (savedResult) {
+                        // Test Taken -> Show Result Button
+                        btn.className = 'btn btn-blue';
+                        btn.innerText = "Show Result";
+                        btn.onclick = function() { self.showStoredResult(f.file); };
+                    } else {
+                        // Fresh Test -> Start Button
+                        btn.className = 'btn btn-green';
+                        btn.innerText = "Start";
+                        btn.onclick = function() { self.fetchTest(f.file); };
+                    }
+                    
+                    div.innerHTML = "<span>" + f.name + "</span>";
                     div.appendChild(btn);
                     list.appendChild(div);
                 })(j);
@@ -237,17 +266,19 @@
 
         fetchTest: function(url) {
             var self = this;
-            // Add timestamp to prevent caching issues
-            var cleanUrl = url + "?t=" + new Date().getTime();
+            var cleanUrl = url + "?v=" + new Date().getTime();
             
             fetch(cleanUrl)
                 .then(function(res) { 
-                    if(!res.ok) throw new Error("HTTP " + res.status + " Not Found"); 
+                    if(!res.ok) throw new Error("Status " + res.status); 
                     return res.json(); 
                 })
-                .then(function(json) { self.startExam(json); })
+                .then(function(json) { 
+                    self.currentFileUrl = url; // Save URL for storage key
+                    self.startExam(json); 
+                })
                 .catch(function(err) { 
-                    alert("Error loading test!\n\nPath: " + url + "\n\nError: " + err.message); 
+                    alert("Error loading test: " + err.message); 
                 });
         },
 
@@ -258,6 +289,8 @@
             this.isReview = false;
             this.isPaused = false;
             
+            if(!this.data.questions) { alert("Invalid JSON"); return; }
+
             for(var i=0; i<this.data.questions.length; i++) {
                 this.responses[i] = { sel: null, status: 'not-visited' };
             }
@@ -265,10 +298,7 @@
             this.timeLeft = (this.data.timeLimit || 20) * 60;
             this.startTimer();
             
-            // This line crashed before because 'exam-title' was missing from HTML
-            var titleEl = document.getElementById('exam-title');
-            if(titleEl) titleEl.innerText = this.data.title || "Mock Test";
-            
+            this.setText('exam-title', this.data.title || "Mock Test");
             document.getElementById('exam-footer').style.display = 'flex';
             document.getElementById('review-footer').style.display = 'none';
             document.getElementById('pause-overlay').style.display = 'none';
@@ -277,13 +307,13 @@
             this.loadQ();
         },
 
+        // --- EXAM LOGIC ---
         startTimer: function() {
             if(this.timer) clearInterval(this.timer);
             var disp = document.getElementById('timer-display');
             var self = this;
             this.timer = setInterval(function() {
                 if(self.isPaused) return; 
-                
                 if(self.timeLeft <= 0) {
                     clearInterval(self.timer);
                     self.submitTest(true);
@@ -313,157 +343,56 @@
         loadQ: function() {
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
-            
             if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
             
-            document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
-            document.getElementById('q-text').innerText = q.text;
+            this.setText('q-number', "Q" + (this.currQ + 1));
+            this.setText('q-text', q.text);
             
             var box = document.getElementById('options-box');
-            box.innerHTML = '';
-            
-            var self = this;
-            q.options.forEach(function(opt, i) {
-                var row = document.createElement('div');
-                row.className = 'opt-row';
-                if(self.isReview) {
-                    row.style.pointerEvents = 'none';
-                    if(i === q.correctIndex) row.classList.add('correct');
-                    if(r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
-                } else {
-                    if(r.sel === i) row.classList.add('selected');
-                    row.onclick = function() {
-                        r.sel = i;
-                        self.loadQ();
-                    };
-                }
-                row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
-                box.appendChild(row);
-            });
+            if(box) {
+                box.innerHTML = '';
+                var self = this;
+                q.options.forEach(function(opt, i) {
+                    var row = document.createElement('div');
+                    row.className = 'opt-row';
+                    if(self.isReview) {
+                        row.style.pointerEvents = 'none';
+                        if(i === q.correctIndex) row.classList.add('correct');
+                        if(r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
+                    } else {
+                        if(r.sel === i) row.classList.add('selected');
+                        row.onclick = function() {
+                            r.sel = i;
+                            self.loadQ();
+                        };
+                    }
+                    row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
+                    box.appendChild(row);
+                });
+            }
 
             var solBox = document.getElementById('solution-box');
-            if(this.isReview) {
-                solBox.style.display = 'block';
-                document.getElementById('sol-text').innerText = q.solution || "No solution.";
-            } else {
-                solBox.style.display = 'none';
+            if(solBox) {
+                if(this.isReview) {
+                    solBox.style.display = 'block';
+                    this.setText('sol-text', q.solution || "No solution.");
+                } else {
+                    solBox.style.display = 'none';
+                }
             }
-
             this.renderPalette();
-            if(window.renderMathInElement) {
-                 renderMathInElement(document.getElementById('q-text'));
-                 renderMathInElement(document.getElementById('options-box'));
-                 renderMathInElement(document.getElementById('sol-text'));
-            }
+            if(window.renderMathInElement) { renderMathInElement(document.body); }
         },
 
         saveNext: function() {
             var r = this.responses[this.currQ];
-            
-            // 1. Save the answer status
             if(r.sel !== null) r.status = 'ans';
             else r.status = 'not-answered';
-            
-            // 2. Check if we can go to the next question
-            if(this.currQ < this.data.questions.length - 1) { 
-                this.currQ++; 
-                this.loadQ(); 
-            } 
-            // 3. NEW: If it's the last question, show the popup
+            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
             else {
-                if(confirm("End of questions! Do you want to submit the test now?")) {
-                    this.submitTest(false);
-                }
+                if(confirm("End of questions. Submit Test?")) { this.submitTest(false); }
             }
         },
 
         markReview: function() {
-            var r = this.responses[this.currQ];
-            if(r.sel !== null) r.status = 'ans-rev';
-            else r.status = 'rev';
-            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
-        },
-
-        clearResponse: function() {
-            this.responses[this.currQ].sel = null;
-            this.responses[this.currQ].status = 'not-answered';
-            this.loadQ();
-        },
-
-        prevQ: function() { if(this.currQ > 0) { this.currQ--; this.loadQ(); } },
-        nextQ: function() { if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); } },
-
-        renderPalette: function() {
-            var grid = document.getElementById('palette-grid');
-            grid.innerHTML = '';
-            var self = this;
-            
-            for(var i=0; i<this.data.questions.length; i++) {
-                (function(idx){
-                    var btn = document.createElement('div');
-                    btn.className = 'pal-btn';
-                    btn.innerText = idx + 1;
-                    var s = self.responses[idx].status;
-                    
-                    if(self.isReview) {
-                        var r = self.responses[idx];
-                        if(r.sel === self.data.questions[idx].correctIndex) btn.style.background = '#28a745';
-                        else if(r.sel !== null) btn.style.background = '#dc3545';
-                        else btn.style.background = '#ccc';
-                        btn.style.color = 'white';
-                    } else {
-                        if(s === 'ans' || s === 'ans-rev') btn.classList.add('p-ans');
-                        else if(s === 'not-answered') btn.classList.add('p-not');
-                        else if(s === 'rev') btn.classList.add('p-rev');
-                    }
-                    if(idx === self.currQ) btn.style.border = '2px solid black';
-                    btn.onclick = function() { self.currQ = idx; self.loadQ(); self.toggleSidebar(); };
-                    grid.appendChild(btn);
-                })(i);
-            }
-        },
-
-        toggleSidebar: function() { 
-            var sb = document.getElementById('sidebar');
-            if(sb.classList.contains('open')) sb.classList.remove('open');
-            else sb.classList.add('open');
-        },
-        
-        submitTest: function(force) {
-            if(!force && !confirm("Submit Test?")) return;
-            clearInterval(this.timer);
-            
-            var score = 0, corr = 0, wrong = 0, unatt = 0;
-            var self = this;
-            this.data.questions.forEach(function(q, i) {
-                var r = self.responses[i];
-                if(r.sel !== null) {
-                    if(r.sel === q.correctIndex) { score += 1; corr++; }
-                    else { score -= 0.25; wrong++; }
-                } else unatt++;
-            });
-
-            document.getElementById('final-score').innerText = score.toFixed(2);
-            document.getElementById('final-correct').innerText = corr;
-            document.getElementById('final-wrong').innerText = wrong;
-            document.getElementById('final-unatt').innerText = unatt;
-            this.switchView('view-result');
-        },
-
-        startReviewMode: function() {
-            this.isReview = true;
-            this.currQ = 0;
-            document.getElementById('exam-footer').style.display = 'none';
-            document.getElementById('review-footer').style.display = 'flex';
-            this.switchView('view-exam');
-            this.loadQ();
-        },
-
-        exitReview: function() { this.switchView('view-result'); }
-    };
-    </script>
-</body>
-</html>
-
-
-
+  
