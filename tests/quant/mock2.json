@@ -1,0 +1,126 @@
+{
+  "title": "RRB Clerk Prelims: Quant Speed Test",
+  "timeLimit": 20,
+  "questions": [
+    {
+      "text": "Simplify: $$12 \\times 15 + 240 \\div 6 - 20 = ?$$",
+      "options": ["180", "200", "220", "210", "190"],
+      "correctIndex": 1,
+      "solution": "$$12 \\times 15 = 180$$; $$240 \\div 6 = 40$$; $$180 + 40 - 20 = 200$$."
+    },
+    {
+      "text": "Simplify: $$45\\% \\text{ of } 400 + \\sqrt{144} = ?$$",
+      "options": ["180", "192", "195", "200", "182"],
+      "correctIndex": 1,
+      "solution": "$$45\\% \\text{ of } 400 = \\frac{45}{100} \\times 400 = 180$$; $$\\sqrt{144} = 12$$; $$180 + 12 = 192$$."
+    },
+    {
+      "text": "Simplify: $$25^{2} - 15^{2} + 40 = ?$$",
+      "options": ["400", "420", "440", "450", "380"],
+      "correctIndex": 2,
+      "solution": "$$625 - 225 + 40 = 400 + 40 = 440$$."
+    },
+    {
+      "text": "Simplify: $$\\frac{3}{4} \\text{ of } 120 + \\frac{2}{5} \\text{ of } 150 = ?$$",
+      "options": ["140", "150", "160", "130", "120"],
+      "correctIndex": 1,
+      "solution": "$$\\frac{3}{4} \\times 120 = 90$$; $$\\frac{2}{5} \\times 150 = 60$$; $$90 + 60 = 150$$."
+    },
+    {
+      "text": "Find the missing number: $$5, 11, 24, 51, 106, ?$$",
+      "options": ["215", "217", "220", "212", "210"],
+      "correctIndex": 1,
+      "solution": "Pattern is $$\\times 2 + 1, \\times 2 + 2, \\times 2 + 3, \\times 2 + 4$$. Next is $$106 \\times 2 + 5 = 217$$."
+    },
+    {
+      "text": "Find the missing number: $$10, 14, 23, 39, 64, ?$$",
+      "options": ["100", "105", "110", "95", "115"],
+      "correctIndex": 0,
+      "solution": "Differences are squares: $$4 (2^2), 9 (3^2), 16 (4^2), 25 (5^2)$$. Next is $$36 (6^2)$$. $$64 + 36 = 100$$."
+    },
+    {
+      "text": "Find the missing number: $$100, 90, 80, 70, 60, ?$$",
+      "options": ["40", "50", "45", "55", "30"],
+      "correctIndex": 1,
+      "solution": "Simple subtraction series of 10. $$60 - 10 = 50$$."
+    },
+    {
+      "text": "Simplify: $$360 \\div ? = 12 \\times 3$$",
+      "options": ["5", "8", "10", "12", "6"],
+      "correctIndex": 2,
+      "solution": "$$360 \\div x = 36 \\implies x = 360 / 36 = 10$$."
+    },
+    {
+      "text": "Simplify: $$50\\% \\text{ of } 250 + 20\\% \\text{ of } 150 = ?$$",
+      "options": ["140", "155", "160", "150", "145"],
+      "correctIndex": 1,
+      "solution": "$$125 + 30 = 155$$."
+    },
+    {
+      "text": "A can do a work in 20 days and B in 30 days. In how many days they can complete it together?",
+      "options": ["10", "12", "15", "18", "14"],
+      "correctIndex": 1,
+      "solution": "$$\\frac{20 \\times 30}{20 + 30} = \\frac{600}{50} = 12$$ days."
+    },
+    {
+      "text": "The ratio of two numbers is 3:4 and their sum is 70. Find the larger number.",
+      "options": ["30", "40", "50", "20", "60"],
+      "correctIndex": 1,
+      "solution": "$$3x + 4x = 70 \\implies 7x = 70 \\implies x = 10$$. Larger number = $$4x = 40$$."
+    },
+    {
+      "text": "A shopkeeper sells an item for Rs. 450 at a loss of 10%. Find the cost price.",
+      "options": ["400", "480", "500", "550", "600"],
+      "correctIndex": 2,
+      "solution": "$$90\\% \\text{ of CP} = 450$$; $$CP = \\frac{450 \\times 100}{90} = 500$$."
+    },
+    {
+      "text": "Simple interest on Rs. 2000 for 3 years at 5% per annum is?",
+      "options": ["200", "250", "300", "350", "400"],
+      "correctIndex": 2,
+      "solution": "$$SI = \\frac{P \\times R \\times T}{100} = \\frac{2000 \\times 5 \\times 3}{100} = 300$$."
+    },
+    {
+      "text": "The average of 5 numbers is 20. If one number 30 is removed, what is the new average?",
+      "options": ["15", "17.5", "18", "20", "22.5"],
+      "correctIndex": 1,
+      "solution": "Total sum = $$5 \\times 20 = 100$$. New sum = $$100 - 30 = 70$$. New average = $$70 / 4 = 17.5$$."
+    },
+    {
+      "text": "Simplify: $$12.5 \\times 8 + 40 = ?$$",
+      "options": ["120", "130", "140", "150", "110"],
+      "correctIndex": 2,
+      "solution": "$$12.5 \\times 8 = 100$$; $$100 + 40 = 140$$."
+    },
+    {
+      "text": "A train 200m long crosses a pole in 10 seconds. Find its speed in km/hr.",
+      "options": ["36", "72", "54", "60", "90"],
+      "correctIndex": 1,
+      "solution": "Speed = $$200/10 = 20$$ m/s. $$20 \\times \\frac{18}{5} = 72$$ km/hr."
+    },
+    {
+      "text": "Find the missing number: $$8, 4, 4, 6, 12, ?$$",
+      "options": ["24", "28", "30", "32", "36"],
+      "correctIndex": 2,
+      "solution": "Pattern: $$\\times 0.5, \\times 1, \\times 1.5, \\times 2$$. Next is $$\\times 2.5$$. $$12 \\times 2.5 = 30$$."
+    },
+    {
+      "text": "Simplify: $$240 \\div 8 + 15 \\times 2 - 10 = ?$$",
+      "options": ["40", "50", "60", "45", "55"],
+      "correctIndex": 1,
+      "solution": "$$30 + 30 - 10 = 50$$."
+    },
+    {
+      "text": "The perimeter of a square is 48 cm. Find its area.",
+      "options": ["122", "144", "169", "100", "121"],
+      "correctIndex": 1,
+      "solution": "Side = $$48/4 = 12$$. Area = $$12^2 = 144$$."
+    },
+    {
+      "text": "A man covers 60 km in 4 hours. How much time will he take to cover 90 km at the same speed?",
+      "options": ["5 hours", "6 hours", "7 hours", "4.5 hours", "5.5 hours"],
+      "correctIndex": 1,
+      "solution": "Speed = $$60/4 = 15$$ km/hr. Time = $$90/15 = 6$$ hours."
+    }
+  ]
+}
