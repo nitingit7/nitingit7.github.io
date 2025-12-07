@@ -1,0 +1,126 @@
+{
+  "title": "RRB Clerk Speed Math 2",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Simplify: $$12^3 \\div 24 + 18 \\times 5 = ?$$",
+      "options": ["162", "152", "172", "142", "182"],
+      "correctIndex": 0,
+      "solution": "$$1728 \\div 24 = 72$$. $$18 \\times 5 = 90$$. $$72 + 90 = 162$$."
+    },
+    {
+      "text": "Simplify: $$\\sqrt{784} \\times 5 - 15\\% \\text{ of } 400 = ?$$",
+      "options": ["70", "80", "90", "60", "100"],
+      "correctIndex": 1,
+      "solution": "$$\\sqrt{784} = 28$$. $$28 \\times 5 = 140$$. $$15\\% \\text{ of } 400 = 60$$. $$140 - 60 = 80$$."
+    },
+    {
+      "text": "Simplify: $$45\\% \\text{ of } 1600 + 30\\% \\text{ of } 450 = ?$$",
+      "options": ["845", "865", "855", "835", "875"],
+      "correctIndex": 2,
+      "solution": "$$45\\% \\text{ of } 1600 = 720$$. $$30\\% \\text{ of } 450 = 135$$. $$720 + 135 = 855$$."
+    },
+    {
+      "text": "Simplify: $$15 \\times 14 + 12 \\times 15 = ?$$",
+      "options": ["380", "400", "370", "390", "410"],
+      "correctIndex": 3,
+      "solution": "$$15 \\times (14 + 12) = 15 \\times 26 = 390$$."
+    },
+    {
+      "text": "Simplify: $$240 \\div 8 \\times 5 + \\sqrt{225} = ?$$",
+      "options": ["155", "165", "175", "145", "135"],
+      "correctIndex": 1,
+      "solution": "$$240 \\div 8 = 30$$. $$30 \\times 5 = 150$$. $$150 + 15 = 165$$."
+    },
+    {
+      "text": "Simplify: $$18^2 + 12^2 - 14^2 = ?$$",
+      "options": ["272", "262", "282", "252", "292"],
+      "correctIndex": 0,
+      "solution": "$$324 + 144 - 196 = 468 - 196 = 272$$."
+    },
+    {
+      "text": "Simplify: $$\\frac{5}{8} \\text{ of } 320 + \\frac{3}{7} \\text{ of } 210 = ?$$",
+      "options": ["280", "300", "290", "310", "270"],
+      "correctIndex": 2,
+      "solution": "$$\\frac{5}{8} \\times 320 = 200$$. $$\\frac{3}{7} \\times 210 = 90$$. $$200 + 90 = 290$$."
+    },
+    {
+      "text": "Simplify: $$\\sqrt{1225} + \\sqrt[3]{2744} = ?$$",
+      "options": ["45", "47", "51", "49", "53"],
+      "correctIndex": 3,
+      "solution": "$$35 + 14 = 49$$."
+    },
+    {
+      "text": "Simplify: $$60\\% \\text{ of } 500 - 350 \\div 5 = ?$$",
+      "options": ["220", "240", "230", "210", "250"],
+      "correctIndex": 2,
+      "solution": "$$300 - 70 = 230$$."
+    },
+    {
+      "text": "Simplify: $$3.5 \\times 12 + 4.5 \\times 8 = ?$$",
+      "options": ["76", "78", "80", "74", "82"],
+      "correctIndex": 1,
+      "solution": "$$3.5 \\times 12 = 42$$. $$4.5 \\times 8 = 36$$. $$42 + 36 = 78$$."
+    },
+    {
+      "text": "Number Series: $$12, 13, 21, 48, 112, ?$$",
+      "options": ["237", "227", "247", "217", "257"],
+      "correctIndex": 0,
+      "solution": "Diff: $$1, 8, 27, 64$$ ($$1^3, 2^3, 3^3, 4^3$$). Next is $$125$$. $$112 + 125 = 237$$."
+    },
+    {
+      "text": "Number Series: $$100, 110, 130, 160, 200, ?$$",
+      "options": ["240", "250", "260", "230", "270"],
+      "correctIndex": 1,
+      "solution": "Diff: $$10, 20, 30, 40$$. Next is $$50$$. $$200 + 50 = 250$$."
+    },
+    {
+      "text": "Number Series: $$5, 11, 24, 51, 106, ?$$",
+      "options": ["215", "217", "212", "219", "221"],
+      "correctIndex": 1,
+      "solution": "Pattern: $$\\times 2 + 1, \\times 2 + 2, \\times 2 + 3, \\times 2 + 4$$. Next is $$\\times 2 + 5$$. $$106 \\times 2 + 5 = 217$$."
+    },
+    {
+      "text": "Number Series: $$50, 25, 25, 37.5, 75, ?$$",
+      "options": ["150", "225", "187.5", "175", "200"],
+      "correctIndex": 2,
+      "solution": "Pattern: $$\\times 0.5, \\times 1, \\times 1.5, \\times 2$$. Next is $$\\times 2.5$$. $$75 \\times 2.5 = 187.5$$."
+    },
+    {
+      "text": "Number Series: $$4, 6, 12, 30, 90, ?$$",
+      "options": ["315", "270", "360", "330", "300"],
+      "correctIndex": 0,
+      "solution": "Pattern: $$\\times 1.5, \\times 2, \\times 2.5, \\times 3$$. Next is $$\\times 3.5$$. $$90 \\times 3.5 = 315$$."
+    },
+    {
+      "text": "Quadratic: I. $$x^2 - 7x + 12 = 0$$ II. $$y^2 - 11y + 30 = 0$$",
+      "options": ["x > y", "x < y", "x >= y", "x <= y", "x = y or CND"],
+      "correctIndex": 1,
+      "solution": "$$x = 3, 4$$; $$y = 5, 6$$. Both values of x are less than y. So $$x < y$$."
+    },
+    {
+      "text": "Quadratic: I. $$x^2 = 81$$ II. $$y^2 - 18y + 81 = 0$$",
+      "options": ["x > y", "x < y", "x >= y", "x <= y", "x = y or CND"],
+      "correctIndex": 3,
+      "solution": "$$x = +9, -9$$; $$y = +9$$. $$x \\le y$$."
+    },
+    {
+      "text": "Quadratic: I. $$2x^2 + 11x + 15 = 0$$ II. $$y^2 + 7y + 12 = 0$$",
+      "options": ["x > y", "x < y", "x >= y", "x <= y", "x = y or CND"],
+      "correctIndex": 2,
+      "solution": "$$x = -2.5, -3$$; $$y = -3, -4$$. $$x \\ge y$$."
+    },
+    {
+      "text": "Quadratic: I. $$x^2 - 5x - 24 = 0$$ II. $$y^2 - 7y - 18 = 0$$",
+      "options": ["x > y", "x < y", "x >= y", "x <= y", "x = y or CND"],
+      "correctIndex": 4,
+      "solution": "$$x = +8, -3$$; $$y = +9, -2$$. Relationship cannot be established."
+    },
+    {
+      "text": "Quadratic: I. $$x^2 + 13x + 40 = 0$$ II. $$y^2 + 17y + 72 = 0$$",
+      "options": ["x > y", "x < y", "x >= y", "x <= y", "x = y or CND"],
+      "correctIndex": 2,
+      "solution": "$$x = -5, -8$$; $$y = -8, -9$$. $$x \\ge y$$."
+    }
+  ]
+}
