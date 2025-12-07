@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Banking Mock Test Pro</title>
+    <title>Banking Mock Test (Universal)</title>
     
     <!-- KaTeX for Math -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -12,7 +12,7 @@
 
     <style>
         /* CSS RESET */
-        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; --orange: #fd7e14; }
+        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
 
@@ -180,30 +180,39 @@
             </div>
             
             <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" onclick="window.app.reattemptTest()">Re-attempt Test</button>
-            
-            <!-- Hidden in Result Mode, Visible in Review Mode? No, this is for Review Analysis button -->
-            <!-- We just use the Home button to exit -->
-            
             <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" onclick="window.app.startReviewMode()">Review Solutions</button>
             <button class="btn btn-outline" style="width:100%;" onclick="location.reload()">Back to Home</button>
         </div>
     </div>
 
     <script>
-    // --- CONFIGURATION ---
-    // Ensure these paths match your GitHub folder names EXACTLY
-    var BASE_URL = "https://nitingit7.github.io/Mock-Test/";
-    
+    /* --- HYBRID CONFIGURATION ---
+       1. OFFLINE_DB: Works on your phone immediately (Internal Data).
+       2. GITHUB_FILES: Works on GitHub Pages (External Files).
+       
+       The code auto-detects which one to use!
+    */
+
+    var OFFLINE_DB = {
+        'quant': [
+            { title: "Offline Quant Mock", timeLimit: 5, questions: [
+                { text: "10 + 10 = ?", options: ["10", "20", "30", "40"], correctIndex: 1, solution: "10+10 is 20" }
+            ]}
+        ],
+        'reasoning': [],
+        'english': []
+    };
+
     var GITHUB_FILES = {
         'quant': [
-            { name: "Quant Mock 1", file: BASE_URL + "tests/quant/mock1.json" },
-            // Add more tests here
+            { name: "Quant Mock 1", file: "./tests/quant/mock1.json" },
+            { name: "Quant Mock 2", file: "./tests/quant/mock2.json" }
         ],
         'reasoning': [
-            { name: "Reasoning Mock 1", file: BASE_URL + "tests/reasoning/mock1.json" }
+            { name: "Reasoning Mock 1", file: "./tests/reasoning/mock1.json" }
         ],
         'english': [
-            { name: "English Mock 1", file: BASE_URL + "tests/english/mock1.json" }
+            { name: "English Mock 1", file: "./tests/english/mock1.json" }
         ]
     };
 
@@ -211,7 +220,11 @@
     window.app = {
         data: null, responses: {}, currQ: 0, timer: null, timeLeft: 0, isReview: false, isPaused: false, currentFileUrl: "",
 
-        // HELPER: Safely set text
+        isOnline: function() {
+            // Returns true if on GitHub or a Server, false if local file
+            return window.location.protocol.startsWith('http');
+        },
+
         setText: function(id, text) {
             var el = document.getElementById(id);
             if (el) { el.innerText = text; }
@@ -223,40 +236,61 @@
             document.getElementById(id).classList.add('active');
         },
 
-        // --- LIST LOGIC (UPDATED) ---
         showList: function(subj) {
             var list = document.getElementById('test-container');
             list.innerHTML = '';
             this.setText('list-title', subj.toUpperCase());
             
-            var files = GITHUB_FILES[subj];
-            if(!files || files.length === 0) { list.innerHTML = "<p>No files configured.</p>"; }
+            // AUTO DETECT MODE
+            var items = [];
+            var mode = "";
+
+            if (this.isOnline()) {
+                // WE ARE ON GITHUB -> Use File Paths
+                items = GITHUB_FILES[subj] || [];
+                mode = "online";
+            } else {
+                // WE ARE OFFLINE -> Use Internal DB
+                items = OFFLINE_DB[subj] || [];
+                mode = "offline";
+                // If offline and no items, allow fallback to see the "Mock 1" structure
+                if(items.length === 0 && GITHUB_FILES[subj].length > 0) {
+                     // Warning for user
+                     var warn = document.createElement('div');
+                     warn.innerHTML = "<p style='color:red; font-size:0.8em; text-align:center;'>Offline Mode: GitHub files cannot be loaded safely. Showing Internal Demos.</p>";
+                     list.appendChild(warn);
+                }
+            }
+
+            if(items.length === 0) { list.innerHTML += "<p>No tests available.</p>"; }
             
             var self = this;
-            for (var j = 0; j < files.length; j++) {
+            for (var j = 0; j < items.length; j++) {
                 (function(idx) {
-                    var f = files[idx];
+                    var item = items[idx];
                     var div = document.createElement('div');
                     div.className = 'test-item';
                     
-                    // CHECK STORAGE FOR PREVIOUS RESULT
-                    var savedResult = localStorage.getItem(f.file);
+                    // ID for storage: URL (online) or Title (offline)
+                    var storageKey = mode === "online" ? item.file : "OFFLINE_" + item.title;
+                    var savedResult = localStorage.getItem(storageKey);
                     
                     var btn = document.createElement('button');
                     
                     if (savedResult) {
-                        // Test Taken -> Show Result Button
                         btn.className = 'btn btn-blue';
-                        btn.innerText = "Show Result";
-                        btn.onclick = function() { self.showStoredResult(f.file); };
+                        btn.innerText = "Result";
+                        btn.onclick = function() { self.showStoredResult(storageKey); };
                     } else {
-                        // Fresh Test -> Start Button
                         btn.className = 'btn btn-green';
                         btn.innerText = "Start";
-                        btn.onclick = function() { self.fetchTest(f.file); };
+                        btn.onclick = function() { 
+                            if(mode === "online") self.fetchTest(item.file);
+                            else self.startExam(item, storageKey);
+                        };
                     }
                     
-                    div.innerHTML = "<span>" + f.name + "</span>";
+                    div.innerHTML = "<span>" + (item.name || item.title) + "</span>";
                     div.appendChild(btn);
                     list.appendChild(div);
                 })(j);
@@ -274,20 +308,20 @@
                     return res.json(); 
                 })
                 .then(function(json) { 
-                    self.currentFileUrl = url; // Save URL for storage key
-                    self.startExam(json); 
+                    self.startExam(json, url); 
                 })
                 .catch(function(err) { 
-                    alert("Error loading test: " + err.message); 
+                    alert("Error: " + err.message + "\n\nFile: " + url); 
                 });
         },
 
-        startExam: function(jsonObj) {
+        startExam: function(jsonObj, storageKey) {
             this.data = jsonObj;
             this.responses = {};
             this.currQ = 0;
             this.isReview = false;
             this.isPaused = false;
+            this.currentFileUrl = storageKey;
             
             if(!this.data.questions) { alert("Invalid JSON"); return; }
 
@@ -307,7 +341,6 @@
             this.loadQ();
         },
 
-        // --- EXAM LOGIC ---
         startTimer: function() {
             if(this.timer) clearInterval(this.timer);
             var disp = document.getElementById('timer-display');
@@ -360,39 +393,4 @@
                         if(i === q.correctIndex) row.classList.add('correct');
                         if(r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
                     } else {
-                        if(r.sel === i) row.classList.add('selected');
-                        row.onclick = function() {
-                            r.sel = i;
-                            self.loadQ();
-                        };
-                    }
-                    row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
-                    box.appendChild(row);
-                });
-            }
-
-            var solBox = document.getElementById('solution-box');
-            if(solBox) {
-                if(this.isReview) {
-                    solBox.style.display = 'block';
-                    this.setText('sol-text', q.solution || "No solution.");
-                } else {
-                    solBox.style.display = 'none';
-                }
-            }
-            this.renderPalette();
-            if(window.renderMathInElement) { renderMathInElement(document.body); }
-        },
-
-        saveNext: function() {
-            var r = this.responses[this.currQ];
-            if(r.sel !== null) r.status = 'ans';
-            else r.status = 'not-answered';
-            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
-            else {
-                if(confirm("End of questions. Submit Test?")) { this.submitTest(false); }
-            }
-        },
-
-        markReview: function() {
-  
+                        if(r.sel =
