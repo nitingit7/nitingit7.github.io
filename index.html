@@ -359,9 +359,22 @@
 
         saveNext: function() {
             var r = this.responses[this.currQ];
+            
+            // 1. Save the answer status
             if(r.sel !== null) r.status = 'ans';
             else r.status = 'not-answered';
-            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
+            
+            // 2. Check if we can go to the next question
+            if(this.currQ < this.data.questions.length - 1) { 
+                this.currQ++; 
+                this.loadQ(); 
+            } 
+            // 3. NEW: If it's the last question, show the popup
+            else {
+                if(confirm("End of questions! Do you want to submit the test now?")) {
+                    this.submitTest(false);
+                }
+            }
         },
 
         markReview: function() {
@@ -451,5 +464,6 @@
     </script>
 </body>
 </html>
+
 
 
