@@ -5,51 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Banking Mock Test</title>
     
-    <!-- KaTeX for Math -->
+    <!-- Crash Detector: This catches errors immediately -->
+    <script>
+        window.onerror = function(msg, url, line) {
+            alert("SYSTEM ERROR:\n" + msg + "\nLine: " + line);
+            return true;
+        };
+    </script>
+
+    <!-- KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 
     <style>
-        /* --- STYLES --- */
-        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; }
+        /* STYLES */
+        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --dark: #343a40; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
+        body { margin: 0; padding: 0; font-family: sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
 
         .view { display: none; width: 100%; height: 100%; flex-direction: column; }
         .view.active { display: flex; }
 
-        /* HOME */
+        /* CARDS */
         #view-home { align-items: center; padding: 20px; overflow-y: auto; }
         .subject-card { background: white; width: 100%; max-width: 500px; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; }
         .subject-card:active { background: #eee; }
-        
-        /* LIST */
-        #view-list { align-items: center; padding: 20px; }
-        .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
 
-        /* EXAM */
+        /* EXAM UI */
         header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
-        #exam-title { font-weight: bold; font-size: 1.1rem; max-width: 40%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .timer-box { display: flex; align-items: center; gap: 8px; }
-        .timer { font-family: monospace; font-size: 16px; font-weight: bold; background: #555; padding: 5px 8px; border-radius: 4px; }
+        .timer { font-family: monospace; font-size: 18px; font-weight: bold; background: #555; padding: 5px 10px; border-radius: 4px; }
         
-        .btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
-        .btn-pause { background: var(--yellow); color: #222; }
-        .btn-exit { background: var(--red); color: white; }
-
         .exam-body { display: flex; flex: 1; overflow: hidden; position: relative; }
         .q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: white; }
         .q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; }
         .q-footer { padding: 10px; background: #f8f9fa; border-top: 1px solid #ddd; display: flex; justify-content: space-between; }
 
-        .opt-row { display: flex; padding: 12px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; cursor: pointer; align-items: center; }
+        .opt-row { padding: 12px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; }
         .opt-row.selected { background: #e3f2fd; border-color: var(--blue); border-width: 2px; }
         .opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; }
         .opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; }
-        
+
         .solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
 
+        /* SIDEBAR */
         #sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: white; border-left: 1px solid #ccc; transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; }
         #sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
         .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
@@ -58,19 +57,13 @@
         .p-not { background: var(--red); color: white; border: none; }
         .p-rev { background: #6f42c1; color: white; border: none; }
 
-        #pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 100; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
-
-        #view-result { justify-content: center; align-items: center; background: white; }
-        .score-card { text-align: center; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; }
-        .feedback-badge { display:inline-block; padding:8px 16px; border-radius:20px; color:white; font-weight:bold; margin-bottom:15px; font-size:0.9rem; }
-
         .btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
         .btn-green { background: var(--green); }
         .btn-red { background: var(--red); }
         .btn-blue { background: var(--blue); }
-        .btn-orange { background: #fd7e14; }
         .btn-outline { background: transparent; border: 1px solid #ccc; color: #333; }
-        .katex { font-size: 1.1em; }
+        
+        .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
     </style>
 </head>
 <body>
@@ -79,7 +72,6 @@
     <div id="view-home" class="view active">
         <h2 style="color: #333; margin-bottom: 30px;">Banking Mock Tests</h2>
         
-        <!-- IDs added for safe binding -->
         <div class="subject-card" id="card-quant">
             <div><strong>Quantitative Aptitude</strong></div> <span>➜</span>
         </div>
@@ -94,19 +86,18 @@
     <!-- LIST -->
     <div id="view-list" class="view">
         <div style="padding:10px; cursor:pointer; color:blue; font-weight:bold;" id="btn-back-home">← Back</div>
-        <h2 id="list-title">Select Test</h2>
+        <h2 id="list-title" style="padding:0 20px;">Select Test</h2>
         <div id="test-container" style="padding:20px;"></div>
     </div>
 
     <!-- EXAM -->
     <div id="view-exam" class="view">
         <header>
-            <div id="exam-title">Mock Test</div>
-            <div class="timer-box">
+            <div id="exam-title" style="max-width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Mock Test</div>
+            <div style="display: flex; gap: 5px; align-items: center;">
                 <div class="timer" id="timer-display">00:00</div>
-                <button class="btn-header btn-pause" id="btn-pause">⏸</button>
-                <button class="btn-header btn-exit" id="btn-exit">✖</button>
-                <button class="btn-outline" style="background:white; padding: 5px 10px;" id="btn-toggle-sidebar">☰</button>
+                <button style="padding:5px;" onclick="togglePause()">⏸</button>
+                <button style="padding:5px; background:red; color:white; border:none;" onclick="exitTest()">✖</button>
             </div>
         </header>
         <div class="exam-body">
@@ -123,41 +114,33 @@
                     </div>
                 </div>
                 <div class="q-footer" id="exam-footer">
-                    <button class="btn btn-red" id="btn-clear">Clear</button>
-                    <button class="btn" style="background:#6f42c1;" id="btn-review">Review</button>
-                    <button class="btn btn-green" id="btn-save">Save & Next</button>
+                    <button class="btn btn-red" onclick="clearResponse()">Clear</button>
+                    <button class="btn" style="background:#6f42c1;" onclick="markReview()">Review</button>
+                    <button class="btn btn-green" onclick="saveNext()">Save & Next</button>
                 </div>
                 <div class="q-footer" id="review-footer" style="display:none;">
-                    <button class="btn btn-outline" id="btn-prev">Prev</button>
-                    <button class="btn btn-blue" id="btn-next">Next</button>
-                    <button class="btn btn-red" id="btn-exit-review">Exit</button>
+                    <button class="btn btn-outline" onclick="prevQ()">Prev</button>
+                    <button class="btn btn-blue" onclick="nextQ()">Next</button>
+                    <button class="btn btn-red" onclick="exitReview()">Exit</button>
                 </div>
             </main>
             <aside id="sidebar">
                 <div style="padding:10px; font-weight:bold; border-bottom:1px solid #eee;">
-                    Palette <span style="float:right; cursor:pointer;" id="btn-close-sidebar">✖</span>
+                    Palette <span style="float:right; cursor:pointer;" onclick="toggleSidebar()">✖</span>
                 </div>
                 <div class="palette-grid" id="palette-grid"></div>
                 <div style="margin-top:auto; padding:15px;">
-                    <button class="btn btn-green" style="width:100%;" id="btn-submit">SUBMIT TEST</button>
+                    <button class="btn btn-green" style="width:100%;" onclick="submitTest(false)">SUBMIT TEST</button>
                 </div>
             </aside>
         </div>
     </div>
 
-    <!-- PAUSE -->
-    <div id="pause-overlay">
-        <h1>Test Paused</h1>
-        <p style="margin-bottom:30px;">Timer stopped.</p>
-        <button class="btn btn-green" style="padding:15px 30px;" id="btn-resume">RESUME</button>
-        <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #555;" id="btn-quit">Quit Test</button>
-    </div>
-
     <!-- RESULT -->
     <div id="view-result" class="view">
-        <div class="score-card">
+        <div style="text-align:center; padding: 40px;">
             <h2>Test Result</h2>
-            <div id="feedback-badge" class="feedback-badge" style="background:#ccc;">Processing...</div>
+            <div id="feedback-badge" style="display:inline-block; padding:8px 16px; background:#ccc; color:white; border-radius:20px; margin-bottom:15px;">Processing...</div>
             <div style="font-size:3rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
             <p>Total Marks</p>
             <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
@@ -166,246 +149,302 @@
                 <span style="color:red;">Wrong: <b id="final-wrong">0</b></span>
                 <span>Unatt: <b id="final-unatt">0</b></span>
             </div>
-            <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" id="btn-reattempt">Re-attempt Test</button>
-            <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" id="btn-view-sols">Review Solutions</button>
+            <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" onclick="startReviewMode()">Review Solutions</button>
             <button class="btn btn-outline" style="width:100%;" onclick="location.reload()">Back to Home</button>
         </div>
     </div>
 
     <script>
-    try {
-        // --- CONFIGURATION ---
-        // Using Relative Paths for GitHub Pages
-        var FILES = {
-            'quant': [
-                { name: "Quant Mock 1", file: "./tests/quant/mock1.json" },
-                { name: "Quant Mock 2", file: "./tests/quant/mock2.json" }
-            ],
-            'reasoning': [
-                { name: "Reasoning Mock 1", file: "./tests/reasoning/mock1.json" }
-            ],
-            'english': [
-                { name: "English Mock 1", file: "./tests/english/mock1.json" }
-            ]
-        };
+    // --- GLOBAL VARIABLES (No App Object) ---
+    var BASE_URL = "https://nitingit7.github.io/Mock-Test/";
+    var GITHUB_FILES = {
+        'quant': [
+            { name: "Quant Mock 1", file: BASE_URL + "tests/quant/mock1.json" },
+            { name: "Quant Mock 2", file: BASE_URL + "tests/quant/mock2.json" }
+        ],
+        'reasoning': [
+            { name: "Reasoning Mock 1", file: BASE_URL + "tests/reasoning/mock1.json" }
+        ],
+        'english': [
+            { name: "English Mock 1", file: BASE_URL + "tests/english/mock1.json" }
+        ]
+    };
 
-        // --- STATE ---
-        var state = { data: null, responses: {}, currQ: 0, timer: null, timeLeft: 0, isReview: false, isPaused: false, url: "" };
+    var currentData = null;
+    var responses = {};
+    var currentQ = 0;
+    var timerInterval = null;
+    var timeLeft = 0;
+    var isReview = false;
+    var isPaused = false;
+    var currentUrl = "";
 
-        // --- SAFE BINDING ---
-        function bind(id, func) {
-            var el = document.getElementById(id);
-            if(el) el.addEventListener('click', func);
+    // --- SETUP LISTENERS ---
+    window.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('card-quant').onclick = function() { showList('quant'); };
+        document.getElementById('card-reasoning').onclick = function() { showList('reasoning'); };
+        document.getElementById('card-english').onclick = function() { showList('english'); };
+        document.getElementById('btn-back-home').onclick = function() { switchView('view-home'); };
+    });
+
+    // --- NAVIGATION ---
+    function switchView(id) {
+        var views = document.querySelectorAll('.view');
+        for(var i=0; i<views.length; i++) { views[i].classList.remove('active'); }
+        document.getElementById(id).classList.add('active');
+    }
+
+    function showList(subj) {
+        var list = document.getElementById('test-container');
+        list.innerHTML = "";
+        document.getElementById('list-title').innerText = subj.toUpperCase();
+        
+        var files = GITHUB_FILES[subj] || [];
+        if(files.length === 0) list.innerHTML = "<p>No files found.</p>";
+        
+        files.forEach(function(f) {
+            var div = document.createElement('div');
+            div.className = 'test-item';
+            
+            var saved = localStorage.getItem(f.file);
+            var btnText = saved ? "Result" : "Start";
+            var btnClass = saved ? "btn btn-blue" : "btn btn-green";
+            
+            var btn = document.createElement('button');
+            btn.className = btnClass;
+            btn.innerText = btnText;
+            btn.onclick = function() {
+                if(saved) showStoredResult(f.file);
+                else fetchTest(f.file);
+            };
+
+            var span = document.createElement('span');
+            span.innerText = f.name;
+
+            div.appendChild(span);
+            div.appendChild(btn);
+            list.appendChild(div);
+        });
+        switchView('view-list');
+    }
+
+    // --- DATA FETCHING ---
+    function fetchTest(url) {
+        var cleanUrl = url + "?v=" + new Date().getTime();
+        fetch(cleanUrl)
+            .then(function(res) { 
+                if(!res.ok) throw new Error("File not found"); 
+                return res.json(); 
+            })
+            .then(function(json) { startExam(json, url); })
+            .catch(function(err) { alert("Error: " + err.message + "\nURL: " + url); });
+    }
+
+    function startExam(json, url) {
+        currentData = json;
+        responses = {};
+        currentQ = 0;
+        isReview = false;
+        isPaused = false;
+        currentUrl = url;
+        
+        if(!currentData.questions) { alert("Invalid JSON"); return; }
+
+        for(var i=0; i<currentData.questions.length; i++) {
+            responses[i] = { sel: null, status: 'not-visited' };
         }
+        
+        timeLeft = (currentData.timeLimit || 20) * 60;
+        startTimer();
+        
+        var titleEl = document.getElementById('exam-title');
+        if(titleEl) titleEl.innerText = currentData.title || "Mock Test";
+        
+        document.getElementById('exam-footer').style.display = 'flex';
+        document.getElementById('review-footer').style.display = 'none';
+        
+        switchView('view-exam');
+        loadQ();
+    }
 
-        // --- INIT ---
-        window.onload = function() {
-            // Home
-            bind('card-quant', function() { showList('quant'); });
-            bind('card-reasoning', function() { showList('reasoning'); });
-            bind('card-english', function() { showList('english'); });
-            
-            // List
-            bind('btn-back-home', function() { switchView('view-home'); });
-            
-            // Exam Header
-            bind('btn-toggle-sidebar', toggleSidebar);
-            bind('btn-close-sidebar', toggleSidebar);
-            bind('btn-pause', togglePause);
-            bind('btn-exit', exitTest);
-            
-            // Exam Controls
-            bind('btn-save', saveNext);
-            bind('btn-clear', clearResponse);
-            bind('btn-review', markReview);
-            bind('btn-submit', function() { submitTest(false); });
-            
-            // Review Nav
-            bind('btn-prev', prevQ);
-            bind('btn-next', nextQ);
-            bind('btn-exit-review', function() { switchView('view-result'); });
-            
-            // Pause Menu
-            bind('btn-resume', togglePause);
-            bind('btn-quit', exitTest);
-            
-            // Result
-            bind('btn-view-sols', startReviewMode);
-            bind('btn-reattempt', reattemptTest);
-        };
+    // --- TIMER ---
+    function startTimer() {
+        if(timerInterval) clearInterval(timerInterval);
+        var disp = document.getElementById('timer-display');
+        timerInterval = setInterval(function() {
+            if(isPaused) return;
+            if(timeLeft <= 0) {
+                clearInterval(timerInterval);
+                submitTest(true);
+                return;
+            }
+            timeLeft--;
+            var m = Math.floor(timeLeft / 60);
+            var s = timeLeft % 60;
+            disp.innerText = m + ":" + (s < 10 ? "0"+s : s);
+        }, 1000);
+    }
 
-        // --- FUNCTIONS ---
-        function switchView(id) {
-            document.querySelectorAll('.view').forEach(function(el) { el.classList.remove('active'); });
-            document.getElementById(id).classList.add('active');
+    function togglePause() {
+        isPaused = !isPaused;
+        alert(isPaused ? "PAUSED. Click OK to Resume." : "Resumed.");
+        isPaused = false; // Auto resume after alert click
+    }
+
+    function exitTest() {
+        if(confirm("Exit Test?")) {
+            clearInterval(timerInterval);
+            switchView('view-home');
         }
+    }
 
-        function showList(subj) {
-            var list = document.getElementById('test-container');
-            list.innerHTML = "";
-            document.getElementById('list-title').innerText = subj.toUpperCase();
+    // --- QUESTION LOGIC ---
+    function loadQ() {
+        var q = currentData.questions[currentQ];
+        var r = responses[currentQ];
+        if(!isReview && r.status === 'not-visited') r.status = 'not-answered';
+        
+        document.getElementById('q-number').innerText = "Q" + (currentQ + 1);
+        document.getElementById('q-text').innerText = q.text;
+        
+        var box = document.getElementById('options-box');
+        box.innerHTML = "";
+        
+        q.options.forEach(function(opt, idx) {
+            var row = document.createElement('div');
+            row.className = 'opt-row';
             
-            var items = FILES[subj] || [];
-            if(items.length === 0) list.innerHTML = "<p>No tests found.</p>";
-            
-            items.forEach(function(item) {
-                var div = document.createElement('div');
-                div.className = 'test-item';
-                div.style.padding = "15px"; 
-                div.style.border = "1px solid #ddd"; 
-                div.style.marginBottom = "10px";
-                div.style.display = "flex"; 
-                div.style.justifyContent = "space-between";
-                div.style.alignItems = "center";
-
-                // Check Storage
-                var hasResult = localStorage.getItem(item.file);
-                
-                var btn = document.createElement('button');
-                btn.className = hasResult ? 'btn btn-blue' : 'btn btn-green';
-                btn.innerText = hasResult ? "Result" : "Start";
-                
-                btn.onclick = function() {
-                    if(hasResult) showStoredResult(item.file);
-                    else fetchTest(item.file);
+            if(isReview) {
+                if(idx === q.correctIndex) row.style.background = "#d4edda";
+                if(r.sel === idx && idx !== q.correctIndex) row.style.background = "#f8d7da";
+            } else {
+                if(r.sel === idx) row.style.background = "#e3f2fd";
+                row.onclick = function() {
+                    r.sel = idx;
+                    loadQ();
                 };
-
-                var span = document.createElement('span');
-                span.innerText = item.name;
-
-                div.appendChild(span);
-                div.appendChild(btn);
-                list.appendChild(div);
-            });
-            switchView('view-list');
-        }
-
-        function fetchTest(url) {
-            var cleanUrl = url + "?t=" + new Date().getTime(); // Prevent Cache
-            fetch(cleanUrl)
-                .then(function(res) { 
-                    if(!res.ok) throw new Error("File not found (" + res.status + ")"); 
-                    return res.json(); 
-                })
-                .then(function(json) { startExam(json, url); })
-                .catch(function(err) { alert("Error: " + err.message + "\nPath: " + url); });
-        }
-
-        function startExam(json, url) {
-            state.data = json;
-            state.responses = {};
-            state.currQ = 0;
-            state.isReview = false;
-            state.isPaused = false;
-            state.url = url;
-            
-            for(var i=0; i<json.questions.length; i++) state.responses[i] = { sel: null };
-            
-            state.timeLeft = (json.timeLimit || 20) * 60;
-            startTimer();
-            
-            document.getElementById('exam-title').innerText = json.title || "Mock Test";
-            document.getElementById('exam-footer').style.display = 'flex';
-            document.getElementById('review-footer').style.display = 'none';
-            document.getElementById('pause-overlay').style.display = 'none';
-            
-            switchView('view-exam');
-            loadQ();
-        }
-
-        function startTimer() {
-            if(state.timer) clearInterval(state.timer);
-            var disp = document.getElementById('timer-display');
-            state.timer = setInterval(function() {
-                if(state.isPaused) return;
-                if(state.timeLeft <= 0) {
-                    clearInterval(state.timer);
-                    submitTest(true);
-                    return;
-                }
-                state.timeLeft--;
-                var m = Math.floor(state.timeLeft / 60).toString().padStart(2,'0');
-                var s = (state.timeLeft % 60).toString().padStart(2,'0');
-                disp.innerText = m + ":" + s;
-            }, 1000);
-        }
-
-        function loadQ() {
-            var q = state.data.questions[state.currQ];
-            var r = state.responses[state.currQ];
-            
-            document.getElementById('q-number').innerText = "Q" + (state.currQ + 1);
-            document.getElementById('q-text').innerText = q.text;
-            
-            var box = document.getElementById('options-box');
-            box.innerHTML = "";
-            
-            q.options.forEach(function(opt, idx) {
-                var row = document.createElement('div');
-                row.className = 'opt-row';
-                if(state.isReview) {
-                    if(idx === q.correctIndex) row.style.background = "#d4edda"; // Green
-                    if(r.sel === idx && idx !== q.correctIndex) row.style.background = "#f8d7da"; // Red
-                } else {
-                    if(r.sel === idx) row.style.background = "#e3f2fd"; // Blue
-                    row.onclick = function() {
-                        r.sel = idx;
-                        loadQ();
-                    };
-                }
-                row.innerHTML = "<b>" + ['A','B','C','D','E'][idx] + "</b> &nbsp; " + opt;
-                box.appendChild(row);
-            });
-
-            var sol = document.getElementById('solution-box');
-            if(state.isReview) {
-                sol.style.display = "block";
-                document.getElementById('sol-text').innerText = q.solution || "No solution.";
-            } else {
-                sol.style.display = "none";
             }
-            
-            renderPalette();
-            if(window.renderMathInElement) renderMathInElement(document.body);
-        }
+            row.innerHTML = "<b>" + ['A','B','C','D','E'][idx] + "</b> &nbsp;" + opt;
+            box.appendChild(row);
+        });
 
-        function saveNext() {
-            var r = state.responses[state.currQ];
-            if(r.sel !== null) r.status = 'ans';
-            else r.status = 'not-ans';
-            
-            if(state.currQ < state.data.questions.length - 1) {
-                state.currQ++;
-                loadQ();
-            } else {
-                if(confirm("Submit Test?")) submitTest(false);
-            }
+        var solBox = document.getElementById('solution-box');
+        if(isReview) {
+            solBox.style.display = 'block';
+            document.getElementById('sol-text').innerText = q.solution || "No solution.";
+        } else {
+            solBox.style.display = 'none';
         }
+        
+        renderPalette();
+        if(window.renderMathInElement) renderMathInElement(document.body);
+    }
 
-        function clearResponse() {
-            state.responses[state.currQ].sel = null;
+    function saveNext() {
+        var r = responses[currentQ];
+        if(r.sel !== null) r.status = 'ans';
+        else r.status = 'not-answered';
+        
+        if(currentQ < currentData.questions.length - 1) {
+            currentQ++;
             loadQ();
+        } else {
+            if(confirm("Submit Test?")) submitTest(false);
         }
+    }
 
-        function markReview() {
-            var r = state.responses[state.currQ];
-            r.status = 'rev';
-            if(state.currQ < state.data.questions.length - 1) { state.currQ++; loadQ(); }
-        }
+    function clearResponse() {
+        responses[currentQ].sel = null;
+        responses[currentQ].status = 'not-answered';
+        loadQ();
+    }
 
-        function prevQ() { if(state.currQ > 0) { state.currQ--; loadQ(); } }
-        function nextQ() { if(state.currQ < state.data.questions.length - 1) { state.currQ++; loadQ(); } }
+    function markReview() {
+        var r = responses[currentQ];
+        if(r.sel !== null) r.status = 'ans-rev';
+        else r.status = 'rev';
+        if(currentQ < currentData.questions.length - 1) { currentQ++; loadQ(); }
+    }
 
-        function renderPalette() {
-            var p = document.getElementById('palette-grid');
-            p.innerHTML = "";
-            state.data.questions.forEach(function(_, i) {
+    function prevQ() { if(currentQ > 0) { currentQ--; loadQ(); } }
+    function nextQ() { if(currentQ < currentData.questions.length - 1) { currentQ++; loadQ(); } }
+
+    function toggleSidebar() {
+        var s = document.getElementById('sidebar');
+        if(s.style.transform === "translateX(0px)") s.style.transform = "translateX(100%)";
+        else s.style.transform = "translateX(0px)";
+    }
+
+    function renderPalette() {
+        var p = document.getElementById('palette-grid');
+        p.innerHTML = "";
+        for(var i=0; i<currentData.questions.length; i++) {
+            (function(idx){
                 var btn = document.createElement('div');
                 btn.className = 'pal-btn';
-                btn.innerText = i + 1;
+                btn.innerText = idx + 1;
+                var s = responses[idx].status;
                 
-                var r = state.responses[i];
-                if(state.isReview) {
-                    if(r.sel === state.data.questions[i].correctIndex) btn.style.background = "#28a745";
+                if(isReview) {
+                    var r = responses[idx];
+                    if(r.sel === currentData.questions[idx].correctIndex) btn.style.background = "#28a745";
                     else if(r.sel !== null) btn.style.background = "#dc3545";
-                    else btn.style.b
+                    else btn.style.background = "#ccc";
+                    btn.style.color = "white";
+                } else {
+                    if(s === 'ans' || s === 'ans-rev') { btn.style.background = "#28a745"; btn.style.color="white"; }
+                    else if(s === 'not-answered') { btn.style.background = "#dc3545"; btn.style.color="white"; }
+                    else if(s === 'rev') { btn.style.background = "#6f42c1"; btn.style.color="white"; }
+                }
+                
+                if(idx === currentQ) btn.style.border = "2px solid black";
+                btn.onclick = function() { currentQ = idx; loadQ(); toggleSidebar(); };
+                p.appendChild(btn);
+            })(i);
+        }
+    }
+
+    function submitTest(force) {
+        if(!force && !confirm("Submit Test?")) return;
+        clearInterval(timerInterval);
+        
+        var score = 0, corr = 0, wrong = 0, unatt = 0;
+        var total = currentData.questions.length;
+        
+        currentData.questions.forEach(function(q, i) {
+            var r = responses[i];
+            if(r.sel !== null) {
+                if(r.sel === q.correctIndex) { score += 1; corr++; }
+                else { score -= 0.25; wrong++; }
+            } else unatt++;
+        });
+
+        // Save
+        if(currentUrl) {
+            var res = { score: score, corr: corr, wrong: wrong, unatt: unatt, total: total, data: currentData, responses: responses };
+            localStorage.setItem(currentUrl, JSON.stringify(res));
+        }
+
+        renderResult(score, corr, wrong, unatt, total);
+    }
+
+    function showStoredResult(url) {
+        var saved = JSON.parse(localStorage.getItem(url));
+        if(!saved) return;
+        currentData = saved.data;
+        responses = saved.responses;
+        renderResult(saved.score, saved.corr, saved.wrong, saved.unatt, saved.total);
+    }
+
+    function renderResult(score, corr, wrong, unatt, total) {
+        document.getElementById('final-score').innerText = score.toFixed(2);
+        document.querySelectorAll('#view-result span b')[0].innerText = corr;
+        document.querySelectorAll('#view-result span b')[1].innerText = wrong;
+        document.querySelectorAll('#view-result span b')[2].innerText = unatt;
+
+        // Feedback
+        var pct = (score/total)*100;
+        var msg = "Keep Practicing";
+        var color = "#666";
+        
+        if (pct < 40) { msg = 
