@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Banking Mock Test</title>
     
-    <!-- KaTeX -->
+    <!-- KaTeX (Math) with Error Handling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
@@ -18,7 +18,10 @@
         .view { display: none; width: 100%; height: 100%; flex-direction: column; }
         .view.active { display: flex; }
 
-        /* CARDS */
+        /* DEBUG BOX (Visible only if error occurs) */
+        #debug-console { display: none; background: #333; color: #ff4444; padding: 10px; font-size: 12px; max-height: 100px; overflow: auto; border-bottom: 2px solid red; }
+
+        /* HOME */
         #view-home { padding: 20px; overflow-y: auto; }
         .subject-card { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; border-left: 5px solid transparent; }
         .subject-card:active { background: #eee; }
@@ -46,11 +49,13 @@
 </head>
 <body>
 
+    <!-- DEBUGGER -->
+    <div id="debug-console"></div>
+
     <!-- HOME -->
     <div id="view-home" class="view active">
         <h2 style="color: #333; margin-bottom: 30px;">Banking Mock Tests</h2>
         
-        <!-- DIRECT ONCLICK FUNCTION CALLS -->
         <div class="subject-card" onclick="showList('quant')">
             <div><strong>Quantitative Aptitude</strong></div> <span>➜</span>
         </div>
@@ -110,7 +115,15 @@
     </div>
 
     <script>
-    // 1. CONFIGURATION (I removed mock2.json to prevent 404 error)
+    // --- ERROR LOGGER ---
+    window.onerror = function(msg, url, line) {
+        var d = document.getElementById('debug-console');
+        d.style.display = 'block';
+        d.innerHTML += "Error: " + msg + " (Line " + line + ")<br>";
+        return false;
+    };
+
+    // 1. CONFIGURATION
     var FILES = {
         'quant': [ 
             { name: "Quant Mock 1", file: "tests/quant/mock1.json" } 
@@ -155,14 +168,15 @@
     }
 
     function fetchTest(url) {
-        var cleanUrl = url + "?t=" + new Date().getTime(); // Prevent Cache
+        // Anti-cache param to force reload new file
+        var cleanUrl = url + "?t=" + new Date().getTime();
         fetch(cleanUrl)
             .then(function(r) { 
-                if(!r.ok) throw new Error("File not found"); 
+                if(!r.ok) throw new Error("File not found (" + r.status + ")"); 
                 return r.json(); 
             })
             .then(function(json) { startExam(json); })
-            .catch(function(e) { alert("Error: " + e.message + "\nPath: " + url); });
+            .catch(function(e) { alert("Error loading test:\n" + e.message); });
     }
 
     function startExam(json) {
@@ -171,6 +185,8 @@
         currQ = 0;
         isReview = false;
         
+        if(!data.questions) { alert("JSON format invalid: missing 'questions'"); return; }
+
         for(var i=0; i<data.questions.length; i++) responses[i] = { sel: null };
         timeLeft = (data.timeLimit || 20) * 60;
         
@@ -211,7 +227,6 @@
             box.appendChild(row);
         });
 
-        // Solution Logic
         var sol = document.getElementById('solution-box');
         if(isReview) {
             sol.style.display = "block";
@@ -224,7 +239,6 @@
         if(window.renderMathInElement) renderMathInElement(document.body);
     }
 
-    // THIS WAS THE MISSING FUNCTION CAUSING THE ERROR
     function renderPalette() {
         var p = document.getElementById('palette-grid');
         p.innerHTML = "";
@@ -234,14 +248,21 @@
                 btn.className = 'pal-btn';
                 btn.innerText = idx + 1;
                 
-                // Color logic
                 if(responses[idx].sel !== null) btn.style.background = "#28a745";
                 if(idx === currQ) btn.style.border = "2px solid black";
                 
+                // Added toggleSidebar here to close menu on click
                 btn.onclick = function() { currQ = idx; loadQ(); toggleSidebar(); };
                 p.appendChild(btn);
             })(i);
         }
+    }
+
+    // FIXED: Added missing function
+    function toggleSidebar() {
+        var s = document.getElementById('sidebar');
+        if(s.style.transform === "translateX(0px)") s.style.transform = "translateX(100%)";
+        else s.style.transform = "translateX(0px)";
     }
 
     function saveNext() {
@@ -252,12 +273,6 @@
     function clearResponse() {
         responses[currQ].sel = null;
         loadQ();
-    }
-
-    function toggleSidebar() {
-        var s = document.getElementById('sidebar');
-        if(s.style.transform === "translateX(0px)") s.style.transform = "translateX(100%)";
-        else s.style.transform = "translateX(0px)";
     }
 
     function submitTest(force) {
