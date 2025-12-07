@@ -1,6 +1,6 @@
 {
-  "title": "RRB Clerk Reasoning: Puzzle & Seating Special",
-  "timeLimit": 40,
+  "title": "RRB Clerk Reasoning: Puzzle & Seating Marathon",
+  "timeLimit": 25,
   "questions": [
     {
       "text": "Directions (Q1-5): Study the following information carefully.\nEight persons—P, Q, R, S, T, U, V, and W—are sitting around a circular table facing the center.\n- P sits third to the right of W.\n- Only two persons sit between P and T.\n- Q sits second to the left of S.\n- S is an immediate neighbor of T.\n- U sits immediate left of V.\n- V is not an immediate neighbor of P.\n\nQ1. Who sits opposite to U?",
