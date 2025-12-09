@@ -142,8 +142,8 @@
     },
     {
       "direction": "Refer to the table below:",
-      "infoHtml": "<table border='1' style='width:65%; border-collapse: collapse;'><tr><th>Shop</th><th>Mon</th><th>Tue</th><th>Wed</th></tr><tr><td>P</td><td>150</td><td>120</td><td>180</td></tr><tr><td>Q</td><td>200</td><td>160</td><td>140</td></tr><tr><td>R</td><td>180</td><td>220</td><td>200</td></tr></table>",
-      "text": "Study the table carefully.\nTable shows items sold by 3 shops on 3 days.\n\n| Shop | Mon | Tue | Wed |\n|---|---|---|---|\n| P | 150 | 120 | 180 |\n| Q | 200 | 160 | 140 |\n| R | 180 | 220 | 200 |\n\nFind the ratio of total items sold by P on Mon and Wed together to items sold by Q on Tue and Wed together.",
+      "infoHtml": "<table border='1' style='width:65%; border-collapse: collapse; margin: auto;'><tr><th>Shop</th><th>Mon</th><th>Tue</th><th>Wed</th></tr><tr><td>P</td><td>150</td><td>120</td><td>180</td></tr><tr><td>Q</td><td>200</td><td>160</td><td>140</td></tr><tr><td>R</td><td>180</td><td>220</td><td>200</td></tr></table>",
+      "text": "Study the table carefully.\nTable shows items sold by 3 shops on 3 days.\nFind the ratio of total items sold by P on Mon and Wed together to items sold by Q on Tue and Wed together.",
       "options": ["10:9", "11:10", "12:11", "9:8", "13:12"],
       "correctIndex": 1,
       "solution": "P (Mon+Wed) = $$150 + 180 = 330$$\nQ (Tue+Wed) = $$160 + 140 = 300$$\nRatio $$330 : 300 = 11 : 10$$"
