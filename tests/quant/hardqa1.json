@@ -200,7 +200,7 @@
         "https://github.com/nitingit7/Mock-Test/blob/f191d44eb96ffde8ec3be96cb042b6469da34d2f/tests/quant/DI/hardqa1(Bar).png?raw=true",
         "https://github.com/nitingit7/Mock-Test/blob/f191d44eb96ffde8ec3be96cb042b6469da34d2f/tests/quant/DI/hardqa1(Pie).png?raw=true"
       ],
-      "text": "DI Set 1: School A, B, C. Total students 1000, 1500, 1200. Passed % are 60%, 50%, 70%. Find total passed students.",
+      "text": "In the first bar graph, the total number of student in A, B and C is given and in the second pie graph, the percentage of passed student is given. Find total passed students.",
       "options": ["2100", "2200", "2190", "2150", "2250"],
       "correctIndex": 2,
       "solution": "A: 600. B: 750. C: 840. Total = $$ 600 + 750 + 840 = 2190 $$."
