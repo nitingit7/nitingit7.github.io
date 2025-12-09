@@ -106,6 +106,38 @@
         }
         .back-btn:active { transform: scale(0.98); opacity: 0.9; }
         .katex { font-size: 1.1em; }
+
+        /* Addiing responsive table css for mobile devices */
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            font-size: 1rem; /* default size */
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid black;
+        }
+
+        /* For mobile screens (small screens) */
+        @media (max-width: 600px) {
+            table {
+                font-size: 0.75rem; /* smaller text */
+            }
+        }
+
+        /* For tablets */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            table {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* For laptops/desktops (large screens) */
+        @media (min-width: 1025px) {
+            table {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
