@@ -519,10 +519,6 @@
             
             // Helper to render one image
             function addImg(url) {
-                // AUTO FIX FOR GITHUB BLOB LINKS
-                if(url.includes('github.com') && url.includes('/blob/')) {
-                    url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
-                }
                 var img = document.createElement('img');
                 img.src = url;
                 img.className = 'q-image';
@@ -833,3 +829,4 @@
     </script>
 </body>
 </html>
+
