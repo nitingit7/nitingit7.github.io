@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Banking Mock Test Pro</title>
     
-    <!-- KaTeX for Math -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
@@ -107,7 +106,6 @@
 </head>
 <body>
 
-    <!-- HOME -->
     <div id="view-home" class="view active">
         <h2 style="color: var(--dark); margin-bottom: 30px;">Banking Mock Tests(beta)</h2>
         
@@ -131,14 +129,12 @@
         </div>
     </div>
 
-    <!-- LIST -->
     <div id="view-list" class="view">
         <div class="back-btn" id="btn-back-home">← Back</div>
         <h2 id="list-title">Select Test</h2>
         <div id="test-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
     </div>
 
-    <!-- EXAM -->
     <div id="view-exam" class="view">
         <header>
             <div id="exam-title">Mock Test</div>
@@ -187,7 +183,6 @@
         </div>
     </div>
 
-    <!-- PAUSE -->
     <div id="pause-overlay">
         <h1>Test Paused</h1>
         <p style="margin-bottom:30px;">Timer stopped.</p>
@@ -195,7 +190,6 @@
         <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #555;" id="btn-quit">Quit Test</button>
     </div>
 
-    <!-- RESULT -->
     <div id="view-result" class="view">
         <div class="score-card">
             <h2 style="color:#333;">Test Result</h2>
@@ -204,6 +198,8 @@
             
             <div style="font-size:3.5rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
             <p style="color:#666; margin-bottom:20px;">Total Marks</p>
+            
+            <div style="font-size:1.2rem; font-weight:bold; color:var(--dark); margin-bottom:10px;" id="time-spent-display"></div>
             
             <div class="stat-grid">
                 <div class="stat-item" style="border-bottom: 3px solid var(--green);">
@@ -253,7 +249,9 @@
 
     // --- APP LOGIC ---
     window.app = {
-        data: null, responses: {}, currQ: 0, timer: null, timeLeft: 0, isReview: false, isPaused: false, currentFileUrl: "",
+        data: null, responses: {}, currQ: 0, timer: null, timeLeft: 0, 
+        timeLimitSeconds: 0, // ADDED: To store the original time limit in seconds
+        isReview: false, isPaused: false, currentFileUrl: "",
 
         init: function() {
             // Bind Home Buttons safely
@@ -372,6 +370,7 @@
             }
             
             this.timeLeft = (this.data.timeLimit || 20) * 60;
+            this.timeLimitSeconds = this.timeLeft; // ADDED: Store the total time for calculation
             this.startTimer();
             
             this.setText('exam-title', this.data.title || "Mock Test");
@@ -541,6 +540,9 @@
             var score = 0, corr = 0, wrong = 0, unatt = 0;
             var totalMarks = 0;
             
+            var timeSpent = this.timeLimitSeconds - this.timeLeft; // ADDED: Calculate time spent
+            if (timeSpent < 0) timeSpent = 0; // Prevent negative time if timer starts late
+            
             var self = this;
             this.data.questions.forEach(function(q, i) {
                 var r = self.responses[i];
@@ -555,12 +557,13 @@
             if(self.currentFileUrl) {
                 var resultObj = {
                     score: score, correct: corr, wrong: wrong, unatt: unatt, totalMarks: totalMarks,
-                    responses: self.responses, data: self.data
+                    responses: self.responses, data: self.data,
+                    timeSpent: timeSpent // ADDED: Save time spent
                 };
                 localStorage.setItem(self.currentFileUrl, JSON.stringify(resultObj));
             }
 
-            this.renderResultScreen(score, corr, wrong, unatt, totalMarks);
+            this.renderResultScreen(score, corr, wrong, unatt, totalMarks, timeSpent); // UPDATED: Pass timeSpent
         },
 
         showStoredResult: function(url) {
@@ -570,14 +573,23 @@
             var res = JSON.parse(savedJSON);
             this.data = res.data;
             this.responses = res.responses;
-            this.renderResultScreen(res.score, res.correct, res.wrong, res.unatt, res.totalMarks);
+            var timeSpent = res.timeSpent || 0; // UPDATED: Retrieve time spent
+            this.renderResultScreen(res.score, res.correct, res.wrong, res.unatt, res.totalMarks, timeSpent); // UPDATED: Pass timeSpent
         },
 
-        renderResultScreen: function(score, corr, wrong, unatt, total) {
+        renderResultScreen: function(score, corr, wrong, unatt, total, timeSpent) { // UPDATED: Receive timeSpent
             this.setText('final-score', score.toFixed(2));
             this.setText('res-correct', corr);
             this.setText('res-wrong', wrong);
             this.setText('res-unatt', unatt);
+            
+            // ADDED: Time Spent Formatting Logic
+            if (timeSpent !== undefined) {
+                var minutes = Math.floor(timeSpent / 60);
+                var seconds = timeSpent % 60;
+                var timeString = (minutes > 0 ? minutes + 'm' : '') + seconds + 's';
+                this.setText('time-spent-display', 'Time Taken: ' + timeString);
+            }
             
             var pct = (score / total) * 100;
             var msg = "", color = "#666";
@@ -620,24 +632,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
