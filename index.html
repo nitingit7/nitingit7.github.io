@@ -403,6 +403,12 @@
             
             this.setText('exam-title', this.data.title || "Mock Test");
             
+            // SHOW HEADER ELEMENTS FOR EXAM
+            document.getElementById('timer-display').style.display = ''; // Reset to default (flex/block)
+            document.getElementById('btn-pause').style.display = '';
+            document.getElementById('btn-exit').style.display = '';
+            document.getElementById('btn-submit').style.display = 'block'; // Ensure submit is visible
+
             document.getElementById('exam-footer').style.display = 'flex';
             document.getElementById('review-footer').style.display = 'none';
             document.getElementById('pause-overlay').style.display = 'none';
@@ -744,6 +750,15 @@
         startReviewMode: function() {
             this.isReview = true;
             this.currQ = 0;
+            
+            // HIDE HEADER BUTTONS IN REVIEW
+            document.getElementById('timer-display').style.display = 'none';
+            document.getElementById('btn-pause').style.display = 'none';
+            document.getElementById('btn-exit').style.display = 'none';
+            
+            // HIDE SUBMIT BUTTON IN REVIEW
+            document.getElementById('btn-submit').style.display = 'none';
+            
             document.getElementById('exam-footer').style.display = 'none';
             document.getElementById('review-footer').style.display = 'flex';
             this.switchView('view-exam');
