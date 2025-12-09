@@ -51,7 +51,7 @@
         .q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; }
         .q-footer { padding: 10px; background: #f8f9fa; border-top: 1px solid #ddd; display: flex; justify-content: space-between; }
 
-        /* DI / GRAPH STYLES (NEW) */
+        /* DI / GRAPH STYLES */
         .q-direction { font-style: italic; color: #555; margin-bottom: 15px; border-left: 3px solid var(--blue); padding-left: 10px; font-size: 0.95rem; }
         .q-image { max-width: 100%; height: auto; display: block; margin: 10px auto 20px auto; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
@@ -106,38 +106,6 @@
         }
         .back-btn:active { transform: scale(0.98); opacity: 0.9; }
         .katex { font-size: 1.1em; }
-
-        /* Addiing responsive table css for mobile devices */
-        table {
-            margin: auto;
-            border-collapse: collapse;
-            font-size: 1rem; /* default size */
-        }
-        th, td {
-            padding: 5px 7px;
-            border: 2px solid black;
-        }
-
-        /* For mobile screens (small screens) */
-        @media (max-width: 600px) {
-            table {
-                font-size: 0.85rem; /* smaller text */
-            }
-        }
-
-        /* For tablets */
-        @media (min-width: 601px) and (max-width: 1024px) {
-            table {
-                font-size: 0.9rem;
-            }
-        }
-
-        /* For laptops/desktops (large screens) */
-        @media (min-width: 1025px) {
-            table {
-                font-size: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -278,7 +246,7 @@
             { name: "RRB Clerk Speed Math 2", file: BASE_URL + "tests/quant/SM2.json" },
             { name: "RRB Clerk Prelims: Quant[Moderate]", file: BASE_URL + "tests/quant/hardqa1.json" },
             { name: "RRB Clerk Prelims: Quant [Easy-Moderate]", file: BASE_URL + "tests/quant/quanteasymod.json" },
-            { name: "RRB Clerk Prelims: Quant [Easy-Moderate]", file: BASE_URL + "tests/quant/easytomode2.json" },
+            { name: "RRB Clerk Prelims: Quant [Easy-Moderate]", file: BASE_URL + "tests/quant/easytomod2.json" },
             { name: "RRB Clerk Prelims: Quant [moderate]", file: BASE_URL + "tests/quant/quant5.json" }
         ],
         'reasoning': [
@@ -548,13 +516,29 @@
                 d.innerHTML = "<b>Direction:</b> " + q.direction;
                 extra.appendChild(d);
             }
-            if (q.image) {
+            
+            // Helper to render one image
+            function addImg(url) {
+                // AUTO FIX FOR GITHUB BLOB LINKS
+                if(url.includes('github.com') && url.includes('/blob/')) {
+                    url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+                }
                 var img = document.createElement('img');
-                img.src = q.image;
+                img.src = url;
                 img.className = 'q-image';
                 img.alt = "Graph/Chart";
                 extra.appendChild(img);
             }
+
+            // Handle Single Image (Legacy)
+            if (q.image) {
+                addImg(q.image);
+            }
+            // Handle Multiple Images (New)
+            if (q.images && Array.isArray(q.images)) {
+                q.images.forEach(function(url) { addImg(url); });
+            }
+
             if (q.infoHtml) {
                 var div = document.createElement('div');
                 div.innerHTML = q.infoHtml;
