@@ -204,7 +204,7 @@
       "text": "A boat covers 36 km upstream and 48 km downstream in 10 hours. If the speed of the current is 3 km/hr, find the speed of the boat in still water.",
       "options": ["9 km/hr", "12 km/hr", "15 km/hr", "10 km/hr", "18 km/hr"],
       "correctIndex": 0,
-      "solution": "$$\\frac{36}{v-3} + frac{48}{v+3} = 10$$. \nBy putting values from option we get 9 satisfied. \nSolution:=9."
+      "solution": "$$\\frac{36}{v-3} + \\frac{48}{v+3} = 10$$. \nBy putting values from option we get 9 satisfied. \nSolution:=9."
     },
     {
       "text": "Pipe A can fill a tank in 12 hours, Pipe B in 15 hours. Pipe C can empty it in 20 hours. If all three are opened together, how long will it take to fill the tank?",
