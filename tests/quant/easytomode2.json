@@ -213,7 +213,9 @@
       "solution": "New weight = Old Avg + (Increase $\\times$ New Count). $$40 + (1 \\times 16) = 56$$ kg."
     },
     {
-      "text": "DI (Table): Store A sold 150 Pens, 200 Books. Store B sold 250 Pens, 150 Books. Store C sold 300 Pens, 250 Books. Q: Total items sold by Store C?",
+      "Direction": "Refer to the tabular DI",
+      "infoHtml": "<table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>Store</th><th>Pens</th><th>Books</th></tr><tr><td>Store A</td><td>150</td><td>200</td></tr><tr><td>Store B</td><td>250</td><td>150</td></tr><tr><td>Store C</td><td>300</td><td>250</td></tr></table>",
+      "text": "Total items sold by Store C?",
       "options": ["500", "550", "600", "450", "520"],
       "correctIndex": 1,
       "solution": "$$300 + 250 = 550$$."
