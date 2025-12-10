@@ -45,7 +45,8 @@
                 } else {
                     btn.className = 'btn btn-green'; 
                     btn.innerText = "Start";
-                    btn.onclick = function() { location.href = "exam.html?file=" + encodeURIComponent(f.file); };
+                    // Point to instructions.html instead
+                    btn.onclick = function() { location.href = "instructions.html?file=" + encodeURIComponent(f.file); };
                 }
                 div.appendChild(btn);
                 list.appendChild(div);
