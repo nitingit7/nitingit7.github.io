@@ -2,16 +2,16 @@
 @import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
 
 :root { 
-    /* YOUR NEW PALETTE */
-    --blue:   #c03ce8;  /* Primary Action (Save & Next, Start) */
-    --yellow: #dc8fff;  /* Secondary Action (Pause) */
-    --dark:   #43334C;  /* Header Background & Main Text */
-    --light:  #F8F4EC;  /* App Background */
+    /* NEW BLUE THEME */
+    --blue:   #3F72AF;  /* Primary Action (Start, Save & Next) */
+    --yellow: #DBE2EF;  /* Secondary Action (Pause Button) */
+    --dark:   #112D4E;  /* Header & Text */
+    --light:  #F9F7F7;  /* App Background */
     
-    /* SEMANTIC COLORS (Keep these for Right/Wrong feedback) */
+    /* SEMANTIC COLORS (Keep these standard) */
     --green:  #28a745;  
     --red:    #dc3545;  
-    --purple: #6f42c1;  /* Review Button */
+    --purple: #6f42c1; 
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f4ecf8; height: 100vh; display: flex; flex-direction: column; }
@@ -37,7 +37,7 @@ header { height: 60px; background: var(--dark); color: white; display: flex; jus
 
 /* BUTTONS */
 .btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
-.btn-pause { background: var(--yellow); color: #222; }
+.btn-pause { background: var(--yellow); color: #112D4E; }
 .btn-exit { background: var(--red); color: white; }
 .btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
 .btn-green { background: var(--green); }
@@ -63,7 +63,7 @@ header { height: 60px; background: var(--dark); color: white; display: flex; jus
 .q-extra-info th { background-color: #f8f9fa; font-weight: bold; }
 
 .opt-row { display: flex; padding: 12px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; cursor: pointer; align-items: center; }
-.opt-row.selected { background: #f4e4fc; border-color: #b73ce8; border-width: 2px; }
+.opt-row.selected { background: #DBE2EF; border-color: #b73ce8; border-width: 2px; }
 .opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; }
 .opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; }
 .solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
