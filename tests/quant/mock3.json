@@ -159,7 +159,7 @@
     {
       "id": "Q23"
       "Direcrion": "Study the table showing students in 3 schools"
-      "infoHtml": "<table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
+      "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
       "text": "What is the total number of students in School B?",
       "options": ["400", "450", "500", "550", "600"],
       "correctIndex": 2,
@@ -167,7 +167,7 @@
     },
     {
       "id": "Q24"
-      "infoHtml": "<table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
+      "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
       "text": "DI Set 1: What is the ratio of Boys in School A to Girls in School C?",
       "options": ["1:1", "2:3", "5:4", "1:2", "5:6"],
       "correctIndex": 0,
@@ -175,7 +175,7 @@
     },
     {
       "id": "Q25"
-      "infoHtml": "<table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
+      "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
       "text": "DI Set 1: Girls in School B are what percent of Boys in School B?",
       "options": ["60%", "66.66%", "75%", "50%", "80%"],
       "correctIndex": 1,
@@ -183,7 +183,7 @@
     },
     {
       "id": "Q26"
-      "infoHtml": "<table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
+      "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
       "text": "DI Set 1: Find the average number of Boys in all three schools.",
       "options": ["200", "250", "300", "225", "275"],
       "correctIndex": 1,
@@ -191,7 +191,7 @@
     },
     {
       "id": "Q27"
-      "infoHtml": "<table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
+      "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>"
       "text": "DI Set 1: Total students in School A are what percent more/less than total students in School C?",
       "options": ["10% less", "11.11% less", "12.5% less", "15% less", "No Difference"],
       "correctIndex": 1,
@@ -291,4 +291,5 @@
   ]
 
 }
+
 
