@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Exam</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+
+    <div id="view-exam" class="view active" style="width:100%; height:100%; display:flex; flex-direction:column;">
+        <header>
+            <div id="exam-title">Mock Test</div>
+            <div class="timer-box">
+                <div class="timer" id="timer-display">00:00</div>
+                <button class="btn-header btn-pause" id="btn-pause" title="Pause">⏸</button>
+                <button class="btn-header btn-exit" id="btn-exit" title="Exit Test">✖</button>
+                <button class="btn-outline" style="background:white; padding: 5px 10px;" id="btn-toggle-sidebar">☰</button>
+            </div>
+        </header>
+        <div class="exam-body">
+            <main class="q-area">
+                <div class="q-content">
+                    <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:15px;">
+                        <div>
+                            <strong style="color:var(--blue);" id="q-number">Q1</strong>
+                            <span id="btn-report" class="report-link">Report Error</span>
+                        </div>
+                        <span style="font-size:0.8rem; background:#eee; padding:2px 6px; border-radius:4px;">Marks: +1 / -0.25</span>
+                    </div>
+                    
+                    <div id="review-badges" class="review-badges-container" style="display:none;">
+                        <div id="review-status-badge" class="review-badge"></div>
+                        <div id="review-time-badge" class="review-badge"></div>
+                    </div>
+
+                    <div id="q-extra-info" class="q-extra-info"></div>
+                    <div id="q-text" style="margin-bottom:20px;">Loading...</div>
+                    <div id="options-box"></div>
+                    <div id="solution-box" class="solution-box">
+                        <strong>Solution:</strong> <div id="sol-text"></div>
+                    </div>
+                </div>
+                <div class="q-footer" id="exam-footer">
+                    <div>
+                        <button class="btn btn-red" id="btn-clear">Clear</button>
+                        <button class="btn btn-purple" id="btn-review">Review</button>
+                    </div>
+                    <button class="btn btn-green" id="btn-save">Save & Next</button>
+                </div>
+                <div class="q-footer" id="review-footer" style="display:none;">
+                    <button class="btn btn-outline" id="btn-prev">Prev</button>
+                    <button class="btn btn-blue" id="btn-next">Next</button>
+                    <button class="btn btn-red" id="btn-exit-review">Exit</button>
+                </div>
+            </main>
+            <aside id="sidebar">
+                <div style="padding:10px; font-weight:bold; border-bottom:1px solid #eee;">
+                    Palette <span style="float:right; cursor:pointer;" id="btn-close-sidebar">✖</span>
+                </div>
+                <div class="palette-grid" id="palette-grid"></div>
+                <div style="margin-top:auto; padding:15px;">
+                    <button class="btn btn-green" style="width:100%;" id="btn-submit">SUBMIT TEST</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="pause-overlay">
+        <h1>Test Paused</h1>
+        <button class="btn btn-green" style="padding:15px 30px;" id="btn-resume">RESUME</button>
+        <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #555;" id="btn-quit">Quit Test</button>
+    </div>
+
+    <div id="view-result" class="view-result">
+        <div class="score-card">
+            <h2 style="color:#333;">Test Result</h2>
+            <div id="feedback-badge" class="feedback-badge">Processing...</div>
+            <div style="font-size:3.5rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
+            <p style="color:#666; margin-bottom:10px;">Total Marks</p>
+            <div id="time-taken-box" class="time-badge">Time: 0s</div>
+            
+            <div class="stat-grid">
+                <div class="stat-item" style="border-bottom: 3px solid var(--green);"><div class="stat-val" id="res-correct" style="color:var(--green)">0</div><div class="stat-label">Correct</div></div>
+                <div class="stat-item" style="border-bottom: 3px solid var(--red);"><div class="stat-val" id="res-wrong" style="color:var(--red)">0</div><div class="stat-label">Wrong</div></div>
+                <div class="stat-item" style="border-bottom: 3px solid #666;"><div class="stat-val" id="res-unatt">0</div><div class="stat-label">Unatt.</div></div>
+            </div>
+            
+            <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" id="btn-reattempt">Re-attempt Test</button>
+            <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" id="btn-view-sols">Review Solutions</button>
+            <button class="btn btn-outline" style="width:100%;" onclick="location.href='index.html'">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+    // --- EXAM ENGINE ---
+    window.app = {
+        data: null, responses: {}, currQ: 0, timerInterval: null, 
+        totalTimeSeconds: 0, startTime: 0, accumulatedPauseTime: 0, pauseStartTimestamp: 0,
+        questionStartTime: 0, isReview: false, isPaused: false, currentFileUrl: "",
+
+        init: function() {
+            var params = new URLSearchParams(window.location.search);
+            this.currentFileUrl = params.get('file');
+            var showResult = params.get('showResult');
+
+            if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
+
+            // Binds
+            this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
+            this.bind('btn-close-sidebar', () => this.toggleSidebar());
+            this.bind('btn-pause', () => this.togglePause());
+            this.bind('btn-exit', () => this.exitTest());
+            this.bind('btn-save', () => this.saveNext());
+            this.bind('btn-clear', () => this.clearResponse());
+            this.bind('btn-review', () => this.markReview());
+            this.bind('btn-submit', () => this.submitTest(false));
+            this.bind('btn-prev', () => this.prevQ());
+            this.bind('btn-next', () => this.nextQ());
+            this.bind('btn-exit-review', () => this.exitReview());
+            this.bind('btn-resume', () => this.togglePause());
+            this.bind('btn-quit', () => this.exitTest());
+            this.bind('btn-view-sols', () => this.startReviewMode());
+            this.bind('btn-reattempt', () => this.reattemptTest());
+            this.bind('btn-report', () => this.reportIssue());
+
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
+            });
+
+            // Decide to show result or start test
+            if(showResult === "true") {
+                this.showStoredResult(this.currentFileUrl);
+            } else {
+                this.fetchTest(this.currentFileUrl);
+            }
+        },
+
+        bind: function(id, func) {
+            var el = document.getElementById(id);
+            if(el) el.addEventListener('click', func);
+        },
+
+        fetchTest: function(url) {
+            var self = this;
+            var cleanUrl = url + "?v=" + new Date().getTime();
+            fetch(cleanUrl)
+                .then(res => { if(!res.ok) throw new Error("Status " + res.status); return res.json(); })
+                .then(json => { self.startExam(json); })
+                .catch(err => { alert("Error loading test: " + err.message); });
+        },
+
+        startExam: function(jsonObj) {
+            this.data = jsonObj; this.responses = {}; this.currQ = 0;
+            this.isReview = false; this.isPaused = false;
+            
+            if(!this.data.questions) { alert("Invalid JSON"); return; }
+
+            for(var i=0; i<this.data.questions.length; i++) {
+                this.responses[i] = { sel: null, status: 'not-visited', timeSpent: 0 };
+            }
+            
+            this.totalTimeSeconds = (this.data.timeLimit || 20) * 60;
+            this.startTime = Date.now(); this.accumulatedPauseTime = 0;
+            this.startTimer();
+            this.questionStartTime = Date.now();
+            
+            document.getElementById('exam-title').innerText = this.data.title || "Mock Test";
+            this.switchView('exam');
+            this.loadQ();
+        },
+
+        switchView: function(viewName) {
+            if(viewName === 'exam') {
+                document.getElementById('view-exam').style.display = 'flex';
+                document.getElementById('view-result').classList.remove('active');
+            } else if(viewName === 'result') {
+                document.getElementById('view-exam').style.display = 'none';
+                document.getElementById('view-result').classList.add('active');
+            }
+        },
+
+        startTimer: function() {
+            if(this.timerInterval) clearInterval(this.timerInterval);
+            var self = this;
+            this.updateTimerDisplay();
+            this.timerInterval = setInterval(function() {
+                if(self.isPaused) return;
+                self.updateTimerDisplay();
+            }, 500); 
+        },
+
+        updateTimerDisplay: function() {
+            var disp = document.getElementById('timer-display');
+            if(!disp) return;
+            var now = Date.now();
+            var elapsedSeconds = Math.floor((now - this.startTime - this.accumulatedPauseTime) / 1000);
+            var remaining = this.totalTimeSeconds - elapsedSeconds;
+            if(remaining <= 0) { remaining = 0; clearInterval(this.timerInterval); this.submitTest(true); }
+            if(remaining < 60) disp.classList.add('warning'); else disp.classList.remove('warning');
+            var m = Math.floor(remaining / 60).toString().padStart(2,'0');
+            var s = (remaining % 60).toString().padStart(2,'0');
+            disp.innerText = m + ":" + s;
+        },
+
+        captureQuestionTime: function() {
+            if (this.isReview || this.isPaused) return; 
+            var now = Date.now();
+            var diffSeconds = (now - this.questionStartTime) / 1000;
+            if (this.responses[this.currQ]) { this.responses[this.currQ].timeSpent += diffSeconds; }
+            this.questionStartTime = now;
+        },
+
+        togglePause: function() {
+            this.isPaused = !this.isPaused;
+            var el = document.getElementById('pause-overlay');
+            if (this.isPaused) {
+                this.captureQuestionTime(); 
+                this.pauseStartTimestamp = Date.now(); el.style.display = 'flex';
+            } else {
+                var pauseDuration = Date.now() - this.pauseStartTimestamp;
+                this.accumulatedPauseTime += pauseDuration;
+                this.questionStartTime = Date.now();
+                el.style.display = 'none'; this.updateTimerDisplay(); 
+            }
+        },
+
+        exitTest: function() {
+            if(confirm("Exit Test? Progress will be lost.")) {
+                if(this.timerInterval) clearInterval(this.timerInterval);
+                location.href = 'index.html';
+            }
+        },
+
+        reportIssue: function() {
+            if(!GOOGLE_FORM_URL) { alert("Please configure GOOGLE_FORM_URL in config.js"); return; }
+            var testName = this.data.title || "Unknown Test";
+            var qNum = "Q" + (this.currQ + 1);
+            var finalUrl = GOOGLE_FORM_URL
+                .replace("TEST_NAME_HERE", encodeURIComponent(testName))
+                .replace("Q_NUM_HERE", encodeURIComponent(qNum));
+            window.open(finalUrl, '_blank');
+        },
+
+        loadQ: function() {
+            var q = this.data.questions[this.currQ];
+            var r = this.responses[this.currQ];
+            
+            if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
+            
+            document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
+            document.getElementById('q-text').innerText = q.text;
+
+            var extra = document.getElementById('q-extra-info');
+            extra.innerHTML = ''; 
+
+            if (q.direction) {
+                var d = document.createElement('div');
+                d.className = 'q-direction';
+                d.innerHTML = "<b>Direction:</b> " + q.direction;
+                extra.appendChild(d);
+            }
+            function addImg(url) {
+                if(url.includes('github.com') && url.includes('/blob/')) {
+                    url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+                }
+                var img = document.createElement('img');
+                img.src = url; img.className = 'q-image'; img.alt = "Graph/Chart";
+                extra.appendChild(img);
+            }
+            if (q.image) { addImg(q.image); }
+            if (q.images && Array.isArray(q.images)) { q.images.forEach(function(url) { addImg(url); }); }
+            if (q.infoHtml) {
+                var div = document.createElement('div');
+                div.innerHTML = q.infoHtml;
+                div.style.marginBottom = "20px"; div.style.overflowX = "auto";
+                extra.appendChild(div);
+            }
+            
+            // Review Badges
+            var badgeContainer = document.getElementById('review-badges');
+            var timeBadge = document.getElementById('review-time-badge');
+            var statusBadge = document.getElementById('review-status-badge');
+
+            if (this.isReview) {
+                badgeContainer.style.display = 'flex';
+                if (r.sel === null) {
+                    statusBadge.innerText = "Skipped"; statusBadge.style.background = "#e2e6ea"; statusBadge.style.color = "#495057"; statusBadge.style.border = "1px solid #ced4da";
+                } else if (r.sel === q.correctIndex) {
+                    statusBadge.innerText = "Correct"; statusBadge.style.background = "#d4edda"; statusBadge.style.color = "#155724"; statusBadge.style.border = "1px solid #c3e6cb";
+                } else {
+                    statusBadge.innerText = "Wrong"; statusBadge.style.background = "#f8d7da"; statusBadge.style.color = "#721c24"; statusBadge.style.border = "1px solid #f5c6cb";
+                }
+                var spent = r.timeSpent || 0;
+                var tm = Math.floor(spent / 60); var ts = Math.floor(spent % 60);
+                var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
+                timeBadge.innerText = "Time: " + timeStr;
+            } else {
+                badgeContainer.style.display = 'none';
+            }
+
+            var box = document.getElementById('options-box');
+            if(box) {
+                box.innerHTML = '';
+                var self = this;
+                q.options.forEach(function(opt, i) {
+                    var row = document.createElement('div');
+                    row.className = 'opt-row';
+                    if(self.isReview) {
+                        row.style.pointerEvents = 'none';
+                        if(i === q.correctIndex) row.classList.add('correct');
+                        if(r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
+                    } else {
+                        if(r.sel === i) row.classList.add('selected');
+                        row.onclick = function() { r.sel = i; self.loadQ(); };
+                    }
+                    row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
+                    box.appendChild(row);
+                });
+            }
+
+            var solBox = document.getElementById('solution-box');
+            if(this.isReview) {
+                solBox.style.display = 'block';
+                document.getElementById('sol-text').innerText = q.solution || "No solution.";
+            } else {
+                solBox.style.display = 'none';
+            }
+
+            this.renderPalette();
+            try { if(window.renderMathInElement) { renderMathInElement(document.body); } } catch(e){}
+        },
+
+        saveNext: function() {
+            this.captureQuestionTime(); 
+            var r = this.responses[this.currQ];
+            if(r.sel !== null) r.status = 'ans'; else r.status = 'not-answered';
+            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
+            else { if(confirm("End of questions. Submit Test?")) { this.submitTest(false); } }
+        },
+
+        markReview: function() {
+            this.captureQuestionTime();
+            var r = this.responses[this.currQ];
+            if(r.sel !== null) r.status = 'ans-rev'; else r.status = 'rev';
+            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
+        },
+
+        clearResponse: function() {
+            this.responses[this.currQ].sel = null;
+            this.responses[this.currQ].status = 'not-answered';
+            this.loadQ();
+        },
+
+        prevQ: function() { if(this.currQ > 0) { this.captureQuestionTime(); this.currQ--; this.loadQ(); } },
+        nextQ: function() { if(this.currQ < this.data.questions.length - 1) { this.captureQuestionTime(); this.currQ++; this.loadQ(); } },
+
+        renderPalette: function() {
+            var grid = document.getElementById('palette-grid');
+            if(!grid) return; grid.innerHTML = ''; var self = this;
+            for(var i=0; i<this.data.questions.length; i++) {
+                (function(idx){
+                    var btn = document.createElement('div');
+                    btn.className = 'pal-btn'; btn.innerText = idx + 1;
+                    var s = self.responses[idx].status;
+                    if(self.isReview) {
+                        var r = self.responses[idx];
+                        if(r.sel === self.data.questions[idx].correctIndex) btn.style.background = '#28a745';
+                        else if(r.sel !== null) btn.style.background = '#dc3545';
+                        else btn.style.background = '#ccc';
+                        btn.style.color = 'white';
+                    } else {
+                        if(s === 'ans') { btn.style.background = "#28a745"; btn.style.color="white"; }
+                        else if(s === 'ans-rev') { btn.style.background = "#6f42c1"; btn.style.color="white"; }
+                        else if(s === 'rev') { btn.style.background = "#6f42c1"; btn.style.color="white"; }
+                        else if(s === 'not-answered') { btn.style.background = "#dc3545"; btn.style.color="white"; }
+                        if(s === 'ans-rev') { btn.style.border = "2px solid #28a745"; }
+                    }
+                    if(idx === self.currQ) btn.style.border = '2px solid black';
+                    btn.onclick = function() { if(!self.isReview) self.captureQuestionTime(); self.currQ = idx; self.loadQ(); self.toggleSidebar(); };
+                    grid.appendChild(btn);
+                })(i);
+            }
+        },
+
+        toggleSidebar: function() { 
+            var sb = document.getElementById('sidebar');
+            if(sb) { if(sb.classList.contains('open')) sb.classList.remove('open'); else sb.classList.add('open'); }
+        },
+        
+        submitTest: function(force) {
+            if(!force && !confirm("Submit Test?")) return;
+            this.captureQuestionTime();
+            if(this.timerInterval) clearInterval(this.timerInterval);
+            
+            var now = Date.now();
+            var elapsedSeconds = Math.floor((now - this.startTime - this.accumulatedPauseTime) / 1000);
+            if(elapsedSeconds > this.totalTimeSeconds) elapsedSeconds = this.totalTimeSeconds;
+            
+            var score = 0, corr = 0, wrong = 0, unatt = 0; var totalMarks = 0;
+            var self = this;
+            this.data.questions.forEach(function(q, i) {
+                var r = self.responses[i]; totalMarks += 1;
+                if(r.sel !== null) {
+                    if(r.sel === q.correctIndex) { score += 1; corr++; } else { score -= 0.25; wrong++; }
+                } else unatt++;
+            });
+
+            if(self.currentFileUrl) {
+                var resultObj = {
+                    score: score, correct: corr, wrong: wrong, unatt: unatt, totalMarks: totalMarks,
+                    responses: self.responses, data: self.data, timeSpent: elapsedSeconds
+                };
+                localStorage.setItem(self.currentFileUrl, JSON.stringify(resultObj));
+            }
+            this.renderResultScreen(score, corr, wrong, unatt, totalMarks, elapsedSeconds);
+        },
+
+        showStoredResult: function(url) {
+            var savedJSON = localStorage.getItem(url); if(!savedJSON) return;
+            this.currentFileUrl = url; var res = JSON.parse(savedJSON);
+            this.data = res.data; this.responses = res.responses;
+            var timeSpent = res.timeSpent || 0; 
+            this.renderResultScreen(res.score, res.correct, res.wrong, res.unatt, res.totalMarks, timeSpent);
+        },
+
+        renderResultScreen: function(score, corr, wrong, unatt, total, timeSpent) {
+            document.getElementById('final-score').innerText = score.toFixed(2);
+            document.getElementById('res-correct').innerText = corr; 
+            document.getElementById('res-wrong').innerText = wrong; 
+            document.getElementById('res-unatt').innerText = unatt;
+            
+            var m = Math.floor(timeSpent / 60); var s = timeSpent % 60;
+            var timeString = (m > 0 ? m + "m " : "") + s + "s";
+            document.getElementById('time-taken-box').innerText = 'Time Taken: ' + timeString;
+            
+            var pct = (score / total) * 100; var msg = "", color = "#666";
+            if (pct < 40) { msg = "Try Again"; color = "#dc3545"; }
+            else if (pct < 70) { msg = "Room for Improvement"; color = "#fd7e14"; }
+            else if (pct < 80) { msg = "Good"; color = "#ffc107"; } 
+            else if (pct < 90) { msg = "Very Good"; color = "#28a745"; }
+            else if (pct < 100) { msg = "Excellent"; color = "#20c997"; }
+            else { msg = "Perfect"; color = "#007bff"; }
+            
+            var badge = document.getElementById('feedback-badge');
+            badge.innerText = msg; badge.style.background = color;
+            this.switchView('result');
+        },
+
+        reattemptTest: function() {
+            if(confirm("Clear previous result and re-attempt?")) {
+                localStorage.removeItem(this.currentFileUrl); location.reload();
+            }
+        },
+
+        startReviewMode: function() {
+            this.isReview = true; this.currQ = 0;
+            document.getElementById('timer-display').style.display = 'none';
+            document.getElementById('btn-pause').style.display = 'none';
+            document.getElementById('btn-exit').style.display = 'none';
+            document.getElementById('btn-submit').style.display = 'none';
+            document.getElementById('exam-footer').style.display = 'none';
+            document.getElementById('review-footer').style.display = 'flex';
+            this.switchView('exam');
+            this.loadQ();
+        },
+
+        exitReview: function() { this.switchView('result'); }
+    };
+
+    window.onload = function() { window.app.init(); };
+    </script>
+</body>
+</html>
