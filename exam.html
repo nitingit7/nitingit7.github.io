@@ -39,6 +39,7 @@
                     </div>
 
                     <div id="q-extra-info" class="q-extra-info"></div>
+
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
                     <div id="options-box"></div>
                     <div id="solution-box" class="solution-box">
@@ -72,6 +73,7 @@
 
     <div id="pause-overlay">
         <h1>Test Paused</h1>
+        <p style="margin-bottom:30px;">Timer stopped.</p>
         <button class="btn btn-green" style="padding:15px 30px;" id="btn-resume">RESUME</button>
         <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #555;" id="btn-quit">Quit Test</button>
     </div>
@@ -104,76 +106,75 @@
         questionStartTime: 0, isReview: false, isPaused: false, currentFileUrl: "",
 
         init: function() {
-        var params = new URLSearchParams(window.location.search);
-        this.currentFileUrl = params.get('file');
-        var showResult = params.get('showResult');
+            var params = new URLSearchParams(window.location.search);
+            this.currentFileUrl = params.get('file');
+            var showResult = params.get('showResult');
 
-        if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
+            if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
-        // --- FIXED BACK BUTTON TRAP ---
-        // 1. Insert a "dummy" history state immediately when test loads
-        history.pushState(null, null, location.href);
-
-        // 2. Listen for the back button
-        window.onpopstate = () => {
-            // A. If viewing results, allow user to leave normally
-            if (document.getElementById('view-result').classList.contains('active')) {
-                return; // Allow the back action to proceed
-            }
-
-            // B. If test is running:
-            // IMMEDIATELY push the state back to reset the trap.
-            // This ensures the trap works 2nd, 3rd, and 4th time.
+            // --- FIXED BACK BUTTON TRAP ---
+            // 1. Insert a "dummy" history state immediately when test loads
             history.pushState(null, null, location.href);
 
-            // Now ask the question
-            if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
-                // If YES: Manually force them to leave
-                window.onbeforeunload = null; 
-                if(this.timerInterval) clearInterval(this.timerInterval);
-                location.href = "index.html"; 
+            // 2. Listen for the back button
+            window.onpopstate = () => {
+                // If viewing results, allow user to leave normally
+                if (document.getElementById('view-result').classList.contains('active')) {
+                    return; 
+                }
+
+                // If test is running:
+                // IMMEDIATELY push the state back to reset the trap.
+                // This ensures the trap works 2nd, 3rd, and 4th time.
+                history.pushState(null, null, location.href);
+
+                // Now ask the question
+                if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
+                    // If YES: Manually force them to leave
+                    window.onbeforeunload = null; 
+                    if(this.timerInterval) clearInterval(this.timerInterval);
+                    location.href = "index.html"; 
+                }
+                // If NO: We already pushed the state back above, so we do nothing.
+            };
+
+            // --- REFRESH / CLOSE TAB BLOCKER ---
+            window.onbeforeunload = function (e) {
+                if (!document.getElementById('view-result').classList.contains('active')) {
+                    e.preventDefault();
+                    e.returnValue = ''; 
+                    return ''; 
+                }
+            };
+
+            // Binds
+            this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
+            this.bind('btn-close-sidebar', () => this.toggleSidebar());
+            this.bind('btn-pause', () => this.togglePause());
+            this.bind('btn-exit', () => this.exitTest());
+            this.bind('btn-save', () => this.saveNext());
+            this.bind('btn-clear', () => this.clearResponse());
+            this.bind('btn-review', () => this.markReview());
+            this.bind('btn-submit', () => this.submitTest(false));
+            this.bind('btn-prev', () => this.prevQ());
+            this.bind('btn-next', () => this.nextQ());
+            this.bind('btn-exit-review', () => this.exitReview());
+            this.bind('btn-resume', () => this.togglePause());
+            this.bind('btn-quit', () => this.exitTest());
+            this.bind('btn-view-sols', () => this.startReviewMode());
+            this.bind('btn-reattempt', () => this.reattemptTest());
+            this.bind('btn-report', () => this.reportIssue());
+
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
+            });
+
+            if(showResult === "true") {
+                this.showStoredResult(this.currentFileUrl);
+            } else {
+                this.fetchTest(this.currentFileUrl);
             }
-            // If NO: We already pushed the state back above, so we do nothing.
-        };
-        // ------------------------------
-
-        // --- REFRESH / CLOSE TAB BLOCKER ---
-        window.onbeforeunload = function (e) {
-            if (!document.getElementById('view-result').classList.contains('active')) {
-                e.preventDefault();
-                e.returnValue = ''; 
-                return ''; 
-            }
-        };
-
-        // Binds
-        this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
-        this.bind('btn-close-sidebar', () => this.toggleSidebar());
-        this.bind('btn-pause', () => this.togglePause());
-        this.bind('btn-exit', () => this.exitTest());
-        this.bind('btn-save', () => this.saveNext());
-        this.bind('btn-clear', () => this.clearResponse());
-        this.bind('btn-review', () => this.markReview());
-        this.bind('btn-submit', () => this.submitTest(false));
-        this.bind('btn-prev', () => this.prevQ());
-        this.bind('btn-next', () => this.nextQ());
-        this.bind('btn-exit-review', () => this.exitReview());
-        this.bind('btn-resume', () => this.togglePause());
-        this.bind('btn-quit', () => this.exitTest());
-        this.bind('btn-view-sols', () => this.startReviewMode());
-        this.bind('btn-reattempt', () => this.reattemptTest());
-        this.bind('btn-report', () => this.reportIssue());
-
-        document.addEventListener('visibilitychange', () => {
-            if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
-        });
-
-        if(showResult === "true") {
-            this.showStoredResult(this.currentFileUrl);
-        } else {
-            this.fetchTest(this.currentFileUrl);
-        }
-    },
+        },
 
         bind: function(id, func) {
             var el = document.getElementById(id);
@@ -205,6 +206,16 @@
             this.questionStartTime = Date.now();
             
             document.getElementById('exam-title').innerText = this.data.title || "Mock Test";
+            
+            // RESET UI ELEMENTS
+            document.getElementById('timer-display').style.display = '';
+            document.getElementById('btn-pause').style.display = '';
+            document.getElementById('btn-exit').style.display = '';
+            document.getElementById('btn-submit').style.display = 'block';
+            document.getElementById('exam-footer').style.display = 'flex';
+            document.getElementById('review-footer').style.display = 'none';
+            document.getElementById('review-badges').style.display = 'none';
+
             this.switchView('exam');
             this.loadQ();
         },
@@ -290,9 +301,9 @@
             document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
             document.getElementById('q-text').innerText = q.text;
 
+            // -- DI/GRAPH Logic --
             var extra = document.getElementById('q-extra-info');
             extra.innerHTML = ''; 
-
             if (q.direction) {
                 var d = document.createElement('div');
                 d.className = 'q-direction';
@@ -316,13 +327,14 @@
                 extra.appendChild(div);
             }
             
-            // Review Badges
+            // -- Review Mode Badges --
             var badgeContainer = document.getElementById('review-badges');
             var timeBadge = document.getElementById('review-time-badge');
             var statusBadge = document.getElementById('review-status-badge');
 
             if (this.isReview) {
                 badgeContainer.style.display = 'flex';
+                // Status Badge
                 if (r.sel === null) {
                     statusBadge.innerText = "Skipped"; statusBadge.style.background = "#e2e6ea"; statusBadge.style.color = "#495057"; statusBadge.style.border = "1px solid #ced4da";
                 } else if (r.sel === q.correctIndex) {
@@ -330,6 +342,7 @@
                 } else {
                     statusBadge.innerText = "Wrong"; statusBadge.style.background = "#f8d7da"; statusBadge.style.color = "#721c24"; statusBadge.style.border = "1px solid #f5c6cb";
                 }
+                // Time Badge
                 var spent = r.timeSpent || 0;
                 var tm = Math.floor(spent / 60); var ts = Math.floor(spent % 60);
                 var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
@@ -494,10 +507,12 @@
 
         startReviewMode: function() {
             this.isReview = true; this.currQ = 0;
+            // HIDE HEADER ELEMENTS
             document.getElementById('timer-display').style.display = 'none';
             document.getElementById('btn-pause').style.display = 'none';
             document.getElementById('btn-exit').style.display = 'none';
             document.getElementById('btn-submit').style.display = 'none';
+            
             document.getElementById('exam-footer').style.display = 'none';
             document.getElementById('review-footer').style.display = 'flex';
             this.switchView('exam');
