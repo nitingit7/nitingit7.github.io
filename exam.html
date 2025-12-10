@@ -110,6 +110,31 @@
 
             if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
+            // --- NEW: BACK BUTTON CONFIRMATION LOGIC ---
+            // 1. Push a "dummy" state so the back button has something to pop
+            history.pushState(null, null, location.href);
+
+            // 2. Listen for the back button (popstate event)
+            window.onpopstate = () => {
+                // If we are currently viewing results, allow going back normally
+                if (document.getElementById('view-result').classList.contains('active')) {
+                    history.go(-1); // Go back for real
+                    return;
+                }
+
+                // If test is active, show confirmation
+                if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
+                    // User clicked OK: Quit the test
+                    if(this.timerInterval) clearInterval(this.timerInterval);
+                    location.href = "index.html"; // Send them Home
+                } else {
+                    // User clicked Cancel: Stay on page
+                    // We must push the state AGAIN to reset the trap
+                    history.pushState(null, null, location.href);
+                }
+            };
+            // ---------------------------------------------
+
             // Binds
             this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
             this.bind('btn-close-sidebar', () => this.toggleSidebar());
