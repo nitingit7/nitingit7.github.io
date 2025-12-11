@@ -1,0 +1,126 @@
+{
+  "title": "IBPS RRB Clerk Prelims: Speed Math [Moderate] #QA009",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "What approximate value should come in the place of question mark (?) in the following question?\n$$19.99\\% \\text{ of } 749.98 + \\sqrt{783.99} - 12.01^2 = ?$$",
+      "options": ["34", "40", "28", "45", "30"],
+      "correctIndex": 0,
+      "solution": "$$20\\% \\text{ of } 750 = 150$$\n$$\\sqrt{784} = 28$$\n$$12^2 = 144$$\n$$150 + 28 - 144 = 178 - 144 = 34$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$45\\% \\text{ of } 400 + \\sqrt{?} = 56\\% \\text{ of } 750 - 180$$",
+      "options": ["3600", "3500", "3800", "3200", "3400"],
+      "correctIndex": 0,
+      "solution": "$$45\\% \\text{ of } 400 = 180$$\n$$56\\% \\text{ of } 750 = 28\\% \\text{ of } 1500 = 14\\% \\text{ of } 3000 = 420$$\n$$180 + \\sqrt{?} = 420 - 180 = 240$$\n$$\\sqrt{?} = 60 \\implies ? = 3600$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$\\frac{3}{8} \\text{ of } 168 \\times 15 \\div 5 + ? = 500$$",
+      "options": ["311", "300", "321", "290", "310"],
+      "correctIndex": 0,
+      "solution": "$$\\frac{3}{8} \\times 168 = 3 \\times 21 = 63$$\n$$15 \\div 5 = 3$$\n$$63 \\times 3 = 189$$\n$$189 + ? = 500 \\implies ? = 311$$"
+    },
+    {
+      "text": "What approximate value should come in the place of question mark (?) in the following question?\n$$24.01^2 + 17.99^2 - 65.02\\% \\text{ of } 400.01 = ?$$",
+      "options": ["640", "620", "600", "650", "630"],
+      "correctIndex": 0,
+      "solution": "$$24^2 + 18^2 - (0.65 \\times 400)$$\n$$576 + 324 - 260$$\n$$900 - 260 = 640$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$(256)^{0.25} \\times (64)^{2} \\div (16)^{3} = 4^{?}$$",
+      "options": ["1", "2", "0", "3", "4"],
+      "correctIndex": 0,
+      "solution": "$$(4^4)^{0.25} \\times (4^3)^2 \\div (4^2)^3$$\n$$4^1 \\times 4^6 \\div 4^6 = 4^{1+6-6} = 4^1$$\n$$? = 1$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$360 \\div 12 + 14 \\times 8 - \\sqrt{225} = ?$$",
+      "options": ["127", "137", "117", "125", "130"],
+      "correctIndex": 0,
+      "solution": "$$30 + 112 - 15$$\n$$142 - 15 = 127$$"
+    },
+    {
+      "text": "Find the wrong number in the series:\n2, 3, 7, 15, 32, 57",
+      "options": ["2", "3", "7", "15", "32"],
+      "correctIndex": 3,
+      "solution": "Differences should be squares: $$1, 4, 9, 16, 25$$\n$$2 + 1 = 3$$\n$$3 + 4 = 7$$\n$$7 + 9 = 16$$ (Series has 15, so 15 is wrong)\nCheck: $$16 + 16 = 32$$ (Correct)"
+    },
+    {
+      "text": "Find the missing number in the series:\n8, 16, 48, 192, ?, 5760",
+      "options": ["960", "900", "840", "1000", "920"],
+      "correctIndex": 0,
+      "solution": "Pattern: $$\\times 2, \\times 3, \\times 4, \\times 5$$\n$$192 \\times 5 = 960$$\nCheck: $$960 \\times 6 = 5760$$"
+    },
+    {
+      "text": "Find the missing number in the series:\n100, 102, 107, 117, 134, ?",
+      "options": ["160", "155", "165", "170", "150"],
+      "correctIndex": 0,
+      "solution": "Differences: $$2, 5, 10, 17$$\nLogic: $$1^2+1, 2^2+1, 3^2+1, 4^2+1$$\nNext diff: $$5^2+1 = 26$$\n$$134 + 26 = 160$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$x^2 - 24x + 143 = 0$$\nII. $$y^2 - 20y + 99 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 2,
+      "solution": "I. $$(x-13)(x-11)=0 \\implies x=11, 13$$\nII. $$(y-11)(y-9)=0 \\implies y=9, 11$$\nComparisons: $$11=11, 11>9, 13>11, 13>9$$\n$$x \\ge y$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$2x^2 + 11x + 12 = 0$$\nII. $$5y^2 + 27y + 28 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 4,
+      "solution": "I. Roots: $$-8/2, -3/2 \\implies -4, -1.5$$\nII. Roots: $$-20/5, -7/5 \\implies -4, -1.4$$\nComparisons: $$-4 = -4$$; $$-4 < -1.4$$; $$-1.5 > -4$$; $$-1.5 < -1.4$$\nSigns mixed ($$<$$ and $$>$$). Result: CND"
+    },
+    {
+      "text": "What approximate value should come in the place of question mark (?) in the following question?\n$$33.99\\% \\text{ of } 550.01 + 65.99\\% \\text{ of } 150.01 = ?$$",
+      "options": ["286", "290", "275", "300", "280"],
+      "correctIndex": 0,
+      "solution": "$$34\\% \\text{ of } 550 = 17 \\times 11 = 187$$\n$$66\\% \\text{ of } 150 = 33 \\times 3 = 99$$\n$$187 + 99 = 286$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$2750 \\div 5.5 + 40 = 15 \\times ?$$",
+      "options": ["36", "30", "40", "35", "32"],
+      "correctIndex": 0,
+      "solution": "$$27500 \\div 55 = 500$$\n$$500 + 40 = 540$$\n$$540 \\div 15 = 36$$"
+    },
+    {
+      "text": "Find the missing number in the series:\n14, 8, 9, 14.5, 30, ?",
+      "options": ["76", "75", "70", "72", "78"],
+      "correctIndex": 0,
+      "solution": "$$14 \\times 0.5 + 1 = 8$$\n$$8 \\times 1 + 1 = 9$$\n$$9 \\times 1.5 + 1 = 14.5$$\n$$14.5 \\times 2 + 1 = 30$$\n$$30 \\times 2.5 + 1 = 75 + 1 = 76$$"
+    },
+    {
+      "text": "Find the missing number in the series:\n1000, 500, 250, 125, 62.5, ?",
+      "options": ["31.25", "30.5", "32.5", "35.25", "33.75"],
+      "correctIndex": 0,
+      "solution": "Pattern: Divide by 2.\n$$62.5 \\div 2 = 31.25$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$x^2 - 36x + 324 = 0$$\nII. $$y^2 - 39y + 324 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 4,
+      "solution": "I. $$(x-18)^2 = 0 \\implies x = 18$$\nII. Factors of 324 summing to 39 are 27 and 12. $$y = 27, 12$$\n$$18 < 27$$ but $$18 > 12$$. Result: CND"
+    },
+    {
+      "text": "What approximate value should come in the place of question mark (?) in the following question?\n$$?^2 + 12.01^3 = 45.01^2 - 196.99$$",
+      "options": ["10", "12", "15", "8", "20"],
+      "correctIndex": 0,
+      "solution": "$$?^2 + 1728 = 2025 - 197$$\n$$?^2 + 1728 = 1828$$\n$$?^2 = 100 \\implies ? = 10$$"
+    },
+    {
+      "text": "Find the wrong number in the series:\n4, 3, 4, 7, 15, 37",
+      "options": ["4", "3", "7", "15", "37"],
+      "correctIndex": 4,
+      "solution": "$$4 \\times 0.5 + 1 = 3$$\n$$3 \\times 1 + 1 = 4$$\n$$4 \\times 1.5 + 1 = 7$$\n$$7 \\times 2 + 1 = 15$$\n$$15 \\times 2.5 + 1 = 38.5$$ (Series has 37, so 37 is wrong)"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$3\\frac{1}{6} + 4\\frac{2}{3} - 1\\frac{1}{2} = ? + 2\\frac{1}{6}$$",
+      "options": ["$$4\\frac{1}{6}$$", "$$4\\frac{1}{3}$$", "$$3\\frac{5}{6}$$", "$$4\\frac{1}{2}$$", "$$3\\frac{1}{6}$$"],
+      "correctIndex": 0,
+      "solution": "Integers: $$3 + 4 - 1 - 2 = 4$$\nFractions: $$\\frac{1}{6} + \\frac{4}{6} - \\frac{3}{6} - \\frac{1}{6} = \\frac{1}{6}$$\nResult: $$4\\frac{1}{6}$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$x = \\sqrt{256}$$\nII. $$y^2 = 256$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 2,
+      "solution": "I. $$x = 16$$ (Square root function yields positive value)\nII. $$y = +16, -16$$\n$$16 = 16$$ and $$16 > -16$$. Result: $$x \\ge y$$"
+    }
+  ]
+    }
