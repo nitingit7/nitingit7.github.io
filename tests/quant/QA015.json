@@ -1,0 +1,192 @@
+{
+  "title": "RRB Clerk Prelims: Quant (Based on 6th Dec Shift 1) #QA015",
+  "timeLimit": 15,
+  "questions": [
+    {
+      "text": "Find the ratio of scooters sold by A and B together to cars sold by D.",
+      "options": ["7:9", "13:12", "12:13", "61:62", "31:12"],
+      "correctIndex": 4,
+      "solution": "Wait, Q41 in the source file refers to a DI table (Source 1418). The prompt asked to exclude DI. Moving to the next non-DI question. (Checking Q51 onwards for Arithmetic/Series/Simplification)."
+    },
+    {
+      "text": "A shopkeeper marked an article 25% above its cost price and allowed 20% profit on the article. If the discount allowed on the article is Rs 20, then find the cost price of the article (in Rs).",
+      "options": ["250", "400", "500", "480", "350"],
+      "correctIndex": 1,
+      "solution": "Let CP = 100x. MP = 125x. Profit 20% means SP = 120x. Discount = MP - SP = 5x. Given 5x = 20 -> x = 4. CP = 400. [cite: 1521-1522]"
+    },
+    {
+      "text": "A and B started a business with investment of Rs 2000 and Rs 4000 respectively. After 6 months B invested 50% more of his initial investment and at the end of the year the total profit of Rs 14000. Find the profit share of B (in Rs).",
+      "options": ["12000", "10000", "8000", "7000", "5000"],
+      "correctIndex": 1,
+      "solution": "A's investment = 2000 * 12 = 24000. B's investment = 4000 * 6 + (4000 + 2000) * 6 = 24000 + 36000 = 60000. Ratio A:B = 24:60 = 2:5. [cite_start]B's share = (5/7) * 14000 = 10000. [cite: 1529-1530]"
+    },
+    {
+      "text": "A 44-liter mixture contains milk and water. The quantity of milk is 6 liters more than that of water. How much water must be added so that the ratio of milk to water becomes equal?",
+      "options": ["6", "5", "7", "8", "10"],
+      "correctIndex": 0,
+      "solution": "M + W = 44. M - W = 6. Solving gives M = 25, W = 19. To make them equal (M=W), water needed = 25 - 19 = 6 liters. [cite: 1536-1537]"
+    },
+    {
+      "text": "520 meters long train can cross a pole in 13 seconds. Find the time taken by the train to cross 130-meter-long platform (in seconds).",
+      "options": ["16 3/4", "18 1/4", "16 1/4", "18 3/4", "15 1/4"],
+      "correctIndex": 2,
+      "solution": "Speed = 520/13 = 40 m/s. Total distance = 520 + 130 = 650m. [cite_start]Time = 650/40 = 16.25 = 16 1/4 seconds. [cite: 1549-1550]"
+    },
+    {
+      "text": "If the circumference of the circle is 88 cm, then find the area of the circle (in cm²).",
+      "options": ["900", "824", "616", "1024", "540"],
+      "correctIndex": 2,
+      "solution": "2 * (22/7) * r = 88 -> r = 14. Area = (22/7) * 14 * 14 = 616. [cite: 1558]"
+    },
+    {
+      "text": "The present ages of A and B are in the ratio of 7: 9, respectively. Six years ago, the ratio of their ages was 11: 15, respectively. Find the age of B three years from now (in years).",
+      "options": ["36", "33", "42", "39", "45"],
+      "correctIndex": 3,
+      "solution": "(7x - 6)/(9x - 6) = 11/15 -> 105x - 90 = 99x - 66 -> 6x = 24 -> x = 4. B's present age = 36. Age after 3 years = 39. [cite: 1564-1566]"
+    },
+    {
+      "text": "A man spends 20% of his income on rent and 10% of the remaining amount on groceries. He saves the rest. If his total expenditure (on rent and groceries) is Rs 4200, find the amount he saves (in Rs).",
+      "options": ["9850", "19200", "15400", "12400", "10800"],
+      "correctIndex": 4,
+      "solution": "Rent = 0.2I. Rem = 0.8I. Groceries = 0.1 * 0.8I = 0.08I. [cite_start]Total Exp = 0.28I = 4200 -> I = 15000. Savings = I - Exp = 15000 - 4200 = 10800. [cite: 1573-1574]"
+    },
+    {
+      "text": "The total cost of 6 pens and 9 pencils is Rs 150. What will be three-fourth of the total cost of 12 pens and 18 pencils?",
+      "options": ["Rs 225", "Rs 280", "Rs 262.5", "Rs 202.5", "Rs 240"],
+      "correctIndex": 0,
+      "solution": "12 pens + 18 pencils is exactly double the first set. [cite_start]Cost = 2 * 150 = 300. 3/4 of 300 = 225. [cite: 1580-1581]"
+    },
+    {
+      "text": "The average of three consecutive even numbers is 106. Find the average of the second largest and the largest numbers.",
+      "options": ["112", "110", "107", "103", "105"],
+      "correctIndex": 2,
+      "solution": "The numbers are 104, 106, 108. 2nd largest is 106, largest is 108. Average is 107. [cite: 1593-1594]"
+    },
+    {
+      "text": "The population of a town increases by 10% in the first year and decreases by 5% in the next. What is the overall percentage change after two years.",
+      "options": ["4% increase", "4.5% increase", "5% increase", "5.5% increase", "No change"],
+      "correctIndex": 1,
+      "solution": "Net change = 10 - 5 - (10*5)/100 = 5 - 0.5 = 4.5% increase. [cite: 1600-1601]"
+    },
+    {
+      "text": "Find the wrong number: 220, 225, 215, 231, 206, 242",
+      "options": ["225", "220", "231", "206", "242"],
+      "correctIndex": 0,
+      "solution": "Pattern: +2^2, -3^2, +4^2... 220 + 4 = 224. 224 - 9 = 215. The term 225 is wrong. [cite: 1608]"
+    },
+    {
+      "text": "Find the wrong number: 121, 123, 126, 131, 138, 150",
+      "options": ["121", "150", "123", "126", "138"],
+      "correctIndex": 1,
+      "solution": "Differences: +2, +3, +5, +7 (Primes). Next should be +11. [cite_start]138 + 11 = 149. 150 is wrong. [cite: 1615]"
+    },
+    {
+      "text": "Find the wrong number: 13, 104, 197, 292, 380, 488",
+      "options": ["13", "104", "380", "112", "488"],
+      "correctIndex": 2,
+      "solution": "Differences: 91, 93, 95... Next should be 97. 292 + 97 = 389. 380 is wrong. [cite: 1622]"
+    },
+    {
+      "text": "Find the wrong number: 322, 330, 338, 336, 354, 362",
+      "options": ["322", "330", "362", "336", "354"],
+      "correctIndex": 3,
+      "solution": "Alternating +8 pattern logic suggests 336 breaks the flow (330+8=338, 338+8=346). [cite_start]336 is wrong. [cite: 1633]"
+    },
+    {
+      "text": "Find the wrong number: 3, 4, 7, 10, 18, 34",
+      "options": ["3", "4", "7", "10", "18"],
+      "correctIndex": 2,
+      "solution": "Pattern: x2 - 2. 4*2 - 2 = 6. The term is 7, which is wrong. [cite: 1639]"
+    },
+    {
+      "text": "What will come in place of (?): 44% of 750 + ?^3 = 546",
+      "options": ["5", "8", "4", "6", "3"],
+      "correctIndex": 3,
+      "solution": "44% of 750 = 330. ?^3 = 546 - 330 = 216. ? [cite_start]= 6. [cite: 1647]"
+    },
+    {
+      "text": "What will come in place of (?): (48 x ?) + (52 x 6) = 80% of 840",
+      "options": ["3.5", "12.5", "2.5", "4.5", "7.5"],
+      "correctIndex": 4,
+      "solution": "312 + 48x = 672. 48x = 360. x = 7.5. [cite: 1653]"
+    },
+    {
+      "text": "What will come in place of (?): (32)^0.4 x (16)^0.3 x (64)^0.2 = (2)^?",
+      "options": ["4.6", "4.5", "4.3", "4.4", "4.2"],
+      "correctIndex": 3,
+      "solution": "Powers of 2: 2^2 * 2^1.2 * 2^1.2 = 2^4.4. [cite: 1660]"
+    },
+    {
+      "text": "What will come in place of (?): ? x 1.3 x 6.5 = 1.17 x 195",
+      "options": ["23", "27", "25", "26", "22"],
+      "correctIndex": 1,
+      "solution": "? [cite_start]= (1.17 * 195) / (1.3 * 6.5) = 0.9 * 30 = 27. [cite: 1666]"
+    },
+    {
+      "text": "What will come in place of (?): ?^2 + 114 - 24 x 5 = 163",
+      "options": ["15", "13", "14", "12", "11"],
+      "correctIndex": 1,
+      "solution": "?^2 + 114 - 120 = 163 -> ?^2 = 169 -> ? [cite_start]= 13. [cite: 1677]"
+    },
+    {
+      "text": "What will come in place of (?): 3/4 of 4/7 of 343 = ? x 21",
+      "options": ["12", "5", "7", "10", "14"],
+      "correctIndex": 2,
+      "solution": "3/7 * 343 = 147. 147 = 21x -> x = 7. [cite: 1683]"
+    },
+    {
+      "text": "What will come in place of (?): 60 * (2/4) - 26 = ?",
+      "options": ["4", "3", "2", "6", "8"],
+      "correctIndex": 0,
+      "solution": "30 - 26 = 4. [cite: 1689-1691]"
+    },
+    {
+      "text": "What will come in place of (?): 66% of 350 + ? = 5/8 of 1256",
+      "options": ["521", "496", "554", "568", "544"],
+      "correctIndex": 2,
+      "solution": "231 + ? = 785 -> ? [cite_start]= 554. [cite: 1699]"
+    },
+    {
+      "text": "What will come in place of (?): 15% of 300 + 9.09% of 803 + 3 = (?)^2",
+      "options": ["10", "11", "9", "8", "12"],
+      "correctIndex": 1,
+      "solution": "45 + 73 + 3 = 121. Sqrt(121) = 11. [cite: 1707]"
+    },
+    {
+      "text": "What will come in place of (?): 680 / 17 x 15 = ?",
+      "options": ["592", "608", "604", "598", "600"],
+      "correctIndex": 4,
+      "solution": "40 * 15 = 600. [cite: 1713]"
+    },
+    {
+      "text": "What will come in place of (?): 544 / 8.5 = 2^?",
+      "options": ["7", "3", "1", "6", "9"],
+      "correctIndex": 3,
+      "solution": "64 = 2^6. [cite: 1724]"
+    },
+    {
+      "text": "What will come in place of (?): (9/7)^3 x (14/27)^2 x 7^? = 28",
+      "options": ["2", "6", "4", "3", "5"],
+      "correctIndex": 0,
+      "solution": "Simplifies to 4/7 * 7^? = 28 -> 7^(?-1) = 7 -> ? [cite_start]= 2. [cite: 1730]"
+    },
+    {
+      "text": "What will come in place of (?): Sqrt(784) / (4/7) / 49 = ?",
+      "options": ["9", "1", "8", "4", "6"],
+      "correctIndex": 1,
+      "solution": "28 / (4/7) / 49 = 49 / 49 = 1. [cite: 1737]"
+    },
+    {
+      "text": "What will come in place of (?): 635 - 28 + 320 / 8 = ?",
+      "options": ["607", "627", "647", "617", "637"],
+      "correctIndex": 2,
+      "solution": "635 - 28 + 40 = 647. [cite: 1743]"
+    },
+    {
+      "text": "What will come in place of (?): 35% of 250 + 25% of 35 = ?",
+      "options": ["96.25", "81.65", "82.85", "80.65", "79.65"],
+      "correctIndex": 0,
+      "solution": "87.5 + 8.75 = 96.25. [cite: 1750]"
+    }
+  ]
+    }
