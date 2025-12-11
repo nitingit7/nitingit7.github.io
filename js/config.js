@@ -14,7 +14,8 @@ var GITHUB_FILES = {
         { name: "RRB Clerk: Speed Math [Moderate]", file: BASE_URL + "tests/quant/QA008.json" },
         { name: "RRB Clerk: Speed Math [Moderate]", file: BASE_URL + "tests/quant/QA009.json" },
         { name: "RRB Clerk: Speed Math [Moderate]", file: BASE_URL + "tests/quant/QA010.json" },
-        { name: "RRB Clerk Prelims: Quant [Moderate]", file: BASE_URL + "tests/quant/QA011.json" }
+        { name: "RRB Clerk Prelims: Quant [Moderate]", file: BASE_URL + "tests/quant/QA011.json" },
+        { name: "RRB Clerk Prelims: Quant [Moderate]", file: BASE_URL + "tests/quant/QA012.json" }
     ],
     'reasoning': [
         { name: "RRB Clerk Reasoning: Puzzle & Seating", file: BASE_URL + "tests/reasoning/mock1.json" },
