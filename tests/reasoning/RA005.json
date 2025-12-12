@@ -4,283 +4,283 @@
   "questions": [
     {
       "id": "1",
-      "text": "Directions (1-5): Eight persons A, B, C, D, E, F, G and H sit around a square table. Four sit at corner facing inside and three sit at the middle of each side facing outside. Two persons sit between A and B. B faces inside. F sits immediate right of A. D sits adjacent to F and G. C sits second to the right of H.\n\nQ1. What is the position of C with respect to F?",
-      "options": ["Fourth to the left", "Second to the left", "Third to the left", "Immediate right", "Third to the right"],
-      "correctIndex": 4,
-      "solution": "Based on the arrangement, C is third to the right of F. (Solution S1: Ans.(e))"
+      "text": "Directions (1-5): Study the following series carefully and answer the question given below:\nP & K * V Z L # W A % S R ! M @ X F Y ? Q + C ^ U T Z $\n\nQ1. Which symbol is fifth to the right of the third letter from the left end in the series?",
+      "options": ["*", "+", "!", "?", "&"],
+      "correctIndex": 3,
+      "solution": "The third letter from the left end is V. The symbols to the right of V are #, %, !, @, ?. The fifth symbol is '?'."
     },
     {
       "id": "2",
-      "text": "Q2. How many persons sit between E and H (when counted from the right of H)?",
-      "options": ["Three", "None", "Two", "Four", "One"],
-      "correctIndex": 2,
-      "solution": "Two persons sit between E and H. (Solution S2: Ans.(c))"
+      "text": "Directions (1-5): Study the following series carefully and answer the question given below:\nP & K * V Z L # W A % S R ! M @ X F Y ? Q + C ^ U T Z $\n\nQ2. If all symbols and vowels are removed from the series, which element is sixth from the right end in the remaining series?",
+      "options": ["F", "X", "M", "T", "R"],
+      "correctIndex": 0,
+      "solution": "Removing symbols and vowels: P K V Z L W S R M X F Y Q C T Z. Counting from right: Z(1), T(2), C(3), Q(4), Y(5), F(6). The element is F."
     },
     {
       "id": "3",
-      "text": "Q3. Who among the following sits immediate left of G?",
-      "options": ["A", "F", "B", "H", "C"],
-      "correctIndex": 3,
-      "solution": "H sits immediate left of G. (Solution S3: Ans.(d))"
+      "text": "Directions (1-5): Study the following series carefully and answer the question given below:\nP & K * V Z L # W A % S R ! M @ X F Y ? Q + C ^ U T Z $\n\nQ3. Which element is fourth to the right of the seventh symbol from the right end?",
+      "options": ["R", "M", "!", "X", "F"],
+      "correctIndex": 1,
+      "solution": "Symbols from right: $, ^, +, ?, @, !, %. The 7th symbol is %. The 4th element to the right of % is M (S, R, !, M)."
     },
     {
       "id": "4",
-      "text": "Q4. Four of the following five are similar in a certain manner and form a group, who among the following is not related to the group?",
-      "options": ["E", "B", "G", "D", "F"],
+      "text": "Directions (1-5): Study the following series carefully and answer the question given below:\nP & K * V Z L # W A % S R ! M @ X F Y ? Q + C ^ U T Z $\n\nQ4. How many letters in the series are immediately preceded and immediately followed by a symbol?",
+      "options": ["One", "Two", "Three", "Four", "None"],
       "correctIndex": 3,
-      "solution": "D is the odd one out (likely based on facing direction or position). (Solution S4: Ans.(d))"
+      "solution": "Pattern: Symbol-Letter-Symbol. Pairs: &K*, !M@, ?Q+, +C^. Total 4."
     },
     {
       "id": "5",
-      "text": "Q5. If all the persons are asked to sit in alphabetical order, starting from A, in clockwise direction, then how many persons will remain same on their position (excluding A)?",
-      "options": ["Two", "None", "Three", "One", "Four"],
-      "correctIndex": 1,
-      "solution": "None of the persons remain in the same position. (Solution S5: Ans.(b))"
+      "text": "Directions (1-5): Study the following series carefully and answer the question given below:\nP & K * V Z L # W A % S R ! M @ X F Y ? Q + C ^ U T Z $\n\nQ5. How many vowels in the series are immediately followed by a letter?",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 0,
+      "solution": "Vowels in series: A, U. 'A' is followed by '%'. 'U' is followed by 'T'. Only U is followed by a letter. Total 1."
     },
     {
       "id": "6",
-      "text": "Directions (6-10): In a certain code language:\n'Apple farmers supply fruits' is coded as 'kl zu rt mw'\n'Fresh mango supply today' is coded as 'rt ds pq ne'\n'Farmers sell apple today' is coded as 'zu kl ne tx'\n'Mango fruits taste sweet' is coded as 'ds mw jy ab'\n\nQ6. What is the code for 'sell'?",
-      "options": ["tx", "kl", "ab", "zu", "ne"],
-      "correctIndex": 0,
-      "solution": "From statements 1 and 3, 'Farmers' and 'Apple' are 'zu' and 'kl'. 'Today' is 'ne' (from 2 & 3). Remaining 'sell' is 'tx'. (Solution S6: Ans.(a))"
+      "text": "Directions (6-8): Study the following information carefully and answer the questions given below:\nA certain number of persons sit in a row and face north. H sits third to the right of K. Five persons sit between H and D. E sits immediately left of K. Only two persons sit between D and J. A sits second to the right of J. A and D are not immediate neighbours. Number of persons sit between E and D is same as the number of persons sit to the right of D. E sits second from one the ends of the row.\n\nQ6. Who among the following persons sits 11th to the left of A?",
+      "options": ["K", "E", "H", "None of these", "D"],
+      "correctIndex": 2,
+      "solution": "Based on the arrangement, H sits 11th to the left of A."
     },
     {
       "id": "7",
-      "text": "Q7. What will be the code for 'fruits supply'?",
-      "options": ["mw ab", "ds tx", "mw rt", "jy rt", "ne tx"],
-      "correctIndex": 2,
-      "solution": "'Fruits' is 'mw' (from 1 & 4) and 'Supply' is 'rt' (from 1 & 2). Code is 'mw rt'. (Solution S7: Ans.(c))"
+      "text": "Directions (6-8): Study the following information carefully and answer the questions given below:\nA certain number of persons sit in a row and face north. H sits third to the right of K. Five persons sit between H and D. E sits immediately left of K. Only two persons sit between D and J. A sits second to the right of J. A and D are not immediate neighbours. Number of persons sit between E and D is same as the number of persons sit to the right of D. E sits second from one the ends of the row.\n\nQ7. What is the position of J in the row?",
+      "options": ["Sixth from the left end", "Sixth from the right end", "Third from the right end", "Seventh from the right end", "Third from the left end"],
+      "correctIndex": 3,
+      "solution": "J sits seventh from the right end."
     },
     {
       "id": "8",
-      "text": "Q8. Which of the following word is coded as 'kl'?",
-      "options": ["Sell", "Today", "Farmers", "Apple", "Can't be determined"],
+      "text": "Directions (6-8): Study the following information carefully and answer the questions given below:\nA certain number of persons sit in a row and face north. H sits third to the right of K. Five persons sit between H and D. E sits immediately left of K. Only two persons sit between D and J. A sits second to the right of J. A and D are not immediate neighbours. Number of persons sit between E and D is same as the number of persons sit to the right of D. E sits second from one the ends of the row.\n\nQ8. How many persons sit in the row?",
+      "options": ["20", "16", "18", "19", "21"],
       "correctIndex": 4,
-      "solution": "'kl' could be either 'Farmers' or 'Apple'. (Solution S8: Ans.(e))"
+      "solution": "Total persons in the row is 21."
     },
     {
       "id": "9",
-      "text": "Q9. If 'sweet corn' is coded as 'jy hm', then what will be the code for 'Taste'?",
-      "options": ["st", "mw", "ds", "ab", "Can't be determined"],
-      "correctIndex": 3,
-      "solution": "In statement 4, 'Taste/Sweet' is 'jy/ab'. If 'Sweet' is 'jy', then 'Taste' is 'ab'. (Solution S9: Ans.(d))"
+      "text": "Directions (9-12): In this question, the relationship between different elements is shown in the statements. The statements are followed by two conclusions.\n\nQ9. Statements: K <= F < R = G > U < V = W\nConclusions:\nI. R > W\nII. K < G",
+      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusions I and II are true", "If neither conclusion I nor II is true"],
+      "correctIndex": 1,
+      "solution": "I. R > W (False). II. K < G (True, as K <= F < R = G)."
     },
     {
       "id": "10",
-      "text": "Q10. What may be the code for 'mango juice today'?",
-      "options": ["ds jy ne", "ds op ne", "rt op ne", "ds op pq", "mw tx ab"],
-      "correctIndex": 1,
-      "solution": "'Mango' is 'ds', 'Today' is 'ne'. 'Juice' is a new word requiring a new code ('op'). Code: 'ds op ne'. (Solution S10: Ans.(b))"
+      "text": "Directions (9-12): In this question, the relationship between different elements is shown in the statements. The statements are followed by two conclusions.\n\nQ10. Statements: M > B <= C <= A = E <= O >= F > G = P\nConclusions:\nI. P < O\nII. O >= B",
+      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusions I and II are true", "If neither conclusion I nor II is true"],
+      "correctIndex": 3,
+      "solution": "I. P < O (True). II. O >= B (True). Both follow."
     },
     {
       "id": "11",
-      "text": "Directions (11-13): Statements: K > R >= T = W < J <= B = F\nConclusions:\nI. R < J\nII. T >= F",
-      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusion I and II are true", "If neither conclusion I nor II is true"],
+      "text": "Directions (9-12): In this question, the relationship between different elements is shown in the statements. The statements are followed by two conclusions.\n\nQ11. Statements: L = M <= N <= O = P > Q <= R\nConclusions:\nI. P > L\nII. N < R",
+      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusions I and II are true", "If neither conclusion I nor II is true"],
       "correctIndex": 4,
-      "solution": "I. R >= T = W < J (Relationship cannot be determined). II. T = W < J <= B = F (T < F, so T >= F is false). Neither follows. (Solution S11: Ans.(e))"
+      "solution": "I. P >= L (False). II. N relation with R is unknown (False). Neither follows."
     },
     {
       "id": "12",
-      "text": "Q12. Statements: Z >= K < P = V <= R <= T < Y\nConclusions:\nI. K < Y\nII. Z > R",
-      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusion I and II are true", "If neither conclusion I nor II is true"],
+      "text": "Directions (9-12): In this question, the relationship between different elements is shown in the statements. The statements are followed by two conclusions.\n\nQ12. Statements: X >= Y > Z = A > B < C > D = E\nConclusions:\nI. X > B\nII. Z <= E",
+      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusions I and II are true", "If neither conclusion I nor II is true"],
       "correctIndex": 0,
-      "solution": "I. K < P ... < Y (True). II. Z >= K < P ... <= R (False). Only I follows. (Solution S12: Ans.(a))"
+      "solution": "I. X > B (True). II. Z > B < C > D = E (False). Only I follows."
     },
     {
       "id": "13",
-      "text": "Q13. Statements: H = X <= L < N; D >= L\nConclusions:\nI. L < N\nII. D >= H",
-      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusion I and II are true", "If neither conclusion I nor II is true"],
-      "correctIndex": 3,
-      "solution": "I. L < N is directly given (True). II. D >= L >= X = H (True). Both follow. (Solution S13: Ans.(d))"
+      "text": "Directions (13-15): Study the information carefully and answer the questions given below.\nC is the sister-in-law of D. A is the son of H. B is the mother-in-law of G. G is the mother of E. E is the sister of A. There is no single parent in the family.\n\nQ13. How is A related to D?",
+      "options": ["Son", "Nephew", "Uncle", "Son-in-law", "Grandson"],
+      "correctIndex": 4,
+      "solution": "A is the grandson of D (based on family tree structure: C(-)-B(-)=D(+), H(+)=G(-), E(-)-A(+))."
     },
     {
       "id": "14",
-      "text": "Q14. How many pairs of letters are in the word 'MISTAKE', each of which have as many letters between them as they have between them according to English alphabetical order?",
-      "options": ["One", "Two", "Three", "Four", "None"],
+      "text": "Directions (13-15): Study the information carefully and answer the questions given below.\nC is the sister-in-law of D. A is the son of H. B is the mother-in-law of G. G is the mother of E. E is the sister of A. There is no single parent in the family.\n\nQ14. How many female members are there in the family?",
+      "options": ["Four", "Three", "Five", "Can't be determined", "Six"],
       "correctIndex": 0,
-      "solution": "The pair is S-T. (Solution S14: Ans.(a))"
+      "solution": "Females: C, B, G, E. Total 4."
     },
     {
       "id": "15",
-      "text": "Directions (15-19): Seven boxes A, B, C, D, E, F and G are placed one above the other. Four boxes are placed between box G and box B. Box D is placed two boxes above box B. Box A is placed immediately below box D. Box C is placed two boxes above box F.\n\nQ15. Which box is placed third from the topmost position?",
-      "options": ["Box F", "Box C", "Box D", "Box E", "Box A"],
-      "correctIndex": 0,
-      "solution": "Arrangement (Top to Bottom): C, G, F, E, D, A, B. 3rd box is F. (Solution S15: Ans.(a))"
+      "text": "Directions (13-15): Study the information carefully and answer the questions given below.\nC is the sister-in-law of D. A is the son of H. B is the mother-in-law of G. G is the mother of E. E is the sister of A. There is no single parent in the family.\n\nQ15. How is H related to D?",
+      "options": ["Grandson", "Daughter", "Son", "Uncle", "None of these"],
+      "correctIndex": 2,
+      "solution": "H is the son of D."
     },
     {
       "id": "16",
-      "text": "Q16. How many boxes are placed below box D?",
-      "options": ["One", "Two", "Three", "Four", "Five"],
-      "correctIndex": 1,
-      "solution": "Below D are A and B (2 boxes). (Solution S16: Ans.(b))"
+      "text": "Q16. In the number '5693728', if all the digits are arranged in descending order from left end, then how many digits remain unchanged at its position in the new number formed after rearrangement?",
+      "options": ["None", "Two", "Three", "Five", "One"],
+      "correctIndex": 0,
+      "solution": "Original: 5 6 9 3 7 2 8. Descending: 9 8 7 6 5 3 2. No digit matches its position."
     },
     {
       "id": "17",
-      "text": "Q17. If all the boxes are rearranged in alphabetical order from bottom to top, then how many boxes will remain same at their position?",
-      "options": ["One", "Four", "Three", "Two", "None"],
-      "correctIndex": 4,
-      "solution": "Original: B, A, D, E, F, G, C. Alphabetical: A, B, C, D, E, F, G. None match. (Solution S17: Ans.(e))"
+      "text": "Directions (17-21): Seven boxes A, B, C, D, E, F and G are placed one above the other in a stack but not in the same order as given. Three boxes are placed between box B and box D. Box A is placed immediately below box B. Number of boxes placed below box A is same as the number of boxes placed above box G. One box is placed between box G and box C which is placed above box G. Box E is not placed at the bottommost position.\n\nQ17. Which box is placed at third position from top?",
+      "options": ["E", "G", "B", "D", "A"],
+      "correctIndex": 0,
+      "solution": "Arrangement (Top to Bottom): B, A, E, C, D, G, F. 3rd from top is E."
     },
     {
       "id": "18",
-      "text": "Q18. If box C is related to box G, in the similar way box F is related to box E, then which box is related to box B?",
-      "options": ["Box C", "Box D", "Box A", "Box F", "Box E"],
-      "correctIndex": 2,
-      "solution": "Relation is 'Immediately Below'. C->G, F->E. For B (at bottom), there is no box below, but checking solution: Ans.(c) corresponds to Box A (which is immediately above B, suggesting the relation might be inverted or specific logic). Based on PDF Solution S18: Ans.(c) is Box A."
+      "text": "Directions (17-21): Seven boxes A, B, C, D, E, F and G are placed one above the other in a stack but not in the same order as given. Three boxes are placed between box B and box D. Box A is placed immediately below box B. Number of boxes placed below box A is same as the number of boxes placed above box G. One box is placed between box G and box C which is placed above box G. Box E is not placed at the bottommost position.\n\nQ18. How many boxes are placed above box C?",
+      "options": ["One", "Three", "Four", "Five", "Two"],
+      "correctIndex": 1,
+      "solution": "Above C are B, A, E. Total 3."
     },
     {
       "id": "19",
-      "text": "Q19. Which box is placed immediately below box E?",
-      "options": ["Box A", "Box G", "Box B", "Box D", "Box F"],
-      "correctIndex": 3,
-      "solution": "Immediately below E is D. (Solution S19: Ans.(d))"
+      "text": "Directions (17-21): Seven boxes A, B, C, D, E, F and G are placed one above the other in a stack but not in the same order as given. Three boxes are placed between box B and box D. Box A is placed immediately below box B. Number of boxes placed below box A is same as the number of boxes placed above box G. One box is placed between box G and box C which is placed above box G. Box E is not placed at the bottommost position.\n\nQ19. If all the boxes are arranged in alphabetical order from bottom to top, then how many boxes will remain same at their position?",
+      "options": ["Three", "None", "Four", "Two", "One"],
+      "correctIndex": 4,
+      "solution": "One box remains in the same position."
     },
     {
       "id": "20",
-      "text": "Q20. Find the odd one out.",
-      "options": ["PSV", "EHK", "ILN", "MPS", "RUX"],
+      "text": "Directions (17-21): Seven boxes A, B, C, D, E, F and G are placed one above the other in a stack but not in the same order as given. Three boxes are placed between box B and box D. Box A is placed immediately below box B. Number of boxes placed below box A is same as the number of boxes placed above box G. One box is placed between box G and box C which is placed above box G. Box E is not placed at the bottommost position.\n\nQ20. What is the position of box G from bottom?",
+      "options": ["First", "Third", "Second", "Fifth", "Sixth"],
       "correctIndex": 2,
-      "solution": "Logic: +3 pattern. I(+3)=L, L(+2)=N (Odd). Others are +3, +3. (Solution S20: Ans.(c))"
+      "solution": "G is placed 2nd from the bottom."
     },
     {
       "id": "21",
-      "text": "Directions (21-22): Point K is 11m north of B... Point C is 11m west of H...\nQ21. Four of the following five are alike... Find the one pair of points which does NOT belong to the group?",
-      "options": ["K-O", "B-S", "D-C", "K-H", "D-O"],
-      "correctIndex": 3,
-      "solution": "K-H direction is North-West, others are North-East. (Solution S21: Ans.(d))"
+      "text": "Directions (17-21): Seven boxes A, B, C, D, E, F and G are placed one above the other in a stack but not in the same order as given. Three boxes are placed between box B and box D. Box A is placed immediately below box B. Number of boxes placed below box A is same as the number of boxes placed above box G. One box is placed between box G and box C which is placed above box G. Box E is not placed at the bottommost position.\n\nQ21. Which of the following box is placed two boxes below box A?",
+      "options": ["G", "F", "C", "B", "D"],
+      "correctIndex": 2,
+      "solution": "Two boxes below A is C."
     },
     {
       "id": "22",
-      "text": "Q22. In which direction is point K with respect to point A?",
-      "options": ["North-west", "South-east", "West", "North-east", "East"],
+      "text": "Directions (22-25): The following questions are based on the five three-digit numbers given below: 492 625 381 967 154\n\nQ22. If the first and third digit of each number is interchanged within the number, then which of the following will be the second highest number?",
+      "options": ["492", "154", "625", "381", "967"],
       "correctIndex": 2,
-      "solution": "K is to the West of A. (Solution S22: Ans.(c))"
+      "solution": "New numbers: 294, 526, 183, 769, 451. Second highest is 526 (from 625)."
     },
     {
       "id": "23",
-      "text": "Directions (23-26): Statements: Some play are games. Only a few games are indoor.\nConclusions:\nI. Some games are not indoor\nII. All play is indoor",
-      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
-      "correctIndex": 0,
-      "solution": "Conclusion I follows. (Solution S23: Ans.(a))"
+      "text": "Directions (22-25): The following questions are based on the five three-digit numbers given below: 492 625 381 967 154\n\nQ23. If the digits are arranged in ascending order within the number, then what will be the sum of first and the second highest numbers?",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 2,
+      "solution": "Arranged: 249, 256, 138, 679, 145. Highest 679, 2nd Highest 256. Sum = 935. (Note: The options provided in PDF seem mismatched with question type, but correct index from solution is 'Three')."
     },
     {
       "id": "24",
-      "text": "Q24. Statements: All apple are fruits. Some fruits are not banana.\nConclusions:\nI. Some banana is definitely not apples\nII. No fruits are banana",
-      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
+      "text": "Directions (22-25): The following questions are based on the five three-digit numbers given below: 492 625 381 967 154\n\nQ24. What will be the sum of the second digits of 'highest and the second smallest' number?",
+      "options": ["15", "10", "17", "14", "19"],
       "correctIndex": 3,
-      "solution": "Neither conclusion follows. (Solution S24: Ans.(d))"
+      "solution": "Highest 967 (2nd digit 6). 2nd Smallest 381 (2nd digit 8). Sum = 14."
     },
     {
       "id": "25",
-      "text": "Q25. Statements: No pattern is visual. Only a few cluster is visual.\nConclusions:\nI. Some pattern is cluster\nII. No pattern is cluster",
-      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
-      "correctIndex": 2,
-      "solution": "Either I or II follows (Complementary pairs). (Solution S25: Ans.(c))"
+      "text": "Directions (22-25): The following questions are based on the five three-digit numbers given below: 492 625 381 967 154\n\nQ25. If 2 is added to each number then how many numbers will be completely divisible by 3?",
+      "options": ["None", "One", "Two", "Three", "More than three"],
+      "correctIndex": 3,
+      "solution": "494 (No), 627 (Yes), 383 (No), 969 (Yes), 156 (Yes). Three numbers."
     },
     {
       "id": "26",
-      "text": "Q26. Statements: Only a few river is blue. Some blue is ocean. No ocean is pond.\nConclusions:\nI. Some blue is not pond\nII. No river being pond is a possibility",
-      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
-      "correctIndex": 4,
-      "solution": "Both conclusions follow. (Solution S26: Ans.(e))"
+      "text": "Directions (26-30): Read the given information carefully and answer the related question:\nA, B, C, D, E, F and G were born on same date of different months in a year (but not in same order as given). The months are - March, April, May, June, July, August and September. A was born in the month having even number of days. Three persons were born between A and C. G is two months older to C. E was born immediately after G. Two persons were born between E and B. D is younger to B.\n\nQ26. Who among the following was born in July?",
+      "options": ["F", "B", "E", "D", "C"],
+      "correctIndex": 1,
+      "solution": "B was born in July."
     },
     {
       "id": "27",
-      "text": "Directions (27-29): Six pencils A, B, C, D, E, F... Two pencils longer than B... D > F > B (7cm) > A > C > E.\nQ27. Which of the following pencil is 2nd shortest?",
-      "options": ["C", "F", "E", "D", "A"],
+      "text": "Directions (26-30): Read the given information carefully and answer the related question:\nA, B, C, D, E, F and G were born on same date of different months in a year (but not in same order as given). The months are - March, April, May, June, July, August and September. A was born in the month having even number of days. Three persons were born between A and C. G is two months older to C. E was born immediately after G. Two persons were born between E and B. D is younger to B.\n\nQ27. Four of the following five are similar in a certain manner and form a group. Who among the following is not related to the group?",
+      "options": ["A", "D", "B", "C", "G"],
       "correctIndex": 0,
-      "solution": "The 2nd shortest pencil is C. (Solution S27: Ans.(a))"
+      "solution": "A is the odd one out."
     },
     {
       "id": "28",
-      "text": "Q28. How many pencils are longer than A?",
-      "options": ["Two", "Three", "Four", "Five", "None"],
-      "correctIndex": 1,
-      "solution": "Three pencils (D, F, B) are longer than A. (Solution S28: Ans.(b))"
+      "text": "Directions (26-30): Read the given information carefully and answer the related question:\nA, B, C, D, E, F and G were born on same date of different months in a year (but not in same order as given). The months are - March, April, May, June, July, August and September. A was born in the month having even number of days. Three persons were born between A and C. G is two months older to C. E was born immediately after G. Two persons were born between E and B. D is younger to B.\n\nQ28. D was born in which of the following month?",
+      "options": ["May", "March", "September", "August", "June"],
+      "correctIndex": 3,
+      "solution": "D was born in August."
     },
     {
       "id": "29",
-      "text": "Q29. If total length of pencil D and B is 16 cm, then what will be the possible height of pencil F?",
-      "options": ["11 cm", "10 cm", "9 cm", "8 cm", "None of the above"],
-      "correctIndex": 3,
-      "solution": "B=7, D+B=16 => D=9. F is between D and B (9 and 7). Possible height is 8 cm. (Solution S29: Ans.(d))"
+      "text": "Directions (26-30): Read the given information carefully and answer the related question:\nA, B, C, D, E, F and G were born on same date of different months in a year (but not in same order as given). The months are - March, April, May, June, July, August and September. A was born in the month having even number of days. Three persons were born between A and C. G is two months older to C. E was born immediately after G. Two persons were born between E and B. D is younger to B.\n\nQ29. How many persons were born between G and F?",
+      "options": ["None", "Four", "One", "Three", "Two"],
+      "correctIndex": 4,
+      "solution": "Two persons were born between G and F."
     },
     {
       "id": "30",
-      "text": "Q30. Word 'ALTERNATES'. 2nd, 4th, 7th, 8th letters (L, E, A, T). Form meaningful words. If >1 answer Z.",
-      "options": ["E", "T", "L", "Z", "Y"],
-      "correctIndex": 3,
-      "solution": "Words formed: LATE, TALE, TEAL. Answer Z. (Solution S30: Ans.(d))"
+      "text": "Directions (26-30): Read the given information carefully and answer the related question:\nA, B, C, D, E, F and G were born on same date of different months in a year (but not in same order as given). The months are - March, April, May, June, July, August and September. A was born in the month having even number of days. Three persons were born between A and C. G is two months older to C. E was born immediately after G. Two persons were born between E and B. D is younger to B.\n\nQ30. If all the persons are arranged in alphabetical order from March to September, then how many persons will remain same at their position?",
+      "options": ["Two", "One", "Four", "None", "Three"],
+      "correctIndex": 1,
+      "solution": "One person remains in the same position."
     },
     {
       "id": "31",
-      "text": "Directions (31-35): WIN KEY JAM LOG CAT\nQ31. If all the words are arranged in dictionary order from left, then which word will become 3rd from the right end?",
-      "options": ["KEY", "LOG", "CAT", "WIN", "JAM"],
+      "text": "Directions (31-33): In the question below, some statements are given followed by two conclusions numbered I and II. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements, disregarding commonly known facts.\n\nQ31. Statements: Only a few cup is can. All cup is kettle. No can is jar.\nConclusions:\nI. Some kettle is not jar\nII. No Cup is jar",
+      "options": ["If only conclusion I follows", "If only conclusion II follows", "If either conclusion I or II follows", "If neither conclusion I nor II follows", "If both conclusions I and II follow"],
       "correctIndex": 0,
-      "solution": "Order: CAT, JAM, KEY, LOG, WIN. 3rd from right is KEY. (Solution S31: Ans.(a))"
+      "solution": "I. Some Kettle is Cup, Cup intersects Can, Can is No Jar. So parts of Kettle (Cup-Can intersection) are not Jar. True. II. False."
     },
     {
       "id": "32",
-      "text": "Q32. If 3rd letter is changed to its next letter... how many words will have more than one vowel?",
-      "options": ["None", "One", "Three", "Four", "Two"],
-      "correctIndex": 4,
-      "solution": "Words: WIO, CAU. Two words. (Solution S32: Ans.(e))"
+      "text": "Directions (31-33): In the question below, some statements are given followed by two conclusions numbered I and II. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements, disregarding commonly known facts.\n\nQ32. Statements: Some colours are pens. All pens are pencils. Only a few pencils are glitters.\nConclusions:\nI. All pencils being glitters is a possibility\nII. Some colours are pencils",
+      "options": ["If only conclusion I follows", "If only conclusion II follows", "If either conclusion I or II follows", "If neither conclusion I nor II follows", "If both conclusions I and II follow"],
+      "correctIndex": 1,
+      "solution": "I. False (Only a few constraint). II. True (Colours -> Pens -> Pencils)."
     },
     {
       "id": "33",
-      "text": "Q33. If letter 'D' is added at the end of each word... how many meaningful words?",
-      "options": ["Two", "None", "One", "Four", "Three"],
-      "correctIndex": 2,
-      "solution": "Only 'WIND' is meaningful. One word. (Solution S33: Ans.(c))"
+      "text": "Directions (31-33): In the question below, some statements are given followed by two conclusions numbered I and II. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements, disregarding commonly known facts.\n\nQ33. Statements: All lines are square. Only a few square are circles.\nConclusions:\nI. Some square are not circles\nII. Some lines being circles is a possibility",
+      "options": ["If only conclusion I follows", "If only conclusion II follows", "If either conclusion I or II follows", "If neither conclusion I nor II follows", "If both conclusions I and II follow"],
+      "correctIndex": 4,
+      "solution": "I. True (Due to Only a few). II. True (Possibility exists)."
     },
     {
       "id": "34",
-      "text": "Q34. How many letters between first letter of second word from left (K) and third letter of third word from right (M)?",
-      "options": ["Seven", "One", "Two", "Ten", "Three"],
+      "text": "Directions (34): In the question below, some statements are given followed by two conclusions numbered I and II. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically doesn't follow from the given statements, disregarding commonly known facts.\n\nQ34. Statements: All fruits are vegetable. Only a few vegetable are carrot. Some carrot are not tomato.\nConclusions:\nI. All fruits being tomato is a possibility\nII. No vegetable is carrot",
+      "options": ["If only conclusion I", "If only conclusion II", "If either conclusion I or II", "If neither conclusion I nor II", "If both conclusions I and II"],
       "correctIndex": 1,
-      "solution": "Between K and M is L (1 letter). (Solution S34: Ans.(b))"
+      "solution": "The question asks which conclusion logically *doesn't* follow. I. Possible. II. False (Some Veg are Carrot). So II doesn't follow."
     },
     {
       "id": "35",
-      "text": "Q35. If all letters are arranged in dictionary order from left within each word, how many words start with vowel?",
-      "options": ["One", "Three", "Four", "Five", "Two"],
-      "correctIndex": 2,
-      "solution": "INW, EKY, AJM, ACT. Four words. (Solution S35: Ans.(c))"
+      "text": "Q35. In the word 'SOLVENT', how many pairs of the letters have the same number of letters between them (both forward and backward direction) as in the English alphabet?",
+      "options": ["One", "Two", "Four", "Three", "Five"],
+      "correctIndex": 3,
+      "solution": "Three pairs."
     },
     {
       "id": "36",
-      "text": "Directions (36-40): Six persons B, C, D, E, F, G born on Mon-Sat.\nQ36. G was born on which of the following day?",
-      "options": ["Friday", "Wednesday", "Monday", "Tuesday", "Thursday"],
-      "correctIndex": 1,
-      "solution": "G was born on Wednesday. (Solution S36: Ans.(b))"
+      "text": "Directions (36-40): Read the given information carefully and answer the related question:\nSeven persons A, B, C, D, E, F and G sit around a circular table facing inside (equidistant from each other) but not in same order as given. One person sits between G and D. B does not sit adjacent to G and D. C sits second to the left of B. The number of persons sit between B and G (when counted from the right of B) is one more than the number of persons A and E (when counted from the left of E).\n\nQ36. What is the position of F with respect to B?",
+      "options": ["Immediate left", "Third to the right", "Second to the right", "Immediate right", "Third to the left"],
+      "correctIndex": 3,
+      "solution": "F sits immediate right of B."
     },
     {
       "id": "37",
-      "text": "Q37. Who among the following was born on Saturday?",
-      "options": ["F", "D", "E", "B", "C"],
-      "correctIndex": 4,
-      "solution": "C was born on Saturday. (Solution S37: Ans.(e))"
+      "text": "Directions (36-40): Read the given information carefully and answer the related question:\nSeven persons A, B, C, D, E, F and G sit around a circular table facing inside (equidistant from each other) but not in same order as given. One person sits between G and D. B does not sit adjacent to G and D. C sits second to the left of B. The number of persons sit between B and G (when counted from the right of B) is one more than the number of persons A and E (when counted from the left of E).\n\nQ37. Who among the following sits second to the right of G?",
+      "options": ["E", "D", "A", "F", "B"],
+      "correctIndex": 0,
+      "solution": "E sits second to the right of G."
     },
     {
       "id": "38",
-      "text": "Q38. Which of the following combination is correct?",
-      "options": ["B - Saturday", "D - Thursday", "C - Friday", "F - Monday", "E - Wednesday"],
-      "correctIndex": 3,
-      "solution": "F - Monday is correct. (Solution S38: Ans.(d))"
+      "text": "Directions (36-40): Read the given information carefully and answer the related question:\nSeven persons A, B, C, D, E, F and G sit around a circular table facing inside (equidistant from each other) but not in same order as given. One person sits between G and D. B does not sit adjacent to G and D. C sits second to the left of B. The number of persons sit between B and G (when counted from the right of B) is one more than the number of persons A and E (when counted from the left of E).\n\nQ38. How many persons sit between D and E when counted from the right of D?",
+      "options": ["None", "Two", "Four", "One", "Three"],
+      "correctIndex": 4,
+      "solution": "Three persons sit between D and E."
     },
     {
       "id": "39",
-      "text": "Q39. How many persons were born before E?",
-      "options": ["Four", "None", "Three", "One", "Two"],
+      "text": "Directions (36-40): Read the given information carefully and answer the related question:\nSeven persons A, B, C, D, E, F and G sit around a circular table facing inside (equidistant from each other) but not in same order as given. One person sits between G and D. B does not sit adjacent to G and D. C sits second to the left of B. The number of persons sit between B and G (when counted from the right of B) is one more than the number of persons A and E (when counted from the left of E).\n\nQ39. If B is related to E, in the similar way C is related to G, then who among the following is related to F?",
+      "options": ["E", "A", "D", "C", "B"],
       "correctIndex": 2,
-      "solution": "Three persons were born before E. (Solution S39: Ans.(c))"
+      "solution": "D is related to F."
     },
     {
       "id": "40",
-      "text": "Q40. Which of the following statement is correct?",
-      "options": ["Only II", "Only I and II", "Only I and III", "Only I", "Only III"],
+      "text": "Directions (36-40): Read the given information carefully and answer the related question:\nSeven persons A, B, C, D, E, F and G sit around a circular table facing inside (equidistant from each other) but not in same order as given. One person sits between G and D. B does not sit adjacent to G and D. C sits second to the left of B. The number of persons sit between B and G (when counted from the right of B) is one more than the number of persons A and E (when counted from the left of E).\n\nQ40. If all the are made to sit in alphabetical order starting from A in clockwise direction, then how many persons will remain same at their position (excluding A)?",
+      "options": ["One", "Two", "Three", "Four", "Five"],
       "correctIndex": 1,
-      "solution": "Statements I and II are correct. (Solution S40: Ans.(b))"
+      "solution": "Two persons remain in the same position."
     }
   ]
-    }
+}
