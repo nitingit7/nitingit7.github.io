@@ -228,4 +228,59 @@
     },
     {
       "id": "33",
-      "text": "Directions (31-35): Read the given word-series carefully and answer the related ques
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question :\nWIN KEY JAM LOG CAT\n\nQ33. If letter 'D' is added at the end of each word, then how many meaningful words will be formed?",
+      "options": ["Two", "None", "One", "Four", "Three"],
+      "correctIndex": 2,
+      "solution": "Only 'WIND' is meaningful. One word. (Solution S33: Ans.(c))"
+    },
+    {
+      "id": "34",
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question:\nWIN KEY JAM LOG CAT\n\nQ34. How many letters are between 'first letter of second word from left end' and 'third letter of third word from right end', as per English alphabet?",
+      "options": ["Seven", "One", "Two", "Ten", "Three"],
+      "correctIndex": 1,
+      "solution": "Between K and M is L (1 letter). (Solution S34: Ans.(b))"
+    },
+    {
+      "id": "35",
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question:\nWIN KEY JAM LOG CAT\n\nQ35. If all letters are arranged in dictionary order from left within each word, then how many words will start with vowel?",
+      "options": ["One", "Three", "Four", "Five", "Two"],
+      "correctIndex": 2,
+      "solution": "INW, EKY, AJM, ACT. Four words. (Solution S35: Ans.(c))"
+    },
+    {
+      "id": "36",
+      "text": "Directions (36-40): Six persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ36. G was born on which of the following day?",
+      "options": ["Friday", "Wednesday", "Monday", "Tuesday", "Thursday"],
+      "correctIndex": 1,
+      "solution": "G was born on Wednesday. (Solution S36: Ans.(b))"
+    },
+    {
+      "id": "37",
+      "text": "Directions (36-40): Six persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ37. Who among the following was born on Saturday?",
+      "options": ["F", "D", "E", "B", "C"],
+      "correctIndex": 4,
+      "solution": "C was born on Saturday. (Solution S37: Ans.(e))"
+    },
+    {
+      "id": "38",
+      "text": "Directions (36-40): Six persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ38. Which of the following combination is correct?",
+      "options": ["B - Saturday", "D - Thursday", "C - Friday", "F - Monday", "E - Wednesday"],
+      "correctIndex": 3,
+      "solution": "F - Monday is correct. (Solution S38: Ans.(d))"
+    },
+    {
+      "id": "39",
+      "text": "Directions (36-40): Six persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ39. How many persons were born before E?",
+      "options": ["Four", "None", "Three", "One", "Two"],
+      "correctIndex": 2,
+      "solution": "Three persons were born before E. (Solution S39: Ans.(c))"
+    },
+    {
+      "id": "40",
+      "text": "Directions (36-40): Six persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ40. Which of the following statement is correct?\nI. One person was born between F and G\nII. E was born on Thursday\nIII. D was born before F",
+      "options": ["Only II", "Only I and II", "Only I and III", "Only I", "Only III"],
+      "correctIndex": 1,
+      "solution": "Statements I and II are correct. (Solution S40: Ans.(b))"
+    }
+  ]
+    }
