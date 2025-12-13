@@ -1,7 +1,7 @@
 // js/config.js
 
 // 1. Set the exact online location of your project
-var BASE_URL = "https://nitingit7.github.io/Mock-Test/";
+var BASE_URL = "https://nitingit7.github.io/";
 
 var GITHUB_FILES = {
     'quant': [
