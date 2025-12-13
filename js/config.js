@@ -1,11 +1,8 @@
 // js/config.js
-
-// 1. Set the exact online location of your project
 var BASE_URL = "https://nitingit7.github.io/";
 
 var GITHUB_FILES = {
     'quant': [
-        // 2. We use concatenation (BASE_URL + "path") to build the full link
         { name: "Testing", file: BASE_URL + "tests/quant/mock1.json" },
         { name: "RRB Clerk: Speed Math 1", file: BASE_URL + "tests/quant/mock2.json" },
         { name: "RRB Clerk Quant: [Easy]", file: BASE_URL + "tests/quant/mock3.json" },
@@ -32,7 +29,7 @@ var GITHUB_FILES = {
         { name: "RRB Clerk Prelims: Reasoning Ability [Moderate]", file: BASE_URL + "tests/reasoning/RA004.json" },
         { name: "RRB Clerk Prelims: Reasoning (6th Dec Shift 2)", file: BASE_URL + "tests/reasoning/RA005.json" },
         { name: "RRB Clerk Prelims: Reasoning (7th Dec Shift 1)", file: BASE_URL + "tests/reasoning/RA006.json" },
-        { name: "RRB Clerk Prelims: Reasoning (xth Dec Shift x)", file: BASE_URL + "tests/reasoning/RA007.json" }
+         { name: "RRB Clerk Prelims: Reasoning (xth Dec Shift x)", file: BASE_URL + "tests/reasoning/RA007.json" }
     ],
     'english': [
         { name: "COMING SOON....", file: BASE_URL + "tests/english/mock1.json" }
