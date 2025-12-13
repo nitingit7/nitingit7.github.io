@@ -14,7 +14,7 @@
 
     <div id="view-exam" class="view active" style="width:100%; height:100%; display:flex; flex-direction:column;">
         <header>
-            <div id="exam-title">Mock Test</div>
+            <div id="exam-title">Loading...</div>
             <div class="timer-box">
                 <div class="timer" id="timer-display">00:00</div>
                 <button class="btn-header btn-pause" id="btn-pause" title="Pause">⏸</button>
@@ -39,8 +39,7 @@
                     </div>
 
                     <div id="q-extra-info" class="q-extra-info"></div>
-
-                    <div id="q-text" style="margin-bottom:20px;">Loading...</div>
+                    <div id="q-text" style="margin-bottom:20px;">Loading Question...</div>
                     <div id="options-box"></div>
                     <div id="solution-box" class="solution-box">
                         <strong>Solution:</strong> <div id="sol-text"></div>
@@ -110,28 +109,31 @@
             this.currentFileUrl = params.get('file');
             var showResult = params.get('showResult');
 
-            if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
+            if(!this.currentFileUrl) { 
+                alert("No file specified. Returning to home."); 
+                location.href = "index.html"; 
+                return; 
+            }
 
-            // --- FIXED BACK BUTTON TRAP ---
-            history.pushState(null, null, location.href);
-            window.onpopstate = () => {
-                if (document.getElementById('view-result').classList.contains('active')) {
-                    return; 
-                }
+            // SAFE BACK BUTTON LOGIC (Wrapped to prevent errors)
+            try {
                 history.pushState(null, null, location.href);
-                if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
-                    window.onbeforeunload = null; 
-                    if(this.timerInterval) clearInterval(this.timerInterval);
-                    location.href = "index.html"; 
-                }
-            };
+                window.onpopstate = () => {
+                    if (document.getElementById('view-result').classList.contains('active')) {
+                        return; // Allow
+                    }
+                    history.pushState(null, null, location.href);
+                    if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
+                        window.onbeforeunload = null; 
+                        if(this.timerInterval) clearInterval(this.timerInterval);
+                        location.href = "index.html"; 
+                    }
+                };
+            } catch(e) { console.log("History API not supported"); }
 
-            // --- REFRESH / CLOSE TAB BLOCKER ---
             window.onbeforeunload = function (e) {
                 if (!document.getElementById('view-result').classList.contains('active')) {
-                    e.preventDefault();
-                    e.returnValue = ''; 
-                    return ''; 
+                    e.preventDefault(); e.returnValue = ''; return ''; 
                 }
             };
 
@@ -157,15 +159,19 @@
                 if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
             });
 
-            // --- SMART LOAD LOGIC (Fixes the "Loading..." bug) ---
+            // LOAD LOGIC
             var savedData = localStorage.getItem(this.currentFileUrl);
             
-            // Only show result if URL asks for it AND data actually exists
+            // Check if we need to show result AND if we actually have data
             if(showResult === "true" && savedData) {
                 this.showStoredResult(this.currentFileUrl);
             } else {
-                // Otherwise start fresh (even if URL says showResult=true)
-                this.fetchTest(this.currentFileUrl);
+                // If BASE_URL is set in config, prepend it (unless file already has http)
+                var loadUrl = this.currentFileUrl;
+                if(typeof BASE_URL !== 'undefined' && BASE_URL && !loadUrl.startsWith('http')) {
+                    loadUrl = BASE_URL + loadUrl;
+                }
+                this.fetchTest(loadUrl);
             }
         },
 
@@ -176,18 +182,25 @@
 
         fetchTest: function(url) {
             var self = this;
-            var cleanUrl = url + "?v=" + new Date().getTime();
+            var cleanUrl = url.split('?')[0] + "?v=" + new Date().getTime(); // Prevent caching
+            
             fetch(cleanUrl)
-                .then(res => { if(!res.ok) throw new Error("Status " + res.status); return res.json(); })
+                .then(res => { 
+                    if(!res.ok) throw new Error("Status " + res.status + " (" + res.statusText + ")"); 
+                    return res.json(); 
+                })
                 .then(json => { self.startExam(json); })
-                .catch(err => { alert("Error loading test: " + err.message); });
+                .catch(err => { 
+                    alert("Failed to load test file:\n" + url + "\n\nError: " + err.message); 
+                    console.error(err);
+                });
         },
 
         startExam: function(jsonObj) {
             this.data = jsonObj; this.responses = {}; this.currQ = 0;
             this.isReview = false; this.isPaused = false;
             
-            if(!this.data.questions) { alert("Invalid JSON"); return; }
+            if(!this.data.questions) { alert("Invalid JSON: No 'questions' array found."); return; }
 
             for(var i=0; i<this.data.questions.length; i++) {
                 this.responses[i] = { sel: null, status: 'not-visited', timeSpent: 0 };
@@ -200,7 +213,6 @@
             
             document.getElementById('exam-title').innerText = this.data.title || "Mock Test";
             
-            // RESET UI ELEMENTS
             document.getElementById('timer-display').style.display = '';
             document.getElementById('btn-pause').style.display = '';
             document.getElementById('btn-exit').style.display = '';
@@ -294,7 +306,6 @@
             document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
             document.getElementById('q-text').innerText = q.text;
 
-            // -- DI/GRAPH Logic --
             var extra = document.getElementById('q-extra-info');
             extra.innerHTML = ''; 
             if (q.direction) {
@@ -320,14 +331,12 @@
                 extra.appendChild(div);
             }
             
-            // -- Review Mode Badges --
             var badgeContainer = document.getElementById('review-badges');
             var timeBadge = document.getElementById('review-time-badge');
             var statusBadge = document.getElementById('review-status-badge');
 
             if (this.isReview) {
                 badgeContainer.style.display = 'flex';
-                // Status Badge
                 if (r.sel === null) {
                     statusBadge.innerText = "Skipped"; statusBadge.style.background = "#e2e6ea"; statusBadge.style.color = "#495057"; statusBadge.style.border = "1px solid #ced4da";
                 } else if (r.sel === q.correctIndex) {
@@ -335,7 +344,6 @@
                 } else {
                     statusBadge.innerText = "Wrong"; statusBadge.style.background = "#f8d7da"; statusBadge.style.color = "#721c24"; statusBadge.style.border = "1px solid #f5c6cb";
                 }
-                // Time Badge
                 var spent = r.timeSpent || 0;
                 var tm = Math.floor(spent / 60); var ts = Math.floor(spent % 60);
                 var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
