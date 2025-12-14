@@ -111,8 +111,9 @@
     <script>
     // --- EXAM ENGINE ---
     window.app = {
-        data: null, responses: {}, currQ: 0, timerInterval: null,
-        reviewGuesses: {},
+        // FIX 1: Add 'reviewGuesses' here so we don't get an error
+        data: null, responses: {}, currQ: 0, timerInterval: null, 
+        reviewGuesses: {}, 
         totalTimeSeconds: 0, startTime: 0, accumulatedPauseTime: 0, pauseStartTimestamp: 0,
         questionStartTime: 0, isReview: false, isPaused: false, currentFileUrl: "",
 
@@ -126,50 +127,35 @@
             // --- 1. SET THE TRAP ---
             history.pushState(null, null, location.href);
 
-            // --- 2. LISTEN FOR BROWSER BACK BUTTON ---
+            // --- 2. LISTEN FOR BACK BUTTON ---
             window.onpopstate = () => {
-                // If on result screen, ignore the trap
                 if (document.getElementById('view-result').classList.contains('active')) {
                     return; 
                 }
-                // 2. FIX: If we are in REVIEW MODE, exit review without warning
+                
+                // If in Review, just exit review without warning
                 if (this.isReview) {
-                    this.exitReview(); // Go back to Result screen
+                    this.exitReview(); 
                     return;
                 }
 
-                // NEW: Bind the Practice Mode Toggle
-                var practiceBtn = document.getElementById('btn-practice-mode');
-                if(practiceBtn) {
-                    practiceBtn.addEventListener('change', () => {
-                        // Reload the current question to apply the new mode immediately
-                        this.loadQ();
-                    });
-                }
-
-                // FIX: Browser Back Button Logic
-                // The browser has ALREADY popped the trap.
-                // We are currently at: [Home, Exam]
-                
                 if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
                     window.onbeforeunload = null; 
                     if(this.timerInterval) clearInterval(this.timerInterval);
-                    
-                    // We only need to go back 1 step to reach Home
                     history.back(); 
                 } else {
-                    // User stayed: Restore the trap
                     history.pushState(null, null, location.href);
                 }
             };
 
-            window.onbeforeunload = function (e) {
-                if (!document.getElementById('view-result').classList.contains('active')) {
-                    e.preventDefault();
-                    e.returnValue = ''; 
-                    return ''; 
-                }
-            };
+            // FIX 2: BIND THE SLIDER SWITCH LISTENER
+            // This makes the page update immediately when you flip the switch
+            var practiceBtn = document.getElementById('btn-practice-mode');
+            if(practiceBtn) {
+                practiceBtn.addEventListener('change', () => {
+                    this.loadQ(); // Reloads the question with new mode
+                });
+            }
 
             // Binds
             this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
@@ -196,7 +182,6 @@
             if(showResult === "true") {
                 this.showStoredResult(this.currentFileUrl);
             } else {
-                // CHANGE 2: Only show the exam view (loading screen) if we are actually starting a test
                 document.getElementById('view-exam').style.display = 'flex';
                 this.fetchTest(this.currentFileUrl);
             }
@@ -233,7 +218,6 @@
             
             document.getElementById('exam-title').innerText = this.data.title || "Mock Test";
             
-            // RESET UI ELEMENTS
             document.getElementById('timer-display').style.display = '';
             document.getElementById('btn-pause').style.display = '';
             document.getElementById('btn-exit').style.display = '';
@@ -241,6 +225,10 @@
             document.getElementById('exam-footer').style.display = 'flex';
             document.getElementById('review-footer').style.display = 'none';
             document.getElementById('review-badges').style.display = 'none';
+            
+            // Hide practice toggle in exam mode
+            var pToggle = document.getElementById('practice-toggle-box');
+            if(pToggle) pToggle.style.display = 'none';
 
             this.switchView('exam');
             this.loadQ();
@@ -302,15 +290,9 @@
         },
 
         exitTest: function() {
-            // --- FIXED UI EXIT BUTTON LOGIC ---
-            // We are currently at: [Home, Exam, Trap] (Nothing popped yet)
-            
             if(confirm("Exit Test? Progress will be lost.")) {
                 window.onbeforeunload = null;
                 if(this.timerInterval) clearInterval(this.timerInterval);
-                
-                // We are at [Home, Exam, Trap]. We want to go to [Home].
-                // We must jump back over the Trap AND the Exam page (2 steps).
                 history.go(-2);
             }
         },
@@ -329,7 +311,7 @@
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
             
-            // 1. CHECK PRACTICE MODE STATUS
+            // FIX 3: CHECK PRACTICE MODE STATUS
             var isPractice = false;
             var toggle = document.getElementById('btn-practice-mode');
             if(this.isReview && toggle && toggle.checked) {
@@ -341,7 +323,6 @@
             document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
             document.getElementById('q-text').innerText = q.text;
 
-            // -- DI/GRAPH Logic (Keep exactly as before) --
             var extra = document.getElementById('q-extra-info');
             extra.innerHTML = ''; 
             if (q.direction) {
@@ -367,13 +348,11 @@
                 extra.appendChild(div);
             }
             
-            // -- Badges Logic --
+            // -- Badges --
             var badgeContainer = document.getElementById('review-badges');
-            // Hide badges in practice mode to keep it clean, OR show them. 
-            // Let's hide them in practice mode so user doesn't see "Correct/Wrong" immediately
+            // Hide badges in practice mode
             if (this.isReview && !isPractice) {
                 badgeContainer.style.display = 'flex';
-                // ... (Keep existing badge logic) ...
                 var statusBadge = document.getElementById('review-status-badge');
                 if (r.sel === null) {
                     statusBadge.innerText = "Skipped"; statusBadge.style.background = "#e2e6ea"; statusBadge.style.color = "#495057"; statusBadge.style.border = "1px solid #ced4da";
@@ -389,30 +368,29 @@
                 badgeContainer.style.display = 'none';
             }
 
-            // -- OPTIONS LOGIC (MODIFIED) --
+            // -- OPTIONS LOGIC --
             var box = document.getElementById('options-box');
             if(box) {
                 box.innerHTML = '';
                 var self = this;
                 
-                // Determine which answer to show (Original Attempt vs Practice Attempt)
                 var userSelected = null;
                 var showSolution = false;
 
                 if (isPractice) {
-                    // In Practice Mode: Use the "Guess" for this session
+                    // Initialize if missing
+                    if(!self.reviewGuesses) self.reviewGuesses = {}; 
+                    
                     if (self.reviewGuesses[self.currQ] !== undefined) {
                         userSelected = self.reviewGuesses[self.currQ];
-                        showSolution = true; // Show solution only AFTER they guess
+                        showSolution = true; 
                     } else {
-                        showSolution = false; // Hide solution initially
+                        showSolution = false; 
                     }
                 } else if (self.isReview) {
-                    // Normal Review: Use the original exam response
                     userSelected = r.sel;
                     showSolution = true;
                 } else {
-                    // Taking Exam
                     userSelected = r.sel;
                     showSolution = false;
                 }
@@ -423,48 +401,39 @@
                     
                     if (self.isReview) {
                         if (isPractice) {
-                            // PRACTICE MODE INTERACTION
                             if (showSolution) {
-                                // 1. User has guessed. Show Right/Wrong.
-                                row.style.pointerEvents = 'none'; // Lock options
-                                if (i === q.correctIndex) row.classList.add('correct'); // Always show Green
-                                if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong'); // Show Red if wrong
+                                row.style.pointerEvents = 'none'; 
+                                if (i === q.correctIndex) row.classList.add('correct'); 
+                                if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong'); 
                             } else {
-                                // 2. User has NOT guessed yet. Clean UI.
-                                row.style.pointerEvents = 'auto'; // Allow clicking
+                                row.style.pointerEvents = 'auto'; 
                                 row.style.cursor = 'pointer';
                                 row.onclick = function() {
-                                    // Save the guess
                                     self.reviewGuesses[self.currQ] = i;
-                                    // Reload to reveal answer
                                     self.loadQ();
                                 };
                             }
                         } else {
-                            // NORMAL REVIEW (Original Logic)
                             row.style.pointerEvents = 'none';
                             if (i === q.correctIndex) row.classList.add('correct');
                             if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong');
                         }
                     } else {
-                        // EXAM MODE
                         if (userSelected === i) row.classList.add('selected');
                         row.onclick = function() { r.sel = i; self.loadQ(); };
                     }
-                    
                     row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
                     box.appendChild(row);
                 });
             }
 
-            // -- SOLUTION BOX LOGIC --
+            // -- SOLUTION BOX --
             var solBox = document.getElementById('solution-box');
-            
-            // Only show solution if we are in Review AND (Standard Mode OR (Practice Mode + Guessed))
             var shouldDisplaySol = false;
+            
             if (this.isReview) {
-                if (!isPractice) shouldDisplaySol = true; // Always show in normal review
-                else if (isPractice && this.reviewGuesses[this.currQ] !== undefined) shouldDisplaySol = true; // Show only after guess
+                if (!isPractice) shouldDisplaySol = true; 
+                else if (isPractice && this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined) shouldDisplaySol = true; 
             }
 
             if(shouldDisplaySol) {
@@ -565,14 +534,11 @@
 
         showStoredResult: function(url) {
             var savedJSON = localStorage.getItem(url); 
-            
-            // FIX: If no result is found, alert the user and go back
             if(!savedJSON) { 
-                alert("No result found for this test. It may have been cleared.");
+                alert("Result data not found. It may have been cleared.");
                 location.replace("index.html");
                 return;
             }
-            
             this.currentFileUrl = url; var res = JSON.parse(savedJSON);
             this.data = res.data; this.responses = res.responses;
             var timeSpent = res.timeSpent || 0; 
@@ -606,17 +572,8 @@
             if(confirm("Clear previous result and re-attempt?")) {
                 localStorage.removeItem(this.currentFileUrl);
                 var newUrl = "exam.html?file=" + this.currentFileUrl;
-
-                // --- MAGIC FIX FOR HISTORY STACK ---
-                // 1. Go back one step first. 
-                // This removes the "Trap" layer so we are sitting on the real exam page.
                 history.back();
-
-                // 2. Wait 50 milliseconds for the back action to finish.
                 setTimeout(function() {
-                    // 3. Now overwrite the current page with the new test.
-                    // This prevents "Home -> Test 1 -> Test 2".
-                    // It forces "Home -> Test 2".
                     location.replace(newUrl);
                 }, 50);
             }
@@ -624,17 +581,16 @@
 
         startReviewMode: function() {
             this.isReview = true; this.currQ = 0;
-            // NEW: Reset practice data
+            
+            // FIX 4: RESET PRACTICE DATA
             this.reviewGuesses = {}; 
-            // Reset the switch to OFF by default (optional, or keep user preference)
-            document.getElementById('btn-practice-mode').checked = false;
-            // NEW: Show the Practice Toggle
-            document.getElementById('practice-toggle-box').style.display = 'flex';
-            // FIX: Disable the "Unsaved Changes" warning.
-            // We don't need protection in review mode because the test is over.
+            var pBtn = document.getElementById('btn-practice-mode');
+            if(pBtn) pBtn.checked = false; 
+            
+            var pBox = document.getElementById('practice-toggle-box');
+            if(pBox) pBox.style.display = 'flex';
+
             window.onbeforeunload = null;
-            // HIDE HEADER ELEMENTS
-            document.getElementById('timer-display').style.display = 'none';
             document.getElementById('timer-display').style.display = 'none';
             document.getElementById('btn-pause').style.display = 'none';
             document.getElementById('btn-exit').style.display = 'none';
