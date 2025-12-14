@@ -82,7 +82,7 @@
 
     <div id="view-result" class="view-result">
         <div class="score-card">
-            <h2 style="color:#333;">Test Result</h2>
+            <h2 style="color:#333;">Result</h2>
             <div id="feedback-badge" class="feedback-badge">Processing...</div>
             <div style="font-size:3.5rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
             <p style="color:#666; margin-bottom:10px;">Total Marks</p>
@@ -116,15 +116,30 @@
 
             // --- FIXED BACK BUTTON TRAP ---
             history.pushState(null, null, location.href);
+           // --- FIXED BROWSER BACK BUTTON LOGIC ---
             window.onpopstate = () => {
+                // 1. If we are on the Result screen, let the back button work normally
                 if (document.getElementById('view-result').classList.contains('active')) {
                     return; 
                 }
-                history.pushState(null, null, location.href);
+
+                // 2. Browser Back was pressed. 
+                // The history stack has ALREADY popped the "Trap". 
+                // We are currently at: [Home, Exam] 
+
                 if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
+                    // USER SAID YES:
                     window.onbeforeunload = null; 
                     if(this.timerInterval) clearInterval(this.timerInterval);
-                    location.href = "index.html"; 
+                    
+                    // We are at [Home, Exam]. We want to go to [Home].
+                    // So we just go back 1 more step.
+                    history.back(); 
+                } else {
+                    // USER SAID NO:
+                    // They want to stay. We must restore the Trap.
+                    // Stack becomes: [Home, Exam, Trap]
+                    history.pushState(null, null, location.href);
                 }
             };
 
@@ -267,15 +282,16 @@
         },
 
         exitTest: function() {
-            // Ask the user ONE time
+            // --- FIXED UI EXIT BUTTON LOGIC ---
+            // We are currently at: [Home, Exam, Trap] (Nothing popped yet)
+            
             if(confirm("Exit Test? Progress will be lost.")) {
-                
-                // FIX: Disable the browser's "Are you sure?" safety check 
-                // because the user already confirmed they want to leave.
                 window.onbeforeunload = null;
-
                 if(this.timerInterval) clearInterval(this.timerInterval);
-                location.href = 'index.html';
+                
+                // We are at [Home, Exam, Trap]. We want to go to [Home].
+                // We must jump back over the Trap AND the Exam page (2 steps).
+                history.go(-2);
             }
         },
 
@@ -498,7 +514,14 @@
 
         reattemptTest: function() {
             if(confirm("Clear previous result and re-attempt?")) {
-                localStorage.removeItem(this.currentFileUrl); location.reload();
+                // 1. Delete the saved score
+                localStorage.removeItem(this.currentFileUrl); 
+                
+                // 2. Force the browser to load the "Start Test" URL (without showResult)
+                // We manually construct the URL to ensure it starts fresh
+                var newUrl = "exam.html?file=" + this.currentFileUrl;
+                
+                location.replace(newUrl);
             }
         },
 
