@@ -479,7 +479,15 @@
         },
 
         showStoredResult: function(url) {
-            var savedJSON = localStorage.getItem(url); if(!savedJSON) return;
+            var savedJSON = localStorage.getItem(url); 
+            
+            // FIX: If no result is found, alert the user and go back
+            if(!savedJSON) { 
+                alert("No result found for this test. It may have been cleared.");
+                location.replace("index.html");
+                return;
+            }
+            
             this.currentFileUrl = url; var res = JSON.parse(savedJSON);
             this.data = res.data; this.responses = res.responses;
             var timeSpent = res.timeSpent || 0; 
