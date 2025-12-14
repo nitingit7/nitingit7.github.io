@@ -82,7 +82,7 @@
 
     <div id="view-result" class="view-result">
         <div class="score-card">
-            <h2 style="color:#333;">Test Result</h2>
+            <h2 style="color:#333;">Result</h2>
             <div id="feedback-badge" class="feedback-badge">Processing...</div>
             <div style="font-size:3.5rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
             <p style="color:#666; margin-bottom:10px;">Total Marks</p>
@@ -96,7 +96,7 @@
             
             <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" id="btn-reattempt">Re-attempt Test</button>
             <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" id="btn-view-sols">Review Solutions</button>
-            <button class="btn btn-outline" style="width:100%;" onclick="location.href='index.html'">Back to Home</button>
+            <button class="btn btn-outline" style="width:100%;" onclick="history.go(-2)">Back to Home</button>
         </div>
     </div>
 
@@ -117,15 +117,17 @@
             // --- FIXED BACK BUTTON TRAP ---
             history.pushState(null, null, location.href);
             window.onpopstate = () => {
-                if (document.getElementById('view-result').classList.contains('active')) {
-                    return; 
-                }
-                history.pushState(null, null, location.href);
-                // this line prevent the back after landing the home page
+                // ... inside window.onpopstate ...
+                history.pushState(null, null, location.href); // Trap is restored here (Stack is: Home -> Exam -> Trap)
+
                 if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
                     window.onbeforeunload = null; 
                     if(this.timerInterval) clearInterval(this.timerInterval);
-                    location.replace("index.html"); // <--- NEW LINE (Use this)
+    
+                    // FIX: Go back 2 steps.
+                    // Step -1 removes the Trap. Step -2 removes the Exam.
+                    // You land directly on the original index.html.
+                    history.go(-2); 
                 }
             };
 
@@ -268,15 +270,14 @@
         },
 
         exitTest: function() {
-            // Ask the user ONE time
             if(confirm("Exit Test? Progress will be lost.")) {
-                
-                // FIX: Disable the browser's "Are you sure?" safety check 
-                // because the user already confirmed they want to leave.
-                window.onbeforeunload = null;
-
+                // Disable browser safety check
+                window.onbeforeunload = null; 
+        
                 if(this.timerInterval) clearInterval(this.timerInterval);
-                location.href = 'index.html';
+        
+                // FIX: Rewind history by 2 steps to land on the original Home
+                history.go(-2);
             }
         },
 
