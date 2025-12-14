@@ -38,27 +38,31 @@ var GITHUB_FILES = {
 
 var GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfcBe23FbEQkCmH2QEWLUvV2Ei0CFezkOv54BXYG40GheCCLw/viewform?usp=pp_url&entry.57428168=TEST_NAME_HERE&entry.1889905698=Q_NUM_HERE";
 
-// --- THEME MANAGER (FIXED) ---
+// --- THEME MANAGER (Global Definition) ---
 
-// 1. Define the function globally so HTML can see it immediately
+// 1. Define this function GLOBALLY (outside any blocks)
 window.toggleTheme = function() {
-    if (!document.body) return; // Safety check
+    var body = document.body;
+    if(!body) return; // Safety check
+
+    // Toggle class
+    var isDark = body.classList.toggle('dark-mode');
     
-    var isDark = document.body.classList.toggle('dark-mode');
+    // Save to storage
     localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
     
+    // Update button text
     var btn = document.getElementById('theme-toggle-btn');
     if(btn) btn.innerText = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
 };
 
-// 2. Apply theme ONLY when the body is ready (DOMContentLoaded)
+// 2. Initialize Theme on Load (Wait for HTML to be ready)
 document.addEventListener("DOMContentLoaded", function() {
     var savedTheme = localStorage.getItem('site-theme');
     
+    // If saved theme is dark, apply it
     if(savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
-        
-        // Update button text if it exists on this page
         var btn = document.getElementById('theme-toggle-btn');
         if(btn) btn.innerText = "☀️ Light Mode";
     }
