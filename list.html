@@ -54,6 +54,15 @@
                 list.appendChild(div);
             });
         };
+
+        // --- FIX: FORCE RELOAD ON BACK BUTTON ---
+        // This makes sure the "Start" button turns into "Show Result" 
+        // immediately when you come back from the exam.
+        window.onpageshow = function(event) {
+            if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+                window.location.reload();
+            }
+        };
     </script>
 </body>
 </html>
