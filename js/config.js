@@ -37,3 +37,35 @@ var GITHUB_FILES = {
 };
 
 var GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfcBe23FbEQkCmH2QEWLUvV2Ei0CFezkOv54BXYG40GheCCLw/viewform?usp=pp_url&entry.57428168=TEST_NAME_HERE&entry.1889905698=Q_NUM_HERE";
+
+// --- THEME MANAGER ---
+(function() {
+    // 1. Check Local Storage on load
+    var savedTheme = localStorage.getItem('site-theme');
+    
+    // Default is light. If 'dark' is saved, apply it.
+    if(savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
+    // 2. Global Toggle Function (Used by the button)
+    window.toggleTheme = function() {
+        var isDark = document.body.classList.toggle('dark-mode');
+        
+        // Update Local Storage
+        localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
+        
+        // Update Button Text if it exists
+        var btn = document.getElementById('theme-toggle-btn');
+        if(btn) btn.innerText = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    };
+})();
+
+document.addEventListener("DOMContentLoaded", function() {
+    var savedTheme = localStorage.getItem('site-theme');
+    if(savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        var btn = document.getElementById('theme-toggle-btn');
+        if(btn) btn.innerText = "☀️ Light Mode";
+    }
+});
