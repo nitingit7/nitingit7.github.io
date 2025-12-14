@@ -34,5 +34,16 @@
             💡 Tip: <strong>Refresh the page often</strong> to see new tests!
         </div>
     </div>
+    <script>
+    // ... your existing code ...
+
+    // FIX: Force reload when coming back from the test using Browser Back Button
+    window.onpageshow = function(event) {
+        // If the page is loaded from the cache (history navigation)
+        if (event.persisted) {
+            window.location.reload();
+        }
+    };
+</script>
 </body>
 </html>
