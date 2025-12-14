@@ -267,7 +267,13 @@
         },
 
         exitTest: function() {
+            // Ask the user ONE time
             if(confirm("Exit Test? Progress will be lost.")) {
+                
+                // FIX: Disable the browser's "Are you sure?" safety check 
+                // because the user already confirmed they want to leave.
+                window.onbeforeunload = null;
+
                 if(this.timerInterval) clearInterval(this.timerInterval);
                 location.href = 'index.html';
             }
