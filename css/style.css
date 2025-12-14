@@ -2,7 +2,7 @@
 @import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
 
 :root { 
-    /* --- COLOR PALETTE --- */
+    /* --- BRAND COLORS --- */
     --blue:   #3F72AF;  
     --yellow: #DBE2EF;  
     --dark:   #112D4E;  
@@ -11,24 +11,25 @@
     --red:    #dc3545;  
     --purple: #6f42c1; 
 
-    /* --- LIGHT THEME (Default) --- */
+    /* --- LIGHT THEME DEFAULTS --- */
     --bg-color: #ebf4ff;
     --card-bg: #ffffff;
-    --text-primary: #333333;
+    --text-primary: #112D4E; /* Dark Blue Text for better contrast in light mode */
     --text-secondary: #666666;
     --border-color: #dddddd;
     --shadow: 0 4px 10px rgba(0,0,0,0.1);
     --header-bg: #112D4E;
     --header-text: #ffffff;
     --hover-bg: #f8f9fa;
-    --marks-bg: #eeeeee;
+    --marks-bg: #ffffff;
+    --marks-text: #333333;
 }
 
-/* --- DARK THEME (Pro UI) --- */
+/* --- DARK THEME OVERRIDES --- */
 body.dark-mode {
     --bg-color: #0d1117; 
     --card-bg: #161b22; 
-    --text-primary: #e6edf3; 
+    --text-primary: #e6edf3; /* Bright White-Grey */
     --text-secondary: #8b949e; 
     --border-color: #30363d; 
     --header-bg: #010409;
@@ -36,30 +37,56 @@ body.dark-mode {
     --hover-bg: #21262d;
     --shadow: none;
     --marks-bg: #21262d;
+    --marks-text: #ffffff;
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-primary); height: 100vh; display: flex; flex-direction: column; transition: background 0.3s, color 0.3s; }
 
-/* LAYOUT */
+/* --- TEXT VISIBILITY FIXES --- */
+/* Force all headings to adapt to the theme color */
+h1, h2, h3, h4, h5, h6, strong, b {
+    color: var(--text-primary) !important;
+}
+
+/* Fix for "Total Marks" and small labels */
+.stat-label, p {
+    color: var(--text-secondary) !important;
+}
+
+/* SHARED LAYOUT */
 .container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
 
-/* CARDS & LISTS */
-.subject-card { background: var(--card-bg); width: 100%; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: var(--shadow); border: 1px solid var(--border-color); cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; transition: 0.2s; color: var(--text-primary); }
+/* CARDS */
+.subject-card { 
+    background: var(--card-bg); width: 100%; padding: 25px; margin-bottom: 15px; border-radius: 10px; 
+    box-shadow: var(--shadow); border: 1px solid var(--border-color); cursor: pointer; 
+    display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; 
+    transition: 0.2s; color: var(--text-primary); 
+}
 .subject-card:active { transform: scale(0.98); background: var(--hover-bg); }
 .icon { font-size: 24px; margin-right: 15px; color: var(--blue); }
 
-.test-item { background: var(--card-bg); width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; color: var(--text-primary); }
+.test-item { 
+    background: var(--card-bg); width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 8px; 
+    border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; 
+    color: var(--text-primary); 
+}
 
 /* HEADER */
-header { height: 60px; background: var(--header-bg); color: var(--header-text); display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; border-bottom: 1px solid var(--border-color); }
+header { 
+    height: 60px; background: var(--header-bg); color: var(--header-text); 
+    display: flex; justify-content: space-between; align-items: center; padding: 0 10px; 
+    flex-shrink: 0; border-bottom: 1px solid var(--border-color); 
+}
 #exam-title { font-weight: bold; font-size: 1.1rem; max-width: 35%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--header-text); }
+
 .timer-box { display: flex; align-items: center; gap: 8px; }
 .timer { font-family: monospace; font-size: 1.1rem; font-weight: bold; background: #222; color: #fff; padding: 6px 10px; border-radius: 4px; border: 1px solid #555; }
 .timer.warning { background: #c00; border-color: #f00; animation: blink 1s infinite; }
 @keyframes blink { 50% { opacity: 0.7; } }
 
-/* BUTTONS */
+/* --- BUTTONS --- */
 .btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
 .btn-pause { background: var(--yellow); color: #112D4E; }
 .btn-exit { background: var(--red); color: white; }
@@ -70,67 +97,91 @@ header { height: 60px; background: var(--header-bg); color: var(--header-text); 
 .btn-purple { background: var(--purple); }
 .btn-orange { background: #fd7e14; }
 
-/* FIX: Outline Button (Palette) */
+/* FIX: SIDEBAR TOGGLE BUTTON (Palette) */
 .btn-outline { 
     background: transparent; 
-    border: 1px solid var(--border-color); 
-    color: var(--text-primary); /* This ensures visibility in Dark Mode */
+    border: 1px solid #ccc; /* Light mode border */
+    color: white; /* Header text is usually white in light mode too */
     padding: 5px 10px;
 }
-.btn-outline:hover { background: var(--hover-bg); }
+/* In Dark Mode, force it to be bright white */
+body.dark-mode .btn-outline {
+    border-color: #fff !important;
+    color: #fff !important;
+}
 
 .back-btn { display: inline-block; background-color: var(--blue); color: white; padding: 10px 20px; font-size: 1rem; font-weight: bold; text-align: center; border-radius: 8px; margin-bottom: 20px; cursor: pointer; box-shadow: var(--shadow); }
-.theme-btn { position: absolute; top: 20px; right: 20px; background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 
-/* EXAM BODY */
+/* THEME TOGGLE BUTTON */
+.theme-btn { 
+    position: absolute; top: 20px; right: 20px; background: var(--card-bg); 
+    border: 1px solid var(--border-color); color: var(--text-primary); 
+    padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 600; 
+    font-size: 0.9rem; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+/* EXAM BODY & QUESTIONS */
 .exam-body { display: flex; flex: 1; overflow: hidden; position: relative; background: var(--bg-color); }
 .q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--card-bg); }
 .q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); }
 .q-footer { padding: 10px; background: var(--bg-color); border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; }
 
-/* MARKS BADGE (New Class) */
+/* FIX: MARKS BADGE */
 .marks-badge {
     font-size: 0.8rem;
-    background: var(--marks-bg);
-    padding: 2px 8px;
+    background: var(--marks-bg); /* Adapts to theme */
+    color: var(--marks-text);    /* Adapts to theme */
+    padding: 4px 10px;
     border-radius: 4px;
-    color: var(--text-secondary);
     border: 1px solid var(--border-color);
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-/* QUESTIONS */
 .q-direction { font-style: normal; color: var(--text-primary); margin-bottom: 15px; font-weight: bold; font-size: 1rem; }
 .q-image { max-width: 100%; height: auto; display: block; margin: 10px auto 20px auto; border: 1px solid var(--border-color); border-radius: 5px; }
 .q-extra-info table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem; color: var(--text-primary); }
 .q-extra-info th, .q-extra-info td { border: 1px solid var(--border-color); padding: 8px; text-align: center; }
 .q-extra-info th { background-color: var(--bg-color); font-weight: bold; }
 
-.opt-row { display: flex; padding: 12px; border: 1px solid var(--border-color); background: var(--bg-color); margin-bottom: 10px; border-radius: 5px; cursor: pointer; align-items: center; color: var(--text-primary); }
+/* OPTIONS */
+.opt-row { 
+    display: flex; padding: 12px; border: 1px solid var(--border-color); 
+    background: var(--bg-color); margin-bottom: 10px; border-radius: 5px; 
+    cursor: pointer; align-items: center; color: var(--text-primary); 
+}
 .opt-row:hover { background: var(--hover-bg); }
-.opt-row.selected { background: var(--yellow); border-color: var(--blue); border-width: 2px; color: #333; }
-body.dark-mode .opt-row.selected { background: #23395d; color: #fff; border-color: #58a6ff; }
+.opt-row.selected { background: var(--yellow); border-color: var(--blue); border-width: 2px; color: #333 !important; } /* Force dark text on selection in light mode */
+body.dark-mode .opt-row.selected { background: #1f6feb; border-color: #58a6ff; color: #fff !important; } /* Force white text on selection in dark mode */
+
 .opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; color: #155724 !important; }
 .opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; color: #721c24 !important; }
 .solution-box { background: var(--bg-color); padding: 15px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); margin-top: 20px; border-radius: 5px; display: none; color: var(--text-primary); }
 .report-link { font-size: 0.8rem; color: var(--red); text-decoration: underline; cursor: pointer; margin-left: 15px; }
 
 /* SIDEBAR */
-#sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: var(--card-bg); border-left: 1px solid var(--border-color); transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; color: var(--text-primary); }
+#sidebar { 
+    position: absolute; right: 0; top: 0; bottom: 0; width: 280px; 
+    background: var(--card-bg); border-left: 1px solid var(--border-color); 
+    transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; color: var(--text-primary); 
+}
 #sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.5); }
 .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
 .pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; color: var(--text-primary); background: var(--bg-color); }
 
-/* PAUSE OVERLAY */
+/* OVERLAYS & RESULT */
 #pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
 
-/* RESULT */
 .view-result { display:none; justify-content: center; align-items: center; background: var(--bg-color); width:100%; height:100%; flex-direction:column; position: absolute; top:0; left:0; z-index: 100; }
 .view-result.active { display:flex; }
-.score-card { text-align: center; padding: 30px; background: var(--card-bg); box-shadow: var(--shadow); border: 1px solid var(--border-color); border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; color: var(--text-primary); }
+.score-card { 
+    text-align: center; padding: 30px; background: var(--card-bg); 
+    box-shadow: var(--shadow); border: 1px solid var(--border-color); 
+    border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; color: var(--text-primary); 
+}
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0; }
 .stat-item { padding: 10px; border-radius: 5px; background: var(--bg-color); border: 1px solid var(--border-color); }
 .stat-val { font-weight: bold; font-size: 1.2rem; color: var(--text-primary); }
-.stat-label { font-size: 0.8rem; color: var(--text-secondary); }
 .time-badge { margin: 10px 0; padding: 8px 15px; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 20px; font-weight: bold; color: var(--text-primary); display: inline-block; }
 .feedback-badge { display:inline-block; padding:10px 20px; border-radius:30px; color:white; font-weight:bold; margin-bottom:20px; font-size:1rem; }
 
