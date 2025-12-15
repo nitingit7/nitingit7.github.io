@@ -140,8 +140,16 @@ body.dark-mode .opt-row.selected {
     color: #fff !important;
 }
 
-.opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; color: #155724 !important; }
-.opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; color: #721c24 !important; }
+.opt-row.correct { 
+    background: rgba(40, 167, 69, 0.25) !important; /* Transparent Green */
+    border-color: var(--green) !important; 
+    color: var(--text-primary) !important; /* Keeps text readable in Dark Mode */
+}
+.opt-row.wrong { 
+    background: rgba(220, 53, 69, 0.25) !important; /* Transparent Red */
+    border-color: var(--red) !important; 
+    color: var(--text-primary) !important; 
+}
 .solution-box { background: var(--bg-color); padding: 15px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); margin-top: 20px; border-radius: 5px; display: none; color: var(--text-primary); }
 
 /* SIDEBAR & RESULT */
