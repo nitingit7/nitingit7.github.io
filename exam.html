@@ -286,13 +286,26 @@
             },
 
             reportIssue: function() {
-                if(!GOOGLE_FORM_URL) { alert("Please configure GOOGLE_FORM_URL in config.js"); return; }
-                var testName = this.data.title || "Unknown Test";
-                var qNum = "Q" + (this.currQ + 1);
-                var finalUrl = GOOGLE_FORM_URL
-                    .replace("TEST_NAME_HERE", encodeURIComponent(testName))
-                    .replace("Q_NUM_HERE", encodeURIComponent(qNum));
-                window.open(finalUrl, '_blank');
+                // 1. Check if URL is configured
+                if(!GOOGLE_FORM_URL) { 
+                    alert("Please configure GOOGLE_FORM_URL in config.js"); 
+                    return; 
+                }
+
+                // 2. Show Confirmation Popup
+                var confirmLeave = confirm("⚠️ You are about to leave the test screen to report an error.\n\nThe timer will continue running. Do you want to proceed?");
+
+                if (confirmLeave) {
+                    var testName = this.data.title || "Unknown Test";
+                    var qNum = "Q" + (this.currQ + 1);
+                    
+                    // 3. Build URL and Open
+                    var finalUrl = GOOGLE_FORM_URL
+                        .replace("TEST_NAME_HERE", encodeURIComponent(testName))
+                        .replace("Q_NUM_HERE", encodeURIComponent(qNum));
+                    
+                    window.open(finalUrl, '_blank');
+                }
             },
 
             loadQ: function() {
