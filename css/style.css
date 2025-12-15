@@ -253,7 +253,17 @@ body.dark-mode .back-btn:hover {
     border: 1px solid var(--border-color); 
     padding: 15px; 
     margin-bottom: 20px; 
-    background: var(--bg-color); /* Inner box background */
+    
+    /* CHANGE HERE: Use white instead of grey */
+    background: #ffffff; 
+    
+    /* Optional: Smooth transition if you toggle themes */
+    transition: background 0.3s ease;
+}
+
+/* Ensure it stays dark in Dark Mode */
+body.dark-mode .inst-content {
+    background: var(--card-bg); /* Uses the dark card color */
 }
 
 /* Palette Legend Styles */
