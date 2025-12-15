@@ -75,13 +75,15 @@
 
     {
       "id": "DI01",
-      "text": "$$\\text{Direction:} The table given below shows the number of guest and number of rooms in five different hotels.\n <table border='1' style='width:85%; border-collapse:collapse; margin:auto;'><tr><th>Hotels</th><th>Number of rooms</th><th>Number of guests</th></tr><tr><td>A</td><td>34</td><td>72</td></tr><tr><td>B</td><td>39</td><td>51</td></tr><tr><td>C</td><td>52</td><td>60</td></tr><tr><td>D</td><td>39</td><td>77</td></tr><tr><td>E</td><td>40</td><td>100</td></tr></table> \n  guests living in 2/3rd of the rooms in D. find the remining number of guests living in per room in D.",
+      "text": "$$\\text{Direction:} The table given below shows the number of guest and number of rooms in five different hotels.\n guests living in 2/3rd of the rooms in D. find the remining number of guests living in per room in D.",
+      "infoHtml": "<table border='1' style='width:85%; border-collapse:collapse; margin:auto;'><tr><th>Hotels</th><th>Number of rooms</th><th>Number of guests</th></tr><tr><td>A</td><td>34</td><td>72</td></tr><tr><td>B</td><td>39</td><td>51</td></tr><tr><td>C</td><td>52</td><td>60</td></tr><tr><td>D</td><td>39</td><td>77</td></tr><tr><td>E</td><td>40</td><td>100</td></tr></table>",
       "options": ["9", "3", "16", "6", "2"],
       "solution": "Total rooms in D = 39. Total guests in D = 77.\nRooms occupied by 51 guests = $$\\frac{2}{3} \\times 39 = 26$$.\nRemaining rooms = $$39 - 26 = 13$$.\nRemaining guests = $$77 - 51 = 26$$.\nGuests per remaining room = $$\\frac{26}{13} = 2$$."
     },
 
     {
       "id": "DI02",
+      "infoHtml": "<table border='1' style='width:85%; border-collapse:collapse; margin:auto;'><tr><th>Hotels</th><th>Number of rooms</th><th>Number of guests</th></tr><tr><td>A</td><td>34</td><td>72</td></tr><tr><td>B</td><td>39</td><td>51</td></tr><tr><td>C</td><td>52</td><td>60</td></tr><tr><td>D</td><td>39</td><td>77</td></tr><tr><td>E</td><td>40</td><td>100</td></tr></table>",
       "text": "Find the average number of guests in B, C & A.",
       "options": ["90", "73", "10", "61", "92"],
       "correctIndex": 3,
@@ -89,21 +91,24 @@
     },
 
     {
-      "id": "43",
+      "id": "DI03",
+      "infoHtml": "<table border='1' style='width:85%; border-collapse:collapse; margin:auto;'><tr><th>Hotels</th><th>Number of rooms</th><th>Number of guests</th></tr><tr><td>A</td><td>34</td><td>72</td></tr><tr><td>B</td><td>39</td><td>51</td></tr><tr><td>C</td><td>52</td><td>60</td></tr><tr><td>D</td><td>39</td><td>77</td></tr><tr><td>E</td><td>40</td><td>100</td></tr></table>",
       "text": "Find the ratio of number of rooms in A to number of rooms in E.",
       "options": ["17:20", "17:13", "16:17", "26:23", "29:23"],
       "correctIndex": 0,
       "solution": "Rooms in A = 34.\nRooms in E = 40.\nRatio = $$34 : 40 = 17 : 20$$."
     },
     {
-      "id": "DI03",
+      "id": "DI04",
+      "infoHtml": "<table border='1' style='width:85%; border-collapse:collapse; margin:auto;'><tr><th>Hotels</th><th>Number of rooms</th><th>Number of guests</th></tr><tr><td>A</td><td>34</td><td>72</td></tr><tr><td>B</td><td>39</td><td>51</td></tr><tr><td>C</td><td>52</td><td>60</td></tr><tr><td>D</td><td>39</td><td>77</td></tr><tr><td>E</td><td>40</td><td>100</td></tr></table>",
       "text": "If number of guests in F is average of guests in A & C and number of rooms in F is 20% less rooms in E. Find the number of guest and rooms in F.",
       "options": ["66, 32", "32, 33", "66, 39", "61, 34", "21, 56"],
       "correctIndex": 0,
       "solution": "Guests in F = Average(A, C) = $$\\frac{72 + 60}{2} = \\frac{132}{2} = 66$$.\nRooms in F = $$40 \\times (1 - 0.20) = 40 \\times 0.8 = 32$$.\nAnswer: 66, 32."
     },
     {
-      "id": "DI04",
+      "id": "DI05",
+      "infoHtml": "<table border='1' style='width:85%; border-collapse:collapse; margin:auto;'><tr><th>Hotels</th><th>Number of rooms</th><th>Number of guests</th></tr><tr><td>A</td><td>34</td><td>72</td></tr><tr><td>B</td><td>39</td><td>51</td></tr><tr><td>C</td><td>52</td><td>60</td></tr><tr><td>D</td><td>39</td><td>77</td></tr><tr><td>E</td><td>40</td><td>100</td></tr></table>",
       "text": "Number of guests in B is what percentage of number of guests in C.",
       "options": ["89", "83", "85", "86", "82"],
       "correctIndex": 2,
