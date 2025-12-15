@@ -548,3 +548,19 @@ input:checked + .slider-round:before {
     min-width: 100px; /* Ensure buttons align nicely */
     text-align: center;
 }
+
+/* --- FIX FOR REVIEW MODE PALETTE COLORS --- */
+
+/* 1. Light Mode (Default): Skipped questions become Gray with Dark Text */
+.pal-rev-skipped {
+    background-color: #d1d5db !important; /* Soft Gray */
+    color: #333333 !important;            /* Dark Text for contrast */
+    border: 1px solid #adb5bd !important;
+}
+
+/* 2. Dark Mode: Skipped questions stay Dark with White Text */
+body.dark-mode .pal-rev-skipped {
+    background-color: #444444 !important; /* Original Dark Grey */
+    color: #ffffff !important;            /* White Text */
+    border: 1px solid #666666 !important;
+}
