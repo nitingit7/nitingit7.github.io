@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instructions</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    </head>
 <body>
 
     <div class="inst-container">
         <div class="inst-header">
             <h2 style="margin:0;">General Instructions</h2>
-            <p style="margin:5px 0 0 0;">Please read the following instructions carefully.</p>
+            <p style="color:var(--text-secondary); margin:5px 0 0 0;">Please read the following instructions carefully.</p>
         </div>
 
         <div class="inst-content">
@@ -20,7 +20,7 @@
             
             <p>3. The Question Palette displayed on the right side of screen will show the status of each question using one of the following symbols:</p>
             
-            <div style="margin: 20px 0; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color);">
+            <div style="margin: 20px 0; padding: 10px; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 5px;">
                 <div class="legend-row">
                     <div class="legend-icon l-not-visit">1</div>
                     <div>You have not visited the question yet.</div>
@@ -62,11 +62,14 @@
     </div>
 
     <script>
-        // Apply Theme Manually just in case
+        // --- 1. APPLY DARK MODE IF SELECTED ---
+        // This checks the memory to see if user selected dark mode previously
         var savedTheme = localStorage.getItem('site-theme');
-        if(savedTheme === 'dark') { document.body.classList.add('dark-mode'); }
+        if(savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
 
-        // Get the file URL from params
+        // --- 2. EXISTING LOGIC ---
         var params = new URLSearchParams(window.location.search);
         var fileUrl = params.get('file');
 
