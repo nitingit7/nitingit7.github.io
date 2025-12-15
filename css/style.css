@@ -777,3 +777,15 @@ header {
     .timer-icon { display: none; }         /* Hide hourglass icon on tiny screens */
     #exam-title { font-size: 0.9rem; max-width: 35%; }
 }
+
+/* --- RESPONSIVE IMAGE FIX --- */
+.q-image {
+    max-width: 100%;       /* Force image to never exceed screen width */
+    height: auto;          /* Keep the aspect ratio correct */
+    display: block;        /* Make it a block element so centering works */
+    margin: 15px auto;     /* Center horizontally + add top/bottom spacing */
+    
+    /* Optional: Makes it look cleaner */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
