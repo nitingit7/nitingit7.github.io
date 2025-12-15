@@ -1,6 +1,6 @@
 {
   "title": "IBPS RRB Clerk Prelims Quant (7th Dec Shift 2) #QA017",
-  "timeLimit": 15,
+  "timeLimit": 20,
   "questions": [
     {
       "id": "51",
@@ -115,12 +115,11 @@
       "correctIndex": 2,
       "solution": "Guests in B = 51.\nGuests in C = 60.\nPercentage = $$\\frac{51}{60} \\times 100 = \\frac{17}{20} \\times 100 = 17 \\times 5 = 85\\%$$."
     },
-
     {
       "id": "DI06",
-      "text": "Find the average number of managers in A, C & E.",
       "direction": "Directions (46-50): The bar graph shows the number of managers in five companies. Read the data and answer the following question.",
-      "image": "https://raw.githubusercontent.com/nitingit7/nitingit7.github.io/refs/heads/main/tests/quant/DI/Number%20of%20Managers%20QA017.png",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
+      "text": "Find the average number of managers in A, C & E.",
       "options": [
         "59",
         "53",
@@ -133,9 +132,8 @@
     },
     {
       "id": "DI07",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
       "text": "If the ratio of male to female managers in C and E is 3:1 and 1:1 respectively, then find the females managers in C and E.",
-      "direction": "Directions (46-50): The bar graph shows the number of managers in five companies. Read the data and answer the following question.",
-      "image": "https://raw.githubusercontent.com/nitingit7/nitingit7.github.io/refs/heads/main/tests/quant/DI/Number%20of%20Managers%20QA017.png",
       "options": [
         "39",
         "40",
@@ -148,9 +146,8 @@
     },
     {
       "id": "DI08",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
       "text": "If the number of managers in A is 12.5% less than the manager in F, find the difference between manager in F and D.",
-      "direction": "Directions (46-50): The bar graph shows the number of managers in five companies. Read the data and answer the following question.",
-      "image": "https://raw.githubusercontent.com/nitingit7/nitingit7.github.io/refs/heads/main/tests/quant/DI/Number%20of%20Managers%20QA017.png",
       "options": [
         "39",
         "40",
@@ -163,9 +160,8 @@
     },
     {
       "id": "DI09",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
       "text": "Managers in C is what percentage of managers in D.",
-      "direction": "Directions (46-50): The bar graph shows the number of managers in five companies. Read the data and answer the following question.",
-      "image": "https://raw.githubusercontent.com/nitingit7/nitingit7.github.io/refs/heads/main/tests/quant/DI/Number%20of%20Managers%20QA017.png",
       "options": [
         "80",
         "83",
@@ -178,9 +174,8 @@
     },
     {
       "id": "DI10",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
       "text": "Find the ratio of managers in A and D together to managers in E and B together.",
-      "direction": "Directions (46-50): The bar graph shows the number of managers in five companies. Read the data and answer the following question.",
-      "image": "INSERT_IMAGE_LINK_HERE",
       "options": [
         "17:15",
         "17:13",
