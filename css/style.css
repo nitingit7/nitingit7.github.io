@@ -304,3 +304,111 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
 .feedback-badge:hover {
     transform: scale(1.05);
 }
+
+/* =========================================
+   MOBILE APP UI UPGRADE (Add to bottom of style.css)
+   ========================================= */
+
+/* 1. Smooth Fade-in Animation for the whole page */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeInUp 0.6s ease-out;
+    padding-bottom: 80px; /* Space for scrolling on mobile */
+}
+
+/* 2. Modern Header Styling */
+.container h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    /* Gradient Text Effect */
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px !important;
+    text-align: center;
+}
+
+/* 3. App-Style Cards */
+.subject-card {
+    border: none !important; /* Remove grey border */
+    background: var(--card-bg);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 16px; /* Rounder corners like apps */
+    
+    /* Soft, high-quality shadow */
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hover/Touch Effect */
+.subject-card:active, .subject-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Colored Sidebar Accent on Cards */
+.subject-card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, var(--blue), var(--purple));
+}
+
+/* 4. Beautiful Icons */
+.subject-card .icon {
+    font-size: 28px;
+    margin-right: 20px;
+    /* Create a circle background for icon */
+    background: rgba(63, 114, 175, 0.1); /* Light tint of your blue */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+/* Icon hover effect */
+.subject-card:hover .icon {
+    background: var(--blue);
+    color: white;
+}
+
+/* 5. Typography Polish */
+.subject-card strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: block;
+}
+
+/* Arrow styling */
+.subject-card span:last-child {
+    color: var(--text-secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+/* 6. Dark Mode Specific Polish */
+body.dark-mode .subject-card {
+    background: #1e2530; /* Slightly lighter than pure black bg */
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+body.dark-mode .subject-card .icon {
+    background: rgba(255, 255, 255, 0.1);
+}
