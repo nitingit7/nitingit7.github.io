@@ -412,3 +412,132 @@ body.dark-mode .subject-card {
 body.dark-mode .subject-card .icon {
     background: rgba(255, 255, 255, 0.1);
 }
+
+/* =========================================
+   1. SLIDER TOGGLE SWITCH (Modern & Smooth)
+   ========================================= */
+.theme-switch-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none; /* Hide default checkbox */
+}
+
+.slider-round {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider-round:before {
+    background-color: white;
+    bottom: 4px;
+    content: ""; /* This is the moving circle */
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+    
+    /* Add an icon inside the circle */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* When checked (Dark Mode) */
+input:checked + .slider-round {
+    background-color: var(--blue);
+}
+
+input:checked + .slider-round:before {
+    transform: translateX(26px);
+    /* Change icon to Moon */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>');
+}
+
+/* =========================================
+   2. MODERN LIST ITEMS (For list.html)
+   ========================================= */
+/* Container spacing to prevent toggle overlap on mobile */
+.container {
+    padding-top: 80px !important; /* Pushes content down so toggle doesn't cover text */
+}
+
+/* The New Test Card */
+.test-item {
+    background: var(--card-bg);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px; /* Smooth corners */
+    border: none !important; /* Remove old border */
+    
+    /* App-like Shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.test-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Left side accent bar */
+.test-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--blue);
+    border-radius: 4px 0 0 4px;
+}
+
+/* Test Name Text */
+.test-item span {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-left: 10px; /* Space from the accent bar */
+    flex: 1; /* Takes available space */
+    padding-right: 15px; /* Space before button */
+}
+
+/* The Start/Result Button styling override */
+.test-item .btn {
+    padding: 8px 20px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    min-width: 100px; /* Ensure buttons align nicely */
+    text-align: center;
+}
