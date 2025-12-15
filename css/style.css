@@ -253,7 +253,17 @@ body.dark-mode .back-btn:hover {
     border: 1px solid var(--border-color); 
     padding: 15px; 
     margin-bottom: 20px; 
-    background: var(--bg-color); /* Inner box background */
+    
+    /* CHANGE HERE: Use white instead of grey */
+    background: #ffffff; 
+    
+    /* Optional: Smooth transition if you toggle themes */
+    transition: background 0.3s ease;
+}
+
+/* Ensure it stays dark in Dark Mode */
+body.dark-mode .inst-content {
+    background: var(--card-bg); /* Uses the dark card color */
 }
 
 /* Palette Legend Styles */
@@ -615,4 +625,235 @@ body.dark-mode .container h2 span {
 /* Dark mode adjustment for striped rows */
 body.dark-mode .q-extra-info tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+@keyframes blink { 50% { opacity: 0.5; } }
+
+/* 2. Report Error Button Styling */
+#btn-report {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 5px 12px;
+    border-radius: 20px;       /* Pill shape */
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+    text-decoration: none;     /* Remove underline */
+}
+
+#btn-report:hover {
+    background-color: var(--red);
+    color: white;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Dark mode adjustment for visibility */
+body.dark-mode #btn-report {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+body.dark-mode #btn-report:hover {
+    background-color: #ff6b6b;
+    color: #1a1a1a;
+}
+
+/* --- PROFESSIONAL TIMER & REPORT BUTTON STYLES --- */
+
+/* --- MODERN HEADER LAYOUT --- */
+
+/* 1. Center the Timer (Absolute Position) */
+.timer-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Keeps it perfectly centered */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Modern Glassy Look */
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 6px 20px;
+    border-radius: 30px; /* Pill shape */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px); /* Optional: Blur effect behind */
+}
+
+/* 2. Clean Typography for Timer */
+.timer {
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; /* Clean font */
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    background: transparent; /* No box background */
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: auto;
+}
+
+/* Optional Icon Styling */
+.timer-icon {
+    font-size: 1.1rem;
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+/* 3. Group the Right-Side Buttons */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the buttons */
+    z-index: 10; /* Ensure buttons are clickable */
+}
+
+/* 4. Warning State (Subtle Red Text, no flashing box) */
+.timer.warning {
+    color: #ff6b6b; /* Soft red */
+    animation: none; /* Remove annoying blink */
+}
+.timer-container.warning-bg {
+    border-color: #ff6b6b;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* 5. Mobile Adjustment: Hide Title to fit Timer */
+@media (max-width: 600px) {
+    #exam-title { display: none; }
+    .timer-container { position: relative; left: 0; transform: none; }
+}
+
+/* --- FIX: HEADER LAYOUT (RIGHT-ALIGNED TIMER) --- */
+
+/* 1. Main Header Layout */
+header {
+    display: flex;
+    justify-content: space-between; /* Title Left, Group Right */
+    align-items: center;
+    padding: 0 15px;
+    height: 60px;
+    width: 100%;
+}
+
+/* 2. Group for Timer & Buttons */
+.header-right-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between Timer and Buttons */
+}
+
+/* 3. Fix Timer Position (Resetting previous centering code) */
+.timer-container {
+    position: static !important; /* Stop floating in center */
+    transform: none !important;  /* Remove centering shift */
+    margin: 0;
+    
+    /* Keep the professional look */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* 4. Ensure Title is Always Visible */
+#exam-title {
+    display: block !important; /* Force visible on mobile */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white !important;
+    
+    /* Prevent title from overlapping timer on small phones */
+    max-width: 40%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if title is too long */
+}
+
+/* 5. Mobile Optimizations (Small Screens) */
+@media (max-width: 500px) {
+    .header-right-group { gap: 8px; }      /* Tighter spacing */
+    .timer-container { padding: 4px 10px; } /* Smaller timer box */
+    .timer { font-size: 1rem; }            /* Smaller text */
+    .timer-icon { display: none; }         /* Hide hourglass icon on tiny screens */
+    #exam-title { font-size: 0.9rem; max-width: 35%; }
+}
+
+/* --- RESPONSIVE IMAGE FIX --- */
+.q-image {
+    max-width: 100%;       /* Force image to never exceed screen width */
+    height: auto;          /* Keep the aspect ratio correct */
+    display: block;        /* Make it a block element so centering works */
+    margin: 15px auto;     /* Center horizontally + add top/bottom spacing */
+    
+    /* Optional: Makes it look cleaner */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* --- IMAGE ZOOM MODAL STYLES --- */
+.img-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 99999; /* Sit on top of everything */
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+/* Zoom Animation */
+.modal-content {  
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mobile: Allow pinch zoom feel by letting width expand */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
