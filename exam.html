@@ -116,7 +116,27 @@
         </div>
     </div>
 
+    <div id="img-modal" class="img-modal" onclick="closeImgModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-modal-content">
+        <div id="caption"></div>
+    </div>
+
     <script>
+        // GLOBAL FUNCTIONS FOR IMAGE ZOOM
+        function openImgModal(src) {
+            var modal = document.getElementById("img-modal");
+            var modalImg = document.getElementById("img-modal-content");
+            modal.style.display = "flex"; // Use flex to center
+            modal.style.alignItems = "center";
+            modal.style.justifyContent = "center";
+            modalImg.src = src;
+        }
+
+        function closeImgModal() {
+            document.getElementById("img-modal").style.display = "none";
+        }
+
         window.app = {
             data: null, responses: {}, currQ: 0, timerInterval: null, 
             reviewGuesses: {}, 
@@ -351,8 +371,26 @@
                         url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
                     }
                     var img = document.createElement('img');
-                    img.src = url; img.className = 'q-image'; img.alt = "Graph/Chart";
+                    img.src = url; 
+                    img.className = 'q-image'; 
+                    img.alt = "Graph/Chart";
+                    
+                    // NEW: Add Click to Zoom
+                    img.style.cursor = "zoom-in";
+                    img.onclick = function() {
+                        openImgModal(this.src);
+                    };
+                    
                     extra.appendChild(img);
+                    
+                    // Add a small hint text under the image
+                    var hint = document.createElement('div');
+                    hint.innerText = "(Click image to zoom)";
+                    hint.style.fontSize = "0.8rem";
+                    hint.style.color = "#888";
+                    hint.style.textAlign = "center";
+                    hint.style.marginBottom = "15px";
+                    extra.appendChild(hint);
                 }
                 if (q.image) { addImg(q.image); }
                 if (q.images && Array.isArray(q.images)) { q.images.forEach(function(url) { addImg(url); }); }
