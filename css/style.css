@@ -719,3 +719,61 @@ body.dark-mode #btn-report:hover {
     #exam-title { display: none; }
     .timer-container { position: relative; left: 0; transform: none; }
 }
+
+/* --- FIX: HEADER LAYOUT (RIGHT-ALIGNED TIMER) --- */
+
+/* 1. Main Header Layout */
+header {
+    display: flex;
+    justify-content: space-between; /* Title Left, Group Right */
+    align-items: center;
+    padding: 0 15px;
+    height: 60px;
+    width: 100%;
+}
+
+/* 2. Group for Timer & Buttons */
+.header-right-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between Timer and Buttons */
+}
+
+/* 3. Fix Timer Position (Resetting previous centering code) */
+.timer-container {
+    position: static !important; /* Stop floating in center */
+    transform: none !important;  /* Remove centering shift */
+    margin: 0;
+    
+    /* Keep the professional look */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* 4. Ensure Title is Always Visible */
+#exam-title {
+    display: block !important; /* Force visible on mobile */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white !important;
+    
+    /* Prevent title from overlapping timer on small phones */
+    max-width: 40%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if title is too long */
+}
+
+/* 5. Mobile Optimizations (Small Screens) */
+@media (max-width: 500px) {
+    .header-right-group { gap: 8px; }      /* Tighter spacing */
+    .timer-container { padding: 4px 10px; } /* Smaller timer box */
+    .timer { font-size: 1rem; }            /* Smaller text */
+    .timer-icon { display: none; }         /* Hide hourglass icon on tiny screens */
+    #exam-title { font-size: 0.9rem; max-width: 35%; }
+}
