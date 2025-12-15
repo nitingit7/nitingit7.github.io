@@ -108,7 +108,7 @@
       "options": ["89", "83", "85", "86", "82"],
       "correctIndex": 2,
       "solution": "Guests in B = 51.\nGuests in C = 60.\nPercentage = $$\\frac{51}{60} \\times 100 = \\frac{17}{20} \\times 100 = 17 \\times 5 = 85\\%$$."
-    }
+    },
 
     {
       "id": "61",
