@@ -332,9 +332,14 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
     font-size: 28px;
     font-weight: 800;
     letter-spacing: -0.5px;
+    
     /* Gradient Text Effect */
     background: linear-gradient(135deg, var(--blue), var(--purple));
+    
+    /* The Fix: Add the standard property below the webkit one */
     -webkit-background-clip: text;
+    background-clip: text; 
+    
     -webkit-text-fill-color: transparent;
     margin-bottom: 40px !important;
     text-align: center;
