@@ -460,10 +460,21 @@
                         var s = self.responses[idx].status;
                         if(self.isReview) {
                             var r = self.responses[idx];
-                            if(r.sel === self.data.questions[idx].correctIndex) btn.style.background = '#28a745';
-                            else if(r.sel !== null) btn.style.background = '#dc3545';
-                            else btn.style.background = '#444';
-                            btn.style.color = 'white';
+                            // 1. Correct Answer (Green)
+                            if(r.sel === self.data.questions[idx].correctIndex) {
+                                btn.style.background = '#28a745';
+                                btn.style.color = 'white';
+                            }
+                            // 2. Wrong Answer (Red)
+                            else if(r.sel !== null) {
+                                btn.style.background = '#dc3545';
+                                btn.style.color = 'white';
+                            }
+                            // 3. Skipped/Not Attempted (Applies CSS Class)
+                            else {
+                                btn.className += ' pal-rev-skipped'; 
+                                // We do NOT set inline styles here, so CSS controls the colors
+                            }
                         } else {
                             if(s === 'ans') { btn.style.background = "#28a745"; btn.style.color="white"; }
                             else if(s === 'ans-rev') { btn.style.background = "#6f42c1"; btn.style.color="white"; }
