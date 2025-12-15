@@ -8,65 +8,70 @@
 </head>
 <body>
     <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+
     <div class="container">
-        <h2 style="color: var(--dark); margin-bottom: 30px;">Practice King(Beta)</h2>
+        <h2>Practice King <span style="font-size:0.5em; vertical-align:super; opacity:0.6;">BETA</span></h2>
         
         <div class="subject-card" onclick="location.href='list.html?subject=quant'">
             <div style="display:flex; align-items:center;">
-                <span class="icon">📊</span> <div><strong>Quantitative Aptitude</strong></div>
-            </div> <span>➜</span>
+                <div class="icon">📊</div> 
+                <div>
+                    <strong>Quantitative Aptitude</strong>
+                    <span style="font-size:0.85rem; color:var(--text-secondary); font-weight:normal;">Data & Numbers</span>
+                </div>
+            </div> 
+            <span>➜</span>
         </div>
         
         <div class="subject-card" onclick="location.href='list.html?subject=reasoning'">
             <div style="display:flex; align-items:center;">
-                <span class="icon">🧩</span> <div><strong>Reasoning Ability</strong></div>
-            </div> <span>➜</span>
+                <div class="icon">🧩</div> 
+                <div>
+                    <strong>Reasoning Ability</strong>
+                    <span style="font-size:0.85rem; color:var(--text-secondary); font-weight:normal;">Logic & Puzzles</span>
+                </div>
+            </div> 
+            <span>➜</span>
         </div>
         
         <div class="subject-card" onclick="location.href='list.html?subject=english'">
             <div style="display:flex; align-items:center;">
-                <span class="icon">📖</span> <div><strong>English Language</strong></div>
-            </div> <span>➜</span>
+                <div class="icon">📖</div> 
+                <div>
+                    <strong>English Language</strong>
+                    <span style="font-size:0.85rem; color:var(--text-secondary); font-weight:normal;">Grammar & Vocab</span>
+                </div>
+            </div> 
+            <span>➜</span>
         </div>
 
-        <div style="margin-top: 40px; text-align: center; color: #888; font-size: 0.85rem;">
-            💡 Tip: <strong>Refresh the page often</strong> to see new tests!
+        <div style="margin-top: 50px; text-align: center; color: var(--text-secondary); font-size: 0.9rem; opacity: 0.8;">
+            <p>💡 <strong>Tip:</strong> Refresh often for new tests!</p>
         </div>
     </div>
+
     <script>
-        // 1. Define the Toggle Function
+        // ... KEEP YOUR EXISTING SCRIPT HERE ...
+        // (Paste your existing toggleTheme and window.onload logic here)
         function toggleTheme() {
-        // Toggle the class on the body
-        var isDark = document.body.classList.toggle('dark-mode');
-        
-        // Save the user's preference to browser memory
-        localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
-        
-        // Update the button text immediately
-        var btn = document.getElementById('theme-toggle-btn');
-        if(btn) {
-            btn.innerText = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+            var isDark = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
+            var btn = document.getElementById('theme-toggle-btn');
+            if(btn) btn.innerText = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
         }
-    }
 
-    // 2. Apply Theme on Load (Runs instantly when page opens)
-    (function() {
-        var savedTheme = localStorage.getItem('site-theme');
-        var btn = document.getElementById('theme-toggle-btn');
-        
-        if(savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            if(btn) btn.innerText = "☀️ Light Mode";
-        }
-    })();
+        (function() {
+            var savedTheme = localStorage.getItem('site-theme');
+            var btn = document.getElementById('theme-toggle-btn');
+            if(savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                if(btn) btn.innerText = "☀️ Light Mode";
+            }
+        })();
 
-    // FIX: Force reload when coming back from the test using Browser Back Button
-    window.onpageshow = function(event) {
-        // If the page is loaded from the cache (history navigation)
-        if (event.persisted) {
-            window.location.reload();
-        }
-    };
-</script>
+        window.onpageshow = function(event) {
+            if (event.persisted) { window.location.reload(); }
+        };
+    </script>
 </body>
 </html>
