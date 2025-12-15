@@ -1,6 +1,6 @@
 {
   "title": "IBPS RRB Clerk Prelims Quant (7th Dec Shift 2) #QA017",
-  "timeLimit": 15,
+  "timeLimit": 20,
   "questions": [
     {
       "id": "51",
@@ -114,6 +114,77 @@
       "options": ["89", "83", "85", "86", "82"],
       "correctIndex": 2,
       "solution": "Guests in B = 51.\nGuests in C = 60.\nPercentage = $$\\frac{51}{60} \\times 100 = \\frac{17}{20} \\times 100 = 17 \\times 5 = 85\\%$$."
+    },
+    {
+      "id": "DI06",
+      "direction": "Directions (46-50): The bar graph shows the number of managers in five companies. Read the data and answer the following question.",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
+      "text": "Find the average number of managers in A, C & E.",
+      "options": [
+        "59",
+        "53",
+        "56",
+        "46",
+        "42"
+      ],
+      "correctIndex": 2,
+      "solution": "Managers: A=56, C=64, E=48.\nAverage = $$ \\frac{56 + 64 + 48}{3} = \\frac{168}{3} = 56 $$."
+    },
+    {
+      "id": "DI07",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
+      "text": "If the ratio of male to female managers in C and E is 3:1 and 1:1 respectively, then find the females managers in C and E.",
+      "options": [
+        "39",
+        "40",
+        "36",
+        "16",
+        "24"
+      ],
+      "correctIndex": 1,
+      "solution": "Females in C = $$ \\frac{1}{4} \\times 64 = 16 $$.\nFemales in E = $$ \\frac{1}{2} \\times 48 = 24 $$.\nTotal Females = $$ 16 + 24 = 40 $$."
+    },
+    {
+      "id": "DI08",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
+      "text": "If the number of managers in A is 12.5% less than the manager in F, find the difference between manager in F and D.",
+      "options": [
+        "39",
+        "40",
+        "36",
+        "16",
+        "24"
+      ],
+      "correctIndex": 3,
+      "solution": "A = 56. $$ A = F \\times (1 - \\frac{1}{8}) = F \\times \\frac{7}{8} $$.\n$$ 56 = \\frac{7}{8} F \\implies F = 64 $$.\nManagers in D = 80.\nDifference = $$ 80 - 64 = 16 $$."
+    },
+    {
+      "id": "DI09",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
+      "text": "Managers in C is what percentage of managers in D.",
+      "options": [
+        "80",
+        "83",
+        "85",
+        "86",
+        "82"
+      ],
+      "correctIndex": 0,
+      "solution": "C = 64, D = 80.\nPercentage = $$ \\frac{64}{80} \\times 100 = 80\\% $$."
+    },
+    {
+      "id": "DI10",
+      "image": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/quant/DI/Number%20of%20Managers%20QA017.png?raw=true",
+      "text": "Find the ratio of managers in A and D together to managers in E and B together.",
+      "options": [
+        "17:15",
+        "17:13",
+        "16:17",
+        "26:23",
+        "29:23"
+      ],
+      "correctIndex": 0,
+      "solution": "A+D = $$ 56 + 80 = 136 $$.\nE+B = $$ 48 + 72 = 120 $$.\nRatio = $$ 136 : 120 = 17 : 15 $$."
     },
 
     {
