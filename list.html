@@ -6,8 +6,6 @@
     <title>Select Test</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/config.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7815860020388842"
-     crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -17,6 +15,10 @@
     </div>
 
     <script>
+        // Theme Logic (Keep consistent)
+        var savedTheme = localStorage.getItem('site-theme');
+        if(savedTheme === 'dark') { document.body.classList.add('dark-mode'); }
+
         window.onload = function() {
             var params = new URLSearchParams(window.location.search);
             var subject = params.get('subject');
@@ -34,6 +36,8 @@
             files.forEach(function(f) {
                 var div = document.createElement('div');
                 div.className = 'test-item';
+                
+                // NEW: removing a 📄 icon for a professional look
                 div.innerHTML = "<span>" + f.name + "</span>";
                 
                 var saved = localStorage.getItem(f.file);
@@ -41,13 +45,11 @@
                 
                 if (saved) {
                     btn.className = 'btn btn-blue'; 
-                    btn.innerText = "Show Result";
-                    // Pass a flag to show result immediately
+                    btn.innerText = "Results"; // Shorter text fits better on mobile
                     btn.onclick = function() { location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file); };
                 } else {
                     btn.className = 'btn btn-green'; 
                     btn.innerText = "Start";
-                    // Point to instructions.html instead
                     btn.onclick = function() { location.href = "instructions.html?file=" + encodeURIComponent(f.file); };
                 }
                 div.appendChild(btn);
@@ -55,13 +57,8 @@
             });
         };
 
-        // --- FIX: FORCE RELOAD ON BACK BUTTON ---
-        // This makes sure the "Start" button turns into "Show Result" 
-        // immediately when you come back from the exam.
         window.onpageshow = function(event) {
-            if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
-                window.location.reload();
-            }
+            if (event.persisted) { window.location.reload(); }
         };
     </script>
 </body>

@@ -5,45 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice King</title>
     <link rel="stylesheet" href="css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7815860020388842"
-     crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme()">
+            <div class="slider-round"></div>
+        </label>
+    </div>
+
     <div class="container">
-        <h2 style="color: var(--dark); margin-bottom: 30px;">Practice King(Beta)</h2>
+        <h2>Practice King <span style="font-size:0.5em; vertical-align:super; opacity:0.6;">BETA</span></h2>
         
         <div class="subject-card" onclick="location.href='list.html?subject=quant'">
             <div style="display:flex; align-items:center;">
-                <span class="icon">📊</span> <div><strong>Quantitative Aptitude</strong></div>
-            </div> <span>➜</span>
+                <div class="icon">📊</div> 
+                <div>
+                    <strong>Quantitative Aptitude</strong>
+                </div>
+            </div> 
+            <span>➜</span>
         </div>
         
         <div class="subject-card" onclick="location.href='list.html?subject=reasoning'">
             <div style="display:flex; align-items:center;">
-                <span class="icon">🧩</span> <div><strong>Reasoning Ability</strong></div>
-            </div> <span>➜</span>
+                <div class="icon">🧩</div> 
+                <div>
+                    <strong>Reasoning Ability</strong>
+                </div>
+            </div> 
+            <span>➜</span>
         </div>
         
         <div class="subject-card" onclick="location.href='list.html?subject=english'">
             <div style="display:flex; align-items:center;">
-                <span class="icon">📖</span> <div><strong>English Language</strong></div>
-            </div> <span>➜</span>
+                <div class="icon">📖</div> 
+                <div>
+                    <strong>English Language</strong>
+                </div>
+            </div> 
+            <span>➜</span>
         </div>
 
-        <div style="margin-top: 40px; text-align: center; color: #888; font-size: 0.85rem;">
-            💡 Tip: <strong>Refresh the page often</strong> to see new tests!
+        <div style="margin-top: 50px; text-align: center; color: var(--text-secondary); font-size: 0.9rem; opacity: 0.8;">
+            <p>💡 <strong>Tip:</strong> Refresh often for new tests!</p>
         </div>
     </div>
-    <script>
-    // ... your existing code ...
 
-    // FIX: Force reload when coming back from the test using Browser Back Button
-    window.onpageshow = function(event) {
-        // If the page is loaded from the cache (history navigation)
-        if (event.persisted) {
-            window.location.reload();
+    <script>
+        function toggleTheme() {
+            var chk = document.getElementById('checkbox');
+            var isDark = chk.checked; // Checkbox state determines theme
+        
+            if(isDark) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('site-theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('site-theme', 'light');
+            }
         }
-    };
-</script>
+
+        // Apply Theme on Load
+        (function() {
+            var savedTheme = localStorage.getItem('site-theme');
+            var chk = document.getElementById('checkbox');
+            if(savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                if(chk) chk.checked = true; // Set toggle to ON
+            }
+        })();
+    </script>
 </body>
 </html>

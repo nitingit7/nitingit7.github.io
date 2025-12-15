@@ -1,94 +1,550 @@
 /* css/style.css */
 @import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
 
-:root { 
-    /* NEW BLUE THEME */
-    --blue:   #3F72AF;  /* Primary Action (Start, Save & Next) */
-    --yellow: #DBE2EF;  /* Secondary Action (Pause Button) */
-    --dark:   #112D4E;  /* Header & Text */
-    --light:  #F9F7F7;  /* App Background */
-    
-    /* SEMANTIC COLORS (Keep these standard) */
-    --green:  #28a745;  
-    --red:    #dc3545;  
-    --purple: #6f42c1; 
+:root {
+    /* --- BRAND COLORS --- */
+    --blue:   #3F72AF;
+    --yellow: #DBE2EF;
+    --dark:   #112D4E;  /* Default Header Color */
+    --light:  #F9F7F7;
+    --green:  #28a745;
+    --red:    #dc3545;
+    --purple: #6f42c1;
+
+    /* --- LIGHT THEME (Default) --- */
+    --bg-color: #dfe3eb;
+    --card-bg: #fbfbfb;
+    --text-primary: #112D4E;
+    --text-secondary: #555555;
+    --border-color: #cfd7de;
+    --header-bg: #112D4E; /* Dark Blue */
+    --hover-bg: #f3f4f6;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* --- DARK THEME OVERRIDES --- */
+body.dark-mode {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+    --header-bg: #010409; /* Black */
+    --hover-bg: #21262d;
+    --shadow: none;
+}
+
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #ebf4ff; height: 100vh; display: flex; flex-direction: column; }
+body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-primary); height: 100vh; display: flex; flex-direction: column; transition: background 0.3s, color 0.3s; }
 
-/* SHARED LAYOUT */
-.container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+/* --- TYPOGRAPHY FIXES --- */
+h1, h2, h3, h4, h5, h6, strong, b { color: var(--text-primary) !important; }
+.stat-label, p { color: var(--text-secondary) !important; }
 
-/* HOME CARDS */
-.subject-card { background: white; width: 100%; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; transition: 0.2s; }
-.subject-card:active { transform: scale(0.98); background: #eee; }
-.icon { font-size: 24px; margin-right: 15px; }
+/* HEADER (Always Dark Background) */
+header {
+    height: 60px;
+    background: var(--header-bg);
+    color: white !important; /* Force white text in header always */
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 10px; flex-shrink: 0; border-bottom: 1px solid var(--border-color);
+}
+#exam-title { font-weight: bold; font-size: 1.1rem; max-width: 35%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white !important; }
 
-/* LIST ITEMS */
-.test-item { background: white; width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
-
-/* EXAM HEADER */
-header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
-#exam-title { font-weight: bold; font-size: 1.1rem; max-width: 35%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.timer-box { display: flex; align-items: center; gap: 8px; }
-.timer { font-family: monospace; font-size: 1.1rem; font-weight: bold; background: #222; color: #fff; padding: 6px 10px; border-radius: 4px; border: 1px solid #555; }
-.timer.warning { background: #c00; border-color: #f00; animation: blink 1s infinite; }
-@keyframes blink { 50% { opacity: 0.7; } }
-
-/* BUTTONS */
-.btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
+/* HEADER BUTTONS */
+.btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; margin-left: 5px; }
 .btn-pause { background: var(--yellow); color: #112D4E; }
 .btn-exit { background: var(--red); color: white; }
+
+/* SPECIAL: Sidebar Toggle (Always White Border/Text) */
+.btn-header-outline {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white !important;
+}
+.btn-header-outline:hover { background: rgba(255,255,255,0.1); }
+
+/* MARKS BADGE (Updated for visibility) */
+.marks-badge {
+    font-size: 0.8rem;
+    background: #eef3f8;           /* Light gray-blue background */
+    color: var(--dark) !important; /* Dark text (Visible in Light Mode) */
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: 1px solid #d0d7de;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Dark Mode override (Keeps it white when background is black) */
+body.dark-mode .marks-badge {
+    background: rgba(255,255,255,0.15);
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* --- GENERAL UI BUTTONS --- */
 .btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
 .btn-green { background: var(--green); }
 .btn-red { background: var(--red); }
 .btn-blue { background: var(--blue); }
 .btn-purple { background: var(--purple); }
 .btn-orange { background: #fd7e14; }
-.btn-outline { background: transparent; border: 1px solid #ccc; color: #333; }
-.back-btn { display: inline-block; background-color: var(--blue); color: white; padding: 10px 20px; font-size: 1rem; font-weight: bold; text-align: center; border-radius: 8px; margin-bottom: 20px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-.back-btn:active { transform: scale(0.98); opacity: 0.9; }
 
-/* EXAM BODY */
-.exam-body { display: flex; flex: 1; overflow: hidden; position: relative; }
-.q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: white; }
-.q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; }
-.q-footer { padding: 10px; background: #f8f9fa; border-top: 1px solid #ddd; display: flex; justify-content: space-between; }
+/* STANDARD OUTLINE BUTTON (For Result Screen - Adapts to Theme) */
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary); /* Dark in Light Mode, Light in Dark Mode */
+    font-weight: bold;
+}
+.btn-outline:hover { background: var(--hover-bg); }
 
-/* QUESTIONS */
-.q-direction { font-style: normal; color: #000; margin-bottom: 15px; font-weight: bold; font-size: 1rem; }
-.q-image { max-width: 100%; height: auto; display: block; margin: 10px auto 20px auto; border: 1px solid #ddd; border-radius: 5px; }
-.q-extra-info table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem; }
-.q-extra-info th, .q-extra-info td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-.q-extra-info th { background-color: #f8f9fa; font-weight: bold; }
+/* LAYOUT & CARDS */
+.container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+.subject-card {
+    background: var(--card-bg); width: 100%; padding: 25px; margin-bottom: 15px;
+    border-radius: 10px; box-shadow: var(--shadow); border: 1px solid var(--border-color);
+    cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+    border-left: 5px solid transparent; transition: 0.2s; color: var(--text-primary);
+}
+.subject-card:active { transform: scale(0.98); background: var(--hover-bg); }
+.icon { font-size: 24px; margin-right: 15px; color: var(--blue); }
+.test-item {
+    background: var(--card-bg); width: 100%; padding: 15px; margin-bottom: 10px;
+    border-radius: 8px; border: 1px solid var(--border-color); display: flex;
+    justify-content: space-between; align-items: center; color: var(--text-primary);
+}
 
-.opt-row { display: flex; padding: 12px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; cursor: pointer; align-items: center; }
-.opt-row.selected { background: #DBE2EF; border-color: var(--blue); border-width: 2px; }
-.opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; }
-.opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; }
-.solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
-.report-link { font-size: 0.8rem; color: #dc3545; text-decoration: underline; cursor: pointer; margin-left: 15px; }
+/* EXAM UI */
+.exam-body { display: flex; flex: 1; overflow: hidden; position: relative; background: var(--bg-color); }
+.q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--card-bg); }
+.q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); }
+.q-footer { padding: 10px; background: var(--bg-color); border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; }
 
-/* SIDEBAR & OVERLAYS */
-#sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: white; border-left: 1px solid #ccc; transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; }
-#sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
-.palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
-.pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #ccc; display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; }
-.p-ans { background: var(--green); color: white; border: none; }
-.p-rev { background: var(--purple); color: white; border: none; }
-.p-not { background: var(--red); color: white; border: none; }
-
-#pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 100; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
-
-/* RESULT */
-.view-result { display:none; justify-content: center; align-items: center; background: white; width:100%; height:100%; flex-direction:column; }
-.view-result.active { display:flex; }
-.score-card { text-align: center; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; }
-.feedback-badge { display:inline-block; padding:10px 20px; border-radius:30px; color:white; font-weight:bold; margin-bottom:20px; font-size:1rem; }
-.stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0; }
-.stat-item { padding: 10px; border-radius: 5px; background: #f8f9fa; border: 1px solid #eee; }
-.stat-val { font-weight: bold; font-size: 1.2rem; }
-.stat-label { font-size: 0.8rem; color: #666; }
-.time-badge { margin: 10px 0; padding: 8px 15px; background: #e9ecef; border-radius: 20px; font-weight: bold; color: #495057; display: inline-block; }
+/* BADGES (Skipped/Time) */
 .review-badges-container { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
-.review-badge { display: inline-block; background: #e2e6ea; color: #495057; font-size: 0.85rem; padding: 4px 12px; border-radius: 15px; font-weight: bold; border: 1px solid #ccc; }
+.review-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--hover-bg); color: var(--text-primary);
+    font-size: 0.85rem; padding: 6px 12px; border-radius: 6px;
+    font-weight: bold; border: 1px solid var(--border-color);
+}
+
+/* QUESTIONS & OPTIONS */
+.opt-row {
+    display: flex; padding: 12px; border: 1px solid var(--border-color);
+    background: var(--bg-color); margin-bottom: 10px; border-radius: 5px;
+    cursor: pointer; align-items: center; color: var(--text-primary);
+}
+.opt-row:hover { background: var(--hover-bg); }
+.opt-row.selected { background: var(--yellow); border-color: var(--blue); border-width: 2px; color: #333 !important; }
+
+/* FIX 1: DARK MODE SELECTED OPTION COLOR (Transparent Dark Blue) */
+body.dark-mode .opt-row.selected {
+    background: rgba(31, 111, 235, 0.25);
+    border-color: #58a6ff;
+    color: #fff !important;
+}
+
+.opt-row.correct { 
+    background: rgba(40, 167, 69, 0.25) !important; /* Transparent Green */
+    border-color: var(--green) !important; 
+    color: var(--text-primary) !important; /* Keeps text readable in Dark Mode */
+}
+.opt-row.wrong { 
+    background: rgba(220, 53, 69, 0.25) !important; /* Transparent Red */
+    border-color: var(--red) !important; 
+    color: var(--text-primary) !important; 
+}
+.solution-box { background: var(--bg-color); padding: 15px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); margin-top: 20px; border-radius: 5px; display: none; color: var(--text-primary); }
+
+/* SIDEBAR & RESULT */
+#sidebar {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 280px;
+    background: var(--card-bg); border-left: 1px solid var(--border-color);
+    transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex;
+    flex-direction: column; color: var(--text-primary);
+}
+#sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.5); }
+.palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
+.pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; color: var(--text-primary); background: var(--bg-color); }
+
+.view-result { display:none; justify-content: center; align-items: center; background: var(--bg-color); width:100%; height:100%; flex-direction:column; position: absolute; top:0; left:0; z-index: 100; }
+.view-result.active { display:flex; }
+.score-card {
+    text-align: center; padding: 30px; background: var(--card-bg);
+    box-shadow: var(--shadow); border: 1px solid var(--border-color);
+    border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; color: var(--text-primary);
+}
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0; }
+.stat-item { padding: 10px; border-radius: 5px; background: var(--bg-color); border: 1px solid var(--border-color); }
+.stat-val { font-weight: bold; font-size: 1.2rem; color: var(--text-primary); }
+
+.switch-container { display: flex; align-items: center; background: var(--bg-color); padding: 10px 15px; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); color: var(--text-primary); }
+.switch { position: relative; display: inline-block; width: 46px; height: 24px; margin-right: 12px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+.slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--blue); }
+input:checked + .slider:before { transform: translateX(22px); }
+
+#pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
+.theme-btn { position: absolute; top: 20px; right: 20px; background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; z-index: 1000; }
+
+/* FIX 2: BACK BUTTON BOX COLOR (Redefined as Outline Button) */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none;
+}
+.back-btn:hover {
+    background-color: var(--blue);
+    color: white;
+}
+/* Adapt back button for dark mode */
+body.dark-mode .back-btn {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+body.dark-mode .back-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    border-color: var(--text-primary);
+}
+
+/* =========================================
+   ADD THIS TO THE BOTTOM OF STYLE.CSS
+   ========================================= */
+
+/* Instruction Page Container */
+.inst-container { 
+    background: var(--card-bg); 
+    max-width: 95%; 
+    margin: 20px auto; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: var(--shadow); 
+    color: var(--text-primary); /* Ensures text is white in dark mode */
+    border: 1px solid var(--border-color);
+}
+
+.inst-header { 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 15px; 
+    margin-bottom: 20px; 
+}
+
+.inst-content { 
+    height: 60vh; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+    border: 1px solid var(--border-color); 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    background: var(--bg-color); /* Inner box background */
+}
+
+/* Palette Legend Styles */
+.legend-row { display: flex; align-items: center; margin-bottom: 12px; color: var(--text-primary); }
+.legend-icon { 
+    width: 30px; height: 30px; 
+    display: flex; justify-content: center; align-items: center; 
+    border-radius: 50%; 
+    border: 1px solid var(--border-color); 
+    margin-right: 15px; 
+    font-size: 12px; font-weight: bold; flex-shrink: 0; 
+}
+
+/* Specific Colors matching your exam */
+.l-not-visit { background: #e0e0e0; color: black; border-radius: 4px; } 
+/* Fix for dark mode "Not Visited" square */
+body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555; }
+
+.l-not-ans { background: var(--red); color: white; border: none; }
+.l-ans { background: var(--green); color: white; border: none; }
+.l-mark { background: var(--purple); color: white; border: none; }
+.l-ans-mark { background: var(--purple); color: white; border: none; position: relative; }
+.l-ans-mark::after { content: '✔'; position: absolute; bottom: -2px; right: -2px; font-size: 10px; background: var(--green); color: white; border-radius: 50%; padding: 1px; }
+
+.footer-box { border-top: 1px solid var(--border-color); padding-top: 20px; }
+.chk-label { display: flex; align-items: center; cursor: pointer; font-weight: bold; user-select: none; color: var(--text-primary); }
+.chk-input { width: 18px; height: 18px; margin-right: 10px; }
+
+/* Disabled button style */
+.btn-start { width: 100%; margin-top: 15px; opacity: 0.5; pointer-events: none; transition: 0.3s; background-color: var(--blue); color: white; border: none; padding: 12px; border-radius: 4px; font-weight: bold; }
+.btn-start.active { opacity: 1; pointer-events: auto; cursor: pointer; }
+
+/* =========================================
+   ADD THIS TO STYLE.CSS FOR PROFESSIONAL BADGE
+   ========================================= */
+
+.feedback-badge {
+    font-size: 1rem;          /* Larger text */
+    font-weight: 700;           /* Extra Bold */
+    text-transform: uppercase;  /* Make it all CAPS */
+    letter-spacing: 2px;        /* Spacing between letters for clean look */
+    color: white !important;    /* Force white text */
+    
+    padding: 12px 30px;         /* More breathing room */
+    border-radius: 50px;        /* Pill/Rounded shape instead of box */
+    margin: 20px auto;          /* Center it with space */
+    width: fit-content;         /* Shrink to fit text width */
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Soft shadow for depth */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Slight text shadow */
+    transition: transform 0.2s ease;
+}
+
+/* Optional: Slight hover effect */
+.feedback-badge:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   MOBILE APP UI UPGRADE (Add to bottom of style.css)
+   ========================================= */
+
+/* 1. Smooth Fade-in Animation for the whole page */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeInUp 0.6s ease-out;
+    padding-bottom: 80px; /* Space for scrolling on mobile */
+}
+
+/* 2. Modern Header Styling */
+.container h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    /* Gradient Text Effect */
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px !important;
+    text-align: center;
+}
+
+/* 3. App-Style Cards */
+.subject-card {
+    border: none !important; /* Remove grey border */
+    background: var(--card-bg);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 16px; /* Rounder corners like apps */
+    
+    /* Soft, high-quality shadow */
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hover/Touch Effect */
+.subject-card:active, .subject-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Colored Sidebar Accent on Cards */
+.subject-card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, var(--blue), var(--purple));
+}
+
+/* 4. Beautiful Icons */
+.subject-card .icon {
+    font-size: 28px;
+    margin-right: 20px;
+    /* Create a circle background for icon */
+    background: rgba(63, 114, 175, 0.1); /* Light tint of your blue */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+/* Icon hover effect */
+.subject-card:hover .icon {
+    background: var(--blue);
+    color: white;
+}
+
+/* 5. Typography Polish */
+.subject-card strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: block;
+}
+
+/* Arrow styling */
+.subject-card span:last-child {
+    color: var(--text-secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+/* 6. Dark Mode Specific Polish */
+body.dark-mode .subject-card {
+    background: #1e2530; /* Slightly lighter than pure black bg */
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+body.dark-mode .subject-card .icon {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   1. SLIDER TOGGLE SWITCH (Modern & Smooth)
+   ========================================= */
+.theme-switch-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none; /* Hide default checkbox */
+}
+
+.slider-round {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider-round:before {
+    background-color: white;
+    bottom: 4px;
+    content: ""; /* This is the moving circle */
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+    
+    /* Add an icon inside the circle */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* When checked (Dark Mode) */
+input:checked + .slider-round {
+    background-color: var(--blue);
+}
+
+input:checked + .slider-round:before {
+    transform: translateX(26px);
+    /* Change icon to Moon */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>');
+}
+
+/* =========================================
+   2. MODERN LIST ITEMS (For list.html)
+   ========================================= */
+/* Container spacing to prevent toggle overlap on mobile */
+.container {
+    padding-top: 80px !important; /* Pushes content down so toggle doesn't cover text */
+}
+
+/* The New Test Card */
+.test-item {
+    background: var(--card-bg);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px; /* Smooth corners */
+    border: none !important; /* Remove old border */
+    
+    /* App-like Shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.test-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Left side accent bar */
+.test-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--blue);
+    border-radius: 4px 0 0 4px;
+}
+
+/* Test Name Text */
+.test-item span {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-left: 10px; /* Space from the accent bar */
+    flex: 1; /* Takes available space */
+    padding-right: 15px; /* Space before button */
+}
+
+/* The Start/Result Button styling override */
+.test-item .btn {
+    padding: 8px 20px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    min-width: 100px; /* Ensure buttons align nicely */
+    text-align: center;
+}
