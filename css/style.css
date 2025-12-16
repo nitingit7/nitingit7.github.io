@@ -1128,3 +1128,23 @@ body.enable-transition .inst-container,
 body.enable-transition .inst-content {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* --- CIRCULAR REVEAL THEME TRANSITION --- */
+
+/* 1. Allow the animation to sit on top of everything */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none; /* Disable the default browser fade */
+    mix-blend-mode: normal;
+}
+
+/* 2. Order the layers correctly (Dark mode circle on top) */
+::view-transition-old(root) {
+    z-index: 1;
+}
+::view-transition-new(root) {
+    z-index: 9999; /* Ensure the new theme spreads ON TOP */
+}
+
+/* 3. Fallback for browsers that don't support this API yet */
+/* Your existing body.enable-transition code handles this automatically */
