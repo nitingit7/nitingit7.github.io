@@ -9,9 +9,29 @@
 </head>
 <body>
     <div class="container">
-        <div class="back-btn" onclick="location.href='index.html'">← Back</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 20px;">
+            <div class="back-btn" onclick="location.href='index.html'" style="margin-bottom: 0;">← Back</div>
+            
+            <div style="position: relative;">
+                <button id="btn-filter-toggle" class="btn-filter">
+                    <span>🔍 Filter</span>
+                </button>
+                <div id="filter-dropdown" class="filter-dropdown">
+                    <div style="padding: 10px; border-bottom: 1px solid var(--border-color); font-weight: bold; font-size: 0.9rem;">
+                        Filter by Name
+                        <span style="float: right; cursor: pointer;" onclick="toggleFilterMenu()">✖</span>
+                    </div>
+                    <div id="filter-options-list" class="filter-list"></div>
+                    <button class="btn-clear-filter" onclick="clearFilter()">Show All</button>
+                </div>
+            </div>
+        </div>
+
         <h2 id="list-title">Select Test</h2>
+        
         <div id="test-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
+        
+        <div id="no-result-msg" style="display:none; color: var(--text-secondary); margin-top: 20px;">No matching tests found.</div>
     </div>
 
     <script>
