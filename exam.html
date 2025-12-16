@@ -150,23 +150,35 @@
             if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
             // --- FIX: ONLY TRAP BACK BUTTON IF TAKING THE TEST ---
-            // If we are showing results, let the back button go to the Index/List page naturally.
             if (showResult !== "true") {
                 history.pushState(null, null, location.href);
+                
                 window.onpopstate = () => {
-                    // If we are in Review Mode inside the test page
+                    // 1. If in Review Mode, just exit review (stay on Result screen)
                     if (this.isReview) { 
-                        this.exitReview(); // Go back to Score Card
+                        this.exitReview(); 
                         return; 
                     }
                     
-                    // If taking the test, ask confirmation
+                    // 2. If taking the test, ask for confirmation
                     if (confirm("⚠️ Quit the test? Progress will be lost.")) {
                         window.onbeforeunload = null;
                         if(this.timerInterval) clearInterval(this.timerInterval);
-                        history.back(); // Actually go back
+                        
+                        // --- SMART BROWSER BACK BUTTON LOGIC ---
+                        // Instead of history.back(), we force the user to the correct list
+                        var lastSubject = localStorage.getItem('last_subject_viewed');
+                        
+                        if (lastSubject) {
+                            window.location.href = "list.html?subject=" + lastSubject;
+                        } else {
+                            window.location.href = "index.html";
+                        }
+                        // ---------------------------------------
+                        
                     } else {
-                        history.pushState(null, null, location.href); // Stay here
+                        // User said NO (Cancel), so push state again to stay on the page
+                        history.pushState(null, null, location.href); 
                     }
                 };
             }
