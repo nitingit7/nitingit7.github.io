@@ -18,51 +18,51 @@
         </label>
     </div>
 
-    <div class="container">
-        <h2>Practice King <span style="font-size:0.5em; vertical-align:super; opacity:0.6;">BETA</span></h2>
-        
-        <div class="subject-card" onclick="location.href='list.html?subject=quant'">
-            <div style="display:flex; align-items:center;">
-                <div class="icon">📊</div> 
-                <div>
-                    <strong>Quantitative Aptitude</strong>
-                </div>
-            </div> 
-            <span>➜</span>
+    <div class="container main-dashboard">
+        <div class="header-section">
+            <h2 class="app-title">Practice King <span class="beta-badge">BETA</span></h2>
+            <p class="subtitle">Select a subject to begin your practice.</p>
         </div>
         
-        <div class="subject-card" onclick="location.href='list.html?subject=reasoning'">
-            <div style="display:flex; align-items:center;">
-                <div class="icon">🧩</div> 
-                <div>
-                    <strong>Reasoning Ability</strong>
-                </div>
-            </div> 
-            <span>➜</span>
-        </div>
-        
-        <div class="subject-card" onclick="location.href='list.html?subject=english'">
-            <div style="display:flex; align-items:center;">
-                <div class="icon">📖</div> 
-                <div>
-                    <strong>English Language</strong>
-                </div>
-            </div> 
-            <span>➜</span>
+        <div class="dashboard-grid">
+            
+            <div class="subject-card card-quant" onclick="location.href='list.html?subject=quant'">
+                <div class="card-content">
+                    <div class="icon-box">📊</div> 
+                    <div class="text-group">
+                        <strong>Quantitative Aptitude</strong>
+                        <span class="sub-text">Maths, DI & Data Analysis</span>
+                    </div>
+                </div> 
+                <div class="arrow-icon">➜</div>
+            </div>
+            
+            <div class="subject-card card-reasoning" onclick="location.href='list.html?subject=reasoning'">
+                <div class="card-content">
+                    <div class="icon-box">🧩</div> 
+                    <div class="text-group">
+                        <strong>Reasoning Ability</strong>
+                        <span class="sub-text">Puzzles & Logical Reasoning</span>
+                    </div>
+                </div> 
+                <div class="arrow-icon">➜</div>
+            </div>
+            
+            <div class="subject-card card-english" onclick="location.href='list.html?subject=english'">
+                <div class="card-content">
+                    <div class="icon-box">📖</div> 
+                    <div class="text-group">
+                        <strong>English Language</strong>
+                        <span class="sub-text">Grammar & Comprehension</span>
+                    </div>
+                </div> 
+                <div class="arrow-icon">➜</div>
+            </div>
+
         </div>
 
-        <!-- <div class="subject-card" onclick="location.href='list.html?subject=general'">
-            <div style="display:flex; align-items:center;">
-                <div class="icon">🌍</div> 
-                <div>
-                    <strong>General Awareness</strong>
-                </div>
-            </div> 
-            <span>➜</span>
-        </div> -->
-
-        <div style="margin-top: 50px; text-align: center; color: var(--text-secondary); font-size: 0.9rem; opacity: 0.8;">
-            <p>💡 <strong>Tip:</strong> Refresh often for new tests!</p>
+        <div class="footer-tip">
+            <p>💡 <strong>Pro Tip:</strong> Toggle the switch top-right for Dark Mode!</p>
         </div>
     </div>
 
@@ -71,47 +71,24 @@
             var chk = document.getElementById('checkbox');
             var isDark = chk.checked; 
             
-            // 1. Check if browser supports the animation
             if (!document.startViewTransition) {
                 applyTheme(isDark);
                 return;
             }
 
-            // 2. Get click coordinates
             var x = event.clientX;
             var y = event.clientY;
+            var endRadius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
 
-            // 3. Calculate radius
-            var endRadius = Math.hypot(
-                Math.max(x, window.innerWidth - x),
-                Math.max(y, window.innerHeight - y)
-            );
-
-            // 4. Run the Transition
             var transition = document.startViewTransition(() => {
                 applyTheme(isDark);
             });
 
-            // 5. Animate the circle
             transition.ready.then(() => {
-                var clipPath = [
-                    `circle(0px at ${x}px ${y}px)`,
-                    `circle(${endRadius}px at ${x}px ${y}px)`
-                ];
-
-                // --- THE CHANGE IS HERE ---
-                // We removed the conditional logic. 
-                // Now it ALWAYS expands the NEW view (white or dark) on top of the old one.
+                var clipPath = [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`];
                 document.documentElement.animate(
-                    {
-                        clipPath: clipPath, 
-                    },
-                    {
-                        duration: 500,
-                        easing: 'ease-in',
-                        // Always animate the NEW incoming view
-                        pseudoElement: '::view-transition-new(root)', 
-                    }
+                    { clipPath: clipPath },
+                    { duration: 500, easing: 'ease-in', pseudoElement: '::view-transition-new(root)' }
                 );
             });
         }
@@ -126,7 +103,6 @@
             }
         }
 
-        // Apply Theme on Load
         (function() {
             var savedTheme = localStorage.getItem('site-theme');
             var chk = document.getElementById('checkbox');
