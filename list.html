@@ -64,6 +64,9 @@
         var params = new URLSearchParams(window.location.search);
         var subject = params.get('subject');
 
+        // In list.html
+        if(subject) localStorage.setItem('last_subject_viewed', subject);
+
         // Save the current subject to memory so we can return here later
         if(subject) localStorage.setItem('last_subject_viewed', subject)
         
