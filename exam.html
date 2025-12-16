@@ -123,547 +123,191 @@
     </div>
 
     <script>
-        // GLOBAL FUNCTIONS FOR IMAGE ZOOM
-        function openImgModal(src) {
-            var modal = document.getElementById("img-modal");
-            var modalImg = document.getElementById("img-modal-content");
-            modal.style.display = "flex"; // Use flex to center
-            modal.style.alignItems = "center";
-            modal.style.justifyContent = "center";
-            modalImg.src = src;
-        }
+    window.app = {
+        fullData: null,         // Stores the whole JSON
+        currentSectionIdx: 0,   // Tracks which section we are in (0, 1, 2)
+        sectionResponses: [],   // Stores answers for ALL sections
+        
+        // Current Section Data (Temporary helpers)
+        data: null,             // Points to the CURRENT section object
+        responses: {},          // Answers for CURRENT section
+        currQ: 0,
+        
+        timerInterval: null,
+        totalTimeSeconds: 0, 
+        startTime: 0, 
+        accumulatedPauseTime: 0, 
+        pauseStartTimestamp: 0,
+        isPaused: false,
+        isReview: false,
+        currentFileUrl: "",
 
-        function closeImgModal() {
-            document.getElementById("img-modal").style.display = "none";
-        }
+        init: function() {
+            var params = new URLSearchParams(window.location.search);
+            this.currentFileUrl = params.get('file');
+            var showResult = params.get('showResult');
 
-        window.app = {
-            data: null, responses: {}, currQ: 0, timerInterval: null, 
-            reviewGuesses: {}, 
-            totalTimeSeconds: 0, startTime: 0, accumulatedPauseTime: 0, pauseStartTimestamp: 0,
-            questionStartTime: 0, isReview: false, isPaused: false, currentFileUrl: "",
-
-            init: function() {
-                var params = new URLSearchParams(window.location.search);
-                this.currentFileUrl = params.get('file');
-                var showResult = params.get('showResult');
-
-                if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
-
-                history.pushState(null, null, location.href);
-
-                window.onpopstate = () => {
-                    if (document.getElementById('view-result').classList.contains('active')) {
-                        return; 
-                    }
-                    if (this.isReview) {
-                        this.exitReview(); 
-                        return;
-                    }
-                    if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
-                        window.onbeforeunload = null; 
-                        if(this.timerInterval) clearInterval(this.timerInterval);
-                        history.back(); 
-                    } else {
-                        history.pushState(null, null, location.href);
-                    }
-                };
-
-                this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
-                this.bind('btn-close-sidebar', () => this.toggleSidebar());
-                this.bind('btn-pause', () => this.togglePause());
-                this.bind('btn-exit', () => this.exitTest());
-                this.bind('btn-save', () => this.saveNext());
-                this.bind('btn-clear', () => this.clearResponse());
-                this.bind('btn-review', () => this.markReview());
-                this.bind('btn-submit', () => this.submitTest(false));
-                this.bind('btn-prev', () => this.prevQ());
-                this.bind('btn-next', () => this.nextQ());
-                this.bind('btn-exit-review', () => this.exitReview());
-                this.bind('btn-resume', () => this.togglePause());
-                this.bind('btn-quit', () => this.exitTest());
-                this.bind('btn-view-sols', () => this.startReviewMode());
-                this.bind('btn-reattempt', () => this.reattemptTest());
-                this.bind('btn-report', () => this.reportIssue());
-
-                var practiceBtn = document.getElementById('btn-practice-mode');
-                if(practiceBtn) {
-                    practiceBtn.addEventListener('change', () => { this.loadQ(); });
-                }
-
-                document.addEventListener('visibilitychange', () => {
-                    if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
-                });
-
-                if(showResult === "true") {
-                    this.showStoredResult(this.currentFileUrl);
-                } else {
-                    document.getElementById('view-exam').style.display = 'flex';
-                    this.fetchTest(this.currentFileUrl);
-                }
-            },
-
-            bind: function(id, func) {
-                var el = document.getElementById(id);
-                if(el) el.addEventListener('click', func);
-            },
-
-            fetchTest: function(url) {
-                var self = this;
-                var cleanUrl = url + "?v=" + new Date().getTime();
-                fetch(cleanUrl)
-                    .then(res => { if(!res.ok) throw new Error("Status " + res.status); return res.json(); })
-                    .then(json => { self.startExam(json); })
-                    .catch(err => { alert("Error loading test: " + err.message); });
-            },
-
-            startExam: function(jsonObj) {
-                this.data = jsonObj; this.responses = {}; this.currQ = 0;
-                this.isReview = false; this.isPaused = false;
-                
-                if(!this.data.questions) { alert("Invalid JSON"); return; }
-
-                for(var i=0; i<this.data.questions.length; i++) {
-                    this.responses[i] = { sel: null, status: 'not-visited', timeSpent: 0 };
-                }
-                
-                this.totalTimeSeconds = (this.data.timeLimit || 20) * 60;
-                this.startTime = Date.now(); this.accumulatedPauseTime = 0;
-                this.startTimer();
-                this.questionStartTime = Date.now();
-                
-                document.getElementById('exam-title').innerText = this.data.title || "Mock Test";
-                
-                document.getElementById('timer-display').style.display = '';
-                document.getElementById('btn-pause').style.display = '';
-                document.getElementById('btn-exit').style.display = '';
-                document.getElementById('btn-submit').style.display = 'block';
-                document.getElementById('exam-footer').style.display = 'flex';
-                document.getElementById('review-footer').style.display = 'none';
-                document.getElementById('review-badges').style.display = 'none';
-                
-                var pToggle = document.getElementById('practice-toggle-box');
-                if(pToggle) pToggle.style.display = 'none';
-
-                this.switchView('exam');
-                this.loadQ();
-            },
-
-            switchView: function(viewName) {
-                if(viewName === 'exam') {
-                    document.getElementById('view-exam').style.display = 'flex';
-                    document.getElementById('view-result').classList.remove('active');
-                } else if(viewName === 'result') {
-                    document.getElementById('view-exam').style.display = 'none';
-                    document.getElementById('view-result').classList.add('active');
-                }
-            },
-
-            startTimer: function() {
-                if(this.timerInterval) clearInterval(this.timerInterval);
-                var self = this;
-                this.updateTimerDisplay();
-                this.timerInterval = setInterval(function() {
-                    if(self.isPaused) return;
-                    self.updateTimerDisplay();
-                }, 500); 
-            },
-
-            updateTimerDisplay: function() {
-                var disp = document.getElementById('timer-display');
-                if(!disp) return;
-                var now = Date.now();
-                var elapsedSeconds = Math.floor((now - this.startTime - this.accumulatedPauseTime) / 1000);
-                var remaining = this.totalTimeSeconds - elapsedSeconds;
-                if(remaining <= 0) { remaining = 0; clearInterval(this.timerInterval); this.submitTest(true); }
-                if(remaining < 60) {
-                    disp.classList.add('warning');
-                    document.getElementById('timer-box-el').classList.add('warning-bg');
-                } else {
-                    disp.classList.remove('warning');
-                    document.getElementById('timer-box-el').classList.remove('warning-bg');
-                }
-                var m = Math.floor(remaining / 60).toString().padStart(2,'0');
-                var s = (remaining % 60).toString().padStart(2,'0');
-                disp.innerText = m + ":" + s;
-            },
-
-            captureQuestionTime: function() {
-                if (this.isReview || this.isPaused) return; 
-                var now = Date.now();
-                var diffSeconds = (now - this.questionStartTime) / 1000;
-                if (this.responses[this.currQ]) { this.responses[this.currQ].timeSpent += diffSeconds; }
-                this.questionStartTime = now;
-            },
-
-            togglePause: function() {
-                this.isPaused = !this.isPaused;
-                var el = document.getElementById('pause-overlay');
-                if (this.isPaused) {
-                    this.captureQuestionTime(); 
-                    this.pauseStartTimestamp = Date.now(); el.style.display = 'flex';
-                } else {
-                    var pauseDuration = Date.now() - this.pauseStartTimestamp;
-                    this.accumulatedPauseTime += pauseDuration;
-                    this.questionStartTime = Date.now();
-                    el.style.display = 'none'; this.updateTimerDisplay(); 
-                }
-            },
-
-            exitTest: function() {
-                if(confirm("Exit Test? Progress will be lost.")) {
-                    window.onbeforeunload = null;
-                    if(this.timerInterval) clearInterval(this.timerInterval);
-                    history.go(-2);
-                }
-            },
-
-            reportIssue: function() {
-                if(!GOOGLE_FORM_URL) { 
-                    alert("Please configure GOOGLE_FORM_URL in config.js"); 
-                    return; 
-                }
-
-                var testName = this.data.title || "Unknown Test";
-                var qNum = "Q" + (this.currQ + 1);
-                var finalUrl = GOOGLE_FORM_URL
-                    .replace("TEST_NAME_HERE", encodeURIComponent(testName))
-                    .replace("Q_NUM_HERE", encodeURIComponent(qNum));
-
-                // LOGIC FIX: Check if we are in Review Mode
-                if (this.isReview) {
-                    // Review Mode: Open directly (No warning needed)
-                    window.open(finalUrl, '_blank');
-                } else {
-                    // Active Test Mode: Show Timer Warning
-                    var confirmLeave = confirm("⚠️ You are about to leave the test to report an error.\n\nThe timer will continue running. Proceed?");
-                    if (confirmLeave) {
-                        window.open(finalUrl, '_blank');
-                    }
-                }
-            },
-
-            loadQ: function() {
-                var q = this.data.questions[this.currQ];
-                var r = this.responses[this.currQ];
-                
-                var isPractice = false;
-                var toggle = document.getElementById('btn-practice-mode');
-                if(this.isReview && toggle && toggle.checked) {
-                    isPractice = true;
-                }
-
-                if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
-                
-                document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
-                document.getElementById('q-text').innerText = q.text;
-
-                var extra = document.getElementById('q-extra-info');
-                extra.innerHTML = ''; 
-                if (q.direction) {
-                    var d = document.createElement('div');
-                    d.className = 'q-direction';
-                    d.innerHTML = "<b>Direction:</b> " + q.direction;
-                    extra.appendChild(d);
-                }
-                function addImg(url) {
-                    if(url.includes('github.com') && url.includes('/blob/')) {
-                        url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
-                    }
-                    var img = document.createElement('img');
-                    img.src = url; 
-                    img.className = 'q-image'; 
-                    img.alt = "Graph/Chart";
-                    
-                    // NEW: Add Click to Zoom
-                    img.style.cursor = "zoom-in";
-                    img.onclick = function() {
-                        openImgModal(this.src);
-                    };
-                    
-                    extra.appendChild(img);
-                    
-                    // Add a small hint text under the image
-                    var hint = document.createElement('div');
-                    hint.innerText = "(Click image to zoom)";
-                    hint.style.fontSize = "0.8rem";
-                    hint.style.color = "#888";
-                    hint.style.textAlign = "center";
-                    hint.style.marginBottom = "15px";
-                    extra.appendChild(hint);
-                }
-                if (q.image) { addImg(q.image); }
-                if (q.images && Array.isArray(q.images)) { q.images.forEach(function(url) { addImg(url); }); }
-                if (q.infoHtml) {
-                    var div = document.createElement('div');
-                    div.innerHTML = q.infoHtml;
-                    div.style.marginBottom = "20px"; div.style.overflowX = "auto";
-                    extra.appendChild(div);
-                }
-                
-                var badgeContainer = document.getElementById('review-badges');
-                if (this.isReview && !isPractice) {
-                    badgeContainer.style.display = 'flex';
-                    var statusBadge = document.getElementById('review-status-badge');
-                    if (r.sel === null) {
-                        statusBadge.innerText = "Skipped"; statusBadge.style.background = "#e2e6ea"; statusBadge.style.color = "#495057"; statusBadge.style.border = "1px solid #ced4da";
-                    } else if (r.sel === q.correctIndex) {
-                        statusBadge.innerText = "Correct"; statusBadge.style.background = "#d4edda"; statusBadge.style.color = "#155724"; statusBadge.style.border = "1px solid #c3e6cb";
-                    } else {
-                        statusBadge.innerText = "Wrong"; statusBadge.style.background = "#f8d7da"; statusBadge.style.color = "#721c24"; statusBadge.style.border = "1px solid #f5c6cb";
-                    }
-                    var spent = r.timeSpent || 0;
-                    var tm = Math.floor(spent / 60); var ts = Math.floor(spent % 60);
-                    document.getElementById('review-time-badge').innerText = "Time: " + (tm > 0 ? tm + "m " : "") + ts + "s";
-                } else {
-                    badgeContainer.style.display = 'none';
-                }
-
-                var box = document.getElementById('options-box');
-                if(box) {
-                    box.innerHTML = '';
-                    var self = this;
-                    
-                    var userSelected = null;
-                    var showSolution = false;
-
-                    if (isPractice) {
-                        if(!self.reviewGuesses) self.reviewGuesses = {}; 
-                        if (self.reviewGuesses[self.currQ] !== undefined) {
-                            userSelected = self.reviewGuesses[self.currQ];
-                            showSolution = true; 
-                        } else { showSolution = false; }
-                    } else if (self.isReview) {
-                        userSelected = r.sel;
-                        showSolution = true;
-                    } else {
-                        userSelected = r.sel;
-                        showSolution = false;
-                    }
-
-                    q.options.forEach(function(opt, i) {
-                        var row = document.createElement('div');
-                        row.className = 'opt-row';
-                        
-                        if (self.isReview) {
-                            if (isPractice) {
-                                if (showSolution) {
-                                    row.style.pointerEvents = 'none'; 
-                                    if (i === q.correctIndex) row.classList.add('correct'); 
-                                    if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong'); 
-                                } else {
-                                    row.style.pointerEvents = 'auto'; 
-                                    row.style.cursor = 'pointer';
-                                    row.onclick = function() {
-                                        self.reviewGuesses[self.currQ] = i;
-                                        self.loadQ();
-                                    };
-                                }
-                            } else {
-                                row.style.pointerEvents = 'none';
-                                if (i === q.correctIndex) row.classList.add('correct');
-                                if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong');
-                            }
-                        } else {
-                            if (userSelected === i) row.classList.add('selected');
-                            row.onclick = function() { r.sel = i; self.loadQ(); };
-                        }
-                        row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
-                        box.appendChild(row);
-                    });
-                }
-
-                var solBox = document.getElementById('solution-box');
-                var shouldDisplaySol = false;
-                
-                if (this.isReview) {
-                    if (!isPractice) shouldDisplaySol = true; 
-                    else if (isPractice && this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined) shouldDisplaySol = true; 
-                }
-
-                if(shouldDisplaySol) {
-                    solBox.style.display = 'block';
-                    document.getElementById('sol-text').innerText = q.solution || "No solution.";
-                } else {
-                    solBox.style.display = 'none';
-                }
-
-                this.renderPalette();
-                try { if(window.renderMathInElement) { renderMathInElement(document.body); } } catch(e){}
-            },
-
-            saveNext: function() {
-                this.captureQuestionTime(); 
-                var r = this.responses[this.currQ];
-                if(r.sel !== null) r.status = 'ans'; else r.status = 'not-answered';
-                if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
-                else { if(confirm("End of questions. Submit Test?")) { this.submitTest(false); } }
-            },
-
-            markReview: function() {
-                this.captureQuestionTime();
-                var r = this.responses[this.currQ];
-                if(r.sel !== null) r.status = 'ans-rev'; else r.status = 'rev';
-                if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
-            },
-
-            clearResponse: function() {
-                this.responses[this.currQ].sel = null;
-                this.responses[this.currQ].status = 'not-answered';
-                this.loadQ();
-            },
-
-            prevQ: function() { if(this.currQ > 0) { this.captureQuestionTime(); this.currQ--; this.loadQ(); } },
-            nextQ: function() { if(this.currQ < this.data.questions.length - 1) { this.captureQuestionTime(); this.currQ++; this.loadQ(); } },
-
-            renderPalette: function() {
-                var grid = document.getElementById('palette-grid');
-                if(!grid) return; grid.innerHTML = ''; var self = this;
-                for(var i=0; i<this.data.questions.length; i++) {
-                    (function(idx){
-                        var btn = document.createElement('div');
-                        btn.className = 'pal-btn'; btn.innerText = idx + 1;
-                        var s = self.responses[idx].status;
-                        if(self.isReview) {
-                            var r = self.responses[idx];
-                            // 1. Correct Answer (Green)
-                            if(r.sel === self.data.questions[idx].correctIndex) {
-                                btn.style.background = '#28a745';
-                                btn.style.color = 'white';
-                            }
-                            // 2. Wrong Answer (Red)
-                            else if(r.sel !== null) {
-                                btn.style.background = '#dc3545';
-                                btn.style.color = 'white';
-                            }
-                            // 3. Skipped/Not Attempted (Applies CSS Class)
-                            else {
-                                btn.className += ' pal-rev-skipped'; 
-                                // We do NOT set inline styles here, so CSS controls the colors
-                            }
-                        } else {
-                            if(s === 'ans') { btn.style.background = "#28a745"; btn.style.color="white"; }
-                            else if(s === 'ans-rev') { btn.style.background = "#6f42c1"; btn.style.color="white"; }
-                            else if(s === 'rev') { btn.style.background = "#6f42c1"; btn.style.color="white"; }
-                            else if(s === 'not-answered') { btn.style.background = "#dc3545"; btn.style.color="white"; }
-                            if(s === 'ans-rev') { btn.style.border = "2px solid #28a745"; }
-                        }
-                        if(idx === self.currQ) btn.style.border = '2px solid black';
-                        btn.onclick = function() { if(!self.isReview) self.captureQuestionTime(); self.currQ = idx; self.loadQ(); self.toggleSidebar(); };
-                        grid.appendChild(btn);
-                    })(i);
-                }
-            },
-
-            toggleSidebar: function() { 
-                var sb = document.getElementById('sidebar');
-                if(sb) { if(sb.classList.contains('open')) sb.classList.remove('open'); else sb.classList.add('open'); }
-            },
+            if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
             
-            submitTest: function(force) {
-                if(!force && !confirm("Submit Test?")) return;
-                this.captureQuestionTime();
-                if(this.timerInterval) clearInterval(this.timerInterval);
+            // ... (Your existing History/Popstate code here) ...
+            
+            this.bind('btn-save', () => this.saveNext());
+            this.bind('btn-submit', () => this.submitSection(false)); // Changed behavior
+            // ... (Bind other buttons as usual) ...
+
+            if(showResult === "true") {
+                this.showStoredResult(this.currentFileUrl);
+            } else {
+                this.fetchTest(this.currentFileUrl);
+            }
+        },
+
+        bind: function(id, func) {
+            var el = document.getElementById(id);
+            if(el) el.addEventListener('click', func);
+        },
+
+        fetchTest: function(url) {
+            var self = this;
+            fetch(url + "?v=" + Date.now())
+                .then(res => res.json())
+                .then(json => { 
+                    self.startFullExam(json); 
+                })
+                .catch(err => alert("Error: " + err));
+        },
+
+        startFullExam: function(jsonObj) {
+            this.fullData = jsonObj;
+            this.sectionResponses = []; 
+            this.currentSectionIdx = 0;
+            
+            // Check if it's a Sectional Test (Old Format) or Full Mock (New Format)
+            if(jsonObj.sections && Array.isArray(jsonObj.sections)) {
+                // It's a FULL MOCK
+                this.loadSection(0);
+            } else {
+                // It's an OLD SINGLE TEST (Convert it to a "Section 1" structure)
+                this.fullData = {
+                    title: jsonObj.title,
+                    isFullMock: false,
+                    sections: [{
+                        name: "General",
+                        timeLimit: jsonObj.timeLimit || 20,
+                        questions: jsonObj.questions
+                    }]
+                };
+                this.loadSection(0);
+            }
+        },
+
+        loadSection: function(index) {
+            // 1. Setup Data for this Section
+            var sec = this.fullData.sections[index];
+            this.data = sec; // The app now thinks this "Section" is the whole test
+            this.currQ = 0;
+            this.responses = {}; 
+            
+            // Initialize empty responses for this section
+            for(var i=0; i<sec.questions.length; i++) {
+                this.responses[i] = { sel: null, status: 'not-visited', timeSpent: 0 };
+            }
+            
+            // 2. Setup Timer
+            this.totalTimeSeconds = (sec.timeLimit || 20) * 60;
+            this.startTime = Date.now();
+            this.accumulatedPauseTime = 0;
+            this.startTimer();
+
+            // 3. UI Updates
+            document.getElementById('exam-title').innerText = this.fullData.title + " - " + sec.name;
+            
+            // Show a "Section Popup" (Optional but recommended)
+            alert("Starting Section: " + sec.name + "\nTime: " + sec.timeLimit + " mins");
+
+            this.switchView('exam');
+            this.loadQ();
+        },
+
+        submitSection: function(force) {
+            if(!force && !confirm("Submit this SECTION? You cannot return to it.")) return;
+            
+            // 1. Save results for this section
+            this.sectionResponses[this.currentSectionIdx] = this.responses;
+            clearInterval(this.timerInterval);
+
+            // 2. Check if there is a Next Section
+            if (this.currentSectionIdx < this.fullData.sections.length - 1) {
+                this.currentSectionIdx++;
+                this.loadSection(this.currentSectionIdx);
+            } else {
+                // 3. No more sections -> Finish Test
+                this.finishTest();
+            }
+        },
+
+        finishTest: function() {
+            var totalScore = 0, totalCorr = 0, totalWrong = 0, totalUnatt = 0, totalMax = 0;
+            var grandTotalTime = 0;
+
+            // Loop through all sections to calculate final score
+            for(var i=0; i<this.fullData.sections.length; i++) {
+                var sec = this.fullData.sections[i];
+                var resp = this.sectionResponses[i]; // Answers for this section
                 
-                var now = Date.now();
-                var elapsedSeconds = Math.floor((now - this.startTime - this.accumulatedPauseTime) / 1000);
-                if(elapsedSeconds > this.totalTimeSeconds) elapsedSeconds = this.totalTimeSeconds;
-                
-                var score = 0, corr = 0, wrong = 0, unatt = 0; var totalMarks = 0;
-                var self = this;
-                this.data.questions.forEach(function(q, i) {
-                    var r = self.responses[i]; totalMarks += 1;
+                if(!resp) continue; // Safety check
+
+                sec.questions.forEach((q, qIdx) => {
+                    var r = resp[qIdx];
+                    totalMax++;
                     if(r.sel !== null) {
-                        if(r.sel === q.correctIndex) { score += 1; corr++; } else { score -= 0.25; wrong++; }
-                    } else unatt++;
+                        if(r.sel === q.correctIndex) { totalScore += 1; totalCorr++; }
+                        else { totalScore -= 0.25; totalWrong++; }
+                    } else {
+                        totalUnatt++;
+                    }
                 });
+            }
 
-                if(self.currentFileUrl) {
-                    var resultObj = {
-                        score: score, correct: corr, wrong: wrong, unatt: unatt, totalMarks: totalMarks,
-                        responses: self.responses, data: self.data, timeSpent: elapsedSeconds
-                    };
-                    localStorage.setItem(self.currentFileUrl, JSON.stringify(resultObj));
-                }
-                this.renderResultScreen(score, corr, wrong, unatt, totalMarks, elapsedSeconds);
-            },
+            // Save Result
+            if(this.currentFileUrl) {
+                var resultObj = {
+                    score: totalScore, correct: totalCorr, wrong: totalWrong, 
+                    unatt: totalUnatt, totalMarks: totalMax,
+                    fullData: this.fullData,
+                    sectionResponses: this.sectionResponses
+                };
+                localStorage.setItem(this.currentFileUrl, JSON.stringify(resultObj));
+            }
 
-            showStoredResult: function(url) {
-                var savedJSON = localStorage.getItem(url); 
-                if(!savedJSON) { 
-                    alert("Result data not found. It may have been cleared.");
-                    location.replace("index.html");
-                    return;
-                }
-                this.currentFileUrl = url; var res = JSON.parse(savedJSON);
-                this.data = res.data; this.responses = res.responses;
-                var timeSpent = res.timeSpent || 0; 
-                this.renderResultScreen(res.score, res.correct, res.wrong, res.unatt, res.totalMarks, timeSpent);
-            },
+            this.renderResultScreen(totalScore, totalCorr, totalWrong, totalUnatt, totalMax, 0);
+        },
 
-            renderResultScreen: function(score, corr, wrong, unatt, total, timeSpent) {
-                // FIX: ENSURE PAUSE OVERLAY IS HIDDEN
-                document.getElementById('pause-overlay').style.display = 'none';
+        // ... [KEEP YOUR EXISTING helper functions: loadQ, saveNext, etc.] ...
+        
+        // MODIFIED: Update Timer to submit SECTION, not Test
+        updateTimerDisplay: function() {
+            var disp = document.getElementById('timer-display');
+            if(!disp) return;
+            var now = Date.now();
+            var elapsedSeconds = Math.floor((now - this.startTime - this.accumulatedPauseTime) / 1000);
+            var remaining = this.totalTimeSeconds - elapsedSeconds;
+            
+            if(remaining <= 0) { 
+                remaining = 0; 
+                clearInterval(this.timerInterval); 
+                this.submitSection(true); // Auto-submit section when time is up
+            }
+            
+            // ... (Rest of formatting logic remains same) ...
+            var m = Math.floor(remaining / 60).toString().padStart(2,'0');
+            var s = (remaining % 60).toString().padStart(2,'0');
+            disp.innerText = m + ":" + s;
+        },
 
-                document.getElementById('final-score').innerText = score.toFixed(2);
-                document.getElementById('res-correct').innerText = corr; 
-                document.getElementById('res-wrong').innerText = wrong; 
-                document.getElementById('res-unatt').innerText = unatt;
-                
-                var m = Math.floor(timeSpent / 60); var s = timeSpent % 60;
-                var timeString = (m > 0 ? m + "m " : "") + s + "s";
-                document.getElementById('time-taken-box').innerText = 'Time Taken: ' + timeString;
-                
-                var pct = (score / total) * 100; var msg = "", color = "#666";
-                if (pct < 40) { msg = "Try Again"; color = "#dc3545"; }
-                else if (pct < 70) { msg = "Room for Improvement"; color = "#fd7e14"; }
-                else if (pct < 80) { msg = "Good"; color = "#ffc107"; } 
-                else if (pct < 90) { msg = "Very Good"; color = "#28a745"; }
-                else if (pct < 100) { msg = "Excellent"; color = "#20c997"; }
-                else { msg = "Perfect"; color = "#007bff"; }
-                
-                var badge = document.getElementById('feedback-badge');
-                badge.innerText = msg; badge.style.background = color;
-                this.switchView('result');
-            },
-
-            reattemptTest: function() {
-                if(confirm("Clear previous result and re-attempt?")) {
-                    localStorage.removeItem(this.currentFileUrl);
-                    var newUrl = "exam.html?file=" + this.currentFileUrl;
-                    history.back();
-                    setTimeout(function() {
-                        location.replace(newUrl);
-                    }, 50);
-                }
-            },
-
-            startReviewMode: function() {
-                this.isReview = true; this.currQ = 0;
-                
-                this.reviewGuesses = {}; 
-                var pBtn = document.getElementById('btn-practice-mode');
-                if(pBtn) pBtn.checked = false; 
-                
-                var pBox = document.getElementById('practice-toggle-box');
-                if(pBox) pBox.style.display = 'flex';
-
-                window.onbeforeunload = null;
-                document.getElementById('timer-display').style.display = 'none';
-                document.getElementById('btn-pause').style.display = 'none';
-                document.getElementById('btn-exit').style.display = 'none';
-                document.getElementById('btn-submit').style.display = 'none';
-                
-                document.getElementById('exam-footer').style.display = 'none';
-                document.getElementById('review-footer').style.display = 'flex';
-                this.switchView('exam');
-                this.loadQ();
-            },
-
-            exitReview: function() { this.switchView('result'); }
-        };
-
-        window.onload = function() { window.app.init(); };
-    </script>
+        // ... [KEEP YOUR EXISTING renderResultScreen, etc.] ...
+    };
+    window.onload = function() { window.app.init(); };
+</script>
 </body>
 </html>
