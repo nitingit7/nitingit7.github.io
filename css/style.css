@@ -1234,10 +1234,19 @@ body.dark-mode #pause-overlay {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow grows */
 }
 
-/* 3. Re-attempt Button (Vibrant Gradient Orange) */
+/* 3. Re-attempt Button (Professional Deep Orange - No Pink) */
 .btn-orange {
-    background: linear-gradient(135deg, #ff9966, #ff5e62); 
+    /* Moves from vibrant orange to deep burnt orange */
+    background: linear-gradient(135deg, #faa538, #e65100); 
     color: white;
+    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.2); /* Matching orange shadow */
+}
+
+/* Optional: Hover effect to make it glow slightly */
+.btn-orange:hover {
+    background: linear-gradient(135deg, #ffb74d, #f57c00);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 81, 0, 0.3);
 }
 
 /* 4. Review Solutions Button (Professional Blue) */
