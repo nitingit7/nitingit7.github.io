@@ -21,7 +21,7 @@ var GITHUB_FILES = {
         { name: "RRB Clerk Prelims: Quant (6th Dec Shift 1)", file: BASE_URL + "tests/quant/QA015.json" },
         { name: "RRB Clerk Prelims: Quant (6th Dec Shift 2)", file: BASE_URL + "tests/quant/QA016.json" },
         { name: "RRB Clerk Prelims: Quant (7th Dec Shift 2)", file: BASE_URL + "tests/quant/QA017.json" },
-        { name: "RRB Clerk Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" }
+        { name: "RRB Clerk Full Mock 1", file: BASE_URL + "tests/Fulll_Mock/RRB/RRBQS001.json" }
     ],
     'reasoning': [
         { name: "RRB Clerk Reasoning: Puzzle & Seating", file: BASE_URL + "tests/reasoning/mock1.json" },
