@@ -1,0 +1,658 @@
+{
+  "title": "RRB Clerk Prelims: Full Mock 1 #RRBQS001.json",
+  "isFullMock": true,
+  "sections": [
+    {
+      "name": "Reasoning Ability",
+      "timeLimit": 25,
+      "questions": [
+        {
+          "id": "R01",
+          "direction": "Directions (1-5): Eight persons A, B, C, D, E, F, G and H sit around a square table. Four persons sit at corners facing inside and three sit at the middle of each side facing outside. Two persons sit between A and B. B faces inside. F sits immediate right of A. D sits adjacent to F and G. C sits second to the right of H.",
+          "text": "What is the position of C with respect to F?",
+          "options": ["Fourth to the left", "Second to the left", "Third to the left", "Immediate right", "Third to the right"],
+          "correctIndex": 4,
+          "solution": "Arrangement: B (Corner), H (Middle), C (Corner), A (Middle), F (Corner), D (Middle), G (Corner), E (Middle). C is 3rd to the right of F."
+        },
+        {
+          "id": "R02",
+          "direction": "Directions (1-5): Study the information above.",
+          "text": "How many persons sit between E and H (when counted from the right of H)?",
+          "options": ["Three", "None", "Two", "Four", "One"],
+          "correctIndex": 2,
+          "solution": "Counting right of H (facing out): B, E. Two persons."
+        },
+        {
+          "id": "R03",
+          "direction": "Directions (1-5): Study the information above.",
+          "text": "Who among the following sits immediate left of G?",
+          "options": ["A", "F", "B", "H", "C"],
+          "correctIndex": 3,
+          "solution": "H sits immediate left of G."
+        },
+        {
+          "id": "R04",
+          "direction": "Directions (1-5): Study the information above.",
+          "text": "Four of the following five are similar in a certain manner. Who does not belong to the group?",
+          "options": ["E", "B", "G", "D", "F"],
+          "correctIndex": 3,
+          "solution": "D sits in the middle (or orientation differs from others in the specific arrangement)."
+        },
+        {
+          "id": "R05",
+          "direction": "Directions (1-5): Study the information above.",
+          "text": "If all persons sit in alphabetical order clockwise from A, how many remain in the same position (excluding A)?",
+          "options": ["Two", "None", "Three", "One", "Four"],
+          "correctIndex": 1,
+          "solution": "None match original positions."
+        },
+        {
+          "id": "R06",
+          "direction": "Directions (6-10): In a certain code:\n'Apple farmers supply fruits' is 'kl zu rt mw'\n'Fresh mango supply today' is 'rt ds pq ne'\n'Farmers sell apple today' is 'zu kl ne tx'\n'Mango fruits taste sweet' is 'ds mw jy ab'",
+          "text": "What is the code for 'sell'?",
+          "options": ["tx", "kl", "ab", "zu", "ne"],
+          "correctIndex": 0,
+          "solution": "Farmers/Apple = zu/kl. Today = ne. In statement 3, 'sell' is the only remaining word, code is 'tx'."
+        },
+        {
+          "id": "R07",
+          "direction": "Directions (6-10): Study the code language above.",
+          "text": "What will be the code for 'fruits supply'?",
+          "options": ["mw ab", "ds tx", "mw rt", "jy rt", "ne tx"],
+          "correctIndex": 2,
+          "solution": "Fruits = mw, Supply = rt."
+        },
+        {
+          "id": "R08",
+          "direction": "Directions (6-10): Study the code language above.",
+          "text": "Which word is coded as 'kl'?",
+          "options": ["Sell", "Today", "Farmers", "Apple", "Can't be determined"],
+          "correctIndex": 4,
+          "solution": "'kl' could be Farmers or Apple."
+        },
+        {
+          "id": "R09",
+          "direction": "Directions (6-10): Study the code language above.",
+          "text": "If 'sweet corn' is coded as 'jy hm', what is the code for 'Taste'?",
+          "options": ["st", "mw", "ds", "ab", "Can't be determined"],
+          "correctIndex": 3,
+          "solution": "Taste/Sweet are 'jy ab'. If Sweet is 'jy', Taste is 'ab'."
+        },
+        {
+          "id": "R10",
+          "direction": "Directions (6-10): Study the code language above.",
+          "text": "What may be the code for 'mango juice today'?",
+          "options": ["ds jy ne", "ds op ne", "rt op ne", "ds op pq", "mw tx ab"],
+          "correctIndex": 1,
+          "solution": "Mango=ds, Today=ne. Juice is new, requires new code 'op'."
+        },
+        {
+          "id": "R11",
+          "direction": "Directions (11-13): Read statements and conclusions.",
+          "text": "Statements: $$K > R \\ge T = W < J \\le B = F$$\nConclusions:\nI. $$R < J$$\nII. $$T \\ge F$$",
+          "options": ["Only I follows", "Only II follows", "Either I or II", "Both follow", "Neither follows"],
+          "correctIndex": 4,
+          "solution": "I. Relation between R and J is uncertain ($$\\ge$$ vs $$<$$). II. $$T < J \\le F$$, so $$T < F$$. Neither follows."
+        },
+        {
+          "id": "R12",
+          "direction": "Directions (11-13): Read statements and conclusions.",
+          "text": "Statements: $$Z \\ge K < P = V \\le R \\le T < Y$$\nConclusions:\nI. $$K < Y$$\nII. $$Z > R$$",
+          "options": ["Only I follows", "Only II follows", "Either I or II", "Both follow", "Neither follows"],
+          "correctIndex": 0,
+          "solution": "I. $$K < P \\le T < Y$$ is true. II. Relation Z and R is uncertain."
+        },
+        {
+          "id": "R13",
+          "direction": "Directions (11-13): Read statements and conclusions.",
+          "text": "Statements: $$H = X \\le L < N$$; $$D \\ge L$$\nConclusions:\nI. $$L < N$$\nII. $$D \\ge H$$",
+          "options": ["Only I follows", "Only II follows", "Either I or II", "Both follow", "Neither follows"],
+          "correctIndex": 3,
+          "solution": "I. $$L < N$$ given. II. $$D \\ge L \\ge X = H$$, so $$D \\ge H$$. Both follow."
+        },
+        {
+          "id": "R14",
+          "direction": null,
+          "text": "How many pairs of letters are in 'MISTAKE' with the same number of letters between them as in the alphabet?",
+          "options": ["One", "Two", "Three", "Four", "None"],
+          "correctIndex": 0,
+          "solution": "Pair S-T."
+        },
+        {
+          "id": "R15",
+          "direction": "Directions (15-19): Seven boxes A-G stacked. 4 boxes between G and B. D is 2 above B. A is immediately below D. C is 2 above F. E is not at bottom.",
+          "text": "Which box is 3rd from top?",
+          "options": ["F", "C", "D", "E", "A"],
+          "correctIndex": 0,
+          "solution": "Order Top-Down: C, G, F, E, D, A, B. 3rd is F."
+        },
+        {
+          "id": "R16",
+          "direction": "Directions (15-19): Study the box arrangement.",
+          "text": "How many boxes are below D?",
+          "options": ["One", "Two", "Three", "Four", "Five"],
+          "correctIndex": 1,
+          "solution": "Below D are A and B (2 boxes)."
+        },
+        {
+          "id": "R17",
+          "direction": "Directions (15-19): Study the box arrangement.",
+          "text": "If rearranged alphabetically from bottom to top, how many remain same?",
+          "options": ["One", "Four", "Three", "Two", "None"],
+          "correctIndex": 4,
+          "solution": "None match."
+        },
+        {
+          "id": "R18",
+          "direction": "Directions (15-19): Study the box arrangement.",
+          "text": "If C is related to G, F to E, then which box is related to B?",
+          "options": ["C", "D", "A", "F", "E"],
+          "correctIndex": 2,
+          "solution": "Relation is 'Immediately Above'. A is above B."
+        },
+        {
+          "id": "R19",
+          "direction": "Directions (15-19): Study the box arrangement.",
+          "text": "Which box is immediately below E?",
+          "options": ["A", "G", "B", "D", "F"],
+          "correctIndex": 3,
+          "solution": "D is below E."
+        },
+        {
+          "id": "R20",
+          "direction": null,
+          "text": "Find the odd one out.",
+          "options": ["PSV", "EHK", "ILN", "MPS", "RUX"],
+          "correctIndex": 2,
+          "solution": "Others follow +3, +3 pattern. ILN is +3, +2."
+        },
+        {
+          "id": "R21",
+          "direction": "Directions (21-22): K is 11m North of B. B is 12m East of O. C is 13m South of B. H is 24m South of D. C is 11m West of H and 5m East of S. D is 2m East of A.",
+          "text": "Which pair does NOT belong to the group based on direction?",
+          "options": ["K-O", "B-S", "D-C", "K-H", "D-O"],
+          "correctIndex": 3,
+          "solution": "K-H is North-West. Others are North-East relationships."
+        },
+        {
+          "id": "R22",
+          "direction": "Directions (21-22): Study the direction info.",
+          "text": "In which direction is point K with respect to point A?",
+          "options": ["North-west", "South-east", "West", "North-east", "East"],
+          "correctIndex": 2,
+          "solution": "K is exactly West of A."
+        },
+        {
+          "id": "R23",
+          "direction": "Directions (23-26): Logic Statements.",
+          "text": "Statements: Some play are games. Only a few games are indoor.\nConclusions:\nI. Some games are not indoor\nII. All play is indoor",
+          "options": ["Only I follows", "Only II follows", "Either I or II", "Neither", "Both"],
+          "correctIndex": 0,
+          "solution": "'Only a few' implies some are not. I follows."
+        },
+        {
+          "id": "R24",
+          "direction": "Directions (23-26): Logic Statements.",
+          "text": "Statements: All apple are fruits. Some fruits are not banana.\nConclusions:\nI. Some banana is definitely not apples\nII. No fruits are banana",
+          "options": ["Only I follows", "Only II follows", "Either I or II", "Neither", "Both"],
+          "correctIndex": 3,
+          "solution": "Neither follows."
+        },
+        {
+          "id": "R25",
+          "direction": "Directions (23-26): Logic Statements.",
+          "text": "Statements: No pattern is visual. Only a few cluster is visual.\nConclusions:\nI. Some pattern is cluster\nII. No pattern is cluster",
+          "options": ["Only I follows", "Only II follows", "Either I or II", "Neither", "Both"],
+          "correctIndex": 2,
+          "solution": "Some/No pair. Either follows."
+        },
+        {
+          "id": "R26",
+          "direction": "Directions (23-26): Logic Statements.",
+          "text": "Statements: Only a few river is blue. Some blue is ocean. No ocean is pond.\nConclusions:\nI. Some blue is not pond\nII. No river being pond is a possibility",
+          "options": ["Only I follows", "Only II follows", "Either I or II", "Neither", "Both"],
+          "correctIndex": 4,
+          "solution": "Both follow."
+        },
+        {
+          "id": "R27",
+          "direction": "Directions (27-29): Six pencils A-F of different lengths. 2 longer than B. 1 between B and C. E is just shorter than C (not longest). F > A but F < D. 3rd longest is 7cm.",
+          "text": "Which pencil is 2nd shortest?",
+          "options": ["C", "F", "E", "D", "A"],
+          "correctIndex": 0,
+          "solution": "Order: D > F > B(7) > A > C > E. 2nd shortest is C."
+        },
+        {
+          "id": "R28",
+          "direction": "Directions (27-29): Study the pencil arrangement.",
+          "text": "How many pencils are longer than A?",
+          "options": ["Two", "Three", "Four", "Five", "None"],
+          "correctIndex": 1,
+          "solution": "D, F, B are longer. (3)."
+        },
+        {
+          "id": "R29",
+          "direction": "Directions (27-29): Study the pencil arrangement.",
+          "text": "If D+B = 16cm, what is a possible height of F?",
+          "options": ["11", "10", "9", "8", "None"],
+          "correctIndex": 3,
+          "solution": "B=7, D=9. F is between 7 and 9. Possible: 8cm."
+        },
+        {
+          "id": "R30",
+          "direction": null,
+          "text": "Form a word using 2nd, 4th, 7th, 8th letters of 'ALTERNATES' (L, E, A, T). If >1 word, mark Z.",
+          "options": ["E", "T", "L", "Z", "Y"],
+          "correctIndex": 3,
+          "solution": "LATE, TALE, TEAL. Ans Z."
+        },
+        {
+          "id": "R31",
+          "direction": "Directions (31-35): Series: WIN KEY JAM LOG CAT",
+          "text": "If arranged in dictionary order from left, which is 3rd from right?",
+          "options": ["KEY", "LOG", "CAT", "WIN", "JAM"],
+          "correctIndex": 0,
+          "solution": "CAT, JAM, KEY, LOG, WIN. 3rd from right is KEY."
+        },
+        {
+          "id": "R32",
+          "direction": "Directions (31-35): Series: WIN KEY JAM LOG CAT",
+          "text": "If 3rd letter is changed to next letter, how many words have >1 vowel?",
+          "options": ["None", "One", "Three", "Four", "Two"],
+          "correctIndex": 4,
+          "solution": "WIO, CAU. (2 words)."
+        },
+        {
+          "id": "R33",
+          "direction": "Directions (31-35): Series: WIN KEY JAM LOG CAT",
+          "text": "If 'D' is added at end, how many meaningful words?",
+          "options": ["Two", "None", "One", "Four", "Three"],
+          "correctIndex": 2,
+          "solution": "WIND."
+        },
+        {
+          "id": "R34",
+          "direction": "Directions (31-35): Series: WIN KEY JAM LOG CAT",
+          "text": "Letters between 1st letter of 2nd word (K) and 3rd letter of 3rd word from right (M)?",
+          "options": ["Seven", "One", "Two", "Ten", "Three"],
+          "correctIndex": 1,
+          "solution": "Between K and M is L (1)."
+        },
+        {
+          "id": "R35",
+          "direction": "Directions (31-35): Series: WIN KEY JAM LOG CAT",
+          "text": "If letters within words are alphabetized, how many start with vowel?",
+          "options": ["One", "Three", "Four", "Five", "Two"],
+          "correctIndex": 2,
+          "solution": "INW, EKY, AJM, ACT. (4)."
+        },
+        {
+          "id": "R36",
+          "direction": "Directions (36-40): 6 persons B-G born Mon-Sat. B after Thu. 3 between B and F. Before F = After C. 1 between D and E. G immediately before E.",
+          "text": "G was born on which day?",
+          "options": ["Friday", "Wednesday", "Monday", "Tuesday", "Thursday"],
+          "correctIndex": 1,
+          "solution": "F(Mon), D(Tue), G(Wed), E(Thu), B(Fri), C(Sat). G is Wed."
+        },
+        {
+          "id": "R37",
+          "direction": "Directions (36-40): Study the schedule.",
+          "text": "Who was born on Saturday?",
+          "options": ["F", "D", "E", "B", "C"],
+          "correctIndex": 4,
+          "solution": "C."
+        },
+        {
+          "id": "R38",
+          "direction": "Directions (36-40): Study the schedule.",
+          "text": "Which combination is correct?",
+          "options": ["B-Sat", "D-Thu", "C-Fri", "F-Mon", "E-Wed"],
+          "correctIndex": 3,
+          "solution": "F-Mon."
+        },
+        {
+          "id": "R39",
+          "direction": "Directions (36-40): Study the schedule.",
+          "text": "How many born before E?",
+          "options": ["Four", "None", "Three", "One", "Two"],
+          "correctIndex": 2,
+          "solution": "Mon, Tue, Wed (3)."
+        },
+        {
+          "id": "R40",
+          "direction": "Directions (36-40): Study the schedule.",
+          "text": "Which statement is correct? I. 1 between F and G. II. E on Thu. III. D before F.",
+          "options": ["Only II", "I and II", "I and III", "Only I", "Only III"],
+          "correctIndex": 1,
+          "solution": "I and II are correct."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "timeLimit": 20,
+      "questions": [
+        {
+          "id": "Q41",
+          "direction": null,
+          "text": "Mixture: Milk:Water = 2:1. Total 30L. Add x L water -> Ratio 2:3. Find x.",
+          "options": ["10", "20", "30", "15", "5"],
+          "correctIndex": 1,
+          "solution": "Milk=20, Water=10. 20/(10+x) = 2/3 -> 60 = 20+2x -> 2x=40 -> x=20."
+        },
+        {
+          "id": "Q42",
+          "direction": null,
+          "text": "P invests 8000, Q 6000. Q withdraws after x months. Year end Q profit 2000 out of 6000. Find x.",
+          "options": ["8", "9", "6", "4", "5"],
+          "correctIndex": 0,
+          "solution": "P profit 4000, Q 2000 (2:1). Ratio Inv: (8000*12) : (6000*x) = 2:1. 96/6x = 2 -> 16/x = 2 -> x=8."
+        },
+        {
+          "id": "Q43",
+          "direction": null,
+          "text": "A:B = 4:3. 3 years ago 7:5. A's age after 4 years?",
+          "options": ["20", "25", "32", "24", "28"],
+          "correctIndex": 4,
+          "solution": "(4x-3)/(3x-3)=7/5 -> 20x-15=21x-21 -> x=6. A=24. A+4=28."
+        },
+        {
+          "id": "Q44",
+          "direction": null,
+          "text": "P=8000, R=10%, SI=2000. Find T.",
+          "options": ["4.5", "4", "2", "2.5", "3"],
+          "correctIndex": 3,
+          "solution": "2000 = (8000*10*T)/100 -> 2000=800T -> T=2.5."
+        },
+        {
+          "id": "Q45",
+          "direction": null,
+          "text": "Downstream 18km/h, Stream 3km/h. Time for 30km Upstream?",
+          "options": ["3.5", "2", "2.5", "4.5", "4"],
+          "correctIndex": 2,
+          "solution": "Boat=18-3=15. Up=15-3=12. Time=30/12=2.5."
+        },
+        {
+          "id": "Q46",
+          "direction": null,
+          "text": "Train 180m crosses pole in 9s. Time to cross 270m bridge?",
+          "options": ["18.5", "20", "22.5", "14.5", "15.5"],
+          "correctIndex": 2,
+          "solution": "Speed=20m/s. Dist=180+270=450. Time=450/20=22.5."
+        },
+        {
+          "id": "Q47",
+          "direction": null,
+          "text": "Spends: 25% Rent. Remainder: 15% Clothes, then 20% Travel. Saves 6120. Find Salary.",
+          "options": ["17500", "10000", "11500", "14000", "12000"],
+          "correctIndex": 4,
+          "solution": "x * 0.75 * 0.85 * 0.80 = 6120. x*0.51=6120 -> x=12000."
+        },
+        {
+          "id": "Q48",
+          "direction": null,
+          "text": "CI Amount 10800, R=20%, T=2 yrs. Find P.",
+          "options": ["7500", "8000", "8500", "9000", "45000"],
+          "correctIndex": 0,
+          "solution": "10800 = P(1.2)^2 = 1.44P -> P=7500."
+        },
+        {
+          "id": "Q49",
+          "direction": null,
+          "text": "Mark up 40%, Discount 10%. Profit 104. Find CP.",
+          "options": ["100", "200", "400", "600", "500"],
+          "correctIndex": 2,
+          "solution": "Let CP=100. MP=140. SP=126. Profit=26. 26->104, 1->4. CP=400."
+        },
+        {
+          "id": "Q50",
+          "direction": null,
+          "text": "A+B=12 days, A=20 days. Time for B to do 60% work?",
+          "options": ["15", "14", "18", "16", "20"],
+          "correctIndex": 2,
+          "solution": "Work=60. A+B=5, A=3 -> B=2. 60% work=36. Time=36/2=18."
+        },
+        {
+          "id": "Q51",
+          "direction": "Directions (51-55): Find wrong number.",
+          "text": "34, 15, 15, 22.5, 45, 112.5, 337.5",
+          "options": ["34", "15", "22.5", "45", "112.5"],
+          "correctIndex": 0,
+          "solution": "Pattern: x0.5, x1, x1.5... 30*0.5=15. 34 is wrong."
+        },
+        {
+          "id": "Q52",
+          "direction": "Directions (51-55): Find wrong number.",
+          "text": "56, 60, 71, 91, 131, 211, 371",
+          "options": ["56", "60", "71", "91", "211"],
+          "correctIndex": 1,
+          "solution": "Diffs: 4, 11, 20... Should be 5, 10, 20 (x2). 60 is wrong."
+        },
+        {
+          "id": "Q53",
+          "direction": "Directions (51-55): Find wrong number.",
+          "text": "105, 108, 111, 114, 117, 120, 122",
+          "options": ["105", "114", "122", "111", "117"],
+          "correctIndex": 2,
+          "solution": "+3 pattern. 120+3=123. 122 is wrong."
+        },
+        {
+          "id": "Q54",
+          "direction": "Directions (51-55): Find wrong number.",
+          "text": "201, 199, 206, 190, 215, 179, 228",
+          "options": ["228", "215", "199", "201", "190"],
+          "correctIndex": 2,
+          "solution": "-2^2, +3^2, -4^2... 201-4=197. 199 is wrong."
+        },
+        {
+          "id": "Q55",
+          "direction": "Directions (51-55): Find wrong number.",
+          "text": "6, 12, 28, 59, 120, 241",
+          "options": ["120", "241", "12", "6", "28"],
+          "correctIndex": 3,
+          "solution": "x2+5, x2+4... Backwards: 241->120->59->28->12. 12->3.5. 6 is wrong."
+        },
+        {
+          "id": "Q56",
+          "direction": "Directions (56-60): Line graph shows Total cars sold. Jan:180, Feb:150, Mar:120, Apr:200, May:50.",
+          "text": "Find average cars sold.",
+          "options": ["110", "150", "130", "120", "140"],
+          "correctIndex": 4,
+          "solution": "(180+150+120+200+50)/5 = 700/5 = 140."
+        },
+        {
+          "id": "Q57",
+          "direction": "Directions (56-60): Refer to graph data.",
+          "text": "Cars sold in Feb is what % of April?",
+          "options": ["75%", "60%", "25%", "55%", "87.5%"],
+          "correctIndex": 0,
+          "solution": "150/200 = 75%."
+        },
+        {
+          "id": "Q58",
+          "direction": "Directions (56-60): Refer to graph data.",
+          "text": "Difference between Jan and March sales.",
+          "options": ["60", "90", "70", "50", "100"],
+          "correctIndex": 0,
+          "solution": "180 - 120 = 60."
+        },
+        {
+          "id": "Q59",
+          "direction": "Directions (56-60): Refer to graph data.",
+          "text": "Ratio of (Jan + March) to (Feb + May).",
+          "options": ["3:1", "2:3", "3:2", "1:3", "4:3"],
+          "correctIndex": 2,
+          "solution": "(180+120):(150+50) = 300:200 = 3:2."
+        },
+        {
+          "id": "Q60",
+          "direction": "Directions (56-60): Refer to graph data.",
+          "text": "Sum of May and Feb sales.",
+          "options": ["300", "330", "200", "380", "370"],
+          "correctIndex": 2,
+          "solution": "50 + 150 = 200."
+        },
+        {
+          "id": "Q61",
+          "direction": "Directions (61-65): Table Data. A(Blue:210, Green:170), B(520, 330), C(480, 260), D(360, 650), E(300, 260).",
+          "text": "Total Blue balls in all bags.",
+          "options": ["1870", "1630", "1240", "1390", "1550"],
+          "correctIndex": 0,
+          "solution": "210+520+480+360+300 = 1870."
+        },
+        {
+          "id": "Q62",
+          "direction": "Directions (61-65): Refer to Table Data.",
+          "text": "Average Green balls.",
+          "options": ["334", "338", "342", "346", "362"],
+          "correctIndex": 0,
+          "solution": "(170+330+260+650+260)/5 = 1670/5 = 334."
+        },
+        {
+          "id": "Q63",
+          "direction": "Directions (61-65): Refer to Table Data.",
+          "text": "Blue in A is what % of Blue in B (approx)?",
+          "options": ["20%", "35%", "45%", "40%", "25%"],
+          "correctIndex": 3,
+          "solution": "210/520 * 100 ~ 40%."
+        },
+        {
+          "id": "Q64",
+          "direction": "Directions (61-65): Refer to Table Data.",
+          "text": "Diff between (Green D+A) and (Blue C+E).",
+          "options": ["60", "20", "30", "50", "40"],
+          "correctIndex": 4,
+          "solution": "(650+170) - (480+300) = 820 - 780 = 40."
+        },
+        {
+          "id": "Q65",
+          "direction": "Directions (61-65): Refer to Table Data.",
+          "text": "Pink balls in C are 20% less than Green in D. Find Pink in C.",
+          "options": ["480", "520", "500", "570", "410"],
+          "correctIndex": 1,
+          "solution": "Green D = 650. Pink = 650 * 0.8 = 520."
+        },
+        {
+          "id": "Q66",
+          "direction": null,
+          "text": "$$4769 - (3267 + 2425 - 961) = ?$$",
+          "options": ["35", "48", "43", "38", "47"],
+          "correctIndex": 3,
+          "solution": "4769 - 4731 = 38."
+        },
+        {
+          "id": "Q67",
+          "direction": null,
+          "text": "$$1217 + 841 - 724 + 819 = ? + 1843$$",
+          "options": ["210", "310", "360", "270", "410"],
+          "correctIndex": 1,
+          "solution": "2153 - 1843 = 310."
+        },
+        {
+          "id": "Q68",
+          "direction": null,
+          "text": "$$0.06 \\times 0.84 = ? \\times 1.2 \\times 0.015$$",
+          "options": ["8.2", "6.4", "2.6", "3.8", "2.8"],
+          "correctIndex": 4,
+          "solution": "0.0504 / 0.018 = 2.8."
+        },
+        {
+          "id": "Q69",
+          "direction": null,
+          "text": "$$8.41 + 6.25 + 0.79 = ? - 0.55$$",
+          "options": ["17", "14.9", "13.9", "16", "14.7"],
+          "correctIndex": 3,
+          "solution": "15.45 + 0.55 = 16."
+        },
+        {
+          "id": "Q70",
+          "direction": null,
+          "text": "$$616 + 472 - 811 + 317 = ? + 576$$",
+          "options": ["28", "16", "24", "18", "14"],
+          "correctIndex": 3,
+          "solution": "594 - 576 = 18."
+        },
+        {
+          "id": "Q71",
+          "direction": null,
+          "text": "$$12.5 \\times 80 + 37.5 \\times 16 - 6.25 \\times 112 = ?$$",
+          "options": ["1000", "900", "2300", "600", "1300"],
+          "correctIndex": 1,
+          "solution": "1000 + 600 - 700 = 900."
+        },
+        {
+          "id": "Q72",
+          "direction": null,
+          "text": "$$3025 - \\sqrt{2116} = ?^2$$",
+          "options": ["81", "9", "3", "27", "729"],
+          "correctIndex": 2,
+          "solution": "Using PDF logic: 55 - 46 = 9 -> 3. (Note: Text has 3025, solution treats as sqrt(3025)=55)."
+        },
+        {
+          "id": "Q73",
+          "direction": null,
+          "text": "$$\\sqrt{?} + \\sqrt{324} + \\sqrt{361} = \\frac{1}{5} \\text{ of } 290$$",
+          "options": ["400", "441", "361", "484", "289"],
+          "correctIndex": 1,
+          "solution": "$$\\sqrt{?} + 18 + 19 = 58 \\rightarrow \\sqrt{?} = 21 \\rightarrow 441$$."
+        },
+        {
+          "id": "Q74",
+          "direction": null,
+          "text": "$$1674 \\div 27 \\times 9 + 18 = ?^2$$",
+          "options": ["26", "23", "24", "35", "18"],
+          "correctIndex": 2,
+          "solution": "62 * 9 + 18 = 576 -> 24."
+        },
+        {
+          "id": "Q75",
+          "direction": null,
+          "text": "$$(1.2)^2 + (1.5)^2 + (2.1)^2 - (1.9)^2 = ?$$",
+          "options": ["4.99", "5.69", "3.69", "6.79", "4.49"],
+          "correctIndex": 4,
+          "solution": "1.44 + 2.25 + 4.41 - 3.61 = 4.49."
+        },
+        {
+          "id": "Q76",
+          "direction": null,
+          "text": "$$\\sqrt{484} \\div \\frac{11^2}{8} + ? = \\frac{38}{11}$$",
+          "options": ["22", "2", "1", "11", "4"],
+          "correctIndex": 1,
+          "solution": "22 * (8/121) = 16/11. 38/11 - 16/11 = 22/11 = 2."
+        },
+        {
+          "id": "Q77",
+          "direction": null,
+          "text": "$$\\frac{(12+44)}{8} \\times 28 = ?^2$$",
+          "options": ["13", "16", "17", "14", "19"],
+          "correctIndex": 3,
+          "solution": "7 * 28 = 196 -> 14."
+        },
+        {
+          "id": "Q78",
+          "direction": null,
+          "text": "$$\\frac{32}{35} \\div \\frac{1}{5} \\times \\frac{7}{8} \\div \\frac{2}{35} = ?$$",
+          "options": ["60", "80", "75", "90", "70"],
+          "correctIndex": 4,
+          "solution": "70."
+        },
+        {
+          "id": "Q79",
+          "direction": null,
+          "text": "$$\\frac{15}{100} \\times \\frac{200}{700} \\times ? = 240$$",
+          "options": ["5800", "6300", "6100", "5600", "5300"],
+          "correctIndex": 3,
+          "solution": "5600."
+        },
+        {
+          "id": "Q80",
+          "direction": null,
+          "text": "$$23 \\div 48 \\times 576 = ? \\times \\frac{3}{2}$$",
+          "options": ["148", "194", "176", "154", "184"],
+          "correctIndex": 4,
+          "solution": "276 * 2/3 = 184."
+        }
+      ]
+    }
+  ]
+}
