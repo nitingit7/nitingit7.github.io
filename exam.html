@@ -675,20 +675,27 @@
             }
         },
 
-        // --- NEW HELPER FUNCTION FOR REVIEW MODE SWITCHING ---
+        // 3. SWITCH SECTIONS IN REVIEW (Generate empty data for unvisited sections)
         switchReviewSection: function(index) {
             this.currentSectionIdx = index;
-            
-            // Load Data
             this.data = this.fullData.sections[index];
-            this.responses = this.sectionResponses[index] || {}; // Load saved answers
-            
-            // Reset to Q1 of that section
             this.currQ = 0;
             
-            // Refresh UI
+            // CRITICAL FIX: If user never visited this section, generate empty response objects
+            // instead of passing an empty {} which crashes loadQ.
+            var savedResp = this.sectionResponses[index];
+            if (!savedResp) {
+                savedResp = {};
+                for(var i=0; i<this.data.questions.length; i++) {
+                    savedResp[i] = { sel: null, status: 'not-visited', timeSpent: 0 };
+                }
+            }
+            this.responses = savedResp;
+            
+            // Clear any review guesses from previous section
+            this.reviewGuesses = {}; 
+            
             this.loadQ();
-            // renderPalette is called inside loadQ, so tabs update automatically
         },
 
         toggleSidebar: function() { 
@@ -696,6 +703,7 @@
             if(sb) { if(sb.classList.contains('open')) sb.classList.remove('open'); else sb.classList.add('open'); }
         },
 
+        // 1. SAFELY LOAD STORED RESULTS (Prevents crash from old data)
         showStoredResult: function(url) {
             var savedJSON = localStorage.getItem(url); 
             if(!savedJSON) { 
@@ -704,7 +712,13 @@
             this.currentFileUrl = url; 
             var res = JSON.parse(savedJSON);
             
-            // Rehydrate
+            // SAFETY CHECK: If saved data is from the old version (missing fullData), reset it.
+            if (!res.fullData || !res.sectionResponses) {
+                alert("⚠️ Old test data detected. This test format has been updated.\n\nPlease click 'Re-attempt' to clear the old data.");
+                this.renderResultScreen(0, 0, 0, 0, 0, 0); // Show empty result so user can click Re-attempt
+                return;
+            }
+            
             this.fullData = res.fullData;
             this.sectionResponses = res.sectionResponses;
             
@@ -720,31 +734,24 @@
             }
         },
 
+        // 2. START REVIEW MODE (Initialize Section 1 correctly)
         startReviewMode: function() {
             this.isReview = true; 
-            this.currentSectionIdx = 0; // Start reviewing from Section 1
-            
-            // Load Section 1 Data for Review
-            var sec = this.fullData.sections[0];
-            this.data = sec;
-            this.responses = this.sectionResponses[0];
-            this.currQ = 0;
-            
-            this.reviewGuesses = {}; 
-            var pBox = document.getElementById('practice-toggle-box');
-            if(pBox) pBox.style.display = 'flex';
+            this.currentSectionIdx = 0; 
 
-            window.onbeforeunload = null;
-            document.getElementById('timer-box-el').style.display = 'none'; // Hide Timer
+            // Hide UI
+            document.getElementById('timer-box-el').style.display = 'none';
             document.getElementById('btn-pause').style.display = 'none';
             document.getElementById('btn-exit').style.display = 'none';
             document.getElementById('btn-submit').style.display = 'none';
-            
             document.getElementById('exam-footer').style.display = 'none';
             document.getElementById('review-footer').style.display = 'flex';
             
+            // Switch to Section 0
+            this.switchReviewSection(0);
+            
+            // Show Screen
             this.switchView('exam');
-            this.loadQ();
         },
 
         exitReview: function() { this.switchView('result'); },
