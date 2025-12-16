@@ -168,13 +168,40 @@ body.dark-mode .opt-row.selected {
 }
 .solution-box { background: var(--bg-color); padding: 15px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); margin-top: 20px; border-radius: 5px; display: none; color: var(--text-primary); }
 
-/* SIDEBAR & RESULT */
+/* --- SMOOTH SIDEBAR ANIMATION --- */
 #sidebar {
-    position: absolute; right: 0; top: 0; bottom: 0; width: 280px;
-    background: var(--card-bg); border-left: 1px solid var(--border-color);
-    transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex;
-    flex-direction: column; color: var(--text-primary);
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    width: 280px;
+    background: var(--card-bg); 
+    border-left: 1px solid var(--border-color);
+    z-index: 1000; /* Ensure it's above everything */
+    display: flex; 
+    flex-direction: column; 
+    color: var(--text-primary);
+    
+    /* 1. Start hidden off-screen to the right */
+    transform: translateX(100%); 
+    
+    /* 2. THE MAGIC SAUCE: Use a custom bezier curve for smoothness */
+    /* This specific curve (fast start, slow stop) feels very "App-like" */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    
+    /* Optional: Add a subtle shadow when opening */
+    box-shadow: none;
 }
+
+/* When the sidebar is open */
+#sidebar.open { 
+    /* 3. Slide it into view */
+    transform: translateX(0); 
+    
+    /* Add a deep shadow so it looks like it's floating above the content */
+    box-shadow: -10px 0 30px rgba(0,0,0,0.3); 
+}
+
 #sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.5); }
 .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
 .pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; color: var(--text-primary); background: var(--bg-color); }
