@@ -342,19 +342,127 @@
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
             
+            // 1. CHECK PRACTICE MODE TOGGLE
             var isPractice = false;
             var toggle = document.getElementById('btn-practice-mode');
-            if(this.isReview && toggle && toggle.checked) isPractice = true;
+            // If the toggle doesn't exist in DOM, we must re-create it (see below)
+            if(this.isReview && toggle && toggle.checked) {
+                isPractice = true;
+            }
 
             if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
             
-            document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
+            // 2. RENDER QUESTION HEADER (Q Number + Marks)
+            // We use innerHTML to inject the Missing Badges & Toggle back into the UI
+            var headerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:15px;">
+                    <div>
+                        <strong style="color:var(--blue);" id="q-number">Q${this.currQ + 1}</strong>
+                        <span id="btn-report" class="report-link" onclick="window.app.reportIssue()">Report Error</span>
+                    </div>
+                    <span class="marks-badge">Marks: +1 / -0.25</span>
+                </div>
+            `;
+
+            // 3. RESTORE REVIEW BADGES (Wrong/Correct + Time)
+            if (this.isReview && !isPractice) {
+                var badgeColor = "#e2e6ea", badgeText = "Skipped", badgeTextColor = "#495057";
+                
+                if (r.sel === null) {
+                    // Skipped defaults
+                } else if (r.sel === q.correctIndex) {
+                    badgeColor = "#d4edda"; badgeText = "Correct"; badgeTextColor = "#155724";
+                } else {
+                    badgeColor = "#f8d7da"; badgeText = "Wrong"; badgeTextColor = "#721c24";
+                }
+
+                var spent = r.timeSpent || 0;
+                var tm = Math.floor(spent / 60); var ts = Math.floor(spent % 60);
+                var timeText = (tm > 0 ? tm + "m " : "") + ts + "s";
+
+                headerHTML += `
+                    <div id="review-badges" class="review-badges-container" style="display:flex; gap:10px; margin-bottom:15px;">
+                        <div class="review-badge" style="background:${badgeColor}; color:${badgeTextColor}; border:1px solid ${badgeColor}; padding:5px 10px; border-radius:4px; font-weight:bold; font-size:0.85rem;">
+                            ${badgeText}
+                        </div>
+                        <div class="review-badge" style="background:#e2e6ea; color:#333; border:1px solid #ccc; padding:5px 10px; border-radius:4px; font-weight:bold; font-size:0.85rem;">
+                            Time: ${timeText}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // 4. RESTORE RE-ATTEMPT TOGGLE
+            if (this.isReview) {
+                var checkedState = (this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined) || (toggle && toggle.checked) ? "checked" : "";
+                // Note: We need to preserve the toggle state if it was already checked
+                if(toggle && toggle.checked) checkedState = "checked"; 
+
+                headerHTML += `
+                    <div id="practice-toggle-box" class="switch-container" style="display:flex; align-items:center; margin-bottom:15px; background:var(--bg-color); padding:10px; border-radius:8px; border:1px solid var(--border-color);">
+                        <label class="switch" style="position:relative; display:inline-block; width:40px; height:20px; margin-right:10px;">
+                            <input type="checkbox" id="btn-practice-mode" ${checkedState} onchange="window.app.togglePracticeMode()">
+                            <span class="slider round" style="position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0; background-color:#ccc; transition:.4s; border-radius:20px;"></span>
+                        </label>
+                        <span class="practice-label" style="font-size:0.9rem; font-weight:bold;">Re-attempt Mode (Hide Solution)</span>
+                    </div>
+                `;
+            }
+            
+            // 5. INJECT HEADER
+            // We need to target the container properly. 
+            // Since we are replacing content, we target the parent of q-text usually, 
+            // but let's just prepend this to q-content if we wiped it.
+            // A safer way is to update specific IDs, but since we need to inject new HTML elements that might be missing:
+            
+            var contentDiv = document.querySelector('.q-content');
+            // We split content into "Header Area" and "Body Area" to avoid overwriting the text div every time if structure exists.
+            // But to be safe and restore your exact look:
+            
+            var qTextObj = document.getElementById('q-text');
+            var qExtraObj = document.getElementById('q-extra-info');
+            
+            // We will insert the Header HTML *before* the q-extra-info div
+            // First, remove old badges/toggles if they exist to avoid duplicates
+            var oldBadges = document.getElementById('review-badges'); if(oldBadges) oldBadges.remove();
+            var oldToggle = document.getElementById('practice-toggle-box'); if(oldToggle) oldToggle.remove();
+            var oldHeader = document.querySelector('.q-header-dynamic'); if(oldHeader) oldHeader.remove();
+
+            // Create a wrapper for the header
+            var headerDiv = document.createElement('div');
+            headerDiv.className = "q-header-dynamic";
+            headerDiv.innerHTML = headerHTML;
+            
+            // Insert it at the very top of q-content
+            contentDiv.insertBefore(headerDiv, contentDiv.firstChild);
+
+            // Re-bind the toggle event manually since innerHTML breaks listeners
+            if(this.isReview) {
+                 setTimeout(() => {
+                    var newToggle = document.getElementById('btn-practice-mode');
+                    if(newToggle) {
+                        newToggle.checked = isPractice; // Ensure visual state matches logic
+                        newToggle.onchange = () => { this.loadQ(); }; // Reload Q when toggled
+                    }
+                 }, 0);
+            }
+
+            // --- STANDARD RENDERING (Text, Images, Options) ---
+            
+            // Update Text (Use existing ID)
+            // Note: The previous header injection might have duplicated the Q-Number. 
+            // We should hide the *original* static Q-number row if it exists in your HTML.
+            // But assuming standard flow:
+            
+            // Clear the "Old" static header row if it's still there
+            var staticHeader = contentDiv.querySelector('div[style*="justify-content:space-between"]');
+            if(staticHeader && staticHeader !== headerDiv.firstChild) staticHeader.style.display = 'none';
+
             document.getElementById('q-text').innerText = q.text;
 
             var extra = document.getElementById('q-extra-info');
             extra.innerHTML = ''; 
             
-            // Directions
             if (q.direction) {
                 var d = document.createElement('div');
                 d.className = 'q-direction';
@@ -362,7 +470,6 @@
                 extra.appendChild(d);
             }
             
-            // Images (With Zoom Fix)
             function addImg(url) {
                 if(url.includes('github.com') && url.includes('/blob/')) {
                     url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
@@ -376,20 +483,32 @@
             if (q.image) { addImg(q.image); }
             if (q.images && Array.isArray(q.images)) { q.images.forEach(function(url) { addImg(url); }); }
             
-            // Tables (DI)
             if (q.infoHtml) {
                 var div = document.createElement('div');
                 div.innerHTML = q.infoHtml;
-                div.className = "q-extra-info"; // Apply table styles
+                div.className = "q-extra-info"; 
                 extra.appendChild(div);
             }
             
-            // Render Options
             var box = document.getElementById('options-box');
             box.innerHTML = '';
             var self = this;
-            var userSelected = isPractice && self.reviewGuesses ? self.reviewGuesses[self.currQ] : r.sel;
-            var showSolution = (this.isReview && !isPractice) || (isPractice && userSelected !== undefined);
+            
+            // Practice Mode Logic for Selection
+            var userSelected = null;
+            if (isPractice) {
+                if (self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) {
+                    userSelected = self.reviewGuesses[self.currQ];
+                }
+            } else {
+                userSelected = r.sel;
+            }
+
+            var showSolution = false;
+            if (this.isReview) {
+                if (!isPractice) showSolution = true;
+                else if (isPractice && self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) showSolution = true;
+            }
 
             q.options.forEach(function(opt, i) {
                 var row = document.createElement('div');
@@ -397,19 +516,23 @@
                 
                 if (self.isReview) {
                     if (isPractice) {
+                        // RE-ATTEMPT MODE
                         if (showSolution) {
                             row.style.pointerEvents = 'none'; 
                             if (i === q.correctIndex) row.classList.add('correct'); 
                             if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong'); 
                         } else {
                             row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
+                            if (userSelected === i) row.classList.add('selected'); // Visual feedback before reload
                         }
                     } else {
+                        // STANDARD REVIEW MODE
                         row.style.pointerEvents = 'none';
                         if (i === q.correctIndex) row.classList.add('correct');
                         if (r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
                     }
                 } else {
+                    // TEST MODE
                     if (r.sel === i) row.classList.add('selected');
                     row.onclick = function() { r.sel = i; self.loadQ(); };
                 }
@@ -417,7 +540,6 @@
                 box.appendChild(row);
             });
 
-            // Solution
             var solBox = document.getElementById('solution-box');
             if(showSolution) {
                 solBox.style.display = 'block';
