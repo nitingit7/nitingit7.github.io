@@ -1148,3 +1148,35 @@ body.enable-transition .inst-content {
 
 /* 3. Fallback for browsers that don't support this API yet */
 /* Your existing body.enable-transition code handles this automatically */
+
+/* --- PAUSE SCREEN TEXT FIXES --- */
+
+/* Default (Light Mode): Dark Text */
+.pause-title {
+    color: var(--text-primary); /* Uses your main dark text color */
+    margin-bottom: 10px;
+}
+
+.pause-msg {
+    color: var(--text-secondary); /* Uses your main grey text color */
+    margin-bottom: 30px;
+}
+
+/* Dark Mode Override: White Text */
+body.dark-mode .pause-title {
+    color: #ffffff !important; /* Force White */
+}
+
+body.dark-mode .pause-msg {
+    color: #cccccc !important; /* Force Light Grey */
+}
+
+/* Ensure the overlay background itself is correct */
+#pause-overlay {
+    /* If you want it fully black in dark mode */
+    background: rgba(255, 255, 255, 0.95); /* Light mode background */
+}
+
+body.dark-mode #pause-overlay {
+    background: rgba(0, 0, 0, 0.95); /* Dark mode background */
+}
