@@ -1458,3 +1458,8 @@ body.dark-mode .subject-card:hover {
     margin-bottom: 0 !important; 
     /* Keep your existing gradient styles for the text */
 }
+/* Fix Alignment for Simple Cards */
+.card-content strong {
+    margin-bottom: 0 !important; /* Remove spacing reserved for subtitle */
+    font-size: 1.1rem;           /* Keep it readable */
+}
