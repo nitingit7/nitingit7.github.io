@@ -642,7 +642,23 @@
             if(confirm("Exit Test? Progress will be lost.")) {
                 window.onbeforeunload = null;
                 if(this.timerInterval) clearInterval(this.timerInterval);
-                history.go(-2);
+                
+                // --- THE FIX ---
+                // Instead of relying on history.go(-2) which is unreliable,
+                // we explicitly tell the browser where to go.
+                
+                // Option A: Go to the main Dashboard
+                //window.location.href = "index.html"; 
+                
+                // Option B: If you use list.html, you can use this instead:
+                window.location.href = "list.html"; 
+                
+                // Option C: Try to go back safely, but default to index if it fails
+                // if (document.referrer.indexOf('exam.html') === -1 && document.referrer !== "") {
+                //      window.location.href = document.referrer;
+                // } else {
+                //      window.location.href = "index.html";
+                // }
             }
         },
 
