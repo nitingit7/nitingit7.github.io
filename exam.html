@@ -93,7 +93,7 @@
             <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" id="btn-reattempt">Re-attempt Test</button>
             <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" id="btn-view-sols">Review Solutions</button>
             
-            <button class="btn btn-outline" style="width:100%;" onclick="history.go(-2)">Back to Home</button>
+            <button class="btn btn-outline" style="width:100%;" onclick="window.app.goBackToList()">Back to List</button>
         </div>
     </div>
 
@@ -881,27 +881,51 @@
             }
         },
 
-        // 2. START REVIEW MODE (Initialize Section 1 correctly)
+        // 1. NEW: Smart Back Function
+        goBackToList: function() {
+            // Retrieve the last subject you were looking at
+            var lastSubject = localStorage.getItem('last_subject_viewed');
+            
+            // Force the browser to go to that URL (ignores the history stack mess)
+            if (lastSubject) {
+                 window.location.href = "list.html?subject=" + lastSubject;
+            } else {
+                 window.location.href = "index.html";
+            }
+        },
+
+        // 2. UPDATED: Robust Review Mode (Fixes the "not working again" bug)
         startReviewMode: function() {
             this.isReview = true; 
             this.currentSectionIdx = 0; 
-
-            // Hide UI
+            
+            // FORCE RESET UI ELEMENTS (Ensures they show up every time)
             document.getElementById('timer-box-el').style.display = 'none';
             document.getElementById('btn-pause').style.display = 'none';
             document.getElementById('btn-exit').style.display = 'none';
-            document.getElementById('btn-submit').style.display = 'none';
+            
+            // Swap Footers
             document.getElementById('exam-footer').style.display = 'none';
             document.getElementById('review-footer').style.display = 'flex';
             
-            // Switch to Section 0
+            // Ensure Sidebar Submit button is hidden
+            var sbSubmit = document.getElementById('btn-submit-sidebar');
+            if(sbSubmit) sbSubmit.style.display = 'none';
+
+            // Switch to Section 0 and Load
             this.switchReviewSection(0);
             
-            // Show Screen
+            // Show the Exam View
             this.switchView('exam');
         },
 
-        exitReview: function() { this.switchView('result'); },
+        // 3. UPDATED: Exit Review (Cleanly goes back to result)
+        exitReview: function() {
+            // We do NOT set isReview = false here, because we want to keep 
+            // the "Review" state ready in case they click "Review Solutions" again.
+            // We just simply switch the view back to the scorecard.
+            this.switchView('result');
+        },
         
         reportIssue: function() {
             // ... (Your report logic here or copy from previous steps) ...
