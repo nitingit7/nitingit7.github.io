@@ -150,8 +150,20 @@
 
             if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
-            // --- FIX: ONLY TRAP BACK BUTTON IF TAKING THE TEST ---
-            if (showResult !== "true") {
+            // --- FIX START: Handle Back Button Logic Separately ---
+            
+            if (showResult === "true") {
+                // CASE 1: ON RESULT PAGE
+                // We push a state so that when user clicks "Back", we catch it here
+                history.pushState(null, null, location.href);
+                
+                window.onpopstate = () => {
+                    // Force navigation to the list instead of the previous history page
+                    this.goBackToList();
+                };
+                
+            } else {
+                // CASE 2: TAKING THE TEST
                 history.pushState(null, null, location.href);
                 
                 window.onpopstate = () => {
@@ -165,24 +177,14 @@
                     if (confirm("⚠️ Quit the test? Progress will be lost.")) {
                         window.onbeforeunload = null;
                         if(this.timerInterval) clearInterval(this.timerInterval);
-                        
-                        // --- SMART BROWSER BACK BUTTON LOGIC ---
-                        // Instead of history.back(), we force the user to the correct list
-                        var lastSubject = localStorage.getItem('last_subject_viewed');
-                        
-                        if (lastSubject) {
-                            window.location.href = "list.html?subject=" + lastSubject;
-                        } else {
-                            window.location.href = "index.html";
-                        }
-                        // ---------------------------------------
-                        
+                        this.goBackToList(); // Use the smart back function here too
                     } else {
                         // User said NO (Cancel), so push state again to stay on the page
                         history.pushState(null, null, location.href); 
                     }
                 };
             }
+            // --- FIX END ---
 
             // Bind Buttons
             this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
@@ -218,6 +220,7 @@
                 this.fetchTest(this.currentFileUrl);
             }
         },
+
         toggleTheme: function(event) {
             var isDark = document.body.classList.contains('dark-mode');
             var nextState = !isDark; // What we are switching TO
