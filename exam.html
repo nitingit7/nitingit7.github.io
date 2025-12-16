@@ -447,8 +447,8 @@
 
         finishTest: function() {
             var totalScore = 0, totalCorr = 0, totalWrong = 0, totalUnatt = 0, totalMax = 0;
-            var grandTotalTime = 0; // Placeholder
-
+            
+            // 1. Calculate Score across ALL sections
             for(var i=0; i<this.fullData.sections.length; i++) {
                 var sec = this.fullData.sections[i];
                 var resp = this.sectionResponses[i]; 
@@ -467,6 +467,7 @@
                 });
             }
 
+            // 2. Save Result to Memory
             if(this.currentFileUrl) {
                 var resultObj = {
                     score: totalScore, correct: totalCorr, wrong: totalWrong, 
@@ -475,7 +476,15 @@
                     sectionResponses: this.sectionResponses
                 };
                 localStorage.setItem(this.currentFileUrl, JSON.stringify(resultObj));
+                
+                // --- THE FIX ---
+                // Instead of showing the result screen immediately (which breaks Review),
+                // we RELOAD the page in "Result Mode". This guarantees everything works.
+                window.location.replace("exam.html?showResult=true&file=" + encodeURIComponent(this.currentFileUrl));
+                return;
             }
+
+            // Fallback (only if no file URL exists)
             this.renderResultScreen(totalScore, totalCorr, totalWrong, totalUnatt, totalMax, 0);
         },
 
