@@ -1,5 +1,5 @@
 {
-  "title": "IBPS RRB Clerk Prelims Full Mock 1 (Based on 7th Dec Shift 1)",
+  "title": "RRB Clerk Prelims: Full Mock 1 #RRBQS001.json",
   "isFullMock": true,
   "sections": [
     {
@@ -330,7 +330,7 @@
     },
     {
       "name": "Quantitative Aptitude",
-      "timeLimit": 25,
+      "timeLimit": 20,
       "questions": [
         {
           "id": "Q41",
