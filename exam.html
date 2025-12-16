@@ -33,7 +33,8 @@
         <div class="exam-body">
             <main class="q-area">
                 <div class="q-content">
-                    <div id="header-container"></div> 
+    
+                    <div id="question-header-container"></div>
                     <div id="q-extra-info" class="q-extra-info"></div>
 
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
@@ -338,19 +339,18 @@
 
             if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
             
-            // 2. TARGET THE NEW CONTAINER
-            var headerContainer = document.getElementById('header-container');
+            // 2. TARGET THE NEW CONTAINER (Fixes "contentDiv undefined" error)
+            var headerContainer = document.getElementById('question-header-container');
             if (!headerContainer) {
-                // Safety: If user forgot Step 1, try to find parent
-                console.error("Header Container not found! Please check Step 1.");
+                console.error("Missing #question-header-container in HTML. Please check Step 1.");
                 return;
             }
             
-            // 3. GENERATE PROFESSIONAL HEADER
+            // 3. GENERATE HEADER HTML
             
             // Part A: Question Number & Marks
             var topRow = `
-                <div class="q-header-dynamic" style="display:flex; justify-content:space-between; align-items: center; margin-bottom:10px;">
+                <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:10px;">
                     <div>
                         <strong style="color:var(--blue); font-size:1.1rem;">Q${this.currQ + 1}</strong>
                         <span id="btn-report" class="report-link" onclick="window.app.reportIssue()" style="margin-left:10px; font-size:0.8rem; cursor:pointer; color:var(--red);">Report Error</span>
@@ -359,7 +359,7 @@
                 </div>
             `;
 
-            // Part B: Review Toolbar (Only in Review Mode)
+            // Part B: Review Toolbar (Badges + Re-attempt Toggle) - ONLY IN REVIEW
             var reviewToolbar = "";
             if (this.isReview) {
                 var badgeStyle = "background:var(--hover-bg); color:var(--text-primary); border:1px solid var(--border-color);"; 
@@ -397,7 +397,7 @@
                 `;
             }
 
-            // 4. INJECT HTML (This completely refreshes the header area)
+            // 4. INJECT THE HEADER (Clean Refresh)
             headerContainer.innerHTML = topRow + reviewToolbar;
 
             // Re-bind Toggle Logic
@@ -412,17 +412,6 @@
             }
 
             // --- STANDARD RENDERING (Text, Images, Options) ---
-            document.getElementById('q-text').innerText = q.text;
-            
-            // Update Text (Use existing ID)
-            // Note: The previous header injection might have duplicated the Q-Number. 
-            // We should hide the *original* static Q-number row if it exists in your HTML.
-            // But assuming standard flow:
-            
-            // Clear the "Old" static header row if it's still there
-            var staticHeader = contentDiv.querySelector('div[style*="justify-content:space-between"]');
-            if(staticHeader && staticHeader !== headerDiv.firstChild) staticHeader.style.display = 'none';
-
             document.getElementById('q-text').innerText = q.text;
 
             var extra = document.getElementById('q-extra-info');
@@ -459,7 +448,6 @@
             box.innerHTML = '';
             var self = this;
             
-            // Practice Mode Logic for Selection
             var userSelected = null;
             if (isPractice) {
                 if (self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) {
@@ -481,23 +469,20 @@
                 
                 if (self.isReview) {
                     if (isPractice) {
-                        // RE-ATTEMPT MODE
                         if (showSolution) {
                             row.style.pointerEvents = 'none'; 
                             if (i === q.correctIndex) row.classList.add('correct'); 
                             if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong'); 
                         } else {
                             row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
-                            if (userSelected === i) row.classList.add('selected'); // Visual feedback before reload
+                            if (userSelected === i) row.classList.add('selected'); 
                         }
                     } else {
-                        // STANDARD REVIEW MODE
                         row.style.pointerEvents = 'none';
                         if (i === q.correctIndex) row.classList.add('correct');
                         if (r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
                     }
                 } else {
-                    // TEST MODE
                     if (r.sel === i) row.classList.add('selected');
                     row.onclick = function() { r.sel = i; self.loadQ(); };
                 }
@@ -513,6 +498,7 @@
                 solBox.style.display = 'none';
             }
 
+            // REFRESH PALETTE (Ensures Submit button hides if in review)
             this.renderPalette();
             try { if(window.renderMathInElement) { renderMathInElement(document.body); } } catch(e){}
         },
