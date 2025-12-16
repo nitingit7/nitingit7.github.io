@@ -939,20 +939,3 @@ header {
     border-color: var(--blue);
     font-weight: bold;
 }
-
-/* Clear Filter Button */
-.btn-clear-filter {
-    width: 100%;
-    border: none;
-    border-top: 1px solid var(--border-color);
-    background: transparent;
-    padding: 12px;
-    color: var(--red);
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 0 0 8px 8px;
-}
-
-.btn-clear-filter:hover {
-    background: rgba(220, 53, 69, 0.1);
-}
