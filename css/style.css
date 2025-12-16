@@ -1207,3 +1207,68 @@ body.dark-mode .pause-msg {
 body.dark-mode #pause-overlay {
     background: rgba(0, 0, 0, 0.95); /* Dark mode background */
 }
+
+/* --- PROFESSIONAL RESULT BUTTONS UPGRADE --- */
+
+/* 1. General Button Shape & Feel */
+.score-card .btn {
+    width: 100%;               /* Ensure full width */
+    padding: 14px 20px;        /* Taller, more touch-friendly */
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;     /* Slight spacing for readability */
+    text-transform: uppercase; /* Professional look */
+    border-radius: 12px;       /* Modern rounded corners */
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth movement */
+    
+    /* Subtle Shadow for Depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 12px;       /* Spacing between buttons */
+}
+
+/* 2. Hover Effect (Lift Up) */
+.score-card .btn:hover {
+    transform: translateY(-2px); /* Moves up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow grows */
+}
+
+/* 3. Re-attempt Button (Vibrant Gradient Orange) */
+.btn-orange {
+    background: linear-gradient(135deg, #ff9966, #ff5e62); 
+    color: white;
+}
+
+/* 4. Review Solutions Button (Professional Blue) */
+.btn-blue {
+    background: linear-gradient(135deg, #3F72AF, #112D4E);
+    color: white;
+}
+
+/* 5. Back to List Button (The Adaptive Outline) */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--border-color); /* Matches theme border */
+    color: var(--text-secondary);          /* Grey text by default */
+    box-shadow: none;                      /* No shadow for flat look */
+}
+
+.btn-outline:hover {
+    border-color: var(--text-primary);     /* Darker border on hover */
+    color: var(--text-primary);            /* Darker text on hover */
+    background: var(--hover-bg);           /* Subtle background fill */
+    transform: translateY(-1px);
+}
+
+/* --- DARK MODE ADJUSTMENTS --- */
+body.dark-mode .btn-outline {
+    border-color: #30363d;       /* Dark grey border */
+    color: #8b949e;              /* Soft grey text */
+}
+
+body.dark-mode .btn-outline:hover {
+    border-color: #f0f6fc;       /* White border on hover */
+    color: #f0f6fc;              /* White text on hover */
+    background: rgba(255,255,255,0.05);
+}
