@@ -8,13 +8,17 @@
     <script src="js/config.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 20px;">
-            <div class="back-btn" onclick="location.href='index.html'" style="margin-bottom: 0;">← Back</div>
-            
+    <div class="container list-view-container">
+        
+        <div class="list-header-wrapper">
+            <div class="text-area">
+                <h2 id="list-title">Select Test</h2>
+                <p class="list-subtitle">Choose a mock test to begin</p>
+            </div>
+
             <div style="position: relative;">
                 <button id="btn-filter-toggle" class="btn-filter" onclick="toggleFilterMenu()">
-                    <span>🔍 Filter</span>
+                    <span>🔍</span>
                 </button>
                 <div id="filter-dropdown" class="filter-dropdown">
                     <div style="padding: 10px; border-bottom: 1px solid var(--border-color); font-weight: bold; font-size: 0.9rem;">
@@ -22,7 +26,6 @@
                         <span style="float: right; cursor: pointer;" onclick="toggleFilterMenu()">✖</span>
                     </div>
                     <div id="filter-options-list" class="filter-list"></div>
-
                     <button class="btn-clear-filter" onclick="clearFilter()">
                         🗑️ Clear Filter
                     </button>
@@ -30,52 +33,37 @@
             </div>
         </div>
 
-        <h2 id="list-title">Select Test</h2>
+        <div id="test-container" class="test-list-grid"></div>
         
-        <div id="test-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
-        
-        <div id="no-result-msg" style="display:none; color: var(--text-secondary); margin-top: 20px;">No matching tests found.</div>
+        <div id="no-result-msg" style="display:none; color: var(--text-secondary); margin-top: 20px; text-align:center;">
+            No tests found matching your filter.
+        </div>
     </div>
 
     <script>
-    // --- CONFIGURATION: ADD YOUR FILTER KEYWORDS HERE ---
-    // Make sure these match the words in your JSON names EXACTLY.
+    // --- CONFIGURATION ---
     var FILTER_KEYWORDS = [
-        "RRB Clerk",
-        "RRB PO",
-        "IBPS Clerk",
-        "IBPS PO",
-        "SBI Clerk",
-        "SBI PO",
-        "Mains",
-        "Speed Math",
-        "Full Mock",
-        "Sectional Mock"
+        "RRB Clerk", "RRB PO", "IBPS Clerk", "IBPS PO", 
+        "SBI Clerk", "SBI PO", "Mains", "Speed Math", 
+        "Full Mock", "Sectional Mock"
     ];
 
     // Theme Logic
     var savedTheme = localStorage.getItem('site-theme');
     if(savedTheme === 'dark') { document.body.classList.add('dark-mode'); }
 
-    // Variables
     var currentFilter = null;
 
     window.onload = function() {
-        // --- FIX START: FORCE BACK BUTTON TO GO TO HOME ---
-        // 1. Add a dummy state to history so the back button has something to "catch"
+        // --- BROWSER BACK BUTTON TRAP (Retained for navigation) ---
         history.pushState(null, null, location.href);
-
-        // 2. Listen for the back button click
         window.onpopstate = function () {
-            // When back is clicked, force redirect to Home
-            window.location.href = "index.html";
+            window.location.href = "index.html"; // Goes back to Home
         };
-        // --- FIX END ---
 
         var params = new URLSearchParams(window.location.search);
         var subject = params.get('subject');
 
-        // Save the current subject so we can return here later if needed
         if(subject) localStorage.setItem('last_subject_viewed', subject);
 
         if(!subject || !GITHUB_FILES[subject]) {
@@ -84,49 +72,63 @@
             return;
         }
 
+        // Set Title
         document.getElementById('list-title').innerText = subject.toUpperCase().replace('_', ' ');
+
         var list = document.getElementById('test-container');
         var files = GITHUB_FILES[subject];
 
-        // 1. Render the Tests
+        // 1. Render Professional Test Cards
         files.forEach(function(f) {
             var div = document.createElement('div');
-            div.className = 'test-item';
+            div.className = 'test-card-modern'; // New Class
             div.setAttribute('data-name', f.name.toLowerCase()); 
             
-            div.innerHTML = "<span>" + f.name + "</span>";
-            
+            // Icon based on name
+            var icon = "📝";
+            if(f.name.toLowerCase().includes("speed")) icon = "⚡";
+            if(f.name.toLowerCase().includes("full mock")) icon = "🏆";
+            if(f.name.toLowerCase().includes("mains")) icon = "🔥";
+
             var saved = localStorage.getItem(f.file);
-            var btn = document.createElement('button');
             
+            var html = `
+                <div class="tc-left">
+                    <div class="tc-icon">${icon}</div>
+                    <div class="tc-info">
+                        <span class="tc-title">${f.name}</span>
+                        <span class="tc-status">${saved ? 'Completed' : 'Not Attempted'}</span>
+                    </div>
+                </div>
+            `;
+
+            var btn = document.createElement('button');
             if (saved) {
-                btn.className = 'btn btn-blue'; 
-                btn.innerText = "Results"; 
+                btn.className = 'btn-action btn-result'; 
+                btn.innerText = "Analysis"; 
                 btn.onclick = function() { location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file); };
             } else {
-                btn.className = 'btn btn-green'; 
+                btn.className = 'btn-action btn-start'; 
                 btn.innerText = "Start";
                 btn.onclick = function() { location.href = "instructions.html?file=" + encodeURIComponent(f.file); };
             }
+
+            div.innerHTML = html;
             div.appendChild(btn);
             list.appendChild(div);
         });
 
-        // 2. Render the Filter Options
         renderFilterOptions();
     };
 
-    // --- FILTER FUNCTIONS ---
-
+    // --- FILTER FUNCTIONS (Kept same) ---
     function toggleFilterMenu() {
-        var menu = document.getElementById('filter-dropdown');
-        menu.classList.toggle('show');
+        document.getElementById('filter-dropdown').classList.toggle('show');
     }
 
     function renderFilterOptions() {
         var container = document.getElementById('filter-options-list');
         container.innerHTML = '';
-
         FILTER_KEYWORDS.forEach(function(word) {
             var btn = document.createElement('div');
             btn.className = 'filter-option';
@@ -138,22 +140,15 @@
 
     function applyFilter(word, btnElement) {
         currentFilter = word.toLowerCase();
-        
-        // Update UI Styles
         var allOpts = document.querySelectorAll('.filter-option');
         allOpts.forEach(el => el.classList.remove('selected'));
         if(btnElement) btnElement.classList.add('selected');
-
         document.getElementById('btn-filter-toggle').classList.add('active');
-        document.getElementById('btn-filter-toggle').innerHTML = '<span>Checking: ' + word + '</span>';
-
-        // Filter Logic
-        var items = document.querySelectorAll('.test-item');
+        
+        var items = document.querySelectorAll('.test-card-modern'); // Updated selector
         var visibleCount = 0;
-
         items.forEach(function(item) {
             var testName = item.getAttribute('data-name');
-            // EXACT WORD CHECK
             if (testName.includes(currentFilter)) {
                 item.style.display = 'flex';
                 visibleCount++;
@@ -161,48 +156,31 @@
                 item.style.display = 'none';
             }
         });
-
-        // Toggle "No Results" message
         var msg = document.getElementById('no-result-msg');
-        if(visibleCount === 0) msg.style.display = 'block';
-        else msg.style.display = 'none';
-
-        // Close menu
+        msg.style.display = (visibleCount === 0) ? 'block' : 'none';
         toggleFilterMenu();
     }
 
     function clearFilter() {
         currentFilter = null;
-        
-        var items = document.querySelectorAll('.test-item');
+        var items = document.querySelectorAll('.test-card-modern'); // Updated selector
         items.forEach(item => item.style.display = 'flex');
-        
         var allOpts = document.querySelectorAll('.filter-option');
         allOpts.forEach(el => el.classList.remove('selected'));
-
         document.getElementById('btn-filter-toggle').classList.remove('active');
-        document.getElementById('btn-filter-toggle').innerHTML = '<span>🔍 Filter</span>';
         document.getElementById('no-result-msg').style.display = 'none';
-        
         toggleFilterMenu();
     }
 
-    // Close menu if clicking outside
     window.onclick = function(event) {
         if (!event.target.matches('.btn-filter') && !event.target.closest('.filter-dropdown') && !event.target.closest('.btn-filter')) {
-            var dropdowns = document.getElementsByClassName("filter-dropdown");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
+            var openDropdown = document.getElementById('filter-dropdown');
+            if (openDropdown.classList.contains('show')) openDropdown.classList.remove('show');
         }
     }
-    
     window.onpageshow = function(event) {
         if (event.persisted) { window.location.reload(); }
     };
-</script>
+    </script>
 </body>
 </html>
