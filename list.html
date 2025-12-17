@@ -61,15 +61,23 @@
     var currentFilter = null;
 
     window.onload = function() {
+        // --- FIX START: FORCE BACK BUTTON TO GO TO HOME ---
+        // 1. Add a dummy state to history so the back button has something to "catch"
+        history.pushState(null, null, location.href);
+
+        // 2. Listen for the back button click
+        window.onpopstate = function () {
+            // When back is clicked, force redirect to Home
+            window.location.href = "index.html";
+        };
+        // --- FIX END ---
+
         var params = new URLSearchParams(window.location.search);
         var subject = params.get('subject');
 
-        // In list.html
+        // Save the current subject so we can return here later if needed
         if(subject) localStorage.setItem('last_subject_viewed', subject);
 
-        // Save the current subject to memory so we can return here later
-        if(subject) localStorage.setItem('last_subject_viewed', subject)
-        
         if(!subject || !GITHUB_FILES[subject]) {
             alert("Invalid Subject");
             location.href = 'index.html';
@@ -84,7 +92,6 @@
         files.forEach(function(f) {
             var div = document.createElement('div');
             div.className = 'test-item';
-            // We verify the filter using this attribute later
             div.setAttribute('data-name', f.name.toLowerCase()); 
             
             div.innerHTML = "<span>" + f.name + "</span>";
