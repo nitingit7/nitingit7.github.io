@@ -931,13 +931,51 @@
         },
         
         reportIssue: function() {
-            // ... (Your report logic here or copy from previous steps) ...
-             if(!GOOGLE_FORM_URL) { alert("Configure URL"); return; }
-             if (this.isReview) {
-                  window.open(GOOGLE_FORM_URL, '_blank');
-             } else {
-                  if(confirm("Report Error? Timer continues.")) window.open(GOOGLE_FORM_URL, '_blank');
-             }
+            // 1. Check if URL is configured
+            if(typeof GOOGLE_FORM_URL === 'undefined' || !GOOGLE_FORM_URL) { 
+                alert("Error: Google Form URL not set in config.js"); 
+                return; 
+            }
+
+            // 2. Get the Test Name
+            // Uses the title from your JSON, defaults to 'Unknown' if missing
+            var testName = (this.fullData && this.fullData.title) ? this.fullData.title : "Unknown Test";
+
+            // 3. Get the Question Number / ID
+            // Logic: Checks if your JSON has a specific "id" (like 'R01'). 
+            // If not, it generates 'Q1', 'Q2' based on the index.
+            var currentQObj = this.data.questions[this.currQ];
+            var qNum = "Q" + (this.currQ + 1); // Default fallback (e.g., Q1)
+            
+            if (currentQObj && currentQObj.id) {
+                qNum = currentQObj.id; // Uses specific ID (e.g., R01, Q45) if available
+            }
+
+            // 4. Encode Data (Safety for spaces/symbols in URL)
+            var safeTestName = encodeURIComponent(testName);
+            var safeQNum = encodeURIComponent(qNum);
+
+            // ============================================================
+            // ⚠️ IMPORTANT: PASTE YOUR GOOGLE FORM ENTRY IDs HERE
+            // ============================================================
+            var entryId_TestName = "entry.123456789"; // <--- Replace with YOUR Test Name ID
+            var entryId_QNum     = "entry.987654321"; // <--- Replace with YOUR Question Num ID
+            // ============================================================
+
+            // 5. Build the Link
+            // We split to ensure we don't duplicate query parameters if the config URL already has them
+            var cleanBaseUrl = GOOGLE_FORM_URL.split('?')[0];
+            var finalUrl = `${cleanBaseUrl}?usp=pp_url&${entryId_TestName}=${safeTestName}&${entryId_QNum}=${safeQNum}`;
+
+            // 6. Open the Form
+            if (this.isReview) {
+                 window.open(finalUrl, '_blank');
+            } else {
+                 // In test mode, confirm first because timer doesn't stop
+                 if(confirm("Report Error in " + qNum + "? (Timer continues)")) {
+                     window.open(finalUrl, '_blank');
+                 }
+            }
         }
     };
 
