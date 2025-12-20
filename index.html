@@ -9,6 +9,10 @@
         import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
         inject();
     </script>
+    <script>
+        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights/+esm';
+        injectSpeedInsights();
+    </script> 
 </head>
 <body>
     <div class="theme-switch-wrapper">
@@ -28,6 +32,18 @@
         </div>
         
         <div class="dashboard-grid">
+
+            <div class="dashboard-grid">
+            
+            <div class="subject-card" onclick="location.href='list.html?subject=full_test'">
+                <div class="card-content">
+                    <div class="icon-box">🏆</div> 
+                    <div class="text-group">
+                        <strong>Full Mock Tests</strong>
+                    </div>
+                </div> 
+                <div class="arrow-icon">➜</div>
+            </div>
             
             <div class="subject-card card-quant" onclick="location.href='list.html?subject=quant'">
                 <div class="card-content">
