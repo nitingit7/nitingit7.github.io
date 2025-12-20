@@ -402,15 +402,15 @@
         // Helper: Converts **text** to <b>text</b> and \n to <br>
         formatText: function(text) {
             if (!text) return "";
-            // 1. Replace **bold** with <b>bold</b>
+            
+            // 1. Convert **bold** to <b>bold</b>
             var html = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
             
-            // 2. (Optional) Replace new lines with breaks so paragraphs work
+            // 2. Convert \n to <br> (This allows you to force a new line)
             html = html.replace(/\n/g, "<br>");
             
             return html;
         },
-
         loadQ: function() {
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
@@ -584,7 +584,22 @@
 
             // REFRESH PALETTE (Ensures Submit button hides if in review)
             this.renderPalette();
-            try { if(window.renderMathInElement) { renderMathInElement(document.body); } } catch(e){}
+            // KaTeX Rendering Configuration
+            try { 
+                if(window.renderMathInElement) { 
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            // ⚠️ CHANGED: display: false means "Keep it on the same line"
+                            {left: "$$", right: "$$", display: false}, 
+                            
+                            // Standard LaTeX delimiters (keep these just in case)
+                            {left: "\\(", right: "\\)", display: false},
+                            {left: "\\[", right: "\\]", display: true}
+                        ],
+                        throwOnError: false
+                    }); 
+                } 
+            } catch(e) { console.error(e); }
         },
 
         submitSection: function(force) {
