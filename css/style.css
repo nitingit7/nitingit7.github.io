@@ -142,9 +142,16 @@ body.dark-mode .marks-badge {
 
 /* QUESTIONS & OPTIONS */
 .opt-row {
-    display: flex; padding: 12px; border: 1px solid var(--border-color);
-    background: var(--bg-color); margin-bottom: 10px; border-radius: 5px;
-    cursor: pointer; align-items: center; color: var(--text-primary);
+    display: flex; 
+    padding: 12px; 
+    border: 1px solid var(--border-color);
+    background: var(--card-bg); /* Better contrast */
+    margin-bottom: 10px; 
+    border-radius: 8px; /* Slightly smoother */
+    cursor: pointer; 
+    align-items: flex-start; /* <--- THIS FIXES THE FLOATING 'A' */
+    color: var(--text-primary);
+    transition: background 0.2s ease;
 }
 .opt-row:hover { background: var(--hover-bg); }
 .opt-row.selected { background: var(--yellow); border-color: var(--blue); border-width: 2px; color: #333 !important; }
