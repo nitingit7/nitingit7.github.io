@@ -34,6 +34,10 @@ var GITHUB_FILES = {
     ],
     'english': [
         { name: "COMING SOON....", file: BASE_URL + "tests/english/mock1.json" }
+    ],
+    'full_test': [
+        { name: "Coming Soon.....", file: "https://.../full_mock_1.json" },
+        { name: "Coming Soon.....",   file: "https://.../full_mock_2.json" }
     ]
 };
 
