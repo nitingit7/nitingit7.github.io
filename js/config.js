@@ -36,7 +36,7 @@ var GITHUB_FILES = {
     ],
     'full_test': [
         { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
-        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
+        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
     ]
 };
 
