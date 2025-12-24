@@ -1,0 +1,266 @@
+{
+ "title": "Number System 1 #QANS001",
+ "timeLimit": 10,
+ "questions": [
+  {
+    "id": "1",
+   "text": "Which of the following options gives Real number:",
+   "options": [
+    "$$24\\% \\text{ of } 6400 + 22$$",
+    "$$\\sqrt{2\\times48-10^{2}}$$",
+    "$$\\sqrt{22^{2}+3^{3}-57}$$",
+    "Both option A and option C",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "Option A: $$\\sqrt{24\\% \\text{ of } 6400 + 22} = \\sqrt{1536+22} = \\sqrt{1558}$$ (Real number).\nOption B: $$\\sqrt{2\\times48-10^{2}} = \\sqrt{96-100} = \\sqrt{-4}$$ (Not real number).\nOption C: $$\\sqrt{22^{2}+3^{3}-57} = \\sqrt{484+27-57} = \\sqrt{454}$$ (Real number).\nHence, option D is correct."
+  },
+  {
+    "id": "2",
+   "text": "Which of the following is/are correct:\nI: $$x^{2}=29^{2}+(22\\% \\text{ of } 200)-30^{2}$$ (The value of 'x' in this equation is not real number)\nII: $$\\sqrt{26\\% \\text{ of } 2500-5^{2}}$$ gives a positive integer.\nIII: $$(8^{3}+5^{2}+63-10^{3})$$ gives a negative integer.",
+   "options": [
+    "Only I and II",
+    "Only II and III",
+    "Only I and III",
+    "All I, II and III",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "I: $$x^{2}=841+44-900 = -15$$ \n $$x=\\sqrt{-15}$$ (Not real number). Correct.\nII: $$\\sqrt{650-25} = \\sqrt{625} = 25$$ (Positive integer). Correct.\nIII: $$512+25+63-1000 = -400$$ (Negative integer). Correct.\nHence, option D is correct."
+  },
+  {
+    "id": "3",
+   "text": "Product of -2 and 0 gives",
+   "options": [
+    "Negative integer",
+    "Positive integer",
+    "Whole number",
+    "Rational number",
+    "None of these"
+   ],
+   "correctIndex": 2,
+   "solution": "If we multiply 0 with any number it gives 0 which is a whole number.\nHence, option C is correct."
+  },
+  {
+    "id": "4",
+   "text": "Statement I: $$x/2=22\\times23+94-25^{2}+5^{2}$$\nStatement II: $$y=44\\% \\text{ of } 300+54-20$$\nThe value of 'x' from statement I and 'y' from statement II are collectively known as",
+   "options": [
+    "Whole number",
+    "Positive integer",
+    "Negative integer",
+    "Non-real number",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Statement I: $$x/2=506+94-625+25 \n x/2=0 \n x=0$$\nStatement II: $$y=132+54-20 \n y=166$$\nx is zero and y is a positive integer, so they collectively known as whole number.\nHence, option A is correct."
+  },
+  {
+    "id": "5",
+   "text": "Which of the given options can give possible value of $$(A\\times B\\times C)$$\n$$A=$$ Whole number\n$$B=$$ Negative integer\n$$C=$$ Positive integer",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "-1",
+    "Option A and D both"
+   ],
+   "correctIndex": 4,
+   "solution": "Product of a whole number (if 0), negative integer and positive integer always gives 0.\nProduct of a whole number (if not zero), negative integer and positive integer always gives negative integer.\n(which is given in option D)\nHence, option E is correct."
+  },
+  {
+    "id": "6",
+   "text": "Find the nature of the given statements:\nI: $$x=p/q$$ (Here, 'p' and 'q' are integer)\nII: $$Y=p/q$$ (Here, 'p' and 'q' are non-integer)",
+   "options": [
+    "X is rational and Y is irrational.",
+    "X is irrational and Y is rational.",
+    "X and Y both are rational.",
+    "X and Y both are irrational.",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$p/q$$ (Here, 'p' and 'q' are integer) -> X is a rational number.\n$$p/q$$ (Here, 'p' and 'q' are non-integer) -> Y is an irrational number.\nHence, option A is correct."
+  },
+  {
+    "id": "7",
+   "text": "Which of the following is/are correct:\nI: $$A+B=C$$\nII: $$A-B=D$$\nHere, A and B are Irrational and rational number respectively.",
+   "options": [
+    "Both C and D are rational",
+    "Both C and D are irrational",
+    "C is rational and D is irrational",
+    "C is irrational and D is rational",
+    "None of these"
+   ],
+   "correctIndex": 1,
+   "solution": "Irrational number + rational number = Irrational (Always)\nIrrational number - rational number = Irrational (Always)\nHence, option B is correct."
+  },
+  {
+    "id": "8",
+   "text": "If $$P=$$ Irrational number, $$Q=$$ Rational number, then the product of P and Q is equal to $$A/B$$.\nWhich of the following options is correct for 'A' and 'B':",
+   "options": [
+    "Both A and B are integer.",
+    "Both A and B are non-integer.",
+    "Either A or B is 0.",
+    "Cannot be determined",
+    "None of these"
+   ],
+   "correctIndex": 1,
+   "solution": "Irrational number $$\\times$$ Rational number = Irrational number\nIrrational number $$=A/B$$\nHere, Both A and B are non-integer.\nHence, option B is correct."
+  },
+  {
+    "id": "9",
+   "text": "Which of the following options is correct for the value of A from the given equation.\n$$3A^{3}=26\\% \\text{ of } 200+16\\times3+(25\\% \\text{ of } 800)$$",
+   "options": [
+    "Positive integer",
+    "Negative integer",
+    "Non-real number",
+    "Irrational Number",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "$$3A^{3}=52+48+200$$\n$$3A^{3}=300$$\n$$A^{3}=100$$\n$$A=\\sqrt[3]{100}$$\nHence, A is an irrational number."
+  },
+  {
+    "id": "10",
+   "text": "Which of the following statement is/are possibly true:\nI: If A and B both are irrational, then the product of A and B can be equal to 4.\nII: If A and B both are irrational, then the product of A and B can be equal to $$\\sqrt{6}$$.",
+   "options": [
+    "Only I",
+    "Only II",
+    "Both I and II",
+    "Neither I nor II",
+    "None of these"
+   ],
+   "correctIndex": 2,
+   "solution": "Irrational number $$\\times$$ Irrational number = Either rational or irrational number\nI: Product can be 4 (Rational). True (e.g., $$\\sqrt{8} \\times \\sqrt{2} = 4$$).\nII: Product can be $$\\sqrt{6}$$ (Irrational). True (e.g., $$\\sqrt{2} \\times \\sqrt{3} = \\sqrt{6}$$).\nHence, option C is correct."
+  },
+  {
+    "id": "11",
+   "text": "Which of the following can be false, if A and B are irrational number:\nI: $$A-B=\\sqrt{8-\\sqrt{7}}$$\nII: $$A-B=$$ whole number",
+   "options": [
+    "Both I and II",
+    "Only I",
+    "Neither I nor II",
+    "Only II",
+    "None of these"
+   ],
+   "correctIndex": 2,
+   "solution": "Irrational number - Irrational number = Either rational or irrational.\nSo, I is true (Irrational result).\nIn II: If $$A=\\sqrt{2}$$, $$B=\\sqrt{2}$$, then $$A-B=0$$ (whole number). So II is true.\nSince both can be true, neither is necessarily false.\nHence, option C is correct."
+  },
+  {
+    "id": "12",
+   "text": "If A is odd number and $$A+B=144$$, then the nature of B is",
+   "options": [
+    "Odd number",
+    "Even number",
+    "Cannot be determined",
+    "Either A and B",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$\\text{odd} + \\text{odd} = \\text{even}$$\nIf A is odd and sum is even (144), then B should be odd.\nHence, option A is correct."
+  },
+  {
+    "id": "13",
+   "text": "Find the possible value of D. (A, B, D are integers)\nI: $$A+B=64$$\nII: $$B+D=45$$",
+   "options": [
+    "11",
+    "47",
+    "9",
+    "All option A, B and C can be the possible value",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "I: $$A+B=64$$ (Even sum -> A and B same parity)\nII: $$B+D=45$$ (Odd sum -> B and D opposite parity)\nIf B is odd, D is even.\nIf B is even, D is odd.\nSince D *can* be odd, all the given options (11, 47, 9) are possible values.\nHence, option D is correct."
+  },
+  {
+    "id": "14",
+   "text": "Product of A and B is C, If the nature of A, B and C is same, then find the Possible value of C.\n(Nature = Either odd or even)",
+   "options": [
+    "21",
+    "10",
+    "11",
+    "All the options given above",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "$$\\text{odd} \\times \\text{odd} = \\text{odd}$$ (A, B, C all odd). Possible. C can be 21 or 11.\n$$\\text{even} \\times \\text{even} = \\text{even}$$ (A, B, C all even). Possible. C can be even (10).\nHence, option D is right."
+  },
+  {
+    "id": "15",
+   "text": "If $$P\\times Q=$$ Even number and $$P\\times R=$$ Even number, then find the possible value of Q from the given options: (R is an integer but not odd number, $$R>0$$)",
+   "options": [
+    "12",
+    "11",
+    "$$\\sqrt{2}$$",
+    "Either option A or B",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "R is an even number. $$P \\times R = \\text{Even}$$ is always true for integer P.\n$$P \\times Q = \\text{Even}$$. \nIf P is even, Q can be odd or even.\nIf P is odd, Q must be even.\nSince P is unknown, Q can potentially be odd or even (11 or 12).\nHence, option D is correct."
+  },
+  {
+    "id": "16",
+   "text": "If $$A-B=63$$, then value of A and B is ______ and ______ number respectively.",
+   "options": [
+    "Odd, even",
+    "Odd, odd",
+    "Even, even",
+    "Even, odd",
+    "Either option A or D"
+   ],
+   "correctIndex": 4,
+   "solution": "$$\\text{Odd} - \\text{even} = \\text{odd}$$\n$$\\text{Even} - \\text{odd} = \\text{odd}$$\nSince difference is odd (63), one number must be odd and the other even.\nHence, option E is correct."
+  },
+  {
+    "id": "17",
+   "text": "If P and Q both are odd numbers, R and S both are even numbers, then find the possible value of $$A+B$$\nNote: $$P-Q=A$$, $$R-S=B$$",
+   "options": [
+    "24",
+    "36",
+    "48",
+    "22",
+    "All the options given above"
+   ],
+   "correctIndex": 4,
+   "solution": "$$\\text{Odd} - \\text{odd} = \\text{even}$$ (So A is even)\n$$\\text{even} - \\text{even} = \\text{even}$$ (So B is even)\n$$A+B = \\text{even} + \\text{even} = \\text{even}$$\nAll options are even numbers.\nHence, option E is correct."
+  },
+  {
+    "id": "18",
+   "text": "If $$P\\times Q=$$ Even number and Q is a prime number ($$Q>2$$), then find the value of P.",
+   "options": [
+    "3",
+    "5",
+    "1",
+    "2",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "$$Q>2$$ and Q is prime number, means $$Q=\\text{odd}$$\n$$\\text{even} \\times \\text{odd} = \\text{even}$$\nSo, P is an even number.\nHence, option D is correct."
+  },
+  {
+    "id": "19",
+   "text": "If $$P+Q=$$ odd number and P is prime number, then find the possible value of Q.",
+   "options": [
+    "7",
+    "2",
+    "11",
+    "10",
+    "Option A, B, C and D"
+   ],
+   "correctIndex": 4,
+   "solution": "$$P+Q=\\text{Odd}$$. One is even, one is odd.\nP is a prime number.\nIf $$P=2$$ (even), $$Q=\\text{odd}$$. (7, 11 possible)\nIf $$P=\\text{odd}$$ (prime > 2), $$Q=\\text{even}$$. (2, 10 possible)\nHence, option E is correct."
+  },
+  {
+    "id": "20",
+   "text": "If P is prime number and $$P+Q=18$$, the number of factors of Q is more than 2, then find the value of Q. ($$P<Q$$)",
+   "options": [
+    "15",
+    "13",
+    "16",
+    "Either option A or C",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "Q has more than 2 factors, means Q is a composite number. $$P<Q$$.\nPairs for $$P+Q=18$$:\nIf $$P=2$$, $$Q=16$$ (Composite). Valid.\nIf $$P=3$$, $$Q=15$$ (Composite). Valid.\nIf $$P=5$$, $$Q=13$$ (Prime). Invalid.\nIf $$P=7$$, $$Q=11$$ (Prime). Invalid.\nHence, Value of Q is either 15 or 16.\nSo, option D is correct."
+  }
+ ]
+}
