@@ -402,14 +402,17 @@
             var s = (remaining % 60).toString().padStart(2,'0');
             disp.innerText = m + ":" + s;
         },
-        // Helper: Converts **text** to <b>text</b> and \n to <br>
+        // Helper: Formats bold text, new lines, and fixes < symbol issues
         formatText: function(text) {
             if (!text) return "";
             
-            // 1. Convert **bold** to <b>bold</b>
-            var html = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+            // 1. Escape special HTML characters (Fixes the P<Q cutoff issue)
+            var html = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
             
-            // 2. Convert \n to <br> (This allows you to force a new line)
+            // 2. Convert **bold** to <b>bold</b>
+            html = html.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+            
+            // 3. Convert \n to <br> (This allows you to force a new line)
             html = html.replace(/\n/g, "<br>");
             
             return html;
