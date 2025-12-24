@@ -982,36 +982,43 @@ header {
     border-color: var(--blue);
     font-weight: bold;
 }
-
-/* --- CLEAR FILTER BUTTON STYLES --- */
+/* --- GLOWING RED CLEAR FILTER BUTTON --- */
 .btn-clear-filter {
     width: 100%;
-    background: var(--card-bg); /* Matches the menu background */
+    /* Red Gradient Background */
+    background: linear-gradient(135deg, #dc3545, #c82333); 
     border: none;
-    border-top: 1px solid var(--border-color); /* Separator line */
-    color: var(--red);          /* Red text for "Clear" action */
+    color: white; /* White Text */
     padding: 12px;
     font-weight: bold;
     cursor: pointer;
     font-size: 0.9rem;
-    border-radius: 0 0 8px 8px; /* Rounded corners at bottom only */
-    transition: background 0.2s;
+    border-radius: 0 0 8px 8px; /* Rounded at bottom only */
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    
+    /* Initial Red Glow */
+    box-shadow: 0 -2px 10px rgba(220, 53, 69, 0.3);
 }
 
 .btn-clear-filter:hover {
-    background-color: rgba(220, 53, 69, 0.1); /* Light red hover effect */
+    background: linear-gradient(135deg, #e4606d, #dc3545);
+    /* Stronger Glow on Hover */
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.6); 
+    transform: translateY(-1px);
 }
 
-/* Dark Mode adjustment */
-body.dark-mode .btn-clear-filter {
-    background: var(--card-bg);
+.btn-clear-filter:active {
+    transform: scale(0.98);
 }
-body.dark-mode .btn-clear-filter:hover {
-    background: rgba(220, 53, 69, 0.2);
+
+/* Ensure it looks good in Dark Mode too */
+body.dark-mode .btn-clear-filter {
+    background: linear-gradient(135deg, #dc3545, #a71d2a);
+    color: white;
 }
 
 /* --- SIDEBAR SECTION TABS --- */
