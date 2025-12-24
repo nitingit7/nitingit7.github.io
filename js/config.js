@@ -26,7 +26,8 @@ var GITHUB_FILES = {
     ],
     // New Topic Tests Category
     'quant_topic': [
-        { name: "Number Series: Missing", tags: "Number Series", file: BASE_URL + "tests/quant/TopicTest/QANS001.json" }
+        { name: "Number System 1", tags: "Number System", file: BASE_URL + "tests/quant/TopicTest/QANS001.json" },
+        { name: "Number System 2", tags: "Number System", file: BASE_URL + "tests/quant/TopicTest/QANS002.json" }
     ],
 
     // --- 2. REASONING ABILITY ---
