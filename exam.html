@@ -588,7 +588,8 @@
             var solBox = document.getElementById('solution-box');
             if(showSolution) {
                 solBox.style.display = 'block';
-                document.getElementById('sol-text').innerText = q.solution || "No solution.";
+                // Apply formatting to solution text (enables **bold** and new lines)
+                document.getElementById('sol-text').innerHTML = self.formatText(q.solution || "No solution.");
             } else {
                 solBox.style.display = 'none';
             }
