@@ -26,8 +26,8 @@ var GITHUB_FILES = {
     ],
     // New Topic Tests Category
     'quant_topic': [
-        { name: "Simplification: Level 1", file: BASE_URL + "tests/quant/topics/sim1.json" },
-        { name: "Number Series: Missing", file: BASE_URL + "tests/quant/topics/ns1.json" }
+        { name: "Simplification: Level 1", tags: "Simplification", file: BASE_URL + "tests/quant/topics/sim1.json" },
+        { name: "Number Series: Missing", tags: "Number Series", file: BASE_URL + "tests/quant/topics/ns1.json" }
     ],
 
     // --- 2. REASONING ABILITY ---
@@ -41,8 +41,8 @@ var GITHUB_FILES = {
         { name: "RRB Clerk Prelims: Reasoning (xth Dec Shift x)", file: BASE_URL + "tests/reasoning/RA007.json" }
     ],
     'reasoning_topic': [
-        { name: "Puzzles: Box Based", file: BASE_URL + "tests/reasoning/topics/puz1.json" },
-        { name: "Syllogism: Only a Few", file: BASE_URL + "tests/reasoning/topics/syl1.json" }
+        { name: "Puzzles: Box Based", tags: "Puzzles", file: BASE_URL + "tests/reasoning/topics/puz1.json" },
+        { name: "Syllogism: Only a Few", tags: "Syllogism", file: BASE_URL + "tests/reasoning/topics/syl1.json" }
     ],
 
     // --- 3. ENGLISH LANGUAGE ---
@@ -50,7 +50,7 @@ var GITHUB_FILES = {
         { name: "RRB Assistant: English Mock 1", file: BASE_URL + "tests/english/mock1.json" }
     ],
     'english_topic': [
-        { name: "Reading Comprehension 1", file: BASE_URL + "tests/english/topics/rc1.json" }
+        { name: "Reading Comprehension 1", tags: "RC", file: BASE_URL + "tests/english/topics/rc1.json" }
     ],
 
     // --- 4. FULL MOCK TESTS (Stays the same) ---
