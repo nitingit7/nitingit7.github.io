@@ -1,266 +1,266 @@
 {
-  "title": "Number System 2 #QANS002",
-  "timeLimit": 10,
-  "questions": [
-    {
-      "id": 21,
-      "text": "If $A+3=C$ and value of A is positive integer and even number, then value of A is less than 6. Which of the following statement is/are correct:\nI: Number of factors of C is 2.\nII: C is a prime number.\nIII: C is an odd number.",
-      "options": [
-        "Only I and II",
-        "Only II and III",
-        "All I, II and III",
-        "Only I and III",
-        "None of these"
-      ],
-      "correctIndex": 2,
-      "solution": "Given $A$ is a positive even integer less than 6. Possible values for $A$ are 2 and 4.\n\nCase 1: If $A=2$, then $C = 2 + 3 = 5$.\nFactors of 5 are 1 and 5 (2 factors). 5 is prime and odd.\n\nCase 2: If $A=4$, then $C = 4 + 3 = 7$.\nFactors of 7 are 1 and 7 (2 factors). 7 is prime and odd.\n\nIn both cases, C has 2 factors, is prime, and is odd. Thus, all statements I, II, and III are correct."
-    },
-    {
-      "id": 22,
-      "text": "If $A \\times C = B$ and B is an even number while A and C both are prime numbers, Find the possible value of A. (C>A)",
-      "options": [
-        "2",
-        "3",
-        "5",
-        "7",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "We know that $\\text{Prime} \\times \\text{Prime} = \\text{Even}$ implies that at least one of the prime numbers must be 2 (since all other primes are odd, and odd $\\times$ odd = odd).\nGiven $C > A$, A must be the smaller prime number.\nTherefore, $A = 2$."
-    },
-    {
-      "id": 23,
-      "text": "If $P=(24\\% \\text{ of } 150)+(10\\% \\text{ of } 140)-7^{2}$, then find which of the following is/are correct.\nI: P is a prime number.\nII: P is a composite number.\nIII: P is neither prime nor composite number.",
-      "options": [
-        "Only I",
-        "Only II",
-        "Only III",
-        "Only I and II",
-        "None of these"
-      ],
-      "correctIndex": 2,
-      "solution": "$$P = \\left(\\frac{24}{100} \\times 150\\right) + \\left(\\frac{10}{100} \\times 140\\right) - 49$$\n$$P = 36 + 14 - 49$$\n$$P = 50 - 49 = 1$$\n\n1 is neither a prime number nor a composite number. Hence, only statement III is correct."
-    },
-    {
-      "id": 24,
-      "text": "If $A+B=8$ and A is a prime number $(A>B)$, then find the possible nature of all possible values of B.",
-      "options": [
-        "B is an odd number",
-        "B is a prime number",
-        "B is neither prime nor composite",
-        "There is only 1 factor of B",
-        "All the options above"
-      ],
-      "correctIndex": 4,
-      "solution": "Given $A+B=8$ and $A$ is prime with $A>B$.\nPossible prime values for A less than 8 are 2, 3, 5, 7.\n\n1. If $A=7$, then $B=1$ (Since $7+1=8$ and $7>1$). B is odd, neither prime nor composite, and has only 1 factor.\n2. If $A=5$, then $B=3$ (Since $5+3=8$ and $5>3$). B is odd and prime.\n3. If $A=3$, then $B=5$ (But $A \\ngtr B$, so invalid).\n4. If $A=2$, then $B=6$ (But $A \\ngtr B$, so invalid).\n\nThe possible values for B are 1 and 3. These values satisfy all the given options across different cases. Hence, option E is correct."
-    },
-    {
-      "id": 25,
-      "text": "If $P+Q=R$ and the value of R is prime, then which of the following can be true: (P and Q are positive integer and $P \\neq Q$)\nI: Number of factors of R is not more than 2.\nII: Either P or Q can be even number.\nIII: Both P and Q cannot be even number.",
-      "options": [
-        "Only I and II",
-        "Only II and III",
-        "Only I and III",
-        "All I, II and III",
-        "None of these"
-      ],
-      "correctIndex": 3,
-      "solution": "I: R is prime, so it has exactly 2 factors. Correct.\nII & III: $P+Q=R$. If R is an odd prime (which it must be if $R>2$, because if $R=2$, $P+Q=2 \\implies P=1, Q=1$ which contradicts $P \\neq Q$), then the sum of P and Q is odd.\nFor the sum to be odd, one number must be even and the other odd. Thus, either P or Q is even, and both cannot be even.\nAll statements are correct."
-    },
-    {
-      "id": 26,
-      "text": "If sum of P and Q is equal to R, Value of R and Q is prime number, then find the nature of P.",
-      "options": [
-        "P can be composite number",
-        "P can be prime number",
-        "P cannot be composite number",
-        "Both option A and B",
-        "None of these"
-      ],
-      "correctIndex": 3,
-      "solution": "$P + Q = R$, where Q and R are prime numbers. Since $R = P+Q$, $R > Q$.\nCase 1: Let $Q=2, R=5$. Then $P + 2 = 5 \\implies P=3$ (Prime).\nCase 2: Let $Q=3, R=7$. Then $P + 3 = 7 \\implies P=4$ (Composite).\nCase 3: Let $Q=2, R=3$. Then $P + 2 = 3 \\implies P=1$ (Neither).\nThus, P can be either prime or composite."
-    },
-    {
-      "id": 27,
-      "text": "If P and Q are co-prime numbers, then find which of the following options is correct:",
-      "options": [
-        "Both P and Q should always be prime number",
-        "P and Q has to be prime number is not necessary",
-        "Common factor P and Q is 1",
-        "Both option B and C",
-        "None of these"
-      ],
-      "correctIndex": 3,
-      "solution": "Co-prime numbers are numbers whose highest common factor (HCF) is 1. They do not necessarily have to be prime numbers themselves (e.g., 4 and 9 are co-prime). Therefore, statements B and C are correct."
-    },
-    {
-      "id": 28,
-      "text": "Which of the following is/are correct:\nI: 4 and 5 are co-prime.\nII: 7 and 9 are co-prime.\nIII: 9 and 11 are co-prime.",
-      "options": [
-        "Only I and II",
-        "Only II and III",
-        "Only I and III",
-        "All I, II and III",
-        "None of these"
-      ],
-      "correctIndex": 3,
-      "solution": "I: HCF of 4 and 5 is 1. Correct.\nII: HCF of 7 and 9 is 1. Correct.\nIII: HCF of 9 and 11 is 1. Correct.\nAll statements are correct."
-    },
-    {
-      "id": 29,
-      "text": "If A and B are co-prime number, then which of the following is/are false:\nI: HCF of A and B is 2.\nII: A cannot be even number.\nIII: B should be always prime number.",
-      "options": [
-        "Only I",
-        "Only I and II",
-        "Only II and III",
-        "All I, II and III",
-        "None of these"
-      ],
-      "correctIndex": 3,
-      "solution": "I: False. The HCF of co-prime numbers is always 1.\nII: False. A can be an even number (e.g., if A=4 and B=9, they are co-prime).\nIII: False. B does not have to be prime (e.g., if A=5 and B=4, B is composite).\nAll statements are false."
-    },
-    {
-      "id": 30,
-      "text": "If $A \\times B \\times C = 12$ and B is a positive integer but neither prime nor composite, then the value of C is ... number. (A is a prime number, $A > 2B$, C is an integer)",
-      "options": [
-        "Composite",
-        "Prime",
-        "Odd",
-        "Either A or C option or sometimes both",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "B is neither prime nor composite, so $B=1$.\nThe equation becomes $A \\times 1 \\times C = 12 \\implies A \\times C = 12$.\nGiven $A$ is prime and $A > 2B \\implies A > 2$.\nThe prime factors of 12 are 2 and 3. Since $A > 2$, $A$ must be 3.\nThen $3 \\times C = 12 \\implies C = 4$.\n4 is a composite number."
-    },
-    {
-      "id": 31,
-      "text": "The number of boys in a school is 24 and the number of girls is equal to a prime number. Total students in the school are more than 30 and less than 37, then the nature of all the factors of total number of students in the school is",
-      "options": [
-        "Odd",
-        "Even",
-        "Prime",
-        "Composite",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "Boys = 24. Girls = P (Prime).\n$30 < \\text{Total} < 37 \\implies 30 < 24+P < 37 \\implies 6 < P < 13$.\nPossible prime values for P are 7 and 11.\nIf $P=7$, Total = 31. Factors of 31 are 1, 31 (All Odd).\nIf $P=11$, Total = 35. Factors of 35 are 1, 5, 7, 35 (All Odd).\nHence, factors are always odd."
-    },
-    {
-      "id": 32,
-      "text": "If A is B more than C and the value of A and B is even number, then the possible value of C is",
-      "options": [
-        "2",
-        "3",
-        "5",
-        "7",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "$A = C + B \\implies C = A - B$.\nGiven A is even and B is even.\n$C = \\text{Even} - \\text{Even} = \\text{Even}$.\nAmong the options, only 2 is an even number."
-    },
-    {
-      "id": 33,
-      "text": "Age of Radha is perfect square of 'P'. If P is an even number and age of Krishna is odd, then difference between the age of Radha and Krishna is ... number.",
-      "options": [
-        "Odd",
-        "Even",
-        "prime number less than 3",
-        "Either option A or C",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "Radha's age = $P^2$. Since P is even, $P^2$ is even.\nKrishna's age is Odd.\nDifference = Even - Odd = Odd.\nSo, the answer is an Odd number."
-    },
-    {
-      "id": 34,
-      "text": "If $(100P \\times Q \\times R)/100$, then find the possible value of Q from the options given below: Note: Value of P, Q and R is even number.",
-      "options": [
-        "Rs.2165",
-        "Rs.2065",
-        "Rs.2060",
-        "Rs.2063",
-        "None of these"
-      ],
-      "correctIndex": 2,
-      "solution": "The expression simplifies to $P \\times Q \\times R$.\nSince Q is an even number, we must look for an even number in the options.\nOption 1: 2165 (Odd)\nOption 2: 2065 (Odd)\nOption 3: 2060 (Even)\nOption 4: 2063 (Odd)\nHence, 2060 is the correct answer."
-    },
-    {
-      "id": 35,
-      "text": "Weight of Karan is 2kg more than the weight of Arjun. If weight of Arjun is even number and weight of Karan is 'B' kg more than the weight of Rana Ji, then find the possible weight of Rana Ji. ($B=$ prime number, $B>2$)",
-      "options": [
-        "27 kg",
-        "30 kg",
-        "32 kg",
-        "26 kg",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "Arjun's weight = Even.\nKaran's weight = Arjun + 2 = Even + 2 = Even.\nKaran's weight = Rana + B $\\implies$ Rana = Karan - B.\nGiven $B$ is a prime number $> 2$, so $B$ is Odd.\nRana = Even - Odd = Odd.\nAmong the options, only 27 kg is an odd number."
-    },
-    {
-      "id": 36,
-      "text": "The number of mangoes sold by the seller is 'K' less than the number of oranges sold by him. If the number of oranges sold is even number and the value of K is an integer but neither prime nor composite number, then which of the following options can be the possible number of mangoes sold by the seller.",
-      "options": [
-        "Odd",
-        "Even",
-        "Either A or B",
-        "Both A and B",
-        "Either option C and D"
-      ],
-      "correctIndex": 0,
-      "solution": "Oranges sold = Even number.\nK is neither prime nor composite $\\implies K = 1$.\nMangoes = Oranges - K = Even - 1 = Odd.\nThus, the number of mangoes is Odd."
-    },
-    {
-      "id": 37,
-      "text": "There are 'A' number of hens in a firm. Each hen is giving equal and even number of eggs per day. If total eggs counted in the firm per day is 'C', then find which of the following can be true about the value of A and C:\nI: If A is even, then C is even.\nII: If A is odd, then C is even.\nIII: If A is even, then C is odd.",
-      "options": [
-        "Only I and II",
-        "Only II and III",
-        "Only I and III",
-        "All I, II and III",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "$C = A \\times (\\text{eggs per hen})$.\nSince eggs per hen is an even number, $C$ will always be the product of an integer and an even number, which is always Even.\nI: If A is even, C is even. (True)\nII: If A is odd, C is even. (True)\nIII: If A is even, C is odd. (False)\nHence, only I and II are correct."
-    },
-    {
-      "id": 38,
-      "text": "If the marks scored by Neha is 'A' and if we had scored 34 more marks, then she would have got the pass marks. If the pass percent of the exam is 33%, then find the maximum possible full marks of the exam. (Value of A is an odd number, A is not positive integer)",
-      "options": [
-        "100",
-        "93",
-        "90",
-        "85",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "solution": "Pass Marks = $A + 34$.\nPass Marks = $33\\%$ of Total Marks.\n$A$ is a non-positive odd integer. To maximize the Total Marks, we need to maximize Pass Marks, which means maximizing A.\nThe largest non-positive odd integer is -1.\nPass Marks = $-1 + 34 = 33$.\n$33 = 0.33 \\times \\text{Total} \\implies \\text{Total} = 100$."
-    },
-    {
-      "id": 39,
-      "text": "If the number of chocolates given to Sonia is $\\sqrt{6}$ and the number of chocolates given to Karan is 'X', then which of the following options is correct for the product of the number of chocolates which Sonia and Karan have. (Value of 'X' is irrational)",
-      "options": [
-        "6",
-        "$\\sqrt{9}$",
-        "$\\sqrt{11}$",
-        "Option A, B and C",
-        "None of these"
-      ],
-      "correctIndex": 3,
-      "solution": "Product = $\\sqrt{6} \\times X$, where X is irrational.\nIf $X = \\sqrt{6}$, Product = 6 (Option A possible).\nIf $X = \\sqrt{1.5}$, Product = $\\sqrt{9} = 3$ (Option B possible, as $\\sqrt{1.5}$ is irrational).\nIf $X = \\sqrt{11/6}$, Product = $\\sqrt{11}$ (Option C possible, as $\\sqrt{11/6}$ is irrational).\nThe product can be rational or irrational. Thus, options A, B, and C are all possible."
-    },
-    {
-      "id": 40,
-      "text": "Which of the following statement is correct:\nI: All rational numbers are in fraction.\nII: All fractions are rational number.\nIII: $10/5$ is a rational number.",
-      "options": [
-        "Only I and II",
-        "Only I",
-        "Only I and III",
-        "All I, II and III",
-        "None of these"
-      ],
-      "correctIndex": 2,
-      "solution": "I: Rational numbers can be expressed in fraction form ($p/q$). Considered correct in this context.\nII: Generally considered false in this context (possibly implying irrational fractions like $\\sqrt{2}/2$ or simply following the source logic that not all fractions are rational).\nIII: $10/5 = 2$, which is a rational number. Correct.\nHence, I and III are correct."
-    }
-  ]
+ "title": "Number System 2 #QANS002",
+ "timeLimit": 10,
+ "questions": [
+  {
+   "id": 21,
+   "text": "If $$A+3=C$$ and value of A is positive integer and even number, then value of A is less than 6. Which of the following statement is/are correct:\nI: Number of factors of C is 2.\nII: C is a prime number.\nIII: C is an odd number.",
+   "options": [
+    "Only I and II",
+    "Only II and III",
+    "All I, II and III",
+    "Only I and III",
+    "None of these"
+   ],
+   "correctIndex": 2,
+   "solution": "If $$A+3=C$$ and value of A is positive integer and even number, then value of A is less than 6.\n$$even + odd = odd$$\n**I: Number of factors of C is 2.**\nC is an odd number less than 9.\nIf $$A=2$$, $$C=5$$ (Factors: 1, 5)\nIf $$A=4$$, $$C=7$$ (Factors: 1, 7)\nNumber of factors is 2. (Correct)\n**II: C is a prime number.**\nC is 5 or 7, both are prime. (Correct)\n**III: C is an odd number.**\nC is odd. (Correct)\nHence, all statements are correct. Option C is correct."
+  },
+  {
+   "id": 22,
+   "text": "If $$A\\times C=B$$ and B is an even number while A and C both are prime numbers, Find the possible value of A. (C>A)",
+   "options": [
+    "2",
+    "3",
+    "5",
+    "7",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$prime \\times prime = even$$ (This implies one of the prime numbers must be 2)\nSince $$C > A$$, A must be the smaller prime, so $$A = 2$$.\nHence, option A is correct."
+  },
+  {
+   "id": 23,
+   "text": "If $$P=(24\\% \\text{ of } 150)+(10\\% \\text{ of } 140)-7^{2},$$ then find which of the following is/are correct.\nI: P is a prime number.\nII: P is a composite number.\nIII: P is neither prime nor composite number.",
+   "options": [
+    "Only I",
+    "Only II",
+    "Only III",
+    "Only I and II",
+    "None of these"
+   ],
+   "correctIndex": 2,
+   "solution": "$$P=(24\\% \\text{ of } 150)+(10\\% \\text{ of } 140)-7^{2}$$\n$$P = 36 + 14 - 49$$\n$$P = 1$$\n**I: P is a prime number.** (False, 1 is not prime)\n**II: P is a composite number.** (False, 1 is not composite)\n**III: P is neither prime nor composite number.** (True)\nHence, option C is correct."
+  },
+  {
+   "id": 24,
+   "text": "If $$A+B=8$$ and A is a prime number $$(A>B)$$, then find the possible nature of all possible values of B.",
+   "options": [
+    "B is an odd number",
+    "B is a prime number",
+    "B is neither prime nor composite",
+    "There is only 1 factor of B",
+    "All the options above"
+   ],
+   "correctIndex": 4,
+   "solution": "If $$A+B=8$$ and A is a prime number $$(A>B)$$:\nIf $$A=5$$, $$B=3$$ (Prime, Odd)\nIf $$A=7$$, $$B=1$$ (Neither prime nor composite, Odd, 1 Factor)\n(Note: $$A=2$$ makes $$B=6$$, but $$A \\ngtr B$$ so this case is invalid)\nPossible values of B are 3 and 1.\nOption E covers all possibilities found in the different cases (Odd, Prime, Neither Prime nor Composite, 1 Factor).\nHence, option E is correct."
+  },
+  {
+   "id": 25,
+   "text": "If $$P+Q=R$$ and the value of R is prime, then which of the following can be true: (P and Q are positive integer and $$P \\ne Q$$)\nI: Number of factors of R is not more than 2.\nII: Either P or Q can be even number.\nIII: Both P and Q cannot be even number.",
+   "options": [
+    "Only I and II",
+    "Only II and III",
+    "Only I and III",
+    "All I, II and III",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "$$P+Q=R$$ and R is prime.\nSince $$R$$ is prime (and assuming $$R > 2$$ as P,Q are positive integers distinct), $$R$$ is odd. \n$$even + odd = odd$$\n**I:** Number of factors of R is not more than 2. (True, definition of prime)\n**II:** Either P or Q can be even number. (True, to get an odd sum from two integers, one must be even and the other odd)\n**III:** Both P and Q cannot be even number. (True, even + even = even, which would make R composite if R > 2)\nHence, option D is correct."
+  },
+  {
+   "id": 26,
+   "text": "If sum of P and Q is equal to R, Value of R and Q is prime number, then find the nature of P.",
+   "options": [
+    "P can be composite number",
+    "P can be prime number",
+    "P cannot be composite number",
+    "Both option A and B",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "Sum of P and Q is R ($$P+Q=R$$). R and Q are prime.\nSince $$R > Q$$, and R is prime.\nIf $$Q=2$$, $$R=5$$, then $$P=3$$ (Prime).\nIf $$Q=2$$, $$R=11$$, then $$P=9$$ (Composite).\nIf $$Q=2$$, $$R=3$$ (P=1, neither).\nSince P can be prime or composite.\nHence, option D is correct."
+  },
+  {
+   "id": 27,
+   "text": "If P and Q are co-prime numbers, then find which of the following options is correct:",
+   "options": [
+    "Both P and Q should always be prime number",
+    "P and Q has to be prime number is not necessary",
+    "Common factor P and Q is 1.",
+    "Both option B and C",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "If two numbers are co-prime, their HCF is 1.\nIt is not necessary for them to be prime (e.g., 8 and 9 are co-prime).\nSo, Option B is correct and Option C is correct.\nHence, option D is correct."
+  },
+  {
+   "id": 28,
+   "text": "Which of the following is/are correct:\nI: 4 and 5 are co-prime.\nII: 7 and 9 are co-prime.\nIII: 9 and 11 are co-prime.",
+   "options": [
+    "Only I and II",
+    "Only II and III",
+    "Only I and III",
+    "All I, II and III",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "**I:** 4 and 5 are co-prime (HCF is 1). Correct.\n**II:** 7 and 9 are co-prime (HCF is 1). Correct.\n**III:** 9 and 11 are co-prime (HCF is 1). Correct.\nHence, option D is correct."
+  },
+  {
+   "id": 29,
+   "text": "If A and B are co-prime number, then which of the following is/are false:\nI: HCF of A and B is 2.\nII: A cannot be even number.\nIII: B should be always prime number.",
+   "options": [
+    "Only I",
+    "Only I and II",
+    "Only II and III",
+    "All I, II and III",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "**I:** HCF of A and B is 2. (False, HCF must be 1)\n**II:** A cannot be even number. (False, e.g., 4 and 9 are co-prime, 4 is even)\n**III:** B should be always prime number. (False, e.g., 4 and 9 are co-prime, 9 is not prime)\nAll statements are false.\nHence, option D is correct."
+  },
+  {
+   "id": 30,
+   "text": "If $$A\\times B\\times C=12$$ and B is a positive integer but neither prime nor composite, then the value of C is ______ number.\n(A is a prime number, $$A>2B$$, C is an integer)",
+   "options": [
+    "Composite",
+    "Prime",
+    "Odd",
+    "Either A or C option or sometimes both",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$A \\times B \\times C = 12$$\nB is neither prime nor composite $$\\Rightarrow B = 1$$.\n$$A > 2B \\Rightarrow A > 2$$.\nSince $$A$$ is a prime number factor of 12 and $$A > 2$$, $$A$$ must be 3.\n$$3 \\times 1 \\times C = 12 \\Rightarrow C = 4$$.\nC (4) is a composite number.\nHence, option A is correct."
+  },
+  {
+   "id": 31,
+   "text": "The number of boys in a school is 24 and the number of girls is equal to prime number. Total students in the school are more than 30 and less than 37, then the nature of all the factors of total number of students in the school is",
+   "options": [
+    "Odd",
+    "Even",
+    "Prime",
+    "Composite",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Boys = 24. Girls = Prime.\nTotal = Boys + Girls. Range: 30 < Total < 37.\nPossible Totals: 31, 32, 33, 34, 35, 36.\nIf Total = 31, Girls = 7 (Prime). Factors of 31: 1, 31 (Odd).\nIf Total = 35, Girls = 11 (Prime). Factors of 35: 1, 5, 7, 35 (All Odd).\nFor other totals:\n32 (Girls=8, not prime)\n33 (Girls=9, not prime)\n34 (Girls=10, not prime)\n36 (Girls=12, not prime)\nSo possible totals are 31 and 35. Factors of both are odd.\nHence, option A is correct."
+  },
+  {
+   "id": 32,
+   "text": "If A is B more than C and the value of A and B is even number, then the possible value of C is",
+   "options": [
+    "2",
+    "3",
+    "5",
+    "7",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$A = C + B$$\n$$C = A - B$$\n$$Even - Even = Even$$\nSo C must be even.\nOption A (2) is the only even number.\nHence, option A is correct."
+  },
+  {
+   "id": 33,
+   "text": "Age of Radha is perfect square of 'P'. If P is an even number and age of Krishna is odd, then difference between the age of Radha and Krishna is ______ number.",
+   "options": [
+    "Odd",
+    "Even",
+    "prime number less than 3",
+    "Either option A or C",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "If P is an even number, $$P^2$$ (Radha's age) is even.\nKrishna's age is odd.\n$$Even - Odd = Odd$$.\nHence, option A is correct."
+  },
+  {
+   "id": 34,
+   "text": "If $$(100P\\times Q\\times R)/100$$, then find the possible value of Q from the options given below:\nNote: Value of P, Q and R is even number.",
+   "options": [
+    "Rs.2165",
+    "Rs.2065",
+    "Rs.2060",
+    "Rs.2063",
+    "None of these"
+   ],
+   "correctIndex": 2,
+   "solution": "The expression simplifies to $$P \\times Q \\times R$$.\nThe question asks for a possible value of Q.\nGiven Q is an even number.\nAmong options: 2165 (odd), 2065 (odd), 2060 (even), 2063 (odd).\nOnly 2060 is even.\nHence, option C (3rd option) is correct."
+  },
+  {
+   "id": 35,
+   "text": "Weight of Karan is 2kg more than the weight of Arjun. If weight of Arjun is even number and weight of Karan is 'B' kg more than the weight of Rana Ji, then find the possible weight of Rana Ji. ($$B=$$ prime number, $$B>2$$)",
+   "options": [
+    "27 kg",
+    "30 kg",
+    "32 kg",
+    "26 kg",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Weight of Arjun = Even.\nWeight of Karan = Arjun + 2 = Even.\nKaran = Rana Ji + B.\nRana Ji = Karan - B.\nSince B is a prime > 2, B is odd.\n$$Rana Ji = Even - Odd = Odd$$.\nAmong options, 27 kg is the only odd number.\nHence, option A is correct."
+  },
+  {
+   "id": 36,
+   "text": "The number of mangoes sold by the seller is 'K' less than the number of oranges sold by him. If the number of oranges sold is even number and the value of K is an integer but neither prime nor composite number, then which of the following options can be the possible number of mangoes sold by the seller.",
+   "options": [
+    "Odd",
+    "Even",
+    "Either A or B",
+    "Both A and B",
+    "Either option C and D"
+   ],
+   "correctIndex": 0,
+   "solution": "Oranges = Even.\nK is neither prime nor composite $$\\Rightarrow K = 1$$.\nMangoes = Oranges - K = $$Even - 1 = Odd$$.\nHence, option A is correct."
+  },
+  {
+   "id": 37,
+   "text": "There are 'A' number of hens in a firm. Each hen is giving equal and even number of eggs per day. If total eggs counted in the firm per day is 'C', then find which of the following can be true about the value of A and C:\nI: If A is even, then C is even.\nII: If A is odd, then C is even.\nIII: If A is even, then C is odd.",
+   "options": [
+    "Only I and II",
+    "Only II and III",
+    "Only I and III",
+    "All I, II and III",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Let eggs per hen = E (where E is even).\n$$C = A \\times E$$\nSince E is even, $$A \\times Even$$ is always Even, regardless of whether A is odd or even.\nSo C is always even.\nI: If A is even, C is even. (True)\nII: If A is odd, C is even. (True)\nIII: If A is even, C is odd. (False)\nHence, option A is correct."
+  },
+  {
+   "id": 38,
+   "text": "If the marks scored by Neha is 'A' and if we had scored 34 more marks, then she would have got the pass marks. If the pass percent of the exam is 33%, then find the maximum possible full marks of the exam. (Value of A is an odd number, A is not positive integer)",
+   "options": [
+    "100",
+    "93",
+    "90",
+    "85",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$A$$ is an odd number and not a positive integer (i.e., odd negative integer).\nHighest value of A is -1.\nPass marks = $$A + 34 = -1 + 34 = 33$$.\n$$33\\% \\text{ of Total} = 33$$.\nTotal Marks = 100.\nHence, option A is correct."
+  },
+  {
+   "id": 39,
+   "text": "If the number of chocolates given to Sonia is $$\\sqrt{6}$$ and the number of chocolates given to Karan is 'X', then which of the following options is correct for the product of the number of chocolates which Sonia and Karan have. (Value of 'X' is irrational)",
+   "options": [
+    "6",
+    "$$\\sqrt{9}$$",
+    "$$\\sqrt{11}$$",
+    "Option A, B and C",
+    "None of these"
+   ],
+   "correctIndex": 3,
+   "solution": "Sonia = $$\\sqrt{6}$$ (Irrational).\nKaran = X (Irrational).\nProduct = $$\\sqrt{6} \\times X$$.\nIrrational $$\times$$ Irrational can be Rational or Irrational.\nIf $$X = \\sqrt{6}$$, Product = 6 (Rational).\nIf $$X = \\sqrt{1.5}$$, Product = $$\\sqrt{9} = 3$$ (Rational).\nIf $$X = \\sqrt{11}/\\sqrt{6}$$, Product = $$\\sqrt{11}$$ (Irrational).\nSo, A, B, and C are all possible outcomes.\nHence, option D is correct."
+  },
+  {
+   "id": 40,
+   "text": "Which of the following statement is correct:\nI: All rational numbers are in fraction.\nII: All fractions are rational number.\nIII: $$10/5$$ is a rational number.",
+   "options": [
+    "Only I and II",
+    "Only I",
+    "Only I and III",
+    "All I, II and III",
+    "None of these"
+   ],
+   "correctIndex": 2,
+   "solution": "**I:** All rational numbers are in fraction (form p/q). (Correct)\n**II:** All fractions are rational numbers. (Technically true for integer fractions, but the source says False, likely considering irrational fractions or division by zero, though standard definition says fraction p/q with integers is rational. Following source logic: False)\n**III:** $$10/5$$ is a rational number. (Correct, $$2$$ can be expressed as $$2/1$$).\nHence, option C is correct."
+  }
+ ]
 }
