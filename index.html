@@ -32,8 +32,6 @@
         </div>
         
         <div class="dashboard-grid">
-
-            <div class="dashboard-grid">
             
             <div class="subject-card" onclick="location.href='list.html?subject=full_test'">
                 <div class="card-content">
@@ -45,7 +43,7 @@
                 <div class="arrow-icon">➜</div>
             </div>
             
-            <div class="subject-card card-quant" onclick="location.href='list.html?subject=quant'">
+            <div class="subject-card card-quant" onclick="openSelectionModal('quant', 'Quantitative Aptitude')">
                 <div class="card-content">
                     <div class="icon-box">📊</div> 
                     <div class="text-group">
@@ -55,7 +53,7 @@
                 <div class="arrow-icon">➜</div>
             </div>
             
-            <div class="subject-card card-reasoning" onclick="location.href='list.html?subject=reasoning'">
+            <div class="subject-card card-reasoning" onclick="openSelectionModal('reasoning', 'Reasoning Ability')">
                 <div class="card-content">
                     <div class="icon-box">🧩</div> 
                     <div class="text-group">
@@ -65,7 +63,7 @@
                 <div class="arrow-icon">➜</div>
             </div>
             
-            <div class="subject-card card-english" onclick="location.href='list.html?subject=english'">
+            <div class="subject-card card-english" onclick="openSelectionModal('english', 'English Language')">
                 <div class="card-content">
                     <div class="icon-box">📖</div> 
                     <div class="text-group">
@@ -82,7 +80,56 @@
         </div>
     </div>
 
+    <div id="selection-modal" class="modal-overlay" style="display: none;" onclick="closeSelectionModal(event)">
+        <div class="modal-content">
+            <h3 id="modal-title" style="margin-top:0;">Select Category</h3>
+            <p style="color:var(--text-secondary); margin-bottom:20px;">Choose the type of practice you want:</p>
+            
+            <button class="btn-modal btn-sectional" onclick="goToTest('sectional')">
+                <span class="btn-icon">📑</span> Sectional Test
+                <small>Full subject mocks (30-40 Qs)</small>
+            </button>
+            
+            <button class="btn-modal btn-topic" onclick="goToTest('topic')">
+                <span class="btn-icon">🎯</span> Topic Test
+                <small>Chapter-wise practice (15-20 Qs)</small>
+            </button>
+
+            <button class="btn-text-close" onclick="closeSelectionModal(null)">Cancel</button>
+        </div>
+    </div>
+
     <script>
+        // --- MODAL LOGIC ---
+        var currentSubject = "";
+
+        function openSelectionModal(subject, title) {
+            currentSubject = subject;
+            document.getElementById('modal-title').innerText = title;
+            var modal = document.getElementById('selection-modal');
+            modal.style.display = "flex";
+            
+            // Add a tiny delay for animation class if you add CSS animations
+            setTimeout(() => modal.classList.add('active'), 10);
+        }
+
+        function closeSelectionModal(event) {
+            // Close if clicked on overlay (background) or Cancel button
+            if (!event || event.target.id === 'selection-modal' || event.target.classList.contains('btn-text-close')) {
+                var modal = document.getElementById('selection-modal');
+                modal.classList.remove('active');
+                setTimeout(() => modal.style.display = "none", 200);
+            }
+        }
+
+        function goToTest(type) {
+            // type is 'sectional' or 'topic'
+            // Constructs URL like: list.html?subject=quant_sectional
+            var target = currentSubject + "_" + type;
+            location.href = "list.html?subject=" + target;
+        }
+
+        // --- EXISTING THEME LOGIC ---
         function toggleTheme(event) {
             var chk = document.getElementById('checkbox');
             var isDark = chk.checked; 
@@ -127,23 +174,23 @@
                 if(chk) chk.checked = true; 
             }
         })();
+
         // 1. Disable Right Click
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             return false;
         });
 
-        // 2. Disable Copy Shortcuts (Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+P)
+        // 2. Disable Copy Shortcuts
         document.addEventListener('keydown', function(e) {
-        // Check if CTRL or CMD (Mac) is pressed
-        if (e.ctrlKey || e.metaKey) {
-            // Block C (Copy), U (View Source), S (Save), P (Print)
-            if (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'p') {
-                e.preventDefault();
-                return false;
+            if (e.ctrlKey || e.metaKey) {
+                if (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'p') {
+                    e.preventDefault();
+                    return false;
+                }
             }
-        }
-    });
+        });
     </script>
 </body>
+</html>
 </html>

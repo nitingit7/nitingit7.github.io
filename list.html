@@ -49,149 +49,162 @@
     </div>
 
     <script>
-    // --- CONFIGURATION ---
-    var FILTER_KEYWORDS = [
-        "RRB Clerk", "RRB PO", "IBPS Clerk", "IBPS PO", 
-        "SBI Clerk", "SBI PO", "Mains", "Speed Math", 
-        "Full Mock", "Sectional Mock"
-    ];
+        // Theme Logic
+        var savedTheme = localStorage.getItem('site-theme');
+        if(savedTheme === 'dark') { document.body.classList.add('dark-mode'); }
 
-    // Theme Logic
-    var savedTheme = localStorage.getItem('site-theme');
-    if(savedTheme === 'dark') { document.body.classList.add('dark-mode'); }
+        var currentFilter = null;
+        var loadedFiles = []; // Store files globally to access tags
 
-    var currentFilter = null;
+        window.onload = function() {
+            // 1. Back Button Logic
+            history.pushState(null, null, location.href);
+            window.onpopstate = function () { window.location.href = "index.html"; };
 
-    window.onload = function() {
-        // --- 1. BACK BUTTON TRAP (Goes to Home) ---
-        history.pushState(null, null, location.href);
-        window.onpopstate = function () {
-            window.location.href = "index.html"; 
+            // 2. Load Subject
+            var params = new URLSearchParams(window.location.search);
+            var subject = params.get('subject');
+
+            if(subject) localStorage.setItem('last_subject_viewed', subject);
+
+            if(!subject || !GITHUB_FILES[subject]) {
+                alert("Invalid Subject"); location.href = 'index.html'; return;
+            }
+
+            document.getElementById('list-title').innerText = subject.toUpperCase().replace(/_/g, ' ');
+
+            var list = document.getElementById('test-container');
+            loadedFiles = GITHUB_FILES[subject]; // Save data to generate filters later
+
+            // 3. Render Cards
+            loadedFiles.forEach(function(f) {
+                var div = document.createElement('div');
+                div.className = 'test-card-modern';
+                
+                // IMPORTANT: Store the tag in a data attribute for filtering
+                // If no tag exists, default to "General"
+                var tag = f.tags ? f.tags.toLowerCase() : "general";
+                div.setAttribute('data-tag', tag); 
+                div.setAttribute('data-name', f.name.toLowerCase()); // Keep name search too if needed
+                
+                // Icon Logic
+                var icon = "📝";
+                if(f.name.toLowerCase().includes("speed")) icon = "⚡";
+                if(f.name.toLowerCase().includes("puzzle")) icon = "🧩";
+                if(f.name.toLowerCase().includes("full mock")) icon = "🏆";
+
+                var saved = localStorage.getItem(f.file);
+                var btnText = saved ? "Analysis" : "Start";
+                var btnClass = saved ? "btn-action btn-result" : "btn-action btn-list-start";
+                var statusText = saved ? "Completed" : "Not Attempted";
+                var statusColor = saved ? "var(--green)" : "var(--text-secondary)";
+
+                div.innerHTML = `
+                    <div class="tc-left">
+                        <div class="tc-icon">${icon}</div>
+                        <div class="tc-info">
+                            <span class="tc-title">${f.name}</span>
+                            <span class="tc-status" style="color:${statusColor}">
+                                ${f.tags ? `<span class="tag-badge">${f.tags}</span> • ` : ''} ${statusText}
+                            </span>
+                        </div>
+                    </div>
+                    <button class="${btnClass}">${btnText}</button>
+                `;
+
+                div.onclick = function() {
+                    if (saved) location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file);
+                    else location.href = "instructions.html?file=" + encodeURIComponent(f.file);
+                };
+                list.appendChild(div);
+            });
+
+            // 4. Generate Dynamic Filters
+            generateDynamicFilters();
         };
 
-        var params = new URLSearchParams(window.location.search);
-        var subject = params.get('subject');
+        // --- NEW DYNAMIC FILTER FUNCTION ---
+        function generateDynamicFilters() {
+            var container = document.getElementById('filter-options-list');
+            container.innerHTML = '';
 
-        if(subject) localStorage.setItem('last_subject_viewed', subject);
+            // 1. Extract all unique tags from the loaded files
+            var uniqueTags = new Set();
+            loadedFiles.forEach(f => {
+                if(f.tags) uniqueTags.add(f.tags);
+            });
 
-        if(!subject || !GITHUB_FILES[subject]) {
-            alert("Invalid Subject");
-            location.href = 'index.html';
-            return;
-        }
-
-        // Set Title
-        document.getElementById('list-title').innerText = subject.toUpperCase().replace('_', ' ');
-
-        var list = document.getElementById('test-container');
-        var files = GITHUB_FILES[subject];
-
-        // --- 2. RENDER PROFESSIONAL CARDS ---
-        files.forEach(function(f) {
-            var div = document.createElement('div');
-            div.className = 'test-card-modern'; 
-            div.setAttribute('data-name', f.name.toLowerCase()); 
-            
-            // Determine Icon
-            var icon = "📝";
-            if(f.name.toLowerCase().includes("speed")) icon = "⚡";
-            if(f.name.toLowerCase().includes("full mock")) icon = "🏆";
-            if(f.name.toLowerCase().includes("mains")) icon = "🔥";
-
-            var saved = localStorage.getItem(f.file);
-            var btnText = saved ? "Analysis" : "Start";
-            var btnClass = saved ? "btn-action btn-result" : "btn-action btn-list-start";
-            var statusText = saved ? "Completed" : "Not Attempted";
-            var statusColor = saved ? "var(--green)" : "var(--text-secondary)";
-
-            // HTML Structure
-            div.innerHTML = `
-                <div class="tc-left">
-                    <div class="tc-icon">${icon}</div>
-                    <div class="tc-info">
-                        <span class="tc-title">${f.name}</span>
-                        <span class="tc-status" style="color:${statusColor}">${statusText}</span>
-                    </div>
-                </div>
-                <button class="${btnClass}">${btnText}</button>
-            `;
-
-            // --- CLICK HANDLER (Entire Card works) ---
-            div.onclick = function() {
-                if (saved) {
-                    location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file);
-                } else {
-                    location.href = "instructions.html?file=" + encodeURIComponent(f.file);
-                }
-            };
-
-            list.appendChild(div);
-        });
-
-        renderFilterOptions();
-    };
-
-    // --- FILTER FUNCTIONS ---
-    function toggleFilterMenu() {
-        document.getElementById('filter-dropdown').classList.toggle('show');
-    }
-
-    function renderFilterOptions() {
-        var container = document.getElementById('filter-options-list');
-        container.innerHTML = '';
-        FILTER_KEYWORDS.forEach(function(word) {
-            var btn = document.createElement('div');
-            btn.className = 'filter-option';
-            btn.innerText = word;
-            btn.onclick = function() { applyFilter(word, btn); };
-            container.appendChild(btn);
-        });
-    }
-
-    function applyFilter(word, btnElement) {
-        currentFilter = word.toLowerCase();
-        var allOpts = document.querySelectorAll('.filter-option');
-        allOpts.forEach(el => el.classList.remove('selected'));
-        if(btnElement) btnElement.classList.add('selected');
-        document.getElementById('btn-filter-toggle').classList.add('active');
-        
-        var items = document.querySelectorAll('.test-card-modern');
-        var visibleCount = 0;
-        items.forEach(function(item) {
-            var testName = item.getAttribute('data-name');
-            if (testName.includes(currentFilter)) {
-                item.style.display = 'flex';
-                visibleCount++;
-            } else {
-                item.style.display = 'none';
+            // If no tags found, hide the filter button
+            if(uniqueTags.size === 0) {
+                document.getElementById('btn-filter-toggle').style.display = 'none';
+                return;
             }
-        });
-        var msg = document.getElementById('no-result-msg');
-        msg.style.display = (visibleCount === 0) ? 'block' : 'none';
-        toggleFilterMenu();
-    }
 
-    function clearFilter() {
-        currentFilter = null;
-        var items = document.querySelectorAll('.test-card-modern');
-        items.forEach(item => item.style.display = 'flex');
-        var allOpts = document.querySelectorAll('.filter-option');
-        allOpts.forEach(el => el.classList.remove('selected'));
-        document.getElementById('btn-filter-toggle').classList.remove('active');
-        document.getElementById('no-result-msg').style.display = 'none';
-        toggleFilterMenu();
-    }
-
-    window.onclick = function(event) {
-        if (!event.target.matches('.btn-filter') && !event.target.closest('.filter-dropdown') && !event.target.closest('.btn-filter')) {
-            var openDropdown = document.getElementById('filter-dropdown');
-            if (openDropdown.classList.contains('show')) openDropdown.classList.remove('show');
+            // 2. Create Button for each Tag
+            uniqueTags.forEach(tag => {
+                var btn = document.createElement('div');
+                btn.className = 'filter-option';
+                btn.innerText = tag;
+                btn.onclick = function() { applyFilter(tag, btn); };
+                container.appendChild(btn);
+            });
         }
-    }
-    
-    window.onpageshow = function(event) {
-        if (event.persisted) { window.location.reload(); }
-    };
+
+        function toggleFilterMenu() {
+            document.getElementById('filter-dropdown').classList.toggle('show');
+        }
+
+        function applyFilter(category, btnElement) {
+            currentFilter = category.toLowerCase();
+            
+            // Update UI
+            var allOpts = document.querySelectorAll('.filter-option');
+            allOpts.forEach(el => el.classList.remove('selected'));
+            if(btnElement) btnElement.classList.add('selected');
+            document.getElementById('btn-filter-toggle').classList.add('active');
+            
+            // Filter Logic
+            var items = document.querySelectorAll('.test-card-modern');
+            var visibleCount = 0;
+            
+            items.forEach(function(item) {
+                var itemTag = item.getAttribute('data-tag');
+                // Check if the Item's tag matches the selected filter
+                if (itemTag === currentFilter) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            var msg = document.getElementById('no-result-msg');
+            msg.style.display = (visibleCount === 0) ? 'block' : 'none';
+            
+            toggleFilterMenu();
+        }
+
+        function clearFilter() {
+            currentFilter = null;
+            var items = document.querySelectorAll('.test-card-modern');
+            items.forEach(item => item.style.display = 'flex');
+            
+            var allOpts = document.querySelectorAll('.filter-option');
+            allOpts.forEach(el => el.classList.remove('selected'));
+            
+            document.getElementById('btn-filter-toggle').classList.remove('active');
+            document.getElementById('no-result-msg').style.display = 'none';
+            toggleFilterMenu();
+        }
+
+        // Close menu on outside click
+        window.onclick = function(event) {
+            if (!event.target.matches('.btn-filter') && !event.target.closest('.filter-dropdown') && !event.target.closest('.btn-filter')) {
+                var openDropdown = document.getElementById('filter-dropdown');
+                if (openDropdown.classList.contains('show')) openDropdown.classList.remove('show');
+            }
+        }
+        window.onpageshow = function(event) { if (event.persisted) window.location.reload(); };
     </script>
 </body>
 </html>
