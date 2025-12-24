@@ -251,7 +251,7 @@
   },
   {
    "id": 20,
-   "text": "If P is prime number and $$P+Q=18$$, the number of factors of Q is more than 2, then find the value of Q. P<Q",
+   "text": "If P is prime number and $$P+Q=18$$, the number of factors of Q is more than 2, then find the value of Q, (P<Q)",
    "options": [
     "15",
     "13",
