@@ -1,0 +1,146 @@
+{
+  "title": "Time & Work 3 #QATW003",
+  "timeLimit": 15,
+  "questions": [
+    {
+      "id": 41,
+      "text": "P and Q can do a work in 20 and 30 days respectively. They worked together for 2 days and then they started to work alternatively. In how many days they will complete the work if P starts the work?",
+      "options": ["20 days", "32 days", "33 days", "22 days", "44 days"],
+      "correctIndex": 3,
+      "solution": "Let total work be **60 units**. \nEfficiency of **P** = $$\\frac{60}{20} = 3$$ \nEfficiency of **Q** = $$\\frac{60}{30} = 2$$ \nWork done in first 2 days = $$(3 + 2) \\times 2 = 10 \\text{ units}$$ \nRemaining work = $$60 - 10 = 50 \\text{ units}$$ \nNow they work alternatively (P then Q): \nIn **2 days**, work done = $$3 + 2 = 5 \\text{ units}$$ \nTo complete 50 units: $$\\frac{50}{5} \\times 2 \\text{ days} = 20 \\text{ days}$$ \nTotal time = $$2 + 20 = 22 \\text{ days}$$\nHence, option **D** is correct."
+    },
+    {
+      "id": 42,
+      "text": "Person A is 9.09% more efficient than B, both started working alternatively, starting with A and completed 50% of work in 20 days, if C alone can complete the work in 92 days, then find the time taken by A and C together to complete 170% of work.",
+      "options": ["23 days", "40 days", "46 days", "85 days", "92 days"],
+      "correctIndex": 2,
+      "solution": "$$9.09\\% = \\frac{1}{11}$$ \nLet efficiency of **B** = $$11x$$, then efficiency of **A** = $$12x$$ \nWorking alternatively for 20 days means A works for 10 days and B works for 10 days. \n**50% of work** = $$12x \\times 10 + 11x \\times 10 = 230x$$ \nTotal work = $$230x \\times 2 = 460x$$ \nEfficiency of **C** = $$\\frac{460x}{92} = 5x$$ \nCombined efficiency of **A + C** = $$12x + 5x = 17x$$ \n**170% of work** = $$460x \\times 1.7 = 782x$$ \nTime taken = $$\\frac{782x}{17x} = 46 \\text{ days}$$\nHence, option **C** is correct."
+    },
+    {
+      "id": 43,
+      "text": "Shivam can complete a work in 30 days whereas Manoj is 80% less efficient than Shivam. If they work together alternatively then in how many days, they will complete the total work in (y-50) days, if Shivam starts first, then find the value of $$2\\sqrt{y}.$$",
+      "options": ["10", "20", "40", "30", "50"],
+      "correctIndex": 1,
+      "solution": "Let efficiency of **Shivam** = $$5x$$. \nManoj is 80% less efficient, so efficiency of **Manoj** = $$5x \\times 0.2 = x$$ \nTotal work = $$5x \\times 30 = 150x$$ \nAlternatively (S then M): \n**2 days' work** = $$5x + x = 6x$$ \nCycles needed = $$\\frac{150x}{6x} = 25 \\text{ cycles}$$ \nTotal days = $$25 \\times 2 = 50 \\text{ days}$$ \nAccording to the question: \n$$y - 50 = 50 \\Rightarrow y = 100$$ \nValue of $$2\\sqrt{y} = 2\\sqrt{100} = 2 \\times 10 = 20$$\nHence, option **B** is correct."
+    },
+    {
+      "id": 44,
+      "text": "P alone completes the work in 50 days and the efficiencies of Q and R are equal and the ratio of the efficiency of P and R is 2:5. If P, Q and R started the work alternatively, starting with P, then Q and then R and so on. After 7 cycles P, Q and R left the work, then S alone complete the remaining work in four days. Find the time taken by S alone to complete the whole work?",
+      "options": ["15 days", "35 days", "20 days", "40 days", "Other than given options"],
+      "correctIndex": 4,
+      "solution": "Efficiency: **P = 2x, R = 5x, Q = 5x** \nTotal work = $$2x \\times 50 = 100x$$ \nOne cycle (P, Q, R) = $$2x + 5x + 5x = 12x \\text{ work in 3 days}$$ \nWork done in 7 cycles = $$12x \\times 7 = 84x$$ \nRemaining work = $$100x - 84x = 16x$$ \nEfficiency of **S** = $$\\frac{16x}{4} = 4x$$ \nTime taken by S alone = $$\\frac{100x}{4x} = 25 \\text{ days}$$\nHence, option **E** is correct."
+    },
+    {
+      "id": 45,
+      "text": "A, B, C can complete the piece of work alone in 32, 56, 112 days respectively. Starting with A, all of them worked alternatively, then find in how many days the whole work be completed?",
+      "options": ["200/7 days", "280/11 days", "240/7 days", "360/7 days", "300/9 days"],
+      "correctIndex": 3,
+      "solution": "Let total work = **224 units** \nEfficiency of **A** = $$224/32 = 7$$ \nEfficiency of **B** = $$224/56 = 4$$ \nEfficiency of **C** = $$224/112 = 2$$ \n**3 days' work** (alternative) = $$7 + 4 + 2 = 13$$ \nIn $$3 \\times 17 = 51 \\text{ days}$$, work done = $$13 \\times 17 = 221 \\text{ units}$$ \nRemaining work = $$224 - 221 = 3 \\text{ units}$$ \nNext turn is of **A**. Time taken by A = $$\\frac{3}{7} \\text{ days}$$ \nTotal time = $$51 + \\frac{3}{7} = \\frac{360}{7} \\text{ days}$$\nHence, option **D** is correct."
+    },
+    {
+      "id": 46,
+      "text": "M can complete an assignment in (a-2) hours, and N can complete the same assignment in (a+1) hours. If M and N working together can complete the assignment in 2 hours, then what fraction of the assignment will be completed by N in 3 hours?",
+      "options": ["2/3", "1/2", "1/3", "3/5", "None of these"],
+      "correctIndex": 1,
+      "solution": "Rate of M = $$\\frac{1}{a-2}$$, Rate of N = $$\\frac{1}{a+1}$$ \nCombined rate: $$\\frac{1}{a-2} + \\frac{1}{a+1} = \\frac{1}{2}$$ \n$$\\frac{(a+1) + (a-2)}{(a-2)(a+1)} = \\frac{1}{2} \\Rightarrow \\frac{2a-1}{a^2-a-2} = \\frac{1}{2}$$ \n$$4a - 2 = a^2 - a - 2 \\Rightarrow a^2 - 5a = 0$$ \nSince $$a > 2$$, **a = 5** \nN's time = $$a + 1 = 6 \\text{ hours}$$ \nWork done by N in 3 hours = $$\\frac{3}{6} = \\frac{1}{2}$$\nHence, option **B** is correct."
+    },
+    {
+      "id": 47,
+      "text": "A pipe P can fill a tank in (2m-1) hours, another pipe Q can fill the same tank in (m+4) hours, and a drainpipe R can empty the tank in 20 hours. If all three pipes are opened together, the tank can be filled in 10 hours. Find the value of m.",
+      "options": ["13", "12", "8", "7", "10"],
+      "correctIndex": 2,
+      "solution": "Equation: \n$$\\frac{1}{2m-1} + \\frac{1}{m+4} - \\frac{1}{20} = \\frac{1}{10}$$ \n$$\\frac{1}{2m-1} + \\frac{1}{m+4} = \\frac{3}{20}$$ \n$$\\frac{3m+3}{2m^2+7m-4} = \\frac{3}{20}$$ \n$$20(m+1) = 2m^2+7m-4 \\Rightarrow 2m^2 - 13m - 24 = 0$$ \nSolving the quadratic: $$(m-8)(2m+3) = 0$$ \nAs $$m > 0.5$$, **m = 8**.\nHence, option **C** is correct."
+    },
+    {
+      "id": 48,
+      "text": "if y women can complete a project in 12 days working 6 hours per day, and (y-2) women can complete the same project in 16 days working 9 hours per day, then find the value of y.",
+      "options": ["4", "8", "3", "2", "None of these"],
+      "correctIndex": 0,
+      "solution": "Using the MDH formula ($$M_1D_1H_1 = M_2D_2H_2$$): \n$$y \\times 12 \\times 6 = (y-2) \\times 16 \\times 9$$ \n$$72y = 144(y-2)$$ \nDivide by 72: \n$$y = 2(y-2) \\Rightarrow y = 2y - 4$$ \n**y = 4**\nHence, option **A** is correct."
+    },
+    {
+      "id": 49,
+      "text": "'p' workers can produce 40% of a batch of items in 8 hours. If (p+6) workers can produce the entire batch of items in a time that is 4 hours less than the time taken by 'p' workers to produce the entire batch, find the value of 'p'.",
+      "options": ["36", "24", "42", "17", "None of these"],
+      "correctIndex": 1,
+      "solution": "Time for 'p' workers to do 100% work = $$\\frac{8}{0.4} = 20 \\text{ hours}$$ \nTime for '(p+6)' workers = $$20 - 4 = 16 \\text{ hours}$$ \nTotal work (worker-hours) is constant: \n$$p \\times 20 = (p+6) \\times 16$$ \n$$20p = 16p + 96 \\Rightarrow 4p = 96$$ \n**p = 24**\nHence, option **B** is correct."
+    },
+    {
+      "id": 50,
+      "text": "Two painters, P and Q, can paint a house in 20 hours and 30 hours respectively. P worked for (y-2) hours and Q worked for (y+1) hours. If 40% of the painting remains unfinished, which is then completed by a third painter R, find the time taken by a fourth painter S to paint the entire house alone, if S takes (y+3) hours to complete the work.",
+      "options": ["13 hours.", "8 hours.", "11 hours.", "15 hours.", "None of these"],
+      "correctIndex": 2,
+      "solution": "Work done by P and Q = $$60\\% = 0.6$$ \n$$\\frac{y-2}{20} + \\frac{y+1}{30} = 0.6$$ \nMultiply by 60: \n$$3(y-2) + 2(y+1) = 36$$ \n$$5y - 4 = 36 \\Rightarrow 5y = 40 \\Rightarrow y = 8$$ \nTime taken by S = $$y + 3 = 8 + 3 = 11 \\text{ hours}$$\nHence, option **C** is correct."
+    },
+    {
+      "id": 51,
+      "text": "Machine P can process a batch of items in (y) hours. Machine Q can process the same batch in (y+10) hours. Working together, P and Q can process the batch in 12 hours. Find the time taken by Machine R to process the batch if all three machines working together can process one-fourth of the batch in 1 hour.",
+      "options": ["7 hours", "3 hours", "2 hours", "6 hours", "None of these"],
+      "correctIndex": 3,
+      "solution": "For P and Q: $$\\frac{1}{y} + \\frac{1}{y+10} = \\frac{1}{12}$$ \nSolve for y: $$12(2y+10) = y(y+10) \\Rightarrow y^2 - 14y - 120 = 0$$ \n$$(y-20)(y+6) = 0 \\Rightarrow y = 20$$ \nRates: **P = 1/20, Q = 1/30** \nCombined rate of P+Q+R = $$\\frac{1/4}{1} = \\frac{1}{4} \\text{ per hour}$$ \nRate of **R** = $$\\frac{1}{4} - (\\frac{1}{20} + \\frac{1}{30}) = \\frac{15-3-2}{60} = \\frac{10}{60} = \\frac{1}{6}$$ \nTime for R = **6 hours**.\nHence, option **D** is correct."
+    },
+    {
+      "id": 52,
+      "text": "Team P and Team Q together can finish a task in y hours, and Team R alone can finish the same task in 4 hours. If Team P, Team Q, and Team R working together can finish the task in (y-2) hours, find the value of y.",
+      "options": ["1", "4", "6", "5", "None of these"],
+      "correctIndex": 1,
+      "solution": "Combined rate: Rate of (P+Q) + Rate of R = Total rate \n$$\\frac{1}{y} + \\frac{1}{4} = \\frac{1}{y-2}$$ \n$$\\frac{4+y}{4y} = \\frac{1}{y-2} \\Rightarrow (y+4)(y-2) = 4y$$ \n$$y^2 + 2y - 8 = 4y \\Rightarrow y^2 - 2y - 8 = 0$$ \n$$(y-4)(y+2) = 0$$ \nSince $$y > 0$$, **y = 4**.\nHence, option **B** is correct."
+    },
+    {
+      "id": 53,
+      "text": "Worker P can complete a task in 12 hours. The efficiency ratio of Worker P to Worker Q is 3:2. Worker R can complete the same task in 8 hours. If Worker Q and Worker R worked together for Y hours, and then Worker P and Worker R completed the remaining task in (Y+2) hours, find the value of 2y.",
+      "options": ["3", "2", "1", "4", "None of these"],
+      "correctIndex": 0,
+      "solution": "Rates per hour: \n**P** = $$1/12$$ \n**Q** = $$\\frac{2}{3} \\times \\frac{1}{12} = \\frac{1}{18}$$ \n**R** = $$1/8$$ \nWork Equation: \n$$Y(\\frac{1}{18} + \\frac{1}{8}) + (Y+2)(\\frac{1}{12} + \\frac{1}{8}) = 1$$ \n$$Y(\\frac{13}{72}) + (Y+2)(\\frac{5}{24}) = 1$$ \nMultiply by 72: \n$$13Y + 3(Y+2)5 = 72 \\Rightarrow 13Y + 15Y + 30 = 72$$ \n$$28Y = 42 \\Rightarrow Y = 1.5$$ \nValue of **2Y** = $$2 \\times 1.5 = 3$$\nHence, option **A** is correct."
+    },
+    {
+      "id": 54,
+      "text": "A pump can fill a tank in h hours, and another pump can fill the same tank in (h+5) hours. If they fill the tank in 6 hours working together, then find the number of hours taken by the slower pump to fill the tank alone.",
+      "options": ["20 hours", "15 hours", "22 hours", "12 hours", "None of these"],
+      "correctIndex": 1,
+      "solution": "Equation: $$\\frac{1}{h} + \\frac{1}{h+5} = \\frac{1}{6}$$ \n$$6(2h+5) = h(h+5) \\Rightarrow 12h + 30 = h^2 + 5h$$ \n$$h^2 - 7h - 30 = 0 \\Rightarrow (h-10)(h+3) = 0 \\Rightarrow h = 10$$ \nSlower pump = $$h + 5 = 10 + 5 = 15 \\text{ hours}$$\nHence, option **B** is correct."
+    },
+    {
+      "id": 55,
+      "text": "Two workers, X and Y, together can complete a task in z days. Worker X alone can complete the task in (z+2) days. Worker Y takes 6 days more than Worker X to do the same task. Find the value of z.",
+      "options": ["7", "5", "4", "3", "None of these"],
+      "correctIndex": 2,
+      "solution": "Time for X = $$z+2$$, Time for Y = $$(z+2) + 6 = z+8$$ \n$$\\frac{1}{z+2} + \\frac{1}{z+8} = \\frac{1}{z}$$ \n$$\\frac{2z+10}{z^2+10z+16} = \\frac{1}{z} \\Rightarrow 2z^2 + 10z = z^2 + 10z + 16$$ \n**$$z^2 = 16 \\Rightarrow z = 4$$**\nHence, option **C** is correct."
+    },
+    {
+      "id": 56,
+      "text": "Anand, Bhiku and Chandu together can complete the work in 25 days. Efficiency of Anand is twice of Bhiku and efficiency of Chandu is 66.67% of Anand and Bhiku together. In how many days Bhiku alone complete the work?",
+      "options": ["125 days", "140 days", "135 days", "150 days", "None of these"],
+      "correctIndex": 0,
+      "solution": "Let efficiency of **Bhiku** = $$x$$ \nEfficiency of **Anand** = $$2x$$ \nAnand + Bhiku = $$3x$$ \nEfficiency of **Chandu** = $$66.67\\% \\text{ of } 3x = \\frac{2}{3} \\times 3x = 2x$$ \nTotal Efficiency = $$x + 2x + 2x = 5x$$ \nTotal Work = $$5x \\times 25 = 125x$$ \nDays for Bhiku = $$\\frac{125x}{x} = 125 \\text{ days}$$\nHence, option **A** is correct."
+    },
+    {
+      "id": 57,
+      "text": "21 male labours can do a piece of work in 30 days in work for 12 hours per day. If the efficiency of a male labour is double a female labour, then in how many hours per day 42 female labour can do the same work in 30 days?",
+      "options": ["16 hours", "18 hours", "12 hours", "14 hours", "None of these"],
+      "correctIndex": 2,
+      "solution": "Efficiency: **1 Male = 2 Female** \nTotal Work = $$21M \\times 30 \\times 12$$ \nSubstituting Male efficiency: $$21(2F) \\times 30 \\times 12 = 42F \\times 30 \\times 12$$ \nRequired: $$42F \\times 30 \\times H = 42F \\times 30 \\times 12$$ \n**H = 12 hours**\nHence, option **C** is correct."
+    },
+    {
+      "id": 58,
+      "text": "Atmaram and Bhikaram can complete the work in 40 days and 60 days respectively. Atmaram and Bhikaram started working together and after 6 days Sakaram joined with them. Sakaram is twice as efficient as Bhikaram. In how many days the total work is completed?",
+      "options": ["15", "12", "14", "16", "None of these"],
+      "correctIndex": 3,
+      "solution": "Let total work = **120 units** \nAtmaram efficiency = 3, Bhikaram efficiency = 2 \nSakaram efficiency = $$2 \\times 2 = 4$$ \nWork by A and B in 6 days = $$(3+2) \\times 6 = 30$$ \nRemaining work = $$120 - 30 = 90$$ \nCombined efficiency (A+B+S) = $$3+2+4 = 9$$ \nRemaining time = $$90/9 = 10 \\text{ days}$$ \nTotal time = $$6 + 10 = 16 \\text{ days}$$\nHence, option **D** is correct."
+    },
+    {
+      "id": 59,
+      "text": "18 male labours complete half of the work in 20 days. Efficiency of the female labours is double of male labours. In how many days 6 male labours and 9 female labours complete the work?",
+      "options": ["20 days", "24 days", "30 days", "36 days", "None of these"],
+      "correctIndex": 2,
+      "solution": "18M for 20 days = 1/2 work. \nSo, 18M for 40 days = Full work. \nTotal units = $$18 \\times 40 = 720 \\text{ units}$$ \nMale efficiency = 1, Female efficiency = 2. \nEfficiency of (6M + 9F) = $$6(1) + 9(2) = 24$$ \nTime taken = $$\\frac{720}{24} = 30 \\text{ days}$$\nHence, option **C** is correct."
+    },
+    {
+      "id": 60,
+      "text": "In the beginning Aniket works at a rate such that he can finish a piece of work in 48 hours, but he works at this rate for 16 hours. After that he increased his efficiency by 33.33%. If Aniket is to finish this work at a stretch, how many hours will he take to finish this work?",
+      "options": ["32", "40", "28", "35", "42"],
+      "correctIndex": 1,
+      "solution": "In 16 hours at 48-hour rate, work done = $$16/48 = 1/3$$ \nRemaining work = **2/3** \nNormal time left = 32 hours. \nNew efficiency = $$1 + 1/3 = 4/3$$ of initial. \nNew time = $$\\text{Old Time} \\times \\frac{\\text{Old Efficiency}}{\\text{New Efficiency}}$$ \nNew time = $$32 \\times \\frac{3}{4} = 24 \\text{ hours}$$ \nTotal time taken = $$16 + 24 = 40 \\text{ hours}$$\nHence, option **B** is correct."
+    }
+  ]
+    }
