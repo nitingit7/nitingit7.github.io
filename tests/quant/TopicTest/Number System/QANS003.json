@@ -4,7 +4,7 @@
   "questions": [
     {
       "id": 41,
-      "text": "Which of the following is the **highest common factor (HCF)** of 'K' and 'M'?\nFactors of $$K = 3^{3} \times 2^{2}$$\nFactors of $$M = 3^{2} \times 2^{3}$$",
+      "text": "Which of the following is the highest common factor of 'K' and 'M':\nFactors of $$K = 3^{3} \\times 2^{2}$$\nFactors of $$M = 3^{2} \\times 2^{3}$$",
       "options": [
         "30",
         "36",
@@ -13,24 +13,24 @@
         "None of these"
       ],
       "correctIndex": 1,
-      "solution": "$$HCF = 2^{2} \times 3^{2} = 4 \times 9 = 36$$\nHence, option B is correct."
+      "solution": "$$HCF = 2^{2} \\times 3^{2} = 4 \\times 9 = 36$$\nHence, option **B** is correct."
     },
     {
       "id": 42,
-      "text": "Find the **least common multiple (LCM)** of two numbers whose factors are $$(x^{3} \times y^{5})$$ and $$(x^{2} \times y^{2})$$ respectively.",
+      "text": "Least common factors of two numbers whose factors are $$(x^{3} \\times y^{5})$$ and $$(x^{2} \\times y^{2})$$ respectively.",
       "options": [
-        "$$x^{3} \times y^{5}$$",
+        "$$x^{3} \\times y^{5}$$",
         "$$x^{2}$$",
-        "$$x^{2} \times y^{2}$$",
+        "$$x^{2} \\times y^{2}$$",
         "$$y^{2}$$",
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$LCM = x^{3} \times y^{5}$$\nHence, option A is correct."
+      "solution": "$$LCM = x^{3} \\times y^{5}$$\nHence, option **A** is correct."
     },
     {
       "id": 43,
-      "text": "Which of the following statements is **false**?",
+      "text": "Which of the following is false:",
       "options": [
         "Product of 18 and 16 is equal to the product of its LCM and HCF",
         "Product of 12, 14 and 20 is equal to the product of their LCM and HCF",
@@ -39,11 +39,11 @@
         "All options are true"
       ],
       "correctIndex": 1,
-      "solution": "**Option B is incorrect.** \nProduct of three numbers is not always equal to the products of their HCF and LCM. The product of three numbers can be equal to the product of their HCF and LCM only when the numbers are **prime numbers**."
+      "solution": "**Option B** is incorrect. Product of three numbers is not always equal to the products of their HCF and LCM. The product of three numbers can be equal to the product of their HCF and LCM only when the numbers are prime numbers.\nHence, option **B** is right answer."
     },
     {
       "id": 44,
-      "text": "If the **HCF and LCM** of 'a' and 22 is **2** and **264** respectively, then find the value of **'a'**.",
+      "text": "If the HCF and LCM of 'a' and 22 is 2 and 264 respectively, then find the value of 'a'.",
       "options": [
         "24",
         "21",
@@ -52,11 +52,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$HCF \times LCM = a \times 22$$\n$$2 \times 264 = 22a$$\n$$a = 24$$\nHence, option A is correct."
+      "solution": "$$HCF \\times LCM = a \\times 22$$\n\n$$2 \\times 264 = 22a$$\n\n$$a = 24$$\nHence, option **A** is correct."
     },
     {
       "id": 45,
-      "text": "If the **product of two numbers** is equal to $$(x+22)$$ and **LCM** is also equal to the product of the numbers, then find the **HCF** of the two numbers.",
+      "text": "If the product of two numbers is equal to $$(x+22)$$ and LCM is also equal to the product of the numbers, then find the HCF of the two numbers.",
       "options": [
         "1",
         "2",
@@ -65,11 +65,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$HCF \times LCM = \\text{Product of two numbers}$$\nSince LCM is also equal to the product of the numbers, in this case, HCF is always equal to **1**.\nHence, option A is correct."
+      "solution": "$$HCF \\times LCM = \\text{Product of two numbers}$$\nLCM is also equal to the product of the numbers, in this case HCF is always equal to **1**.\nhence, option **A** is correct."
     },
     {
       "id": 46,
-      "text": "The **LCM** of two numbers is $$(3x+3)$$ and the **HCF** of the same two numbers is **8**. If the **product of the numbers** is equal to **384**, then find the value of **'x'**.",
+      "text": "LCM of two numbers is $$(3x+3)$$ and HCF of the same two numbers is 8. If the product of the numbers is equal to 384, then find the value of 'x'.",
       "options": [
         "15",
         "10",
@@ -78,11 +78,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$HCF \times LCM = \\text{Product of two numbers}$$\n$$(3x+3) \\times 8 = 384$$\n$$3x + 3 = 48$$\n$$x = 45 / 3 = 15$$\nHence, option A is correct."
+      "solution": "$$HCF \\times LCM = \\text{Product of two numbers}$$\n\n$$(3x+3) \\times 8 = 384$$\n\n$$3x+3 = 48$$\n\n$$x = 45/3 = 15$$\nHence, option **A** is correct."
     },
     {
       "id": 47,
-      "text": "If the **sum of two numbers** is **330** and their **HCF** is equal to **22**, then find which of the following options can be correct values for the two numbers.",
+      "text": "If the sum of two numbers is 330 and the their HCF is equal to 22, then find which of the following options can be correct value for the two numbers.",
       "options": [
         "176, 154",
         "220, 110",
@@ -91,24 +91,24 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "Let the numbers be $$22a$$ and $$22b$$.\n$$22a + 22b = 330 \\Rightarrow a + b = 330 / 22 = 15$$\nOption A (176, 154) satisfies this: $$176/22 = 8$$ and $$154/22 = 7$$. Since $$8+7=15$$ and $$HCF(8,7)=1$$, it is correct."
+      "solution": "Here, $$a+b = 330/22 = 15$$\n\n$$22a + 22b = 330$$\nHere, option **A** is suitable according to the conditions given."
     },
     {
       "id": 48,
-      "text": "The **difference between 56 and 72** is equal to **A**. Find which of the following options can divide **A** and leave no remainder.",
+      "text": "Difference between 56 and 72 is equal to A, then find which of the following options can divide A and leaves no remainder.",
       "options": [
         "8",
         "1",
         "2",
-        "Option A, B and C",
+        "option A and B and c",
         "None of these"
       ],
       "correctIndex": 3,
-      "solution": "$$\\text{Difference of 56 and 72} = 16$$\n16 is divisible by **8, 1, and 2**.\nHence, option D is correct."
+      "solution": "Difference of 56 and $$72 = 16$$\nDifference of 56 and 72, 56 and 72 are divisible by **8**, **1** and **2**.\nhence, option **D** is correct."
     },
     {
       "id": 49,
-      "text": "If **'X'** is the highest number which divides **63, 112, and 154**, and leaves remainders equal to **3, 2, and 4** respectively, then find the value of **'X'**.",
+      "text": "If 'X' is the highest number which divides 63, 112 and 154, leaves remainder equal to 3, 2, and 4 respectively, then find the value of 'X'.",
       "options": [
         "5",
         "1",
@@ -117,11 +117,11 @@
         "None of these"
       ],
       "correctIndex": 3,
-      "solution": "$$X = HCF \\text{ of } (63-3), (112-2), (154-4)$$\n$$X = HCF(60, 110, 150) = 10$$\nHence, option D is correct."
+      "solution": "HCF of $$(63-3), (112-2), (154-4) = 60, 110, 150 = 10$$\nHence, option **D** is correct."
     },
     {
       "id": 50,
-      "text": "Which of the given options is the **highest number** which divides **46, 94, and 158**, and leaves the **same remainder** in each case?",
+      "text": "Which of the given options is the highest number which divides 46, 94 and 158, and leaves same remainder.",
       "options": [
         "16",
         "12",
@@ -130,11 +130,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "Let the remainder be R. The HCF of $$(46-R), (94-R), (158-R)$$ is equal to the HCF of the differences between the numbers.\n$$\\text{Differences} = (94-46), (158-94), (158-46)$$\n$$\\text{Differences} = 48, 64, 112$$\n$$HCF(48, 64, 112) = 16$$\nHence, option A is correct."
+      "solution": "Remainder be R.\nHCF of $$(46-R), (94-R)$$ and $$(158-R)$$ is equal to HCF of difference of the numbers.\nDifferences = **48, 64, 112**.\nHence, HCF is **16** and option **A** is correct."
     },
     {
       "id": 51,
-      "text": "Find the **least number** which when divided by **20, 22, and 28**, leaves a **remainder equal to 3** in all cases.",
+      "text": "Find the least number which when divided by 20, 22 and 28, then the remainder is equal to 3 in all cases.",
       "options": [
         "1543",
         "1645",
@@ -143,11 +143,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$LCM(20, 22, 28) = 1540$$\n$$\\text{Required Number} = 1540 + 3 = 1543$$\nHence, option A is correct."
+      "solution": "LCM of 20, 22 and $$28 = 1540$$\nRequired number $$= 1540 + 3 = 1543$$\nhence, option **A** is correct."
     },
     {
       "id": 52,
-      "text": "If **'M'** is the **least number** which when divided by **4, 6, and 8**, leaves a **remainder of 2** in each case, and if we divide **'M' by 16**, it gives **no remainder**. Find the value of **'M'**.",
+      "text": "If 'M' is the least number which when divided by 4, 6 and 8, and leaves remainder 2 in each case, then if we divide 'M' by 16, it gives no remainder. Find the value of 'M'.",
       "options": [
         "208",
         "104",
@@ -156,11 +156,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$LCM(4, 6, 8) = 24$$\nTo make remainder 2 in each case, the number is of form $$24k + 2$$.\nChecking multiples: $$24(1)+2=26$$ (not div by 16). The multiple of 26 which is completely divisible by 16 is **208**.\nHence, option A is correct."
+      "solution": "LCM of $$4, 6, 8 = 24$$\nTo make remainder 2 in each case $$= 24 + 2 = 26$$\nMultiple of 26 which is completely divisible by 16 is **208**.\nHence, option **A** is correct."
     },
     {
       "id": 53,
-      "text": "Find the **least possible number** which when divided by **12, 15, and 18**, leaves **1, 4, and 7** as remainders respectively.",
+      "text": "Find the least possible number which when divided by 12, 15 and 18 it leaves 1, 4 and 7 as remainders respectively.",
       "options": [
         "169",
         "168",
@@ -169,11 +169,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "Difference between divisor and remainder is constant: \n$$12-1 = 11, 15-4 = 11, 18-7 = 11$$\n$$LCM(12, 15, 18) = 180$$\n$$\\text{Required Number} = 180 - 11 = 169$$\nHence, option A is correct."
+      "solution": "Here the difference between the remainder and divisor is same which is **11**.\nSo the LCM of 12, 15 and 18 is **180**.\nRequired number $$= 180 - 11 = 169$$\nHence, option **A** is correct."
     },
     {
       "id": 54,
-      "text": "Find the **least possible number** which when divided by **17** leaves a **remainder of 3** and when divided by **6** it leaves a **remainder of 2**.",
+      "text": "Find the least possible number which when divided by 17 leaves remainder 3 and when divided by 6 it leaves remainder 2.",
       "options": [
         "20",
         "25",
@@ -182,11 +182,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "Let the dividend be D.\nCase 1: $$D = 17x + 3$$\nCase 2: $$D = 6y + 2$$\nEquating both: $$17x + 3 = 6y + 2 \\Rightarrow (17x + 1) / 6 = y$$\nIf $$x = 1$$, then $$y = 18 / 6 = 3$$\n$$D = 17(1) + 3 = 20$$\nHence, option A is correct."
+      "solution": "Dividend = D. Quotient of first case 'x' and second case 'y'.\nFirst case: $$D = 17x + 3$$\nSecond case: $$D = 6y + 2$$\n\n$$17x + 3 = 6y + 2$$\n\n$$(17x + 1) / 6 = y$$\nIf we take $$x = 1$$, then $$18 / 6 = 3$$, so $$y = 3$$.\nhence, $$D = 17 \\times 1 + 3 = 20$$\nCorrect answer is option **A**."
     },
     {
       "id": 55,
-      "text": "If **three bells** ring every **3 seconds, 5 seconds, and 6 seconds** respectively, then find the time after which all three bells will **ring together**.",
+      "text": "If three bells ring in every 3 seconds, 5 seconds and 6 seconds respectively, then find the time after which all the three bells ring together.",
       "options": [
         "30 seconds",
         "35 seconds",
@@ -195,11 +195,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$LCM(3, 5, 6) = 30 \\text{ seconds}$$\nHence, option A is correct."
+      "solution": "LCM of 3, 5 and $$6 = 30$$ seconds,\nhence, option **A** is correct."
     },
     {
       "id": 56,
-      "text": "Find the **18th term** of an increasing **Arithmetic Progression (AP)** whose difference between two consecutive terms is **9** and the **first term** is **7**.",
+      "text": "Find the 18th term of an increasing arithmetic progression whose difference between the two consecutive term is equal to 9. (First term of the progression is 7)",
       "options": [
         "155",
         "160",
@@ -208,11 +208,11 @@
         "None of these"
       ],
       "correctIndex": 1,
-      "solution": "$$T_{n} = a + (n - 1)d$$\n$$T_{18} = 7 + (18 - 1) \\times 9$$\n$$T_{18} = 7 + 153 = 160$$\nHence, option B is correct."
+      "solution": "$$18^{\\text{th}} \\text{ term} = a + (n - 1)d$$\n\n$$18^{\\text{th}} \\text{ term} = 7 + (18 - 1)9 = 7 + 153 = 160$$\nhence, option **B** is correct."
     },
     {
       "id": 57,
-      "text": "In an **Arithmetic Progression**, the **first term** and **last term** are **264** and **736** respectively. If there are **30 terms** in the progression, find the **sum of all terms**.",
+      "text": "In an arithmetic progression, the first term and last term are 264 and 736 respectively. If there are 30 terms in the progression, then find the sum of all the terms.",
       "options": [
         "15000",
         "12000",
@@ -221,11 +221,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$\\text{Sum} = \\frac{n}{2} \\times (1^{\\text{st}} \\text{ term} + \\text{last term})$$\n$$\\text{Sum} = \\frac{30}{2} \\times (264 + 736)$$\n$$\\text{Sum} = 15 \\times 1000 = 15000$$\nHence, option A is correct."
+      "solution": "$$\\text{Sum of } n \\text{ terms} = n(1^{\\text{st}} \\text{ term} + \\text{last term}) / 2$$\n\n$$\\text{sum of 30 terms} = 30 \\times 1000 / 2 = 15000$$\nhence, option **A** is correct."
     },
     {
       "id": 58,
-      "text": "If the **sum of 5 terms** of an AP is $$(x+10)$$, the **1st term** is **2**, and the **5th term** is $$(x-22)$$, find the value of **'x'**.",
+      "text": "If the sum of 5 terms of an arithmetic progression is $$(x+10)$$ and the 1st term is 2 and the 5th term is $$(x-22)$$, then find the value of 'x'.",
       "options": [
         "40",
         "45",
@@ -234,11 +234,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$\\text{Sum} = \\frac{n}{2} \\times (a + l)$$\n$$x + 10 = \\frac{5}{2} \\times (2 + x - 22)$$\n$$2x + 20 = 5x - 100$$\n$$3x = 120 \\Rightarrow x = 40$$\nHence, option A is correct."
+      "solution": "$$\\text{Sum of } n \\text{ term} = n(1^{\\text{st}} \\text{ term} + \\text{last term}) / 2$$\n\n$$x + 10 = 5 \\times (2 + x - 22) / 2$$\n\n$$2x + 20 = 5x - 100$$\n\n$$3x = 120 \\Rightarrow x = 40$$\nhence, option **A** is correct."
     },
     {
       "id": 59,
-      "text": "If there are $$(x+5)$$ terms in an increasing AP, the **first term** is **3**, the **last term** is **59**, and the **common difference** is **4**, then find the value of **'x'**.",
+      "text": "If there are $$(x+5)$$ terms in an increasing arithmetic progression and the first term is 3 and last term is 59, then find the value of 'x'. (Difference between the 4th and 5th term is 4)",
       "options": [
         "10",
         "12",
@@ -247,11 +247,11 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$T_{n} = a + (n - 1)d$$\n$$59 = 3 + (x + 5 - 1) \\times 4$$\n$$56 = (x + 4) \\times 4$$\n$$x + 4 = 14 \\Rightarrow x = 10$$\nHence, option A is correct."
+      "solution": "$$n^{\\text{th}} \\text{ term} = a + (n - 1)d$$\n\n$$59 = 3 + (x + 5 - 1)4$$\n\n$$59 = 3 + 4x + 16$$\n\n$$x = 40 / 4 = 10$$\nhence, option **A** is correct."
     },
     {
       "id": 60,
-      "text": "If the **last term** of an increasing AP is **40** and the **first term** is **10%** of the last term, find the possible **common difference** if the number of terms is **less than 10**.",
+      "text": "If the last term of an increasing arithmetic progression is 40 and 1st term of the progression is 10% of the last term, then find the possible value of difference between the 1st term and second term of the progression: (The number of terms in the progression is less than 10)",
       "options": [
         "6",
         "5",
@@ -260,7 +260,7 @@
         "None of these"
       ],
       "correctIndex": 0,
-      "solution": "$$l = 40$$, $$a = 10\\% \\text{ of } 40 = 4$$\n$$l = a + (n - 1)d \\Rightarrow 40 = 4 + (n - 1)d \\Rightarrow 36 = (n - 1)d$$\nIf we take $$n = 7$$ (which is < 10):\n$$36 = (7 - 1)d \\Rightarrow 6d = 36 \\Rightarrow d = 6$$\nHence, option A is correct."
+      "solution": "$$n^{\\text{th}} \\text{ term} = a + (n - 1)d$$\n\n$$40 = 4 + (n - 1)d$$\nIf we take $$n = 7$$\n\n$$40 = 4 + 6d \\Rightarrow d = 6$$\nHence, option **A** is correct."
     }
   ]
-    }
+}
