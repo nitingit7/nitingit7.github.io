@@ -1,0 +1,266 @@
+{
+  "title": "Number System: Basic 4 #QANS005",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 61,
+      "text": "If the Divisor of N is **4** and it gives a remainder equal to **3**, then find the value of **'N'** (Quotient = sum of the divisor and remainder).",
+      "options": [
+        "31",
+        "39",
+        "23",
+        "19",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Divisor** = 4\n**Remainder** = 3\n**Quotient** = 4 + 3 = 7\nUsing the Remainder Theorem:\n$$\\text{Dividend} = \\text{Divisor} \\times \\text{Quotient} + \\text{Remainder}$$\n$$\\text{Required N} = 4 \\times 7 + 3 = 31$$"
+    },
+    {
+      "id": 62,
+      "text": "If $$(x+5)$$ is divided by **6**, it gives remainder equal to $$(y+1)$$ and quotient comes equal to **half of the divisor**, then find the correct equation from the given options:",
+      "options": [
+        "(x-y=14)",
+        "(x-y=y)",
+        "(x+4=y)",
+        "(x+y=14)",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "$$\\text{Dividend} = \\text{Divisor} \\times \\text{Quotient} + \\text{Remainder}$$\n**Divisor** = 6\n**Remainder** = $$y+1$$\n**Quotient** = $$6/2 = 3$$\n$$x + 5 = 6 \\times 3 + y + 1$$\n$$x + 5 = 18 + y + 1$$\n$$x + 5 = 19 + y$$\n$$x - y = 14$$"
+    },
+    {
+      "id": 63,
+      "text": "Find the remainder of $$(6452+2465+6898+2269)/4$$.",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "3",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "$$6452/4 \\Rightarrow \\text{remainder} = 0$$\n$$2465/4 \\Rightarrow \\text{remainder} = 1$$\n$$6898/4 \\Rightarrow \\text{remainder} = 2$$\n$$2269/4 \\Rightarrow \\text{remainder} = 1$$\n$$\\text{Required} = (0+1+2+1)/4 \\Rightarrow \\text{remainder} = 0$$"
+    },
+    {
+      "id": 64,
+      "text": "If the value of $$(x+y+z)$$ is **9**, then the remainder when $$(A+B+C)$$ is divided by **6** is **3**. Which of the following is/are true?\n\n**Additional information:**\n(i) When we divide **'A'** by 6, we get the remainder equal to **'x'**.\n(ii) When we divide **'B'** by 6, we get the remainder equal to **'y'**.\n(iii) When we divide **'C'** by 6, we get the remainder equal to **'z'**.",
+      "options": [
+        "Only I and II",
+        "Only II and III",
+        "Only I and III",
+        "All I, II and III",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "Based on the property of remainders, the remainder of the sum of numbers is equal to the remainder of the sum of their individual remainders.\n$$\\text{Sum of remainders} = x + y + z = 9$$\nWhen 9 is divided by 6, the remainder is 3. Thus, all given conditions regarding the remainders of A, B, and C can be true."
+    },
+    {
+      "id": 65,
+      "text": "If $$(3x+y)$$ is divided by **9**, then the quotient comes is equal to **3**, then find the **highest possible value of 'x'** from the given options.",
+      "options": [
+        "(35-y)/3",
+        "3x=31-y",
+        "28-y=3x",
+        "(29-y)/3",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "$$\\text{Dividend} = \\text{Divisor} \\times \\text{Quotient} + \\text{Remainder}$$\n**Divisor** = 9, **Dividend** = $$3x+y$$, **Quotient** = 3\n$$3x + y = 9 \\times 3 + R$$\nTo find the highest value of $$x$$, we take the highest possible remainder $$R = 8$$.\n$$3x + y = 27 + 8$$\n$$3x + y = 35$$\n$$x = (35 - y) / 3$$"
+    },
+    {
+      "id": 66,
+      "text": "If we divide **63** by $$(x+5)$$ and remainder is equal to the **dividend**, then find the possible value of **'x'**: (Value of x is multiple of 10, x < 70).",
+      "options": [
+        "20",
+        "10",
+        "30",
+        "60",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "**Dividend** = 63\n**Divisor** = $$x+5$$\n**Remainder** = 63\nIn this case, the **divisor must be greater than the dividend** to leave the dividend itself as a remainder.\n$$x + 5 > 63 \\Rightarrow x > 58$$\nGiven $$x$$ is a multiple of 10 and $$x < 70$$, the possible value is **60**."
+    },
+    {
+      "id": 67,
+      "text": "Find the remainder of $$(13 \\times 15 \\times 18 \\times 11)/8$$.",
+      "options": [
+        "4",
+        "2",
+        "5",
+        "3",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "$$13/8 \\Rightarrow \\text{Remainder} = 5$$\n$$15/8 \\Rightarrow \\text{Remainder} = 7$$\n$$18/8 \\Rightarrow \\text{Remainder} = 2$$\n$$11/8 \\Rightarrow \\text{Remainder} = 3$$\n$$\\text{Required} = (5 \\times 7 \\times 2 \\times 3)/8 = 210/8 \\Rightarrow \\text{Remainder} = 2$$"
+    },
+    {
+      "id": 68,
+      "text": "If we divide **A, B, C and D by 4**, then we get the remainder equal to **'a', 'b', 'c' and 'd'** respectively. Which of the following is correct to find the value of **'K'**: (K is the remainder when we divide the **sum of a, b, c and d by 4**)?",
+      "options": [
+        "(a+b+c+d)/4",
+        "(abcd)/4",
+        "(a-b-c-d)/4",
+        "(abc+d)/4",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "$$A/4 \\Rightarrow \\text{Remainder} = a$$\n$$B/4 \\Rightarrow \\text{Remainder} = b$$\n$$C/4 \\Rightarrow \\text{Remainder} = c$$\n$$D/4 \\Rightarrow \\text{Remainder} = d$$\nThe remainder of the sum of numbers is equal to the remainder when the sum of their individual remainders is divided by the divisor.\n$$\\text{Required remainder K} = (a+b+c+d)/4$$"
+    },
+    {
+      "id": 69,
+      "text": "If we divide **'x' by 17**, then we get the remainder equal to **4**, then to make the $$(x+y)$$ **completely divisible by 17**, find the value of **'y'** from the given options.",
+      "options": [
+        "11",
+        "12",
+        "13",
+        "15",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "If $$x$$ divided by 17 leaves remainder 4, then $$(x - 4)$$ is completely divisible by 17.\nTo make $$(x + y)$$ divisible by 17, we need to add a value to the remainder 4 such that the total equals 17.\n$$4 + y = 17 \\Rightarrow y = 13$$"
+    },
+    {
+      "id": 70,
+      "text": "After dividing **64 by 13**, we get the remainder which is equal to **divisor of (x+5)**. In this case the remainder comes is equal to **9**, but if we **increase the divisor by 3**, then it gives **no remainder**. Find the possible value of **'x'** from the given options.",
+      "options": [
+        "24",
+        "48",
+        "36",
+        "40",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "$$\\text{Divisor of } (x+5) = \\text{Remainder of } 64/13 = 12$$\n**Dividend** = $$x+5$$\n**Remainder** = 9\n**New divisor** = $$12 + 3 = 15$$\n$$(x+5)$$ should be completely divisible by 15.\nChecking options: If $$x = 40$$, then $$x + 5 = 45$$, which is divisible by 15."
+    },
+    {
+      "id": 71,
+      "text": "Find the remainder of $$(5^{10}/2)$$.",
+      "options": [
+        "0",
+        "1",
+        "Either 0 or 1",
+        "Cannot be determined",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "We can write this as $$(5^2 \\times 5^2 \\times 5^2 \\times 5^2 \\times 5^2)/2$$.\nAlternatively, using the rule: $$(5/2)$$ leaves remainder 1. \nAny power of 1 is 1.\n$$\\text{Remainder} = 1$$"
+    },
+    {
+      "id": 72,
+      "text": "Find the remainder of $$(41^{648}/40)$$.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "27",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "If we divide 41 by 40 it gives remainder 1. \nSince the base 41 leaves remainder 1, any power of 41 divided by 40 will also leave remainder 1.\n$$\\text{Remainder} = 1$$"
+    },
+    {
+      "id": 73,
+      "text": "Find the remainder of $$(80^{364}/81)$$.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "27",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "Using the property: $$\\frac{a^{\\text{even}}}{a+1}$$ always leaves a **remainder of 1**.\nHere $$a = 80$$ and the power 364 is even.\n$$\\text{Remainder} = 1$$"
+    },
+    {
+      "id": 74,
+      "text": "Find the remainder of $$(40^{645}/41)$$.",
+      "options": [
+        "37",
+        "30",
+        "40",
+        "36",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "Using the property: $$\\frac{a^{\\text{odd}}}{a+1}$$ always leaves a **remainder of 'a'**.\nHere $$a = 40$$ and the power 645 is odd.\n$$\\text{Remainder} = 40$$"
+    },
+    {
+      "id": 75,
+      "text": "If we divide **A by B**, we get the remainder **'r'**, then find the remainder when we divide **(A+A) by B**.",
+      "options": [
+        "2r/B",
+        "r/B",
+        "r/2B",
+        "B/2r",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "$$A/B \\Rightarrow \\text{Remainder} = r$$\n$$(A + A)/B = (r + r)/B = 2r/B$$\nIf $$2r$$ is less than $$B$$, the remainder is $$2r$$. If $$2r$$ is greater than or equal to $$B$$, we divide again by $$B$$."
+    },
+    {
+      "id": 76,
+      "text": "The remainder comes when we divide **644 by 'X'** is **'R'**. Find the remainder when we divide **4508 by 'X'**.",
+      "options": [
+        "644/X",
+        "7R/X",
+        "2R/X",
+        "644R/x",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "$$644/x \\Rightarrow \\text{Remainder} = R$$\nWe can write 4508 as $$644 \\times 7$$.\n$$\\frac{644 \\times 7}{x} \\Rightarrow \\text{Remainder} = 7R/X$$"
+    },
+    {
+      "id": 77,
+      "text": "If we divide **'M' by 'D'**, then we get **65** as remainder. If we divide **5 times of M** by the same divisor, then the remainder comes is equal to **5**. Find the possible value of **'D'** from the given equations.",
+      "options": [
+        "16",
+        "18",
+        "22",
+        "24",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "$$M/D \\Rightarrow \\text{Remainder} = 65$$\n$$5M/D \\Rightarrow \\text{Remainder} = (65 \\times 5)/D = 325/D$$\nGiven that the final remainder is 5:\n$$325 - 5 = 320$$\n**D** must be a factor of 320 that is greater than the individual remainders.\nAmong the options, 16 is a factor of 320."
+    },
+    {
+      "id": 78,
+      "text": "If we divide **'K' by 645**, then we get the remainder as **5**. If we divide **4K by 645**, then the remainder is equal to:",
+      "options": [
+        "20",
+        "15",
+        "25",
+        "30",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "$$K/645 \\Rightarrow \\text{Remainder} = 5$$\n$$4K/645 \\Rightarrow \\text{Remainder} = (4 \\times 5)/645 = 20/645$$\n$$\\text{Remainder} = 20$$"
+    },
+    {
+      "id": 79,
+      "text": "Radhika wants to distribute chocolates. She has total **640 chocolates** and total students in the class is $$(x+5)$$ (Excluding Radhika). Each student got **42 chocolates**, and the remaining chocolates left is **'x'**. Find the value of **'x'**.",
+      "options": [
+        "10",
+        "15",
+        "7",
+        "8",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Total chocolates** = 640\n**Each student got** = 42\n**Total students** = $$x+5$$\n**Remaining** = $$x$$\nUsing Remainder formula: $$42(x + 5) + x = 640$$\n$$42x + 210 + x = 640$$\n$$43x = 430$$\n$$x = 10$$"
+    },
+    {
+      "id": 80,
+      "text": "Rajesh has total **24 sweaters** and he distributed them amongst **'x' people** such that each person gets equal number of sweaters. If after distribution Rajesh has **no sweater left**, then find the correct answer from the options:",
+      "options": [
+        "x+2=10",
+        "x+7=12",
+        "3x+1=22",
+        "4x-1=35",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Total sweaters** = 24\n24 is completely divisible by $$x$$. \nPossible factors for $$x$$: 1, 2, 3, 4, 6, 8, 12, 24.\nChecking option A: $$x + 2 = 10 \\Rightarrow x = 8$$.\nSince 24 is divisible by 8, option A is a valid combination."
+    }
+  ]
+    }
