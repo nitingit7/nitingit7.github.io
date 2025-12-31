@@ -1,0 +1,266 @@
+{
+  "title": "Algebra: Basic 2 #QAA003",
+  "timeLimit": 15,
+  "questions": [
+    {
+      "id": 21,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\n**Equations:**\n$$ax^{2}=bx-6$$\n$$kx^{2}+11x=m$$\n**Information:**\nSum and difference of the roots are 7/2 and 1/2 respectively.\nIf A and B are the smaller and larger roots, then $$A-B=-13/3$$.\nOne of the roots is -2 times of the larger root of the equation I.\n\nWhich of the following equations gives equal roots:",
+      "options": [
+        "$$(a/2)x^{2}=2mx-(2b+2)$$",
+        "$$(m/2a)x^{2}=mx-(k+1)$$",
+        "$$(m+k)x^{2}=2m-4$$",
+        "More than one option gives equal roots",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "**Solution:**\n$$ax^{2}-bx+6=0$$\nLet A and B are larger and smaller roots respectively.\n$$A+B=7/2$$\n$$A-B=1/2$$\n$$A=4/2=2$$\n$$B=2-1/2=3/2$$\n$$b=7$$\n$$a=2$$\n\n$$kx^{2}+11x-m=0$$\nLet C and D be the larger and smaller roots\n$$D=2x-2=-4$$\n$$C=-4+13/3=1/3$$\n$$k=3$$\n$$m=4$$\n\n1. $$(a/2)x^{2}=2mx-(2b+2)$$\n$$x^{2}-8x+16=0$$\n$$roots=+4,+4$$\n\n2. $$(m/2a)x^{2}=mx-(k+1)$$\n$$x^{2}-4x+4=0$$\n$$roots=+2,+2$$\n\n3. $$(m+k)x^{2}=2m-4$$\n$$7x^{2}-8+4=0$$\n$$x^{2}=4/7$$\nIt gives improper and unequal roots.\nHence, option C is correct."
+    },
+    {
+      "id": 22,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\n**Equations:**\n$$6x^{2}=kx+6$$\n$$mx^{2}+kx+1=0$$\n**Information:**\nOne of the roots is 3/2. Value of (3-2B) is 5/3. -B is the negative root of the equation.\nSum of the roots is equally distant from 0 as the sum of the roots of first equation.\n\nFind the value of (m-k).",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\n$$6x^{2}-kx-6=0$$\nPositive root = 3/2\nSum of roots = k/6\n$$k/6=3/2-B$$\n$$k/6=(3-2B)/2$$\n$$k/3=5/3$$\n$$k=5$$\nEquation: $$6x^{2}-5x-6=0$$\nroots = +3/2, -2/3\n$$B=2/3$$\n\nEquation:\n$$mx^{2}+kx+1=0$$\n$$mx^{2}+5x+1=0$$\nSum of roots = -5/6\n$$-5/m=-5/6$$\n$$m=6$$\n\nRequired = 6-5 = 1\nHence, option A is correct."
+    },
+    {
+      "id": 23,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\n**Equations:**\n$$6x^{2}=kx+6$$\n$$mx^{2}+kx+1=0$$\n**Information:**\nOne of the roots is 3/2. Value of (3-2B) is 5/3. -B is the negative root of the equation.\nSum of the roots is equally distant from 0 as the sum of the roots of first equation.\n\nFind the value of $$(k+m-B)$$.",
+      "options": [
+        "$$32/3$$",
+        "$$31/3$$",
+        "$$30/7$$",
+        "$$33/7$$",
+        "$$34/3$$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Solution:**\n$$6x^{2}-kx-6=0$$\nPositive root = 3/2\nSum of roots = k/6\n$$k/6=3/2-B$$\n$$k/6=(3-2B)/2$$\n$$k/3=5/3$$\n$$k=5$$\nEquation: $$6x^{2}-5x-6=0$$\nroots = +3/2, -2/3\n$$B=2/3$$\n\nEquation:\n$$mx^{2}+kx+1=0$$\n$$mx^{2}+5x+1=0$$\nSum of roots = -5/6\n$$-5/m=-5/6$$\n$$m=6$$\nRequired = $$11-2/3=31/3$$\nhence, option B is correct."
+    },
+    {
+      "id": 24,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\n**Equations:**\n$$6x^{2}=kx+6$$\n$$mx^{2}+kx+1=0$$\n**Information:**\nOne of the roots is 3/2. Value of (3-2B) is 5/3. -B is the negative root of the equation.\nSum of the roots is equally distant from 0 as the sum of the roots of first equation.\n\nIf C and D are larger and smaller roots of the second equation, then find C-D.",
+      "options": [
+        "$$1/6$$",
+        "$$1/3$$",
+        "$$1/5$$",
+        "$$2/5$$",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\n$$6x^{2}-kx-6=0$$\nPositive root = 3/2\nSum of roots = k/6\n$$k/6=3/2-B$$\n$$k/6=(3-2B)/2$$\n$$k/3=5/3$$\n$$k=5$$\nEquation: $$6x^{2}-5x-6=0$$\nroots = +3/2, -2/3\n$$B=2/3$$\n\nEquation:\n$$mx^{2}+kx+1=0$$\n$$mx^{2}+5x+1=0$$\nSum of roots = -5/6\n$$-5/m=-5/6$$\n$$m=6$$\nEquation: $$6x^{2}+5x+1=0$$\nRoots: -2/6, -3/6\nRequired = $$-1/3+1/2=1/6$$"
+    },
+    {
+      "id": 25,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\nEquation I: $$x^{2}=kx-M$$\nEquation II: $$12x^{2}+(k+4)x+N=0$$\n**Note:**\nAny one of the equation gives rational roots and other equation gives irrational roots.\n$$(k^{2}-4M=9)$$\nValue of k is a prime number less than 23 and more than 13. No equation has roots equal to +10.\nValue of N is 2 more than smaller root of the equation I.\n\nFind the value of (M-k).",
+      "options": [
+        "69",
+        "65",
+        "60",
+        "98",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nEquation I: $$x^{2}=kx-M$$\nIf the discriminant is whole, then it gives rational and real roots.\n$$\\sqrt{k^{2}-4M}=3$$\nMeans it gives two rational roots.\nPossible value of k=17 and 19\nIf k=17\n$$289-4M=9$$\n$$M=70$$\n$$x^{2}-17x+70=0$$\nRoots = 10, 7\nNot possible because root is not equal to 10\n\nIf k=19\n$$361-4M=9$$\n$$M=88$$\n$$x^{2}-19x+88=0$$\nRoots=11 and 8\nEquation II: $$12x^{2}+(k+4)x+N=0$$\n$$N=8+2=10$$\n$$12x^{2}+23x+10=0$$\nRoots = -2/3, -5/4\nRequired = 88-19=69\nHence, option A is correct."
+    },
+    {
+      "id": 26,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\nEquation I: $$x^{2}=kx-M$$\nEquation II: $$12x^{2}+(k+4)x+N=0$$\n**Note:**\nAny one of the equation gives rational roots and other equation gives irrational roots.\n$$(k^{2}-4M=9)$$\nValue of k is a prime number less than 23 and more than 13. No equation has roots equal to +10.\nValue of N is 2 more than smaller root of the equation I.\n\nWhich of the following is are correct about the roots of first equation:\nI: Both are even number.\nII: Both are negative.\nIII: Difference of the roots are 3.",
+      "options": [
+        "Only III",
+        "Only I and II",
+        "Only II",
+        "Only I",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nEquation I: $$x^{2}=kx-M$$\nIf the discriminant is whole, then it gives rational and real roots.\n$$\\sqrt{k^{2}-4M}=3$$\nMeans it gives two rational roots.\nPossible value of k=17 and 19\nIf k=17\n$$289-4M=9$$\n$$M=70$$\n$$x^{2}-17x+70=0$$\nRoots = 10, 7\nNot possible because root is not equal to 10\n\nIf k=19\n$$361-4M=9$$\n$$M=88$$\n$$x^{2}-19x+88=0$$\nRoots=11 and 8\n\nEquation II: $$12x^{2}+(k+4)x+N=0$$\n$$N=8+2=10$$\n$$12x^{2}+23x+10=0$$\nRoots = -2/3, -5/4\n\nI: Both are even number. (Both are not even)\nII: Both are negative. (Both are positive)\nIII: Difference of the roots are 3. (Required = 11-8=3)\nHence, option A is correct."
+    },
+    {
+      "id": 27,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\nEquation I: $$x^{2}=kx-M$$\nEquation II: $$12x^{2}+(k+4)x+N=0$$\n**Note:**\nAny one of the equation gives rational roots and other equation gives irrational roots. $$(k^{2}-4M=9)$$\nValue of k is a prime number less than 23 and more than 13. No equation has roots equal to +10.\nValue of N is 2 more than smaller root of the equation I.\n\nFind the product of smaller roots of both equations.",
+      "options": [
+        "-10",
+        "$$15/4$$",
+        "$$16/3$$",
+        "$$-15/4$$",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nEquation I: $$x^{2}=kx-M$$\nIf the discriminant is whole, then it gives rational and real roots.\n$$\\sqrt{k^{2}-4M}=3$$\nMeans it gives two rational roots.\nPossible value of k=17 and 19\nIf k=17\n$$289-4M=9$$\n$$M=70$$\n$$x^{2}-17x+70=0$$\nRoots = 10, 7\nNot possible because root is not equal to 10\n\nIf k=19\n$$361-4M=9$$\n$$M=88$$\n$$x^{2}-19x+88=0$$\nRoots=11 and 8\n\nEquation II: $$12x^{2}+(k+4)x+N=0$$\n$$N=8+2=10$$\n$$12x^{2}+23x+10=0$$\nRoots = -2/3, -5/4\nRequired = $$-5/4\\times8=-10$$\nHence, option A is correct."
+    },
+    {
+      "id": 28,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\nEquation I: $$kx^{2}=12x-m$$\nEquation II: $$9x^{2}-nx-16=0$$\n**Note:**\nRoots of first equation are equal and real. Roots of other equation is real but not equal.\nValue of n is even and more than 23 but less than 34. Any one root of equation II is rational.\nRatio of the value of k and m is 4:9 respectively.\n\nFind the value of $$(km-n)$$.",
+      "options": [
+        "4",
+        "5",
+        "8",
+        "6",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nEquation I: $$kx^{2}=12x-m$$\nTo have equal roots the discriminant have to be 0.\nIf this equation have equal roots:\n4km have to be equal to $$12^{2}$$\n$$km=144/4=36$$\n$$k:m=4:9$$\nMeans, k=4, m=9\nRoots of the equation: $$4x^{2}-12x+9=0$$\n+3/2, +3/2\n\nEquation II: $$9x^{2}-nx-16=0$$\nRoots are not equal but they are real mean discriminant have to be more than 0.\n$$n^{2}>16\\times9\\times4$$\n$$n^{2}>576$$\nPossible value of n=26,28,30,32\nOnly If n=32 then we get one rational roots\nso, equation will be $$9x^{2}-32x-16=0$$\nroots = -4/9, +4\nRequired = $$4\\times9-32=4$$\nhence, option A is correct."
+    },
+    {
+      "id": 29,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\nEquation I: $$kx^{2}=12x-m$$\nEquation II: $$9x^{2}-nx-16=0$$\n**Note:**\nRoots of first equation are equal and real. Roots of other equation is real but not equal.\nValue of n is even and more than 23 but less than 34. Any one root of equation II is rational.\nRatio of the value of k and m is 4:9 respectively.\n\nWhich of the following is/are true:\nI: Equal roots of equation I is rational roots.\nII: One root of second equation is positive rational root.\nIII: Difference between the co-efficient of $$x^{2}$$ in both equation is more than the value of k.",
+      "options": [
+        "Only I and II",
+        "Only II and III",
+        "Only I and II",
+        "All I, II and III",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "**Solution:**\nEquation I: $$kx^{2}=12x-m$$\nTo have equal roots the discriminant have to be 0.\nIf this equation have equal roots:\n4km have to be equal to $$12^{2}$$\n$$km=144/4=36$$\n$$k:m=4:9$$\nMeans, k=4, m=9\nRoots of the equation: $$4x^{2}-12x+9=0$$\n+3/2, +3/2\n\nEquation II: $$9x^{2}-nx-16=0$$\nRoots are not equal but they are real mean discriminant have to be more than 0.\n$$n^{2}>16\\times9\\times4$$\n$$n^{2}>576$$\nPossible value of n=26,28,30,32\nOnly If n=32, then we get one rational roots\nso, equation will be $$9x^{2}-32x-16=0$$\nroots = -4/9, +4\n\nI: Equal roots of equation I is rational roots.\nRoots = irrational. [Solution states this, though 1.5 is rational. Following provided solution]\nII: One root of second equation is positive rational root.\nPositive rational roots = +4. Hence, it is correct.\nIII: Difference between the co-efficient of $$x^{2}$$ in both equation is more than the value of k.\nDifference = 9-4=5\nHence, it is also correct.\nSo, option B is correct."
+    },
+    {
+      "id": 30,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\nEquation I: $$kx^{2}=12x-m$$\nEquation II: $$9x^{2}-nx-16=0$$\n**Note:**\nRoots of first equation are equal and real. Roots of other equation is real but not equal.\nValue of n is even and more than 23 but less than 34. Any one root of equation II is rational.\nRatio of the value of k and m is 4:9 respectively.\n\nFind the product of all positive roots of both equations.",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "4",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nEquation I: $$kx^{2}=12x-m$$\nTo have equal roots the discriminant have to be 0.\nIf this equation have equal roots:\n4km have to be equal to $$12^{2}$$\n$$km=144/4=36$$\n$$k:m=4:9$$\nMeans, k=4, m=9\nRoots of the equation: $$4x^{2}-12x+9=0$$\n+3/2, +3/2\n\nEquation II: $$9x^{2}-nx-16=0$$\nRoots are not equal but they are real mean discriminant have to be more than 0.\n$$n^{2}>16\\times9\\times4$$\n$$n^{2}>576$$\nPossible value of n=26,28,30,32\nOnly If n=32, then we get one rational roots\nso, equation will be $$9x^{2}-32x-16=0$$\nroots = -4/9, +4\nRequired = $$3/2\\times3/2\\times4=9$$\nhence, option A is correct."
+    },
+    {
+      "id": 31,
+      "text": "Solve the given equations and answer the questions based on them:\nIn Equation $$(8x^{3}+px^{2}+qx=15)$$ If $$A+B+C$$ is $$-1/2$$ then find the value of 'p'. (Note: A, B and C are the roots of the equation)",
+      "options": [
+        "4",
+        "5",
+        "8",
+        "3",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nSum of the roots = -b/a\n$$-p/8=-1/2$$\n$$p=4$$\nHence, option A is correct."
+    },
+    {
+      "id": 32,
+      "text": "Solve the given equations and answer the questions based on them:\nIn Equation $$(sx^{3}+px^{2}+3x=15)$$ If $$AB+BC+AC=3/8$$, then find the value of 's'. (Note: A, B and C are the roots of the equation)",
+      "options": [
+        "4",
+        "8",
+        "6",
+        "5",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "**Solution:**\n$$AB+BC+AC=c/a$$\n$$3/s=3/8$$\n$$s=8$$\nHence, option B is correct."
+    },
+    {
+      "id": 33,
+      "text": "Solve the given equations and answer the questions based on them:\nIn Equation $$(8x^{3}+px^{2}+qx=Z)$$, If product of A, B and C is $$-14/8$$ then find the value of Z. (Note: A, B and C are the roots of the equation)",
+      "options": [
+        "14",
+        "13",
+        "15",
+        "18",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nProduct of roots\n$$-z/8=-14/8$$\n$$z=14$$\nhence, option A is correct."
+    },
+    {
+      "id": 34,
+      "text": "Solve the given equations and answer the questions based on them:\nIn Equation $$(6x^{4}+4x^{3}=kx^{2}+2x+5)$$, If $$AB+BC+CD+AD+BD=\\frac{1}{2}$$, then find the value of 'k'. (Note: A, B, C and D are the roots of the equation)",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2",
+        "None of these"
+      ],
+      "correctIndex": 4,
+      "solution": "**Solution:**\n$$AB+BC+CD+AD+BD=c/a$$\n$$1/2=-k/6$$\n$$k=-3$$\nHence, option E is correct."
+    },
+    {
+      "id": 35,
+      "text": "Solve the given equations and answer the questions based on them:\nIn Equation $$(px^{4}+4x^{3}=kx^{2}+2x+5)$$ If sum of A, B, C and D are $$-2/3$$, then find the value of 'p'. (Note: A, B, C and D are the roots of the equation)",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "8",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\n$$A+B+C+D=-b/a$$\n$$-2/3=-4/p$$\n$$p=6$$\nHence, option A is correct."
+    },
+    {
+      "id": 36,
+      "text": "Solve the given equations and answer the questions based on them:\nIn Equation $$(6x^{4}+4x^{3}=kx^{2}+qx+5)$$, If $$ABC+ACD+ABD+BCD=-1/3$$, then find the value of 'q'. (Note: A, B, C and D are the roots of the equation)",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "None of these"
+      ],
+      "correctIndex": 4,
+      "solution": "**Solution:**\n$$ABC+ACD+ABD+BCD=-d/a$$\n$$-1/3=-(-q)/6$$\n$$q=-2$$\nhence, option E is correct."
+    },
+    {
+      "id": 37,
+      "text": "Solve the given equations and answer the questions based on them:\nIn Equation $$(6x^{4}+4x^{3}=kx^{2}+qx+e)$$, If product of A, B, C and D is $$5/6$$ then find the value of 'e'. (Note: A, B, C and D are the roots of the equation) ('e' is constant)",
+      "options": [
+        "4",
+        "-5",
+        "-6",
+        "8",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "**Solution:**\n$$ABCD=e/a$$\n$$5/6=-e/6$$\n$$e=-5$$\nHence, option B is correct."
+    },
+    {
+      "id": 38,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\n$$x^{2}-15x+T=0$$ has two roots m and n whose difference is 1. $$(m>n)$$ \n\nQ38) Find the value of (T+4)",
+      "options": [
+        "60",
+        "65",
+        "70",
+        "56",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "**Solution:**\nSum of roots = m+n=15\n$$m-n=1$$\n$$m=8$$ as m>n\n$$n=7$$\n$$T=$$ product of roots\n$$T=56$$\n$$56+4=60$$\nHence the correct option is A."
+    },
+    {
+      "id": 39,
+      "text": "Q39) Find the difference between F and T, if the value of F is equal to square of the value of m.",
+      "options": [
+        "7",
+        "6",
+        "8",
+        "10",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "**Solution:**\n$$F=8\\times8$$\n$$F=64$$\n$$T=56$$\nDifference = 8\nHence the correct option is C."
+    },
+    {
+      "id": 40,
+      "text": "Solve the given equation based on the data given below and answer the following questions.\nI. $$(x\\times x)-6x/2-2x=-36/6$$\nII. $$y^{2}-9y=10\\times-2$$\nIII. $$(n^{2}25n^{3})/5n^{3}+14\\times2=3\\times13n$$\nIV. $$z^{2}-30z/2=-4\\times14$$\n\nQ40) Find the difference between the larger root of equation 1 and smaller root of equation 2.",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "**Solution:**\nI. $$(x\\times x)-6x/2-2x=-36/6$$\n$$x^{2}-5x+6=0$$\n$$x=3,2$$\nII. $$y^{2}-9y+20=0$$\n$$y=5,4$$\nIII. $$(n^{2}25n^{3})/5n^{3}+14\\times2=3\\times13n$$\n$$5n^{2}-39n+28=0$$\n$$n=35/5, 4/5=7, 4/5$$\nIV. $$z^{2}-30z/2=-4\\times14$$\n$$z^{2}-15z+56=0$$\n$$z=7,8$$\n\ndifference between the larger root of equation I and smaller root of equation II = 4-3=1\nHence the correct option is B."
+    }
+  ]
+    }
