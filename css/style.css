@@ -1817,3 +1817,6 @@ body.dark-mode .tag-badge {
     background-color: rgba(255, 255, 255, 0.1);
     color: #a2d2ff;
 }
+.q-content {
+    touch-action: pan-y; /* Allows vertical scroll but captures horizontal swipes */
+}

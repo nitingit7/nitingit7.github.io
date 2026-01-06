@@ -151,6 +151,56 @@
         currentFileUrl: "",
         reviewGuesses: {},
 
+        initGestures: function() {
+            var self = this;
+            
+            // --- 1. SWIPE NAVIGATION (Mobile Touch) ---
+            var touchStartX = 0;
+            var touchEndX = 0;
+            var minSwipeDistance = 50; // Threshold to prevent accidental swipes
+
+            var qArea = document.querySelector('.q-content'); // Target the question area
+
+            if(qArea) {
+                qArea.addEventListener('touchstart', function(e) {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, false);
+
+                qArea.addEventListener('touchend', function(e) {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, false);
+            }
+
+            function handleSwipe() {
+                var distance = touchEndX - touchStartX;
+                
+                if (Math.abs(distance) < minSwipeDistance) return; // Ignore small touches
+
+                if (distance < 0) {
+                    // Swiped LEFT ( Finger moves <--- ) = NEXT Question
+                    self.saveNext(); 
+                } else {
+                    // Swiped RIGHT ( Finger moves ---> ) = PREV Question
+                    self.prevQ();
+                }
+            }
+
+            // --- 2. CLOSE SIDEBAR ON OUTSIDE CLICK ---
+            document.addEventListener('click', function(event) {
+                var sidebar = document.getElementById('sidebar');
+                var toggleBtn = document.getElementById('btn-toggle-sidebar');
+
+                // Check if sidebar is open
+                if (sidebar && sidebar.classList.contains('open')) {
+                    // If click is NOT inside sidebar AND NOT on the toggle button
+                    if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
+                        self.toggleSidebar(); // Close it
+                    }
+                }
+            });
+        },
+
         init: function() {
             var params = new URLSearchParams(window.location.search);
             this.currentFileUrl = params.get('file');
@@ -227,6 +277,9 @@
                 document.getElementById('view-exam').style.display = 'flex';
                 this.fetchTest(this.currentFileUrl);
             }
+
+            // ADD THIS LINE HERE:
+            this.initGestures();
         },
 
         toggleTheme: function(event) {
