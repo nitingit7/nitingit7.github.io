@@ -65,13 +65,13 @@ var GITHUB_FILES = {
 
     // --- 4. GENERAL AWARENESS ---
     'general_sectional': [
-        { name: "Daily Current Affairs: 1st Jan 2025", tags: "Daily CA", file: BASE_URL + "tests/general/daily_1.json" },
-        { name: "Full Mock: General Awareness Set 1", tags: "Mock", file: BASE_URL + "tests/general/mock1.json" }
+        { name: "Emty", tags: "Daily CA", file: BASE_URL + "tests/general/daily_1.json" },
+        { name: "Emty", tags: "Mock", file: BASE_URL + "tests/general/mock1.json" }
     ],
     'general_topic': [
         { name: "Current Affairs: 1", tags: "Current Affairs", file: BASE_URL + "tests/General Awareness/CA/gaca001.json" },
-        { name: "Banking Awareness: RB", tags: "Banking", file: BASE_URL + "tests/general/topics/banking1.json" },
-        { name: "Static GK: National Parks", tags: "Static GK", file: BASE_URL + "tests/general/topics/static1.json" }
+        { name: "Emty", tags: "Banking", file: BASE_URL + "tests/general/topics/banking1.json" },
+        { name: "Emty", tags: "Static GK", file: BASE_URL + "tests/general/topics/static1.json" }
     ],
 
     // --- 4. FULL MOCK TESTS (Stays the same) ---
