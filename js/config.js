@@ -58,7 +58,8 @@ var GITHUB_FILES = {
     ],
     'reasoning_topic': [
         { name: "Puzzles: Box Based", tags: "Puzzles", file: BASE_URL + "tests/reasoning/topics/puz1.json" },
-        { name: "Syllogism: Only a Few", tags: "Syllogism", file: BASE_URL + "tests/reasoning/topics/syl1.json" }
+        { name: "Syllogism: Only a Few", tags: "Syllogism", file: BASE_URL + "tests/reasoning/topics/syl1.json" },
+        { name: "Mains Puzzle 1", tags: "Mains Puzzle", file: BASE_URL + "tests/reasoning/mp001.json" }
     ],
 
     // --- 3. ENGLISH LANGUAGE ---
