@@ -14,36 +14,40 @@
       "text": "**Who among the following lives on the top floor of building `$`?**",
       "options": ["N", "O", "P", "Q", "U"],
       "correctIndex": 0,
-      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true",
-      "solution": "According to the final arrangement, **N** lives on the top floor of building `$`."
+      "solution": "According to the final arrangement, **N** lives on the top floor of building `$`.",
+      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true"
     },
     {
       "id": 2,
       "text": "**What is the weight (in kg) of the person living on floor 8 of building `@`?**",
       "options": ["26", "28", "30", "32", "34"],
       "correctIndex": 2,
-      "solution": "Person **H** lives on floor 8 of building `@` and has a weight of **30 kg**."
+      "solution": "Person **H** lives on floor 8 of building `@` and has a weight of **30 kg**.",
+      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true"
     },
     {
       "id": 3,
       "text": "**Which of the following persons lives on the ground floor of building `#`?**",
       "options": ["M", "R", "G", "F", "L"],
       "correctIndex": 0,
-      "solution": "From the final arrangement, **M** lives on the ground floor of building `#`."
+      "solution": "From the final arrangement, **M** lives on the ground floor of building `#`.",
+      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true"
     },
     {
       "id": 4,
       "text": "**How many persons live between `Q` and `P`?**",
       "options": ["One", "Two", "Three", "Four", "None"],
       "correctIndex": 1,
-      "solution": "Exactly **two persons** live between **Q** and **P**."
+      "solution": "Exactly **two persons** live between **Q** and **P**.",
+      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true"
     },
     {
       "id": 5,
       "text": "**What is the weight difference (in kg) between `U` and `V`?**",
       "options": ["20", "30", "40", "50", "60"],
       "correctIndex": 2,
-      "solution": "Weight of **U = 62 kg** and **V = 22 kg**. Difference = **40 kg**."
+      "solution": "Weight of **U = 62 kg** and **V = 22 kg**. Difference = **40 kg**.",
+      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true"
     }
   ]
 }
