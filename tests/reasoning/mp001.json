@@ -14,8 +14,8 @@
       "text": "**Who among the following lives on the top floor of building `$`?**",
       "options": ["N", "O", "P", "Q", "U"],
       "correctIndex": 0,
-      "solution": "According to the final arrangement, **N** lives on the top floor of building `$`.",
-      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true"
+      "solutionImage": "https://github.com/nitingit7/nitingit7.github.io/blob/main/tests/reasoning/Solutions/Screenshot%202026-01-22%20223556.png?raw=true",
+      "solution": "According to the final arrangement, **N** lives on the top floor of building `$`."
     },
     {
       "id": 2,
