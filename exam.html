@@ -48,8 +48,11 @@
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
                     <div id="options-box"></div>
                     <div id="solution-box" class="solution-box">
-                        <strong>Solution:</strong> <div id="sol-text"></div>
+                        <strong>Solution:</strong>
+                        <div id="sol-text"></div>
+                        <div id="sol-image"></div>
                     </div>
+
                 </div>
                 <div class="q-footer" id="exam-footer">
                     <div>
@@ -645,12 +648,37 @@
             });
 
             var solBox = document.getElementById('solution-box');
-            if(showSolution) {
+            
+            if (showSolution) {
                 solBox.style.display = 'block';
-                // Apply formatting to solution text (enables **bold** and new lines)
-                document.getElementById('sol-text').innerHTML = self.formatText(q.solution || "No solution.");
+
+                // Render solution text
+                document.getElementById('sol-text').innerHTML =
+                self.formatText(q.solution || "No solution.");
+
+                // Render solution image ONLY in solution
+                var solImgBox = document.getElementById('sol-image');
+                solImgBox.innerHTML = "";
+
+                if (q.solutionImage) {
+                    var img = document.createElement('img');
+                    var url = q.solutionImage;
+
+                    // GitHub raw fix (same as question images)
+                    if (url.includes('github.com') && url.includes('/blob/')) {
+                        url = url.replace('github.com', 'raw.githubusercontent.com')
+                            .replace('/blob/', '/');
+                    }
+
+                    img.src = url;
+                    img.className = 'q-image';
+                    img.style.cursor = "zoom-in";
+                    img.onclick = function () { openImgModal(this.src); };
+
+                    solImgBox.appendChild(img);
+                }
             } else {
-                solBox.style.display = 'none';
+            solBox.style.display = 'none';
             }
 
             // REFRESH PALETTE (Ensures Submit button hides if in review)
