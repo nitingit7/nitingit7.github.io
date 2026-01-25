@@ -6,10 +6,10 @@ var GITHUB_FILES = {
     // Moved existing tests to "quant_sectional"
 
     'full_test': [
-        { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
-        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
+        { name: "RRB Clerk Prelims: Full Mock 1", tags: "Full Mock", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
+        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", tags: "Full Mock", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
     ],
-        
+
     'quant_sectional': [
         { name: "Testing", file: BASE_URL + "tests/quant/mock1.json" },
         { name: "RRB Clerk: Speed Math 1", tags: "Speed Math", file: BASE_URL + "tests/quant/mock2.json" },
@@ -48,13 +48,13 @@ var GITHUB_FILES = {
 
     // --- 2. REASONING ABILITY ---
     'reasoning_sectional': [
-        { name: "RRB Clerk Reasoning: Puzzle & Seating", file: BASE_URL + "tests/reasoning/mock1.json" },
-        { name: "RRB Clerk Reasoning: Sectional 1", file: BASE_URL + "tests/reasoning/reas2.json" },
-        { name: "RRB Clerk Reasoning: Marathon", file: BASE_URL + "tests/reasoning/puzzlemarathon.json" },
-        { name: "RRB Clerk Prelims: Reasoning Ability [Moderate]", file: BASE_URL + "tests/reasoning/RA004.json" },
-        { name: "RRB Clerk Prelims: Reasoning (6th Dec Shift 2)", file: BASE_URL + "tests/reasoning/RA005.json" },
-        { name: "RRB Clerk Prelims: Reasoning (7th Dec Shift 1)", file: BASE_URL + "tests/reasoning/RA006.json" },
-        { name: "RRB Clerk Prelims: Reasoning (xth Dec Shift x)", file: BASE_URL + "tests/reasoning/RA007.json" }
+        { name: "RRB Clerk Reasoning: Puzzle & Seating", tags: "Sectional", file: BASE_URL + "tests/reasoning/mock1.json" },
+        { name: "RRB Clerk Reasoning: Sectional 1", tags: "Sectional", file: BASE_URL + "tests/reasoning/reas2.json" },
+        { name: "RRB Clerk Reasoning: Marathon", tags: "Marathon", file: BASE_URL + "tests/reasoning/puzzlemarathon.json" },
+        { name: "RRB Clerk Prelims: Reasoning Ability [Moderate]", tags: "Moderate", file: BASE_URL + "tests/reasoning/RA004.json" },
+        { name: "RRB Clerk Prelims: Reasoning (6th Dec Shift 2)", tags: "PYQ", file: BASE_URL + "tests/reasoning/RA005.json" },
+        { name: "RRB Clerk Prelims: Reasoning (7th Dec Shift 1)", tags: "PYQ", file: BASE_URL + "tests/reasoning/RA006.json" },
+        { name: "RRB Clerk Prelims: Reasoning (xth Dec Shift x)", tags: "PYQ", file: BASE_URL + "tests/reasoning/RA007.json" }
     ],
     'reasoning_topic': [
         { name: "Puzzles: Box Based", tags: "Puzzles", file: BASE_URL + "tests/reasoning/topics/puz1.json" },
@@ -64,7 +64,7 @@ var GITHUB_FILES = {
 
     // --- 3. ENGLISH LANGUAGE ---
     'english_sectional': [
-        { name: "RRB Assistant: English Mock 1", file: BASE_URL + "tests/english/mock1.json" }
+        { name: "RRB Assistant: English Mock 1", tags: "Sectional", file: BASE_URL + "tests/english/mock1.json" }
     ],
     'english_topic': [
         { name: "Reading Comprehension 1", tags: "RC", file: BASE_URL + "tests/english/topics/rc1.json" }
@@ -82,15 +82,15 @@ var GITHUB_FILES = {
     ]
 
     // --- 4. FULL MOCK TESTS (Stays the same) ---
-    
+
 };
 
 var GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfcBe23FbEQkCmH2QEWLUvV2Ei0CFezkOv54BXYG40GheCCLw/viewform?usp=pp_url&entry.57428168=TEST_NAME_VAR&entry.1889905698=Q_ID_VAR";
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var savedTheme = localStorage.getItem('site-theme');
-    if(savedTheme === 'dark') {
+    if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
     }
 });

@@ -92,9 +92,9 @@
                 if(f.name.toLowerCase().includes("speed")) icon = "⚡";
                 if(f.name.toLowerCase().includes("puzzle")) icon = "🧩";
                 if(f.name.toLowerCase().includes("full mock")) icon = "🏆";
-                if(f.name.toLowerCase().includes("current affairs") || f.tags.includes("Daily")) icon = "📅";
-                if(f.tags.includes("Banking")) icon = "🏦";
-                if(f.tags.includes("Static")) icon = "🗿";
+                if(f.name.toLowerCase().includes("current affairs") || (f.tags && f.tags.includes("Daily"))) icon = "📅";
+                if(f.tags && f.tags.includes("Banking")) icon = "🏦";
+                if(f.tags && f.tags.includes("Static")) icon = "🗿";
 
                 var saved = localStorage.getItem(f.file);
                 var btnText = saved ? "Analysis" : "Start";
