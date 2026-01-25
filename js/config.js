@@ -47,18 +47,18 @@ var GITHUB_FILES = {
     ],
     // New Topic Tests Category
     'quant_topic': [
-        { name: "Number System: Basic 1", tags: "Number System", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS001.json" },
-        { name: "Number System: Basic 2", tags: "Number System", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS002.json" },
-        { name: "Number System: Basic 3", tags: "Number System", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS003.json" },
-        { name: "Number System: Basic 4", tags: "Number System", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS005.json" },
-        { name: "Number System: Basic 5", tags: "Number System", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS006.json" },
-        { name: "Number System: Advance 1", tags: "Number System", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS004.json" },
-        { name: "Algebra: Basic 1", tags: "Algebra", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Algebra/QAA001.json" },
-        { name: "Algebra: Basic 2", tags: "Algebra", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Algebra/QAA002.json" },
-        { name: "Time and Work: Basic 1", tags: "Time and Work", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW001.json" },
-        { name: "Time and Work: Basic 2", tags: "Time and Work", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW002.json" },
-        { name: "Time and Work: Basic 3", tags: "Time and Work", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW003.json" },
-        { name: "Time and Work: Basic 4", tags: "Time and Work", questions: 15, time: 15, marks: 15, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW004.json" }
+        { name: "Number System: Basic 1", tags: "Number System", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS001.json" },
+        { name: "Number System: Basic 2", tags: "Number System", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS002.json" },
+        { name: "Number System: Basic 3", tags: "Number System", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS003.json" },
+        { name: "Number System: Basic 4", tags: "Number System", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS005.json" },
+        { name: "Number System: Basic 5", tags: "Number System", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS006.json" },
+        { name: "Number System: Advance 1", tags: "Number System", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Number System/QANS004.json" },
+        { name: "Algebra: Basic 1", tags: "Algebra", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Algebra/QAA001.json" },
+        { name: "Algebra: Basic 2", tags: "Algebra", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Algebra/QAA002.json" },
+        { name: "Time and Work: Basic 1", tags: "Time and Work", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW001.json" },
+        { name: "Time and Work: Basic 2", tags: "Time and Work", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW002.json" },
+        { name: "Time and Work: Basic 3", tags: "Time and Work", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW003.json" },
+        { name: "Time and Work: Basic 4", tags: "Time and Work", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW004.json" }
     ],
 
     // --- 2. REASONING ABILITY ---
