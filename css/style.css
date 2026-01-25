@@ -313,10 +313,15 @@ body.dark-mode .marks-badge {
     /* <--- THIS FIXES THE FLOATING 'A' */
     color: var(--text-primary);
     transition: background 0.2s ease;
+    /* Fix for mobile: disable tap highlight */
+    -webkit-tap-highlight-color: transparent;
 }
 
-.opt-row:hover {
-    background: var(--hover-bg);
+/* Only apply hover on devices that support hover (not touch screens) */
+@media (hover: hover) and (pointer: fine) {
+    .opt-row:hover {
+        background: var(--hover-bg);
+    }
 }
 
 .opt-row.selected {
