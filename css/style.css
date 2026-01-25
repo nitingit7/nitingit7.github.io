@@ -3,12 +3,13 @@
 
 :root {
     /* --- BRAND COLORS --- */
-    --blue:   #3F72AF;
+    --blue: #3F72AF;
     --yellow: #DBE2EF;
-    --dark:   #112D4E;  /* Default Header Color */
-    --light:  #F9F7F7;
-    --green:  #28a745;
-    --red:    #dc3545;
+    --dark: #112D4E;
+    /* Default Header Color */
+    --light: #F9F7F7;
+    --green: #28a745;
+    --red: #dc3545;
     --purple: #6f42c1;
 
     /* --- LIGHT THEME (Default) --- */
@@ -17,9 +18,10 @@
     --text-primary: #112D4E;
     --text-secondary: #555555;
     --border-color: #cfd7de;
-    --header-bg: #112D4E; /* Dark Blue */
+    --header-bg: #112D4E;
+    /* Dark Blue */
     --hover-bg: #f3f4f6;
-    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* --- DARK THEME OVERRIDES --- */
@@ -29,55 +31,109 @@ body.dark-mode {
     --text-primary: #e6edf3;
     --text-secondary: #8b949e;
     --border-color: #30363d;
-    --header-bg: #010409; /* Black */
+    --header-bg: #010409;
+    /* Black */
     --hover-bg: #21262d;
     --shadow: none;
 }
 
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-body { 
-    margin: 0; 
-    padding: 0; 
-    font-family: 'Segoe UI', sans-serif; 
-    background: var(--bg-color); 
-    color: var(--text-primary); 
-    height: 100vh; 
-    display: flex; 
-    flex-direction: column; 
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     /* transition removed to stop flickering */
 }
+
 /* --- TYPOGRAPHY FIXES --- */
-h1, h2, h3, h4, h5, h6, strong, b { color: var(--text-primary) !important; }
-.stat-label, p { color: var(--text-secondary) !important; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+    color: var(--text-primary) !important;
+}
+
+.stat-label,
+p {
+    color: var(--text-secondary) !important;
+}
 
 /* HEADER (Always Dark Background) */
 header {
     height: 60px;
     background: var(--header-bg);
-    color: white !important; /* Force white text in header always */
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0 10px; flex-shrink: 0; border-bottom: 1px solid var(--border-color);
+    color: white !important;
+    /* Force white text in header always */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--border-color);
 }
-#exam-title { font-weight: bold; font-size: 1.1rem; max-width: 35%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white !important; }
+
+#exam-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    max-width: 35%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white !important;
+}
 
 /* HEADER BUTTONS */
-.btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; margin-left: 5px; }
-.btn-pause { background: var(--yellow); color: #112D4E; }
-.btn-exit { background: var(--red); color: white; }
+.btn-header {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.btn-pause {
+    background: var(--yellow);
+    color: #112D4E;
+}
+
+.btn-exit {
+    background: var(--red);
+    color: white;
+}
 
 /* SPECIAL: Sidebar Toggle (Always White Border/Text) */
 .btn-header-outline {
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     color: white !important;
 }
-.btn-header-outline:hover { background: rgba(255,255,255,0.1); }
+
+.btn-header-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
 
 /* MARKS BADGE (Updated for visibility) */
 .marks-badge {
     font-size: 0.8rem;
-    background: #eef3f8;           /* Light gray-blue background */
-    color: var(--dark) !important; /* Dark text (Visible in Light Mode) */
+    background: #eef3f8;
+    /* Light gray-blue background */
+    color: var(--dark) !important;
+    /* Dark text (Visible in Light Mode) */
     padding: 5px 12px;
     border-radius: 4px;
     border: 1px solid #d0d7de;
@@ -87,74 +143,188 @@ header {
 
 /* Dark Mode override (Keeps it white when background is black) */
 body.dark-mode .marks-badge {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     color: white !important;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* --- GENERAL UI BUTTONS --- */
-.btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
-.btn-green { background: var(--green); }
-.btn-red { background: var(--red); }
-.btn-blue { background: var(--blue); }
-.btn-purple { background: var(--purple); }
-.btn-orange { background: #fd7e14; }
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-green {
+    background: var(--green);
+}
+
+.btn-red {
+    background: var(--red);
+}
+
+.btn-blue {
+    background: var(--blue);
+}
+
+.btn-purple {
+    background: var(--purple);
+}
+
+.btn-orange {
+    background: #fd7e14;
+}
 
 /* STANDARD OUTLINE BUTTON (For Result Screen - Adapts to Theme) */
 .btn-outline {
     background: transparent;
     border: 1px solid var(--border-color);
-    color: var(--text-primary); /* Dark in Light Mode, Light in Dark Mode */
+    color: var(--text-primary);
+    /* Dark in Light Mode, Light in Dark Mode */
     font-weight: bold;
 }
-.btn-outline:hover { background: var(--hover-bg); }
+
+.btn-outline:hover {
+    background: var(--hover-bg);
+}
 
 /* LAYOUT & CARDS */
-.container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-.subject-card {
-    background: var(--card-bg); width: 100%; padding: 25px; margin-bottom: 15px;
-    border-radius: 10px; box-shadow: var(--shadow); border: 1px solid var(--border-color);
-    cursor: pointer; display: flex; align-items: center; justify-content: space-between;
-    border-left: 5px solid transparent; transition: 0.2s; color: var(--text-primary);
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.subject-card:active { transform: scale(0.98); background: var(--hover-bg); }
-.icon { font-size: 24px; margin-right: 15px; color: var(--blue); }
+
+.subject-card {
+    background: var(--card-bg);
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 5px solid transparent;
+    transition: 0.2s;
+    color: var(--text-primary);
+}
+
+.subject-card:active {
+    transform: scale(0.98);
+    background: var(--hover-bg);
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 15px;
+    color: var(--blue);
+}
+
 .test-item {
-    background: var(--card-bg); width: 100%; padding: 15px; margin-bottom: 10px;
-    border-radius: 8px; border: 1px solid var(--border-color); display: flex;
-    justify-content: space-between; align-items: center; color: var(--text-primary);
+    background: var(--card-bg);
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-primary);
 }
 
 /* EXAM UI */
-.exam-body { display: flex; flex: 1; overflow: hidden; position: relative; background: var(--bg-color); }
-.q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--card-bg); }
-.q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); }
-.q-footer { padding: 10px; background: var(--bg-color); border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; }
+.exam-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-color);
+}
+
+.q-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--card-bg);
+}
+
+.q-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+.q-footer {
+    padding: 10px;
+    background: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+}
 
 /* BADGES (Skipped/Time) */
-.review-badges-container { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+.review-badges-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
 .review-badge {
-    display: inline-flex; align-items: center; justify-content: center;
-    background: var(--hover-bg); color: var(--text-primary);
-    font-size: 0.85rem; padding: 6px 12px; border-radius: 6px;
-    font-weight: bold; border: 1px solid var(--border-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--hover-bg);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
 }
 
 /* QUESTIONS & OPTIONS */
 .opt-row {
-    display: flex; 
-    padding: 12px; 
+    display: flex;
+    padding: 12px;
     border: 1px solid var(--border-color);
-    background: var(--card-bg); /* Better contrast */
-    margin-bottom: 10px; 
-    border-radius: 8px; /* Slightly smoother */
-    cursor: pointer; 
-    align-items: flex-start; /* <--- THIS FIXES THE FLOATING 'A' */
+    background: var(--card-bg);
+    /* Better contrast */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    /* Slightly smoother */
+    cursor: pointer;
+    align-items: flex-start;
+    /* <--- THIS FIXES THE FLOATING 'A' */
     color: var(--text-primary);
     transition: background 0.2s ease;
 }
-.opt-row:hover { background: var(--hover-bg); }
-.opt-row.selected { background: var(--yellow); border-color: var(--blue); border-width: 2px; color: #333 !important; }
+
+.opt-row:hover {
+    background: var(--hover-bg);
+}
+
+.opt-row.selected {
+    background: var(--yellow);
+    border-color: var(--blue);
+    border-width: 2px;
+    color: #333 !important;
+}
 
 /* FIX 1: DARK MODE SELECTED OPTION COLOR (Transparent Dark Blue) */
 body.dark-mode .opt-row.selected {
@@ -163,77 +333,232 @@ body.dark-mode .opt-row.selected {
     color: #fff !important;
 }
 
-.opt-row.correct { 
-    background: rgba(40, 167, 69, 0.25) !important; /* Transparent Green */
-    border-color: var(--green) !important; 
-    color: var(--text-primary) !important; /* Keeps text readable in Dark Mode */
+.opt-row.correct {
+    background: rgba(40, 167, 69, 0.25) !important;
+    /* Transparent Green */
+    border-color: var(--green) !important;
+    color: var(--text-primary) !important;
+    /* Keeps text readable in Dark Mode */
 }
-.opt-row.wrong { 
-    background: rgba(220, 53, 69, 0.25) !important; /* Transparent Red */
-    border-color: var(--red) !important; 
-    color: var(--text-primary) !important; 
+
+.opt-row.wrong {
+    background: rgba(220, 53, 69, 0.25) !important;
+    /* Transparent Red */
+    border-color: var(--red) !important;
+    color: var(--text-primary) !important;
 }
-.solution-box { background: var(--bg-color); padding: 15px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); margin-top: 20px; border-radius: 5px; display: none; color: var(--text-primary); }
+
+.solution-box {
+    background: var(--bg-color);
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--green);
+    margin-top: 20px;
+    border-radius: 5px;
+    display: none;
+    color: var(--text-primary);
+}
 
 /* --- SMOOTH SIDEBAR ANIMATION --- */
 #sidebar {
-    position: absolute; 
-    right: 0; 
-    top: 0; 
-    bottom: 0; 
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
     width: 280px;
-    background: var(--card-bg); 
+    background: var(--card-bg);
     border-left: 1px solid var(--border-color);
-    z-index: 1000; /* Ensure it's above everything */
-    display: flex; 
-    flex-direction: column; 
+    z-index: 1000;
+    /* Ensure it's above everything */
+    display: flex;
+    flex-direction: column;
     color: var(--text-primary);
-    
+
     /* 1. Start hidden off-screen to the right */
-    transform: translateX(100%); 
-    
+    transform: translateX(100%);
+
     /* 2. THE MAGIC SAUCE: Use a custom bezier curve for smoothness */
     /* This specific curve (fast start, slow stop) feels very "App-like" */
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-    
+
     /* Optional: Add a subtle shadow when opening */
     box-shadow: none;
 }
 
 /* When the sidebar is open */
-#sidebar.open { 
+#sidebar.open {
     /* 3. Slide it into view */
-    transform: translateX(0); 
-    
+    transform: translateX(0);
+
     /* Add a deep shadow so it looks like it's floating above the content */
-    box-shadow: -10px 0 30px rgba(0,0,0,0.3); 
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
 }
 
-#sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.5); }
-.palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
-.pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; color: var(--text-primary); background: var(--bg-color); }
+#sidebar.open {
+    transform: translateX(0);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
 
-.view-result { display:none; justify-content: center; align-items: center; background: var(--bg-color); width:100%; height:100%; flex-direction:column; position: absolute; top:0; left:0; z-index: 100; }
-.view-result.active { display:flex; }
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.pal-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--text-primary);
+    background: var(--bg-color);
+}
+
+.view-result {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.view-result.active {
+    display: flex;
+}
+
 .score-card {
-    text-align: center; padding: 30px; background: var(--card-bg);
-    box-shadow: var(--shadow); border: 1px solid var(--border-color);
-    border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; color: var(--text-primary);
+    text-align: center;
+    padding: 30px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    overflow-y: auto;
+    max-height: 95vh;
+    color: var(--text-primary);
 }
-.stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0; }
-.stat-item { padding: 10px; border-radius: 5px; background: var(--bg-color); border: 1px solid var(--border-color); }
-.stat-val { font-weight: bold; font-size: 1.2rem; color: var(--text-primary); }
 
-.switch-container { display: flex; align-items: center; background: var(--bg-color); padding: 10px 15px; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); color: var(--text-primary); }
-.switch { position: relative; display: inline-block; width: 46px; height: 24px; margin-right: 12px; }
-.switch input { opacity: 0; width: 0; height: 0; }
-.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
-.slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
-input:checked + .slider { background-color: var(--blue); }
-input:checked + .slider:before { transform: translateX(22px); }
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
 
-#pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
-.theme-btn { position: absolute; top: 20px; right: 20px; background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; z-index: 1000; }
+.stat-item {
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.stat-val {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--blue);
+}
+
+input:checked+.slider:before {
+    transform: translateX(22px);
+}
+
+#pause-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 1000;
+}
 
 /* FIX 2: BACK BUTTON BOX COLOR (Redefined as Outline Button) */
 .back-btn {
@@ -252,15 +577,18 @@ input:checked + .slider:before { transform: translateX(22px); }
     transition: all 0.2s ease;
     box-shadow: none;
 }
+
 .back-btn:hover {
     background-color: var(--blue);
     color: white;
 }
+
 /* Adapt back button for dark mode */
 body.dark-mode .back-btn {
     border-color: var(--text-primary);
     color: var(--text-primary);
 }
+
 body.dark-mode .back-btn:hover {
     background-color: var(--text-primary);
     color: var(--bg-color);
@@ -272,91 +600,188 @@ body.dark-mode .back-btn:hover {
    ========================================= */
 
 /* Instruction Page Container */
-.inst-container { 
-    background: var(--card-bg); 
-    max-width: 95%; 
-    margin: 20px auto; 
-    padding: 30px; 
-    border-radius: 8px; 
-    box-shadow: var(--shadow); 
-    color: var(--text-primary); /* Ensures text is white in dark mode */
+.inst-container {
+    background: var(--card-bg);
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    color: var(--text-primary);
+    /* Ensures text is white in dark mode */
     border: 1px solid var(--border-color);
 }
 
-.inst-header { 
-    border-bottom: 1px solid var(--border-color); 
-    padding-bottom: 15px; 
-    margin-bottom: 20px; 
+.inst-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.inst-content { 
-    height: 60vh; 
-    overflow-y: auto; 
-    padding-right: 10px; 
-    border: 1px solid var(--border-color); 
-    padding: 15px; 
-    margin-bottom: 20px; 
-    
+.inst-content {
+    height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 20px;
+
     /* CHANGE HERE: Use white instead of grey */
-    background: #ffffff; 
-    
+    background: #ffffff;
+
     /* Optional: Smooth transition if you toggle themes */
     transition: background 0.3s ease;
 }
 
 /* Ensure it stays dark in Dark Mode */
 body.dark-mode .inst-content {
-    background: var(--card-bg); /* Uses the dark card color */
+    background: var(--card-bg);
+    /* Uses the dark card color */
 }
 
 /* Palette Legend Styles */
-.legend-row { display: flex; align-items: center; margin-bottom: 12px; color: var(--text-primary); }
-.legend-icon { 
-    width: 30px; height: 30px; 
-    display: flex; justify-content: center; align-items: center; 
-    border-radius: 50%; 
-    border: 1px solid var(--border-color); 
-    margin-right: 15px; 
-    font-size: 12px; font-weight: bold; flex-shrink: 0; 
+.legend-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.legend-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    margin-right: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
 }
 
 /* Specific Colors matching your exam */
-.l-not-visit { background: #e0e0e0; color: black; border-radius: 4px; } 
+.l-not-visit {
+    background: #e0e0e0;
+    color: black;
+    border-radius: 4px;
+}
+
 /* Fix for dark mode "Not Visited" square */
-body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555; }
+body.dark-mode .l-not-visit {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
 
-.l-not-ans { background: var(--red); color: white; border: none; }
-.l-ans { background: var(--green); color: white; border: none; }
-.l-mark { background: var(--purple); color: white; border: none; }
-.l-ans-mark { background: var(--purple); color: white; border: none; position: relative; }
-.l-ans-mark::after { content: '✔'; position: absolute; bottom: -2px; right: -2px; font-size: 10px; background: var(--green); color: white; border-radius: 50%; padding: 1px; }
+.l-not-ans {
+    background: var(--red);
+    color: white;
+    border: none;
+}
 
-.footer-box { border-top: 1px solid var(--border-color); padding-top: 20px; }
-.chk-label { display: flex; align-items: center; cursor: pointer; font-weight: bold; user-select: none; color: var(--text-primary); }
-.chk-input { width: 18px; height: 18px; margin-right: 10px; }
+.l-ans {
+    background: var(--green);
+    color: white;
+    border: none;
+}
+
+.l-mark {
+    background: var(--purple);
+    color: white;
+    border: none;
+}
+
+.l-ans-mark {
+    background: var(--purple);
+    color: white;
+    border: none;
+    position: relative;
+}
+
+.l-ans-mark::after {
+    content: '✔';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    font-size: 10px;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.footer-box {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.chk-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    color: var(--text-primary);
+}
+
+.chk-input {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
 
 /* Disabled button style */
-.btn-start { width: 100%; margin-top: 15px; opacity: 0.5; pointer-events: none; transition: 0.3s; background-color: var(--blue); color: white; border: none; padding: 12px; border-radius: 4px; font-weight: bold; }
-.btn-start.active { opacity: 1; pointer-events: auto; cursor: pointer; }
+.btn-start {
+    width: 100%;
+    margin-top: 15px;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: 0.3s;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-start.active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
 
 /* =========================================
    ADD THIS TO STYLE.CSS FOR PROFESSIONAL BADGE
    ========================================= */
 
 .feedback-badge {
-    font-size: 1rem;          /* Larger text */
-    font-weight: 700;           /* Extra Bold */
-    text-transform: uppercase;  /* Make it all CAPS */
-    letter-spacing: 2px;        /* Spacing between letters for clean look */
-    color: white !important;    /* Force white text */
-    
-    padding: 12px 30px;         /* More breathing room */
-    border-radius: 50px;        /* Pill/Rounded shape instead of box */
-    margin: 20px auto;          /* Center it with space */
-    width: fit-content;         /* Shrink to fit text width */
-    
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Soft shadow for depth */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Slight text shadow */
+    font-size: 1rem;
+    /* Larger text */
+    font-weight: 700;
+    /* Extra Bold */
+    text-transform: uppercase;
+    /* Make it all CAPS */
+    letter-spacing: 2px;
+    /* Spacing between letters for clean look */
+    color: white !important;
+    /* Force white text */
+
+    padding: 12px 30px;
+    /* More breathing room */
+    border-radius: 50px;
+    /* Pill/Rounded shape instead of box */
+    margin: 20px auto;
+    /* Center it with space */
+    width: fit-content;
+    /* Shrink to fit text width */
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Soft shadow for depth */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Slight text shadow */
     transition: transform 0.2s ease;
 }
 
@@ -371,13 +796,21 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
 
 /* 1. Smooth Fade-in Animation for the whole page */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
     animation: fadeInUp 0.6s ease-out;
-    padding-bottom: 80px; /* Space for scrolling on mobile */
+    padding-bottom: 80px;
+    /* Space for scrolling on mobile */
 }
 
 /* 2. Modern Header Styling */
@@ -385,14 +818,14 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
     font-size: 28px;
     font-weight: 800;
     letter-spacing: -0.5px;
-    
+
     /* Gradient Text Effect */
     background: linear-gradient(135deg, var(--blue), var(--purple));
-    
+
     /* The Fix: Add the standard property below the webkit one */
     -webkit-background-clip: text;
-    background-clip: text; 
-    
+    background-clip: text;
+
     -webkit-text-fill-color: transparent;
     margin-bottom: 40px !important;
     text-align: center;
@@ -400,16 +833,18 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
 
 /* 3. App-Style Cards */
 .subject-card {
-    border: none !important; /* Remove grey border */
+    border: none !important;
+    /* Remove grey border */
     background: var(--card-bg);
     margin-bottom: 20px;
     padding: 20px;
-    border-radius: 16px; /* Rounder corners like apps */
-    
+    border-radius: 16px;
+    /* Rounder corners like apps */
+
     /* Soft, high-quality shadow */
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
+
     position: relative;
     overflow: hidden;
     display: flex;
@@ -418,7 +853,8 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
 }
 
 /* Hover/Touch Effect */
-.subject-card:active, .subject-card:hover {
+.subject-card:active,
+.subject-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
 }
@@ -427,7 +863,9 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
 .subject-card::before {
     content: "";
     position: absolute;
-    left: 0; top: 0; bottom: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: 6px;
     background: linear-gradient(to bottom, var(--blue), var(--purple));
 }
@@ -437,7 +875,8 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
     font-size: 28px;
     margin-right: 20px;
     /* Create a circle background for icon */
-    background: rgba(63, 114, 175, 0.1); /* Light tint of your blue */
+    background: rgba(63, 114, 175, 0.1);
+    /* Light tint of your blue */
     width: 50px;
     height: 50px;
     display: flex;
@@ -471,9 +910,11 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
 
 /* 6. Dark Mode Specific Polish */
 body.dark-mode .subject-card {
-    background: #1e2530; /* Slightly lighter than pure black bg */
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+    background: #1e2530;
+    /* Slightly lighter than pure black bg */
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
+
 body.dark-mode .subject-card .icon {
     background: rgba(255, 255, 255, 0.1);
 }
@@ -487,7 +928,8 @@ body.dark-mode .subject-card .icon {
     right: 20px;
     display: flex;
     align-items: center;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000;
+    /* Ensure it stays on top */
 }
 
 .theme-switch {
@@ -498,7 +940,8 @@ body.dark-mode .subject-card .icon {
 }
 
 .theme-switch input {
-    display: none; /* Hide default checkbox */
+    display: none;
+    /* Hide default checkbox */
 }
 
 .slider-round {
@@ -516,14 +959,15 @@ body.dark-mode .subject-card .icon {
 .slider-round:before {
     background-color: white;
     bottom: 4px;
-    content: ""; /* This is the moving circle */
+    content: "";
+    /* This is the moving circle */
     height: 26px;
     left: 4px;
     position: absolute;
     transition: .4s;
     width: 26px;
     border-radius: 50%;
-    
+
     /* Add an icon inside the circle */
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>');
     background-repeat: no-repeat;
@@ -531,11 +975,11 @@ body.dark-mode .subject-card .icon {
 }
 
 /* When checked (Dark Mode) */
-input:checked + .slider-round {
+input:checked+.slider-round {
     background-color: var(--blue);
 }
 
-input:checked + .slider-round:before {
+input:checked+.slider-round:before {
     transform: translateX(26px);
     /* Change icon to Moon */
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>');
@@ -546,7 +990,8 @@ input:checked + .slider-round:before {
    ========================================= */
 /* Container spacing to prevent toggle overlap on mobile */
 .container {
-    padding-top: 80px !important; /* Pushes content down so toggle doesn't cover text */
+    padding-top: 80px !important;
+    /* Pushes content down so toggle doesn't cover text */
 }
 
 /* The New Test Card */
@@ -555,12 +1000,14 @@ input:checked + .slider-round:before {
     width: 100%;
     padding: 20px;
     margin-bottom: 15px;
-    border-radius: 12px; /* Smooth corners */
-    border: none !important; /* Remove old border */
-    
+    border-radius: 12px;
+    /* Smooth corners */
+    border: none !important;
+    /* Remove old border */
+
     /* App-like Shadow */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -572,14 +1019,16 @@ input:checked + .slider-round:before {
 /* Hover Effect */
 .test-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Left side accent bar */
 .test-item::before {
     content: '';
     position: absolute;
-    left: 0; top: 0; bottom: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: 5px;
     background: var(--blue);
     border-radius: 4px 0 0 4px;
@@ -590,20 +1039,25 @@ input:checked + .slider-round:before {
     font-weight: 700;
     font-size: 1rem;
     color: var(--text-primary);
-    margin-left: 10px; /* Space from the accent bar */
-    flex: 1; /* Takes available space */
-    padding-right: 15px; /* Space before button */
+    margin-left: 10px;
+    /* Space from the accent bar */
+    flex: 1;
+    /* Takes available space */
+    padding-right: 15px;
+    /* Space before button */
 }
 
 /* The Start/Result Button styling override */
 .test-item .btn {
     padding: 8px 20px;
-    border-radius: 20px; /* Pill shape */
+    border-radius: 20px;
+    /* Pill shape */
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    min-width: 100px; /* Ensure buttons align nicely */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    min-width: 100px;
+    /* Ensure buttons align nicely */
     text-align: center;
 }
 
@@ -611,23 +1065,29 @@ input:checked + .slider-round:before {
 
 /* 1. Light Mode (Default): Skipped questions become Gray with Dark Text */
 .pal-rev-skipped {
-    background-color: #d1d5db !important; /* Soft Gray */
-    color: #333333 !important;            /* Dark Text for contrast */
+    background-color: #d1d5db !important;
+    /* Soft Gray */
+    color: #333333 !important;
+    /* Dark Text for contrast */
     border: 1px solid #adb5bd !important;
 }
 
 /* 2. Dark Mode: Skipped questions stay Dark with White Text */
 body.dark-mode .pal-rev-skipped {
-    background-color: #444444 !important; /* Original Dark Grey */
-    color: #ffffff !important;            /* White Text */
+    background-color: #444444 !important;
+    /* Original Dark Grey */
+    color: #ffffff !important;
+    /* White Text */
     border: 1px solid #666666 !important;
 }
 
 /* FIX FOR HIDDEN BETA TAG */
 .container h2 span {
-    -webkit-text-fill-color: var(--text-primary) !important; /* Force solid color */
+    -webkit-text-fill-color: var(--text-primary) !important;
+    /* Force solid color */
     color: var(--text-primary) !important;
-    opacity: 0.6; /* Keep the transparency effect */
+    opacity: 0.6;
+    /* Keep the transparency effect */
 }
 
 /* Optional: Make it look better in Dark Mode */
@@ -647,7 +1107,7 @@ body.dark-mode .container h2 span {
     color: var(--text-primary);
 }
 
-.q-extra-info th, 
+.q-extra-info th,
 .q-extra-info td {
     border: 1px solid var(--border-color);
     padding: 8px;
@@ -671,7 +1131,11 @@ body.dark-mode .q-extra-info tr:nth-child(even) {
 }
 
 
-@keyframes blink { 50% { opacity: 0.5; } }
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
 
 /* 2. Report Error Button Styling */
 #btn-report {
@@ -680,14 +1144,16 @@ body.dark-mode .q-extra-info tr:nth-child(even) {
     color: var(--red);
     border: 1px solid var(--red);
     padding: 5px 12px;
-    border-radius: 20px;       /* Pill shape */
+    border-radius: 20px;
+    /* Pill shape */
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s ease;
     margin-left: 10px;
-    text-decoration: none;     /* Remove underline */
+    text-decoration: none;
+    /* Remove underline */
 }
 
 #btn-report:hover {
@@ -702,6 +1168,7 @@ body.dark-mode #btn-report {
     border-color: #ff6b6b;
     color: #ff6b6b;
 }
+
 body.dark-mode #btn-report:hover {
     background-color: #ff6b6b;
     color: #1a1a1a;
@@ -715,27 +1182,32 @@ body.dark-mode #btn-report:hover {
 .timer-container {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Keeps it perfectly centered */
+    transform: translateX(-50%);
+    /* Keeps it perfectly centered */
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     /* Modern Glassy Look */
-    background: rgba(255, 255, 255, 0.1); 
+    background: rgba(255, 255, 255, 0.1);
     padding: 6px 20px;
-    border-radius: 30px; /* Pill shape */
+    border-radius: 30px;
+    /* Pill shape */
     border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px); /* Optional: Blur effect behind */
+    backdrop-filter: blur(5px);
+    /* Optional: Blur effect behind */
 }
 
 /* 2. Clean Typography for Timer */
 .timer {
-    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; /* Clean font */
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+    /* Clean font */
     font-size: 1.25rem;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 0.5px;
-    background: transparent; /* No box background */
+    background: transparent;
+    /* No box background */
     border: none;
     box-shadow: none;
     padding: 0;
@@ -753,15 +1225,20 @@ body.dark-mode #btn-report:hover {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between the buttons */
-    z-index: 10; /* Ensure buttons are clickable */
+    gap: 10px;
+    /* Space between the buttons */
+    z-index: 10;
+    /* Ensure buttons are clickable */
 }
 
 /* 4. Warning State (Subtle Red Text, no flashing box) */
 .timer.warning {
-    color: #ff6b6b; /* Soft red */
-    animation: none; /* Remove annoying blink */
+    color: #ff6b6b;
+    /* Soft red */
+    animation: none;
+    /* Remove annoying blink */
 }
+
 .timer-container.warning-bg {
     border-color: #ff6b6b;
     background: rgba(255, 0, 0, 0.1);
@@ -769,8 +1246,15 @@ body.dark-mode #btn-report:hover {
 
 /* 5. Mobile Adjustment: Hide Title to fit Timer */
 @media (max-width: 600px) {
-    #exam-title { display: none; }
-    .timer-container { position: relative; left: 0; transform: none; }
+    #exam-title {
+        display: none;
+    }
+
+    .timer-container {
+        position: relative;
+        left: 0;
+        transform: none;
+    }
 }
 
 /* --- FIX: HEADER LAYOUT (RIGHT-ALIGNED TIMER) --- */
@@ -778,7 +1262,8 @@ body.dark-mode #btn-report:hover {
 /* 1. Main Header Layout */
 header {
     display: flex;
-    justify-content: space-between; /* Title Left, Group Right */
+    justify-content: space-between;
+    /* Title Left, Group Right */
     align-items: center;
     padding: 0 15px;
     height: 60px;
@@ -789,15 +1274,18 @@ header {
 .header-right-group {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between Timer and Buttons */
+    gap: 15px;
+    /* Space between Timer and Buttons */
 }
 
 /* 3. Fix Timer Position (Resetting previous centering code) */
 .timer-container {
-    position: static !important; /* Stop floating in center */
-    transform: none !important;  /* Remove centering shift */
+    position: static !important;
+    /* Stop floating in center */
+    transform: none !important;
+    /* Remove centering shift */
     margin: 0;
-    
+
     /* Keep the professional look */
     background: rgba(255, 255, 255, 0.1);
     padding: 5px 15px;
@@ -810,34 +1298,59 @@ header {
 
 /* 4. Ensure Title is Always Visible */
 #exam-title {
-    display: block !important; /* Force visible on mobile */
+    display: block !important;
+    /* Force visible on mobile */
     font-size: 1.1rem;
     font-weight: bold;
     color: white !important;
-    
+
     /* Prevent title from overlapping timer on small phones */
-    max-width: 40%; 
+    max-width: 40%;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adds "..." if title is too long */
+    text-overflow: ellipsis;
+    /* Adds "..." if title is too long */
 }
 
 /* 5. Mobile Optimizations (Small Screens) */
 @media (max-width: 500px) {
-    .header-right-group { gap: 8px; }      /* Tighter spacing */
-    .timer-container { padding: 4px 10px; } /* Smaller timer box */
-    .timer { font-size: 1rem; }            /* Smaller text */
-    .timer-icon { display: none; }         /* Hide hourglass icon on tiny screens */
-    #exam-title { font-size: 0.9rem; max-width: 35%; }
+    .header-right-group {
+        gap: 8px;
+    }
+
+    /* Tighter spacing */
+    .timer-container {
+        padding: 4px 10px;
+    }
+
+    /* Smaller timer box */
+    .timer {
+        font-size: 1rem;
+    }
+
+    /* Smaller text */
+    .timer-icon {
+        display: none;
+    }
+
+    /* Hide hourglass icon on tiny screens */
+    #exam-title {
+        font-size: 0.9rem;
+        max-width: 35%;
+    }
 }
 
 /* --- RESPONSIVE IMAGE FIX --- */
 .q-image {
-    max-width: 100%;       /* Force image to never exceed screen width */
-    height: auto;          /* Keep the aspect ratio correct */
-    display: block;        /* Make it a block element so centering works */
-    margin: 15px auto;     /* Center horizontally + add top/bottom spacing */
-    
+    max-width: 100%;
+    /* Force image to never exceed screen width */
+    height: auto;
+    /* Keep the aspect ratio correct */
+    display: block;
+    /* Make it a block element so centering works */
+    margin: 15px auto;
+    /* Center horizontally + add top/bottom spacing */
+
     /* Optional: Makes it look cleaner */
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -845,16 +1358,20 @@ header {
 
 /* --- IMAGE ZOOM MODAL STYLES --- */
 .img-modal {
-    display: none; /* Hidden by default */
-    position: fixed; 
-    z-index: 99999; /* Sit on top of everything */
-    padding-top: 50px; 
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 99999;
+    /* Sit on top of everything */
+    padding-top: 50px;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
 }
 
 .modal-content {
@@ -862,21 +1379,30 @@ header {
     display: block;
     max-width: 90%;
     max-height: 90vh;
-    
+
     /* --- THE FIX IS HERE --- */
-    background-color: #ffffff; /* Force white background so charts are readable */
-    padding: 10px;             /* Add a little white frame around the image */
-    border-radius: 8px;        /* Round the corners */
-    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Make it pop */
-    
+    background-color: #ffffff;
+    /* Force white background so charts are readable */
+    padding: 10px;
+    /* Add a little white frame around the image */
+    border-radius: 8px;
+    /* Round the corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Make it pop */
+
     /* Keep animation */
     animation-name: zoom;
     animation-duration: 0.3s;
 }
 
 @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* Close Button */
@@ -899,7 +1425,7 @@ header {
 }
 
 /* Mobile: Allow pinch zoom feel by letting width expand */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
     }
@@ -916,7 +1442,7 @@ header {
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -936,15 +1462,17 @@ header {
 
 /* The Dropdown Menu */
 .filter-dropdown {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: absolute;
     right: 0;
-    top: 45px; /* Pushes it below the button */
+    top: 45px;
+    /* Pushes it below the button */
     width: 220px;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     z-index: 100;
     flex-direction: column;
 }
@@ -977,29 +1505,33 @@ header {
 }
 
 .filter-option.selected {
-    background: rgba(63, 114, 175, 0.15); /* Light blue tint */
+    background: rgba(63, 114, 175, 0.15);
+    /* Light blue tint */
     color: var(--blue);
     border-color: var(--blue);
     font-weight: bold;
 }
+
 /* --- GLOWING RED CLEAR FILTER BUTTON --- */
 .btn-clear-filter {
     width: 100%;
     /* Red Gradient Background */
-    background: linear-gradient(135deg, #dc3545, #c82333); 
+    background: linear-gradient(135deg, #dc3545, #c82333);
     border: none;
-    color: white; /* White Text */
+    color: white;
+    /* White Text */
     padding: 12px;
     font-weight: bold;
     cursor: pointer;
     font-size: 0.9rem;
-    border-radius: 0 0 8px 8px; /* Rounded at bottom only */
+    border-radius: 0 0 8px 8px;
+    /* Rounded at bottom only */
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    
+
     /* Initial Red Glow */
     box-shadow: 0 -2px 10px rgba(220, 53, 69, 0.3);
 }
@@ -1007,7 +1539,7 @@ header {
 .btn-clear-filter:hover {
     background: linear-gradient(135deg, #e4606d, #dc3545);
     /* Stronger Glow on Hover */
-    box-shadow: 0 0 20px rgba(220, 53, 69, 0.6); 
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
 }
 
 .btn-clear-filter:active {
@@ -1054,7 +1586,7 @@ body.dark-mode .btn-clear-filter {
     background: var(--blue);
     color: white;
     border-color: var(--blue);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Locked Sections (Future sections in Test Mode) */
@@ -1073,7 +1605,7 @@ body.dark-mode .sec-btn.locked {
 /* Badge inside the button (e.g., "Q: 40") */
 .sec-badge {
     font-size: 0.75rem;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     padding: 2px 6px;
     border-radius: 4px;
 }
@@ -1081,12 +1613,15 @@ body.dark-mode .sec-btn.locked {
 /* --- PROFESSIONAL REVIEW TOOLBAR --- */
 .review-toolbar {
     display: flex;
-    justify-content: space-between; /* Badges Left, Toggle Right */
+    justify-content: space-between;
+    /* Badges Left, Toggle Right */
     align-items: center;
-    background: transparent; /* No ugly background box */
+    background: transparent;
+    /* No ugly background box */
     padding: 10px 0;
     margin-bottom: 15px;
-    border-bottom: 1px solid var(--border-color); /* Subtle divider */
+    border-bottom: 1px solid var(--border-color);
+    /* Subtle divider */
 }
 
 /* Badges Group */
@@ -1097,7 +1632,8 @@ body.dark-mode .sec-btn.locked {
 
 .pro-badge {
     padding: 5px 12px;
-    border-radius: 20px; /* Pill shape is more modern */
+    border-radius: 20px;
+    /* Pill shape is more modern */
     font-size: 0.85rem;
     font-weight: 600;
     display: flex;
@@ -1125,14 +1661,18 @@ body.dark-mode .sec-btn.locked {
         align-items: flex-start;
         gap: 10px;
     }
+
     .toggle-group {
         width: 100%;
-        justify-content: space-between; /* Spread toggle across width on phone */
+        justify-content: space-between;
+        /* Spread toggle across width on phone */
     }
 }
+
 /* FIX: Make toggle text visible in Dark Mode */
 .toggle-label {
-    color: var(--text-primary) !important; /* Adapts: Dark in Light Mode, White in Dark Mode */
+    color: var(--text-primary) !important;
+    /* Adapts: Dark in Light Mode, White in Dark Mode */
 }
 
 /* =========================================
@@ -1174,7 +1714,8 @@ body.enable-transition .inst-content {
 /* 1. Allow the animation to sit on top of everything */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    animation: none; /* Disable the default browser fade */
+    animation: none;
+    /* Disable the default browser fade */
     mix-blend-mode: normal;
 }
 
@@ -1182,8 +1723,10 @@ body.enable-transition .inst-content {
 ::view-transition-old(root) {
     z-index: 1;
 }
+
 ::view-transition-new(root) {
-    z-index: 9999; /* Ensure the new theme spreads ON TOP */
+    z-index: 9999;
+    /* Ensure the new theme spreads ON TOP */
 }
 
 /* 3. Fallback for browsers that don't support this API yet */
@@ -1193,66 +1736,82 @@ body.enable-transition .inst-content {
 
 /* Default (Light Mode): Dark Text */
 .pause-title {
-    color: var(--text-primary); /* Uses your main dark text color */
+    color: var(--text-primary);
+    /* Uses your main dark text color */
     margin-bottom: 10px;
 }
 
 .pause-msg {
-    color: var(--text-secondary); /* Uses your main grey text color */
+    color: var(--text-secondary);
+    /* Uses your main grey text color */
     margin-bottom: 30px;
 }
 
 /* Dark Mode Override: White Text */
 body.dark-mode .pause-title {
-    color: #ffffff !important; /* Force White */
+    color: #ffffff !important;
+    /* Force White */
 }
 
 body.dark-mode .pause-msg {
-    color: #cccccc !important; /* Force Light Grey */
+    color: #cccccc !important;
+    /* Force Light Grey */
 }
 
 /* Ensure the overlay background itself is correct */
 #pause-overlay {
     /* If you want it fully black in dark mode */
-    background: rgba(255, 255, 255, 0.95); /* Light mode background */
+    background: rgba(255, 255, 255, 0.95);
+    /* Light mode background */
 }
 
 body.dark-mode #pause-overlay {
-    background: rgba(0, 0, 0, 0.95); /* Dark mode background */
+    background: rgba(0, 0, 0, 0.95);
+    /* Dark mode background */
 }
 
 /* --- PROFESSIONAL RESULT BUTTONS UPGRADE --- */
 
 /* 1. General Button Shape & Feel */
 .score-card .btn {
-    width: 100%;               /* Ensure full width */
-    padding: 14px 20px;        /* Taller, more touch-friendly */
+    width: 100%;
+    /* Ensure full width */
+    padding: 14px 20px;
+    /* Taller, more touch-friendly */
     font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 0.5px;     /* Slight spacing for readability */
-    text-transform: uppercase; /* Professional look */
-    border-radius: 12px;       /* Modern rounded corners */
+    letter-spacing: 0.5px;
+    /* Slight spacing for readability */
+    text-transform: uppercase;
+    /* Professional look */
+    border-radius: 12px;
+    /* Modern rounded corners */
     border: none;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth movement */
-    
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Smooth movement */
+
     /* Subtle Shadow for Depth */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    margin-bottom: 12px;       /* Spacing between buttons */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    /* Spacing between buttons */
 }
 
 /* 2. Hover Effect (Lift Up) */
 .score-card .btn:hover {
-    transform: translateY(-2px); /* Moves up slightly */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow grows */
+    transform: translateY(-2px);
+    /* Moves up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    /* Shadow grows */
 }
 
 /* 3. Re-attempt Button (Professional Deep Orange - No Pink) */
 .btn-orange {
     /* Moves from vibrant orange to deep burnt orange */
-    background: linear-gradient(135deg, #faa538, #e65100); 
+    background: linear-gradient(135deg, #faa538, #e65100);
     color: white;
-    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.2); /* Matching orange shadow */
+    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.2);
+    /* Matching orange shadow */
 }
 
 /* Optional: Hover effect to make it glow slightly */
@@ -1271,28 +1830,38 @@ body.dark-mode #pause-overlay {
 /* 5. Back to List Button (The Adaptive Outline) */
 .btn-outline {
     background: transparent;
-    border: 2px solid var(--border-color); /* Matches theme border */
-    color: var(--text-secondary);          /* Grey text by default */
-    box-shadow: none;                      /* No shadow for flat look */
+    border: 2px solid var(--border-color);
+    /* Matches theme border */
+    color: var(--text-secondary);
+    /* Grey text by default */
+    box-shadow: none;
+    /* No shadow for flat look */
 }
 
 .btn-outline:hover {
-    border-color: var(--text-primary);     /* Darker border on hover */
-    color: var(--text-primary);            /* Darker text on hover */
-    background: var(--hover-bg);           /* Subtle background fill */
+    border-color: var(--text-primary);
+    /* Darker border on hover */
+    color: var(--text-primary);
+    /* Darker text on hover */
+    background: var(--hover-bg);
+    /* Subtle background fill */
     transform: translateY(-1px);
 }
 
 /* --- DARK MODE ADJUSTMENTS --- */
 body.dark-mode .btn-outline {
-    border-color: #30363d;       /* Dark grey border */
-    color: #8b949e;              /* Soft grey text */
+    border-color: #30363d;
+    /* Dark grey border */
+    color: #8b949e;
+    /* Soft grey text */
 }
 
 body.dark-mode .btn-outline:hover {
-    border-color: #f0f6fc;       /* White border on hover */
-    color: #f0f6fc;              /* White text on hover */
-    background: rgba(255,255,255,0.05);
+    border-color: #f0f6fc;
+    /* White border on hover */
+    color: #f0f6fc;
+    /* White text on hover */
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* =========================================
@@ -1309,7 +1878,8 @@ body.dark-mode .btn-outline:hover {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 5px;
-    background: linear-gradient(135deg, #3F72AF, #6f42c1); /* Blue to Purple Gradient */
+    background: linear-gradient(135deg, #3F72AF, #6f42c1);
+    /* Blue to Purple Gradient */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1327,10 +1897,10 @@ body.dark-mode .btn-outline:hover {
     border-radius: 20px;
     letter-spacing: 1px;
     box-shadow: 0 4px 10px rgba(255, 94, 98, 0.3);
-    
+
     /* Ensure it behaves like a solid box */
     display: inline-block;
-    
+
     /* These resets ensure the parent gradient doesn't touch it */
     -webkit-text-fill-color: white !important;
     text-shadow: none;
@@ -1351,7 +1921,8 @@ body.dark-mode .beta-badge {
 /* 2. Responsive Grid Layout */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Auto-responsive columns */
     gap: 20px;
     width: 100%;
 }
@@ -1402,7 +1973,8 @@ body.dark-mode .beta-badge {
     align-items: center;
     font-size: 24px;
     margin-right: 15px;
-    background: rgba(63, 114, 175, 0.1); /* Light Blue Tint */
+    background: rgba(63, 114, 175, 0.1);
+    /* Light Blue Tint */
     transition: background 0.3s ease;
 }
 
@@ -1414,19 +1986,23 @@ body.dark-mode .beta-badge {
 
 /* 4. Hover Effects */
 .subject-card:hover {
-    transform: translateY(-5px); /* Lift Up */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Soft shadow */
+    transform: translateY(-5px);
+    /* Lift Up */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
     border-color: var(--blue);
 }
 
 .subject-card:hover .icon-box {
     background: var(--blue);
-    color: white; /* Icon turns white on blue bg */
+    color: white;
+    /* Icon turns white on blue bg */
 }
 
 .subject-card:hover .arrow-icon {
     color: var(--blue);
-    transform: translateX(5px); /* Arrow moves right */
+    transform: translateX(5px);
+    /* Arrow moves right */
 }
 
 /* 5. Footer Tip Styling */
@@ -1443,17 +2019,19 @@ body.dark-mode .beta-badge {
 
 /* --- DARK MODE SPECIFICS --- */
 body.dark-mode .app-title {
-    background: linear-gradient(135deg, #a2d2ff, #c4a7e7); /* Lighter pastel gradient for dark mode */
+    background: linear-gradient(135deg, #a2d2ff, #c4a7e7);
+    /* Lighter pastel gradient for dark mode */
     background-clip: text;
     -webkit-background-clip: text;
 }
 
 body.dark-mode .icon-box {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 body.dark-mode .subject-card:hover {
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Darker shadow */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    /* Darker shadow */
     border-color: #58a6ff;
 }
 
@@ -1462,19 +2040,23 @@ body.dark-mode .subject-card:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Space between Title and Badge */
+    gap: 10px;
+    /* Space between Title and Badge */
     margin-bottom: 5px;
 }
 
 /* Remove bottom margin from title so it aligns perfectly */
 .app-title {
-    margin-bottom: 0 !important; 
+    margin-bottom: 0 !important;
     /* Keep your existing gradient styles for the text */
 }
+
 /* Fix Alignment for Simple Cards */
 .card-content strong {
-    margin-bottom: 0 !important; /* Remove spacing reserved for subtitle */
-    font-size: 1.1rem;           /* Keep it readable */
+    margin-bottom: 0 !important;
+    /* Remove spacing reserved for subtitle */
+    font-size: 1.1rem;
+    /* Keep it readable */
 }
 
 /* =========================================
@@ -1537,7 +2119,7 @@ body.dark-mode .subject-card:hover {
 /* Hover Effect */
 .test-card-modern:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     border-color: var(--blue);
 }
 
@@ -1594,7 +2176,7 @@ body.dark-mode .subject-card:hover {
     color: white;
     flex-shrink: 0;
     margin-left: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .btn-action:hover {
@@ -1606,20 +2188,20 @@ body.dark-mode .subject-card:hover {
 /* 1. Renamed class to avoid conflict with disabled buttons */
 .btn-list-start {
     /* Vibrant Gradient */
-    background: linear-gradient(135deg, #00b09b, #96c93d); 
-    
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+
     /* Force Opacity to 1 (Fixes the dullness) */
-    opacity: 1 !important; 
-    
+    opacity: 1 !important;
+
     /* Glow Effect */
-    box-shadow: 0 0 15px rgba(0, 176, 155, 0.6); 
-    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(0, 176, 155, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* 2. Hover Effect for Start Button */
 .test-card-modern:hover .btn-list-start {
     /* Make it shine brighter on hover */
-    box-shadow: 0 0 25px rgba(0, 176, 155, 0.9); 
+    box-shadow: 0 0 25px rgba(0, 176, 155, 0.9);
     transform: scale(1.05);
 }
 
@@ -1637,11 +2219,11 @@ body.dark-mode .subject-card:hover {
 
 /* --- DARK MODE ADJUSTMENTS --- */
 body.dark-mode .tc-icon {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 body.dark-mode .test-card-modern:hover {
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     border-color: #58a6ff;
 }
 
@@ -1650,29 +2232,38 @@ body.dark-mode .test-card-modern:hover {
     .test-card-modern {
         padding: 15px;
     }
+
     .tc-icon {
-        width: 38px; 
-        height: 38px; 
+        width: 38px;
+        height: 38px;
         font-size: 1.1rem;
     }
+
     .btn-action {
         padding: 6px 14px;
         font-size: 0.7rem;
     }
+
     .tc-title {
         font-size: 0.95rem;
     }
 }
+
 /* Disable Text Selection Globally */
 body {
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE10+/Edge */
-    user-select: none;         /* Standard */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
 }
 
 /* Optional: Allow selection on input fields so users can still type */
-input, textarea {
+input,
+textarea {
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
@@ -1685,19 +2276,24 @@ input, textarea {
 
 .modal-overlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
     z-index: 9999;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Mobile: slide from bottom */
+    align-items: flex-end;
+    /* Mobile: slide from bottom */
 }
 
 /* On Desktop: Center it */
 @media (min-width: 600px) {
-    .modal-overlay { align-items: center; }
+    .modal-overlay {
+        align-items: center;
+    }
 }
 
 .modal-content {
@@ -1705,8 +2301,9 @@ input, textarea {
     width: 100%;
     max-width: 400px;
     padding: 25px;
-    border-radius: 20px 20px 0 0; /* Rounded top for mobile */
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+    border-radius: 20px 20px 0 0;
+    /* Rounded top for mobile */
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
@@ -1722,10 +2319,12 @@ input, textarea {
 
 @media (min-width: 600px) {
     .modal-content {
-        border-radius: 16px; /* Full rounded for desktop */
+        border-radius: 16px;
+        /* Full rounded for desktop */
         transform: scale(0.9);
         opacity: 0;
     }
+
     .modal-overlay.active .modal-content {
         transform: scale(1);
         opacity: 1;
@@ -1748,7 +2347,9 @@ input, textarea {
     color: white;
 }
 
-.btn-modal:active { transform: scale(0.98); }
+.btn-modal:active {
+    transform: scale(0.98);
+}
 
 .btn-sectional {
     background: linear-gradient(135deg, #3F72AF, #112D4E);
@@ -1774,24 +2375,32 @@ input, textarea {
 }
 
 .btn-text-close {
-    background: linear-gradient(135deg, #dc3545, #c82333) !important; /* Red Gradient */
-    color: white !important; /* Force white text */
+    background: linear-gradient(135deg, #dc3545, #c82333) !important;
+    /* Red Gradient */
+    color: white !important;
+    /* Force white text */
     border: none;
     font-weight: bold;
     padding: 12px 20px;
-    border-radius: 12px; /* Match other buttons */
+    border-radius: 12px;
+    /* Match other buttons */
     cursor: pointer;
-    margin-top: 15px; /* Add some space above */
-    width: 100%; /* Full width */
+    margin-top: 15px;
+    /* Add some space above */
+    width: 100%;
+    /* Full width */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 0 15px rgba(220, 53, 69, 0.5); /* Initial Red Glow */
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.5);
+    /* Initial Red Glow */
     transition: all 0.3s ease;
 }
+
 .btn-text-close:hover {
     background: linear-gradient(135deg, #e4606d, #dc3545) !important;
-    box-shadow: 0 0 25px rgba(220, 53, 69, 0.8); /* Intensify Glow */
+    box-shadow: 0 0 25px rgba(220, 53, 69, 0.8);
+    /* Intensify Glow */
     transform: translateY(-2px);
 }
 
@@ -1817,8 +2426,10 @@ body.dark-mode .tag-badge {
     background-color: rgba(255, 255, 255, 0.1);
     color: #a2d2ff;
 }
+
 .q-content {
-    touch-action: pan-y; /* Allows vertical scroll but captures horizontal swipes */
+    touch-action: pan-y;
+    /* Allows vertical scroll but captures horizontal swipes */
 }
 
 #sol-image img {
@@ -1827,3 +2438,40 @@ body.dark-mode .tag-badge {
     border-radius: 6px;
 }
 
+/* =========================================
+   PALETTE CURRENT QUESTION HIGHLIGHT (Professional Style)
+   ========================================= */
+
+/* Base styling for current question - smooth transition */
+.pal-btn {
+    transition: all 0.2s ease;
+}
+
+/* Light Mode: Subtle ring with professional blue accent */
+.pal-btn-current {
+    border: 2px solid #3F72AF !important;
+    box-shadow: 0 0 0 3px rgba(63, 114, 175, 0.2) !important;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Dark Mode: Bright accent with subtle glow */
+body.dark-mode .pal-btn-current {
+    border: 2px solid #58a6ff !important;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15) !important;
+}
+
+/* =========================================
+   RESUME BUTTON STYLING
+   ========================================= */
+
+/* Resume button for in-progress tests */
+.btn-resume {
+    background: var(--blue) !important;
+    color: white !important;
+}
+
+.btn-resume:hover {
+    background: #2f5a8f !important;
+    transform: translateY(-1px);
+}

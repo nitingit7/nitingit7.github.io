@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +16,10 @@
         injectSpeedInsights();
     </script>
 </head>
+
 <body>
     <div class="container list-view-container">
-        
+
         <div class="list-header-wrapper">
             <div class="text-area">
                 <h2 id="list-title">Select Test</h2>
@@ -29,7 +31,8 @@
                     <span>🔍</span>
                 </button>
                 <div id="filter-dropdown" class="filter-dropdown">
-                    <div style="padding: 10px; border-bottom: 1px solid var(--border-color); font-weight: bold; font-size: 0.9rem;">
+                    <div
+                        style="padding: 10px; border-bottom: 1px solid var(--border-color); font-weight: bold; font-size: 0.9rem;">
                         Filter by Name
                         <span style="float: right; cursor: pointer;" onclick="toggleFilterMenu()">✖</span>
                     </div>
@@ -42,8 +45,9 @@
         </div>
 
         <div id="test-container" class="test-list-grid"></div>
-        
-        <div id="no-result-msg" style="display:none; color: var(--text-secondary); margin-top: 20px; text-align:center;">
+
+        <div id="no-result-msg"
+            style="display:none; color: var(--text-secondary); margin-top: 20px; text-align:center;">
             No tests found matching your filter.
         </div>
     </div>
@@ -51,12 +55,12 @@
     <script>
         // Theme Logic
         var savedTheme = localStorage.getItem('site-theme');
-        if(savedTheme === 'dark') { document.body.classList.add('dark-mode'); }
+        if (savedTheme === 'dark') { document.body.classList.add('dark-mode'); }
 
         var currentFilter = null;
         var loadedFiles = []; // Store files globally to access tags
 
-        window.onload = function() {
+        window.onload = function () {
             // 1. Back Button Logic
             history.pushState(null, null, location.href);
             window.onpopstate = function () { window.location.href = "index.html"; };
@@ -65,9 +69,9 @@
             var params = new URLSearchParams(window.location.search);
             var subject = params.get('subject');
 
-            if(subject) localStorage.setItem('last_subject_viewed', subject);
+            if (subject) localStorage.setItem('last_subject_viewed', subject);
 
-            if(!subject || !GITHUB_FILES[subject]) {
+            if (!subject || !GITHUB_FILES[subject]) {
                 alert("Invalid Subject"); location.href = 'index.html'; return;
             }
 
@@ -77,30 +81,51 @@
             loadedFiles = GITHUB_FILES[subject]; // Save data to generate filters later
 
             // 3. Render Cards
-            loadedFiles.forEach(function(f) {
+            loadedFiles.forEach(function (f) {
                 var div = document.createElement('div');
                 div.className = 'test-card-modern';
-                
+
                 // IMPORTANT: Store the tag in a data attribute for filtering
                 // If no tag exists, default to "General"
                 var tag = f.tags ? f.tags.toLowerCase() : "general";
-                div.setAttribute('data-tag', tag); 
+                div.setAttribute('data-tag', tag);
                 div.setAttribute('data-name', f.name.toLowerCase()); // Keep name search too if needed
-                
+
                 // Icon Logic
                 var icon = "📝";
-                if(f.name.toLowerCase().includes("speed")) icon = "⚡";
-                if(f.name.toLowerCase().includes("puzzle")) icon = "🧩";
-                if(f.name.toLowerCase().includes("full mock")) icon = "🏆";
-                if(f.name.toLowerCase().includes("current affairs") || (f.tags && f.tags.includes("Daily"))) icon = "📅";
-                if(f.tags && f.tags.includes("Banking")) icon = "🏦";
-                if(f.tags && f.tags.includes("Static")) icon = "🗿";
+                if (f.name.toLowerCase().includes("speed")) icon = "⚡";
+                if (f.name.toLowerCase().includes("puzzle")) icon = "🧩";
+                if (f.name.toLowerCase().includes("full mock")) icon = "🏆";
+                if (f.name.toLowerCase().includes("current affairs") || (f.tags && f.tags.includes("Daily"))) icon = "📅";
+                if (f.tags && f.tags.includes("Banking")) icon = "🏦";
+                if (f.tags && f.tags.includes("Static")) icon = "🗿";
 
-                var saved = localStorage.getItem(f.file);
-                var btnText = saved ? "Analysis" : "Start";
-                var btnClass = saved ? "btn-action btn-result" : "btn-action btn-list-start";
-                var statusText = saved ? "Completed" : "Not Attempted";
-                var statusColor = saved ? "var(--green)" : "var(--text-secondary)";
+                // Check for both completed result AND in-progress test
+                var savedResult = localStorage.getItem(f.file);
+                var savedProgress = localStorage.getItem(f.file + '_progress');
+
+                var btnText, btnClass, statusText, statusColor;
+
+                if (savedResult) {
+                    // Test completed - show Analysis button
+                    btnText = "Analysis";
+                    btnClass = "btn-action btn-result";
+                    statusText = "Completed";
+                    statusColor = "var(--green)";
+                } else if (savedProgress) {
+                    // Test in progress - show Resume button
+                    btnText = "Resume";
+                    btnClass = "btn-action btn-resume";
+                    statusText = "In Progress";
+                    statusColor = "var(--blue)";
+                } else {
+                    // Not attempted - show Start button
+                    btnText = "Start";
+                    btnClass = "btn-action btn-list-start";
+                    statusText = "Not Attempted";
+                    statusColor = "var(--text-secondary)";
+                }
+
 
                 div.innerHTML = `
                     <div class="tc-left">
@@ -115,9 +140,17 @@
                     <button class="${btnClass}">${btnText}</button>
                 `;
 
-                div.onclick = function() {
-                    if (saved) location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file);
-                    else location.href = "instructions.html?file=" + encodeURIComponent(f.file);
+                div.onclick = function () {
+                    if (savedResult) {
+                        // Completed test - show result
+                        location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file);
+                    } else if (savedProgress) {
+                        // In-progress test - resume directly (skip instructions)
+                        location.href = "exam.html?file=" + encodeURIComponent(f.file);
+                    } else {
+                        // New test - show instructions first
+                        location.href = "instructions.html?file=" + encodeURIComponent(f.file);
+                    }
                 };
                 list.appendChild(div);
             });
@@ -134,11 +167,11 @@
             // 1. Extract all unique tags from the loaded files
             var uniqueTags = new Set();
             loadedFiles.forEach(f => {
-                if(f.tags) uniqueTags.add(f.tags);
+                if (f.tags) uniqueTags.add(f.tags);
             });
 
             // If no tags found, hide the filter button
-            if(uniqueTags.size === 0) {
+            if (uniqueTags.size === 0) {
                 document.getElementById('btn-filter-toggle').style.display = 'none';
                 return;
             }
@@ -148,7 +181,7 @@
                 var btn = document.createElement('div');
                 btn.className = 'filter-option';
                 btn.innerText = tag;
-                btn.onclick = function() { applyFilter(tag, btn); };
+                btn.onclick = function () { applyFilter(tag, btn); };
                 container.appendChild(btn);
             });
         }
@@ -159,18 +192,18 @@
 
         function applyFilter(category, btnElement) {
             currentFilter = category.toLowerCase();
-            
+
             // Update UI
             var allOpts = document.querySelectorAll('.filter-option');
             allOpts.forEach(el => el.classList.remove('selected'));
-            if(btnElement) btnElement.classList.add('selected');
+            if (btnElement) btnElement.classList.add('selected');
             document.getElementById('btn-filter-toggle').classList.add('active');
-            
+
             // Filter Logic
             var items = document.querySelectorAll('.test-card-modern');
             var visibleCount = 0;
-            
-            items.forEach(function(item) {
+
+            items.forEach(function (item) {
                 var itemTag = item.getAttribute('data-tag');
                 // Check if the Item's tag matches the selected filter
                 if (itemTag === currentFilter) {
@@ -183,7 +216,7 @@
 
             var msg = document.getElementById('no-result-msg');
             msg.style.display = (visibleCount === 0) ? 'block' : 'none';
-            
+
             toggleFilterMenu();
         }
 
@@ -191,23 +224,24 @@
             currentFilter = null;
             var items = document.querySelectorAll('.test-card-modern');
             items.forEach(item => item.style.display = 'flex');
-            
+
             var allOpts = document.querySelectorAll('.filter-option');
             allOpts.forEach(el => el.classList.remove('selected'));
-            
+
             document.getElementById('btn-filter-toggle').classList.remove('active');
             document.getElementById('no-result-msg').style.display = 'none';
             toggleFilterMenu();
         }
 
         // Close menu on outside click
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (!event.target.matches('.btn-filter') && !event.target.closest('.filter-dropdown') && !event.target.closest('.btn-filter')) {
                 var openDropdown = document.getElementById('filter-dropdown');
                 if (openDropdown.classList.contains('show')) openDropdown.classList.remove('show');
             }
         }
-        window.onpageshow = function(event) { if (event.persisted) window.location.reload(); };
+        window.onpageshow = function (event) { if (event.persisted) window.location.reload(); };
     </script>
 </body>
+
 </html>
