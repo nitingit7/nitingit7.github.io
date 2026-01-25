@@ -2315,6 +2315,7 @@ body.dark-mode .btn-resume:hover {
 body.dark-mode .tc-metadata {
     color: #8b949e;
 }
+<<<<<<< HEAD
 
 /* =========================================
    SCREENSHOT PREVENTION STYLES
@@ -2406,3 +2407,5 @@ body.dark-mode .pause-title {
 body.dark-mode .pause-msg {
     color: #cccccc !important;
 }
+=======
+>>>>>>> 76394f4a3187a2d9ae7d60300601d0287eee1406
