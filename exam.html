@@ -263,15 +263,11 @@
                             return;
                         }
 
-                        // 2. If taking the test, ask for confirmation
-                        if (confirm("⚠️ Quit the test? Progress will be lost.")) {
-                            window.onbeforeunload = null;
-                            if (this.timerInterval) clearInterval(this.timerInterval);
-                            this.goBackToList(); // Use the smart back function here too
-                        } else {
-                            // User said NO (Cancel), so push state again to stay on the page
-                            history.pushState(null, null, location.href);
-                        }
+                        // 2. If taking the test, auto-save and exit (no warning needed)
+                        this.saveProgress();
+                        window.onbeforeunload = null;
+                        if (this.timerInterval) clearInterval(this.timerInterval);
+                        this.goBackToList();
                     };
                 }
                 // --- FIX END ---
