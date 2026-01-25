@@ -202,27 +202,7 @@ body.dark-mode .marks-badge {
     align-items: center;
 }
 
-.subject-card {
-    background: var(--card-bg);
-    width: 100%;
-    padding: 25px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-left: 5px solid transparent;
-    transition: 0.2s;
-    color: var(--text-primary);
-}
 
-.subject-card:active {
-    transform: scale(0.98);
-    background: var(--hover-bg);
-}
 
 .icon {
     font-size: 24px;
@@ -230,18 +210,7 @@ body.dark-mode .marks-badge {
     color: var(--blue);
 }
 
-.test-item {
-    background: var(--card-bg);
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-primary);
-}
+
 
 /* EXAM UI */
 .exam-body {
@@ -837,92 +806,7 @@ body.dark-mode .l-not-visit {
 }
 
 /* 3. App-Style Cards */
-.subject-card {
-    border: none !important;
-    /* Remove grey border */
-    background: var(--card-bg);
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 16px;
-    /* Rounder corners like apps */
 
-    /* Soft, high-quality shadow */
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Hover/Touch Effect */
-.subject-card:active,
-.subject-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
-}
-
-/* Colored Sidebar Accent on Cards */
-.subject-card::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 6px;
-    background: linear-gradient(to bottom, var(--blue), var(--purple));
-}
-
-/* 4. Beautiful Icons */
-.subject-card .icon {
-    font-size: 28px;
-    margin-right: 20px;
-    /* Create a circle background for icon */
-    background: rgba(63, 114, 175, 0.1);
-    /* Light tint of your blue */
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background 0.3s;
-}
-
-/* Icon hover effect */
-.subject-card:hover .icon {
-    background: var(--blue);
-    color: white;
-}
-
-/* 5. Typography Polish */
-.subject-card strong {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    display: block;
-}
-
-/* Arrow styling */
-.subject-card span:last-child {
-    color: var(--text-secondary);
-    font-weight: bold;
-    font-size: 1.2rem;
-    opacity: 0.5;
-}
-
-/* 6. Dark Mode Specific Polish */
-body.dark-mode .subject-card {
-    background: #1e2530;
-    /* Slightly lighter than pure black bg */
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-}
-
-body.dark-mode .subject-card .icon {
-    background: rgba(255, 255, 255, 0.1);
-}
 
 /* =========================================
    1. SLIDER TOGGLE SWITCH (Modern & Smooth)
@@ -1000,71 +884,7 @@ input:checked+.slider-round:before {
 }
 
 /* The New Test Card */
-.test-item {
-    background: var(--card-bg);
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    /* Smooth corners */
-    border: none !important;
-    /* Remove old border */
 
-    /* App-like Shadow */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Hover Effect */
-.test-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Left side accent bar */
-.test-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 5px;
-    background: var(--blue);
-    border-radius: 4px 0 0 4px;
-}
-
-/* Test Name Text */
-.test-item span {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text-primary);
-    margin-left: 10px;
-    /* Space from the accent bar */
-    flex: 1;
-    /* Takes available space */
-    padding-right: 15px;
-    /* Space before button */
-}
-
-/* The Start/Result Button styling override */
-.test-item .btn {
-    padding: 8px 20px;
-    border-radius: 20px;
-    /* Pill shape */
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    min-width: 100px;
-    /* Ensure buttons align nicely */
-    text-align: center;
-}
 
 /* --- FIX FOR REVIEW MODE PALETTE COLORS --- */
 
@@ -1183,25 +1003,7 @@ body.dark-mode #btn-report:hover {
 
 /* --- MODERN HEADER LAYOUT --- */
 
-/* 1. Center the Timer (Absolute Position) */
-.timer-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    /* Keeps it perfectly centered */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    /* Modern Glassy Look */
-    background: rgba(255, 255, 255, 0.1);
-    padding: 6px 20px;
-    border-radius: 30px;
-    /* Pill shape */
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    /* Optional: Blur effect behind */
-}
 
 /* 2. Clean Typography for Timer */
 .timer {
@@ -1699,7 +1501,6 @@ body.enable-transition {
 /* This makes the header, cards, buttons, and sidebar fade nicely */
 body.enable-transition header,
 body.enable-transition .subject-card,
-body.enable-transition .test-item,
 body.enable-transition .q-area,
 body.enable-transition .q-content,
 body.enable-transition .q-footer,
@@ -2514,6 +2315,7 @@ body.dark-mode .btn-resume:hover {
 body.dark-mode .tc-metadata {
     color: #8b949e;
 }
+
 /* =========================================
    SCREENSHOT PREVENTION STYLES
    ========================================= */
@@ -2532,7 +2334,6 @@ body.dark-mode .tc-metadata {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
     pointer-events: none;
 }
 
