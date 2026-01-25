@@ -1572,7 +1572,7 @@ body.dark-mode .pause-msg {
 }
 
 body.dark-mode #pause-overlay {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgb(0, 0, 0);
     /* Dark mode background */
 }
 
