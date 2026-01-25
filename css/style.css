@@ -2514,3 +2514,43 @@ body.dark-mode .btn-resume:hover {
 body.dark-mode .tc-metadata {
     color: #8b949e;
 }
+/* =========================================
+   SCREENSHOT PREVENTION STYLES
+   ========================================= */
+
+/* Prevent text selection during test */
+#view-exam {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Prevent dragging images */
+#view-exam img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+/* Watermark overlay (subtle deterrent) */
+#view-exam::before {
+    content: attr(data-watermark);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.03);
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+body.dark-mode #view-exam::before {
+    color: rgba(255, 255, 255, 0.03);
+}
