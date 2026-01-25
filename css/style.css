@@ -2465,13 +2465,27 @@ body.dark-mode .pal-btn-current {
    RESUME BUTTON STYLING
    ========================================= */
 
-/* Resume button for in-progress tests */
+/* Resume button for in-progress tests - matches theme gradient style */
 .btn-resume {
-    background: var(--blue) !important;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%) !important;
     color: white !important;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3) !important;
+    border: none !important;
 }
 
 .btn-resume:hover {
-    background: #2f5a8f !important;
+    background: linear-gradient(135deg, #357abd 0%, #2a5f99 100%) !important;
+    box-shadow: 0 6px 15px rgba(74, 144, 226, 0.4) !important;
     transform: translateY(-1px);
+}
+
+/* Dark mode adjustment */
+body.dark-mode .btn-resume {
+    background: linear-gradient(135deg, #58a6ff 0%, #3d8fd1 100%) !important;
+    box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3) !important;
+}
+
+body.dark-mode .btn-resume:hover {
+    background: linear-gradient(135deg, #3d8fd1 0%, #2a6fa8 100%) !important;
+    box-shadow: 0 6px 15px rgba(88, 166, 255, 0.4) !important;
 }
