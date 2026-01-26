@@ -2110,30 +2110,18 @@ textarea {
     border-radius: 20px 20px 0 0;
     /* Rounded top for mobile */
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
     gap: 15px;
     border: 1px solid var(--border-color);
 }
 
-/* Active State for Animation */
-.modal-overlay.active .modal-content {
-    transform: translateY(0);
-}
+
 
 @media (min-width: 600px) {
     .modal-content {
         border-radius: 16px;
         /* Full rounded for desktop */
-        transform: scale(0.9);
-        opacity: 0;
-    }
-
-    .modal-overlay.active .modal-content {
-        transform: scale(1);
-        opacity: 1;
     }
 }
 

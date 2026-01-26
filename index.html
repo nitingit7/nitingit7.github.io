@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
     <script>
         import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights/+esm';
         injectSpeedInsights();
-    </script> 
+    </script>
 </head>
+
 <body>
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
@@ -30,56 +32,56 @@
             </div>
             <p class="subtitle">Select a subject to begin your practice.</p>
         </div>
-        
+
         <div class="dashboard-grid">
-            
+
             <div class="subject-card" onclick="location.href='list.html?subject=full_test'">
                 <div class="card-content">
-                    <div class="icon-box">🏆</div> 
+                    <div class="icon-box">🏆</div>
                     <div class="text-group">
                         <strong>Full Mock Tests</strong>
                     </div>
-                </div> 
+                </div>
                 <div class="arrow-icon">➜</div>
             </div>
-            
+
             <div class="subject-card card-quant" onclick="openSelectionModal('quant', 'Quantitative Aptitude')">
                 <div class="card-content">
-                    <div class="icon-box">📊</div> 
+                    <div class="icon-box">📊</div>
                     <div class="text-group">
                         <strong>Quantitative Aptitude</strong>
                     </div>
-                </div> 
+                </div>
                 <div class="arrow-icon">➜</div>
             </div>
-            
+
             <div class="subject-card card-reasoning" onclick="openSelectionModal('reasoning', 'Reasoning Ability')">
                 <div class="card-content">
-                    <div class="icon-box">🧩</div> 
+                    <div class="icon-box">🧩</div>
                     <div class="text-group">
                         <strong>Reasoning Ability</strong>
                     </div>
-                </div> 
+                </div>
                 <div class="arrow-icon">➜</div>
             </div>
-            
+
             <div class="subject-card card-english" onclick="openSelectionModal('english', 'English Language')">
                 <div class="card-content">
-                    <div class="icon-box">📖</div> 
+                    <div class="icon-box">📖</div>
                     <div class="text-group">
                         <strong>English Language</strong>
                     </div>
-                </div> 
+                </div>
                 <div class="arrow-icon">➜</div>
             </div>
 
             <div class="subject-card card-general" onclick="openSelectionModal('general', 'General Awareness')">
                 <div class="card-content">
-                    <div class="icon-box">🌍</div> 
+                    <div class="icon-box">🌍</div>
                     <div class="text-group">
                         <strong>General Awareness</strong>
                     </div>
-                </div> 
+                </div>
                 <div class="arrow-icon">➜</div>
             </div>
 
@@ -94,12 +96,12 @@
         <div class="modal-content">
             <h3 id="modal-title" style="margin-top:0;">Select Category</h3>
             <p style="color:var(--text-secondary); margin-bottom:20px;">Choose the type of practice you want:</p>
-            
+
             <button class="btn-modal btn-sectional" onclick="goToTest('sectional')">
                 <span class="btn-icon">📑</span> Sectional Test
                 <small>Full subject mocks (30-40 Qs)</small>
             </button>
-            
+
             <button class="btn-modal btn-topic" onclick="goToTest('topic')">
                 <span class="btn-icon">🎯</span> Topic Test
                 <small>Chapter-wise practice (15-20 Qs)</small>
@@ -118,17 +120,13 @@
             document.getElementById('modal-title').innerText = title;
             var modal = document.getElementById('selection-modal');
             modal.style.display = "flex";
-            
-            // Add a tiny delay for animation class if you add CSS animations
-            setTimeout(() => modal.classList.add('active'), 10);
         }
 
         function closeSelectionModal(event) {
             // Close if clicked on overlay (background) or Cancel button
             if (!event || event.target.id === 'selection-modal' || event.target.classList.contains('btn-text-close')) {
                 var modal = document.getElementById('selection-modal');
-                modal.classList.remove('active');
-                setTimeout(() => modal.style.display = "none", 200);
+                modal.style.display = "none";
             }
         }
 
@@ -142,8 +140,8 @@
         // --- EXISTING THEME LOGIC ---
         function toggleTheme(event) {
             var chk = document.getElementById('checkbox');
-            var isDark = chk.checked; 
-            
+            var isDark = chk.checked;
+
             if (!document.startViewTransition) {
                 applyTheme(isDark);
                 return;
@@ -167,7 +165,7 @@
         }
 
         function applyTheme(isDark) {
-            if(isDark) {
+            if (isDark) {
                 document.body.classList.add('dark-mode');
                 localStorage.setItem('site-theme', 'dark');
             } else {
@@ -176,23 +174,23 @@
             }
         }
 
-        (function() {
+        (function () {
             var savedTheme = localStorage.getItem('site-theme');
             var chk = document.getElementById('checkbox');
-            if(savedTheme === 'dark') {
+            if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
-                if(chk) chk.checked = true; 
+                if (chk) chk.checked = true;
             }
         })();
 
         // 1. Disable Right Click
-        document.addEventListener('contextmenu', function(e) {
+        document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
             return false;
         });
 
         // 2. Disable Copy Shortcuts
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.ctrlKey || e.metaKey) {
                 if (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'p') {
                     e.preventDefault();
@@ -202,5 +200,7 @@
         });
     </script>
 </body>
+
 </html>
+
 </html>
