@@ -23,7 +23,7 @@ var GITHUB_FILES = {
     'full_test': [
         { name: "RRB Clerk Prelims: Full Mock 1", tags: "Full Mock", questions: 100, time: 60, marks: 100, file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
         { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", tags: "Full Mock", questions: 100, time: 60, marks: 100, file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" },
-        { name: "DRDO PYQ 14 Nov 2022 Shift 3", tags: "DRDO PYQ", questions: 120, time: 96, marks: 120, file: BASE_URL + "tests/DRDO/Full_Test/FT001.json" }
+        { name: "DRDO PYQ 14 Nov 2022 Shift 3 V2", tags: "DRDO PYQ", questions: 120, time: 96, marks: 120, file: BASE_URL + "tests/DRDO/Full_Test/FT001.json" }
     ],
 
     'quant_sectional': [
