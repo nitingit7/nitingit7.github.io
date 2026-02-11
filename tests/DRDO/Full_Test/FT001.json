@@ -5,7 +5,6 @@
   "sections": [
     {
       "name": "General Science",
-      "timeLimit": 45,
       "questions": [
         {
           "id": "GS01",
@@ -203,7 +202,6 @@
     },
     {
       "name": "General Awareness",
-      "timeLimit": 30,
       "questions": [
         {
           "id": "GA01",
@@ -369,7 +367,6 @@
     },
     {
       "name": "Quantitative Aptitude",
-      "timeLimit": 45,
       "questions": [
         {
           "id": "QA01",
@@ -455,7 +452,6 @@
     },
     {
       "name": "Reasoning Ability",
-      "timeLimit": 45,
       "questions": [
         {
           "id": "R01",
@@ -541,7 +537,6 @@
     },
     {
       "name": "General English",
-      "timeLimit": 30,
       "questions": [
         {
           "id": "EN01",
