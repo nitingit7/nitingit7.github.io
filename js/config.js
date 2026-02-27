@@ -104,6 +104,7 @@ var GITHUB_FILES = {
     // --- 5. BIOLOGY ---
     'biology_sectional': [
         { name: "Biology Test 1", tags: "Bio", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/DRDO/Biology/bt001.json" },
+        { name: "Biology Test 2", tags: "Bio", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/DRDO/Biology/bt002.json" }
         // Add your full biology tests here
         // { name: "Biology Mock 1", tags: "Sectional", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/biology/mock1.json" }
     ],
