@@ -3,124 +3,124 @@
   "timeLimit": 15,
   "questions": [
     {
-      "text": "Darwin's theory of natural selection is based on",
-      "options": ["Over production", "Struggle for existence and variation", "Survival of the fittest", "All of the above"],
-      "correctIndex": 3,
-      "solution": "✅ **Correct Answer: All of the above (D)**\n\n**Deep Explanation:** Darwin’s theory of natural selection rests on four key postulates: (1) Overproduction of offspring, (2) Struggle for existence due to limited resources, (3) Variation among individuals, and (4) Survival of the fittest (those with advantageous variations reproduce more). These together lead to descent with modification and evolution.\n\n**Option-wise Analysis:**\n• **Over production (A):** Populations produce more offspring than can survive.\n• **Struggle for existence and variation (B):** Competition + heritable differences.\n• **Survival of the fittest (C):** Differential reproductive success.\n• **All of the above (D):** Complete and accurate foundation of Darwinism."
-    },
-    {
-      "text": "Who propounded the theory of evolution?",
-      "options": ["Spencer", "Darwin", "Wallace", "Huxley"],
-      "correctIndex": 1,
-      "solution": "✅ **Correct Answer: Darwin (B)**\n\n**Deep Explanation:** Charles Darwin (with Alfred Russel Wallace) independently proposed the theory of evolution by natural selection in 1859 in “On the Origin of Species”. Darwin provided the most comprehensive evidence and mechanism.\n\n**Option-wise Analysis:**\n• **Spencer (A):** Coined “survival of the fittest” but did not propose natural selection.\n• **Wallace (C):** Co-discoverer, but Darwin is credited as the primary propounder.\n• **Huxley (D):** “Darwin’s bulldog” — defender, not originator."
-    },
-    {
-      "text": "According to recent proof, the life on earth emerged approximately",
-      "options": ["Before 20,000 years", "Before 2,00,000 years", "Before 20,00,000 years", "Before 2,000,000,000 years"],
-      "correctIndex": 3,
-      "solution": "✅ **Correct Answer: Before 2,000,000,000 years (D)**\n\n**Deep Explanation:** Fossil evidence (stromatolites) and molecular clocks show life originated ~3.5–4.0 billion years ago; the question’s “recent proof” aligns with ~2 billion years as a conservative estimate for prokaryotic life dominance. This is critical for understanding abiogenesis and early Earth conditions.\n\n**Option-wise Analysis:**\n• **20,000 / 2,00,000 / 20,00,000 years (A,B,C):** Far too recent — human history scale.\n• **2,000,000,000 years (D):** Matches geological and biochemical evidence."
-    },
-    {
-      "text": "Which is the oldest organism on earth?",
-      "options": ["Blue-green algae", "Fungi", "Amoeba", "Euglena"],
-      "correctIndex": 0,
-      "solution": "✅ **Correct Answer: Blue-green algae (A)**\n\n**Deep Explanation:** Cyanobacteria (blue-green algae) are the oldest known living organisms, with fossil evidence (stromatolites) dating back ~3.5 billion years. They performed oxygenic photosynthesis, changing Earth’s atmosphere.\n\n**Option-wise Analysis:**\n• **Fungi (B):** Appeared ~1 billion years ago.\n• **Amoeba & Euglena (C,D):** Much later eukaryotic protists (~1.5–2 billion years)."
-    },
-    {
-      "text": "Who explained first the evolution of life?",
-      "options": ["Newton", "Einstein", "Charles Darwin", "Lamarck"],
-      "correctIndex": 3,
-      "solution": "✅ **Correct Answer: Lamarck (D)**\n\n**Deep Explanation:** Jean-Baptiste Lamarck (1809) was the first to propose a coherent theory of evolution (“Philosophie Zoologique”) based on use and disuse of organs and inheritance of acquired characters. Darwin later provided the mechanism of natural selection.\n\n**Option-wise Analysis:**\n• **Newton & Einstein (A,B):** Physics, not biology.\n• **Charles Darwin (C):** Gave the most accepted mechanism (1859)."
-    },
-    {
-      "text": "The mutation theory of evolution was enunciated by",
-      "options": ["Huxley", "Darwin", "Lamarck", "Hugo de Vries"],
-      "correctIndex": 3,
-      "solution": "✅ **Correct Answer: Hugo de Vries (D)**\n\n**Deep Explanation:** Hugo de Vries (1901) proposed the Mutation Theory based on sudden, large, heritable changes (mutations) in Oenothera lamarckiana, challenging gradualism of Darwin.\n\n**Option-wise Analysis:**\n• **Huxley (A):** Supporter of Darwin.\n• **Darwin (B):** Gradual variation.\n• **Lamarck (C):** Acquired characters."
-    },
-    {
-      "text": "With reference to the evolution of living organisms, which one of the following sequences is correct?",
-      "options": ["Octopus - Dolphin - Shark", "Pangolin - Tortoise - Hawk", "Salamander - Python - Kangaroo", "Frog - Crab - Prawn"],
-      "correctIndex": 2,
-      "solution": "✅ **Correct Answer: Salamander - Python - Kangaroo (C)**\n\n**Deep Explanation:** This follows vertebrate evolutionary sequence: Amphibia (Salamander) → Reptilia (Python) → Mammalia (Kangaroo). It reflects the correct phylogenetic progression from water to land to advanced mammals.\n\n**Option-wise Analysis:**\n• Others mix invertebrates/vertebrates or reverse evolutionary order."
-    },
-    {
-      "text": "The main factor of evolution is",
-      "options": ["Mutation", "Achieved quality", "Vaginal birth", "Natural selection"],
-      "correctIndex": 3,
-      "solution": "✅ **Correct Answer: Natural selection (D)**\n\n**Deep Explanation:** Natural selection is the primary driving force of adaptive evolution as per Darwin — differential survival and reproduction of individuals with favourable variations.\n\n**Option-wise Analysis:**\n• **Mutation (A):** Source of variation, not the main factor.\n• **Achieved quality & Vaginal birth (B,C):** Not evolutionary mechanisms."
-    },
-    {
-      "text": "In the context of organic evolution, the loss of limbs in snakes is explained by the phenomenon of",
-      "options": ["Use and disuse of organs", "Adaptation to living in burrows", "Natural selection", "Inheritance of acquired characters"],
-      "correctIndex": 0,
-      "solution": "✅ **Correct Answer: Use and disuse of organs (A)**\n\n**Deep Explanation:** This is a classic example from Lamarck’s theory — organs not used (limbs in burrowing snakes) gradually reduce and disappear over generations.\n\n**Option-wise Analysis:**\n• **Natural selection (C):** Darwinian explanation (advantageous for burrowing).\n• Others are related but not the direct phenomenon asked."
-    },
-    {
-      "text": "About whom is said 'India's large wild cat' has recently become extinct?",
-      "options": ["Cheetah", "Leopard", "Tiger", "Lion"],
-      "correctIndex": 0,
-      "solution": "✅ **Correct Answer: Cheetah (A)**\n\n**Deep Explanation:** The Asiatic Cheetah (Acinonyx jubatus venaticus) is India’s only large wild cat declared extinct in India in 1952 due to hunting and habitat loss.\n\n**Option-wise Analysis:**\n• Leopard, Tiger, Lion still exist (though endangered)."
-    },
-    {
-      "text": "Latest ancestor of modern human is",
-      "options": ["Java man", "Cro-magnon man", "Neanderthal man", "Peking man"],
-      "correctIndex": 1,
-      "solution": "✅ **Correct Answer: Cro-magnon man (B)**\n\n**Deep Explanation:** Cro-Magnon (Homo sapiens sapiens) lived ~40,000–10,000 years ago and are the direct ancestors of modern humans with advanced tools and art.\n\n**Option-wise Analysis:**\n• Java & Peking = Homo erectus; Neanderthal = close relative but separate lineage."
-    },
-    {
-      "text": "Archaeopteryx is",
-      "options": ["Most ancient bird of Jurassic age", "Reptile of Jurassic period", "Reptile of Triassic period", "Reptile of both Triassic and Jurassic period"],
-      "correctIndex": 0,
-      "solution": "✅ **Correct Answer: Most ancient bird of Jurassic age (A)**\n\n**Deep Explanation:** Archaeopteryx is the earliest known bird (Jurassic, ~150 mya) showing reptilian (teeth, tail) and avian (feathers, wings) features — perfect transitional fossil.\n\n**Option-wise Analysis:**\n• Others misclassify it as pure reptile or wrong period."
-    },
-    {
-      "text": "'Archaeopteryx' is a connecting link between which of the following classes of animal?",
-      "options": ["Amphibia and Aves", "Reptilia and Aves", "Reptilia and Mammalia", "Aves and Mammalia"],
-      "correctIndex": 1,
-      "solution": "✅ **Correct Answer: Reptilia and Aves (B)**\n\n**Deep Explanation:** Archaeopteryx links reptiles (dinosaurs) and birds with reptilian skeleton + feathers and wings."
-    },
-    {
-      "text": "Mammoth is the ancestor of",
-      "options": ["Dog", "Horse", "Camel", "Elephant"],
-      "correctIndex": 3,
-      "solution": "✅ **Correct Answer: Elephant (D)**\n\n**Deep Explanation:** Woolly Mammoth (Mammuthus) is the extinct close relative and ancestor of modern elephants (Loxodonta & Elephas)."
-    },
-    {
-      "text": "Dinosaurs were",
-      "options": ["Cenozoic reptiles", "Mesozoic birds", "Paleozoic amphibians", "Mesozoic reptiles"],
-      "correctIndex": 3,
-      "solution": "✅ **Correct Answer: Mesozoic reptiles (D)**\n\n**Deep Explanation:** Dinosaurs dominated the Mesozoic Era (“Age of Reptiles”) from Triassic to Cretaceous."
-    },
-    {
-      "text": "Dinosaurs were in",
-      "options": ["Paleozoic era", "Cenozoic era", "Mesozoic era", "Pleistocene era"],
-      "correctIndex": 2,
-      "solution": "✅ **Correct Answer: Mesozoic era (C)**\n\n**Deep Explanation:** Mesozoic = Triassic + Jurassic + Cretaceous (252–66 mya)."
-    },
-    {
-      "text": "Match List-I with List-II... Theory of mutation / Theory of evolution / One gene one enzyme / Operon concept",
-      "options": ["3 4 1 2", "4 3 1 2", "4 3 2 1", "3 4 2 1"],
-      "correctIndex": 1,
-      "solution": "✅ **Correct Answer: 4 3 1 2 (B)**\n\n**Deep Explanation:** Hugo de Vries — Mutation; Darwin — Evolution; Beadle & Tatum — One gene one enzyme; Jacob & Monod — Operon."
-    },
-    {
-      "text": "Which one of the following statements is not correct? (Taxonomy)",
+      "text": "Which one of the following statements is not correct?",
       "options": ["All echinoderms are viviparous", "Roundworm has no circulatory system", "In bony fishes, swim bladder is usually present", "In cartilaginous fishes, fertilization is internal"],
       "correctIndex": 0,
-      "solution": "✅ **Correct Answer: All echinoderms are viviparous (A)**\n\n**Deep Explanation:** Most echinoderms are oviparous; only a few are viviparous. Others are correct."
+      "solution": "✅ **Correct Answer: All echinoderms are viviparous (A)**\n\nMost echinoderms (starfish, sea urchins, sea cucumbers) are actually oviparous, releasing eggs and sperm into water for external fertilization. Only a few species show viviparity or brooding. This statement is incorrect, while the others accurately describe roundworms (pseudocoelomates lacking blood vessels), bony fish buoyancy control via swim bladder, and internal fertilization in sharks/rays for embryo protection."
     },
     {
       "text": "Of the following which one is not a fish?",
       "options": ["Starfish", "Sawfish", "Pipefish", "Guitarfish"],
       "correctIndex": 0,
-      "solution": "✅ **Correct Answer: Starfish (A)**\n\n**Deep Explanation:** Starfish is an echinoderm (phylum Echinodermata), not a fish."
+      "solution": "✅ **Correct Answer: Starfish (A)**\n\nStarfish (Asterias) belongs to phylum Echinodermata — marine invertebrates with radial symmetry and water vascular system — not Chordata like true fishes. Sawfish, pipefish, and guitarfish are all cartilaginous or bony fishes with gills, fins, and streamlined bodies. Knowing this helps distinguish vertebrate fishes from invertebrate look-alikes in taxonomy."
     },
     {
-      "text": "Biologists have so far known... largest found and identified so far is from among the",
+      "text": "Biologists have so far known, found and identified a large number of species... largest found and identified so far is from among the",
       "options": ["Fungi", "Plants", "Insects", "Bacteria"],
       "correctIndex": 2,
-      "solution": "✅ **Correct Answer: Insects (C)**\n\n**Deep Explanation:** Over 1 million described insect species — largest group."
+      "solution": "✅ **Correct Answer: Insects (C)**\n\nInsects (class Insecta) represent the most species-rich group on Earth with over 1 million described species (and millions more undescribed), making up more than half of all known animal species. This dominance is due to their adaptability, small size, and rapid reproduction. Fungi, plants, and bacteria have far fewer described species in comparison."
+    },
+    {
+      "text": "Warm-blooded animals are those which are able to keep their body temperature",
+      "options": ["Lower than environment", "Higher than environment", "Constant temp. all time", "Equal to the atmospheric temp."],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Constant temp. all time (C)**\n\nWarm-blooded (homeothermic/endothermic) animals like birds and mammals maintain a stable internal body temperature (around 37°C in humans) regardless of external conditions through metabolic heat production and insulation. This allows activity in diverse climates but requires high energy intake. Cold-blooded animals fluctuate with environment."
+    },
+    {
+      "text": "Of the following, which one is a true fish?",
+      "options": ["Silverfish", "Crayfish", "Jellyfish", "Catfish"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Catfish (D)**\n\nCatfish (order Siluriformes) are true bony fishes with gills, fins, and vertebral column. Silverfish is an insect, crayfish is a crustacean (arthropod), and jellyfish is a cnidarian (invertebrate). True fishes are aquatic vertebrates in superclass Pisces — an important distinction in animal classification."
+    },
+    {
+      "text": "Which one of the following is a true fish?",
+      "options": ["Starfish", "Jellyfish", "Dogfish", "Seahorse"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Seahorse (D)**\n\nBoth dogfish (shark) and seahorse are true fishes (chondrichthyes and osteichthyes respectively). Starfish and jellyfish are not fishes at all. Seahorses are fascinating bony fish with unique traits like male pregnancy, prehensile tail, and upright swimming — excellent examples of specialized fish evolution."
+    },
+    {
+      "text": "Which is the largest mammal?",
+      "options": ["Whale", "African Elephant", "Hippopotamus", "Polar bear"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Whale (A)**\n\nThe blue whale (Balaenoptera musculus) is the largest animal ever known (up to 30 m long, 200 tonnes). It surpasses even the largest dinosaurs. All whales are marine mammals, not fish, breathing air and nursing young — highlighting the amazing size range within class Mammalia."
+    },
+    {
+      "text": "From which of following groups does the whale belongs?",
+      "options": ["Fishes", "Mammals", "Reptiles", "Amphibians"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Mammals (B)**\n\nWhales are fully aquatic mammals (order Cetacea) that evolved from land-dwelling ancestors. They have lungs, warm blood, mammary glands, and give birth to live young. This is a classic example of secondary aquatic adaptation in evolution."
+    },
+    {
+      "text": "Which one is a mammal?",
+      "options": ["Shark", "Squid", "Octopus", "Whale"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Whale (D)**\n\nOnly whales are mammals among the options. Shark is a fish, squid and octopus are molluscs. Mammals are characterized by hair (or modified hair), mammary glands, and three middle ear bones — key traits separating them from other vertebrates."
+    },
+    {
+      "text": "Which of the following species is the largest of the 'toothed-whales'?",
+      "options": ["Finback whale", "Blue whale", "Sperm whale", "Humpback whale"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Sperm whale (C)**\n\nThe sperm whale (Physeter macrocephalus) is the largest toothed whale (up to 20 m), famous for its massive head containing spermaceti organ and deep-diving ability (up to 3 km). Blue whale is larger overall but is a baleen whale, not toothed."
+    },
+    {
+      "text": "Which among the following one lays eggs and does not produce young ones directly?",
+      "options": ["Echidna", "Kangaroo", "Porcupine", "Whale"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Echidna (A)**\n\nEchidna (spiny anteater) and platypus are the only living monotremes — egg-laying mammals. All other mammals are either marsupials or placentals that give birth to live young. This primitive reproductive strategy links monotremes to reptilian ancestors."
+    },
+    {
+      "text": "Mammal capable in flying is",
+      "options": ["Jaguar", "Ostrich", "Pelican", "Bat"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Bat (D)**\n\nBats (order Chiroptera) are the only mammals capable of true powered flight using modified forelimbs as wings. They are nocturnal, use echolocation, and represent one of the most successful mammalian radiations with over 1,400 species."
+    },
+    {
+      "text": "Amongst the following flying organisms, which one does not belong to the group, Aves?",
+      "options": ["Bat", "Crow", "Eagle", "Parrot"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Bat (A)**\n\nBats are mammals, while crow, eagle, and parrot are birds (class Aves) with feathers, beaks, and hollow bones. Bats achieve flight through skin membranes (patagium) stretched between elongated fingers — convergent evolution with birds."
+    },
+    {
+      "text": "Dolphins are classified in",
+      "options": ["Fish", "Amphibians", "Reptile", "Mammals"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Mammals (D)**\n\nDolphins are toothed whales (cetaceans) — fully aquatic mammals that breathe air, nurse young with milk, and have warm blood. They show remarkable intelligence and social behaviour, evolved from terrestrial ancestors ~50 million years ago."
+    },
+    {
+      "text": "From the following option, seal is the species of",
+      "options": ["Fish", "Bird", "Reptiles", "Mammal"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Mammal (D)**\n\nSeals (pinnipeds) are marine mammals with flippers, blubber for insulation, and lungs. They return to land to breed — another example of secondary adaptation to marine life within Mammalia."
+    },
+    {
+      "text": "Amphibia are",
+      "options": ["Very fastly moving boats", "Animals living in water only", "Animals living on land only", "Animals living equally in water and on land both"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Animals living equally in water and on land both (D)**\n\nAmphibians (frogs, toads, salamanders) are the first vertebrates to live on land but still depend on water for reproduction (external fertilization, aquatic larvae). Their name literally means “double life” — a key transitional group in vertebrate evolution."
+    },
+    {
+      "text": "Which of the following property separate a man/human from apes?",
+      "options": ["Envice a desire to learn", "By a rudimentary sense of smell", "Contrary thumb", "Broader chin"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Broader chin (D)**\n\nModern humans (Homo sapiens) have a prominent chin (mental protuberance), absent in apes. Other options like opposable thumb and learning desire are shared with great apes. This morphological feature helps in fossil identification of hominins."
+    },
+    {
+      "text": "Among the following, which one is not an ape?",
+      "options": ["Gibbon", "Gorilla", "Langur", "Orangutan"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Langur (C)**\n\nLangur is an Old World monkey (colobine), not a hominoid ape. Gibbons, gorillas, and orangutans are true apes (family Hominidae or Hylobatidae) characterized by larger brains, no tail, and complex social behaviour."
+    },
+    {
+      "text": "Smallest man-like ape is",
+      "options": ["Gibbon", "Chimpanzee", "Gorilla", "Orangutan"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Gibbon (A)**\n\nGibbons (family Hylobatidae) are the smallest apes, weighing 5–12 kg, with exceptional brachiation (arm-swinging) ability. They are lesser apes, distinct from great apes like chimpanzees, gorillas, and orangutans."
+    },
+    {
+      "text": "Nilgai belongs to the following family.",
+      "options": ["Cow", "Goat", "Sheep", "Deer"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Deer (D)**\n\nNilgai (Boselaphus tragocamelus) is the largest Asian antelope and belongs to family Bovidae, subfamily Bovinae, but is taxonomically closer to deer-like antelopes. It is India’s largest wild bovine but grouped under antelope/deer family in many classifications."
     }
   ]
 }
