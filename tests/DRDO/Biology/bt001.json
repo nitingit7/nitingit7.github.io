@@ -1,0 +1,126 @@
+{
+  "title": "Biology Mock Test: Sub-divisions of Biology #Bio001",
+  "timeLimit": 20,
+  "questions": [
+    {
+      "text": "The scientific study of insects is known as",
+      "options": ["Ichthyology", "Entomology", "Parasitology", "Malacology"],
+      "correctIndex": 1,
+      "solution": "Correct: Entomology (B). It is the scientific study of insects (classification, behaviour, physiology, ecology). Ichthyology = fishes; Parasitology = parasites; Malacology = molluscs."
+    },
+    {
+      "text": "Which of the following subjects of data set is associated with the study of concerning population and humanity?",
+      "options": ["Ecology", "Genetics", "Demography", "Virology"],
+      "correctIndex": 2,
+      "solution": "Correct: Demography (C). It studies human population statistics (size, density, birth/death rates, migration). Ecology = organism-environment; Genetics = heredity; Virology = viruses."
+    },
+    {
+      "text": "Study of Zoology deals with",
+      "options": ["Living animals only", "Living plants only", "Both living and dead animals", "Both living and dead plants"],
+      "correctIndex": 2,
+      "solution": "Correct: Both living and dead animals (C). Zoology covers extant animals and fossils/extinct forms (palaeozoology). Living plants = Botany; dead plants = Palaeobotany."
+    },
+    {
+      "text": "The study of the flower is known as",
+      "options": ["Phrenology", "Anthology", "Agrostology", "Palynology"],
+      "correctIndex": 1,
+      "solution": "Correct: Anthology (B). It is the study of flowers (structure, pollination, classification). Phrenology = skull-personality (pseudoscience); Agrostology = grasses; Palynology = pollen/spores."
+    },
+    {
+      "text": "The comparative study of the different cultures and the scientific explanation is known as",
+      "options": ["Ethnology", "Ethnography", "Ethology", "Ethics"],
+      "correctIndex": 0,
+      "solution": "Correct: Ethnology (A). Comparative scientific study of cultures and societies. Ethnography = descriptive fieldwork of one culture; Ethology = animal behaviour; Ethics = moral philosophy."
+    },
+    {
+      "text": "The study of properties and method of biological systems found in nature and use of this knowledge in mechanical world is known as",
+      "options": ["Bionics", "Bionomics", "Bionomy", "Biometry"],
+      "correctIndex": 0,
+      "solution": "Correct: Bionics (A). Application of biological principles to engineering/technology (biomimetics). Bionomics = organism-environment economics; Bionomy = laws of life; Biometry = biological statistics."
+    },
+    {
+      "text": "Under Palaeobotany, one studies",
+      "options": ["Fossil of animals", "Algae", "Fungi", "None of the above"],
+      "correctIndex": 3,
+      "solution": "Correct: None of the above (D). Palaeobotany studies fossil plants only. Animal fossils = Palaeozoology; living algae = Phycology; living fungi = Mycology."
+    },
+    {
+      "text": "Rearing silk worms is known as",
+      "options": ["Apiculture", "Horticulture", "Sericulture", "Floriculture"],
+      "correctIndex": 2,
+      "solution": "Correct: Sericulture (C). Commercial rearing of silkworms (Bombyx mori) for silk. Apiculture = honey bees; Horticulture = garden plants; Floriculture = flowers."
+    },
+    {
+      "text": "Honey bees are used in",
+      "options": ["Sericulture", "Tissue culture", "Apiculture", "Pisciculture"],
+      "correctIndex": 2,
+      "solution": "Correct: Apiculture (C). Managed beekeeping for honey, wax and pollination. Sericulture = silkworms; Tissue culture = in-vitro cells; Pisciculture = fish farming."
+    },
+    {
+      "text": "Which one of the following is not correctly matched?",
+      "options": ["Flower - Floriculture Cultivation", "Crop - Agronomy Cultivation", "Vegetable - Horticulture Cultivation", "Fruit's - Pomology Cultivation"],
+      "correctIndex": 2,
+      "solution": "Correct mismatch: Vegetable - Horticulture Cultivation (C). Vegetables come under Olericulture. Floriculture = flowers; Agronomy = field crops; Pomology = fruits."
+    },
+    {
+      "text": "Which of the following is not correctly matched?",
+      "options": ["Apiculture - Honey bee", "Sericulture - Silk worm", "Pisciculture - Insect of lakh", "Horticulture - Flower"],
+      "correctIndex": 2,
+      "solution": "Correct mismatch: Pisciculture - Insect of lakh (C). Pisciculture = fish farming; lac insect comes under lac culture. Others are correct."
+    },
+    {
+      "text": "Which of the following pairs is correctly matched? (word and meaning)",
+      "options": ["Lexicography - Compilation of dictionary", "Philology - Collection of postal stamps", "Entomology - Study of human body", "Iconography - Study of insects"],
+      "correctIndex": 0,
+      "solution": "Correct: Lexicography - Compilation of dictionary (A). Philology = language history; Entomology = insects; Iconography = visual symbols."
+    },
+    {
+      "text": "Lexicography is related to",
+      "options": ["Structure of human body", "Compilation of dictionary", "Secret of handwriting", "Teaching of pictures and models"],
+      "correctIndex": 1,
+      "solution": "Correct: Compilation of dictionary (B). It is the science of dictionary making. Anatomy = body structure; Graphology = handwriting; Iconography/pedagogy = images."
+    },
+    {
+      "text": "The study related to the plants being used as vegetable is called",
+      "options": ["Floriculture", "Pomology", "Horticulture", "Olericulture"],
+      "correctIndex": 3,
+      "solution": "Correct: Olericulture (D). Science of vegetable production. Floriculture = flowers; Pomology = fruits; Horticulture = broad garden crops."
+    },
+    {
+      "text": "Which one of the following is produced through Viticulture?",
+      "options": ["Silk", "Earthworm", "Honey", "Grapes"],
+      "correctIndex": 3,
+      "solution": "Correct: Grapes (D). Viticulture = cultivation of grapevines for grapes/wine. Sericulture = silk; Vermiculture = earthworms; Apiculture = honey."
+    },
+    {
+      "text": "What is Vermiculture?",
+      "options": ["The science of raising worms", "The science of studying animals", "The science of studying fishes", "The science of killing worms"],
+      "correctIndex": 0,
+      "solution": "Correct: The science of raising worms (A). Specifically earthworms for vermicompost. Zoology = general animal study; Ichthyology = fishes."
+    },
+    {
+      "text": "In Vermiculture, the worm used is",
+      "options": ["Tapeworm", "Silkworm", "Threadworm", "Earthworm"],
+      "correctIndex": 3,
+      "solution": "Correct: Earthworm (D). Eisenia fetida is used for vermicomposting. Others are parasitic or for silk."
+    },
+    {
+      "text": "The study of Gerontology, is related to which of the following?",
+      "options": ["Child infant", "Female", "Disease of skin", "Old age"],
+      "correctIndex": 3,
+      "solution": "Correct: Old age (D). Gerontology = scientific study of ageing. Paediatrics = children; Gynaecology = female; Dermatology = skin."
+    },
+    {
+      "text": "Genetics deals with",
+      "options": ["Mendel's law", "Organic evolution", "DNA structure", "Heredity and variations"],
+      "correctIndex": 3,
+      "solution": "Correct: Heredity and variations (D). Full scope of genetics. Mendel’s laws, evolution, DNA are specific aspects."
+    },
+    {
+      "text": "The branch of study dealing with old age and ageing is called",
+      "options": ["Oncology", "Gerontology", "Teratology", "Ornithology"],
+      "correctIndex": 1,
+      "solution": "Correct: Gerontology (B). Oncology = cancer; Teratology = birth defects; Ornithology = birds."
+    }
+  ]
+}
