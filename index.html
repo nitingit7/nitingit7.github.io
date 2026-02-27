@@ -147,18 +147,14 @@
             currentSubject = subject;
             document.getElementById('modal-title').innerText = title;
             var modal = document.getElementById('selection-modal');
-            modal.style.display = "flex";
-            
-            // Add a tiny delay for animation class if you add CSS animations
-            setTimeout(() => modal.classList.add('active'), 10);
+            modal.style.display = "flex"; // Shows instantly
         }
 
         function closeSelectionModal(event) {
             // Close if clicked on overlay (background) or Cancel button
             if (!event || event.target.id === 'selection-modal' || event.target.classList.contains('btn-text-close')) {
                 var modal = document.getElementById('selection-modal');
-                modal.classList.remove('active');
-                setTimeout(() => modal.style.display = "none", 200);
+                modal.style.display = "none"; // Hides instantly
             }
         }
 
