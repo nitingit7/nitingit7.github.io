@@ -1727,8 +1727,7 @@ body.dark-mode .beta-badge {
 /* 2. Responsive Grid Layout */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Auto-responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     width: 100%;
 }
@@ -2314,4 +2313,9 @@ body.dark-mode .btn-resume:hover {
 /* Dark mode adjustment */
 body.dark-mode .tc-metadata {
     color: #8b949e;
+}
+
+/* Expand container specifically for the homepage dashboard */
+.main-dashboard {
+    max-width: 1200px !important; 
 }
