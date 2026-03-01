@@ -86,7 +86,8 @@ var GITHUB_FILES = {
         { name: "Test (Empty)", tags: "RC", questions: 10, time: 12, marks: 10, file: BASE_URL + "tests/english/topics/rc1.json" },
         { name: "Vocab 1", tags: "Vocab", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/english/vocab001.json" },
         { name: "Vocab 2", tags: "Vocab", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/english/vocab002.json" },
-        { name: "Vocab 3", tags: "Vocab", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/english/vb003.json" }
+        { name: "Vocab 3", tags: "Vocab", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/english/vb003.json" },
+        { name: "Vocab 4", tags: "Vocab", questions: 20, time: 12, marks: 20, file: BASE_URL + "tests/english/EV004.json" }
     ],
 
     // --- 4. GENERAL AWARENESS ---
