@@ -263,6 +263,14 @@
                             return;
                         }
 
+                        // --- ADD WARNING FOR BACK BUTTON ---
+                        if (!confirm("Your test will be paused and you can resume later. Are you sure you want to leave?")) {
+                            // Push state again to prevent the browser from actually going back
+                            history.pushState(null, null, location.href); 
+                            return; 
+                        }
+                        // -----------------------------------
+
                         // 2. If taking the test, auto-save and exit (no warning needed)
                         this.saveProgress();
                         window.onbeforeunload = null;
@@ -876,6 +884,12 @@
             nextQ: function () { if (this.currQ < this.data.questions.length - 1) { this.captureQuestionTime(); this.currQ++; this.loadQ(); } },
 
             exitTest: function () {
+                // --- ADD THIS WARNING ---
+                if (!confirm("Your test will be paused and you can resume later. Are you sure you want to leave?")) {
+                    return; // Stops the exit process if they click Cancel
+                }
+                // ------------------------
+
                 // Auto-save progress before exiting
                 this.saveProgress();
 
