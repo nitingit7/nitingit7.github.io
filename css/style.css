@@ -2109,31 +2109,10 @@ textarea {
     border-radius: 20px 20px 0 0;
     /* Rounded top for mobile */
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
     gap: 15px;
     border: 1px solid var(--border-color);
-}
-
-/* Active State for Animation */
-.modal-overlay.active .modal-content {
-    transform: translateY(0);
-}
-
-@media (min-width: 600px) {
-    .modal-content {
-        border-radius: 16px;
-        /* Full rounded for desktop */
-        transform: scale(0.9);
-        opacity: 0;
-    }
-
-    .modal-overlay.active .modal-content {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
 
 /* Modal Buttons */
@@ -2318,4 +2297,27 @@ body.dark-mode .tc-metadata {
 /* Expand container specifically for the homepage dashboard */
 .main-dashboard {
     max-width: 1200px !important; 
+}
+
+/* === GROK FORCE NO ANIMATION - PUT AT VERY BOTTOM === */
+#selection-modal.modal-overlay,
+#selection-modal .modal-content,
+.modal-overlay .modal-content,
+.modal-content {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+#selection-modal.modal-overlay.active .modal-content {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+@media (min-width: 600px) {
+    #selection-modal .modal-content {
+        transform: none !important;
+        opacity: 1 !important;
+    }
 }
