@@ -742,6 +742,12 @@
                         });
                     }
                 } catch (e) { console.error(e); }
+
+                // === SCROLL TO TOP ON NEXT/PREV (Fix for Review Solutions) ===
+                const qContentArea = document.querySelector('.q-content');
+                if (qContentArea) {
+                    qContentArea.scrollTo({ top: 0, behavior: 'instant' });
+                }
             },
 
             submitSection: function (force) {
