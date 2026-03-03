@@ -2298,3 +2298,26 @@ body.dark-mode .tc-metadata {
 .main-dashboard {
     max-width: 1200px !important; 
 }
+
+/* === GROK FORCE NO ANIMATION - PUT AT VERY BOTTOM === */
+#selection-modal.modal-overlay,
+#selection-modal .modal-content,
+.modal-overlay .modal-content,
+.modal-content {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+#selection-modal.modal-overlay.active .modal-content {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+@media (min-width: 600px) {
+    #selection-modal .modal-content {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
