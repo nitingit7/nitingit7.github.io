@@ -4,8 +4,8 @@
   "description": "Practice Quantitative Aptitude, Reasoning, English & General Awareness",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#112D4E",
-  "theme_color": "#3F72AF",
+  "background_color": "#0d1017",
+  "theme_color": "#0d1017",
   "orientation": "portrait-primary",
   "icons": [
     {
