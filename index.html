@@ -240,32 +240,33 @@
             window.location.pathname.endsWith('index.html') || 
             window.location.pathname === '') {
 
-            // Push extra history entry so back triggers our handler
+            // Push extra history entry to catch back press
             history.pushState({ isHome: true }, '', window.location.href);
 
             window.addEventListener('popstate', function(event) {
-                // Back pressed on home screen
+                // Back button pressed on home screen
                 if (confirm("Do you want to exit Practice King?")) {
-                    // 1. Primary method for Android TWA / WebView apps
-                    if (navigator.app && navigator.app.exitApp) {
-                        navigator.app.exitApp();                    // Works in many WebView wrappers
-                    } 
-                    // 2. Fallback for some Cordova/Capacitor-style environments
-                    else if (navigator.device && navigator.device.exitApp) {
-                        navigator.device.exitApp();
-                    } 
-                    // 3. Last resort: try to force-minimize/close tab
-                    else {
-                        window.opener = null;
-                        window.open('', '_self');
-                        window.close();                             // May still fail, but harmless
-                    }
-
-                    // Optional: hide content to give visual feedback
-                    document.body.style.display = 'none';
+                    // Hide everything immediately → prevents white/blank flash
+                    document.body.innerHTML = '<div style="height:100vh;background:#0d1017;color:white;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">Exiting...</div>';
+                    
+                    // Give tiny delay so UI updates before system exit attempt
+                    setTimeout(() => {
+                        // 1. Preferred method for many TWA/WebView setups
+                        if (typeof Android !== 'undefined' && Android.finish) {
+                            Android.finish();  // Calls native Activity.finish()
+                        }
+                        // 2. Fallback for some wrappers / older TWA
+                        else if (navigator.app && navigator.app.exitApp) {
+                            navigator.app.exitApp();
+                        }
+                        // 3. Last resort – minimize / force close tab
+                        else {
+                            window.open('', '_self').close();
+                        }
+                    }, 100);  // 100ms delay is enough for UI to show "Exiting..."
                 } 
                 else {
-                    // User said "Cancel" → prevent going further back, push state again
+                    // User canceled → push state again so back button stays functional
                     history.pushState({ isHome: true }, '', window.location.href);
                 }
             }, false);
