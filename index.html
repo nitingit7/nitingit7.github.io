@@ -234,43 +234,6 @@
                 }
             }
         });
-
-        // Only run on home page (index.html)
-        if (window.location.pathname === '/' || 
-            window.location.pathname.endsWith('index.html') || 
-            window.location.pathname === '') {
-
-            // Push extra history entry to catch back press
-            history.pushState({ isHome: true }, '', window.location.href);
-
-            window.addEventListener('popstate', function(event) {
-                // Back button pressed on home screen
-                if (confirm("Do you want to exit Practice King?")) {
-                    // Hide everything immediately → prevents white/blank flash
-                    document.body.innerHTML = '<div style="height:100vh;background:#0d1017;color:white;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">Exiting...</div>';
-                    
-                    // Give tiny delay so UI updates before system exit attempt
-                    setTimeout(() => {
-                        // 1. Preferred method for many TWA/WebView setups
-                        if (typeof Android !== 'undefined' && Android.finish) {
-                            Android.finish();  // Calls native Activity.finish()
-                        }
-                        // 2. Fallback for some wrappers / older TWA
-                        else if (navigator.app && navigator.app.exitApp) {
-                            navigator.app.exitApp();
-                        }
-                        // 3. Last resort – minimize / force close tab
-                        else {
-                            window.open('', '_self').close();
-                        }
-                    }, 100);  // 100ms delay is enough for UI to show "Exiting..."
-                } 
-                else {
-                    // User canceled → push state again so back button stays functional
-                    history.pushState({ isHome: true }, '', window.location.href);
-                }
-            }, false);
-        }
     </script>
 </body>
 </html>
