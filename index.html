@@ -235,34 +235,40 @@
             }
         });
 
-        // Only run this on the home page (index.html)
-        if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        // Only run on home page (index.html)
+        if (window.location.pathname === '/' || 
+            window.location.pathname.endsWith('index.html') || 
+            window.location.pathname === '') {
 
-            // Push an extra "fake" entry so we have something to catch
-            history.pushState({ page: 'home' }, '', window.location.href);
+            // Push extra history entry so back triggers our handler
+            history.pushState({ isHome: true }, '', window.location.href);
 
-            window.onpopstate = function(event) {
-                // When user presses back on the home screen → ask to exit
+            window.addEventListener('popstate', function(event) {
+                // Back pressed on home screen
                 if (confirm("Do you want to exit Practice King?")) {
-                    // This actually closes the app/tab in most cases
-                    window.close();
-
-                    // For Android TWA / PWA: this helps trigger system exit
-                    if (navigator.app) {
-                        navigator.app.exitApp();           // Cordova/Capacitor style
-                    } else if (navigator.device) {
+                    // 1. Primary method for Android TWA / WebView apps
+                    if (navigator.app && navigator.app.exitApp) {
+                        navigator.app.exitApp();                    // Works in many WebView wrappers
+                    } 
+                    // 2. Fallback for some Cordova/Capacitor-style environments
+                    else if (navigator.device && navigator.device.exitApp) {
                         navigator.device.exitApp();
-                    } else {
-                        // Fallback: try to minimize / force close in browser
+                    } 
+                    // 3. Last resort: try to force-minimize/close tab
+                    else {
                         window.opener = null;
                         window.open('', '_self');
-                        window.close();
+                        window.close();                             // May still fail, but harmless
                     }
-                } else {
-                    // User clicked "Cancel" → push the state back so back button still works next time
-                    history.pushState({ page: 'home' }, '', window.location.href);
+
+                    // Optional: hide content to give visual feedback
+                    document.body.style.display = 'none';
+                } 
+                else {
+                    // User said "Cancel" → prevent going further back, push state again
+                    history.pushState({ isHome: true }, '', window.location.href);
                 }
-            };
+            }, false);
         }
     </script>
 </body>
