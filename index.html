@@ -234,6 +234,36 @@
                 }
             }
         });
+
+        // Only run this on the home page (index.html)
+        if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+
+            // Push an extra "fake" entry so we have something to catch
+            history.pushState({ page: 'home' }, '', window.location.href);
+
+            window.onpopstate = function(event) {
+                // When user presses back on the home screen → ask to exit
+                if (confirm("Do you want to exit Practice King?")) {
+                    // This actually closes the app/tab in most cases
+                    window.close();
+
+                    // For Android TWA / PWA: this helps trigger system exit
+                    if (navigator.app) {
+                        navigator.app.exitApp();           // Cordova/Capacitor style
+                    } else if (navigator.device) {
+                        navigator.device.exitApp();
+                    } else {
+                        // Fallback: try to minimize / force close in browser
+                        window.opener = null;
+                        window.open('', '_self');
+                        window.close();
+                    }
+                } else {
+                    // User clicked "Cancel" → push the state back so back button still works next time
+                    history.pushState({ page: 'home' }, '', window.location.href);
+                }
+            };
+        }
     </script>
 </body>
 </html>
