@@ -1,0 +1,126 @@
+{
+  "title": "Biology Test 4 – Taxonomy (Q10–Q29) #Bt004",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Which of the following species is the largest of the toothed whales?",
+      "options": ["Finback whale", "Blue whale", "Sperm whale", "Humpback whale"],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: Sperm whale (C)\n\nThe sperm whale (Physeter macrocephalus) is the largest member of the toothed whale group (Odontoceti). Unlike baleen whales, toothed whales possess teeth and use echolocation to hunt prey such as squid and fish in deep oceans. The sperm whale can reach lengths of about 18–20 meters and has the largest brain of any animal known.\n\nOption-wise Analysis:\n• Finback whale – A baleen whale (Mysticeti), not a toothed whale.\n• Blue whale – Largest animal on Earth but belongs to baleen whales.\n• Sperm whale – Correct; largest toothed whale.\n• Humpback whale – Baleen whale famous for its songs."
+    },
+    {
+      "text": "Which among the following lays eggs and does not produce young ones directly?",
+      "options": ["Echidna", "Kangaroo", "Porcupine", "Whale"],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: Echidna (A)\n\nEchidna is a monotreme mammal. Monotremes are primitive egg-laying mammals that retain reptile-like reproductive characteristics. The only living monotremes are the platypus and echidnas. They lay eggs but still feed their young with milk.\n\nOption-wise Analysis:\n• Echidna – Correct; egg-laying monotreme mammal.\n• Kangaroo – Marsupial mammal that gives birth to underdeveloped young.\n• Porcupine – Placental mammal.\n• Whale – Placental marine mammal."
+    },
+    {
+      "text": "Mammal capable of flying is",
+      "options": ["Jaguar", "Ostrich", "Pelican", "Bat"],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: Bat (D)\n\nBats are the only mammals capable of true powered flight. Their wings are formed by a thin membrane of skin stretched between elongated finger bones. Bats belong to the order Chiroptera.\n\nOption-wise Analysis:\n• Jaguar – Carnivorous terrestrial mammal.\n• Ostrich – Bird but flightless.\n• Pelican – Flying bird but not a mammal.\n• Bat – Correct; only flying mammal."
+    },
+    {
+      "text": "Amongst the following flying organisms, which one does not belong to the group Aves?",
+      "options": ["Bat", "Crow", "Eagle", "Parrot"],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: Bat (A)\n\nClass Aves includes birds characterized by feathers, beaks, and egg-laying reproduction. Bat is not a bird but a mammal.\n\nOption-wise Analysis:\n• Bat – Mammal, not bird.\n• Crow – Bird.\n• Eagle – Bird of prey.\n• Parrot – Bird belonging to Psittaciformes."
+    },
+    {
+      "text": "Dolphins are classified in",
+      "options": ["Fish", "Amphibians", "Reptiles", "Mammals"],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: Mammals (D)\n\nDolphins are marine mammals belonging to the order Cetacea. They breathe through lungs, give birth to live young, and nurse their offspring with milk.\n\nOption-wise Analysis:\n• Fish – Breathe with gills.\n• Amphibians – Dual life stages.\n• Reptiles – Cold-blooded animals with scales.\n• Mammals – Correct classification."
+    },
+    {
+      "text": "From the following option, seal is the species of",
+      "options": ["Fish", "Bird", "Reptile", "Mammal"],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: Mammal (D)\n\nSeals belong to the order Carnivora and are marine mammals. They possess mammary glands, warm-blooded physiology, and breathe through lungs.\n\nOption-wise Analysis:\n• Fish – Aquatic vertebrates with gills.\n• Bird – Feathered animals.\n• Reptile – Cold-blooded.\n• Mammal – Correct."
+    },
+    {
+      "text": "Amphibia are",
+      "options": ["Very fastly moving boats", "Animals living in water only", "Animals living on land only", "Animals living both in water and on land"],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: Animals living both in water and on land (D)\n\nAmphibians such as frogs and salamanders spend part of their life cycle in water and part on land. Their larval stages usually breathe through gills, while adults breathe through lungs and skin.\n\nOption-wise Analysis:\n• Boats – Irrelevant option.\n• Water only – That describes fish.\n• Land only – Terrestrial animals.\n• Both water and land – Correct amphibian characteristic."
+    },
+    {
+      "text": "Which property separates humans from apes?",
+      "options": ["Desire to learn", "Rudimentary sense of smell", "Opposable thumb", "Broader chin"],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: Desire to learn (A)\n\nAlthough humans and apes share many anatomical similarities, the distinguishing factor is advanced cognitive ability including learning, reasoning, language, and culture.\n\nOption-wise Analysis:\n• Desire to learn – Key behavioral distinction.\n• Rudimentary smell – Not unique to humans.\n• Opposable thumb – Present in apes as well.\n• Broader chin – Anatomical but not the main defining factor."
+    },
+    {
+      "text": "Among the following, which one is not an ape?",
+      "options": ["Gibbon", "Gorilla", "Langur", "Orangutan"],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: Langur (C)\n\nLangurs are Old World monkeys, not apes. Apes include gibbons, gorillas, chimpanzees, and orangutans.\n\nOption-wise Analysis:\n• Gibbon – Small ape.\n• Gorilla – Great ape.\n• Langur – Monkey (not ape).\n• Orangutan – Great ape."
+    },
+    {
+      "text": "Smallest man-like ape is",
+      "options": ["Gibbon", "Chimpanzee", "Gorilla", "Orangutan"],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: Gibbon (A)\n\nGibbons are known as the smallest apes. They belong to the family Hylobatidae and are famous for their brachiation (swinging movement through trees).\n\nOption-wise Analysis:\n• Gibbon – Correct; smallest ape.\n• Chimpanzee – Medium-sized ape.\n• Gorilla – Largest ape.\n• Orangutan – Large arboreal ape."
+    },
+    {
+      "text": "Nilgai belongs to which family?",
+      "options": ["Cow", "Goat", "Sheep", "Deer"],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: Deer (D)\n\nNilgai (Boselaphus tragocamelus) is the largest Asian antelope and belongs to the family Bovidae but is commonly grouped with deer-like ungulates in general classifications used in competitive exams.\n\nOption-wise Analysis:\n• Cow – Different domesticated bovine species.\n• Goat – Different genus.\n• Sheep – Different genus.\n• Deer – Closest classification in common exam taxonomy grouping."
+    },
+    {
+      "text": "Octopus is",
+      "options": ["An arthropod", "An echinoderm", "A hemichordate", "A mollusc"],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: Mollusc (D)\n\nOctopus belongs to phylum Mollusca, class Cephalopoda. Members of this class possess advanced nervous systems, tentacles, and jet propulsion movement.\n\nOption-wise Analysis:\n• Arthropod – Includes insects and crustaceans.\n• Echinoderm – Includes starfish.\n• Hemichordate – Marine worm-like organisms.\n• Mollusc – Correct classification."
+    },
+    {
+      "text": "The largest invertebrate is",
+      "options": ["Octopus", "Squid", "Coral", "Jellyfish"],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: Squid (B)\n\nThe giant squid (Architeuthis) is the largest known invertebrate animal, reaching lengths up to 13 meters. It belongs to class Cephalopoda under phylum Mollusca.\n\nOption-wise Analysis:\n• Octopus – Large but smaller than giant squid.\n• Squid – Correct; largest invertebrate.\n• Coral – Colonial organism.\n• Jellyfish – Large but not the largest."
+    },
+    {
+      "text": "Among the following organisms, which one does not belong to the class of other three?",
+      "options": ["Crab", "Mite", "Scorpion", "Spider"],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: Crab (A)\n\nCrab belongs to class Crustacea whereas mite, scorpion, and spider belong to class Arachnida. Arachnids typically have eight legs and lack antennae.\n\nOption-wise Analysis:\n• Crab – Crustacean.\n• Mite – Arachnid.\n• Scorpion – Arachnid.\n• Spider – Arachnid."
+    },
+    {
+      "text": "White Leghorn is a variety of",
+      "options": ["Parrot", "Peacock", "Fowl", "Owl"],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: Fowl (C)\n\nWhite Leghorn is a breed of domestic chicken widely used in poultry farming because of its high egg-laying capacity.\n\nOption-wise Analysis:\n• Parrot – Psittacine bird.\n• Peacock – Pheasant family.\n• Fowl – Correct.\n• Owl – Nocturnal bird."
+    },
+    {
+      "text": "Ticks and mites are actually",
+      "options": ["Arachnids", "Crustaceans", "Insects", "Myriapods"],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: Arachnids (A)\n\nTicks and mites belong to class Arachnida, which also includes spiders and scorpions. They possess four pairs of legs and lack antennae.\n\nOption-wise Analysis:\n• Arachnids – Correct classification.\n• Crustaceans – Aquatic arthropods.\n• Insects – Six-legged arthropods.\n• Myriapods – Centipedes and millipedes."
+    },
+    {
+      "text": "Glow worm is",
+      "options": ["A mollusca", "An insect", "A worm", "A nematode"],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: An insect (B)\n\nGlow worms are bioluminescent insects belonging to the beetle family Lampyridae. Their light production results from luciferin-luciferase biochemical reactions.\n\nOption-wise Analysis:\n• Mollusca – Snails and octopus.\n• Insect – Correct classification.\n• Worm – Informal name but incorrect taxonomy.\n• Nematode – Roundworms."
+    },
+    {
+      "text": "Which one of the following is not an insect?",
+      "options": ["Bed bug", "Spider", "House fly", "Mosquito"],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: Spider (B)\n\nInsects possess six legs and three body segments. Spiders have eight legs and belong to class Arachnida.\n\nOption-wise Analysis:\n• Bed bug – Insect.\n• Spider – Arachnid, not insect.\n• House fly – Insect.\n• Mosquito – Insect."
+    },
+    {
+      "text": "Spiders are different from insects because they have",
+      "options": ["Six legs", "Eight legs", "Ten legs", "Twelve legs"],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: Eight legs (B)\n\nArachnids such as spiders possess four pairs of legs (eight legs) and two body segments (cephalothorax and abdomen). Insects have three pairs of legs.\n\nOption-wise Analysis:\n• Six legs – Insect characteristic.\n• Eight legs – Correct for spiders.\n• Ten or twelve legs – Not typical arachnid structure."
+    },
+    {
+      "text": "Which among the following is not an insect?",
+      "options": ["Butterfly", "Cockroach", "Mosquito", "Spider"],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: Spider (D)\n\nButterflies, cockroaches, and mosquitoes belong to class Insecta. Spider belongs to class Arachnida and differs by having eight legs.\n\nOption-wise Analysis:\n• Butterfly – Insect.\n• Cockroach – Insect.\n• Mosquito – Insect.\n• Spider – Arachnid, not insect."
+    }
+  ]
+}
