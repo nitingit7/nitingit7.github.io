@@ -1,0 +1,126 @@
+{
+  "title": "Biology Test 6 #bt006",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Which of the following group of animals are nocturnal animals?",
+      "options": ["Housefly, Bed bug, Parrot", "Mosquito, Bats, Owl", "Mosquito, Sparrow, Deer", "Owl, Bats, Dog"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Mosquito, Bats, Owl (B)**\n\nNocturnal animals are active at night and possess adaptations like enhanced night vision (tapetum lucidum in owls), echolocation (bats), and chemosensory antennae (mosquitoes). Mosquitoes are vectors for malaria/dengue — critical in DRDO CEPTAM-11 medical entomology and defence against vector-borne diseases in tropical operations. Bats use echolocation (bio-sonar) inspiring naval sonar and UAV stealth tech.\n\n**Option-wise Analysis:**\n• **Housefly, Bed bug, Parrot (A):** Diurnal/crepuscular; parrots are daytime flyers.\n• **Mosquito, Sparrow, Deer (C):** Sparrow and deer are diurnal.\n• **Owl, Bats, Dog (D):** Dog is crepuscular but not strictly nocturnal."
+    },
+    {
+      "text": "Which one of the following animals stores water in the intestine?",
+      "options": ["Moloch", "Camel", "Zebra", "Uromastix"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Camel (B)**\n\nCamels (Camelus) store water in the rumen and large intestine (up to 100 L), allowing survival in deserts for weeks. This is an adaptation studied in DRDO for soldier hydration, desert warfare logistics, and biomimicry in water-conservation tech for arid border areas (Rajasthan/Ladakh).\n\n**Option-wise Analysis:**\n• **Moloch (A):** Thorny devil lizard stores water in skin grooves.\n• **Zebra (C):** Relies on frequent drinking; no intestinal storage.\n• **Uromastix (D):** Spiny-tailed lizard stores fat in tail, not water in intestine."
+    },
+    {
+      "text": "Poison gland of snakes is homologous to",
+      "options": ["Electric organ of fishes", "Stings of rays", "Sebaceous glands of mammals", "Salivary gland of vertebrates"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Salivary gland of vertebrates (D)**\n\nSnake venom glands are modified salivary glands (parotid) producing proteolytic enzymes — evolutionary homology from salivary secretion. Vital for DRDO toxicology, antivenom development, and defence against snakebite in field operations (Indian Armed Forces in forests). Links to medical biotechnology.\n\n**Option-wise Analysis:**\n• **Electric organ (A):** Modified muscle in electric eels.\n• **Stings of rays (B):** Modified dermal denticles.\n• **Sebaceous glands (C):** Skin oil glands in mammals."
+    },
+    {
+      "text": "Poisonous fangs of a snake are modified form of",
+      "options": ["Mandibular teeth", "Palatine teeth", "Canine teeth", "Maxillary teeth"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Maxillary teeth (D)**\n\nIn venomous snakes (Viperidae, Elapidae), the maxillary bones bear hollow fangs connected to venom glands — modified for injection. Key for DRDO herpetology, venom research, and soldier first-aid kits in jungle warfare. Distinguishes from non-venomous snakes.\n\n**Option-wise Analysis:**\n• Mandibular/palatine (A,B): Lower/jaw teeth.\n• Canine (C): Present in mammals, not specific to snakes."
+    },
+    {
+      "text": "Plants growing on rocks are called",
+      "options": ["Epiphytes", "Halophytes", "Xerophytes", "Lithophytes"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Lithophytes (D)**\n\nLithophytes grow on bare rocks (e.g., orchids like Dendrobium), deriving nutrients from rain/dust via aerial roots. Studied in DRDO for rock-stabilization, erosion control in border infrastructure, and bio-engineering in high-altitude Himalayan terrains.\n\n**Option-wise Analysis:**\n• **Epiphytes (A):** Grow on other plants (orchids).\n• **Halophytes (B):** Salt-tolerant (mangroves).\n• **Xerophytes (C):** Drought-adapted (cacti)."
+    },
+    {
+      "text": "Which one of the following is an insectivorous plant?",
+      "options": ["Passion flower plant", "Pitcher plant", "Night queen", "Flame of the forest"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Pitcher plant (B)**\n\nNepenthes (pitcher plant) traps insects in modified leaves (pitchers) for nitrogen in nutrient-poor soils. DRDO relevance: biomimicry for insect traps in agriculture/pest control and carnivorous plant adaptations in biodiversity studies.\n\n**Option-wise Analysis:**\n• Passion flower (A): Climbing vine.\n• Night queen (C): Cestrum nocturnum — fragrant shrub.\n• Flame of the forest (D): Butea monosperma tree."
+    },
+    {
+      "text": "Which one of the following parts of the pitcher plants becomes modified into a pitcher?",
+      "options": ["Stem", "Leaf", "Stipule", "Petiole"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Leaf (B)**\n\nThe leaf lamina modifies into a pitcher with lid and digestive glands for insect capture. Classic example of organ modification in botany — tested in DRDO for understanding plant evolution and bio-inspired designs (e.g., water collection devices).\n\n**Option-wise Analysis:**\n• Stem (A): Supports plant.\n• Stipule (C): Leaf base appendage.\n• Petiole (D): Leaf stalk."
+    },
+    {
+      "text": "To study meiosis in plants, the best part would be",
+      "options": ["Shoot apex", "Root apex", "Anthers", "Leaf cells"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Anthers (C)**\n\nAnthers contain pollen mother cells undergoing meiosis (reduction division) producing haploid pollen — ideal for observing stages (leptotene to tetrad). DRDO context: cytogenetics in crop improvement for defence agriculture and radiation biology studies.\n\n**Option-wise Analysis:**\n• Shoot/root apex (A,B): Mitosis (somatic division).\n• Leaf cells (D): Mostly mature, no division."
+    },
+    {
+      "text": "Which one of the following is not correctly matched?",
+      "options": ["Yeast - Fermentation", "Casein - Milk protein", "Aloe Vera - Angiosperm", "Nepenthes - Parasitic angiosperm"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Nepenthes - Parasitic angiosperm (D)**\n\nNepenthes is insectivorous (carnivorous), not parasitic (does not depend on host for food). DRDO tests economic botany and precise classification for bioprospecting and natural product research.\n\n**Option-wise Analysis:**\n• Yeast fermentation (A): Correct (alcohol).\n• Casein milk protein (B): Correct.\n• Aloe Vera angiosperm (C): Correct (flowering plant)."
+    },
+    {
+      "text": "Nepenthes khasiana, a rare and endangered plant is found in",
+      "options": ["Himachal Pradesh", "Madhya Pradesh", "Meghalaya", "Uttar Pradesh"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Meghalaya (C)**\n\nNepenthes khasiana (pitcher plant) is endemic to Meghalaya’s Khasi hills — India’s only native pitcher plant, protected under CITES. DRDO relevance: biodiversity hotspots in Northeast India for ecological warfare modelling and conservation in defence areas.\n\n**Option-wise Analysis:**\n• Other states lack suitable acidic, nutrient-poor habitats."
+    },
+    {
+      "text": "Turmeric is obtained from which part of the plant?",
+      "options": ["Root", "Stem", "Fruit", "Flower bud"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Stem (B)**\n\nTurmeric (Curcuma longa) rhizome (underground stem) contains curcumin (anti-inflammatory). DRDO uses in soldier health (wound healing, immunity) and natural dye for camouflage fabrics. Tests modified stem concept.\n\n**Option-wise Analysis:**\n• Root (A): Fibrous roots.\n• Fruit/flower (C,D): Not used."
+    },
+    {
+      "text": "Which of the following is the eatable part of turmeric plant?",
+      "options": ["Root", "Stem", "Fruit", "Flower"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Stem (B)**\n\nRhizome (stem) is the edible spice source — rich in curcuminoids. Economic botany for DRDO in herbal medicine for troops and sustainable agriculture in defence farms.\n\n**Option-wise Analysis:**\n• Others are not consumed."
+    },
+    {
+      "text": "The type of fruit in which litchi can be placed in",
+      "options": ["Drupe", "Hesperidium", "Nut", "One seeded berry"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: One seeded berry (D)**\n\nLitchi (Litchi chinensis) is a one-seeded berry (aril-covered seed). DRDO context: horticulture for vitamin-C rich fruits in soldier rations and high-altitude farming research.\n\n**Option-wise Analysis:**\n• Drupe (A): Mango; Hesperidium (B): Citrus; Nut (C): Walnut."
+    },
+    {
+      "text": "What is the botanical name of opium?",
+      "options": ["Emblica officinalis", "Papaver Somniferum", "Rauwolfia Serpentina", "Cinchona Species"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Papaver Somniferum (B)**\n\nOpium poppy yields morphine/codeine from latex of unripe capsules. DRDO tests narcotic plant knowledge for forensic science and pain management in military medicine.\n\n**Option-wise Analysis:**\n• Amla (A), Rauwolfia (C hypertension), Cinchona (D quinine)."
+    },
+    {
+      "text": "In a bisexual flower, if androecium and gynoecium mature at different times, the phenomenon is known as",
+      "options": ["Dichogamy", "Herkogamy", "Heterogamy", "Monogamy"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Dichogamy (A)**\n\nDichogamy (protandry/protogyny) prevents self-pollination — promotes cross-pollination. DRDO relevance: plant breeding for hybrid seeds in defence agriculture and understanding reproductive biology.\n\n**Option-wise Analysis:**\n• Herkogamy (B): Spatial separation.\n• Heterogamy (C): Different gametes.\n• Monogamy (D): Irrelevant."
+    },
+    {
+      "text": "Which of the following underground produced vegetables is a modified root?",
+      "options": ["Potato", "Sweet potato", "Bandda", "Jimikand"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Sweet potato (B)**\n\nSweet potato (Ipomoea batatas) is tuberous root for storage. Potato is stem tuber. DRDO tests modified organs for crop science in food security for armed forces.\n\n**Option-wise Analysis:**\n• Potato (A): Stem; Bandda/Jimikand (C,D): Corms."
+    },
+    {
+      "text": "The storage organ of which of the following plants is not a stem?",
+      "options": ["Cane sugar", "Ginger", "Potato", "Sweet potato"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Sweet potato (D)**\n\nSweet potato: modified root; others are stem modifications (rhizome/cane/potato tuber). Core botany for DRDO economic plants and storage organ classification.\n\n**Option-wise Analysis:**\n• Cane sugar (A): Stem; Ginger (B): Rhizome; Potato (C): Tuber (stem)."
+    },
+    {
+      "text": "Which of the following is a stem?",
+      "options": ["Turnip", "Ginger", "Carrot", "Sweet potato"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Ginger (B)**\n\nGinger (Zingiber officinale) rhizome is underground stem. DRDO relevance: medicinal plant for immunity and soldier health kits.\n\n**Option-wise Analysis:**\n• Turnip/Carrot/Sweet potato: Roots."
+    },
+    {
+      "text": "Which one of the following is a modified stem?",
+      "options": ["Carrot", "Sweet potato", "Coconut", "Potato"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Potato (D)**\n\nPotato (Solanum tuberosum) tuber is modified stem with eyes (buds). DRDO tests in food preservation and high-yield agriculture for defence.\n\n**Option-wise Analysis:**\n• Carrot/Sweet potato (A,B): Roots; Coconut (C): Fruit."
+    },
+    {
+      "text": "Potato is a",
+      "options": ["Root", "Fruit", "Tuber", "Bulb"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Tuber (C)**\n\nPotato is stem tuber (swollen underground stem). Distinguishes from bulb (onion) or root. Essential for DRDO agronomy and storage biology in cold/high-altitude regions.\n\n**Option-wise Analysis:**\n• Root (A): Carrot; Fruit (B): Tomato; Bulb (D): Onion."
+    }
+  ]
+}
