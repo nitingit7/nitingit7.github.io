@@ -1,0 +1,126 @@
+{
+  "title": "Biology Test 5 #bt005",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Which of the following species is the largest of the 'toothed-whales'?",
+      "options": ["Finback whale", "Blue whale", "Sperm whale", "Humpback whale"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Sperm whale (C)**\n\nThe sperm whale (Physeter macrocephalus) is the largest toothed whale (odontocete), reaching up to 20.7 m and 57 tonnes, distinguished by its massive spermaceti organ and ability to dive to 3,000 m. Blue whales are larger overall but are baleen (mysticete) whales without teeth. This precise taxonomic distinction is crucial for DRDO CEPTAM-11 General Science, testing animal classification, evolutionary adaptations, and relevance to marine biology in naval defence research (sonar, deep-sea operations, and bio-inspired underwater vehicles).\n\n**Option-wise Analysis:**\n• **Finback whale (A):** A baleen whale (second-largest animal overall) — not toothed.\n• **Blue whale (B):** Largest animal ever (up to 33 m), but mysticete (baleen) — incorrect for 'toothed-whales' category.\n• **Humpback whale (D):** Baleen whale known for songs; much smaller than sperm whale among odontocetes."
+    },
+    {
+      "text": "Which among the following one lays eggs and does not produce young ones directly?",
+      "options": ["Echidna", "Kangaroo", "Porcupine", "Whale"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Echidna (A)**\n\nEchidna (spiny anteater) is a monotreme mammal that lays eggs (oviparous reproduction) — the only living mammals besides platypus that do not give birth to live young. This reflects the primitive mammalian trait retained from reptilian ancestors. High-yield for DRDO CEPTAM-11: tests mammalian classification, evolutionary biology, and comparative anatomy (important for defence biotech, animal models in extreme-environment research).\n\n**Option-wise Analysis:**\n• **Kangaroo (B):** Marsupial — gives birth to underdeveloped young that develop in pouch.\n• **Porcupine (C):** Placental mammal — viviparous (live birth).\n• **Whale (D):** Placental mammal — viviparous with advanced maternal care."
+    },
+    {
+      "text": "Mammal capable in flying is",
+      "options": ["Jaguar", "Ostrich", "Pellican", "Bat"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Bat (D)**\n\nBats (order Chiroptera) are the only mammals capable of true powered flight due to elongated finger bones supporting a membrane (patagium), echolocation, and high metabolic rate. This unique adaptation is studied in bio-mimicry for DRDO’s unmanned aerial vehicles and stealth technology. Critical for CEPTAM-11 to differentiate true flight from gliding in vertebrates.\n\n**Option-wise Analysis:**\n• **Jaguar (A):** Terrestrial carnivore — no flight capability.\n• **Ostrich (B):** Flightless bird (ratite).\n• **Pellican (C):** Bird capable of flight but not a mammal."
+    },
+    {
+      "text": "Amongst the following flying organisms, which one does not belong to the group, Aves?",
+      "options": ["Bat", "Crow", "Eagle", "Parrot"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Bat (A)**\n\nBats are mammals (class Mammalia) with mammary glands and hair, while crow, eagle, and parrot belong to class Aves (feathers, beaks, oviparous). This tests fundamental vertebrate classification — essential in DRDO CEPTAM-11 for understanding biodiversity, zoonotic disease vectors (bats carry viruses like Nipah), and ecological modelling in defence scenarios.\n\n**Option-wise Analysis:**\n• **Crow, Eagle, Parrot (B,C,D):** All true birds (Aves) with homologous flight adaptations."
+    },
+    {
+      "text": "Dolphins are classified in",
+      "options": ["Fish", "Amphibians", "Reptile", "Mammals"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Mammals (D)**\n\nDolphins (order Cetacea, family Delphinidae) are marine mammals: warm-blooded, breathe air via lungs, nurse young with milk, and possess echolocation. They evolved from land mammals ~50 million years ago. DRDO relevance: bio-inspired sonar systems and naval mammal programmes (e.g., US Navy dolphin units). Tests mammalian traits vs. convergent evolution in fish.\n\n**Option-wise Analysis:**\n• **Fish (A):** Aquatic but gills, cold-blooded, scales.\n• **Amphibians (B):** Dual life (water-land), moist skin.\n• **Reptile (C):** Scaly, ectothermic."
+    },
+    {
+      "text": "From the following option, seal is the species of",
+      "options": ["Fish", "Bird", "Reptiles", "Mammal"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Mammal (D)**\n\nSeals (order Pinnipedia) are marine mammals with flippers, blubber insulation, and viviparous reproduction. They return to land to breed. Key for DRDO CEPTAM-11 in understanding polar/marine ecology, thermoregulation, and applications in underwater defence research (diving physiology parallels human submariners).\n\n**Option-wise Analysis:**\n• Others lack mammalian characteristics (milk production, endothermy)."
+    },
+    {
+      "text": "Amphibia are",
+      "options": ["Very fastly moving boats", "Animals living in water only", "Animals living on land only", "Animals living equally in water and on land both"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Animals living equally in water and on land both (D)**\n\nAmphibians (frogs, salamanders) exhibit dual life: aquatic larval stage (gills) and terrestrial adult stage (lungs/skin respiration). This metamorphosis is a classic evolutionary transition from fish to tetrapods. DRDO context: biomimicry in amphibious vehicles and understanding environmental toxicology (amphibians as bio-indicators).\n\n**Option-wise Analysis:**\n• **Boats (A):** Irrelevant (wordplay distractor).\n• **Water only (B):** True for fish.\n• **Land only (C):** True for reptiles/mammals."
+    },
+    {
+      "text": "Which of the following property separate a man/human from apes?",
+      "options": ["Envice a desire to learn", "By a rudimentary sense of smell", "Contrary thumb", "Broader chin"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Envice a desire to learn (A)**\n\nHumans possess advanced cognitive abilities (abstract thinking, culture, language, desire to learn) far beyond apes, despite sharing 98-99% DNA. Opposable thumb (C) and chin are shared traits; sense of smell is reduced in both. DRDO CEPTAM-11 tests human evolution and cognitive science for human factors engineering (soldier training, AI interfaces).\n\n**Option-wise Analysis:**\n• **Rudimentary smell (B):** Actually weaker in humans than apes.\n• **Contrary thumb (C):** Shared with apes.\n• **Broader chin (D):** Anatomical but not the defining cognitive separator."
+    },
+    {
+      "text": "Among the following, which one is not an ape?",
+      "options": ["Gibbon", "Gorilla", "Langur", "Orangutan"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Langur (C)**\n\nLangur (Presbytis) is an Old World monkey (Cercopithecidae) with tail and cheek pouches; apes (Hominidae) are tailless, larger-brained. Critical taxonomic distinction for DRDO biodiversity and wildlife conservation questions (Indian defence projects in forests).\n\n**Option-wise Analysis:**\n• Gibbon, Gorilla, Orangutan: All great/lesser apes (tailless hominoids)."
+    },
+    {
+      "text": "Smallest man-like ape is",
+      "options": ["Gibbon", "Chimpanzee", "Gorilla", "Orangutan"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Gibbon (A)**\n\nGibbons (Hylobatidae) are the smallest apes (6-12 kg), arboreal brachiators with long arms. They represent the earliest diverging ape lineage. DRDO relevance: comparative anatomy and locomotion studies for exoskeleton/robotic design.\n\n**Option-wise Analysis:**\n• Chimpanzee (~40-60 kg), Gorilla (up to 200 kg), Orangutan (~30-100 kg) are larger."
+    },
+    {
+      "text": "Nilgai belongs to the following family.",
+      "options": ["Cow", "Goat", "Sheep", "Deer"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Deer (D)**\n\nNilgai (Boselaphus tragocamelus) is the largest Asian antelope, placed in family Bovidae but often grouped under “deer-like” in Indian competitive exams due to morphological similarity and habitat. It is India’s state animal of Tamil Nadu. DRDO context: wildlife management in defence testing ranges and ecological impact studies.\n\n**Option-wise Analysis:**\n• Cow, Goat, Sheep: Domestic bovids; Nilgai is wild antelope but taxonomically closer to deer in question framing."
+    },
+    {
+      "text": "Octopus is",
+      "options": ["An arthropod", "An echinoderm", "A hemichordate", "A mollusc"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: A mollusc (D)**\n\nOctopus belongs to phylum Mollusca, class Cephalopoda — soft-bodied, eight arms, highly intelligent (largest invertebrate brain). Jet propulsion and camouflage are key adaptations. DRDO CEPTAM-11 favourite: invertebrate classification and bio-mimicry for soft robotics and camouflage technology.\n\n**Option-wise Analysis:**\n• **Arthropod (A):** Exoskeleton, jointed legs (crabs).\n• **Echinoderm (B):** Spiny skin, water vascular system (starfish).\n• **Hemichordate (C):** Worm-like, acorn worms."
+    },
+    {
+      "text": "The largest invertebrate is",
+      "options": ["Octopus", "Squid", "Coral", "Jellyfish"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Squid (B)**\n\nThe colossal squid (Mesonychoteuthis hamiltoni) or giant squid (Architeuthis) reaches 14 m — largest invertebrate by mass/length. Giant squid recorded in Indian Ocean. Relevance for DRDO: deep-sea exploration, bioluminescence studies, and naval intelligence (submarine camouflage).\n\n**Option-wise Analysis:**\n• Octopus smaller; coral and jellyfish are colonial or smaller cnidarians."
+    },
+    {
+      "text": "Among the following organisms, which one does not belong to the class of other three?",
+      "options": ["Crab", "Mite", "Scorpion", "Spider"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Crab (A)**\n\nCrab belongs to class Crustacea (arthropods with two pairs of antennae); mite, scorpion, spider are class Arachnida (eight legs, no antennae). Classic odd-one-out for arthropod classification — tested in DRDO for entomology, pest control, and vector-borne disease research.\n\n**Option-wise Analysis:**\n• Mite, Scorpion, Spider: All arachnids (chelicerates)."
+    },
+    {
+      "text": "White leg-horn is a variety of",
+      "options": ["Parrot", "Peacock", "Fowl", "Owl"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Fowl (C)**\n\nWhite Leghorn is a world-famous egg-laying breed of domestic fowl (Gallus gallus domesticus) developed in Italy/USA. High egg production (280+/year). DRDO context: poultry science in defence farms and nutrition for troops.\n\n**Option-wise Analysis:**\n• Others are wild or ornamental birds, not poultry varieties."
+    },
+    {
+      "text": "Ticks and mites are actually",
+      "options": ["Arachnids", "Crustaceans", "Insects", "Myriapods"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Arachnids (A)**\n\nTicks and mites belong to class Arachnida (eight legs, fused cephalothorax, no antennae). Vectors for diseases (Lyme, scrub typhus). Critical for DRDO medical entomology and defence against vector-borne threats in field operations.\n\n**Option-wise Analysis:**\n• Crustaceans: Two antennae; Insects: Six legs; Myriapods: Many legs."
+    },
+    {
+      "text": "Glow worm is",
+      "options": ["A mollusca", "An insect", "A worm", "A nematode"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: An insect (B)**\n\nGlow-worm (Lampyris noctiluca) is the larval stage of fireflies — beetles (order Coleoptera, family Lampyridae) using luciferin-luciferase bioluminescence. DRDO relevance: biomimicry for night-vision, chemical warfare detection, and LED technology.\n\n**Option-wise Analysis:**\n• Mollusca: Soft-bodied; Worm/nematode: No legs."
+    },
+    {
+      "text": "Which one of the following is not an insect?",
+      "options": ["Bed bug", "Spider", "House fly", "Mosquito"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Spider (B)**\n\nSpider (Arachnida) has eight legs and no wings/antennae; bed bug, house fly, mosquito are true insects (Hexapoda, six legs). Vital for DRDO pest management and medical entomology (mosquito-borne diseases in tropical deployments).\n\n**Option-wise Analysis:**\n• Bed bug, House fly, Mosquito: All class Insecta."
+    },
+    {
+      "text": "Spiders are different from insects because they have",
+      "options": ["Six legs", "Eight legs", "Ten legs", "Twelve legs"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Eight legs (B)**\n\nSpiders (Arachnida) possess four pairs of walking legs; insects have three pairs. Also, spiders have chelicerae (fangs) vs. insect mandibles. DRDO context: arachnid venom research and distinguishing in field biology for soldiers.\n\n**Option-wise Analysis:**\n• Six legs: Definitive for insects."
+    },
+    {
+      "text": "Which is not insect amongst following?",
+      "options": ["Butterfly", "Cockroach", "Mosquito", "Spider"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Spider (D)**\n\nSpider is arachnid; butterfly, cockroach, mosquito are insects (six legs, three body parts, wings in some). Repeated emphasis in CEPTAM-11 on arthropod taxonomy for applied entomology in defence agriculture and vector control.\n\n**Option-wise Analysis:**\n• Butterfly, Cockroach, Mosquito: All class Insecta."
+    }
+  ]
+}
