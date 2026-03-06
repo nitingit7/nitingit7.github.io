@@ -1,0 +1,226 @@
+{
+  "title": "Biology Mock Test: Taxonomy #Bt004",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Which of the following species is the largest of the 'toothed-whales'?",
+      "options": [
+        "Finback whale",
+        "Blue whale",
+        "Sperm whale",
+        "Humpback whale"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Sperm whale (C)**\n\nThe sperm whale (Physeter macrocephalus) is the largest of the toothed whales (Odontoceti). It possesses the largest brain of any animal on Earth and is a deep-diving predator.  The blue whale, finback whale, and humpback whale are all baleen whales (Mysticeti), which use baleen plates to filter food and do not have teeth.\n\n**Option-wise Analysis:**\n• **Finback whale (A):** Second-largest animal, but it is a baleen whale.\n• **Blue whale (B):** Largest animal on Earth, but it is a baleen whale.\n• **Humpback whale (D):** A baleen whale known for its breaching and complex songs."
+    },
+    {
+      "text": "Which among the following one lays eggs and does not produce young ones directly?",
+      "options": [
+        "Echidna",
+        "Kangaroo",
+        "Porcupine",
+        "Whale"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Echidna (A)**\n\nThe Echidna (spiny anteater) and the Platypus are the only living mammals that lay eggs instead of giving birth to live young. They belong to the order Monotremata.  After the eggs hatch, the mother nurses the young with milk, which is a defining mammalian trait.\n\n**Option-wise Analysis:**\n• **Kangaroo (B):** A marsupial that gives birth to relatively undeveloped live young that complete development in a pouch.\n• **Porcupine (C):** A placental mammal (rodent) that gives birth to live young.\n• **Whale (D):** A marine placental mammal that gives birth to fully developed live young."
+    },
+    {
+      "text": "Mammal capable in flying is",
+      "options": [
+        "Jaguar",
+        "Ostrich",
+        "Pellican",
+        "Bat"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Bat (D)**\n\nBats are the only mammals naturally capable of true and sustained flight. Their forelimbs are adapted as wings, making them unique in the mammalian class. They belong to the order Chiroptera. Some other mammals like flying squirrels can only glide, not fly.\n\n**Option-wise Analysis:**\n• **Jaguar (A):** A large feline (mammal) adapted for terrestrial life and climbing.\n• **Ostrich (B):** A large flightless bird (Aves).\n• **Pellican (C):** A large flying bird (Aves), not a mammal."
+    },
+    {
+      "text": "Amongst the following flying organisms, which one does not belong to the group, Aves?",
+      "options": [
+        "Bat",
+        "Crow",
+        "Eagle",
+        "Parrot"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Bat (A)**\n\nBats are mammals (order Chiroptera), not birds (Aves). While they possess wings and are capable of flight, they have mammalian characteristics such as hair/fur, mammary glands to produce milk, and giving birth to live young (viviparous). Crow, Eagle, and Parrot are all birds characterized by feathers and laying eggs.\n\n**Option-wise Analysis:**\n• **Crow, Eagle, Parrot (B, C, D):** All are true birds belonging to the class Aves."
+    },
+    {
+      "text": "Dolphins are classified in",
+      "options": [
+        "Fish",
+        "Amphibians",
+        "Reptile",
+        "Mammals"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Mammals (D)**\n\nDolphins are highly intelligent marine mammals belonging to the order Cetacea. Despite their fish-like appearance, they are warm-blooded, breathe air through a blowhole, give birth to live young, and nurse them with milk. This is an excellent example of convergent evolution where mammals adapted to an aquatic environment.\n\n**Option-wise Analysis:**\n• **Fish (A):** Cold-blooded, breathe via gills, and typically lay eggs.\n• **Amphibians (B):** Cold-blooded vertebrates that need water to survive and breed (e.g., frogs).\n• **Reptile (C):** Cold-blooded, scaly skin, usually lay eggs."
+    },
+    {
+      "text": "From the following option, seal is the species of",
+      "options": [
+        "Fish",
+        "Bird",
+        "Reptiles",
+        "Mammal"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Mammal (D)**\n\nSeals are semi-aquatic marine mammals belonging to the clade Pinnipedia. They are warm-blooded, breathe air, have hair or blubber to keep warm, and females produce milk to feed their pups. They spend part of their lives in the ocean but usually come ashore to mate and give birth.\n\n**Option-wise Analysis:**\n• **Fish, Bird, Reptiles (A, B, C):** Incorrect classifications. Seals do not have gills, feathers, or scales as primary coverings."
+    },
+    {
+      "text": "Amphibia are",
+      "options": [
+        "Very fastly moving boats",
+        "Animals living in water only",
+        "Animals living on land only",
+        "Animals living equally in water and on land both"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Animals living equally in water and on land both (D)**\n\nAmphibians (from Greek 'amphi' meaning both and 'bios' meaning life) are cold-blooded vertebrates that generally spend their larval stage in water (breathing through gills) and their adult stage on land (breathing through lungs and moist skin). Examples include frogs, toads, and salamanders. \n\n**Option-wise Analysis:**\n• **Animals living in water only (B):** Refers to fully aquatic organisms like fish.\n• **Animals living on land only (C):** Refers to strictly terrestrial animals."
+    },
+    {
+      "text": "Which of the following property separate a man/human from apes?",
+      "options": [
+        "Envice a desire to learn",
+        "By a rudimentry sense of smell",
+        "Contrary thumb",
+        "Broader chin"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Envice a desire to learn (A)**\n\nWhile humans and apes share many physical similarities (including opposable thumbs and forward-facing eyes), humans possess a highly developed cerebrum that enables complex language, abstract reasoning, and a profound, inherent desire to learn, innovate, and transmit culture. Anatomically, humans are also distinguished by a true projecting chin and bipedalism, but cognitive curiosity is the defining behavioral separator emphasized in such historical biology questions.\n\n**Option-wise Analysis:**\n• **Rudimentry sense of smell (B):** Both humans and apes have a reduced olfactory sense compared to other mammals.\n• **Contrary thumb (C):** Both humans and great apes have opposable thumbs.\n• **Broader chin (D):** Humans do have a unique chin, but it's a structural rather than a profound evolutionary behavioral separator in this context."
+    },
+    {
+      "text": "Among the following, which one is not an ape?",
+      "options": [
+        "Gibbon",
+        "Gorilla",
+        "Langur",
+        "Orangutan"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Langur (C)**\n\nLangurs are Old World monkeys, not apes. A primary morphological difference between monkeys and apes is that apes do not have tails, whereas most monkeys (like langurs, macaques) do. Great apes include gorillas, chimpanzees, bonobos, and orangutans, while gibbons are lesser apes.\n\n**Option-wise Analysis:**\n• **Gibbon (A):** A lesser ape.\n• **Gorilla & Orangutan (B, D):** Great apes."
+    },
+    {
+      "text": "Smallest man-like ape is",
+      "options": [
+        "Gibbon",
+        "Chimpanzee",
+        "Gorilla",
+        "Orangutan"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Gibbon (A)**\n\nGibbons are the smallest of the apes and are classified as 'lesser apes'. They are highly arboreal and known for their spectacular brachiation (swinging from branch to branch). Because of their smaller size, lack of a tail, and somewhat upright posture when walking, they are the smallest man-like apes. \n\n**Option-wise Analysis:**\n• **Chimpanzee (B):** Medium-sized great ape, closest living relative to humans.\n• **Gorilla (C):** The largest living primate.\n• **Orangutan (D):** Large, highly intelligent Asian great ape."
+    },
+    {
+      "text": "Nilgai belongs to the following family.",
+      "options": [
+        "Cow",
+        "Goat",
+        "Sheep",
+        "Deer"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Cow (A)**\n\nThe Nilgai (Boselaphus tragocamelus), translating to 'blue cow', is the largest Asian antelope and is endemic to the Indian subcontinent. It belongs to the family Bovidae, which also includes cows, buffaloes, goats, and sheep.  It does not belong to the deer family (Cervidae), even though antelopes and deer share some superficial similarities. *(Note: Some older answer keys erroneously mark 'Deer' due to visual confusion, but scientifically it aligns with the Cow family).* \n\n**Option-wise Analysis:**\n• **Goat & Sheep (B, C):** Also bovids, but Nilgai is more specifically in the subfamily Bovinae, closest to cattle.\n• **Deer (D):** Belong to family Cervidae, characterized by antlers which are shed and regrown, unlike the permanent horns of bovids."
+    },
+    {
+      "text": "Octopus is",
+      "options": [
+        "An arthropod",
+        "An echinoderm",
+        "A hemichordate",
+        "A molluse"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: A molluse (D)**\n\nAn octopus is a marine invertebrate belonging to the phylum Mollusca and the class Cephalopoda. Molluscs are generally characterized by a soft body, and in the case of the octopus, the shell is completely absent. They are highly intelligent and possess a complex nervous system.\n\n**Option-wise Analysis:**\n• **Arthropod (A):** Animals with jointed appendages and exoskeletons (e.g., crabs, insects).\n• **Echinoderm (B):** Radially symmetrical marine animals (e.g., starfish).\n• **Hemichordate (C):** Worm-like marine invertebrates (e.g., acorn worms)."
+    },
+    {
+      "text": "The largest invertebrate is",
+      "options": [
+        "Octopus",
+        "Squid",
+        "Coral",
+        "Jellyfish"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Squid (B)**\n\nThe Colossal Squid (Mesonychoteuthis hamiltoni) and the Giant Squid (Architeuthis dux) hold the record for the largest known invertebrates.  They can reach lengths of over 10-14 meters and weigh hundreds of kilograms. They are cephalopod molluscs like the octopus but are much larger.\n\n**Option-wise Analysis:**\n• **Octopus (A):** The giant Pacific octopus is large but much smaller than giant squids.\n• **Coral (C):** A colony of tiny polyps, not a single massive organism in this context.\n• **Jellyfish (D):** Lion's mane jellyfish can be very long due to tentacles, but squid is universally classified as the most massive invertebrate."
+    },
+    {
+      "text": "Among the following organisms, which one does not belong to the class of other three?",
+      "options": [
+        "Crab",
+        "Mite",
+        "Scorpion",
+        "Spider"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Crab (A)**\n\nCrabs belong to the subphylum Crustacea (usually aquatic, having gills and multiple pairs of legs). In contrast, mites, scorpions, and spiders all belong to the class Arachnida (having eight legs and two main body segments). This is a classic taxonomy question testing the distinction within the Arthropoda phylum.\n\n**Option-wise Analysis:**\n• **Mite, Scorpion, Spider (B, C, D):** All are Arachnids."
+    },
+    {
+      "text": "White leg-horn is a variety of",
+      "options": [
+        "Parrot",
+        "Peacock",
+        "Fowl",
+        "Owl"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Fowl (C)**\n\nThe White Leghorn is a highly popular breed of domestic fowl (chicken) originating from Tuscany, Italy. They are known globally as one of the most prolific egg-laying breeds, widely used in commercial egg production.\n\n**Option-wise Analysis:**\n• **Parrot, Peacock, Owl (A, B, D):** Completely unrelated bird species."
+    },
+    {
+      "text": "Ticks and mites are actually",
+      "options": [
+        "Arachnids",
+        "Crustaceans",
+        "Insects",
+        "Myriapods"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Arachnids (A)**\n\nTicks and mites belong to the subclass Acari within the class Arachnida. As arachnids, adult ticks and mites possess eight legs and lack antennae and wings. This biological classification distinguishes them from insects, which have six legs.\n\n**Option-wise Analysis:**\n• **Crustaceans (B):** Mostly aquatic arthropods like crabs and shrimp.\n• **Insects (C):** Hexapods with six legs.\n• **Myriapods (D):** Millipedes and centipedes."
+    },
+    {
+      "text": "Glow worm is",
+      "options": [
+        "A mollusca",
+        "An insect",
+        "A worm",
+        "A nematode"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: An insect (B)**\n\nDespite the name, a 'glow worm' is actually an insect. It refers to the bioluminescent larvae of certain species of fireflies or adult wingless females of bioluminescent beetles (family Lampyridae).  They use their glow to attract mates or prey.\n\n**Option-wise Analysis:**\n• **Worm/Nematode (C, D):** It is a misnomer; they are not true worms (annelids or nematodes).\n• **Mollusca (A):** Completely different phylum (snails, slugs)."
+    },
+    {
+      "text": "Which one of the following is not an insect?",
+      "options": [
+        "Bed bug",
+        "Spider",
+        "House fly",
+        "Mosquito"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Spider (B)**\n\nSpiders belong to the class Arachnida, not Insecta. The defining characteristics of arachnids include having eight legs, two main body parts (cephalothorax and abdomen), and no wings or antennae. Insects, conversely, have six legs, three body parts (head, thorax, abdomen), and usually possess wings and antennae.\n\n**Option-wise Analysis:**\n• **Bed bug, House fly, Mosquito (A, C, D):** All are true insects (Class Insecta)."
+    },
+    {
+      "text": "Spiders are different from insects because they have",
+      "options": [
+        "Six legs",
+        "Eight legs",
+        "Ten legs",
+        "Twelve legs"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Eight legs (B)**\n\nThe most prominent external distinguishing feature between spiders (arachnids) and insects is the leg count. Spiders have four pairs of legs (eight legs in total), whereas all true insects have three pairs (six legs). \n\n**Option-wise Analysis:**\n• **Six legs (A):** Characteristic of insects.\n• **Ten/Twelve legs (C, D):** Some crustaceans have ten legs (decapods), but not spiders or insects."
+    },
+    {
+      "text": "Which is not insect amongst following?",
+      "options": [
+        "Butterfly",
+        "Cockroach",
+        "Mosquito",
+        "Spider"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Spider (D)**\n\nSimilar to previous questions, the spider stands out as the non-insect. It is an arachnid. This fundamental taxonomic difference is a very common trick question in general science exams like DRDO CEPTAM to test basic biological classification.\n\n**Option-wise Analysis:**\n• **Butterfly, Cockroach, Mosquito (A, B, C):** All have six legs and three body segments, classifying them as insects."
+    }
+  ]
+}
