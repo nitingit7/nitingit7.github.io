@@ -1,0 +1,564 @@
+{
+  "title": "DRDO CEPTAM-11 Memory Based Held on (12 Nov 2022) #DRDOQS001.json",
+  "isFullMock": true,
+  "sections": [
+    {
+      "name": "General Science",
+      "timeLimit": 50,
+      "questions": [
+        {
+          "id": "GS01",
+          "direction": null,
+          "text": "Which of the following statements is INCORRECT?",
+          "options": [
+            "There is a repulsive force when north poles (or south poles) of two magnets are brought close together.",
+            "If a bar magnet is broken into two halves, we get two similar bar magnets with stronger properties.",
+            "The earth behaves as a magnet with the magnetic field pointing approximately from the geographic south to the north.",
+            "When a bar magnet is freely suspended, it points in the north-south direction."
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (If a bar magnet is broken into two halves, we get two similar bar magnets with stronger properties.)\n\n**Detailed Explanation:**\nWhen a bar magnet is broken into two halves, each piece becomes an independent magnet with its own north and south poles. The magnetic strength of each new magnet is **not stronger** than the original; in fact, the pole strength remains the same or slightly weaker due to division of magnetic moment. This is a fundamental property of magnets and is tested in DRDO exams because electromagnetic devices (missiles, radars, sensors) rely on precise understanding of magnetic domains.\n\n**Why other options are correct/incorrect:**\n• **A is correct** – Like poles repel (fundamental law of magnetism; used in magnetic levitation systems in defence).\n• **C is correct** – Earth’s magnetic field points from geographic South to North (magnetic South pole lies near geographic North; critical for navigation in defence applications).\n• **D is correct** – Freely suspended magnet aligns with Earth’s magnetic field (basis of magnetic compass used in military navigation).\n\n**DRDO Relevance:** Understanding magnet breaking is essential for designing permanent magnets in motors, generators and guidance systems."
+        },
+        {
+          "id": "GS02",
+          "direction": null,
+          "text": "Which of the following is the number of oscillations per unit time of the sound wave?",
+          "options": [
+            "Wavelength",
+            "Time period",
+            "Amplitude",
+            "Frequency"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Frequency)\n\n**Detailed Explanation:**\nFrequency is defined as the number of oscillations/vibrations per unit time of a sound wave. It is measured in Hertz (Hz). Higher frequency means higher pitch. This concept is vital in DRDO for sonar, acoustic sensors and communication systems.\n\n**Option-wise Analysis:**\n• **A (Wavelength)** – Distance between two consecutive points in same phase; inversely proportional to frequency (λ = v/f). Incorrect.\n• **B (Time period)** – Time for one complete oscillation (T = 1/f). Incorrect.\n• **C (Amplitude)** – Maximum displacement; determines loudness, not frequency. Incorrect.\n\n**DRDO Context:** Frequency is used in ultrasonic testing of defence materials and underwater acoustics."
+        },
+        {
+          "id": "GS04",
+          "direction": null,
+          "text": "The tissue providing nutrition to the embryo in the uterus is the ______.",
+          "options": [
+            "Fallopian tube",
+            "Oviduct",
+            "Placenta",
+            "Villi"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Placenta)\n\n**Detailed Explanation:**\nThe placenta is a temporary endocrine organ that connects the fetus to the uterine wall, enabling nutrient, gas and waste exchange via diffusion. It secretes hCG, estrogen and progesterone. Formed after implantation.\n\n**Option-wise Analysis:**\n• **A & B (Fallopian tube/Oviduct)** – Site of fertilization; no nutrition role.\n• **D (Villi)** – Chorionic villi are part of placenta but alone do not provide full nutrition.\n\n**DRDO Relevance:** Knowledge of human reproduction is tested for medical research and biotechnology posts."
+        },
+        {
+          "id": "GS05",
+          "direction": null,
+          "text": "______ compound is used as a drying agent.",
+          "options": [
+            "Calcium oxide",
+            "Calcium carbide",
+            "Gypsum",
+            "Calcium carbonate"
+          ],
+          "correctIndex": 0,
+          "solution": "**Correct Answer: A** (Calcium oxide)\n\n**Detailed Explanation:**\nCalcium oxide (quicklime, CaO) reacts exothermically with water (CaO + H₂O → Ca(OH)₂) and absorbs moisture efficiently. Used in labs and industry.\n\n**Option-wise Analysis:**\n• **B** – Produces acetylene gas.\n• **C** – Contains water of crystallization; used in cement.\n• **D** – Not hygroscopic.\n\n**DRDO Context:** Drying agents are crucial in chemical defence labs and propellant manufacturing."
+        },
+        {
+          "id": "GS06",
+          "direction": null,
+          "text": "If the radius of curvature of a concave mirror is 6.2 cm, its focal length is ______ cm.",
+          "options": [
+            "12.4",
+            "3.1",
+            "2.6",
+            "6"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (3.1)\n\n**Detailed Explanation:**\nFor spherical mirrors, focal length f = R/2.\nGiven R = 6.2 cm, f = 6.2 / 2 = **3.1 cm**.\n\n**Option-wise Analysis:**\n• A is 2R (wrong).\n• C & D do not follow the formula.\n\n**Formula (KaTeX):** $$f = \\frac{R}{2}$$\n**DRDO Relevance:** Concave mirrors are used in solar concentrators, headlights and optical instruments in defence."
+        },
+        {
+          "id": "GS07",
+          "direction": null,
+          "text": "Consider the following statements:\n1. Saturated hydrocarbons contain single bonds only.\n2. Ethyne is an example of a saturated hydrocarbon.\n3. Carbon can form long chain compounds due to catenation.\n\nWhich are correct?",
+          "options": [
+            "1 and 2 only",
+            "1 and 3 only",
+            "2 and 3 only",
+            "All of the above"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (1 and 3 only)\n\n**Detailed Explanation:**\nStatement 1 & 3 are correct. Saturated hydrocarbons (alkanes) have only single bonds (CₙH₂ₙ₊₂). Carbon shows catenation due to strong C-C bonds.\nStatement 2 is wrong – Ethyne (C₂H₂) is unsaturated (triple bond, alkyne).\n\n**Option-wise Analysis:** All other combinations include wrong statement 2.\n\n**DRDO Relevance:** Hydrocarbons are studied for fuels and polymers in defence materials."
+        },
+        {
+          "id": "GS08",
+          "direction": null,
+          "text": "______ compound has –OH as a functional group.",
+          "options": [
+            "Carboxylic acid",
+            "Ethanoic acid",
+            "Acetic acid",
+            "Alcohol"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Alcohol)\n\n**Detailed Explanation:**\nAlcohols have –OH (hydroxyl) group bonded to carbon (R-OH). Example: Ethanol.\n\n**Option-wise Analysis:**\n• A, B, C all have –COOH group.\n\n**DRDO Relevance:** Alcohols are used as fuels and solvents in defence labs."
+        },
+        {
+          "id": "GS10",
+          "direction": null,
+          "text": "A car of mass m accelerates uniformly from rest under a constant force F. After traveling a distance d, what is the kinetic energy of the car?",
+          "options": [
+            "$$\\frac{F \\times d}{2}$$",
+            "$$F \\times d$$",
+            "$$2 \\times F \\times d$$",
+            "$$\\frac{F \\times d}{m}$$"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (F × d)\n\n**Detailed Explanation:**\nBy Work-Energy Theorem: Work done = Change in KE.\nInitial KE = 0 → Final KE = W = F × d (θ = 0°).\n\n**Formula (KaTeX):** $$W = F \\times d \\times \\cos 0^\\circ = F \\times d$$\n\n**Option-wise Analysis:**\n• A is wrong (no 1/2 factor here).\n• C & D violate the theorem.\n\n**DRDO Relevance:** Applied in vehicle dynamics and projectile motion studies."
+        },
+        {
+          "id": "GS11",
+          "direction": null,
+          "text": "'Alum' is an example of:",
+          "options": [
+            "Flake salt",
+            "Table salt",
+            "Single salt",
+            "Double salt"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Double salt)\n\n**Detailed Explanation:**\nAlum (K₂SO₄·Al₂(SO₄)₃·24H₂O) is a double salt (potash alum).\n\n**Option-wise Analysis:** Others are single salts or forms of NaCl.\n\n**DRDO Relevance:** Used in water purification for defence camps."
+        },
+        {
+          "id": "GS12",
+          "direction": null,
+          "text": "Which statement is NOT true for magnetic field lines?",
+          "options": [
+            "The relative strength of the magnetic field is shown by the degree of closeness of the field lines.",
+            "No two field lines are found to cross each other.",
+            "Inside the magnet, the direction of field lines is from its south pole to its north pole.",
+            "Magnetic field lines are not closed curves."
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Magnetic field lines are not closed curves.)\n\n**Detailed Explanation:**\nMagnetic field lines are **always closed curves** (outside N to S, inside S to N).\n\n**Option-wise Analysis:** A, B, C are true.\n\n**DRDO Relevance:** Used in designing electromagnetic shields and MRI in defence medical tech."
+        },
+        {
+          "id": "GS13",
+          "direction": null,
+          "text": "If a person moves a trolley for a distance of 10 m with a force of 50 N, then the work done is:",
+          "options": [
+            "0.2 J",
+            "5 J",
+            "20 J",
+            "500 J"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (500 J)\n\n**Detailed Explanation:**\nW = F × d × cos0° = 50 × 10 = **500 J**.\n\n**DRDO Relevance:** Basic work-energy concept for mechanical systems."
+        },
+        {
+          "id": "GS17",
+          "direction": null,
+          "text": "What was the unknown element under aluminium called?",
+          "options": [
+            "Neo-Aluminium",
+            "Proto-Aluminium",
+            "Eka-Aluminium",
+            "Meta-Aluminium"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Eka-Aluminium)\n\n**Detailed Explanation:**\nMendeleev predicted Gallium as Eka-Aluminium (below Al in periodic table).\n\n**DRDO Relevance:** Periodic table knowledge is foundational for materials science in defence alloys."
+        },
+        {
+          "id": "GS18",
+          "direction": null,
+          "text": "Which of the following laboratory safety equipments is used to extinguish small fires?",
+          "options": [
+            "Laboratory",
+            "Blanket",
+            "Safety goggles",
+            "Fire extinguisher"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Fire extinguisher)\n\n**Detailed Explanation:**\nCO₂ or dry powder extinguishers are standard in labs.\n\n**Option-wise Analysis:** Others are not for fire extinguishing.\n\n**DRDO Relevance:** Lab safety is mandatory in chemical defence research."
+        },
+        {
+          "id": "GS19",
+          "direction": null,
+          "text": "Which of the following is an example of animal hormones?\nI. Adrenalin\nII. Testosterone",
+          "options": [
+            "Only II",
+            "Only I",
+            "Neither I nor II",
+            "Both I and II"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Both I and II)\n\n**Detailed Explanation:**\nAdrenalin (fight-or-flight) and Testosterone (male sex hormone) are animal hormones.\n\n**DRDO Relevance:** Endocrinology knowledge for bio-defence and medical research."
+        },
+        {
+          "id": "GS20",
+          "direction": null,
+          "text": "Which of the following has disinfectant properties? A. Amphoteric surfactant B. Evaporative cleaner C. Cationic detergent",
+          "options": [
+            "Only C",
+            "A and B",
+            "Only A",
+            "A and C"
+          ],
+          "correctIndex": 0,
+          "solution": "**Correct Answer: A** (Only C)\n\n**Detailed Explanation:**\nCationic detergents (quats) destroy microbial membranes.\n\n**DRDO Relevance:** Used in sterilization of defence equipment."
+        },
+        {
+          "id": "GS21",
+          "direction": null,
+          "text": "Which of the following modern physicist closely examined Newtonian mechanics' foundations?",
+          "options": [
+            "James Clerk Maxwell",
+            "Ernst Mach",
+            "Galileo Galilei",
+            "Albert Einstein"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Albert Einstein)\n\n**Detailed Explanation:**\nEinstein’s relativity challenged Newton’s absolute space/time.\n\n**DRDO Relevance:** Relativity is used in GPS and missile guidance."
+        },
+        {
+          "id": "GS22",
+          "direction": null,
+          "text": "A sound wave with a period of 0.01 seconds has a frequency of:",
+          "options": [
+            "1000 Hz",
+            "10 Hz",
+            "0.1 Hz",
+            "100 Hz"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (100 Hz)\n\n**Detailed Explanation:**\nf = 1/T = 1/0.01 = **100 Hz**.\n\n**DRDO Relevance:** Sonar frequency calculations."
+        },
+        {
+          "id": "GS23",
+          "direction": null,
+          "text": "Which of the following is CORRECT regarding Ohm's law?",
+          "options": [
+            "R = V",
+            "V ∝ I",
+            "R ∝ I",
+            "V = I"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (V ∝ I)\n\n**Detailed Explanation:**\nV = IR (constant R and temperature).\n\n**DRDO Relevance:** Circuit design in electronics."
+        },
+        {
+          "id": "GS24",
+          "direction": null,
+          "text": "______ are those errors that tend to be in one direction, either positive or negative.",
+          "options": [
+            "Random error",
+            "Systematic error",
+            "Instrumental error",
+            "Personal error"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (Systematic error)\n\n**Detailed Explanation:**\nSystematic errors are consistent and do not cancel on averaging.\n\n**DRDO Relevance:** Accuracy in precision instruments."
+        },
+        {
+          "id": "GS25",
+          "direction": null,
+          "text": "In 1995, physicists Eric Cornell and Carl Wieman created the first Bose-Einstein condensate (BEC) using which isotope?",
+          "options": [
+            "Caesium-133",
+            "Thorium-232",
+            "Rubidium-87",
+            "Sodium-23"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Rubidium-87)\n\n**Detailed Explanation:**\nFirst BEC achieved with Rb-87 at JILA (Nobel 2001).\n\n**DRDO Relevance:** Quantum technologies in defence."
+        },
+        {
+          "id": "GS26",
+          "direction": null,
+          "text": "An alloy with ______ in it is referred to as 'amalgam'.",
+          "options": [
+            "nickel",
+            "silver",
+            "mercury",
+            "cobalt"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (mercury)\n\n**Detailed Explanation:**\nAmalgam = alloy containing mercury (e.g., dental amalgam).\n\n**DRDO Relevance:** Alloys in metallurgy."
+        },
+        {
+          "id": "GS28",
+          "direction": null,
+          "text": "The potential difference between the terminals of an electric heater is 60 V when it draws a current of 4 A from the source. What current will the heater draw if the potential difference is changed to 127.5 V?",
+          "options": [
+            "8.5 A",
+            "24 A",
+            "10 A",
+            "12 A"
+          ],
+          "correctIndex": 0,
+          "solution": "**Correct Answer: A** (8.5 A)\n\n**Detailed Explanation:**\nR = 60/4 = 15 Ω → I = 127.5/15 = **8.5 A**.\n\n**DRDO Relevance:** Electrical heating in defence equipment."
+        },
+        {
+          "id": "GS29",
+          "direction": null,
+          "text": "Element X forms an oxide with the formula X₂O₃. The element X would most likely be in the same group of the periodic table as ______",
+          "options": [
+            "magnesium",
+            "silicon",
+            "aluminium",
+            "sodium"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (aluminium)\n\n**Detailed Explanation:**\n+3 oxidation state → Group 13 (Al forms Al₂O₃).\n\n**DRDO Relevance:** Periodic trends for alloy design."
+        },
+        {
+          "id": "GS30",
+          "direction": null,
+          "text": "What is the work done when a constant force of 20 N is applied at an angle of 30° to the direction of displacement of 13 m?",
+          "options": [
+            "390 Joules",
+            "225 Joules",
+            "260 Joules",
+            "185 Joules"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (225 Joules)\n\n**Detailed Explanation:**\nW = F d cos30° = 20 × 13 × (√3/2) ≈ **225 J**.\n\n**Formula:** $$W = F \\times d \\times \\cos 30^\\circ$$\n\n**DRDO Relevance:** Mechanics in weapon systems."
+        },
+        {
+          "id": "GS31",
+          "direction": null,
+          "text": "The enzyme ............ present in the pancreatic juice, converts proteins to amino acids.",
+          "options": [
+            "Pepsin",
+            "Lipase",
+            "Trypsin",
+            "Amylase"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Trypsin)\n\n**Detailed Explanation:**\nTrypsin (activated from trypsinogen) breaks proteins in alkaline medium.\n\n**DRDO Relevance:** Biochemistry in bio-defence."
+        },
+        {
+          "id": "GS33",
+          "direction": null,
+          "text": "What is Karst topography primarily associated with?",
+          "options": [
+            "Groundwater action in limestone or dolomite regions",
+            "River meandering in alluvial plains",
+            "Glacial deposition in polar regions",
+            "Wind erosion in arid deserts"
+          ],
+          "correctIndex": 0,
+          "solution": "**Correct Answer: A** (Groundwater action in limestone or dolomite regions)\n\n**Detailed Explanation:**\nKarst forms by dissolution of CaCO₃ (sinkholes, caves).\n\n**DRDO Relevance:** Geomorphology for underground defence structures."
+        },
+        {
+          "id": "GS34",
+          "direction": null,
+          "text": "Which of the following inert gases is placed in period 4 of the periodic table?",
+          "options": [
+            "Kr",
+            "Rn",
+            "Xe",
+            "Ar"
+          ],
+          "correctIndex": 0,
+          "solution": "**Correct Answer: A** (Kr)\n\n**Detailed Explanation:**\nKrypton (atomic no. 36, period 4).\n\n**DRDO Relevance:** Noble gases in lighting and lasers."
+        },
+        {
+          "id": "GS35",
+          "direction": null,
+          "text": "Plants in the ............ group are commonly called algae.",
+          "options": [
+            "Bryophyta",
+            "Thallophyta",
+            "Gymnosperms",
+            "Pteridophyta"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (Thallophyta)\n\n**Detailed Explanation:**\nThallophyta (algae) – simple, aquatic, thallus body.\n\n**DRDO Relevance:** Biofuel research."
+        },
+        {
+          "id": "GS38",
+          "direction": null,
+          "text": "Calcium sulfate hemihydrate is also known as:",
+          "options": [
+            "Baking powder",
+            "Baking soda",
+            "Washing soda",
+            "Plaster of Paris"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Plaster of Paris)\n\n**Detailed Explanation:**\nCaSO₄·½H₂O (POP) – sets with water.\n\n**DRDO Relevance:** Moulding and medical casts."
+        },
+        {
+          "id": "GS39",
+          "direction": null,
+          "text": "A compound has an empirical formula CH₂ and a molar mass of 56 g/mol. Its molecular formula is:",
+          "options": [
+            "C₂H₄",
+            "C₃H₆",
+            "CH₂",
+            "C₄H₈"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (C₄H₈)\n\n**Detailed Explanation:**\nEmpirical mass = 14 → n = 56/14 = 4 → (CH₂)₄ = C₄H₈.\n\n**DRDO Relevance:** Organic chemistry in polymers."
+        },
+        {
+          "id": "GS40",
+          "direction": null,
+          "text": "Which of the following correctly represents the chronological order of human development during gestation?",
+          "options": [
+            "Embryo Zygote Fetus",
+            "Fetus Embryo Zygote",
+            "Zygote Embryo Fetus",
+            "Zygote Fetus Embryo"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Zygote → Embryo → Fetus)\n\n**Detailed Explanation:**\nFertilization → Zygote → Embryo (8 weeks) → Fetus (till birth).\n\n**DRDO Relevance:** Embryology in biotech."
+        },
+        {
+          "id": "GS42",
+          "direction": null,
+          "text": "For the case of a curved mirror, the pole, centre of curvature and the principal focus are connected by the:",
+          "options": [
+            "lens axis",
+            "principal axis",
+            "radius of curvature",
+            "mirror axis"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (principal axis)\n\n**Detailed Explanation:**\nAll lie on the principal axis.\n\n**DRDO Relevance:** Optics in laser weapons."
+        }
+      ]
+    },
+    {
+      "name": "General Awareness",
+      "timeLimit": 40,
+      "questions": [
+        {
+          "id": "GA03",
+          "direction": null,
+          "text": "Emperor Perumbidugu Mutharaiyar II belonged to which dynasty?",
+          "options": [
+            "Pallava",
+            "Chola",
+            "Pandya",
+            "Mutharaiyar"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Mutharaiyar)\n\n**Detailed Explanation:**\nMutharaiyar dynasty (7th-9th century CE) ruled central Tamil Nadu.\n\n**Option-wise Analysis:** Others are contemporary but different dynasties.\n\n**DRDO Relevance:** Indian history for general awareness."
+        },
+        {
+          "id": "GA09",
+          "direction": null,
+          "text": "Which of the following is correct regarding M2?",
+          "options": [
+            "M2 = Currency with the public (notes and coins) + Demand deposits + Other deposits with the Reserve Bank of India.",
+            "M2 = M3 + Total deposits with Post Office Savings Organization (excluding National Savings Certificates)",
+            "M2 = M1 + Time deposits of all commercial banks and cooperative banks (excluding inter-bank time deposits)",
+            "M2 = M1 + Post Office savings deposits"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (M2 = M1 + Post Office savings deposits)\n\n**Detailed Explanation:**\nM2 is narrow money + Post Office savings.\n\n**DRDO Relevance:** Economy for defence budget awareness."
+        },
+        {
+          "id": "GA14",
+          "direction": null,
+          "text": "What is the primary purpose of pedigree analysis in the context of genetics?",
+          "options": [
+            "To measure the physical traits of individuals in a population",
+            "To track the inheritance of specific traits across generations within a family",
+            "To analyse the nutritional requirements of different organisms",
+            "To study the ecological interactions between species in an environment"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (To track the inheritance of specific traits across generations within a family)\n\n**Detailed Explanation:**\nPedigree charts trace genetic disorders.\n\n**DRDO Relevance:** Genetics in bio-warfare research."
+        },
+        {
+          "id": "GA15",
+          "direction": null,
+          "text": "India is a member of which of the following groups?\n1. G-20\n2. BRICS\n3. OECD\n4. SCO",
+          "options": [
+            "1, 2 and 3 only",
+            "1, 2 and 4 only",
+            "2, 3 and 4 only",
+            "1, 2, 3 and 4"
+          ],
+          "correctIndex": 1,
+          "solution": "**Correct Answer: B** (1, 2 and 4 only)\n\n**Detailed Explanation:**\nIndia is member of G-20, BRICS, SCO but **not** OECD.\n\n**DRDO Relevance:** International relations."
+        },
+        {
+          "id": "GA16",
+          "direction": null,
+          "text": "Which of the following industries was NOT included in Schedule A of the Industrial Policy Resolution, 1956?",
+          "options": [
+            "Atomic Energy",
+            "Aircraft",
+            "Fertiliser",
+            "Ship Building"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Fertiliser)\n\n**Detailed Explanation:**\nFertiliser was in Schedule B (joint sector).\n\n**DRDO Relevance:** Industrial policy for self-reliance."
+        },
+        {
+          "id": "GA27",
+          "direction": null,
+          "text": "Which secret society founded by Vinayak Damodar Savarkar promoted armed revolution against the British rule?",
+          "options": [
+            "Abhinav Bharat",
+            "Anushilan Samiti",
+            "Hindustan Socialist Republican Association",
+            "Ghadar Party"
+          ],
+          "correctIndex": 0,
+          "solution": "**Correct Answer: A** (Abhinav Bharat)\n\n**Detailed Explanation:**\nFounded 1904 in Nashik.\n\n**DRDO Relevance:** Freedom struggle history."
+        },
+        {
+          "id": "GA32",
+          "direction": null,
+          "text": "Which Article of the Indian Constitution was amended by the 106th Constitutional Amendment Act to provide for women's reservation in the Legislative Assembly of Delhi?",
+          "options": [
+            "Article 330A",
+            "Article 243D",
+            "Article 239AA",
+            "Article 332A"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Article 239AA)\n\n**Detailed Explanation:**\nNew clause inserted for Delhi Assembly reservation.\n\n**DRDO Relevance:** Polity awareness."
+        },
+        {
+          "id": "GA36",
+          "direction": null,
+          "text": "Which of the following instruments is primarily used by the RBI for monetary policy implementation in the post 1991 reform era?",
+          "options": [
+            "Repo rate",
+            "Export incentives",
+            "Tariff rates",
+            "Direct taxes"
+          ],
+          "correctIndex": 0,
+          "solution": "**Correct Answer: A** (Repo rate)\n\n**Detailed Explanation:**\nRepo rate under Liquidity Adjustment Facility.\n\n**DRDO Relevance:** Economic stability for defence funding."
+        },
+        {
+          "id": "GA37",
+          "direction": null,
+          "text": "Education is now placed under which list after the 42nd Amendment?",
+          "options": [
+            "Union List",
+            "State List",
+            "Concurrent List",
+            "Judicial List"
+          ],
+          "correctIndex": 2,
+          "solution": "**Correct Answer: C** (Concurrent List)\n\n**Detailed Explanation:**\nShifted by 42nd Amendment (1976).\n\n**DRDO Relevance:** Education policy."
+        },
+        {
+          "id": "GA41",
+          "direction": null,
+          "text": "As per the Calcutta High Court (Extension of Jurisdiction) Act, 1953, the jurisdiction of the Calcutta High Court was extended to cover which of the following areas?",
+          "options": [
+            "The state of Sikkim",
+            "Dadra and Nagar Haveli, and Daman and Diu",
+            "Union Territory Lakshadweep and Puducherry",
+            "Chandannagar, and Andaman and Nicobar Islands"
+          ],
+          "correctIndex": 3,
+          "solution": "**Correct Answer: D** (Chandannagar, and Andaman and Nicobar Islands)\n\n**Detailed Explanation:**\nExtended to UTs and former French territory.\n\n**DRDO Relevance:** Legal framework."
+        }
+      ]
+    }
+  ]
+}
