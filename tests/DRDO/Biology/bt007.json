@@ -1,0 +1,126 @@
+{
+  "title": "Biology Test 7 #bt007",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Which one of the following is a useful functional association between fungi and the roots of higher plants?",
+      "options": ["Biofertilizer", "Coralloid root", "Lichens", "Mycorrhiza"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Mycorrhiza (D)**\n\nMycorrhiza is a mutualistic symbiotic association between fungi (mostly Glomeromycota) and plant roots, where fungi enhance nutrient (especially phosphorus) and water uptake via extensive hyphal networks, while receiving carbohydrates from the plant. Over 80% of terrestrial plants form this association. DRDO CEPTAM-11 relevance: critical for biofertilizer development in defence agriculture (sustainable farming in border/high-altitude areas like Ladakh/Siachen), soil remediation at testing ranges, and biomimicry for advanced water/nutrient delivery systems in arid military operations.\n\n**Option-wise Analysis:**\n• **Biofertilizer (A):** Broad term (includes Rhizobium/Azolla); mycorrhiza is a specific type.\n• **Coralloid root (B):** Cycas-specific algal symbiosis (nitrogen fixation).\n• **Lichens (C):** Fungus-alga symbiosis on rocks/bark, not root association."
+    },
+    {
+      "text": "Nitrogen fixing bacteria present in the nodules of the root of leguminous plant are",
+      "options": ["Symbiotic", "Protolytic", "Saprophytic", "Parasitic"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Symbiotic (A)**\n\nRhizobium (and Bradyrhizobium) bacteria form symbiotic nodules on legume roots (e.g., pea, soybean), fixing atmospheric N₂ into ammonia via nitrogenase enzyme in exchange for plant sugars. This reduces chemical fertilizer use by 50-100 kg/ha. DRDO context: vital for low-input sustainable agriculture in remote defence farms, bio-remediation of nitrogen-deficient soils at firing ranges, and soldier nutrition security (protein-rich pulses).\n\n**Option-wise Analysis:**\n• **Protolytic (B):** Protein-degrading bacteria (e.g., in soil decomposition).\n• **Saprophytic (C):** Free-living decomposers (no symbiosis).\n• **Parasitic (D):** Harmful to host (e.g., pathogens)."
+    },
+    {
+      "text": "Peanut plant is",
+      "options": ["Herb", "Flower", "Bush", "None of these"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Herb (A)**\n\nPeanut (Arachis hypogaea) is an annual herbaceous legume (Fabaceae) with geocarpic fruit development (pegs bury into soil). DRDO relevance: high-protein oilseed crop for soldier rations (energy-dense, shelf-stable), soil nitrogen enrichment in rotation farming, and oil for defence lubricants/biodiesel research.\n\n**Option-wise Analysis:**\n• **Flower (B):** Reproductive part, not plant type.\n• **Bush (C):** Woody perennial growth form.\n• **None of these (D):** Incorrect; it fits herb category."
+    },
+    {
+      "text": "Stem cutting is done generally to grow",
+      "options": ["Banana", "Sugarcane", "Mango", "Cotton"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Sugarcane (B)**\n\nSugarcane (Saccharum officinarum) is propagated vegetatively by stem cuttings (setts) containing 2-3 nodes, ensuring clonal uniformity and rapid multiplication. DRDO applications: bioethanol production for defence fuel (green energy for vehicles), fibre for camouflage netting, and sustainable farming in tropical border regions.\n\n**Option-wise Analysis:**\n• **Banana (A):** Suckers/rhizome propagation.\n• **Mango (C):** Grafting/air-layering.\n• **Cotton (D):** Seeds."
+    },
+    {
+      "text": "Clove is a",
+      "options": ["Buds of stem", "Bales of root", "Closed buds", "Seed"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Closed buds (C)**\n\nClove (Syzygium aromaticum) is the dried unopened flower bud (clove bud) rich in eugenol (essential oil). DRDO uses: natural analgesic/antiseptic in soldier first-aid kits, flavouring in rations, and eugenol-based mosquito repellents for vector control in field deployments.\n\n**Option-wise Analysis:**\n• **Buds of stem (A):** Incorrect (floral, not stem).\n• **Bales of root (B):** No relation.\n• **Seed (D):** Cloves are not seeds."
+    },
+    {
+      "text": "Which one of the following spices is a flower bud?",
+      "options": ["Cumin", "Clove", "Pepper", "Turmeric"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Clove (B)**\n\nClove is harvested as unopened flower buds. Cumin (seed), pepper (fruit/berry), turmeric (rhizome). DRDO context: spice preservation techniques for long-shelf-life military rations and eugenol extraction for pharmaceutical/biotech applications in defence hospitals.\n\n**Option-wise Analysis:**\n• **Cumin (A):** Seed.\n• **Pepper (C):** Dried fruit.\n• **Turmeric (D):** Rhizome (stem)."
+    },
+    {
+      "text": "‘Cloves’ are",
+      "options": ["Nodules of stem", "Nodules of roots", "Leaves", "Dried flowers"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Dried flowers (D)**\n\nCloves are dried flower buds (not fully opened flowers). DRDO relevance: eugenol-rich oil for pain relief in combat medicine and natural preservative in packaged foods for troops.\n\n**Option-wise Analysis:**\n• **Nodules (A,B):** Incorrect (no nodules).\n• **Leaves (C):** Clove leaves yield oil but spice is buds."
+    },
+    {
+      "text": "Cloves are obtained from which of the following parts of the plant?",
+      "options": ["Dried leaves", "Dried stems", "Dried seeds", "Dried flower buds"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Dried flower buds (D)**\n\nUnopened flower buds of Syzygium aromaticum are sun-dried to form commercial cloves. DRDO uses: antimicrobial properties in wound dressings and flavour masking in emergency rations.\n\n**Option-wise Analysis:**\n• Others are not the commercial part."
+    },
+    {
+      "text": "Which of the following is not correctly matched?",
+      "options": ["Ginger - Rhizome", "Saffron - Seed", "Opium - Opium capsule", "Jute - Stem"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Saffron - Seed (B)**\n\nSaffron is dried stigmas (style) of Crocus sativus flower, not seed. Others correct. DRDO context: saffron cultivation trials in high-altitude Ladakh for soldier nutrition (antioxidant-rich) and economic botany research.\n\n**Option-wise Analysis:**\n• Ginger rhizome (A), opium capsule latex (C), jute stem fibre (D): correct."
+    },
+    {
+      "text": "Saffron is dried mixture of",
+      "options": ["Leaf and stem", "Petals and roots", "Seed forming parts of flower", "Seeds and buds"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Seed forming parts of flower (C)**\n\nSaffron comprises dried red stigmas + styles (female reproductive parts). World's costliest spice. DRDO relevance: anti-depressant/immune booster for high-altitude troops and potential in radiation protection research.\n\n**Option-wise Analysis:**\n• Others incorrect."
+    },
+    {
+      "text": "In the following pairs of plants and their edible parts, which pair is not correctly matched?",
+      "options": ["Ginger - Rhizome", "Onion - Fleshy leaves", "Potato - Roots", "Coconut - Endosperm"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Potato - Roots (C)**\n\nPotato is stem tuber; sweet potato is root. DRDO context: potato storage/processing for defence rations (high-calorie, long-shelf-life). Tests precise organ modification knowledge.\n\n**Option-wise Analysis:**\n• Ginger rhizome (A), onion bulb leaves (B), coconut endosperm (D): correct."
+    },
+    {
+      "text": "Which of the following parts of potato is edible?",
+      "options": ["Stem", "Seed", "Root", "Fruit"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Stem (A)**\n\nEdible potato tuber is modified underground stem (with buds/eyes). DRDO relevance: vegetative propagation for rapid multiplication in forward-area farms.\n\n**Option-wise Analysis:**\n• Others not edible."
+    },
+    {
+      "text": "Which one of the following is a fruit?",
+      "options": ["Potato", "Radish", "Lady finger", "Sweet potato"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Lady finger (C)**\n\nLady finger (okra, Abelmoschus esculentus) is a capsule fruit. Potato/radish/sweet potato: underground storage organs (not fruits). DRDO context: vegetable crops for nutritional security in military canteens.\n\n**Option-wise Analysis:**\n• Potato (A): stem tuber; Radish/Sweet potato (B,D): roots."
+    },
+    {
+      "text": "A plant bud is",
+      "options": ["An embryonic shoot", "An embryonic leaf", "An endosperm", "A seed"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: An embryonic shoot (A)**\n\nBud contains meristematic tissue (embryonic shoot) for new growth. DRDO relevance: understanding dormancy in high-altitude crops and tissue culture for rapid propagation.\n\n**Option-wise Analysis:**\n• Embryonic leaf (B): not bud definition."
+    },
+    {
+      "text": "Cork is obtained from which of the following plant?",
+      "options": ["Dalbergia", "Cedrus", "Quercus", "Argemone"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Quercus (C)**\n\nCork from Quercus suber (cork oak) bark phellem layer (suberin-rich). DRDO uses: insulation in helmets/vehicles, buoyancy in naval equipment, and eco-friendly packaging.\n\n**Option-wise Analysis:**\n• Dalbergia (A): rosewood; Cedrus (B): cedar wood; Argemone (D): poppy."
+    },
+    {
+      "text": "The characteristic odour of garlic is due to",
+      "options": ["A chloro compound", "A sulphur compound", "A fluorine compound", "Acetic acid"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: A sulphur compound (B)**\n\nAllicin (organosulphur) from alliin via alliinase enzyme. DRDO relevance: natural antibiotic/antifungal for soldier wound care and flavouring in rations.\n\n**Option-wise Analysis:**\n• Others unrelated to garlic."
+    },
+    {
+      "text": "Peeling of onions causes tears as onions release",
+      "options": ["Sulphonic acid", "Sulfenic acid", "Amino acid", "Carbolic acid"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Sulfenic acid (B)**\n\nCuts release alliinase forming syn-propanethial-S-oxide (lachrymatory factor from sulfenic acid). DRDO context: chemical irritant studies and tear gas research.\n\n**Option-wise Analysis:**\n• Sulphonic (A): different; Carbolic (D): phenol."
+    },
+    {
+      "text": "Pungency in chillies is due to the presence of",
+      "options": ["Lycopene", "Capsaicin", "Carotene", "Anthocyanin"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Capsaicin (B)**\n\nCapsaicin (alkaloid) in placenta binds TRPV1 receptors causing heat sensation. DRDO uses: capsaicin-based non-lethal sprays for crowd control and pain management creams.\n\n**Option-wise Analysis:**\n• Lycopene/Carotene (A,C): pigments; Anthocyanin (D): colour."
+    },
+    {
+      "text": "Red chillies are hot because these contain",
+      "options": ["Ricin", "Capsaicin", "Arecoline", "Caffeol"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Capsaicin (B)**\n\nSame as above; Scoville scale measures heat. DRDO relevance: defence-grade irritants and topical analgesics for troops.\n\n**Option-wise Analysis:**\n• Ricin (A): castor toxin; Arecoline (C): betel nut."
+    },
+    {
+      "text": "At which stage in its life cycle, does the silkworm yield the fibre of commerce?",
+      "options": ["Egg", "Larva", "Pupa", "Imago"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Pupa (C)**\n\nSilk fibre from Bombyx mori cocoon (pupal stage). DRDO context: sericulture for parachute silk, surgical sutures, and bullet-proof vest composites.\n\n**Option-wise Analysis:**\n• Larva (B): feeds; Imago (D): adult moth."
+    }
+  ]
+}
