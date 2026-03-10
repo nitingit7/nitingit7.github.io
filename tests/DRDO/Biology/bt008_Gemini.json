@@ -1,0 +1,246 @@
+{
+  "title": "Biology Test 8 (bt008)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Silkworm grows on",
+      "options": [
+        "Reetha leaves",
+        "Ficus leaves",
+        "Peach leaves",
+        "Mulberry leaves"
+      ],
+      "correctIndex": 3,
+      "solution": "The correct answer is Mulberry leaves. \n\n**Explanation:**\n*   **Mulberry leaves:** The commercial silkworm (Bombyx mori) feeds almost exclusively on the leaves of the mulberry tree. This dietary preference is crucial for producing high-quality silk.\n*   **Other options:** Reetha is known for soapnuts, Ficus species host different types of insects (like the lac insect, though some wild silk varieties use them), and peach leaves are not a primary host for silk-producing caterpillars."
+    },
+    {
+      "id": 2,
+      "text": "Quinine which is a major drug for malaria is obtained from",
+      "options": [
+        "Angiosperm",
+        "Bacteria",
+        "Yeast",
+        "Algae"
+      ],
+      "correctIndex": 0,
+      "solution": "The correct answer is Angiosperm. \n\n**Explanation:**\n*   **Angiosperm:** Quinine is derived from the Cinchona tree. Trees that produce flowers and bear their seeds enclosed within a fruit are classified as angiosperms.\n*   **Other options:** Bacteria are microscopic prokaryotes, yeast is a type of fungus, and algae are simple, mostly aquatic photosynthetic organisms. None of these produce quinine."
+    },
+    {
+      "id": 3,
+      "text": "Quinine, the effective medicine in the treatment of malaria, is extracted from",
+      "options": [
+        "Bark of Cinnamon",
+        "Bark of Cinchona",
+        "Leaves of Ocimum",
+        "Bark of Acacia Catechu"
+      ],
+      "correctIndex": 1,
+      "solution": "The correct answer is Bark of Cinchona. \n\n**Explanation:**\n*   **Bark of Cinchona:** Quinine is a bitter alkaloid naturally extracted from the bark of the Cinchona tree, native to the Andean forests of South America.\n*   **Other options:** Cinnamon bark is used as a spice. Ocimum (Holy Basil/Tulsi) leaves are used for general immunity and respiratory ailments. Acacia catechu bark is used for digestive issues and as a food additive (kattha)."
+    },
+    {
+      "id": 4,
+      "text": "Quinine, used to treat malaria is obtained from which plant's part?",
+      "options": [
+        "Leaf",
+        "Root",
+        "Bark",
+        "Flower"
+      ],
+      "correctIndex": 2,
+      "solution": "The correct answer is Bark. \n\n**Explanation:**\n*   The medicinal alkaloids responsible for the anti-malarial properties of the Cinchona tree are heavily concentrated in its bark, rather than its leaves, roots, or flowers."
+    },
+    {
+      "id": 5,
+      "text": "In which part of the cinchona plant quinine occurs naturally?",
+      "options": [
+        "Root",
+        "Fruit",
+        "Seed",
+        "Bark"
+      ],
+      "correctIndex": 3,
+      "solution": "The correct answer is Bark. \n\n**Explanation:**\n*   As established in previous questions, the protective bark of the Cinchona plant is where the quinine compound accumulates. Historically, this bark was harvested, dried, and ground into powder to treat fever and malaria."
+    },
+    {
+      "id": 6,
+      "text": "The Arteether medicine which is used to cure malaria is obtained from a",
+      "options": [
+        "Seeded plant",
+        "Fungus",
+        "Bacteria",
+        "Algae"
+      ],
+      "correctIndex": 0,
+      "solution": "The correct answer is Seeded plant. \n\n**Explanation:**\n*   **Seeded plant:** Arteether is a semi-synthetic derivative of artemisinin, which is extracted from the sweet wormwood plant (Artemisia annua). Since it is a highly evolved flowering plant, it is a seeded plant.\n*   **Other options:** Fungi, bacteria, and algae do not produce the artemisinin compound necessary to synthesize arteether."
+    },
+    {
+      "id": 7,
+      "text": "The drug obtained from the bark of cinchona was used for treating malaria. The synthetic drug which replaced the natural product is",
+      "options": [
+        "Chloromycetin",
+        "Chloroquine",
+        "Tetracycline",
+        "Ampicillin"
+      ],
+      "correctIndex": 1,
+      "solution": "The correct answer is Chloroquine. \n\n**Explanation:**\n*   **Chloroquine:** Because natural quinine was expensive and its supply was sometimes limited, scientists developed synthetic alternatives. Chloroquine became the most famous and widely used synthetic anti-malarial drug.\n*   **Other options:** Chloromycetin (chloramphenicol), Tetracycline, and Ampicillin are all broad-spectrum antibiotics used for bacterial infections, not for parasitic infections like malaria."
+    },
+    {
+      "id": 8,
+      "text": "Which one of the following groups of organisms has significant in diagnosing the death by drowning?",
+      "options": [
+        "Lichens",
+        "Protozoa",
+        "Cyanobacteria",
+        "Diatoms"
+      ],
+      "correctIndex": 3,
+      "solution": "The correct answer is Diatoms. \n\n**Explanation:**\n*   **Diatoms:** These are microscopic, single-celled algae with silica shells found in almost all aquatic environments. In forensic science, a \"diatom test\" is used to confirm death by drowning. If a person drowns, they inhale water containing diatoms, which then circulate through the bloodstream and lodge in internal organs like the bone marrow.\n*   **Other options:** Lichens (symbiotic organisms), Protozoa, and Cyanobacteria are not typically used as forensic markers for drowning."
+    },
+    {
+      "id": 9,
+      "text": "The mulberry fruit is",
+      "options": [
+        "Sorosis",
+        "Syconus",
+        "Samara",
+        "Nut"
+      ],
+      "correctIndex": 0,
+      "solution": "The correct answer is Sorosis. \n\n**Explanation:**\n*   **Sorosis:** This is a type of multiple fruit that develops from the ovaries of an entire inflorescence (a cluster of flowers), like a mulberry or a pineapple.\n*   **Other options:** A Syconus is the fruit of a fig. A Samara is a winged achene (like maple or ash tree seeds). A Nut is a hard-shelled dry fruit."
+    },
+    {
+      "id": 10,
+      "text": "Which one of the following fibre is not a product of plant stem?",
+      "options": [
+        "Flax",
+        "Hemp",
+        "Jute",
+        "Cotton"
+      ],
+      "correctIndex": 3,
+      "solution": "The correct answer is Cotton. \n\n**Explanation:**\n*   **Cotton:** Cotton is a \"seed-hair\" fiber. It grows in a protective case (boll) around the seeds of the cotton plant.\n*   **Other options:** Flax, hemp, and jute are all \"bast fibers,\" meaning they are collected from the inner bark (phloem) or stem of their respective plants."
+    },
+    {
+      "id": 11,
+      "text": "Leg-haemoglobin is found in",
+      "options": [
+        "Human blood",
+        "Rabbit blood",
+        "Legume root nodules",
+        "Chicken blood"
+      ],
+      "correctIndex": 2,
+      "solution": "The correct answer is Legume root nodules. \n\n**Explanation:**\n*   **Legume root nodules:** Leghemoglobin (or leg-haemoglobin) is an oxygen-carrying phytoglobin found in the nitrogen-fixing root nodules of leguminous plants. Its function is to scavenge oxygen so it doesn't inhibit the nitrogenase enzyme, which is extremely sensitive to oxygen.\n*   **Other options:** Human, rabbit, and chicken blood contain standard hemoglobin, not leg-haemoglobin."
+    },
+    {
+      "id": 12,
+      "text": "Which one of the following is a man-made cereal, not found in nature?",
+      "options": [
+        "Dwarf wheat",
+        "Hybrid maize",
+        "Triticale",
+        "Soyabean"
+      ],
+      "correctIndex": 2,
+      "solution": "The correct answer is Triticale. \n\n**Explanation:**\n*   **Triticale:** This is an artificially bred cereal created by crossing wheat (Triticum) and rye (Secale). It was developed to combine the high yield and quality of wheat with the disease and environmental tolerance of rye.\n*   **Other options:** Dwarf wheat and hybrid maize are products of selective breeding but originated from natural cereals. Soybean is a naturally occurring legume."
+    },
+    {
+      "id": 13,
+      "text": "Canola refers to a special type of oilseed mustard varieties breed for human consumption. The main characteristic of these varieties is that the",
+      "options": [
+        "Seeds have very high oil content",
+        "Oil is rich in unsaturated fatty acid",
+        "Oil has long shelf-life",
+        "Oil has very low uric acid content"
+      ],
+      "correctIndex": 3,
+      "solution": "The correct answer is Oil has very low uric acid content. \n\n**Explanation:**\n*   Standard rapeseed oil contains high levels of erucic acid (often contextually substituted as uric acid in older texts/translations) which is toxic to humans in large amounts. Canola (an abbreviation for 'Canadian oil, low acid') was specifically bred to have incredibly low levels of this acid to make it safe for human consumption."
+    },
+    {
+      "id": 14,
+      "text": "Bacteria can be seen by",
+      "options": [
+        "Naked eye",
+        "Compound microscope",
+        "Hand lens",
+        "Electron microscope"
+      ],
+      "correctIndex": 1,
+      "solution": "The correct answer is Compound microscope. \n\n**Explanation:**\n*   **Compound microscope:** Bacteria are typically sized between 0.5 to 5 micrometers. A standard compound light microscope provides enough magnification (up to 1000x) to clearly see bacteria.\n*   **Other options:** The naked eye and a hand lens lack the magnification power. While an electron microscope can see bacteria in extreme detail, it is not the standard requirement just to \"see\" them."
+    },
+    {
+      "id": 15,
+      "text": "'Spongy Tissue' is a serious disorder hampering the export of mango variety. It is",
+      "options": [
+        "Alphonso",
+        "Dashehari",
+        "Neelum",
+        "Langra"
+      ],
+      "correctIndex": 0,
+      "solution": "The correct answer is Alphonso. \n\n**Explanation:**\n*   **Alphonso:** This premium mango variety is highly susceptible to 'spongy tissue' disorder, an internal breakdown of the fruit pulp into a soft, spongy, yellowish mass, heavily impacting its high-value export market."
+    },
+    {
+      "id": 16,
+      "text": "Which of the following statement about bacteria is correct?",
+      "options": [
+        "They are on the borderline of living and non-living",
+        "They are on the borderline of plants and animals",
+        "They are on the borderline of flowering and non-flowering plants",
+        "None of the above"
+      ],
+      "correctIndex": 3,
+      "solution": "The correct answer is None of the above. \n\n**Explanation:**\n*   Bacteria are distinct, single-celled living prokaryotic organisms.\n*   **Option 1:** Viruses are considered on the borderline of living and non-living, not bacteria.\n*   **Option 2:** Organisms like Euglena are sometimes considered borderline between plants and animals, not bacteria.\n*   **Option 3:** This division strictly applies to the plant kingdom (angiosperms vs. gymnosperms/cryptogams)."
+    },
+    {
+      "id": 17,
+      "text": "Desert plants have longer root system because",
+      "options": [
+        "High temperature of the soil stimulates the growth of roots",
+        "Roots grow in search of water",
+        "Soil does not contain water, hence becomes compact and presses the roots to grow longer",
+        "Roots moves opposite to the solar heat"
+      ],
+      "correctIndex": 1,
+      "solution": "The correct answer is Roots grow in search of water. \n\n**Explanation:**\n*   In arid environments, water is scarce at the surface. Desert plants have adapted by developing extensive and deep root systems to seek out moisture deep underground or to capture scarce surface rainfall over a massive area."
+    },
+    {
+      "id": 18,
+      "text": "Deserts have phreatophytes i.e., plants that have",
+      "options": [
+        "Succulent stem (100-200 mm thick)",
+        "Lipid accumulation (20-30 mg) in leaves",
+        "Long (20-30 ft) tap roots",
+        "Small (2-3 mm) or spine-like leaves"
+      ],
+      "correctIndex": 2,
+      "solution": "The correct answer is Long (20-30 ft) tap roots. \n\n**Explanation:**\n*   **Phreatophytes:** These are deep-rooted plants that obtain a significant portion of the water they need from the phreatic zone (zone of saturation) or capillary fringe directly above the water table. To reach this deep water, they possess extremely long tap roots."
+    },
+    {
+      "id": 19,
+      "text": "Plants adapted to dry climate are known as",
+      "options": [
+        "Epiphyte",
+        "Xerophyte",
+        "Hydrophytes",
+        "Mean plants"
+      ],
+      "correctIndex": 1,
+      "solution": "The correct answer is Xerophyte. \n\n**Explanation:**\n*   **Xerophyte:** From Greek 'xero' (dry) and 'phyte' (plant). These plants have evolved adaptations to survive in environments with little liquid water, such as deserts or ice-covered regions.\n*   **Other options:** Epiphytes grow on other plants. Hydrophytes are aquatic plants adapted to living in water."
+    },
+    {
+      "id": 20,
+      "text": "Desert plants are generally",
+      "options": [
+        "Viviparous",
+        "Succulent",
+        "Herbaceous",
+        "Heterophyllous"
+      ],
+      "correctIndex": 1,
+      "solution": "The correct answer is Succulent. \n\n**Explanation:**\n*   **Succulent:** Many desert plants belong to this category, featuring thick, fleshy leaves or stems that have evolved to retain water in arid climates or soil conditions (e.g., cacti and aloe).\n*   **Other options:** Viviparous refers to plants whose seeds germinate before detaching from the parent (like mangroves). Herbaceous implies non-woody plants, and Heterophyllous indicates plants having leaves of more than one shape on the same plant."
+    }
+  ]
+}
