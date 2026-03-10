@@ -1,0 +1,161 @@
+{
+  "title": "Biology Test 8 (bt008)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Silkworm larvae used in sericulture primarily feed on the leaves of which plant?",
+      "options": ["Reetha plant", "Mulberry plant", "Peach plant", "Ficus plant"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Mulberry plant.\n\nExplanation of Correct Option:\nSilkworm (Bombyx mori) larvae feed almost exclusively on mulberry leaves. Mulberry leaves contain the essential nutrients and proteins required for silk production. The silk protein produced by silkworm consists mainly of fibroin and sericin. This is the scientific basis of sericulture, where mulberry plantations are cultivated specifically to raise silkworms.\n\nExplanation of Other Options:\nReetha plant: Soapnut plant leaves are not suitable for silkworm feeding and are not used in sericulture.\nPeach plant: Although some silkworm species may survive temporarily on other leaves, commercial sericulture relies almost entirely on mulberry.\nFicus plant: Ficus leaves are not nutritionally appropriate for silkworm growth.\n\nPossible Exam Extensions:\n• Scientific name of silkworm: Bombyx mori\n• Silk is obtained during the pupal stage of the life cycle.\n• Rearing of silkworms is called Sericulture.\n• Mulberry belongs to the family Moraceae."
+    },
+    {
+      "id": 2,
+      "text": "Quinine, an important antimalarial drug, is obtained from which group of organisms?",
+      "options": ["Angiosperms", "Bacteria", "Yeast", "Algae"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Angiosperms.\n\nExplanation of Correct Option:\nQuinine is an alkaloid extracted from the bark of the Cinchona tree. Cinchona is a flowering plant belonging to angiosperms. The drug was historically the most effective treatment for malaria before synthetic drugs were developed.\n\nExplanation of Other Options:\nBacteria: Produce antibiotics like penicillin but not quinine.\nYeast: Used in fermentation processes but not in quinine production.\nAlgae: Produce bioactive compounds but quinine is not among them.\n\nPossible Exam Extensions:\n• Botanical name of Cinchona: Cinchona officinalis.\n• Quinine is an alkaloid.\n• Alkaloids are nitrogen-containing plant secondary metabolites.\n• Other plant alkaloids: Morphine (opium poppy), Nicotine (tobacco), Caffeine (coffee)."
+    },
+    {
+      "id": 3,
+      "text": "Quinine used in malaria treatment is extracted from which part of the Cinchona plant?",
+      "options": ["Leaves", "Roots", "Bark", "Flowers"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: Bark.\n\nExplanation of Correct Option:\nQuinine accumulates in the bark of the Cinchona tree. The bark is dried and processed to extract quinine alkaloids which are used to treat malaria.\n\nExplanation of Other Options:\nLeaves: Contain negligible quantities of quinine.\nRoots: Not used for quinine extraction.\nFlowers: Have no medicinal role related to quinine.\n\nPossible Exam Extensions:\n• Other drugs from plant bark include: Cinnamon (spice), Cinchona (quinine).\n• Alkaloids are often stored in plant bark as defense chemicals."
+    },
+    {
+      "id": 4,
+      "text": "Arteether, a modern antimalarial drug, is derived from which source?",
+      "options": ["Seed plant", "Fungus", "Bacteria", "Algae"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Seed plant.\n\nExplanation of Correct Option:\nArteether is derived from Artemisinin, which is obtained from the plant Artemisia annua (sweet wormwood). Artemisinin derivatives are currently used in ACT therapy for malaria.\n\nExplanation of Other Options:\nFungus: Some antibiotics are produced by fungi, but not arteether.\nBacteria: Known for antibiotic production but not artemisinin.\nAlgae: Produce pigments and bioactive compounds but not arteether.\n\nPossible Exam Extensions:\n• Artemisinin discovery led to a Nobel Prize in Medicine (Tu Youyou).\n• Artemisia annua belongs to the family Asteraceae."
+    },
+    {
+      "id": 5,
+      "text": "Which synthetic drug replaced natural quinine for malaria treatment?",
+      "options": ["Tetracycline", "Chloroquine", "Ampicillin", "Chloromycetin"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Chloroquine.\n\nExplanation of Correct Option:\nChloroquine is a synthetic antimalarial drug developed to replace quinine because natural quinine extraction was expensive and limited.\n\nExplanation of Other Options:\nTetracycline: Antibiotic used against bacterial infections.\nAmpicillin: Penicillin-group antibiotic.\nChloromycetin: Another name for chloramphenicol.\n\nPossible Exam Extensions:\n• Resistance to chloroquine has developed in many malaria parasites.\n• Artemisinin-based therapies are now widely used."
+    },
+    {
+      "id": 6,
+      "text": "Which microscopic organisms are used in forensic science to diagnose death by drowning?",
+      "options": ["Lichens", "Protozoa", "Cyanobacteria", "Diatoms"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: Diatoms.\n\nExplanation of Correct Option:\nDiatoms are microscopic algae with silica cell walls. If a person drowns, water containing diatoms enters the lungs and bloodstream and may reach bone marrow. Their presence helps confirm drowning.\n\nExplanation of Other Options:\nLichens: Symbiotic organisms found on rocks and trees.\nProtozoa: Single-celled organisms not used in drowning diagnosis.\nCyanobacteria: Photosynthetic bacteria but not forensic markers.\n\nPossible Exam Extensions:\n• Diatoms are important components of phytoplankton.\n• They play a key role in aquatic food chains."
+    },
+    {
+      "id": 7,
+      "text": "Mulberry fruit is botanically classified as which type of fruit?",
+      "options": ["Sorosis", "Syconus", "Samara", "Nut"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Sorosis.\n\nExplanation of Correct Option:\nSorosis is a multiple fruit formed by the fusion of ovaries from many flowers of an inflorescence. Examples include mulberry, pineapple, and jackfruit.\n\nExplanation of Other Options:\nSyconus: Fruit type of fig.\nSamara: Winged fruit like maple.\nNut: Hard single-seeded fruit.\n\nPossible Exam Extensions:\n• Types of fruits: Simple, aggregate, and multiple fruits.\n• Example of aggregate fruit: Strawberry."
+    },
+    {
+      "id": 8,
+      "text": "Which of the following fibres is NOT obtained from the stem of a plant?",
+      "options": ["Flax", "Hemp", "Jute", "Cotton"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: Cotton.\n\nExplanation of Correct Option:\nCotton fibres come from the seed hairs of the cotton plant.\n\nExplanation of Other Options:\nFlax: Stem fibre.\nHemp: Bast fibre obtained from the stem.\nJute: Stem fibre widely used in ropes and sacks.\n\nPossible Exam Extensions:\n• Cotton mainly consists of cellulose.\n• Cotton plant belongs to genus Gossypium."
+    },
+    {
+      "id": 9,
+      "text": "Leghemoglobin is found in which plant structure?",
+      "options": ["Leaves", "Stem", "Root nodules", "Flowers"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: Root nodules.\n\nExplanation of Correct Option:\nLeghemoglobin is a pigment present in root nodules of leguminous plants where Rhizobium bacteria fix nitrogen. It regulates oxygen levels to protect the nitrogenase enzyme.\n\nExplanation of Other Options:\nLeaves, stems, and flowers do not contain leghemoglobin.\n\nPossible Exam Extensions:\n• Nitrogen fixation converts atmospheric nitrogen into ammonia.\n• Examples of legumes: Pea, gram, soybean."
+    },
+    {
+      "id": 10,
+      "text": "Which cereal crop is artificially produced through hybridization of wheat and rye?",
+      "options": ["Maize", "Triticale", "Barley", "Soybean"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Triticale.\n\nExplanation of Correct Option:\nTriticale is a hybrid cereal produced by crossing wheat (Triticum) and rye (Secale). It combines the productivity of wheat and the hardiness of rye.\n\nExplanation of Other Options:\nMaize: Natural cereal crop.\nBarley: Natural cereal species.\nSoybean: Leguminous crop.\n\nPossible Exam Extensions:\n• Hybridization is used in crop improvement.\n• Other hybrid crops include hybrid maize."
+    },
+    {
+      "id": 11,
+      "text": "Canola oil varieties are specially bred to contain:",
+      "options": ["High oil content", "High saturated fats", "Very low erucic acid", "High protein content"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: Very low erucic acid.\n\nExplanation:\nCanola is a genetically improved variety of rapeseed oil developed to reduce erucic acid content, making the oil safer for human consumption.\n\nPossible Exam Extensions:\n• Canola stands for Canadian Oil Low Acid."
+    },
+    {
+      "id": 12,
+      "text": "Bacteria can normally be seen using which instrument?",
+      "options": ["Naked eye", "Hand lens", "Compound microscope", "Electron microscope"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: Compound microscope.\n\nExplanation:\nBacteria are microscopic organisms typically measuring 1–5 micrometers. They are visible under a compound light microscope.\n\nPossible Exam Extensions:\n• Viruses require electron microscopes for observation."
+    },
+    {
+      "id": 13,
+      "text": "Spongy tissue disorder affecting mango exports mainly occurs in which variety?",
+      "options": ["Alphonso", "Langra", "Dashehari", "Neelum"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Alphonso.\n\nExplanation:\nSpongy tissue is a physiological disorder of Alphonso mango that affects fruit quality and export potential."
+    },
+    {
+      "id": 14,
+      "text": "Which statement about bacteria is correct?",
+      "options": [
+        "They lie between living and non-living organisms",
+        "They lie between plants and animals",
+        "They lie between flowering and non-flowering plants",
+        "None of the above"
+      ],
+      "correctIndex": 3,
+      "solution": "Correct Answer: None of the above.\n\nExplanation:\nBacteria are living prokaryotic organisms classified in kingdom Monera. The description 'between living and non-living' applies to viruses."
+    },
+    {
+      "id": 15,
+      "text": "Desert plants often develop very long roots mainly because:",
+      "options": [
+        "High soil temperature stimulates roots",
+        "Roots grow deep in search of water",
+        "Soil pressure forces roots downward",
+        "Roots avoid sunlight"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Roots grow deep in search of water.\n\nExplanation:\nDesert plants extend their roots deep into the soil to access underground water sources."
+    },
+    {
+      "id": 16,
+      "text": "Phreatophytes are plants characterized by:",
+      "options": [
+        "Thick succulent stems",
+        "High lipid leaves",
+        "Very deep tap roots",
+        "Small spine leaves"
+      ],
+      "correctIndex": 2,
+      "solution": "Correct Answer: Very deep tap roots.\n\nExplanation:\nPhreatophytes develop extremely long roots that reach groundwater."
+    },
+    {
+      "id": 17,
+      "text": "Plants adapted to dry climates are called:",
+      "options": ["Epiphytes", "Xerophytes", "Hydrophytes", "Halophytes"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Xerophytes.\n\nExplanation:\nXerophytes are plants adapted to dry conditions and show features such as thick cuticles and water storage tissues."
+    },
+    {
+      "id": 18,
+      "text": "Plants that grow in saline soil are known as:",
+      "options": ["Xerophytes", "Hydrophytes", "Halophytes", "Succulents"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: Halophytes.\n\nExplanation:\nHalophytes tolerate high salt concentrations. Examples include mangroves."
+    },
+    {
+      "id": 19,
+      "text": "Most desert plants store water in their tissues. Such plants are called:",
+      "options": ["Viviparous plants", "Succulent plants", "Herbaceous plants", "Heterophyllous plants"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Succulent plants.\n\nExplanation:\nSucculent plants store water in stems or leaves to survive long dry periods."
+    },
+    {
+      "id": 20,
+      "text": "The pungency of chilli peppers is caused by which chemical compound?",
+      "options": ["Lycopene", "Capsaicin", "Carotene", "Anthocyanin"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Capsaicin.\n\nExplanation:\nCapsaicin is an alkaloid compound responsible for the hot taste of chillies.\n\nPossible Exam Extensions:\n• Lycopene gives red colour to tomatoes.\n• Carotene gives orange colour to carrots.\n• Anthocyanin produces red/blue colours in plants."
+    }
+  ]
+}
