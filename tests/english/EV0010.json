@@ -1,0 +1,246 @@
+{
+  "title": "English Vocabulary 10 #EV0010",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "The early printers relied heavily on ______ to produce illustrations in newspapers.",
+      "options": [
+        "Xylography",
+        "Hagiography",
+        "Chronology",
+        "Polyglot"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Xylography.\nMeaning: Xylography means the art of engraving on wood for printing, also called woodblock printing.\nSynonyms: Woodcutting, engraving, printmaking, woodblock printing.\nAntonyms: Painting, sculpting, digital illustration.\nExamples: Early newspapers used xylography for visual illustrations. Traditional Japanese artists mastered xylography. The museum displayed rare xylography prints.\nOption Analysis: Option 1 is correct because xylography directly refers to wood engraving used in printing. Option 2, hagiography, means an excessively flattering biography of someone, so it does not fit. Option 3, chronology, means arrangement of events according to time. Option 4, polyglot, means a person who speaks many languages."
+    },
+    {
+      "id": 2,
+      "text": "The minister was in political ______ because every decision would anger some voters.",
+      "options": [
+        "Polyglot",
+        "Zugzwang",
+        "Noetic",
+        "Chronology"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Zugzwang.\nMeaning: Zugzwang is a situation in which any possible move worsens one's position. It is often used in chess and politics.\nSynonyms: Dilemma, predicament, impasse, no-win situation.\nAntonyms: Advantage, leverage, opportunity.\nExamples: The company was in zugzwang during the crisis. A skilled chess player can force the opponent into zugzwang. The leader faced zugzwang in handling the dispute.\nOption Analysis: Option 2 is correct because the sentence describes a no-win situation. Option 1, polyglot, is a multilingual person. Option 3, noetic, relates to intellect or mental activity. Option 4, chronology, refers to time order."
+    },
+    {
+      "id": 3,
+      "text": "The hospital runs on ______ donations from charitable organizations.",
+      "options": [
+        "Eleemosynary",
+        "Vituperative",
+        "Noetic",
+        "Histrionic"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Eleemosynary.\nMeaning: Eleemosynary means related to charity or dependent on charitable donations.\nSynonyms: Charitable, philanthropic, benevolent, alms-giving.\nAntonyms: Selfish, exploitative, miserly.\nExamples: The school created eleemosynary scholarships for poor students. Many relief centers depend on eleemosynary support. The trust carried out eleemosynary work for villagers.\nOption Analysis: Option 1 is correct because the sentence talks about charitable donations. Option 2, vituperative, means abusive in language. Option 3, noetic, relates to the intellect. Option 4, histrionic, means overly dramatic."
+    },
+    {
+      "id": 4,
+      "text": "The author subtly ______ the conflict that would dominate the final chapter.",
+      "options": [
+        "Imbricated",
+        "Adumbrated",
+        "Defalcated",
+        "Polyglotted"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Adumbrated.\nMeaning: Adumbrate means to suggest, foreshadow, or outline something faintly in advance.\nSynonyms: Foreshadow, hint, outline, suggest, prefigure.\nAntonyms: Conceal, obscure, suppress.\nExamples: Dark clouds adumbrated the storm. The speech adumbrated future reforms. The first chapter adumbrated the tragic ending.\nOption Analysis: Option 2 is correct because the sentence refers to hinting at a future conflict. Option 1, imbricated, means arranged in overlapping layers. Option 3, defalcated, refers to embezzling money. Option 4, polyglotted, is not the correct word here."
+    },
+    {
+      "id": 5,
+      "text": "The actor’s ______ gestures made the scene overly dramatic.",
+      "options": [
+        "Histrionic",
+        "Noetic",
+        "Chronological",
+        "Eleemosynary"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Histrionic.\nMeaning: Histrionic means excessively theatrical, melodramatic, or showy in behavior.\nSynonyms: Theatrical, melodramatic, exaggerated, dramatic.\nAntonyms: Restrained, composed, understated.\nExamples: Her histrionic reaction surprised everyone. The politician gave a histrionic speech. His histrionic style weakened the seriousness of the discussion.\nOption Analysis: Option 1 is correct because the sentence describes exaggerated drama. Option 2, noetic, relates to mental activity. Option 3, chronological, refers to arrangement by time. Option 4, eleemosynary, means charitable."
+    },
+    {
+      "id": 6,
+      "text": "The overlapping arrangement of roof tiles shows perfect ______.",
+      "options": [
+        "Imbrication",
+        "Hagiography",
+        "Defalcation",
+        "Agnosticism"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Imbrication.\nMeaning: Imbrication means an overlapping arrangement like tiles, scales, or layers.\nSynonyms: Overlapping, layering, interlocking.\nAntonyms: Separation, isolation, disjunction.\nExamples: The leaves showed natural imbrication. The roof tiles were laid in perfect imbrication. Scientists examine the imbrication of complex systems.\nOption Analysis: Option 1 is correct because roof tiles overlap in layers. Option 2, hagiography, means an excessively flattering biography. Option 3, defalcation, means embezzlement of funds. Option 4, agnosticism, is the belief that God's existence is unknown."
+    },
+    {
+      "id": 7,
+      "text": "The debate turned ______ as leaders began insulting each other publicly.",
+      "options": [
+        "Noetic",
+        "Vituperative",
+        "Polyglot",
+        "Eleemosynary"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Vituperative.\nMeaning: Vituperative means bitter, abusive, and full of insulting language.\nSynonyms: Abusive, scathing, insulting, venomous.\nAntonyms: Respectful, courteous, polite.\nExamples: His vituperative remarks sparked criticism. The article used a vituperative tone. Vituperative language often damages rational discussion.\nOption Analysis: Option 2 is correct because the sentence mentions insulting each other. Option 1, noetic, is intellectual or mental. Option 3, polyglot, means multilingual person. Option 4, eleemosynary, means charitable."
+    },
+    {
+      "id": 8,
+      "text": "The accountant was arrested for ______ of company funds.",
+      "options": [
+        "Imbrication",
+        "Defalcation",
+        "Chronology",
+        "Histrionics"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Defalcation.\nMeaning: Defalcation means misappropriation, embezzlement, or fraudulent use of money.\nSynonyms: Embezzlement, fraud, misappropriation, theft.\nAntonyms: Honesty, integrity, accountability.\nExamples: The audit exposed defalcation in the department. The manager was jailed for defalcation. Public trust declines when defalcation occurs in offices.\nOption Analysis: Option 2 is correct because the sentence refers to misuse of company funds. Option 1, imbrication, means overlapping arrangement. Option 3, chronology, means sequence of events. Option 4, histrionics, means exaggerated dramatic behavior."
+    },
+    {
+      "id": 9,
+      "text": "The old photograph triggered a sudden ______ of childhood memories.",
+      "options": [
+        "Anamnesis",
+        "Agnosticism",
+        "Hagiography",
+        "Polyglot"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Anamnesis.\nMeaning: Anamnesis means recollection or remembrance of something forgotten.\nSynonyms: Recollection, remembrance, recall, memory.\nAntonyms: Forgetfulness, oblivion, amnesia.\nExamples: The smell of rain caused anamnesis of old festivals. Therapy can help bring anamnesis of forgotten experiences. A melody triggered anamnesis of school days.\nOption Analysis: Option 1 is correct because the sentence refers to recall of old memories. Option 2, agnosticism, is a belief position about knowledge of God. Option 3, hagiography, is an overly flattering biography. Option 4, polyglot, is a multilingual person."
+    },
+    {
+      "id": 10,
+      "text": "Meditation enhances ______ clarity and mental focus.",
+      "options": [
+        "Histrionic",
+        "Noetic",
+        "Vituperative",
+        "Eleemosynary"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Noetic.\nMeaning: Noetic means related to intellectual activity, the mind, or cognition.\nSynonyms: Intellectual, cognitive, mental.\nAntonyms: Physical, instinctive, irrational.\nExamples: Philosophers study noetic processes. Meditation improves noetic awareness. The book explores noetic dimensions of consciousness.\nOption Analysis: Option 2 is correct because the sentence talks about mental clarity. Option 1, histrionic, means dramatic. Option 3, vituperative, means abusive. Option 4, eleemosynary, means charitable."
+    },
+    {
+      "id": 11,
+      "text": "The historian arranged all the events in proper ______ before writing the report.",
+      "options": [
+        "Chronology",
+        "Zugzwang",
+        "Defalcation",
+        "Vituperation"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Chronology.\nMeaning: Chronology means the arrangement of events in the order in which they happened.\nSynonyms: Timeline, sequence, time order.\nAntonyms: Disorder, randomness, confusion.\nExamples: Investigators reconstructed the chronology of the fraud. The teacher explained the chronology of the freedom struggle. A clear chronology helps understanding history.\nOption Analysis: Option 1 is correct because the sentence refers to arranging events in time order. Option 2, zugzwang, means a no-win situation. Option 3, defalcation, means financial fraud. Option 4, vituperation, refers to harsh verbal abuse."
+    },
+    {
+      "id": 12,
+      "text": "A person who can speak many languages fluently is called a ______.",
+      "options": [
+        "Polyglot",
+        "Agnostic",
+        "Hagiographer",
+        "Noetic"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Polyglot.\nMeaning: Polyglot means a person who knows and speaks several languages.\nSynonyms: Multilingual speaker, linguist.\nAntonyms: Monolingual speaker.\nExamples: The diplomat was a polyglot who spoke six languages. She became a polyglot through constant practice. Polyglots are valuable in international relations.\nOption Analysis: Option 1 is correct because it exactly means a person who speaks many languages. Option 2, agnostic, is a person who believes the existence of God is unknown. Option 3, hagiographer, writes flattering biographies. Option 4, noetic, is an adjective related to the mind."
+    },
+    {
+      "id": 13,
+      "text": "The biography was criticized as mere ______ because it praised the leader without objectivity.",
+      "options": [
+        "Chronology",
+        "Hagiography",
+        "Imbrication",
+        "Anamnesis"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Hagiography.\nMeaning: Hagiography means a biography that praises someone excessively and unrealistically.\nSynonyms: Glorification, hero-worship, flattering biography.\nAntonyms: Critique, balanced account, objective biography.\nExamples: The memoir was dismissed as hagiography. Critics objected to the book’s hagiography of the ruler. Good history should avoid hagiography.\nOption Analysis: Option 2 is correct because the sentence describes excessive praise. Option 1, chronology, means time order. Option 3, imbrication, means overlapping arrangement. Option 4, anamnesis, means recollection."
+    },
+    {
+      "id": 14,
+      "text": "The philosopher’s ______ led him to say that the existence of God cannot be known with certainty.",
+      "options": [
+        "Agnosticism",
+        "Eleemosynary",
+        "Vituperation",
+        "Defalcation"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: Agnosticism.\nMeaning: Agnosticism is the view that the existence of God or ultimate reality is unknown or cannot be known.\nSynonyms: Uncertainty, skepticism, doubt.\nAntonyms: Theism, atheism when held as certainty claims.\nExamples: His agnosticism made him reject dogmatic claims. Philosophical agnosticism separates belief from proof. Agnosticism often emphasizes limits of human knowledge.\nOption Analysis: Option 1 is correct because the sentence is about uncertainty regarding God’s existence. Option 2, eleemosynary, means charitable. Option 3, vituperation, means abusive speech. Option 4, defalcation, means embezzlement."
+    },
+    {
+      "id": 15,
+      "text": "After a week of rest and medicine, he finally managed to ______ his illness.",
+      "options": [
+        "Get through",
+        "Get up",
+        "Get over",
+        "Get along"
+      ],
+      "correctIndex": 2,
+      "solution": "Correct Answer: Get over.\nMeaning: Get over means to recover from an illness, shock, or difficulty.\nSynonyms: Recover from, overcome.\nAntonyms: Succumb to, relapse into.\nExamples: She got over the fever quickly. It took him months to get over the loss. Good sleep helped her get over exhaustion.\nOption Analysis: Option 3 is correct because the sentence refers to recovery from illness. Option 1, get through, means complete or succeed or connect by phone. Option 2, get up, means rise from bed. Option 4, get along, means have good relations."
+    },
+    {
+      "id": 16,
+      "text": "She wakes up early every day and ______ at 5 a.m. to study for competitive exams.",
+      "options": [
+        "Gets over",
+        "Gets up",
+        "Gets through",
+        "Gets along"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: Gets up.\nMeaning: Get up means to rise from bed.\nSynonyms: Rise, wake, arise.\nAntonyms: Lie down, remain asleep.\nExamples: He gets up before sunrise. She gets up early for exercise. Students who get up early often get more study time.\nOption Analysis: Option 2 is correct because the sentence is about rising in the morning. Option 1, gets over, means recovers from something. Option 3, gets through, means completes something or manages to pass. Option 4, gets along, means has a good relationship."
+    },
+    {
+      "id": 17,
+      "text": "To avoid hurting her friend’s feelings, she told a harmless ______.",
+      "options": [
+        "White elephant",
+        "White lie",
+        "White flag",
+        "White-collar"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: White lie.\nMeaning: A white lie is a small harmless lie told to avoid hurting someone.\nSynonyms: Harmless lie, polite lie.\nAntonyms: Brutal truth, direct truth.\nExamples: She told a white lie about liking the gift. Parents sometimes use white lies to comfort children. A white lie is usually told with kind intent.\nOption Analysis: Option 2 is correct because the sentence refers to a harmless lie. Option 1, white elephant, means a burdensome costly possession. Option 3, white flag, symbolizes surrender. Option 4, white-collar, relates to office work."
+    },
+    {
+      "id": 18,
+      "text": "After maintenance costs increased sharply, the huge mansion became a ______ for the family.",
+      "options": [
+        "White elephant",
+        "White lie",
+        "White-collar asset",
+        "White sheet"
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: White elephant.\nMeaning: White elephant means a costly or troublesome possession that is more trouble than it is worth.\nSynonyms: Burden, liability, useless luxury.\nAntonyms: Valuable asset, profitable possession.\nExamples: The unused stadium became a white elephant. The old car turned into a white elephant because of repair costs. An overbuilt project may become a white elephant.\nOption Analysis: Option 1 is correct because the sentence describes an expensive but burdensome possession. Option 2, white lie, means a harmless lie. Option 3 is not the correct idiom. Option 4, white sheet, is not the proper expression."
+    },
+    {
+      "id": 19,
+      "text": "Most software engineers are considered ______ workers because they usually work in offices or professional environments.",
+      "options": [
+        "White as a sheet",
+        "White lie",
+        "White-collar",
+        "Raise a white flag"
+      ],
+      "correctIndex": 2,
+      "solution": "Correct Answer: White-collar.\nMeaning: White-collar refers to office-based or professional work.\nSynonyms: Professional, administrative, office-based.\nAntonyms: Blue-collar, manual labor.\nExamples: Banking and IT are largely white-collar sectors. Many graduates seek white-collar jobs. White-collar roles often require formal education.\nOption Analysis: Option 3 is correct because the sentence refers to office and professional workers. Option 1, white as a sheet, means very pale. Option 2, white lie, means harmless lie. Option 4, raise a white flag, means surrender."
+    },
+    {
+      "id": 20,
+      "text": "When he heard the shocking accident news, he turned ______ immediately.",
+      "options": [
+        "White-collar",
+        "White as a sheet",
+        "White elephant",
+        "White lie"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: White as a sheet.\nMeaning: White as a sheet means extremely pale due to fear, shock, or illness.\nSynonyms: Pale, ashen, frightened-looking.\nAntonyms: Flushed, calm, normal-looking.\nExamples: She went white as a sheet after the loud explosion. He turned white as a sheet when he saw the snake. The witness was white as a sheet in court.\nOption Analysis: Option 2 is correct because the sentence describes shock. Option 1, white-collar, refers to office work. Option 3, white elephant, means burdensome possession. Option 4, white lie, means harmless lie."
+    }
+  ]
+}
