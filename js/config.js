@@ -124,26 +124,17 @@ var GITHUB_FILES = {
         // Add your full biology tests here
         // { name: "Biology Mock 1", tags: "Sectional", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/biology/mock1.json" }
     ],
-    'biology_topic': [
-        // Add your chapter-wise biology tests here
-    ],
 
     // --- 6. CHEMISTRY ---
     'chemistry_sectional': [
         { name: "Chemistry Test 1 (Atomic Structure)", tags: "Bio", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Chemistry/CT001.json" },
         // Add your full chemistry tests here
     ],
-    'chemistry_topic': [
-        // Add your chapter-wise chemistry tests here
-    ],
 
     // --- 7. PHYSICS ---
     'physics_sectional': [
         // Add your full physics tests here
     ],
-    'physics_topic': [
-        // Add your chapter-wise physics tests here
-    ]
 
 };
 
