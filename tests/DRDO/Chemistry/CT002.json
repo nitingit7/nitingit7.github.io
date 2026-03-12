@@ -1,0 +1,246 @@
+{
+  "title": "Chemistry Test 2 #CT002 (Atomic Structure, Transformation and Inorganic)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Match List-I with List-II and select the correct answer using the code given below the lists. List-I (Characteristic): (a) Zero mass (b) Fractional charge (c) Fractional spin (d) Integral spin. List-II (Particle): 1. Positron 2. Neutrino 3. Quark 4. Photon",
+      "options": [
+        "(A) 2 3 1 4",
+        "(B) 3 2 4 1",
+        "(C) 2 3 4 1",
+        "(D) 3 2 1 4"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: (A) 2 3 1 4**\n\n**Correct Matching:**\n(a) Zero mass → Neutrino (2)\n(b) Fractional charge → Quark (3)\n(c) Fractional spin → Positron (1)\n(d) Integral spin → Photon (4)\n\n**Concept Explanation:**\nModern particle physics classifies particles based on properties like mass, charge and spin.\n\n**Option-wise Analysis:**\n(A) Correct mapping according to particle physics.\n(B) Incorrect because neutrino has near-zero mass.\n(C) Incorrect because photon corresponds to integral spin.\n(D) Incorrect matching of quark and neutrino.\n\n**Key DRDO Exam Insight:**\n• Quarks have fractional charges (+2/3, −1/3).\n• Photon has spin = 1.\n• Neutrinos have extremely small mass and no electric charge."
+    },
+    {
+      "id": 2,
+      "text": "Which of the following particles has zero mass?",
+      "options": [
+        "Electron",
+        "Neutrino",
+        "Photon",
+        "Proton"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Photon**\n\n**Explanation:**\nPhotons are particles of electromagnetic radiation. According to modern physics they have **zero rest mass** but possess energy and momentum.\n\n**Option Analysis:**\nElectron – Has measurable mass (9.11 × 10⁻³¹ kg).\nNeutrino – Very small but non-zero mass.\nPhoton – Massless particle.\nProton – Heavy particle in nucleus.\n\n**Exam Tip:**\nMassless particles in physics include **photons and gluons**."
+    },
+    {
+      "id": 3,
+      "text": "Which particle possesses fractional electric charge?",
+      "options": [
+        "Electron",
+        "Proton",
+        "Quark",
+        "Neutron"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Quark**\n\n**Explanation:**\nQuarks are fundamental particles forming protons and neutrons. They possess **fractional charges such as +2/3 or −1/3**.\n\n**Option Analysis:**\nElectron – Charge −1.\nProton – Charge +1.\nQuark – Fractional charge.\nNeutron – Net charge zero.\n\n**Exam Insight:**\nSix types of quarks exist: up, down, charm, strange, top, bottom."
+    },
+    {
+      "id": 4,
+      "text": "Which particle has integral spin?",
+      "options": [
+        "Electron",
+        "Photon",
+        "Quark",
+        "Neutrino"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Photon**\n\n**Explanation:**\nParticles are classified into:\n• **Fermions** (half-integer spin)\n• **Bosons** (integer spin)\n\nPhoton is a **boson with spin = 1**.\n\n**Option Analysis:**\nElectron – Spin 1/2\nQuark – Spin 1/2\nNeutrino – Spin 1/2\nPhoton – Spin 1"
+    },
+    {
+      "id": 5,
+      "text": "Which particle is nearly massless and electrically neutral?",
+      "options": [
+        "Electron",
+        "Neutrino",
+        "Photon",
+        "Proton"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Neutrino**\n\n**Explanation:**\nNeutrinos are extremely light neutral particles produced during nuclear reactions such as beta decay.\n\n**Exam Insight:**\nNeutrinos rarely interact with matter and can pass through Earth without collision."
+    },
+    {
+      "id": 6,
+      "text": "Which fundamental particle is responsible for electromagnetic radiation?",
+      "options": [
+        "Electron",
+        "Photon",
+        "Neutron",
+        "Proton"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Photon**\n\n**Explanation:**\nPhoton is the quantum particle of electromagnetic radiation including visible light, radio waves and X-rays."
+    },
+    {
+      "id": 7,
+      "text": "Which particle is the antiparticle of electron?",
+      "options": [
+        "Positron",
+        "Proton",
+        "Neutrino",
+        "Photon"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Positron**\n\n**Explanation:**\nPositron has same mass as electron but opposite charge.\n\n**Exam Insight:**\nElectron + Positron annihilation produces gamma rays."
+    },
+    {
+      "id": 8,
+      "text": "Which particle is a constituent of proton and neutron?",
+      "options": [
+        "Electron",
+        "Quark",
+        "Photon",
+        "Neutrino"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Quark**\n\nProtons and neutrons are composed of **three quarks each**."
+    },
+    {
+      "id": 9,
+      "text": "Which particle mediates electromagnetic force?",
+      "options": [
+        "Photon",
+        "Electron",
+        "Neutrino",
+        "Proton"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Photon**\n\nPhotons act as **force carriers of electromagnetic interaction**."
+    },
+    {
+      "id": 10,
+      "text": "Which of the following is a boson?",
+      "options": [
+        "Electron",
+        "Quark",
+        "Photon",
+        "Neutrino"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Photon**\n\nBosons have integer spin. Photon has spin = 1."
+    },
+    {
+      "id": 11,
+      "text": "Which of the following is a fermion?",
+      "options": [
+        "Electron",
+        "Photon",
+        "Gluon",
+        "Higgs boson"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Electron**\n\nFermions have half-integer spin and obey **Pauli Exclusion Principle**."
+    },
+    {
+      "id": 12,
+      "text": "Which particle carries no electric charge?",
+      "options": [
+        "Electron",
+        "Proton",
+        "Neutron",
+        "Positron"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Neutron**\n\nNeutron is electrically neutral."
+    },
+    {
+      "id": 13,
+      "text": "Which particle determines chemical properties of an atom?",
+      "options": [
+        "Proton",
+        "Electron",
+        "Neutron",
+        "Nucleus"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Electron**\n\nElectrons determine **chemical bonding and reactivity**."
+    },
+    {
+      "id": 14,
+      "text": "Which particle determines atomic number?",
+      "options": [
+        "Electron",
+        "Neutron",
+        "Proton",
+        "Photon"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Proton**\n\nAtomic number = number of protons."
+    },
+    {
+      "id": 15,
+      "text": "Which particle contributes most to atomic mass?",
+      "options": [
+        "Electron",
+        "Proton and neutron",
+        "Photon",
+        "Neutrino"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Proton and neutron**\n\nElectrons have negligible mass."
+    },
+    {
+      "id": 16,
+      "text": "Which particle exists outside the nucleus?",
+      "options": [
+        "Electron",
+        "Neutron",
+        "Proton",
+        "Alpha particle"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Electron**"
+    },
+    {
+      "id": 17,
+      "text": "Which particle was discovered by J.J. Thomson?",
+      "options": [
+        "Electron",
+        "Proton",
+        "Neutron",
+        "Photon"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Electron**"
+    },
+    {
+      "id": 18,
+      "text": "Which particle was discovered by Rutherford?",
+      "options": [
+        "Electron",
+        "Neutron",
+        "Proton",
+        "Photon"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Proton**"
+    },
+    {
+      "id": 19,
+      "text": "Which particle was discovered by James Chadwick?",
+      "options": [
+        "Electron",
+        "Proton",
+        "Neutron",
+        "Photon"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Neutron**"
+    },
+    {
+      "id": 20,
+      "text": "Which particle is responsible for nuclear stability?",
+      "options": [
+        "Electron",
+        "Neutron",
+        "Photon",
+        "Positron"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Neutron**\n\nNeutrons reduce repulsion between protons and stabilize the nucleus."
+    }
+  ]
+}
