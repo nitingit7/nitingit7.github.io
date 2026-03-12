@@ -1,0 +1,246 @@
+{
+  "title": "Physics Test 1 #PT001 (Measurement/Unit)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "The unit of work is",
+      "options": [
+        "Joule",
+        "Neutron",
+        "Watt",
+        "Dyne"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Joule**\n\nExplanation:\nWork in physics is defined as force multiplied by displacement in the direction of force.\n\nWork = Force × Distance\n\nOption Analysis:\n• Joule → SI unit of work and energy.\n• Neutron → A subatomic particle, not a unit.\n• Watt → Unit of power (rate of doing work).\n• Dyne → CGS unit of force.\n\nExam Insight:\n1 Joule = 1 Newton × 1 metre."
+    },
+    {
+      "id": 2,
+      "text": "The SI unit of electrical resistance of conductor is",
+      "options": [
+        "Faraday",
+        "Volts",
+        "Ampere",
+        "Ohm-metre"
+      ],
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Ohm-metre**\n\nExplanation:\nElectrical resistivity is measured in ohm-metre.\n\nOption Analysis:\n• Faraday → Unit related to electric charge in electrochemistry.\n• Volt → Unit of potential difference.\n• Ampere → Unit of electric current.\n• Ohm-metre → Unit of electrical resistivity of materials."
+    },
+    {
+      "id": 3,
+      "text": "The unit of power is",
+      "options": [
+        "Hertz",
+        "Volts",
+        "Watt",
+        "Neutrons"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Watt**\n\nExplanation:\nPower represents the rate of doing work.\n\nPower = Work / Time\n\nOption Analysis:\n• Hertz → Unit of frequency.\n• Volt → Electric potential difference.\n• Watt → Correct SI unit of power.\n• Neutron → Subatomic particle."
+    },
+    {
+      "id": 4,
+      "text": "The unit of the force is",
+      "options": [
+        "Faraday",
+        "Fermi",
+        "Newton",
+        "Rutherford"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Newton**\n\nExplanation:\nForce = mass × acceleration.\n\nOption Analysis:\n• Faraday → Unit of electric charge.\n• Fermi → Unit of nuclear distance.\n• Newton → SI unit of force.\n• Rutherford → Nuclear physics unit."
+    },
+    {
+      "id": 5,
+      "text": "Light year is the unit of",
+      "options": [
+        "Distance",
+        "Time",
+        "Speed of light",
+        "Intensity of light"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Distance**\n\nExplanation:\nA light year is the distance travelled by light in one year.\n\n1 light year ≈ 9.46 × 10¹² km."
+    },
+    {
+      "id": 6,
+      "text": "Which one of the following is the unit of measure of the thickness of the ozone layer of the atmosphere?",
+      "options": [
+        "Knot",
+        "Dobson",
+        "Poise",
+        "Maxwell"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Dobson**\n\nExplanation:\nOzone concentration in the atmosphere is measured in Dobson Units (DU).\n\nOption Analysis:\n• Knot → Unit of speed used in navigation.\n• Dobson → Thickness of ozone layer.\n• Poise → Unit of viscosity.\n• Maxwell → Unit of magnetic flux."
+    },
+    {
+      "id": 7,
+      "text": "‘Light Year’ is",
+      "options": [
+        "The year in which February has 29 days",
+        "The distance travelled by light in one year",
+        "The time which Sun rays take to reach the Earth",
+        "The time in which a spacecraft reaches Moon from the Earth"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: The distance travelled by light in one year**\n\nExplanation:\nLight year is a distance unit used in astronomy."
+    },
+    {
+      "id": 8,
+      "text": "A parsec, a unit of distance used to measure the distance related to the stars in the sky, is equal to",
+      "options": [
+        "4.25 light years",
+        "3.25 light years",
+        "4.50 light years",
+        "3.05 light years"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: 3.25 light years**\n\nExplanation:\n1 parsec ≈ 3.26 light years.\n\nParsec = Parallax second."
+    },
+    {
+      "id": 9,
+      "text": "PARSEC is the unit of",
+      "options": [
+        "Distance",
+        "Time",
+        "Light intensity",
+        "Magnetic force"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Distance**\n\nExplanation:\nParsec is commonly used in astronomy for interstellar distances."
+    },
+    {
+      "id": 10,
+      "text": "Which unit of measurement is multiplied by 0.39 to convert it to ‘inches’?",
+      "options": [
+        "Millimetre",
+        "Centimetre",
+        "Metre",
+        "Decimetre"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Centimetre**\n\nExplanation:\n1 cm ≈ 0.39 inches."
+    },
+    {
+      "id": 11,
+      "text": "How can the height of a person who is six feet tall be expressed approximately in nanometre?",
+      "options": [
+        "183 × 10^6 nm",
+        "234 × 10^6 nm",
+        "183 × 10^7 nm",
+        "181 × 10^7 nm"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: 183 × 10^7 nm**\n\nExplanation:\n6 feet ≈ 1.83 m\n\n1 m = 10^9 nm\n\nTherefore:\n1.83 × 10^9 nm ≈ 183 × 10^7 nm."
+    },
+    {
+      "id": 12,
+      "text": "A nanometre is equal to",
+      "options": [
+        "10⁻⁶ cm",
+        "10⁻⁷ cm",
+        "10⁻⁸ cm",
+        "10⁻⁹ cm"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: 10⁻⁷ cm**\n\nExplanation:\n1 nanometre = 10⁻⁹ m = 10⁻⁷ cm."
+    },
+    {
+      "id": 13,
+      "text": "Ampere is the unit of",
+      "options": [
+        "Voltage",
+        "Electric current",
+        "Resistance",
+        "Power"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Electric current**"
+    },
+    {
+      "id": 14,
+      "text": "Megawatt is the measuring unit of power which is",
+      "options": [
+        "Generated",
+        "Consumed",
+        "Saved",
+        "Lost in transmission"
+      ],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Generated**\n\nExplanation:\nMegawatt is used for large scale power generation like power plants."
+    },
+    {
+      "id": 15,
+      "text": "Which one of the following SI unit is not correctly matched?",
+      "options": [
+        "Work - Joule",
+        "Force - Newton",
+        "Mass - kg",
+        "Pressure - Dyne"
+      ],
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Pressure - Dyne**\n\nExplanation:\nPressure SI unit = Pascal."
+    },
+    {
+      "id": 16,
+      "text": "Which one of the following is not correctly matched?",
+      "options": [
+        "Knot - Measure of speed of ship",
+        "Nautical mile - Unit of distance used in navigation",
+        "Angstrom - Unit of wavelength of light",
+        "Light year - Unit of measuring time"
+      ],
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Light year - Unit of measuring time**"
+    },
+    {
+      "id": 17,
+      "text": "How many watts are there in a horsepower?",
+      "options": [
+        "1000",
+        "750",
+        "746",
+        "748"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: 746**\n\n1 horsepower = 746 watts."
+    },
+    {
+      "id": 18,
+      "text": "‘Joule’ is related to energy in the same way as ‘Pascal’ is related to",
+      "options": [
+        "Mass",
+        "Pressure",
+        "Density",
+        "Purity"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Pressure**\n\nPascal is SI unit of pressure."
+    },
+    {
+      "id": 19,
+      "text": "One micron is equal to",
+      "options": [
+        "1/10 mm",
+        "1/100 mm",
+        "1/1000 mm",
+        "1/10000 mm"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: 1/1000 mm**\n\n1 micron = 10⁻⁶ m."
+    },
+    {
+      "id": 20,
+      "text": "One micron represents a length of",
+      "options": [
+        "10⁻⁶ cm",
+        "10⁻⁴ cm",
+        "1 mm",
+        "1 m"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: 10⁻⁴ cm**\n\nExplanation:\n1 micron = 10⁻⁶ m = 10⁻⁴ cm."
+    }
+  ]
+}
