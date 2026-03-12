@@ -1,0 +1,166 @@
+{
+  "title": "Chemistry Test 1 #CT001 (Atomic Structure)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which of the following is NOT a constituent particle of an atom?",
+      "options": ["Electron", "Proton", "Neutron", "Photon"],
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Photon**\n\n**Explanation:**\nAtoms are made of three main subatomic particles: electrons, protons, and neutrons. Electrons revolve around the nucleus while protons and neutrons are present inside the nucleus.\n\n**Option-wise analysis:**\nElectron – Negatively charged particle discovered by J.J. Thomson. It exists outside the nucleus.\nProton – Positively charged particle discovered by Rutherford.\nNeutron – Neutral particle discovered by James Chadwick.\nPhoton – A photon is a quantum of electromagnetic radiation (light particle). It is NOT a component of an atom.\n\n**Exam extension:**\n• Electron charge = −1.6×10⁻¹⁹ C\n• Proton charge = +1.6×10⁻¹⁹ C\n• Neutron charge = 0"
+    },
+    {
+      "id": 2,
+      "text": "A single type of atom is found in which of the following?",
+      "options": ["Compounds", "Mixtures", "Native elements", "Alloys"],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Native elements**\n\n**Explanation:**\nNative elements are elements that occur in nature in their pure form consisting of only one type of atom.\n\n**Option-wise analysis:**\nCompounds – Contain two or more elements chemically combined.\nMixtures – Contain different substances physically mixed.\nNative elements – Only one type of atom (example: gold, silver).\nAlloys – Mixtures of metals.\n\n**Exam extension:**\nExamples of native elements: Gold (Au), Silver (Ag), Copper (Cu)."
+    },
+    {
+      "id": 3,
+      "text": "Which particles constitute the nucleus of an atom?",
+      "options": ["Electron and proton", "Electron and neutron", "Proton and neutron", "Proton, neutron and electron"],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Proton and neutron**\n\n**Explanation:**\nThe atomic nucleus contains protons and neutrons. Electrons are present outside the nucleus in orbitals.\n\n**Option-wise analysis:**\nElectron and proton – Electron is outside the nucleus.\nElectron and neutron – Electrons are not in nucleus.\nProton and neutron – Correct combination forming the nucleus.\nProton, neutron and electron – Electron is not present inside nucleus.\n\n**Exam extension:**\n• Proton number = Atomic number\n• Mass number = Protons + Neutrons"
+    },
+    {
+      "id": 4,
+      "text": "Which statement correctly describes the structure of an atom?",
+      "options": [
+        "Neutrons and electrons inside nucleus, protons revolve",
+        "Electrons and protons inside nucleus, neutrons revolve",
+        "Protons and neutrons inside nucleus, electrons revolve",
+        "All particles inside nucleus"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Protons and neutrons inside nucleus, electrons revolve**\n\n**Explanation:**\nThe nucleus contains protons and neutrons while electrons revolve around the nucleus in energy levels according to the Bohr model.\n\n**Exam extension:**\n• Bohr model explains electron shells (K, L, M, N).\n• Modern quantum mechanics uses orbitals instead of fixed orbits."
+    },
+    {
+      "id": 5,
+      "text": "Who discovered the atomic nucleus?",
+      "options": ["Rutherford", "Dalton", "Einstein", "Thomson"],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Rutherford**\n\n**Explanation:**\nErnest Rutherford discovered the nucleus through the famous gold foil experiment (1911).\n\n**Option-wise analysis:**\nDalton – Proposed atomic theory.\nEinstein – Developed theory of relativity.\nThomson – Discovered electron.\n\n**Exam extension:**\nGold foil experiment showed most of the atom is empty space."
+    },
+    {
+      "id": 6,
+      "text": "Who discovered the neutron?",
+      "options": ["J.J. Thomson", "James Chadwick", "Rutherford", "Newton"],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: James Chadwick (1932)**\n\n**Explanation:**\nChadwick discovered the neutron by bombarding beryllium with alpha particles.\n\n**Exam extension:**\nNeutron mass ≈ proton mass.\nNeutron has no charge."
+    },
+    {
+      "id": 7,
+      "text": "Which of the following is not a fundamental subatomic particle?",
+      "options": ["Neutron", "Proton", "Deuteron", "Electron"],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Deuteron**\n\n**Explanation:**\nA deuteron is the nucleus of deuterium consisting of one proton and one neutron, not a fundamental particle.\n\n**Exam extension:**\nHydrogen isotopes:\n• Protium\n• Deuterium\n• Tritium"
+    },
+    {
+      "id": 8,
+      "text": "Which pair represents a particle and its antiparticle?",
+      "options": ["Electron – Positron", "Proton – Neutron", "Photon – Electron", "Neutron – Neutrino"],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Electron – Positron**\n\n**Explanation:**\nPositron is the antiparticle of electron. It has the same mass but opposite charge.\n\n**Exam extension:**\nAntimatter concept introduced by Dirac."
+    },
+    {
+      "id": 9,
+      "text": "An alpha particle has approximately the same mass as:",
+      "options": ["Two protons", "Helium atom", "Two neutrons", "Two positrons"],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Helium atom**\n\n**Explanation:**\nAlpha particle = Helium nucleus (2 protons + 2 neutrons).\n\n**Exam extension:**\nAlpha particles are emitted in radioactive decay."
+    },
+    {
+      "id": 10,
+      "text": "The nucleus of helium contains:",
+      "options": ["1 neutron", "2 protons", "2 protons and 2 neutrons", "1 proton and 2 neutrons"],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: 2 protons and 2 neutrons**\n\n**Explanation:**\nHelium-4 nucleus consists of two protons and two neutrons."
+    },
+    {
+      "id": 11,
+      "text": "Which of the following carries a negative charge?",
+      "options": ["X-rays", "Alpha particles", "Beta particles", "Gamma rays"],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Beta particles**\n\n**Explanation:**\nBeta particles are high-speed electrons emitted during radioactive decay."
+    },
+    {
+      "id": 12,
+      "text": "The order of filling electrons in orbitals is governed by:",
+      "options": ["Aufbau principle", "Heisenberg principle", "Hund rule", "Pauli principle"],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Aufbau principle**\n\n**Explanation:**\nElectrons fill orbitals in order of increasing energy."
+    },
+    {
+      "id": 13,
+      "text": "Magnetic quantum number indicates:",
+      "options": ["Orientation of orbital", "Shape of orbital", "Size of orbital", "Spin"],
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Orientation of orbital**\n\n**Explanation:**\nMagnetic quantum number determines spatial orientation of orbitals."
+    },
+    {
+      "id": 14,
+      "text": "An atom contains 2 protons and 2 neutrons. What is its mass number?",
+      "options": ["2", "4", "6", "8"],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: 4**\n\nMass number = protons + neutrons = 2 + 2 = 4."
+    },
+    {
+      "id": 15,
+      "text": "Atoms with the same number of protons but different number of neutrons are called:",
+      "options": ["Isobars", "Isomers", "Isotones", "Isotopes"],
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Isotopes**\n\nExample: Carbon-12, Carbon-14."
+    },
+    {
+      "id": 16,
+      "text": "Radioactivity was discovered by:",
+      "options": ["Rutherford", "Becquerel", "Bohr", "Madam Curie"],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Becquerel (1896)**\n\nHe discovered natural radioactivity in uranium salts."
+    },
+    {
+      "id": 17,
+      "text": "Isotopes have:",
+      "options": [
+        "Same mass number different atomic number",
+        "Different mass number same atomic number",
+        "Same atomic and mass number",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Different mass number but same atomic number**"
+    },
+    {
+      "id": 18,
+      "text": "Isotopes are nuclei having:",
+      "options": [
+        "Same neutrons different protons",
+        "Same protons different neutrons",
+        "Same protons and neutrons",
+        "Different protons and neutrons"
+      ],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Same protons different neutrons**"
+    },
+    {
+      "id": 19,
+      "text": "Which of the following represents an isoneutronic group?",
+      "options": [
+        "C12, N14, O16",
+        "C12, N14, O18",
+        "C14, N14, O16",
+        "C14, N15, O16"
+      ],
+      "correctIndex": 3,
+      "solution": "**Correct Answer: C14, N15, O16**\n\nThey have the same number of neutrons."
+    },
+    {
+      "id": 20,
+      "text": "Radioactivity is measured using which instrument?",
+      "options": ["Hydrometer", "Geiger Counter", "Seismometer", "Ammeter"],
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Geiger Counter**\n\nUsed to detect and measure ionizing radiation."
+    }
+  ]
+}
