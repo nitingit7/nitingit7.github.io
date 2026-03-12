@@ -1,0 +1,146 @@
+{
+  "title": "Biology Test 10 #bt0010",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Mushroom used in for making juicy vegetable is a",
+      "options": ["Fungus", "Algae", "Green vegetable", "Flesh of animal"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Fungus (A)**\n\nMushroom is the fruiting body of basidiomycete fungi (e.g., Agaricus). DRDO uses cultivated mushrooms (button, oyster) as high-protein, low-fat rations for high-altitude troops and forward posts because they provide complete protein, B-vitamins and immune-modulating polysaccharides (beta-glucans) without refrigeration issues. Mycorrhizal fungi are also researched for biofertilizer in border agriculture.\n\n**Option-wise Analysis:**\n• **Algae (B):** Photosynthetic, not edible mushroom.\n• **Green vegetable (C):** Misconception; mushroom is fungus, not plant.\n• **Flesh of animal (D):** Completely wrong kingdom.\n\n**Important Exam Concept:** Kingdom Fungi classification, edible fungi & nutritional security for defence rations (high-weightage in DRDO General Science)."
+    },
+    {
+      "id": 2,
+      "text": "Major component of cotton is",
+      "options": ["Protein", "Fatty acid", "Cellulose", "Glycerene"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Cellulose (C)**\n\nCotton fibre is 90-95 % pure cellulose (β-1,4-glucan polymer). DRDO textile division uses this knowledge for designing high-strength uniforms, parachute silk substitutes, bullet-proof vest composites and lightweight camouflage netting. Cellulose-based fabrics provide breathability, strength and UV resistance required for desert and high-altitude operations.\n\n**Option-wise Analysis:**\n• **Protein (A):** Silk fibre.\n• **Fatty acid (B):** Oils/fats.\n• **Glycerene (D):** Glycerol in fats.\n\n**Important Exam Concept:** Plant fibres, cellulose chemistry & defence textile engineering (frequently asked in DRDO papers)."
+    },
+    {
+      "id": 3,
+      "text": "Lichen are the complex creature, made from",
+      "options": ["Fungus and bacteria", "Fungus and algae", "Fungus and bryophyta", "Algae and bacteria"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Fungus and algae (B)**\n\nLichens are symbiotic association of mycobiont (fungus) and photobiont (green alga or cyanobacterium). The fungus provides structure and protection; alga provides food via photosynthesis. DRDO uses lichens as pioneer species for soil formation in high-altitude border areas (Ladakh, Siachen) and as bio-indicators for air pollution monitoring around military installations.\n\n**Option-wise Analysis:**\n• **Fungus and bacteria (A):** Wrong partner.\n• **Fungus and bryophyta (C):** Mosses are separate.\n• **Algae and bacteria (D):** No fungal component.\n\n**Important Exam Concept:** Symbiosis, ecological succession & environmental monitoring for defence applications."
+    },
+    {
+      "id": 4,
+      "text": "Lichens, which are capable of intiating ecological succession even on a bare rock, are actually a symbiotic association of",
+      "options": ["Algae and bacteria", "Algae and fungi", "Bacteria and fungi", "Fungi and mosses"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Algae and fungi (B)**\n\nSame concept as above. DRDO ecological warfare modelling and border greening projects rely on lichens for initial soil development in rocky terrains (Himalayas, Rajasthan desert). They also serve as pollution bio-indicators for monitoring air quality near sensitive defence installations.\n\n**Option-wise Analysis:**\n• Others incorrect partners.\n\n**Important Exam Concept:** Pioneer species & ecological succession in defence environmental science."
+    },
+    {
+      "id": 5,
+      "text": "Noscapine is obtained from",
+      "options": ["Poppy", "Basil", "Eucalyptus", "Ephedra"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Poppy (A)**\n\nNoscapine (narcotine) is an alkaloid from Papaver somniferum latex. DRDO medical research studies it for anti-tussive and anti-cancer properties in field hospital kits.\n\n**Option-wise Analysis:**\n• **Basil (B):** Essential oils.\n• **Eucalyptus (C):** Cineole.\n• **Ephedra (D):** Ephedrine.\n\n**Important Exam Concept:** Economic botany & pharmacognosy for defence medicine."
+    },
+    {
+      "id": 6,
+      "text": "Heroin is obtained from",
+      "options": ["Indian hemp", "Opium poppy", "Tobacco", "Areca nut"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Opium poppy (B)**\n\nHeroin (diacetylmorphine) is semi-synthetic derivative of morphine from Papaver somniferum. DRDO strictly monitors controlled substances in medical stocks for pain management in field hospitals.\n\n**Option-wise Analysis:**\n• **Indian hemp (A):** Cannabis.\n• **Tobacco (C):** Nicotine.\n• **Areca nut (D):** Arecoline.\n\n**Important Exam Concept:** Alkaloids & controlled substances in defence pharmacopeia."
+    },
+    {
+      "id": 7,
+      "text": "We get morphine from",
+      "options": ["Flower", "Leave", "Fruit", "Stem"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Fruit (C)**\n\nMorphine is extracted from latex of unripe fruit (capsule) of opium poppy. DRDO uses morphine derivatives in emergency medical kits for severe trauma in forward areas.\n\n**Option-wise Analysis:**\n• Others do not yield morphine.\n\n**Important Exam Concept:** Economic botany & pharmacognosy (defence medicine)."
+    },
+    {
+      "id": 8,
+      "text": "Opium is obtained from",
+      "options": ["Dried leaves", "Roots", "Latex from unripe fruit", "Latex from ripe fruit"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Latex from unripe fruit (C)**\n\nCommercial opium is dried latex from scored unripe capsules. DRDO medical protocols emphasise controlled sourcing for pain relief in combat situations.\n\n**Option-wise Analysis:**\n• Dried leaves/Roots (A,B): No opium.\n• Latex from ripe fruit (D): Low alkaloid content.\n\n**Important Exam Concept:** Economic botany & pharmacognosy (defence medicine)."
+    },
+    {
+      "id": 9,
+      "text": "The main constituent of opium is",
+      "options": ["Morphine", "Heroin", "Atropine", "Quinine"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Morphine (A)**\n\nMorphine (10-20 %) is the principal alkaloid. DRDO uses it as benchmark for synthetic analgesics in field medical kits.\n\n**Option-wise Analysis:**\n• Heroin (B): Semi-synthetic derivative.\n• Atropine (C): Belladonna.\n• Quinine (D): Cinchona.\n\n**Important Exam Concept:** Alkaloids & defence pharmacopeia."
+    },
+    {
+      "id": 10,
+      "text": "Assertion (A): Amoeba reproduces by fission. Reason (R): All unicellular organisms reproduce by asexual methods.",
+      "options": ["Both (A) and (R) are true and (R) is the correct explanation of (A)", "Both (A) and (R) are true, but (R) is not the correct explanation of (A)", "(A) is true, but (R) is false", "(A) is false, but (R) is true"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Both (A) and (R) are true and (R) is the correct explanation of (A) (A)**\n\nBinary fission is asexual reproduction typical of unicellular organisms. DRDO microbiology labs use this knowledge for rapid culture of beneficial microbes in biofertilizer and probiotic research for troop health.\n\n**Option-wise Analysis:**\n• Correct logical link.\n\n**Important Exam Concept:** Asexual reproduction & microbial biotechnology for defence applications."
+    },
+    {
+      "id": 11,
+      "text": "Consider the following animals. 1. Sea cow 2. Sea horse 3. Sea lion Which of the above is/are mammal/mammals?",
+      "options": ["Only 1", "1 and 3", "2 and 3", "All of these"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: 1 and 3 (B)**\n\nSea cow (dugong/manatee) and sea lion are mammals; sea horse is a fish. DRDO naval biology studies marine mammal physiology for diver safety and bio-sonar research.\n\n**Option-wise Analysis:**\n• Sea horse is not mammal.\n\n**Important Exam Concept:** Mammal classification & naval biology."
+    },
+    {
+      "id": 12,
+      "text": "Consider the following statements about mosquitoes. 1. Only males suck blood. 2. Only females suck blood. 3. Females suck plant juices. 4. Males have bigger wings than females. 5. Females have bigger wings than males. Of these",
+      "options": ["Only 2 and 4 are correct", "Only 1 and 2 are correct", "Only 3 and 5 are correct", "Only 2 and 5 are correct"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Only 2 and 5 are correct (D)**\n\nOnly female mosquitoes suck blood for egg development; females have larger wings. DRDO vector control research uses this for malaria/dengue prevention in forward areas.\n\n**Option-wise Analysis:**\n• Males do not suck blood.\n\n**Important Exam Concept:** Vector biology & disease control in defence operations."
+    },
+    {
+      "id": 13,
+      "text": "Match the following. List-I (a) Rhizome (b) Tuber (c) Bulb (d) Corm List-II 1. Garlic 2. Jimmykand-suran 3. Ginger 4. Potato",
+      "options": ["(a)1 (b)2 (c)3 (d)4", "(a)3 (b)4 (c)2 (d)1", "(a)3 (b)4 (c)1 (d)2", "(a)3 (b)1 (c)2 (d)4"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (a)3 (b)4 (c)1 (d)2 (C)**\n\nDRDO post-harvest technology uses this knowledge for storage and propagation of high-altitude crops (ginger, potato) in border agriculture.\n\n**Option-wise Analysis:**\n• Correct matching of modified stems.\n\n**Important Exam Concept:** Modified plant organs & economic botany for defence farming."
+    },
+    {
+      "id": 14,
+      "text": "Match List-I with List-II and select the correct answer using the code given below the lists. List-I (Product) (a) Opium (b) Hing (c) Rubber (d) Quinine List-II (Source) 1. Bark 2. Root 3. Fruit 4. Stem",
+      "options": ["(a)1 (b)2 (c)3 (d)4", "(a)3 (b)2 (c)4 (d)1", "(a)4 (b)2 (c)1 (d)3", "(a)2 (b)4 (c)3 (d)1"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: (a)3 (b)2 (c)4 (d)1 (B)**\n\nDRDO pharmacognosy uses this for sourcing natural drugs in contingency medical stocks.\n\n**Option-wise Analysis:**\n• Correct source matching.\n\n**Important Exam Concept:** Economic botany & natural product sourcing for defence medicine."
+    },
+    {
+      "id": 15,
+      "text": "Assertion (A): Some bacteria can synthesize their own food. Reason (R): These bacteria have green matter called chloroplasts.",
+      "options": ["Both (A) and (R) are true and (R) is the correct explanation of (A)", "Both (A) and (R) are true, but (R) is not the correct explanation of (A)", "(A) is true, but (R) is false", "(A) is false, but (R) is true"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (A) is true, but (R) is false (C)**\n\nPhotoautotrophic bacteria (e.g., cyanobacteria) use bacteriochlorophyll, not chloroplasts. DRDO biofertilizer programmes use these for nitrogen fixation in border agriculture.\n\n**Option-wise Analysis:**\n• Chloroplasts are in eukaryotes.\n\n**Important Exam Concept:** Bacterial photosynthesis & biofertilizers for defence farming."
+    },
+    {
+      "id": 16,
+      "text": "Read the given statements. Assertion (A): The root systems of desert plants are longer. Reason (R): High temperature of soil encourages the growth of roots.",
+      "options": ["Both (A) and (R) are true and (R) is the correct explanation of (A)", "Both (A) and (R) are true, but (R) is not the correct explanation of (A)", "(A) is true, but (R) is false", "(A) is false, but (R) is true"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (A) is true, but (R) is false (C)**\n\nLong roots in desert plants are for reaching deep water (phreatophytes). DRDO uses this for desert camouflage and soldier survival training in Rajasthan border areas.\n\n**Option-wise Analysis:**\n• High temperature is not the reason.\n\n**Important Exam Concept:** Xerophyte adaptations & desert warfare ecology."
+    },
+    {
+      "id": 17,
+      "text": "Consider the following statements. 1. Weeping jelly is due to an excess of acid. 2. Biofertilizer most suited to sugarcane are Rhizobium. 3. Plants grown in salt water are called thallophytes. 4. Dormancy breaking hormone is cytokinin. Which of these statements are correct?",
+      "options": ["Only 1 and 2", "Only 2 and 3", "Only 3 and 4", "Only 4 and 1"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Only 4 and 1 (D)**\n\nDRDO post-harvest technology and biofertilizer programmes use cytokinin research for seed treatment in border agriculture.\n\n**Option-wise Analysis:**\n• 2 is wrong (Azotobacter for sugarcane). 3 is wrong (halophytes).\n\n**Important Exam Concept:** Plant hormones & biofertilizers for defence agriculture."
+    },
+    {
+      "id": 18,
+      "text": "Mendel’s principle of inheritance is based on",
+      "options": ["Vegetative reproduction", "Asexual reproduction", "Sexual reproduction", "All of the above"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Sexual reproduction (C)**\n\nMendel used pea plants (sexual reproduction) to discover laws of segregation and independent assortment. DRDO human genetics and breeding programmes for high-altitude crops rely on these principles.\n\n**Option-wise Analysis:**\n• Vegetative/Asexual (A,B): No segregation.\n\n**Important Exam Concept:** Mendelian genetics & crop improvement for defence farming."
+    },
+    {
+      "id": 19,
+      "text": "Genome mapping relates to",
+      "options": ["Blood grouping", "Mapping of genes", "Mapping of nerve centres", "Mapping of brain"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Mapping of genes (B)**\n\nDRDO uses genome mapping for developing stress-tolerant crops and understanding human genetic factors for high-altitude soldier performance.\n\n**Option-wise Analysis:**\n• Others unrelated to genome.\n\n**Important Exam Concept:** Genomics & biotechnology for defence applications."
+    },
+    {
+      "id": 20,
+      "text": "Who is the father of modern genetics?",
+      "options": ["Gregor Johann Mendel", "Hugo De Vries", "Charles Darwin", "Thomas Hunt Morgan"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Gregor Johann Mendel (A)**\n\nMendel’s pea experiments laid foundation of genetics. DRDO applies Mendelian principles in selective breeding of crops for border agriculture and in understanding genetic traits for soldier selection.\n\n**Option-wise Analysis:**\n• Hugo De Vries (B): Mutation theory.\n• Darwin (C): Evolution.\n• Morgan (D): Linkage in Drosophila.\n\n**Important Exam Concept:** Foundations of genetics & applied breeding for defence agriculture."
+    }
+  ]
+}
