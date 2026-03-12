@@ -130,10 +130,10 @@ var GITHUB_FILES = {
 
     // --- 6. CHEMISTRY ---
     'chemistry_sectional': [
+        { name: "Chemistry Test 1 (Atomic Structure)", tags: "Bio", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Chemistry/CT001.json" },
         // Add your full chemistry tests here
     ],
     'chemistry_topic': [
-        { name: "Chemistry Test 1 (Atomic Structure)", tags: "Bio", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Chemistry/CT001.json" },
         // Add your chapter-wise chemistry tests here
     ],
 
