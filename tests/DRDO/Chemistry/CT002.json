@@ -4,7 +4,7 @@
   "questions": [
     {
       "id": 1,
-      "text": "Match List-I with List-II and select the correct answer using the code given below the lists. List-I (Characteristic): (a) Zero mass (b) Fractional charge (c) Fractional spin (d) Integral spin. List-II (Particle): 1. Positron 2. Neutrino 3. Quark 4. Photon",
+      "text": "Match List-I with List-II and select the correct answer using the code given below the lists.\n\n**List-I (Characteristic)**\n(a) Zero mass\n(b) Fractional charge\n(c) Fractional spin\n(d) Integral spin\n\n**List-II (Particle)**\n1. Positron\n2. Neutrino\n3. Quark\n4. Photon\n\nCodes:\n(a) (b) (c) (d)",
       "options": [
         "(A) 2 3 1 4",
         "(B) 3 2 4 1",
@@ -12,235 +12,245 @@
         "(D) 3 2 1 4"
       ],
       "correctIndex": 0,
-      "solution": "**Correct Answer: (A) 2 3 1 4**\n\n**Correct Matching:**\n(a) Zero mass → Neutrino (2)\n(b) Fractional charge → Quark (3)\n(c) Fractional spin → Positron (1)\n(d) Integral spin → Photon (4)\n\n**Concept Explanation:**\nModern particle physics classifies particles based on properties like mass, charge and spin.\n\n**Option-wise Analysis:**\n(A) Correct mapping according to particle physics.\n(B) Incorrect because neutrino has near-zero mass.\n(C) Incorrect because photon corresponds to integral spin.\n(D) Incorrect matching of quark and neutrino.\n\n**Key DRDO Exam Insight:**\n• Quarks have fractional charges (+2/3, −1/3).\n• Photon has spin = 1.\n• Neutrinos have extremely small mass and no electric charge."
+      "solution": "**Correct Answer: (A) 2 3 1 4**\n\nMatching:\n(a) Zero mass → Neutrino\n(b) Fractional charge → Quark\n(c) Fractional spin → Positron\n(d) Integral spin → Photon\n\nExplanation:\n• Neutrino has extremely small or nearly zero rest mass.\n• Quarks possess fractional electric charges (+2/3 or −1/3).\n• Positron is the antiparticle of electron with spin 1/2.\n• Photon is a boson with integral spin (spin = 1).\n\nExam Insight:\nQuestions related to **fundamental particles and their properties** are frequently asked in competitive exams."
     },
     {
       "id": 2,
-      "text": "Which of the following particles has zero mass?",
+      "text": "Which of the following is an example of chemical change?",
       "options": [
-        "Electron",
-        "Neutrino",
-        "Photon",
-        "Proton"
+        "Dispersion of white light through prism",
+        "Softening of vegetables when cooked",
+        "Wet soil lamp becomes fragile after drying",
+        "Dissolving salt in water"
       ],
-      "correctIndex": 2,
-      "solution": "**Correct Answer: Photon**\n\n**Explanation:**\nPhotons are particles of electromagnetic radiation. According to modern physics they have **zero rest mass** but possess energy and momentum.\n\n**Option Analysis:**\nElectron – Has measurable mass (9.11 × 10⁻³¹ kg).\nNeutrino – Very small but non-zero mass.\nPhoton – Massless particle.\nProton – Heavy particle in nucleus.\n\n**Exam Tip:**\nMassless particles in physics include **photons and gluons**."
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Softening of vegetables when cooked**\n\nExplanation:\nCooking vegetables causes **chemical reactions that permanently change their composition**.\n\nOption Analysis:\n• Dispersion of light → Physical change.\n• Softening of vegetables → Chemical change.\n• Drying soil → Physical change.\n• Salt dissolving → Physical change."
     },
     {
       "id": 3,
-      "text": "Which particle possesses fractional electric charge?",
+      "text": "What form of energy is produced in the decomposition of water?",
       "options": [
-        "Electron",
-        "Proton",
-        "Quark",
-        "Neutron"
+        "Light",
+        "Heat",
+        "Sound",
+        "Acid"
       ],
-      "correctIndex": 2,
-      "solution": "**Correct Answer: Quark**\n\n**Explanation:**\nQuarks are fundamental particles forming protons and neutrons. They possess **fractional charges such as +2/3 or −1/3**.\n\n**Option Analysis:**\nElectron – Charge −1.\nProton – Charge +1.\nQuark – Fractional charge.\nNeutron – Net charge zero.\n\n**Exam Insight:**\nSix types of quarks exist: up, down, charm, strange, top, bottom."
+      "correctIndex": 1,
+      "solution": "**Correct Answer: Heat**\n\nExplanation:\nDecomposition reactions generally involve **energy exchange**, often heat or electrical energy.\n\nOther options do not represent the primary energy change in this reaction."
     },
     {
       "id": 4,
-      "text": "Which particle has integral spin?",
+      "text": "An example of physical change is",
       "options": [
-        "Electron",
-        "Photon",
-        "Quark",
-        "Neutrino"
+        "Blackening of silverware",
+        "Burning of candle",
+        "Making curd from milk",
+        "Dissolving sugar in water"
       ],
-      "correctIndex": 1,
-      "solution": "**Correct Answer: Photon**\n\n**Explanation:**\nParticles are classified into:\n• **Fermions** (half-integer spin)\n• **Bosons** (integer spin)\n\nPhoton is a **boson with spin = 1**.\n\n**Option Analysis:**\nElectron – Spin 1/2\nQuark – Spin 1/2\nNeutrino – Spin 1/2\nPhoton – Spin 1"
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Dissolving sugar in water**\n\nExplanation:\nIn a physical change, **no new substance is formed** and the process is reversible.\n\nOption Analysis:\n• Blackening of silver → Chemical reaction (tarnish).\n• Burning candle → Chemical change.\n• Curd formation → Chemical fermentation.\n• Sugar dissolving → Physical process."
     },
     {
       "id": 5,
-      "text": "Which particle is nearly massless and electrically neutral?",
+      "text": "Change of water into vapour is called",
       "options": [
-        "Electron",
-        "Neutrino",
-        "Photon",
-        "Proton"
+        "Natural change",
+        "Physical change",
+        "Chemical change",
+        "Biological change"
       ],
       "correctIndex": 1,
-      "solution": "**Correct Answer: Neutrino**\n\n**Explanation:**\nNeutrinos are extremely light neutral particles produced during nuclear reactions such as beta decay.\n\n**Exam Insight:**\nNeutrinos rarely interact with matter and can pass through Earth without collision."
+      "solution": "**Correct Answer: Physical change**\n\nExplanation:\nDuring vaporization only the **state of matter changes**, not the chemical composition."
     },
     {
       "id": 6,
-      "text": "Which fundamental particle is responsible for electromagnetic radiation?",
+      "text": "Pasteurization is a process by which",
       "options": [
-        "Electron",
-        "Photon",
-        "Neutron",
-        "Proton"
+        "Milk is preserved at very low temperature",
+        "Milk is heated for 8 hours",
+        "Milk is heated and suddenly cooled",
+        "None of the above"
       ],
-      "correctIndex": 1,
-      "solution": "**Correct Answer: Photon**\n\n**Explanation:**\nPhoton is the quantum particle of electromagnetic radiation including visible light, radio waves and X-rays."
+      "correctIndex": 2,
+      "solution": "**Correct Answer: Milk is heated and suddenly cooled**\n\nExplanation:\nPasteurization involves heating milk to a specific temperature and **rapid cooling to kill harmful microorganisms**."
     },
     {
       "id": 7,
-      "text": "Which particle is the antiparticle of electron?",
+      "text": "Pasteurization is related to",
       "options": [
-        "Positron",
-        "Proton",
-        "Neutrino",
-        "Photon"
+        "Sterilization of milk",
+        "Dehydration of milk",
+        "Fermentation of milk",
+        "Distillation of milk"
       ],
       "correctIndex": 0,
-      "solution": "**Correct Answer: Positron**\n\n**Explanation:**\nPositron has same mass as electron but opposite charge.\n\n**Exam Insight:**\nElectron + Positron annihilation produces gamma rays."
+      "solution": "**Correct Answer: Sterilization of milk**\n\nExplanation:\nPasteurization reduces harmful microbes while preserving milk quality."
     },
     {
       "id": 8,
-      "text": "Which particle is a constituent of proton and neutron?",
+      "text": "Which of the following statement is not true?",
       "options": [
-        "Electron",
-        "Quark",
-        "Photon",
-        "Neutrino"
+        "Boiling point of solution is higher than pure water",
+        "Addition of solute increases water potential",
+        "Vapour pressure of solution is lower than pure water",
+        "Water flow can be stopped by applying pressure"
       ],
       "correctIndex": 1,
-      "solution": "**Correct Answer: Quark**\n\nProtons and neutrons are composed of **three quarks each**."
+      "solution": "**Correct Answer: Addition of solute increases water potential**\n\nExplanation:\nAdding solute **decreases water potential**, which drives osmosis."
     },
     {
       "id": 9,
-      "text": "Which particle mediates electromagnetic force?",
+      "text": "Because of impurities the boiling point of a liquid",
       "options": [
-        "Photon",
-        "Electron",
-        "Neutrino",
-        "Proton"
+        "Increases",
+        "Decreases",
+        "Remains constant",
+        "Not related"
       ],
       "correctIndex": 0,
-      "solution": "**Correct Answer: Photon**\n\nPhotons act as **force carriers of electromagnetic interaction**."
+      "solution": "**Correct Answer: Increases**\n\nExplanation:\nImpurities cause **boiling point elevation**, a colligative property."
     },
     {
       "id": 10,
-      "text": "Which of the following is a boson?",
+      "text": "Why does water boil below 100°C at higher altitudes?",
       "options": [
-        "Electron",
-        "Quark",
-        "Photon",
-        "Neutrino"
+        "Atmospheric pressure decreases",
+        "Gravitational attraction decreases",
+        "Heavy winds",
+        "None of these"
       ],
-      "correctIndex": 2,
-      "solution": "**Correct Answer: Photon**\n\nBosons have integer spin. Photon has spin = 1."
+      "correctIndex": 0,
+      "solution": "**Correct Answer: Atmospheric pressure decreases**\n\nExplanation:\nLower atmospheric pressure reduces boiling point."
     },
+
     {
       "id": 11,
-      "text": "Which of the following is a fermion?",
+      "text": "Which colloidal system represents fog?",
       "options": [
-        "Electron",
-        "Photon",
-        "Gluon",
-        "Higgs boson"
+        "Liquid in gas",
+        "Gas in liquid",
+        "Solid in gas",
+        "Liquid in liquid"
       ],
       "correctIndex": 0,
-      "solution": "**Correct Answer: Electron**\n\nFermions have half-integer spin and obey **Pauli Exclusion Principle**."
+      "solution": "**Correct Answer: Liquid in gas**\n\nExplanation:\nFog consists of **tiny water droplets dispersed in air**."
     },
+
     {
       "id": 12,
-      "text": "Which particle carries no electric charge?",
+      "text": "Chromatography is used to",
       "options": [
-        "Electron",
-        "Proton",
-        "Neutron",
-        "Positron"
+        "Identify colour substances",
+        "Determine structure",
+        "Dry distillation",
+        "Separate mixture components"
       ],
-      "correctIndex": 2,
-      "solution": "**Correct Answer: Neutron**\n\nNeutron is electrically neutral."
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Separate mixture components**\n\nExplanation:\nChromatography separates compounds based on **different adsorption or solubility properties**."
     },
+
     {
       "id": 13,
-      "text": "Which particle determines chemical properties of an atom?",
+      "text": "Conversion of solid camphor to vapour is called",
       "options": [
-        "Proton",
-        "Electron",
-        "Neutron",
-        "Nucleus"
+        "Vaporization",
+        "Freezing",
+        "Melting",
+        "Sublimation"
       ],
-      "correctIndex": 1,
-      "solution": "**Correct Answer: Electron**\n\nElectrons determine **chemical bonding and reactivity**."
+      "correctIndex": 3,
+      "solution": "**Correct Answer: Sublimation**\n\nExplanation:\nSublimation is the direct transition **solid → gas without liquid phase**."
     },
+
     {
       "id": 14,
-      "text": "Which particle determines atomic number?",
+      "text": "Example of corrosion is",
       "options": [
-        "Electron",
-        "Neutron",
-        "Proton",
-        "Photon"
+        "Black coating on silver",
+        "Green coating on copper",
+        "Brown coating on iron",
+        "All of these"
       ],
-      "correctIndex": 2,
-      "solution": "**Correct Answer: Proton**\n\nAtomic number = number of protons."
+      "correctIndex": 3,
+      "solution": "**Correct Answer: All of these**\n\nExplanation:\nCorrosion examples:\n• Silver → black Ag₂S\n• Copper → green CuCO₃\n• Iron → rust Fe₂O₃"
     },
+
     {
       "id": 15,
-      "text": "Which particle contributes most to atomic mass?",
+      "text": "Which of the following is a chemical change?\n1. Crystallization of sodium chloride\n2. Melting of ice\n3. Souring of milk",
       "options": [
-        "Electron",
-        "Proton and neutron",
-        "Photon",
-        "Neutrino"
+        "1 and 2",
+        "Only 3",
+        "1, 2 and 3",
+        "None"
       ],
       "correctIndex": 1,
-      "solution": "**Correct Answer: Proton and neutron**\n\nElectrons have negligible mass."
+      "solution": "**Correct Answer: Only 3**\n\nExplanation:\nSouring milk forms **new substances (lactic acid)**."
     },
+
     {
       "id": 16,
-      "text": "Which particle exists outside the nucleus?",
+      "text": "A chemical reaction becomes faster at higher temperature because",
       "options": [
-        "Electron",
-        "Neutron",
-        "Proton",
-        "Alpha particle"
+        "Molecules move faster",
+        "Energy decreases",
+        "Pressure decreases",
+        "None"
       ],
       "correctIndex": 0,
-      "solution": "**Correct Answer: Electron**"
+      "solution": "**Correct Answer: Molecules move faster**\n\nExplanation:\nHigher temperature increases **kinetic energy and collision frequency**."
     },
+
     {
       "id": 17,
-      "text": "Which particle was discovered by J.J. Thomson?",
+      "text": "Temperature below 0°C can be obtained using mixture of",
       "options": [
-        "Electron",
-        "Proton",
-        "Neutron",
-        "Photon"
+        "Salt and ice",
+        "Sugar and ice",
+        "Water and salt",
+        "None"
       ],
       "correctIndex": 0,
-      "solution": "**Correct Answer: Electron**"
+      "solution": "**Correct Answer: Salt and ice**\n\nExplanation:\nSalt lowers freezing point via **freezing point depression**."
     },
+
     {
       "id": 18,
-      "text": "Which particle was discovered by Rutherford?",
+      "text": "In osmosis the solvent moves from",
       "options": [
-        "Electron",
-        "Neutron",
-        "Proton",
-        "Photon"
-      ],
-      "correctIndex": 2,
-      "solution": "**Correct Answer: Proton**"
-    },
-    {
-      "id": 19,
-      "text": "Which particle was discovered by James Chadwick?",
-      "options": [
-        "Electron",
-        "Proton",
-        "Neutron",
-        "Photon"
-      ],
-      "correctIndex": 2,
-      "solution": "**Correct Answer: Neutron**"
-    },
-    {
-      "id": 20,
-      "text": "Which particle is responsible for nuclear stability?",
-      "options": [
-        "Electron",
-        "Neutron",
-        "Photon",
-        "Positron"
+        "Concentrated to dilute solution",
+        "Dilute to concentrated solution",
+        "Solid to liquid",
+        "Gas to liquid"
       ],
       "correctIndex": 1,
-      "solution": "**Correct Answer: Neutron**\n\nNeutrons reduce repulsion between protons and stabilize the nucleus."
+      "solution": "**Correct Answer: Dilute to concentrated solution**\n\nExplanation:\nOsmosis moves solvent through a **semipermeable membrane**."
+    },
+
+    {
+      "id": 19,
+      "text": "Oxidation number of Mn in MnO₂ is",
+      "options": [
+        "+2",
+        "+3",
+        "+4",
+        "+6"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: +4**\n\nExplanation:\nOxygen = −2 each → total −4\nTherefore Mn = +4."
+    },
+
+    {
+      "id": 20,
+      "text": "Oxidation number of sulphur in H₂SO₄ is",
+      "options": [
+        "+2",
+        "+4",
+        "+6",
+        "+8"
+      ],
+      "correctIndex": 2,
+      "solution": "**Correct Answer: +6**\n\nExplanation:\nHydrogen = +1 ×2 = +2\nOxygen = −2 ×4 = −8\nTherefore S = +6."
     }
   ]
 }
