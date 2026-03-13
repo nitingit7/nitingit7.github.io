@@ -1,0 +1,167 @@
+{
+"title": "Biology Test 11 #bt0011 (Heredity and Biofertilizer)",
+"timeLimit": 10,
+"questions": [
+
+{
+"id":1,
+"text":"The classical Mendel’s work on his ‘laws of inheritance’ was performed on the organism\n\n(A) Drosophila\n(B) Snapdragon\n(C) Garden pea\n(D) Sweet pea",
+"options":["Drosophila","Snapdragon","Garden pea","Sweet pea"],
+"correctIndex":2,
+"solution":"**Correct Answer: Garden pea**\n\nExplanation:\nGregor Johann Mendel performed his genetic experiments on the **garden pea plant (Pisum sativum)** because it has clear contrasting traits and easy controlled pollination.\n\nOption Analysis:\n• Drosophila → Fruit fly used later by Thomas Hunt Morgan for chromosome theory.\n• Snapdragon → Used in incomplete dominance experiments.\n• Garden pea → Correct; Mendel discovered **Law of Segregation and Law of Independent Assortment** here.\n• Sweet pea → Used in genetic linkage studies.\n\nExam Insight:\nMendel studied **7 contrasting characters** such as seed color, seed shape and flower color."
+},
+
+{
+"id":2,
+"text":"The sugar present in DNA is\n\n(A) Glucose\n(B) Fructose\n(C) Deoxyribose\n(D) Ribose",
+"options":["Glucose","Fructose","Deoxyribose","Ribose"],
+"correctIndex":2,
+"solution":"**Correct Answer: Deoxyribose**\n\nExplanation:\nDNA stands for **Deoxyribonucleic Acid**, which contains the sugar **deoxyribose**.\n\nOption Analysis:\n• Glucose → Simple carbohydrate used in metabolism.\n• Fructose → Fruit sugar.\n• Deoxyribose → Correct; sugar present in DNA backbone.\n• Ribose → Sugar present in RNA.\n\nExam Tip:\nDNA = Deoxyribose sugar\nRNA = Ribose sugar."
+},
+
+{
+"id":3,
+"text":"Hereditary symptoms are moved in the descendant of creatures by\n\n(A) Ribosome\n(B) Chromosome\n(C) Plasma\n(D) Lysosome",
+"options":["Ribosome","Chromosome","Plasma","Lysosome"],
+"correctIndex":1,
+"solution":"**Correct Answer: Chromosome**\n\nExplanation:\nChromosomes contain **genes**, which transmit hereditary information from parents to offspring.\n\nOption Analysis:\n• Ribosome → Site of protein synthesis.\n• Chromosome → Correct; carriers of genetic information.\n• Plasma → Cell fluid without genetic control role.\n• Lysosome → Organelle for digestion.\n\nExam Insight:\nHumans have **23 pairs of chromosomes (46 total)**."
+},
+
+{
+"id":4,
+"text":"Which of the following is responsible for controlling hereditary characters of the living cells?\n\n(A) Enzyme\n(B) Hormone\n(C) RNA\n(D) None of the above",
+"options":["Enzyme","Hormone","RNA","None of the above"],
+"correctIndex":3,
+"solution":"**Correct Answer: None of the above**\n\nExplanation:\nHereditary characters are controlled mainly by **genes located on DNA**, not enzymes, hormones or RNA."
+},
+
+{
+"id":5,
+"text":"The unit of heredity in our body is called\n\n(A) Chromosome\n(B) DNA\n(C) Gene\n(D) Nucleus",
+"options":["Chromosome","DNA","Gene","Nucleus"],
+"correctIndex":2,
+"solution":"**Correct Answer: Gene**\n\nExplanation:\nA **gene** is the smallest functional unit of heredity responsible for expression of traits."
+},
+
+{
+"id":6,
+"text":"Gene is\n\n(A) A segment of DNA\n(B) A segment of DNA and histone\n(C) A segment of DNA, RNA and histone\n(D) All of the above",
+"options":["A segment of DNA","A segment of DNA and histone","A segment of DNA, RNA and histone","All of the above"],
+"correctIndex":0,
+"solution":"**Correct Answer: A segment of DNA**\n\nExplanation:\nGenes are **specific sequences of DNA** coding for proteins."
+},
+
+{
+"id":7,
+"text":"Who delivered the principle of ‘jumping gene’?\n\n(A) Gregor Johann Mendel\n(B) Tomas Hunt Morgan\n(C) Barbara Mc Clintock\n(D) Watson and Crick",
+"options":["Gregor Johann Mendel","Tomas Hunt Morgan","Barbara Mc Clintock","Watson and Crick"],
+"correctIndex":2,
+"solution":"**Correct Answer: Barbara McClintock**\n\nExplanation:\nShe discovered **transposons (jumping genes)** in maize and received the Nobel Prize."
+},
+
+{
+"id":8,
+"text":"Which compound present in D.N.A. does not form amino acid?\n\n(A) Adenine\n(B) Tyrosine\n(C) Guanine\n(D) Cytosine",
+"options":["Adenine","Tyrosine","Guanine","Cytosine"],
+"correctIndex":1,
+"solution":"**Correct Answer: Tyrosine**\n\nExplanation:\nTyrosine is an **amino acid**, whereas adenine, guanine and cytosine are **nitrogen bases of DNA**."
+},
+
+{
+"id":9,
+"text":"Which of the following professional(s) are more likely to run the risk of a permanent change in their cell’s DNA?\n1. Researchers using carbon 14 isotope\n2. X-ray technician\n3. Coal miner\n4. Dyer and painter\n\nCode\n(A) Only 2\n(B) 1, 2 and 3\n(C) 1, 2 and 4\n(D) 1, 3 and 4",
+"options":["Only 2","1, 2 and 3","1, 2 and 4","1, 3 and 4"],
+"correctIndex":0,
+"solution":"**Correct Answer: Only 2**\n\nExplanation:\nX-ray technicians are exposed to **ionizing radiation**, which can damage DNA and cause mutations."
+},
+
+{
+"id":10,
+"text":"Which of the following is a source of biofertilizer?\n\n(A) Yeast\n(B) Chlorella\n(C) Azolla\n(D) Mold",
+"options":["Yeast","Chlorella","Azolla","Mold"],
+"correctIndex":2,
+"solution":"**Correct Answer: Azolla**\n\nExplanation:\nAzolla is an aquatic fern containing **Anabaena cyanobacteria** which fixes atmospheric nitrogen."
+},
+
+{
+"id":11,
+"text":"Which of the following is a biofertilizer?\n\n(A) Urea\n(B) 2,4-D\n(C) Streptocycline\n(D) Azolla",
+"options":["Urea","2,4-D","Streptocycline","Azolla"],
+"correctIndex":3,
+"solution":"**Correct Answer: Azolla**\n\nExplanation:\nAzolla enriches soil with nitrogen and improves soil fertility."
+},
+
+{
+"id":12,
+"text":"The biofertilizer used as a supplementary food for the cattle, especially for milking bovinces is\n\n(A) Azospirillum\n(B) Azolla\n(C) Azotobacter\n(D) Rhizobium",
+"options":["Azospirillum","Azolla","Azotobacter","Rhizobium"],
+"correctIndex":1,
+"solution":"**Correct Answer: Azolla**\n\nExplanation:\nAzolla contains **20–25% protein** and is used as animal feed."
+},
+
+{
+"id":13,
+"text":"Which of these is not correctly matched?\n\n(A) Blue-green algae - Biofertilizer\n(B) Chrysopa - Maho-control\n(C) Bio 902 - Variety of mustard\n(D) Azotobacter - Bioinsecticide",
+"options":["Blue-green algae - Biofertilizer","Chrysopa - Maho-control","Bio 902 - Variety of mustard","Azotobacter - Bioinsecticide"],
+"correctIndex":3,
+"solution":"**Correct Answer: Azotobacter - Bioinsecticide**\n\nExplanation:\nAzotobacter is a **biofertilizer**, not a bioinsecticide."
+},
+
+{
+"id":14,
+"text":"Which bacteria is responsible for nitrogen fixation in soyabean?\n\n(A) Rhizobium leguminosarum\n(B) Rhizobium japonicum\n(C) Rhizobium fajioleai\n(D) Rhizobium traitolai",
+"options":["Rhizobium leguminosarum","Rhizobium japonicum","Rhizobium fajioleai","Rhizobium traitolai"],
+"correctIndex":1,
+"solution":"**Correct Answer: Rhizobium japonicum**\n\nExplanation:\nThis bacterium forms **root nodules in soybean plants and fixes atmospheric nitrogen**."
+},
+
+{
+"id":15,
+"text":"2, 4-D is\n\n(A) An insecticide\n(B) An explosive\n(C) A fungicide\n(D) A herbicide",
+"options":["An insecticide","An explosive","A fungicide","A herbicide"],
+"correctIndex":3,
+"solution":"**Correct Answer: Herbicide**\n\nExplanation:\n2,4-D is widely used to kill **broadleaf weeds**."
+},
+
+{
+"id":16,
+"text":"Blue-green algae are chiefly used as biofertilizer in the crop of\n\n(A) Wheat\n(B) Gram\n(C) Paddy\n(D) Mustard",
+"options":["Wheat","Gram","Paddy","Mustard"],
+"correctIndex":2,
+"solution":"**Correct Answer: Paddy**\n\nExplanation:\nCyanobacteria such as **Anabaena and Nostoc** fix nitrogen in rice fields."
+},
+
+{
+"id":17,
+"text":"Blue-green algae is used to supply nitrogen to\n\n(A) Bajra\n(B) Maize\n(C) Paddy\n(D) Wheat",
+"options":["Bajra","Maize","Paddy","Wheat"],
+"correctIndex":2,
+"solution":"**Correct Answer: Paddy**"
+},
+
+{
+"id":18,
+"text":"Which one of the following is not correctly matched?\nNitrogen fixing Crop agent\n\n(A) Blue-green algae - Paddy\n(B) Rhizobium - Pea Leguminisarum\n(C) Azotobacter - Wheat\n(D) Azolla - Maize",
+"options":["Blue-green algae - Paddy","Rhizobium - Pea Leguminisarum","Azotobacter - Wheat","Azolla - Maize"],
+"correctIndex":3,
+"solution":"**Correct Answer: Azolla - Maize**\n\nExplanation:\nAzolla is mainly used in **paddy fields**, not maize."
+},
+
+{
+"id":19,
+"text":"Azolla gives a good biofertilizer when mixed with\n\n(A) Blue-green algae\n(B) Bone meal\n(C) Cow dung\n(D) Urea",
+"options":["Blue-green algae","Bone meal","Cow dung","Urea"],
+"correctIndex":0,
+"solution":"**Correct Answer: Blue-green algae**\n\nExplanation:\nThe combination enhances nitrogen fixation."
+},
+
+{
+"id":20,
+"text":"Azolla is often used as biofertilizer because it is associated with\n\n(A) Blue-green algae\n(B) Red algae\n(C) Fungus\n(D) Moss",
+"options":["Blue-green algae","Red algae","Fungus","Moss"],
+"correctIndex":0,
+"solution":"**Correct Answer: Blue-green algae**\n\nExplanation:\nAzolla contains the nitrogen-fixing cyanobacterium **Anabaena azollae**."
+}
+
+]
+}
