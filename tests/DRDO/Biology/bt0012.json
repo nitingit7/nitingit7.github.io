@@ -1,0 +1,167 @@
+{
+"title": "Biology Test 12 #bt0012 (Biofertilizer & Cell)",
+"timeLimit": 10,
+"questions":[
+
+{
+"id":1,
+"text":"Azolla is",
+"options":["Aquatic Fern","Aquatic algae","Aquatic bacteria","None of the above"],
+"correctIndex":0,
+"solution":"**Correct Answer: Aquatic Fern**\n\nAzolla is a small floating **aquatic fern** commonly used as a biofertilizer in paddy fields.\n\nOption Analysis:\n• Aquatic Fern → Correct. Azolla belongs to pteridophytes.\n• Aquatic algae → Incorrect. Although it grows with algae (Anabaena), it itself is a fern.\n• Aquatic bacteria → Incorrect.\n• None of the above → Incorrect.\n\nExam Insight:\nAzolla lives in symbiosis with **Anabaena azollae**, which fixes atmospheric nitrogen."
+},
+
+{
+"id":2,
+"text":"Aquatic Fern, which is used as a biofertilizer is",
+"options":["Salvinia","Azolla","Marsilia","Pteridium"],
+"correctIndex":1,
+"solution":"**Correct Answer: Azolla**\n\nAzolla is widely used in rice cultivation as a biofertilizer.\n\nOption Analysis:\n• Salvinia → Aquatic fern but not widely used as biofertilizer.\n• Azolla → Correct. Contains nitrogen-fixing cyanobacteria.\n• Marsilia → Aquatic fern but not used as fertilizer.\n• Pteridium → Terrestrial fern."
+},
+
+{
+"id":3,
+"text":"Which of the following microorganisms are used as biofertilizer?",
+"options":["Cyanobacteria","Protozoa","Virus","None of the above"],
+"correctIndex":0,
+"solution":"**Correct Answer: Cyanobacteria**\n\nCyanobacteria (blue-green algae) fix atmospheric nitrogen and enrich soil fertility.\n\nOption Analysis:\n• Cyanobacteria → Correct. Examples include Nostoc and Anabaena.\n• Protozoa → Mostly heterotrophic and not used as fertilizers.\n• Virus → Infective agents; no role in soil fertility.\n• None of the above → Incorrect."
+},
+
+{
+"id":4,
+"text":"The capability of nitrogen use efficiency can be increased in crop production by",
+"options":["Use of split application","Use of nitrogen inhibitors","Using the slow release of nitrogen fertilizer","All of the above"],
+"correctIndex":3,
+"solution":"**Correct Answer: All of the above**\n\nNitrogen use efficiency increases when nitrogen is supplied gradually or controlled.\n\nOption Analysis:\n• Split application → Prevents nitrogen loss.\n• Nitrogen inhibitors → Reduce nitrification losses.\n• Slow-release fertilizers → Provide nitrogen steadily.\n• All of the above → Correct."
+},
+
+{
+"id":5,
+"text":"Which of the following is/are used as biofertilizers?\n1. Azolla\n2. Blue-green algae\n3. Alfalfa\nSelect the correct answer by the given codes.",
+"options":["Only 2","1 and 2","1 and 3","1, 2 and 3"],
+"correctIndex":1,
+"solution":"**Correct Answer: 1 and 2**\n\nAzolla and blue-green algae are important biological nitrogen fixers used as biofertilizers."
+},
+
+{
+"id":6,
+"text":"How many chromosomes are there in humans?",
+"options":["36","46","56","26"],
+"correctIndex":1,
+"solution":"**Correct Answer: 46**\n\nHuman somatic cells contain **46 chromosomes arranged in 23 pairs**."
+},
+
+{
+"id":7,
+"text":"The number of chromosomes pairs found in the cells of human body is",
+"options":["21","22","23","24"],
+"correctIndex":2,
+"solution":"**Correct Answer: 23**\n\nHumans have **23 pairs of chromosomes**."
+},
+
+{
+"id":8,
+"text":"Which organelle in the cell, other than the nucleus, contains DNA?",
+"options":["Centriole","Golgi apparatus","Lysosome","Mitochondrion"],
+"correctIndex":3,
+"solution":"**Correct Answer: Mitochondrion**\n\nMitochondria contain their own circular DNA called **mtDNA**."
+},
+
+{
+"id":9,
+"text":"Which one of the following statements is correct?",
+"options":["Prions are the smallest free-living cells","The cell wall of Mycoplasmas is made up of amino sugars","Viroids consist of single-stranded RNA molecules","Rickettsias lack cell wall"],
+"correctIndex":2,
+"solution":"**Correct Answer: Viroids consist of single-stranded RNA molecules**\n\nViroids are infectious RNA particles lacking protein coat."
+},
+
+{
+"id":10,
+"text":"The reason of large-scale diversity among the organisms is",
+"options":["Adaptation","Co-operation","Mutation","Polyploidy"],
+"correctIndex":2,
+"solution":"**Correct Answer: Mutation**\n\nMutations create genetic variations which drive evolution."
+},
+
+{
+"id":11,
+"text":"Which of the following does not have sex-chromosome?",
+"options":["Monkey","Tiger","Butterfly","Lizard"],
+"correctIndex":3,
+"solution":"**Correct Answer: Lizard**\n\nIn many reptiles including lizards, sex is determined by environmental conditions rather than distinct sex chromosomes."
+},
+
+{
+"id":12,
+"text":"How does the plant cell differ from the animal cell?",
+"options":["Mitochondria","Cell wall","Presence of protoplasm","Cell nucleus"],
+"correctIndex":1,
+"solution":"**Correct Answer: Cell wall**\n\nPlant cells possess a rigid **cellulose cell wall**, absent in animal cells."
+},
+
+{
+"id":13,
+"text":"What is not found in the animal cell?",
+"options":["Cell wall of cellulose","Nucleus","Entire cell","None of the above"],
+"correctIndex":0,
+"solution":"**Correct Answer: Cell wall of cellulose**\n\nAnimal cells lack a rigid cell wall."
+},
+
+{
+"id":14,
+"text":"One term that generates the maximum number of ATP atoms in our system?",
+"options":["Decomposition of glucose","Kreb’s cycle","Last respiratory series","Water decomposition"],
+"correctIndex":1,
+"solution":"**Correct Answer: Kreb’s cycle**\n\nKrebs cycle plays a key role in cellular respiration producing energy intermediates."
+},
+
+{
+"id":15,
+"text":"Which of the following organelle is called ‘Power House’ of the cell?",
+"options":["Ribosome","Mitochondria","Cell membrane","Centrosome"],
+"correctIndex":1,
+"solution":"**Correct Answer: Mitochondria**\n\nMitochondria produce ATP via oxidative phosphorylation."
+},
+
+{
+"id":16,
+"text":"Corpus luteum is a mass of cells found in",
+"options":["Brain","Ovary","Pancreas","Spleen"],
+"correctIndex":1,
+"solution":"**Correct Answer: Ovary**\n\nCorpus luteum forms from follicle after ovulation."
+},
+
+{
+"id":17,
+"text":"Plasma membrane is built up of",
+"options":["Protein","Lipid","Carbohydrate","Both (A) and (B)"],
+"correctIndex":3,
+"solution":"**Correct Answer: Both (A) and (B)**\n\nPlasma membrane consists mainly of **phospholipid bilayer with proteins**."
+},
+
+{
+"id":18,
+"text":"Which of the following cell organelles play the most significant role in protein synthesis?",
+"options":["Lysosome and Centrosome","Endoplasmic reticulum and Ribosome","Golgi apparatus and Mitochondria","Lysosome and Mitochondria"],
+"correctIndex":1,
+"solution":"**Correct Answer: Endoplasmic reticulum and Ribosome**\n\nRibosomes synthesize proteins and rough ER assists in processing."
+},
+
+{
+"id":19,
+"text":"Lymphocytes cells are formed in which part of human body?",
+"options":["Liver","Long bone","Pancreas","Spleen"],
+"correctIndex":3,
+"solution":"**Correct Answer: Spleen**\n\nSpleen is a lymphoid organ where lymphocytes mature and immune responses occur."
+},
+
+{
+"id":20,
+"text":"The cellular and molecular control of programmed cells death are known as",
+"options":["Apoptosis","Ageing","Degeneration","Necrosis"],
+"correctIndex":0,
+"solution":"**Correct Answer: Apoptosis**\n\nApoptosis is controlled programmed cell death important for development and tissue homeostasis."
+}
+
+]
+}
