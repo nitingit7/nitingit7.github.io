@@ -61,7 +61,7 @@
 "text":"1 Kg/cm² pressure is equivalent to",
 "options":["0.1 bar","1.0 bar","10.0 bar","100.0 bar"],
 "correctIndex":1,
-"solution":"**Correct Answer: 1 bar (approximately)**\n\n1 kg/cm² ≈ **0.98 bar**."
+"solution":"**Correct Answer: B. 1.0 bar**\n\nThis is a **unit conversion question** testing the relationship between different **pressure units**.\n\n**Calculation:** Pressure = Force / Area.\n\n1 kg/cm² actually means **kilogram-force per square centimeter**.\n\n1 kgf ≈ **9.8 N** (due to gravity).\n\n1 cm² = **10^{-4} m²**.\n\nSo,\n\n1 kg/cm² = 9.8 / 0.0001 = **98,000 Pa**.\n\nBy definition,\n\n**1 bar = 100,000 Pa (10^5 Pa)**.\n\nSince **98,000 Pa ≈ 100,000 Pa**, in engineering and competitive exams **1 kg/cm² ≈ 1 bar**.\n\n---\n\n**Other Options:**\n\n**A. 0.1 bar** — About **10 times smaller** than the actual value.\n\n**C. 10.0 bar** — About **10 times larger** than the actual pressure.\n\n**D. 100.0 bar** — **Extremely high pressure**, commonly used in **hydraulic systems**.\n\n---\n\n**NCERT Reference:**\n\nClass 8 Science — Chapter 11 **Force and Pressure**.\n\nClass 9 Science — Chapter 10 **Gravitation (Thrust and Pressure)**.\n\nNCERT introduces **Pascal (Pa)** as the SI unit, while competitive exams also use **Bar and Atmosphere**.\n\n---\n\n**Important Conversion Table for Exams:**\n\n1 Pascal = **1 N/m²**\n\n1 Bar = **10^5 Pa**\n\n1 atm = **1.01325 bar**\n\n1 kg/cm² ≈ **0.98 bar ≈ 1 bar (approx.)**."
 },
 
 {
@@ -69,7 +69,7 @@
 "text":"1 barrel of oil is equals to which of the following?",
 "options":["131 litre","159 litre","179 litre","201 litre"],
 "correctIndex":1,
-"solution":"**Correct Answer: 159 litre**.\n\nStandard petroleum barrel = **159 litres**."
+"solution":"**Correct Answer: B. 159 litre**\n\nThis is a **fact-based question** commonly asked in **General Science and General Awareness sections** of competitive exams.\n\n**Explanation:** In the international oil industry, a **barrel** is a standard unit of volume.\n\n**Standard Definition:**\n\n1 Barrel (bbl) = **42 US gallons**.\n\n**Conversion to litres:**\n\n1 US gallon ≈ **3.785 litres**.\n\nSo,\n\n42 × 3.78541 = **158.987 litres ≈ 159 litres**.\n\nFor exam purposes, it is **always rounded to 159 litres**.\n\n---\n\n**Explanation of Options:**\n\n**A. 131 litre** — Does not correspond to any standard industrial unit; usually included as a **distractor**.\n\n**B. 159 litre** — **Correct value** for one barrel of crude oil.\n\n**C. 179 litre** — No commercial or standard significance.\n\n**D. 201 litre** — Often confused with a **55-gallon drum**, which holds about **208 litres**, but a petroleum **barrel is strictly 42 gallons (159 L)**.\n\n---\n\n**NCERT Reference:**\n\nClass 6 Science — Chapter 10 **Motion and Measurement of Distances**.\n\nClass 11 Physics — Chapter 2 **Units and Measurements**.\n\nNCERT mainly focuses on **SI units**, but competitive exams also test **commercial units used in industry**.\n\n---\n\n**Relevance to DRDO CEPTAM-11 (Tier-1):**\n\nRelevance Score: **7/10**.\n\nThese questions fall between **General Science and General Awareness**, especially related to **energy, fuel, and industrial measurements**.\n\n---\n\n**Important Practical Units for Exams:**\n\n1 Horsepower (HP) = **746 Watts**\n\n1 Nautical Mile = **1.852 km**\n\n1 Light Year = **9.46 × 10¹² km**\n\n1 Barrel of Oil = **159 litres**"
 },
 
 {
@@ -98,7 +98,7 @@
 "Quantity of water"
 ],
 "correctIndex":2,
-"solution":"**Correct Answer: Flow of water**\n\nCusec = **cubic feet per second**."
+"solution":"**Correct Answer: C. Flow of water**\n\n**Cusec** is an abbreviation for **Cubic feet per second**, a unit used to measure the **volumetric flow rate of water**.\n\n**Option A: Purity of water** — Water purity is measured using parameters like **pH, TDS (Total Dissolved Solids), or BOD (Biochemical Oxygen Demand)**, not Cusec.\n\n**Option B: Depth of water** — Depth is a **length measurement** and is measured in **meters, feet, or fathoms**, not Cusec.\n\n**Option C: Flow of water (Correct)** — Cusec measures how much water passes through a point (like a **dam gate or pipe**) every second.\n\n**1 Cusec = 28.317 litres per second**.\n\nExample: During monsoon news reports you may hear **“1 lakh cusecs of water released from a dam.”**\n\n**Option D: Quantity of water** — Quantity refers to **static volume** measured in **litres, gallons, or cubic meters (m³)**. It does not include the **per-second time factor** that defines flow.\n\n**NCERT Reference:** Class 11 Physics — Chapter 10 **Mechanical Properties of Fluids** (section on **Rate of Flow / Equation of Continuity**). The SI unit of flow rate is **m³/s**, while **Cusec** is a practical engineering unit.\n\n**Exam Relevance (DRDO CEPTAM Tier-1):** Questions about **engineering units used in dams, irrigation, and water flow** are common.\n\n**Bonus Exam Fact:** **TMC (Thousand Million Cubic feet)** measures **total water stored**, while **Cusec measures rate of flow**.\n\n**Quick Revision:**\nCusec = **Cubic feet per second**\nCumec = **Cubic meters per second (SI unit of flow rate)**."
 },
 
 {
@@ -189,7 +189,7 @@
 "Infrasonic waves"
 ],
 "correctIndex":2,
-"solution":"**Correct Answer: Ultrasonic waves**.\n\nSONAR uses high frequency sound waves."
+"solution":"**Correct Answer: C. Ultrasonic waves**\n\n**SONAR** stands for **SOund Navigation And Ranging**, a technology that uses **sound waves to detect and locate objects underwater**.\n\n**Option A: Radio waves** — Used in **RADAR (Radio Detection and Ranging)**. Radio waves are **electromagnetic waves** and are quickly **absorbed by water**, so they cannot detect objects deep underwater.\n\n**Option B: Audible sound waves** — These have frequencies between **20 Hz and 20,000 Hz** (human hearing range). They can travel in water but have **long wavelengths**, making it difficult to obtain precise detection of small objects.\n\n**Option C: Ultrasonic waves (Correct)** — Ultrasonic waves have **frequencies above 20,000 Hz**. They have **short wavelengths**, allowing them to travel in **narrow beams**, reflect from small objects, and travel long distances in water, making them ideal for SONAR.\n\n**Option D: Infrasonic waves** — These have frequencies **below 20 Hz**. They have **very long wavelengths** and are produced by phenomena like **earthquakes and whales**, but they are not suitable for precise object detection in SONAR.\n\n**NCERT Reference:** Class 9 Science — Chapter 12 **Sound**, Section **12.5.1 SONAR**. SONAR works by sending ultrasonic waves and receiving echoes; the distance is calculated using **2d = v × t**, where **d = depth**, **v = speed of sound in water**, and **t = time for the echo to return**.\n\n**Exam Relevance (DRDO CEPTAM Tier-1):** Very important topic because **SONAR, RADAR, and ultrasonic applications** are frequently asked in General Science.\n\n**Important Formula:** Distance = **(Speed of sound × Time) / 2** (division by 2 because the sound travels to the object and back).\n```"
 },
 
 {
@@ -202,7 +202,7 @@
 "Audiometer"
 ],
 "correctIndex":3,
-"solution":"**Correct Answer: Audiometer**."
+"solution":"**Correct Answer: D. Audiometer**\n\nThis question tests knowledge of **scientific instruments**, a common topic in **DRDO CEPTAM Tier-1 General Science**.\n\n**Option A: Chronometer** — A **highly accurate timekeeping device** historically used by sailors to determine **longitude at sea**. It measures **time**, not sound.\n\n**Option B: Anemometer** — An instrument used to measure **wind speed and direction**, commonly seen at **weather stations**.\n\n**Option C: Audiophone** — An older term for a **hearing aid** that **amplifies sound for people with hearing loss**, not an instrument for measuring sound intensity.\n\n**Option D: Audiometer (Correct)** — An **audiometer** is the standard instrument used to **measure the intensity and frequency of sound** and is commonly used by **audiologists to test hearing ability**.\n\n**NCERT Reference:** Class 9 Science — Chapter 12 **Sound**, Section **Characteristics of Sound Waves**. While NCERT mainly discusses **decibel (dB) and loudness**, competitive exams often ask about **instruments used to measure sound**.\n\n**Exam Relevance (DRDO CEPTAM-11):** Questions about **scientific measuring instruments** frequently appear in Tier-1 General Science.\n\n**Related Exam Concepts:**\n• SI unit of sound intensity = **Watt per square meter (W/m²)**\n• Loudness is measured in **Decibels (dB)**\n• Instrument for recording sound underwater = **Hydrophone**\n• Instrument for testing milk purity = **Lactometer**\n• Instrument for measuring very high temperatures = **Pyrometer**\n\n**Sound Concept:** Higher **frequency** → Higher **pitch**, while **intensity** determines **loudness**."
 },
 
 {
