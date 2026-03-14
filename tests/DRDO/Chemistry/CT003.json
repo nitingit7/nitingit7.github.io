@@ -1,0 +1,182 @@
+{
+"title": "Chemistry Test 3 #CT003 (Inorganic Chemistry & Metals/Minerals/Ores)",
+"timeLimit": 10,
+"questions":[
+
+{
+"id":1,
+"text":"The element found maximum in the soil layer is",
+"options":["Oxygen","Nitrogen","Manganese","Silicon"],
+"correctIndex":0,
+"solution":"**Correct Answer: Oxygen**\n\nOxygen is the most abundant element in the Earth's crust and soil layer. It forms oxides and silicates with many other elements.\n\nOption Analysis:\n• Oxygen → Correct. About **46% of Earth's crust** consists of oxygen by mass.\n• Nitrogen → Major component of atmosphere, not soil.\n• Manganese → Trace metal present in minerals.\n• Silicon → Second most abundant element in crust but less than oxygen.\n\nExam Insight:\nTop two elements of Earth crust → **Oxygen (≈46%) and Silicon (≈28%)**."
+},
+
+{
+"id":2,
+"text":"Which one of the following is present in the largest amount in terms of percent by mass in the Earth’s crust?",
+"options":["Silicon","Oxygen","Carbon","Calcium"],
+"correctIndex":1,
+"solution":"**Correct Answer: Oxygen**\n\nOxygen forms a large number of minerals such as oxides and silicates.\n\nOption Analysis:\n• Silicon → Second most abundant.\n• Oxygen → Correct; present mainly as oxides.\n• Carbon → Mostly in organic matter and carbonate rocks.\n• Calcium → Present in limestone but much smaller proportion."
+},
+
+{
+"id":3,
+"text":"Which is the most abundant element after oxygen?",
+"options":["Silicon","Carbon","Sodium","Chlorine"],
+"correctIndex":0,
+"solution":"**Correct Answer: Silicon**\n\nSilicon occurs in the form of **silicates and quartz (SiO₂)**.\n\nOption Analysis:\n• Silicon → Correct; second most abundant element.\n• Carbon → Less abundant in crust.\n• Sodium → Occurs in feldspar minerals.\n• Chlorine → Mostly present in sea water."
+},
+
+{
+"id":4,
+"text":"Which of the following is the most common element in the Universe?",
+"options":["Hydrogen","Oxygen","Nitrogen","Carbon"],
+"correctIndex":0,
+"solution":"**Correct Answer: Hydrogen**\n\nHydrogen constitutes **about 74% of the mass of the Universe**.\n\nOption Analysis:\n• Hydrogen → Correct; main fuel of stars.\n• Oxygen → Common in Earth but not universe.\n• Nitrogen → Major atmospheric gas.\n• Carbon → Important element of life but less abundant cosmically."
+},
+
+{
+"id":5,
+"text":"Approximately, how many different chemical elements exist in the Earth?",
+"options":["300","250","200","100"],
+"correctIndex":3,
+"solution":"**Correct Answer: 100**\n\nApproximately **100 naturally occurring elements** are found on Earth.\n\nOption Analysis:\n• 300 / 250 / 200 → Incorrect exaggerations.\n• 100 → Correct approximation in many exam references."
+},
+
+{
+"id":6,
+"text":"Which of the following is a fundamental element?",
+"options":["Sand","Diamond","Marble","Sugar"],
+"correctIndex":1,
+"solution":"**Correct Answer: Diamond**\n\nDiamond is an allotrope of **pure carbon**, which is a chemical element.\n\nOption Analysis:\n• Sand → Mainly silicon dioxide compound.\n• Diamond → Correct; pure carbon.\n• Marble → Calcium carbonate rock.\n• Sugar → Organic compound (C₁₂H₂₂O₁₁)."
+},
+
+{
+"id":7,
+"text":"The chemical composition of diamond is",
+"options":["Carbon","Nitrogen","Nickel","Zinc"],
+"correctIndex":0,
+"solution":"**Correct Answer: Carbon**\n\nDiamond is a crystalline allotrope of carbon.\n\nOption Analysis:\n• Carbon → Correct; arranged in tetrahedral crystal lattice.\n• Nitrogen / Nickel / Zinc → Elements not forming diamond."
+},
+
+{
+"id":8,
+"text":"Assertion (A): In the periodic table of chemical elements, electron affinity is always found to increase from top to bottom in a group.\nReason (R): In a group, the atomic radii generally increase from top to bottom.",
+"options":[
+"Both (A) and (R) are true and (R) is the correct explanation of (A)",
+"Both (A) and (R) are true, but (R) is not the correct explanation of (A)",
+"(A) is true, but (R) is false",
+"(A) is false, but (R) is true"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: (A) is false, but (R) is true**.\n\nElectron affinity generally **decreases down a group**, not increases.\n\nOption Analysis:\n• Statement A → False.\n• Statement R → True because atomic size increases down a group.\n\nExam Insight:\nLarger atomic radius reduces attraction for incoming electrons."
+},
+
+{
+"id":9,
+"text":"Consider the following statements with reference to the periodic table of chemical elements.\n1. Ionization potential gradually decreases along a period.\n2. In a group of elements, electron affinity decreases as the atomic weight increases.\n3. In a given period, electronegativity decreases as the atomic number increases.\nWhich of these statement(s) is/are correct?",
+"options":["Only 1","Only 2","1 and 3","2 and 3"],
+"correctIndex":1,
+"solution":"**Correct Answer: Only 2**.\n\nExplanation of statements:\n• Statement 1 → Incorrect. Ionization energy increases across a period.\n• Statement 2 → Correct. Electron affinity generally decreases down a group.\n• Statement 3 → Incorrect. Electronegativity increases across a period."
+},
+
+{
+"id":10,
+"text":"Which one of the following pairs of metals constitutes the lightest metal and heaviest metal, respectively?",
+"options":["Lithium and Mercury","Lithium and Osmium","Aluminium and Osmium","Aluminium and Mercury"],
+"correctIndex":1,
+"solution":"**Correct Answer: Lithium and Osmium**.\n\nLithium is the lightest metal, while osmium has the highest density among metals."
+},
+
+{
+"id":11,
+"text":"Which is the hardest in the following?",
+"options":["Diamond","Glass","Quartz","Platinum"],
+"correctIndex":0,
+"solution":"**Correct Answer: Diamond**.\n\nDiamond is the hardest naturally occurring substance."
+},
+
+{
+"id":12,
+"text":"Which of the following is the electron configuration of a metallic element?",
+"options":["2, 8","2, 8, 7","2, 8, 8","2, 8, 8, 2"],
+"correctIndex":3,
+"solution":"**Correct Answer: 2, 8, 8, 2**.\n\nMetals usually have **1–3 electrons in outermost shell**, making them electropositive."
+},
+
+{
+"id":13,
+"text":"Which is the most reactive metal?",
+"options":["Sodium","Calcium","Iron","Potassium"],
+"correctIndex":3,
+"solution":"**Correct Answer: Potassium**.\n\nPotassium is highly reactive because it easily loses its single valence electron."
+},
+
+{
+"id":14,
+"text":"Which one of the following is the hardest metal?",
+"options":["Gold","Iron","Platinum","Tungsten"],
+"correctIndex":3,
+"solution":"**Correct Answer: Tungsten**.\n\nTungsten has extremely high hardness and melting point."
+},
+
+{
+"id":15,
+"text":"Which one of the following materials is very hard and very ductile?",
+"options":["Carborundum","Tungsten","Cast iron","Nichrome"],
+"correctIndex":1,
+"solution":"**Correct Answer: Tungsten**.\n\nTungsten combines hardness with ductility and is used in filaments."
+},
+
+{
+"id":16,
+"text":"The heaviest natural element is",
+"options":["Uranium","Mercury","Gold","Calcium"],
+"correctIndex":0,
+"solution":"**Correct Answer: Uranium**.\n\nUranium (atomic number 92) is the heaviest naturally occurring element."
+},
+
+{
+"id":17,
+"text":"Heaviest metal of the following is made of",
+"options":["Copper","Uranium","Aluminium","Silver"],
+"correctIndex":1,
+"solution":"**Correct Answer: Uranium**.\n\nAmong these metals, uranium has the highest atomic mass."
+},
+
+{
+"id":18,
+"text":"Which of the following is lighter than water?",
+"options":["Aluminium","Sodium","Magnesium","Manganese"],
+"correctIndex":1,
+"solution":"**Correct Answer: Sodium**.\n\nSodium floats on water because its density is less than water."
+},
+
+{
+"id":19,
+"text":"The chemical structure of the pearl is",
+"options":[
+"Calcium Carbonate",
+"Calcium Carbonate & Magnesium Carbonate",
+"Calcium Chloride",
+"Calcium Sulphate"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Calcium Carbonate**.\n\nPearls are mainly composed of calcium carbonate crystals."
+},
+
+{
+"id":20,
+"text":"The main constituents of pearl are",
+"options":[
+"Calcium Carbonate and Magnesium Carbonate",
+"Aragonite and Conchiolin",
+"Ammonium Sulphate and Sodium Carbonate",
+"Calcium Oxide and Ammonium Chloride"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Aragonite and Conchiolin**.\n\nPearls consist of microscopic layers of **aragonite crystals bound by conchiolin protein**."
+}
+
+]
+}
