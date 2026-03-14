@@ -1,0 +1,222 @@
+{
+"title": "Physics Test 2 #PT002 (Measurement/Unit & Measuring Devices)",
+"timeLimit": 10,
+"questions":[
+
+{
+"id":1,
+"text":"Which one of the following is not correctly matched?",
+"options":[
+"Decibel - Unit of sound intensity",
+"Horsepower - Unit of power",
+"Nautical miles - Unit of naval distance",
+"Celsius - Unit of heat"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: Celsius - Unit of heat**\n\nCelsius measures **temperature**, not heat.\n\nOption Analysis:\n• Decibel → Correct. Measures sound intensity level.\n• Horsepower → Correct unit of power (1 hp ≈ 746 W).\n• Nautical mile → Used in marine navigation (1 nautical mile ≈ 1.852 km).\n• Celsius → Incorrect. Heat is measured in **joule or calorie**, not Celsius."
+},
+
+{
+"id":2,
+"text":"Which one of the following is not the unit of heat?",
+"options":["Calorie","Kilocalorie","Kilojoule","Watt"],
+"correctIndex":3,
+"solution":"**Correct Answer: Watt**\n\nHeat is a form of **energy**, therefore its units are calorie or joule.\n\nOption Analysis:\n• Calorie → Heat unit used in thermodynamics.\n• Kilocalorie → 1000 calories (food energy unit).\n• Kilojoule → SI unit of energy.\n• Watt → Unit of **power**, not heat."
+},
+
+{
+"id":3,
+"text":"A distance of 1 km means",
+"options":["100 m","1000 cm","1000 m","100 cm"],
+"correctIndex":2,
+"solution":"**Correct Answer: 1000 m**\n\n1 kilometre = **1000 metres**.\n\nExam Tip: Metric conversions are common in DRDO exams."
+},
+
+{
+"id":4,
+"text":"One pikogram is equal to",
+"options":["10⁻⁶ gram","10⁻⁹ gram","10⁻¹² gram","10⁻¹⁵ gram"],
+"correctIndex":2,
+"solution":"**Correct Answer: 10⁻¹² gram**\n\nPrefix meanings:\n• pico = 10⁻¹²\n• nano = 10⁻⁹\n• micro = 10⁻⁶\n\nUsed in molecular physics and nanotechnology."
+},
+
+{
+"id":5,
+"text":"Pascal is a unit of measuring",
+"options":["Humidity","Pressure","Rainfall","Temperature"],
+"correctIndex":1,
+"solution":"**Correct Answer: Pressure**\n\n1 Pascal = **1 Newton per square metre**."
+},
+
+{
+"id":6,
+"text":"What is the unit of atmospheric pressure?",
+"options":["Bar","Knot","Joule","Ohm"],
+"correctIndex":0,
+"solution":"**Correct Answer: Bar**\n\n1 bar ≈ 10⁵ Pascal.\n\nKnot measures speed of ships."
+},
+
+{
+"id":7,
+"text":"1 Kg/cm² pressure is equivalent to",
+"options":["0.1 bar","1.0 bar","10.0 bar","100.0 bar"],
+"correctIndex":1,
+"solution":"**Correct Answer: 1 bar (approximately)**\n\n1 kg/cm² ≈ **0.98 bar**."
+},
+
+{
+"id":8,
+"text":"1 barrel of oil is equals to which of the following?",
+"options":["131 litre","159 litre","179 litre","201 litre"],
+"correctIndex":1,
+"solution":"**Correct Answer: 159 litre**.\n\nStandard petroleum barrel = **159 litres**."
+},
+
+{
+"id":9,
+"text":"The smallest unit of length is",
+"options":["Micron","Nanometre","Angstrom","Fermimetre"],
+"correctIndex":3,
+"solution":"**Correct Answer: Fermimetre**\n\nFemtometre = **10⁻¹⁵ m**.\n\nUsed in nuclear physics."
+},
+
+{
+"id":10,
+"text":"One Nanometer is equal to",
+"options":["10⁻⁹ m","10⁻⁶ m","10⁻¹⁰ m","10⁻³ m"],
+"correctIndex":0,
+"solution":"**Correct Answer: 10⁻⁹ m**\n\nNanometre scale used in nanotechnology."
+},
+
+{
+"id":11,
+"text":"What is measured in Cusec?",
+"options":[
+"Purity of water",
+"Depth of water",
+"Flow of water",
+"Quantity of water"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Flow of water**\n\nCusec = **cubic feet per second**."
+},
+
+{
+"id":12,
+"text":"‘Dobson’ unit is used for the measurement of",
+"options":[
+"Thickness of Earth",
+"Thickness of Diamond",
+"Thickness of Ozone layer",
+"Measurement of Noise"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Thickness of Ozone layer**.\n\nDobson Unit measures atmospheric ozone."
+},
+
+{
+"id":13,
+"text":"Match List-I with List-II and select the correct answer using the code given below the lists.\n\nList-I (Physical quantities)\n(a) Acceleration\n(b) Force\n(c) Work done\n(d) Impulse\n\nList-II (Units)\n1. Joule\n2. Newton second\n3. Newton\n4. Metre/second²\n\nCode (a)(b)(c)(d)",
+"options":[
+"1 2 3 4",
+"3 4 1 2",
+"2 3 4 1",
+"4 3 1 2"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: 4 3 1 2**\n\nAcceleration → m/s²\nForce → Newton\nWork → Joule\nImpulse → Newton second."
+},
+
+{
+"id":14,
+"text":"Match List-I with List-II and select the correct answer using the code given below the lists.\n\nList-I (Units)\n(a) Watt\n(b) Knot\n(c) Nautical mile\n(d) Calorie\n\nList-II\n1. Heat\n2. Navigation\n3. Speed of a ship\n4. Power",
+"options":[
+"3 1 4 2",
+"1 2 3 4",
+"4 3 2 1",
+"2 4 1 3"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: 4 3 2 1**\n\nWatt → Power\nKnot → Speed of ship\nNautical mile → Navigation\nCalorie → Heat."
+},
+
+{
+"id":15,
+"text":"Match the following.\n\nList-I\n(a) Joule\n(b) Ampere\n(c) Watt\n(d) Volt\n(e) Calorie\n\nList-II\n1. Current\n2. Power\n3. Work\n4. Electric potential\n5. Heat",
+"options":[
+"3 1 2 4 5",
+"1 2 3 4 5",
+"4 3 2 1 5",
+"1 3 2 4 5"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: 3 1 2 4 5**."
+},
+
+{
+"id":16,
+"text":"Match List-I with List-II and select the correct answer using the code given below the lists.\n\nList-I\n(a) High speed\n(b) Wavelength\n(c) Pressure\n(d) Energy\n\nList-II\n1. Mach\n2. Angstrom\n3. Pascal\n4. Joule",
+"options":[
+"2 1 3 4",
+"1 2 4 3",
+"1 2 3 4",
+"2 1 4 3"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: 1 2 3 4**."
+},
+
+{
+"id":17,
+"text":"Match List-I with List-II and select the correct answer using the code given below the lists.\n\nList-I\n(a) Cusec\n(b) Byte\n(c) Richter\n(d) Bar\n\nList-II\n1. Pressure\n2. Intensity of Earthquake\n3. Rate of flow\n4. Computer",
+"options":[
+"1 2 3 4",
+"3 4 2 1",
+"4 3 2 1",
+"3 4 1 2"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: 3 4 2 1**\n\nCusec → Flow rate\nByte → Computer data\nRichter → Earthquake intensity\nBar → Pressure."
+},
+
+{
+"id":18,
+"text":"In SONAR, we use",
+"options":[
+"Radio waves",
+"Audible sound waves",
+"Ultrasonic waves",
+"Infrasonic waves"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Ultrasonic waves**.\n\nSONAR uses high frequency sound waves."
+},
+
+{
+"id":19,
+"text":"The apparatus used to measure intensity of sound is",
+"options":[
+"Chronometer",
+"Anemeter",
+"Audiophone",
+"Audiometer"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: Audiometer**."
+},
+
+{
+"id":20,
+"text":"Which one of the following instrument is used for locating submerged objects in an ocean?",
+"options":[
+"Audiometer",
+"Galvanometer",
+"Sextant",
+"SONAR"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: SONAR**."
+}
+
+]
+}
