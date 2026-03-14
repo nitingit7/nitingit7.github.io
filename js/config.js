@@ -132,6 +132,7 @@ var GITHUB_FILES = {
         { name: "Chemistry Test 1 (Atomic Structure)", tags: "Atomic Structure", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Chemistry/CT001.json" },
         { name: "Chemistry Test 2 (Atomic Structure, Transformation and Inorganic)", tags: "Transformation", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Chemistry/CT002.json" },
         { name: "Chemistry Test 3 (Inorganic Chemistry & Metals/Minerals/Ores)", tags: "Inorganic Chemistry & Metals/Minerals/Ores", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Chemistry/CT003.json" },
+        { name: "Chemistry Test 4 (Metals, Minerals, Ores)", tags: "Metals, Minerals, Ores", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Chemistry/CT004.json" },
         // Add your full chemistry tests here
     ],
 
