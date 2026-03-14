@@ -1,0 +1,172 @@
+{
+"title": "Chemistry Test 4 #CT004 (Metals, Minerals, Ores)",
+"timeLimit": 10,
+"questions":[
+
+{
+"id":1,
+"text":"Pearl is mainly constituted of",
+"options":["Calcium Oxalate","Calcium Sulphate","Calcium Carbonate","Calcium Oxide"],
+"correctIndex":2,
+"solution":"**Correct Answer: Calcium Carbonate**\n\nPearls are mainly composed of **calcium carbonate (CaCO3)** arranged in crystalline layers.\n\nOption Analysis:\n• Calcium Oxalate → Found in some kidney stones.\n• Calcium Sulphate → Found in gypsum and plaster of Paris.\n• **Calcium Carbonate → Correct. Major component of pearls and shells.**\n• Calcium Oxide → Quicklime."
+},
+
+{
+"id":2,
+"text":"What are Rubies and Sapphires chemically known as?",
+"options":["Silicon Dioxide","Aluminium Oxide","Lead Tetroxide","Boron Nitride"],
+"correctIndex":1,
+"solution":"**Correct Answer: Aluminium Oxide**\n\nRubies and sapphires are varieties of **corundum (Al2O3)**.\n\nColor differences occur due to trace impurities:\n• Ruby → Chromium\n• Sapphire → Iron or titanium."
+},
+
+{
+"id":3,
+"text":"These days yellow lamps are frequently used as street light. Which one of the following is used in these lamps?",
+"options":["Sodium","Neon","Hydrogen","Nitrogen"],
+"correctIndex":0,
+"solution":"**Correct Answer: Sodium**\n\nStreet lights commonly use **sodium vapour lamps** which emit bright yellow light.\n\nAdvantages:\n• High luminous efficiency\n• Good visibility in fog."
+},
+
+{
+"id":4,
+"text":"Sodium Vapour Lamp is usually used as street light, because",
+"options":["These are cheap","Light from this is monochromatic and will not split through water droplets","It is pleasing to the eyes","It is brightly illuminating"],
+"correctIndex":1,
+"solution":"**Correct Answer: Monochromatic light**\n\nSodium lamps produce nearly **single wavelength yellow light**, reducing scattering in fog and rain."
+},
+
+{
+"id":5,
+"text":"The most commonly used substance in fluorescent tubes are",
+"options":["Sodium Oxide and Argon","Sodium Vapour and Neon","Mercury Vapour and Argon","Mercuric Oxide and Neon"],
+"correctIndex":2,
+"solution":"**Correct Answer: Mercury Vapour and Argon**\n\nFluorescent lamps work by passing electricity through **mercury vapour mixed with argon gas**."
+},
+
+{
+"id":6,
+"text":"Which one of the following metals is accessed in the native state?",
+"options":["Aluminium","Gold","Chromium","Zinc"],
+"correctIndex":1,
+"solution":"**Correct Answer: Gold**\n\nGold occurs naturally in **pure metallic form** because it is chemically less reactive."
+},
+
+{
+"id":7,
+"text":"Which one of the following is the correct sequence of the given substances in the decreasing order of their densities?",
+"options":["Steel > Mercury > Gold","Gold > Mercury > Steel","Steel > Gold > Mercury","Gold > Steel > Mercury"],
+"correctIndex":1,
+"solution":"**Correct Answer: Gold > Mercury > Steel**\n\nApprox densities:\n• Gold ≈ 19.3 g/cm³\n• Mercury ≈ 13.6 g/cm³\n• Steel ≈ 7.8 g/cm³"
+},
+
+{
+"id":8,
+"text":"Of how many carats is the pure gold?",
+"options":["22","24","28","20"],
+"correctIndex":1,
+"solution":"**Correct Answer: 24 carat**\n\nCarat indicates **purity of gold**.\n\nExamples:\n• 24 carat → Pure gold\n• 22 carat → Jewelry gold"
+},
+
+{
+"id":9,
+"text":"The softest mineral, Talc (Soapstone) is mainly",
+"options":["Manganese Silicate","Sodium Silicate","Sodium Phosphate","Magnesium Silicate"],
+"correctIndex":3,
+"solution":"**Correct Answer: Magnesium Silicate**\n\nTalc formula: **Mg3Si4O10(OH)2**.\n\nIt is the **softest mineral on Mohs hardness scale (1)**."
+},
+
+{
+"id":10,
+"text":"The chemical name of limestone is",
+"options":["Calcium Carbonate","Magnesium Chloride","Sodium Chloride","Sodium Sulphate"],
+"correctIndex":0,
+"solution":"**Correct Answer: Calcium Carbonate**\n\nLimestone consists mainly of **CaCO3**."
+},
+
+{
+"id":11,
+"text":"Chemically ‘Plaster of Paris’ is",
+"options":["Calcium Sulphate","Calcium Carbonate","Calcium Oxide","Calcium Oxalate"],
+"correctIndex":0,
+"solution":"**Correct Answer: Calcium Sulphate**\n\nPlaster of Paris = **Calcium sulphate hemihydrate (CaSO4·½H2O)**."
+},
+
+{
+"id":12,
+"text":"The chemical formula of the Plaster of Paris is",
+"options":["CaSO4","CaSO4·½H2O","CaSO4·H2O","CaSO4·2H2O"],
+"correctIndex":1,
+"solution":"**Correct Answer: CaSO4·½H2O**\n\nPlaster of Paris is produced by heating **gypsum (CaSO4·2H2O)**."
+},
+
+{
+"id":13,
+"text":"Doctors, Artists and Sculptors use Calcium Sulphate which is popularly known as",
+"options":["Quick lime","Limestone","Bleaching powder","Plaster of Paris"],
+"correctIndex":3,
+"solution":"**Correct Answer: Plaster of Paris**\n\nUsed for:\n• Medical casts\n• Sculptures\n• Decorative moulds."
+},
+
+{
+"id":14,
+"text":"Monazite is an ore of",
+"options":["Zirconium","Thorium","Titanium","Iron"],
+"correctIndex":1,
+"solution":"**Correct Answer: Thorium**\n\nMonazite sands contain **thorium phosphate**."
+},
+
+{
+"id":15,
+"text":"Mica is a",
+"options":[
+"Good conductor of heat and bad conductor of electricity",
+"Bad conductor of both heat and electricity",
+"Good conductor of heat and electricity both",
+"Bad conductor of heat and good conductor of electricity"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Good conductor of heat but poor conductor of electricity**.\n\nMica is used as **electrical insulator** in electrical appliances."
+},
+
+{
+"id":16,
+"text":"In which of the following industries is mica used as a raw material?",
+"options":["Iron and steel","Toys","Glass and pottery","Electrical"],
+"correctIndex":3,
+"solution":"**Correct Answer: Electrical industry**.\n\nMica is used for:\n• Electrical insulation\n• Capacitors\n• Electronic devices."
+},
+
+{
+"id":17,
+"text":"Which one of the following liquids is very good conductor of heat?",
+"options":["Mercury","Water","Ether","Benzene"],
+"correctIndex":0,
+"solution":"**Correct Answer: Mercury**.\n\nMercury is a **metallic liquid**, so it conducts heat efficiently."
+},
+
+{
+"id":18,
+"text":"Which one of the following metals is liquid at room temperature?",
+"options":["Lead","Mercury","Nickel","Tin"],
+"correctIndex":1,
+"solution":"**Correct Answer: Mercury**.\n\nMercury is the only metal **liquid at room temperature (~25°C)**."
+},
+
+{
+"id":19,
+"text":"Which one of the following metals is liquid at ordinary temperature?",
+"options":["Lead","Nickel","Mercury","Tin"],
+"correctIndex":2,
+"solution":"**Correct Answer: Mercury**.\n\nAgain confirms mercury as **liquid metal under normal conditions**."
+},
+
+{
+"id":20,
+"text":"Mercury is basically used in thermometer devices because its especiality is",
+"options":["High density","High liquidity","High circulation power","High specific heat"],
+"correctIndex":2,
+"solution":"**Correct Answer: High circulation power (high thermal expansion)**.\n\nMercury expands uniformly with temperature, making it ideal for thermometers."
+}
+
+]
+}
