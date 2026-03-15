@@ -1,267 +1,146 @@
 {
-"title": "Biology Test 14 #bt0014 (Human Anatomy)",
-"timeLimit": 10,
-"questions":[
-
-{
-"id":1,
-"text":"Plaques on teeth are made up of",
-"options":[
-"Food particles only",
-"Food particles plus saliva",
-"Food particles plus saliva plus mouth acids",
-"Food particles plus bacteria"
-],
-"correctIndex":3,
-"solution":"**Correct Answer: Food particles plus bacteria**\n\nDental plaque is a sticky microbial biofilm that forms on teeth surfaces.\n\nOption Analysis:\n• Food particles only → Incorrect; microorganisms are essential components.\n• Food particles plus saliva → Saliva contributes but plaque primarily involves bacteria.\n• Food particles + saliva + mouth acids → Acids are produced later by bacteria.\n• Food particles + bacteria → Correct.\n\nExam Insight:\nBacteria convert sugars into acids causing **dental caries**."
-},
-
-{
-"id":2,
-"text":"The normal temperature of human body is",
-"options":[
-"35°C",
-"36°C",
-"37°C",
-"38°C"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: 37°C**\n\nNormal human body temperature is **37°C (98.6°F)**.\n\nOption Analysis:\n• 35°C → Hypothermia level.\n• 36°C → Slightly low.\n• 37°C → Correct physiological norm.\n• 38°C → Fever."
-},
-
-{
-"id":3,
-"text":"Which gland secretes insulin?",
-"options":[
-"Pituitary",
-"Pancreas",
-"Adrenal",
-"Thyroid"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Pancreas**\n\nInsulin is secreted by **beta cells of the Islets of Langerhans**.\n\nOption Analysis:\n• Pituitary → Master endocrine gland.\n• Pancreas → Correct.\n• Adrenal → Produces adrenaline.\n• Thyroid → Produces thyroxine."
-},
-
-{
-"id":4,
-"text":"Which organ purifies blood in the human body?",
-"options":[
-"Liver",
-"Kidney",
-"Heart",
-"Pancreas"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Kidney**\n\nKidneys filter metabolic wastes from blood and produce urine."
-},
-
-{
-"id":5,
-"text":"Which organ produces bile in human body?",
-"options":[
-"Liver",
-"Pancreas",
-"Stomach",
-"Kidney"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: Liver**\n\nThe liver produces bile which helps emulsify fats."
-},
-
-{
-"id":6,
-"text":"How many pairs of ribs are there in human body?",
-"options":[
-"10",
-"11",
-"12",
-"13"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: 12 pairs**\n\nHuman rib cage contains **12 pairs of ribs (24 ribs)**."
-},
-
-{
-"id":7,
-"text":"Which salt is present in maximum quantity in bones?",
-"options":[
-"Magnesium chloride",
-"Calcium carbonate",
-"Calcium phosphate",
-"Sodium chloride"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Calcium phosphate**\n\nBones contain **hydroxyapatite crystals (calcium phosphate)**."
-},
-
-{
-"id":8,
-"text":"The smallest bone in human body is",
-"options":[
-"Vomer",
-"Stapes",
-"Malleus",
-"Incus"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Stapes**\n\nLocated in the **middle ear**, the stapes is the smallest bone."
-},
-
-{
-"id":9,
-"text":"The smallest bone of human body is located in",
-"options":[
-"Ear",
-"Nose",
-"Eye",
-"Toe"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: Ear**\n\nEar ossicles include **malleus, incus, and stapes**."
-},
-
-{
-"id":10,
-"text":"The number of bones in human skull is",
-"options":[
-"28",
-"30",
-"32",
-"40"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: 28**\n\nThe skull includes **cranial bones and facial bones**."
-},
-
-{
-"id":11,
-"text":"Which part of brain controls body balance?",
-"options":[
-"Cerebrum",
-"Cerebellum",
-"Medulla",
-"Thalamus"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Cerebellum**\n\nThe cerebellum controls **coordination, posture and balance**."
-},
-
-{
-"id":12,
-"text":"Which vitamin helps blood clotting?",
-"options":[
-"Vitamin A",
-"Vitamin B",
-"Vitamin K",
-"Vitamin C"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Vitamin K**\n\nVitamin K is required for **prothrombin synthesis**."
-},
-
-{
-"id":13,
-"text":"Which organ pumps blood through body?",
-"options":[
-"Liver",
-"Heart",
-"Lungs",
-"Kidney"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Heart**\n\nThe heart functions as the **circulatory pump**."
-},
-
-{
-"id":14,
-"text":"Which blood cells fight infection?",
-"options":[
-"RBC",
-"WBC",
-"Platelets",
-"Plasma"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: WBC**\n\nWhite blood cells provide **immune defense**."
-},
-
-{
-"id":15,
-"text":"Which pigment gives red colour to blood?",
-"options":[
-"Melanin",
-"Haemoglobin",
-"Chlorophyll",
-"Carotene"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Haemoglobin**\n\nHaemoglobin carries oxygen."
-},
-
-{
-"id":16,
-"text":"Which part of digestive system absorbs most nutrients?",
-"options":[
-"Stomach",
-"Small intestine",
-"Large intestine",
-"Esophagus"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Small intestine**\n\nVilli increase absorption area."
-},
-
-{
-"id":17,
-"text":"Which organ stores bile?",
-"options":[
-"Gall bladder",
-"Pancreas",
-"Liver",
-"Kidney"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: Gall bladder**\n\nBile is stored and concentrated here."
-},
-
-{
-"id":18,
-"text":"Which part of blood helps clotting?",
-"options":[
-"RBC",
-"WBC",
-"Platelets",
-"Plasma"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Platelets**\n\nPlatelets trigger **coagulation cascade**."
-},
-
-{
-"id":19,
-"text":"Which gas is released during respiration?",
-"options":[
-"Oxygen",
-"Nitrogen",
-"Carbon dioxide",
-"Hydrogen"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Carbon dioxide**\n\nProduced during **cellular respiration**."
-},
-
-{
-"id":20,
-"text":"Which organ produces urine?",
-"options":[
-"Kidney",
-"Liver",
-"Heart",
-"Lung"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: Kidney**\n\nUrine formation occurs in **nephrons**."
-}
-
-]
+  "title": "Biology Test 14 #bt0014 (Human Anatomy)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Plaques formed on teeth are made up of",
+      "options": ["Food particles only", "Food particles plus saliva", "Food particles plus saliva plus mouth acids", "Food particles plus saliva plus mouth acids plus bacteria"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Food particles plus saliva plus mouth acids plus bacteria (D)**\n\nDental plaque is a biofilm formed by bacteria (mainly Streptococcus mutans and Actinomyces) on tooth surfaces. Saliva provides glycoproteins for initial pellicle formation; food particles supply fermentable carbohydrates; acids (lactic acid from bacterial metabolism) lower pH to 5.5 causing demineralisation. In DRDO CEPTAM-11 General Science, this is vital for soldier oral health programmes — prolonged field deployments, ration diets high in sugars, and limited dental access increase caries risk. DRDO’s Defence Institute of Physiology & Allied Sciences (DIPAS) studies plaque control for high-altitude troops to prevent mission-compromising dental emergencies.\n\n**Option-wise Analysis:**\n• **Food particles only (A):** Insufficient; saliva and bacteria essential for adhesion.\n• **Food particles plus saliva (B):** Forms pellicle but lacks acid-producing bacteria for true plaque pathology.\n• **Food particles plus saliva plus mouth acids (C):** Acids are produced by bacteria; omits microbial colonisation.\n• **Food particles plus saliva plus mouth acids plus bacteria (D):** Complete biofilm model; matches clinical definition.\n\n**Important Exam Concept:** Dental plaque biofilm formation, caries mechanism & DRDO soldier oral hygiene in extreme environments (repeated in defence medical science papers)."
+    },
+    {
+      "id": 2,
+      "text": "No pain is felt while cutting the nails because",
+      "options": ["Nails are made of the material of dead cells in which there is no blood circulation", "Nails are a useless part of the body", "Nails are made of calcium phosphate", "None of the above"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Nails are made of the material of dead cells in which there is no blood circulation (A)**\n\nNails are keratinised dead epidermal cells (stratum corneum derivatives) without nerves or blood vessels in the free edge. Pain is absent because sensory nerves terminate at the nail bed/matrix. DRDO ergonomics and protective gear design uses this for soldier boot/nail-trimming protocols in field conditions to avoid infection without anaesthesia needs.\n\n**Option-wise Analysis:**\n• **Nails are a useless part of the body (B):** False; nails protect fingertips, aid grip.\n• **Nails are made of calcium phosphate (C):** Nails are keratin protein; calcium phosphate is in bones/teeth.\n• **None of the above (D):** Incorrect; (A) is standard physiological fact.\n\n**Important Exam Concept:** Structure of nails, keratinised dead tissue & DRDO field medical/first-aid applications."
+    },
+    {
+      "id": 3,
+      "text": "Which of the following are required for the formation of bones and teeth?",
+      "options": ["Sodium and Potassium", "Iron and Calcium", "Sodium and Calcium", "Calcium and Phosphorus"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Calcium and Phosphorus (D)**\n\nHydroxyapatite [Ca₁₀(PO₄)₆(OH)₂] forms 70% of bone/tooth mineral. Calcium provides structural rigidity; phosphorus in phosphate ions enables mineralisation. DRDO nutritional research for high-altitude rations (DIPAS studies) emphasises Ca:P ratio (1:1 to 2:1) to prevent stress fractures in troops carrying heavy loads.\n\n**Option-wise Analysis:**\n• **Sodium and Potassium (A):** Electrolytes for nerve/muscle; not structural minerals.\n• **Iron and Calcium (B):** Iron for haemoglobin; calcium alone insufficient without phosphorus.\n• **Sodium and Calcium (C):** Sodium for fluid balance; lacks phosphorus for apatite crystal.\n• **Calcium and Phosphorus (D):** Direct components of hydroxyapatite.\n\n**Important Exam Concept:** Bone mineralisation chemistry & DRDO ration formulation for fracture prevention."
+    },
+    {
+      "id": 4,
+      "text": "Which one of the following nutritional elements is not essential for the formation and strengthening of bones and teeth?",
+      "options": ["Calcium", "Phosphorus", "Fluorine", "Iodine"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Iodine (D)**\n\nIodine is for thyroid hormone synthesis (thyroxine). Bones/teeth require Ca, P, Mg, F (for enamel hardness). DRDO micronutrient programmes exclude iodine from bone-health supplements but include it separately for goitre prevention in Himalayan troops.\n\n**Option-wise Analysis:**\n• **Calcium (A):** Primary cation in hydroxyapatite.\n• **Phosphorus (B):** Forms phosphate backbone.\n• **Fluorine (C):** Substitutes OH⁻ in apatite → fluorapatite (harder enamel).\n• **Iodine (D):** No role in mineral matrix.\n\n**Important Exam Concept:** Trace element specificity & DRDO targeted supplementation for border soldiers."
+    },
+    {
+      "id": 5,
+      "text": "The number of teeth that are developed twice in the lifetime of human being is",
+      "options": ["4", "12", "20", "28"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: 20 (C)**\n\nHumans have 20 deciduous (milk) teeth replaced by 20 permanent teeth; 12 permanent molars erupt without predecessors (total 32 permanent). DRDO dental screening for recruits uses this to assess jaw development and bite for load-bearing tasks.\n\n**Option-wise Analysis:**\n• **4 (A):** Only third molars sometimes.\n• **12 (B):** Permanent molars only.\n• **20 (C):** All deciduous teeth replaced.\n• **28 (D):** Permanent teeth excluding third molars.\n\n**Important Exam Concept:** Diphyodont dentition & DRDO recruit medical fitness standards."
+    },
+    {
+      "id": 6,
+      "text": "Which of the following is the strongest part of our body?",
+      "options": ["Bone", "Enamel", "Dentin", "Cementum"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Enamel (B)**\n\nEnamel is 96% hydroxyapatite, hardest biological tissue (Mohs 5). DRDO ballistic helmet liners and protective coatings research biomimics enamel hardness for impact resistance.\n\n**Option-wise Analysis:**\n• **Bone (A):** Composite, less mineralised.\n• **Dentin (C):** Softer than enamel.\n• **Cementum (D):** Covers root, softer.\n\n**Important Exam Concept:** Hardest tissue ranking & DRDO biomimetic armour materials."
+    },
+    {
+      "id": 7,
+      "text": "The strongest muscle in human body is found in",
+      "options": ["Jaws", "Thighs", "Neck", "Hands"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Jaws (A)**\n\nMasseter muscle generates ~200 psi bite force. DRDO jaw-strength studies link to helmet retention and bite-force endurance in chemical warfare mask use.\n\n**Option-wise Analysis:**\n• **Thighs (B):** Quadriceps powerful but not strongest per cross-section.\n• **Neck (C):** Stabilising, not peak force.\n• **Hands (D):** Grip muscles weaker.\n\n**Important Exam Concept:** Muscle force physiology & DRDO PPE ergonomics."
+    },
+    {
+      "id": 8,
+      "text": "The temperature of the human body",
+      "options": ["Decreases in winters", "Increases in summers", "Neither decreases in winters nor increases in summers", "Increases in winters"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Neither decreases in winters nor increases in summers (C)**\n\nCore temperature maintained at 37±0.5°C by hypothalamus thermoregulation (sweating/shivering). DRDO high-altitude physiology (DIPAS) studies show soldiers maintain this despite extreme cold via acclimatisation and ration design.\n\n**Option-wise Analysis:**\n• Seasonal ambient changes countered by homeostasis.\n\n**Important Exam Concept:** Homeothermy & DRDO environmental medicine for extreme climates."
+    },
+    {
+      "id": 9,
+      "text": "The pulse in the human wrist beats",
+      "options": ["Faster than the heart", "Slower than the heart", "At the same rate as the heart", "Independently of the heart"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: At the same rate as the heart (C)**\n\nRadial pulse = heart rate (systolic wave transmission). DRDO field vital-sign monitoring uses wrist pulse for rapid triage in combat medicine.\n\n**Option-wise Analysis:**\n• Pulse directly reflects cardiac cycle.\n\n**Important Exam Concept:** Pulse–heart rate equivalence & DRDO combat casualty care."
+    },
+    {
+      "id": 10,
+      "text": "The brain is responsible for",
+      "options": ["Thinking", "Regulating the heartbeat", "Balancing the body", "All of the above"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: All of the above (D)**\n\nCerebrum (thinking), medulla (heartbeat), cerebellum (balance). DRDO neuroscience for pilot/G-suit and cognitive performance enhancement relies on integrated brain functions.\n\n**Option-wise Analysis:**\n• All regions contribute distinct roles.\n\n**Important Exam Concept:** Brain functional localisation & DRDO human performance optimisation."
+    },
+    {
+      "id": 11,
+      "text": "Where is the governing centre of reflex action located?",
+      "options": ["In cerebrum", "In cerebellum", "In spinal cord", "In nerve cells"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: In spinal cord (C)**\n\nSpinal reflex arcs (e.g., knee jerk) bypass brain for speed. DRDO combat medicine uses spinal reflex preservation in spinal injury protocols for troop evacuation.\n\n**Option-wise Analysis:**\n• Cerebrum voluntary; cerebellum coordination; nerve cells peripheral.\n\n**Important Exam Concept:** Reflex arc anatomy & DRDO trauma management."
+    },
+    {
+      "id": 12,
+      "text": "In a human brain memory power is found in",
+      "options": ["Medulla oblongata", "Cerebrum", "Brain cavity", "Cerebellum"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Cerebrum (B)**\n\nHippocampus & cerebral cortex store long-term memory. DRDO cognitive training for soldiers uses this for memory enhancement in high-stress operations.\n\n**Option-wise Analysis:**\n• Medulla vital functions; cerebellum coordination; cavity CSF.\n\n**Important Exam Concept:** Memory localisation & DRDO neuro-cognitive research."
+    },
+    {
+      "id": 13,
+      "text": "Where does fertilization occur?",
+      "options": ["In Uterus", "In Oviduct", "In Ovary", "In Vagina"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: In Oviduct (B)**\n\nFallopian tube (oviduct) is site of fertilisation. DRDO reproductive health studies for female soldiers focus on oviduct physiology in high-altitude hormonal changes.\n\n**Option-wise Analysis:**\n• Ovary egg release; uterus implantation; vagina entry.\n\n**Important Exam Concept:** Fertilisation site & DRDO women-in-defence physiology."
+    },
+    {
+      "id": 14,
+      "text": "In human beings, normally in which one of the following parts, does the sperm fertilize the ovum?",
+      "options": ["Cervix", "Fallopian tube", "Lower part of uterus", "Upper part of uterus"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Fallopian tube (B)**\n\nAmpulla of fallopian tube. DRDO fertility preservation research for deployed personnel uses this knowledge.\n\n**Option-wise Analysis:**\n• Cervix/uterus later stages.\n\n**Important Exam Concept:** Precise fertilisation anatomy & DRDO medical logistics."
+    },
+    {
+      "id": 15,
+      "text": "After reaching the female genital tract, human sperms retain their fertilizing capacity for",
+      "options": ["Two minutes", "Twenty minutes", "Ninety minutes", "One to two days"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: One to two days (D)**\n\nSperm viability in female tract ~48 hours. DRDO family planning and deployment scheduling uses this for troop health management.\n\n**Option-wise Analysis:**\n• Shorter times too brief for capacitation.\n\n**Important Exam Concept:** Sperm survival & DRDO reproductive health policy."
+    },
+    {
+      "id": 16,
+      "text": "The heart of human embryo starts beating",
+      "options": ["In the first week of development", "In the third week of its development", "In the fourth week of its development", "In the sixth week of its development"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: In the fourth week of its development (C)**\n\nDay 21–22 (week 4). DRDO embryology research for radiation exposure studies on pregnant servicewomen uses this timeline.\n\n**Option-wise Analysis:**\n• Earlier too premature; later too late.\n\n**Important Exam Concept:** Embryonic cardiac timeline & DRDO occupational health."
+    },
+    {
+      "id": 17,
+      "text": "Which one of the following is a membrane that protects the developing embryo from desiccation?",
+      "options": ["Amnion", "Allantois", "Chorion", "Yolk sac"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Amnion (A)**\n\nAmniotic sac filled with fluid prevents drying. DRDO space/ high-altitude medicine analogies use amniotic fluid mechanics for protective suits.\n\n**Option-wise Analysis:**\n• Allantois waste; chorion placenta; yolk sac nutrition.\n\n**Important Exam Concept:** Extra-embryonic membranes & DRDO protective systems design."
+    },
+    {
+      "id": 18,
+      "text": "Mammals respire by",
+      "options": ["Gills", "Trachea", "Skin", "Lungs"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Lungs (D)**\n\nPulmonary respiration. DRDO altitude physiology focuses on lung adaptations for hypoxia in troops.\n\n**Option-wise Analysis:**\n• Gills fish; trachea insects; skin amphibians.\n\n**Important Exam Concept:** Mammalian respiration & DRDO high-altitude acclimatisation."
+    },
+    {
+      "id": 19,
+      "text": "The amount of which of the following components in the air does not change in the process of respiration?",
+      "options": ["Carbon dioxide (CO₂)", "Oxygen", "Water vapours", "Nitrogen"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Nitrogen (D)**\n\nN₂ inert; O₂ consumed, CO₂ produced, H₂O varies. DRDO closed-environment systems (submarines) monitor N₂ stability.\n\n**Option-wise Analysis:**\n• Others change in gas exchange.\n\n**Important Exam Concept:** Respiratory gas exchange & DRDO confined-space life support."
+    },
+    {
+      "id": 20,
+      "text": "How many times, a healthy person’s average heart beats in a minute?",
+      "options": ["86 times", "98 times", "72 times", "64 times"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: 72 times (C)**\n\nNormal resting rate 60–100; average 72. DRDO fitness tests use this baseline for soldier cardiovascular screening.\n\n**Option-wise Analysis:**\n• 72 is standard adult average.\n\n**Important Exam Concept:** Resting heart rate norms & DRDO physical standards."
+    }
+  ]
 }
