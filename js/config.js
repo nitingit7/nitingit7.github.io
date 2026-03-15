@@ -124,6 +124,7 @@ var GITHUB_FILES = {
         { name: "Biology Test 10", tags: "Bio", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Biology/bt0010.json" },
         { name: "Biology Test 11", tags: "Bio", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Biology/bt0011.json" },
         { name: "Biology Test 12 (Biofertilizer & Cell)", tags: "Biofertilizer & Cell", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Biology/bt0012.json" },
+        { name: "Biology Test 13", tags: "Cell & Human Anatomy", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Biology/bt0013.json" },
         // Add your full biology tests here
         // { name: "Biology Mock 1", tags: "Sectional", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/biology/mock1.json" }
     ],
