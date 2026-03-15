@@ -5,28 +5,98 @@
 
 {
 "id":1,
-"text":"How many pairs of ribs are there in a human body?",
-"options":["10","11","12","13"],
-"correctIndex":2,
-"solution":"**Correct Answer: 12**\n\nHumans have **12 pairs (24 ribs)**.\n\nOption Analysis:\n• 10 → Incorrect.\n• 11 → Incorrect.\n• 12 → Correct.\n• 13 → Incorrect.\n\nExam Tip: Ribs are classified into **true ribs (1–7), false ribs (8–10), floating ribs (11–12)**."
+"text":"Plaques on teeth are made up of",
+"options":[
+"Food particles only",
+"Food particles plus saliva",
+"Food particles plus saliva plus mouth acids",
+"Food particles plus bacteria"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: Food particles plus bacteria**\n\nDental plaque is a sticky microbial biofilm that forms on teeth surfaces.\n\nOption Analysis:\n• Food particles only → Incorrect; microorganisms are essential components.\n• Food particles plus saliva → Saliva contributes but plaque primarily involves bacteria.\n• Food particles + saliva + mouth acids → Acids are produced later by bacteria.\n• Food particles + bacteria → Correct.\n\nExam Insight:\nBacteria convert sugars into acids causing **dental caries**."
 },
 
 {
 "id":2,
-"text":"Which one of the following salts is found in maximum amount in the human bones?",
+"text":"The normal temperature of human body is",
 "options":[
-"Magnesium Chloride",
-"Calcium Carbonate",
-"Calcium Phosphate",
-"Sodium Chloride"
+"35°C",
+"36°C",
+"37°C",
+"38°C"
 ],
 "correctIndex":2,
-"solution":"**Correct Answer: Calcium Phosphate**\n\nBones contain **hydroxyapatite crystals (calcium phosphate)** that provide strength."
+"solution":"**Correct Answer: 37°C**\n\nNormal human body temperature is **37°C (98.6°F)**.\n\nOption Analysis:\n• 35°C → Hypothermia level.\n• 36°C → Slightly low.\n• 37°C → Correct physiological norm.\n• 38°C → Fever."
 },
 
 {
 "id":3,
-"text":"Which one of the following is the smallest bone in the human body?",
+"text":"Which gland secretes insulin?",
+"options":[
+"Pituitary",
+"Pancreas",
+"Adrenal",
+"Thyroid"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Pancreas**\n\nInsulin is secreted by **beta cells of the Islets of Langerhans**.\n\nOption Analysis:\n• Pituitary → Master endocrine gland.\n• Pancreas → Correct.\n• Adrenal → Produces adrenaline.\n• Thyroid → Produces thyroxine."
+},
+
+{
+"id":4,
+"text":"Which organ purifies blood in the human body?",
+"options":[
+"Liver",
+"Kidney",
+"Heart",
+"Pancreas"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Kidney**\n\nKidneys filter metabolic wastes from blood and produce urine."
+},
+
+{
+"id":5,
+"text":"Which organ produces bile in human body?",
+"options":[
+"Liver",
+"Pancreas",
+"Stomach",
+"Kidney"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Liver**\n\nThe liver produces bile which helps emulsify fats."
+},
+
+{
+"id":6,
+"text":"How many pairs of ribs are there in human body?",
+"options":[
+"10",
+"11",
+"12",
+"13"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: 12 pairs**\n\nHuman rib cage contains **12 pairs of ribs (24 ribs)**."
+},
+
+{
+"id":7,
+"text":"Which salt is present in maximum quantity in bones?",
+"options":[
+"Magnesium chloride",
+"Calcium carbonate",
+"Calcium phosphate",
+"Sodium chloride"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Calcium phosphate**\n\nBones contain **hydroxyapatite crystals (calcium phosphate)**."
+},
+
+{
+"id":8,
+"text":"The smallest bone in human body is",
 "options":[
 "Vomer",
 "Stapes",
@@ -34,143 +104,163 @@
 "Incus"
 ],
 "correctIndex":1,
-"solution":"**Correct Answer: Stapes**\n\nThe **stapes** is located in the middle ear and measures about **3 mm**."
+"solution":"**Correct Answer: Stapes**\n\nLocated in the **middle ear**, the stapes is the smallest bone."
 },
 
 {
-"id":4,
-"text":"The smallest bone in our body is found in our",
-"options":["Ear","Nose","Eye","Toe"],
+"id":9,
+"text":"The smallest bone of human body is located in",
+"options":[
+"Ear",
+"Nose",
+"Eye",
+"Toe"
+],
 "correctIndex":0,
-"solution":"**Correct Answer: Ear**\n\nThe stapes bone is part of the **ear ossicles (malleus, incus, stapes)**."
+"solution":"**Correct Answer: Ear**\n\nEar ossicles include **malleus, incus, and stapes**."
 },
 
 {
-"id":5,
+"id":10,
 "text":"The number of bones in human skull is",
-"options":["28","30","32","40"],
+"options":[
+"28",
+"30",
+"32",
+"40"
+],
 "correctIndex":0,
 "solution":"**Correct Answer: 28**\n\nThe skull includes **cranial bones and facial bones**."
 },
 
 {
-"id":6,
-"text":"Which part of the human body produces bile?",
-"options":["Pancreas","Liver","Kidney","Stomach"],
-"correctIndex":1,
-"solution":"**Correct Answer: Liver**\n\nThe liver produces bile which helps in **fat digestion**."
-},
-
-{
-"id":7,
-"text":"Which organ purifies blood in the human body?",
-"options":["Heart","Kidney","Lungs","Pancreas"],
-"correctIndex":1,
-"solution":"**Correct Answer: Kidney**\n\nKidneys filter blood and remove nitrogenous waste."
-},
-
-{
-"id":8,
-"text":"Which part of the brain controls balance of the body?",
-"options":["Cerebrum","Cerebellum","Medulla","Thalamus"],
-"correctIndex":1,
-"solution":"**Correct Answer: Cerebellum**\n\nThe cerebellum maintains **balance, posture and coordination**."
-},
-
-{
-"id":9,
-"text":"Which vitamin helps in blood clotting?",
-"options":["Vitamin A","Vitamin B","Vitamin K","Vitamin C"],
-"correctIndex":2,
-"solution":"**Correct Answer: Vitamin K**\n\nVitamin K helps synthesize **clotting factors like prothrombin**."
-},
-
-{
-"id":10,
-"text":"Which gland secretes insulin?",
-"options":["Thyroid","Pancreas","Pituitary","Adrenal"],
-"correctIndex":1,
-"solution":"**Correct Answer: Pancreas**\n\nInsulin is secreted by **beta cells of Islets of Langerhans**."
-},
-
-{
 "id":11,
-"text":"Which part of blood carries oxygen?",
-"options":["Plasma","RBC","WBC","Platelets"],
+"text":"Which part of brain controls body balance?",
+"options":[
+"Cerebrum",
+"Cerebellum",
+"Medulla",
+"Thalamus"
+],
 "correctIndex":1,
-"solution":"**Correct Answer: RBC**\n\nRed blood cells contain **haemoglobin**, which transports oxygen."
+"solution":"**Correct Answer: Cerebellum**\n\nThe cerebellum controls **coordination, posture and balance**."
 },
 
 {
 "id":12,
-"text":"Which organ pumps blood in the body?",
-"options":["Heart","Liver","Kidney","Lung"],
-"correctIndex":0,
-"solution":"**Correct Answer: Heart**\n\nThe heart pumps blood through **arteries and veins**."
+"text":"Which vitamin helps blood clotting?",
+"options":[
+"Vitamin A",
+"Vitamin B",
+"Vitamin K",
+"Vitamin C"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Vitamin K**\n\nVitamin K is required for **prothrombin synthesis**."
 },
 
 {
 "id":13,
-"text":"Which gas is mainly exhaled during respiration?",
-"options":["Oxygen","Nitrogen","Carbon dioxide","Hydrogen"],
-"correctIndex":2,
-"solution":"**Correct Answer: Carbon dioxide**\n\nRespiration produces **CO₂ as a metabolic waste product**."
+"text":"Which organ pumps blood through body?",
+"options":[
+"Liver",
+"Heart",
+"Lungs",
+"Kidney"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Heart**\n\nThe heart functions as the **circulatory pump**."
 },
 
 {
 "id":14,
-"text":"Which organ is responsible for filtering lymph?",
-"options":["Liver","Kidney","Spleen","Heart"],
-"correctIndex":2,
-"solution":"**Correct Answer: Spleen**\n\nThe spleen filters blood and stores immune cells."
+"text":"Which blood cells fight infection?",
+"options":[
+"RBC",
+"WBC",
+"Platelets",
+"Plasma"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: WBC**\n\nWhite blood cells provide **immune defense**."
 },
 
 {
 "id":15,
 "text":"Which pigment gives red colour to blood?",
-"options":["Chlorophyll","Haemoglobin","Melanin","Carotene"],
+"options":[
+"Melanin",
+"Haemoglobin",
+"Chlorophyll",
+"Carotene"
+],
 "correctIndex":1,
-"solution":"**Correct Answer: Haemoglobin**\n\nHaemoglobin binds oxygen in red blood cells."
+"solution":"**Correct Answer: Haemoglobin**\n\nHaemoglobin carries oxygen."
 },
 
 {
 "id":16,
-"text":"Which part of the digestive system absorbs most nutrients?",
-"options":["Stomach","Small intestine","Large intestine","Esophagus"],
+"text":"Which part of digestive system absorbs most nutrients?",
+"options":[
+"Stomach",
+"Small intestine",
+"Large intestine",
+"Esophagus"
+],
 "correctIndex":1,
-"solution":"**Correct Answer: Small intestine**\n\nThe **villi and microvilli** increase absorption surface."
+"solution":"**Correct Answer: Small intestine**\n\nVilli increase absorption area."
 },
 
 {
 "id":17,
-"text":"Which part of the body regulates hormones?",
-"options":["Pituitary gland","Kidney","Liver","Heart"],
+"text":"Which organ stores bile?",
+"options":[
+"Gall bladder",
+"Pancreas",
+"Liver",
+"Kidney"
+],
 "correctIndex":0,
-"solution":"**Correct Answer: Pituitary gland**\n\nThe pituitary gland is called the **master gland**."
+"solution":"**Correct Answer: Gall bladder**\n\nBile is stored and concentrated here."
 },
 
 {
 "id":18,
-"text":"Which organ is responsible for hearing?",
-"options":["Ear","Eye","Nose","Tongue"],
-"correctIndex":0,
-"solution":"**Correct Answer: Ear**\n\nThe ear converts sound waves into nerve signals."
+"text":"Which part of blood helps clotting?",
+"options":[
+"RBC",
+"WBC",
+"Platelets",
+"Plasma"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Platelets**\n\nPlatelets trigger **coagulation cascade**."
 },
 
 {
 "id":19,
-"text":"Which component of blood helps in clotting?",
-"options":["RBC","Platelets","WBC","Plasma"],
-"correctIndex":1,
-"solution":"**Correct Answer: Platelets**\n\nPlatelets initiate **blood coagulation**."
+"text":"Which gas is released during respiration?",
+"options":[
+"Oxygen",
+"Nitrogen",
+"Carbon dioxide",
+"Hydrogen"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Carbon dioxide**\n\nProduced during **cellular respiration**."
 },
 
 {
 "id":20,
-"text":"Which organ stores bile produced by the liver?",
-"options":["Pancreas","Gall bladder","Kidney","Spleen"],
-"correctIndex":1,
-"solution":"**Correct Answer: Gall bladder**\n\nThe gall bladder stores and concentrates bile."
+"text":"Which organ produces urine?",
+"options":[
+"Kidney",
+"Liver",
+"Heart",
+"Lung"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Kidney**\n\nUrine formation occurs in **nephrons**."
 }
 
 ]
