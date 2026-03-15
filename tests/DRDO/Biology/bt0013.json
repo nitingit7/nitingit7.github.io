@@ -1,0 +1,267 @@
+{
+"title": "Biology Test 13 #bt0013 (Cell & Human Anatomy)",
+"timeLimit": 10,
+"questions":[
+
+{
+"id":1,
+"text":"Which one of the following statements is not true with regard to the transplantation of stem cells in animals?",
+"options":[
+"They multiply themselves throughout the life span of an animal",
+"They repair the damaged tissues of the organs",
+"They have the capacity to produce one or more types of specialized cells",
+"They are found only in the embryo"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: They are found only in the embryo**\n\nStem cells are undifferentiated cells capable of dividing and producing specialized cells.\n\nOption Analysis:\n• They multiply themselves throughout the life span → Correct. Stem cells have self-renewal ability.\n• They repair damaged tissues → Correct. They play a crucial role in regenerative medicine.\n• They produce specialized cells → Correct. Stem cells differentiate into various tissues.\n• They are found only in the embryo → Incorrect. Stem cells also exist in adult tissues such as bone marrow."
+},
+
+{
+"id":2,
+"text":"With reference to the latest developments in stem cell research, consider the following statements.\n1. The only source of human stem cells are the embryos at the blastocyst stage.\n2. The stem cells can be derived without causing destruction to blastocysts.\n3. The stem cells can regenerate themselves in vitro virtually forever.\n4. Indian research centres also created a few cell lines which can be developed into many types of tissues.\nWhich of these statements are correct?",
+"options":[
+"1, 2, 3 and 4",
+"1, 2 and 3",
+"1, 3 and 4",
+"3 and 4"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: 1, 2, 3 and 4**\n\nStem cell technology is a rapidly developing biomedical field.\n\nExplanation:\n• Statement 1 → Early research used blastocysts as major source.\n• Statement 2 → New techniques allow extraction without destroying embryos.\n• Statement 3 → Stem cells can divide indefinitely under laboratory conditions.\n• Statement 4 → Indian research institutes have successfully produced stem-cell lines."
+},
+
+{
+"id":3,
+"text":"The most abundant element found in the human body is",
+"options":[
+"Iron",
+"Sodium",
+"Oxygen",
+"Iodine"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Oxygen**\n\nAbout **65% of human body mass is oxygen**, mainly present in water and organic compounds."
+},
+
+{
+"id":4,
+"text":"The maximum amount of element found in human body is",
+"options":[
+"Iron",
+"Sodium",
+"Phosphorus",
+"Calcium"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: Calcium**\n\nAmong minerals, calcium is the most abundant. It forms bones and teeth."
+},
+
+{
+"id":5,
+"text":"Weight of our body is mostly made of",
+"options":[
+"From bones",
+"Parts of body",
+"Parts of skin",
+"From water"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: From water**\n\nHuman body contains about **60–70% water**, making it the largest contributor to body weight."
+},
+
+{
+"id":6,
+"text":"The percentage of water in an adult human body is around",
+"options":[
+"10%",
+"30%",
+"65%",
+"75%"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: 65%**\n\nAverage adult body water content is about **60–65%**."
+},
+
+{
+"id":7,
+"text":"The number of bones in an adult human body is",
+"options":[
+"204",
+"206",
+"208",
+"210"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: 206**\n\nAdults have **206 bones**. Infants initially have about **270 bones**."
+},
+
+{
+"id":8,
+"text":"The total volume of blood in a normal adult human being is",
+"options":[
+"5-6 litres",
+"3-4 litres",
+"8-10 litres",
+"10-12 litres"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: 5–6 litres**\n\nAverage adult blood volume ≈ **5 litres**."
+},
+
+{
+"id":9,
+"text":"At the age of 20 years, the number of bones in human body is approximately",
+"options":[
+"100",
+"200",
+"300",
+"None of these"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: 200**\n\nAround **206 bones** exist in adults."
+},
+
+{
+"id":10,
+"text":"Which of the following is the smallest bone in the human body?",
+"options":[
+"Vomer",
+"Stapes",
+"Malleus",
+"Incus"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Stapes**\n\nThe **stapes bone in the middle ear** is the smallest bone."
+},
+
+{
+"id":11,
+"text":"The smallest bone in our body is found in our",
+"options":[
+"Ear",
+"Nose",
+"Eye",
+"Toe"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Ear**\n\nThe stapes bone lies in the **middle ear**."
+},
+
+{
+"id":12,
+"text":"The number of bones in human skull is",
+"options":[
+"28",
+"30",
+"32",
+"40"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: 28**\n\nThe skull consists of cranial bones and facial bones."
+},
+
+{
+"id":13,
+"text":"Which one of the following salts is found in maximum amount in the human bones?",
+"options":[
+"Magnesium Chloride",
+"Calcium Carbonate",
+"Calcium Phosphate",
+"Sodium Chloride"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Calcium Phosphate**\n\nBones mainly contain **calcium phosphate in the form of hydroxyapatite crystals**."
+},
+
+{
+"id":14,
+"text":"How many pairs of ribs are there in a human body?",
+"options":[
+"10",
+"11",
+"12",
+"13"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: 12**\n\nHumans have **12 pairs of ribs (24 total)**."
+},
+
+{
+"id":15,
+"text":"Which part of the human body produces bile?",
+"options":[
+"Pancreas",
+"Liver",
+"Kidney",
+"Stomach"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Liver**\n\nThe liver produces bile which aids digestion of fats."
+},
+
+{
+"id":16,
+"text":"Which organ purifies blood in the human body?",
+"options":[
+"Heart",
+"Kidney",
+"Lungs",
+"Pancreas"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Kidney**\n\nKidneys filter waste products from blood."
+},
+
+{
+"id":17,
+"text":"Which part of the human body controls body balance?",
+"options":[
+"Cerebrum",
+"Cerebellum",
+"Medulla",
+"Thalamus"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Cerebellum**\n\nThe cerebellum regulates posture and balance."
+},
+
+{
+"id":18,
+"text":"Which vitamin is essential for blood clotting?",
+"options":[
+"Vitamin A",
+"Vitamin B",
+"Vitamin K",
+"Vitamin C"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Vitamin K**\n\nVitamin K helps synthesize clotting factors."
+},
+
+{
+"id":19,
+"text":"The normal temperature of the human body is approximately",
+"options":[
+"35°C",
+"36°C",
+"37°C",
+"38°C"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: 37°C**\n\nNormal body temperature ≈ **98.6°F or 37°C**."
+},
+
+{
+"id":20,
+"text":"Which organ of the human body produces insulin?",
+"options":[
+"Liver",
+"Pancreas",
+"Spleen",
+"Kidney"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Pancreas**\n\nInsulin is secreted by **beta cells of the islets of Langerhans**."
+}
+
+]
+}
