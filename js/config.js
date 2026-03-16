@@ -143,6 +143,7 @@ var GITHUB_FILES = {
     'physics_sectional': [
         { name: "Physics Test 1 (Measurement/Unit)", tags: "Measurement/Unit", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Physics/PT001.json" },
         { name: "Physics Test 2 (Measurement/Unit & Measuring Devices)", tags: "Measurement/Unit & Measuring Devices", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Physics/PT002.json" },
+        { name: "Physics Test 3 (Measuring Devices and Scales)", tags: "Measuring Devices and Scales", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Physics/PT003.json" },
         // Add your full physics tests here
     ],
 
