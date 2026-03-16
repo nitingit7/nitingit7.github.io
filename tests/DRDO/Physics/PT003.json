@@ -1,267 +1,146 @@
 {
-"title": "Physics Test 3 #PT003 (Measuring Devices and Scales)",
-"timeLimit": 10,
-"questions":[
-
-{
-"id":1,
-"text":"SONAR is mostly used by",
-"options":[
-"Astronauts",
-"Doctors",
-"Engineers",
-"Navigators"
-],
-"correctIndex":3,
-"solution":"**Correct Answer: Navigators**\n\nSONAR (Sound Navigation and Ranging) uses ultrasonic waves to detect underwater objects.\n\nOption Analysis:\n• Astronauts → Work in space, not underwater detection.\n• Doctors → Use ultrasound imaging, not SONAR navigation.\n• Engineers → May design SONAR but do not primarily use it.\n• Navigators → Correct. Used in submarines and ships to detect objects and measure ocean depth."
-},
-
-{
-"id":2,
-"text":"Which of the following is measured by ‘Anemometer’?",
-"options":[
-"Velocity of water-flow",
-"Depth of water",
-"Force of the wind",
-"Intensity of light"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Force of the wind**\n\nAn anemometer measures **wind speed or wind force**.\n\nOption Analysis:\n• Velocity of water flow → Measured by flow meter.\n• Depth of water → Measured by fathometer.\n• Force of wind → Correct.\n• Intensity of light → Measured by luxmeter."
-},
-
-{
-"id":3,
-"text":"The velocity of wind is measured by",
-"options":[
-"Barometer",
-"Anemometer",
-"Hydrometer",
-"Wind vane"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Anemometer**\n\nWind speed measurement is an important parameter in meteorology.\n\nOption Analysis:\n• Barometer → Measures atmospheric pressure.\n• Anemometer → Correct.\n• Hydrometer → Measures density of liquids.\n• Wind vane → Measures wind direction, not velocity."
-},
-
-{
-"id":4,
-"text":"Which one of the following is not correctly matched?",
-"options":[
-"Anemometer - Wind speed",
-"Ammeter - Electric current",
-"Tacheometer - Pressure difference",
-"Pyrometer - High temperature"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Tacheometer - Pressure difference**\n\nA tacheometer measures **distance or horizontal/vertical angles in surveying**, not pressure."
-},
-
-{
-"id":5,
-"text":"Pyrometer is used to measure",
-"options":[
-"Air pressure",
-"Humidity",
-"High temperature",
-"Density"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: High temperature**\n\nPyrometers measure temperatures above **700°C**, often used in furnaces and metallurgy."
-},
-
-{
-"id":6,
-"text":"Which one of the following devices is used to measure extremely high temperature?",
-"options":[
-"Pyrometer",
-"Photometer",
-"Phonometer",
-"Pycnometer"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: Pyrometer**\n\nUsed in industries such as **steel production and ceramics**."
-},
-
-{
-"id":7,
-"text":"Which one of the following thermometers is known as pyrometer?",
-"options":[
-"Thermo-electric thermometer",
-"Radiation thermometer",
-"Gas thermometer",
-"Liquid thermometer"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Radiation thermometer**\n\nRadiation thermometers measure temperature based on emitted thermal radiation."
-},
-
-{
-"id":8,
-"text":"The thermometer which used to measure 2000ºC temperature is",
-"options":[
-"Gas thermometer",
-"Mercury thermometer",
-"Total radiation pyrometer",
-"Steam pressure thermometer"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Total radiation pyrometer**\n\nMercury thermometers cannot measure very high temperatures."
-},
-
-{
-"id":9,
-"text":"‘Pyrheliometer’ is used for measuring",
-"options":[
-"Sun spots",
-"Solar radiation",
-"Air temperature",
-"Temperature of plants"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Solar radiation**\n\nPyrheliometers measure **direct beam solar radiation**."
-},
-
-{
-"id":10,
-"text":"What is measured by manometer?",
-"options":[
-"Air pressure",
-"Pressure of gas",
-"Density of liquids",
-"Pressure of oil on the surface"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Pressure of gas**\n\nManometers measure pressure difference between gases."
-},
-
-{
-"id":11,
-"text":"Which instrument is used to measure atmospheric pressure?",
-"options":[
-"Hydrometer",
-"Barometer",
-"Manometer",
-"Hygrometer"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Barometer**\n\nBarometers measure **atmospheric pressure**, important in weather prediction."
-},
-
-{
-"id":12,
-"text":"The liquid/liquids used in the simple barometer is/are",
-"options":[
-"Water",
-"Mercury",
-"Alcohol",
-"All of these"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Mercury**\n\nMercury is used due to **high density and low vapour pressure**."
-},
-
-{
-"id":13,
-"text":"The density of milk can be obtained by the use of",
-"options":[
-"Hydrometer",
-"Butyrometer",
-"Lactometer",
-"Thermometer"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Lactometer**\n\nA lactometer determines **purity of milk by density measurement**."
-},
-
-{
-"id":14,
-"text":"Which instrument is used for measuring humidity in the air?",
-"options":[
-"Hydrometer",
-"Hygrometer",
-"Spectrometer",
-"Eudiometer"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Hygrometer**\n\nHumidity is the **amount of water vapour in air**."
-},
-
-{
-"id":15,
-"text":"Hygrometer is used to measure",
-"options":[
-"Humidity in atmosphere",
-"Atmospheric pressure",
-"High temperature",
-"Velocity of wind"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: Humidity in atmosphere**"
-},
-
-{
-"id":16,
-"text":"Which of the following is correctly matched?",
-"options":[
-"Thermoresistor - Electronic thermometer",
-"Capacitor - Thermometer",
-"Bipolar Junction Transistor - Rectifier",
-"Junction Diode - Amplifier"
-],
-"correctIndex":0,
-"solution":"**Correct Answer: Thermoresistor – Electronic thermometer**"
-},
-
-{
-"id":17,
-"text":"The name of the equipment used for measuring blood pressure is",
-"options":[
-"Teachometer",
-"Sphygmomanometer",
-"Actiometer",
-"Barometer"
-],
-"correctIndex":1,
-"solution":"**Correct Answer: Sphygmomanometer**"
-},
-
-{
-"id":18,
-"text":"Which one of the following can be used to measure temperature above 1500ºC?",
-"options":[
-"Clinical thermometer",
-"Thermoelectric couple thermometer",
-"Platinum resistance thermometer",
-"Pyrometer"
-],
-"correctIndex":3,
-"solution":"**Correct Answer: Pyrometer**"
-},
-
-{
-"id":19,
-"text":"The apparatus used to measure the intensity of light is known as",
-"options":[
-"Anemometer",
-"Calorimeter",
-"Luxmeter",
-"Altimeter"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Luxmeter**"
-},
-
-{
-"id":20,
-"text":"Radar is used for",
-"options":[
-"Detecting objects by using light waves",
-"Reflecting sound waves to detect objects",
-"Determining the presence and location of objects with radio wave",
-"Tracking rain-bearing clouds"
-],
-"correctIndex":2,
-"solution":"**Correct Answer: Determining the presence and location of objects with radio wave**"
-}
-
-]
+  "title": "Physics Test 3 #PT003 (Measuring Devices and Scales)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "SONAR is primarily utilized by which professional group for underwater detection and navigation?",
+      "options": ["Astronauts", "Doctors", "Engineers", "Navigators"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Navigators (D)**\n\nSONAR (Sound Navigation and Ranging) emits acoustic pulses and analyzes echoes to detect submerged objects, measure depth, and map seabeds. In DRDO CEPTAM-11 General Science Physics syllabus, SONAR is critical for naval defence applications — DRDO’s Naval Physical and Oceanographic Laboratory (NPOL) develops advanced sonar systems (e.g., HUMSA, ATLAS) for Indian Navy submarines and warships to counter underwater threats like enemy subs or mines. It operates on piezoelectric transducers converting electrical to sound energy and vice-versa, with range depending on frequency (low for long range, high for resolution). DRDO integrates SONAR with torpedoes and ASW helicopters for maritime domain awareness in Indian Ocean Region.\n\n**Option-wise Analysis:**\n• **Astronauts (A):** Space uses LIDAR/RADAR, not acoustic SONAR (vacuum incompatible).\n• **Doctors (B):** Medical ultrasound is diagnostic SONAR variant, but not primary use.\n• **Engineers (C):** General engineering uses echo-sounders, but navigators operate in maritime context.\n• **Navigators (D):** Core application in marine navigation and defence.\n\n**Important Exam Concept:** Acoustic principles, echo-ranging equation (distance = v × t/2), frequency vs. range trade-off & DRDO naval weapon systems (repeated in defence electronics & underwater acoustics papers)."
+    },
+    {
+      "id": 2,
+      "text": "Which physical quantity is directly measured by an Anemometer in meteorological and aviation applications?",
+      "options": ["Velocity of water-flow", "Depth of water", "Force of the wind", "Intensity of light"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Force of the wind (C)**\n\nAnemometer (cup, hot-wire or vane type) measures wind speed/force via rotation or cooling effect, calibrated in m/s or knots. DRDO CEPTAM-11 uses this in missile launch meteorology (e.g., Agni/Prithvi tests at ITR Chandipur require wind data <15 knots for trajectory accuracy) and aircraft operations at DRDO airfields. Hot-wire anemometers exploit convective heat loss (King’s law: I²R = (A + B√v)ΔT). Defence applications include border weather stations and UAV flight planning.\n\n**Option-wise Analysis:**\n• **Velocity of water-flow (A):** Current meter or flowmeter.\n• **Depth of water (B):** Echo-sounder/fathometer.\n• **Force of the wind (C):** Direct measurement via drag/rotation.\n• **Intensity of light (D):** Luxmeter/photometer.\n\n**Important Exam Concept:** Fluid dynamics (Bernoulli), convective heat transfer & DRDO range safety meteorology (high wind aborts launches)."
+    },
+    {
+      "id": 3,
+      "text": "The velocity of wind is accurately measured using which instrument in defence weather monitoring systems?",
+      "options": ["Barometer", "Anemometer", "Hydrometer", "Wind Vane"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Anemometer (B)**\n\nAnemometer quantifies wind velocity for aviation and missile safety. DRDO’s integrated test range (ITR) and Aeronautical Development Agency (ADA) use calibrated anemometers to ensure launch windows (gust <10 m/s). Vane anemometers combine direction + speed; ultrasonic types avoid moving parts for rugged field use.\n\n**Option-wise Analysis:**\n• **Barometer (A):** Atmospheric pressure.\n• **Anemometer (B):** Wind speed/force.\n• **Hydrometer (C):** Liquid density/specific gravity.\n• **Wind Vane (D):** Direction only.\n\n**Important Exam Concept:** Instrument classification, calibration standards & DRDO launch pad meteorology protocols."
+    },
+    {
+      "id": 4,
+      "text": "Which of the following instrument pairings is incorrectly matched in standard physics instrumentation?",
+      "options": ["Anemometer - Wind speed", "Ammeter - Electric current", "Tacheometer - Pressure difference", "Pyrometer - High temperature"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Tacheometer - Pressure difference (C)**\n\nTacheometer measures distance/speed via stadia hairs (optical surveying). DRDO uses tacheometers in range surveying for missile trajectory mapping. Correct matches: Anemometer-wind, Ammeter-current, Pyrometer-high temp (radiation/non-contact for rocket exhaust >2000°C).\n\n**Option-wise Analysis:**\n• **Anemometer - Wind speed (A):** Correct.\n• **Ammeter - Electric current (B):** Correct.\n• **Tacheometer - Pressure difference (C):** Incorrect; pressure uses manometer/barometer.\n• **Pyrometer - High temperature (D):** Correct (optical/thermocouple types).\n\n**Important Exam Concept:** Instrument taxonomy & DRDO test range instrumentation (optical surveying for trajectory analysis)."
+    },
+    {
+      "id": 5,
+      "text": "A pyrometer is specifically designed to measure",
+      "options": ["Air pressure", "Humidity", "High temperature", "Density"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: High temperature (C)**\n\nPyrometers (radiation/infrared) measure >1000°C without contact by blackbody radiation (Wien/Stefan-Boltzmann law). DRDO applies pyrometers in hypersonic wind tunnels, rocket motor testing (ISRO/DRDO joint) and re-entry vehicle heat shield evaluation (temperatures >3000 K). Total radiation pyrometers integrate full spectrum.\n\n**Option-wise Analysis:**\n• **Air pressure (A):** Barometer/manometer.\n• **Humidity (B):** Hygrometer/psychrometer.\n• **High temperature (C):** Non-contact radiation measurement.\n• **Density (D):** Hydrometer/pycnometer.\n\n**Important Exam Concept:** Radiation pyrometry, emissivity correction & DRDO propulsion/thermal protection system testing."
+    },
+    {
+      "id": 6,
+      "text": "The thermometer capable of measuring temperatures around 2000°C is known as",
+      "options": ["Gas thermometer", "Mercury thermometer", "Total radiation pyrometer", "Steam pressure thermometer"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Total radiation pyrometer (C)**\n\nTotal radiation pyrometers measure full blackbody emission (Stefan’s law) up to 3000°C. DRDO uses them in high-energy laser testing and scramjet combustion chambers where thermocouples melt. Gas/mercury limited to <500°C; steam pressure <200°C.\n\n**Option-wise Analysis:**\n• **Gas thermometer (A):** Low temp precision.\n• **Mercury thermometer (B):** <350°C max.\n• **Total radiation pyrometer (C):** High-temp non-contact.\n• **Steam pressure thermometer (D):** Industrial low-pressure.\n\n**Important Exam Concept:** High-temperature instrumentation limits & DRDO hypersonic propulsion diagnostics."
+    },
+    {
+      "id": 7,
+      "text": "A device used for measuring extremely high temperatures (above 1500°C) in defence testing facilities is",
+      "options": ["Clinical thermometer", "Thermo-electric couple thermometer", "Platinum resistance thermometer", "Pyrometer"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Pyrometer (D)**\n\nPyrometers enable non-contact measurement in DRDO’s high-temperature wind tunnels and plasma facilities for hypersonic vehicle testing. Optical pyrometers use disappearing filament; infrared for real-time data.\n\n**Option-wise Analysis:**\n• **Clinical thermometer (A):** Body temp 35-42°C.\n• **Thermo-electric couple (B):** Up to 1600°C but contact.\n• **Platinum resistance (C):** Precise but <1000°C.\n• **Pyrometer (D):** Radiation-based for extreme temps.\n\n**Important Exam Concept:** Non-contact thermometry & DRDO aerospace material testing."
+    },
+    {
+      "id": 8,
+      "text": "Which instrument is employed to measure atmospheric pressure in defence weather stations?",
+      "options": ["Hydrometer", "Barometer", "Manometer", "Hygrometer"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Barometer (B)**\n\nBarometers (mercury/aneroid) measure pressure for ballistic trajectory correction in DRDO missile launches. Aneroid types are portable for field use. Pressure affects air density → drag.\n\n**Option-wise Analysis:**\n• **Hydrometer (A):** Density.\n• **Barometer (B):** Atmospheric pressure.\n• **Manometer (C):** Differential pressure.\n• **Hygrometer (D):** Humidity.\n\n**Important Exam Concept:** Pressure measurement & DRDO range meteorology for launch safety."
+    },
+    {
+      "id": 9,
+      "text": "A manometer is primarily used to measure",
+      "options": ["Air pressure", "Pressure of gas", "Density of liquids", "Pressure of oil on the surface"],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: Pressure of gas (B)**\n\nManometers measure gauge/differential pressure via liquid height difference (P = ρgh). DRDO uses U-tube/inclined manometers in wind tunnel calibration and fuel system testing.\n\n**Option-wise Analysis:**\n• **Air pressure (A):** Barometer variant.\n• **Pressure of gas (B):** Primary use.\n• **Density of liquids (C):** Hydrometer.\n• **Pressure of oil (D):** Specific application but not core.\n\n**Important Exam Concept:** Hydrostatics & DRDO fluid dynamics labs."
+    },
+    {
+      "id": 10,
+      "text": "The density of milk is commonly measured using which instrument in quality control labs?",
+      "options": ["Hydrometer", "Butyrometer", "Lactometer", "Thermometer"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Lactometer (C)**\n\nLactometer (hydrometer variant) measures specific gravity (1.027-1.035) for milk adulteration detection. DRDO food technology labs use it for ration quality assurance.\n\n**Option-wise Analysis:**\n• **Hydrometer (A):** General density.\n• **Butyrometer (B):** Fat content.\n• **Lactometer (C):** Milk density.\n• **Thermometer (D):** Temperature.\n\n**Important Exam Concept:** Specific gravity & DRDO ration quality testing."
+    },
+    {
+      "id": 11,
+      "text": "What is measured using a Cusec unit in defence water management systems?",
+      "options": ["Purity of water", "Depth of water", "Flow of water", "Quantity of water"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Flow of water (C)**\n\nCusec = cubic foot per second (28.317 L/s). DRDO uses flow meters in cantonment water supply and flood control for forward bases.\n\n**Option-wise Analysis:**\n• **Purity (A):** TDS meter.\n• **Depth (B):** Sonar/fathometer.\n• **Flow (C):** Cusec standard.\n• **Quantity (D):** Volume units.\n\n**Important Exam Concept:** Volumetric flow & DRDO infrastructure engineering."
+    },
+    {
+      "id": 12,
+      "text": "‘Dobson’ unit is the standard measure for",
+      "options": ["Thickness of Earth", "Thickness of Diamond", "Thickness of Ozone layer", "Measurement of Noise"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Thickness of Ozone layer (C)**\n\nDobson Unit (DU) = 0.001 atm-cm ozone column. DRDO environmental monitoring tracks ozone for UV protection in high-altitude ops (soldier skin cancer risk).\n\n**Option-wise Analysis:**\n• **Earth/Diamond (A/B):** Not standard.\n• **Ozone layer (C):** Direct measure.\n• **Noise (D):** Decibel.\n\n**Important Exam Concept:** Atmospheric science & DRDO high-altitude health monitoring."
+    },
+    {
+      "id": 13,
+      "text": "What is measured in Cusec?",
+      "options": ["Purity of water", "Depth of water", "Flow of water", "Quantity of water"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Flow of water (C)**\n\nCusec quantifies discharge rate. DRDO irrigation projects for border farms use cusec for canal design.\n\n**Option-wise Analysis:**\n• Others use different units.\n\n**Important Exam Concept:** Hydrological units & DRDO sustainable defence agriculture."
+    },
+    {
+      "id": 14,
+      "text": "Which instrument measures the intensity of sound?",
+      "options": ["Chronometer", "Anemeter", "Audiophone", "Audiometer"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Audiometer (D)**\n\nAudiometer tests hearing threshold (dB SPL). DRDO uses for soldier hearing protection in artillery/noisy environments (noise-induced hearing loss studies).\n\n**Option-wise Analysis:**\n• **Chronometer (A):** Time.\n• **Anemeter (B):** Wind.\n• **Audiophone (C):** Hearing aid.\n• **Audiometer (D):** Sound intensity/hearing.\n\n**Important Exam Concept:** Acoustics & DRDO occupational health."
+    },
+    {
+      "id": 15,
+      "text": "Fathometer is used to measure",
+      "options": ["Earthquake", "Rain", "Depth of sea", "Sound intensity"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Depth of sea (C)**\n\nFathometer (echo-sounder) uses sonar principle. DRDO naval hydrography employs for submarine navigation and mine detection.\n\n**Option-wise Analysis:**\n• **Earthquake (A):** Seismograph.\n• **Rain (B):** Rain gauge.\n• **Depth (C):** Acoustic depth.\n• **Sound (D):** Audiometer.\n\n**Important Exam Concept:** Marine acoustics & DRDO underwater navigation."
+    },
+    {
+      "id": 16,
+      "text": "Which instrument is used for measuring the intensity of light?",
+      "options": ["Anemometer", "Calorimeter", "Luxmeter", "Altimeter"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Luxmeter (C)**\n\nLuxmeter measures illuminance (lux). DRDO uses in optics labs for laser warning systems and cockpit lighting standards.\n\n**Option-wise Analysis:**\n• **Anemometer (A):** Wind.\n• **Calorimeter (B):** Heat.\n• **Luxmeter (C):** Light intensity.\n• **Altimeter (D):** Altitude.\n\n**Important Exam Concept:** Photometry & DRDO electro-optics."
+    },
+    {
+      "id": 17,
+      "text": "Radar is used for",
+      "options": ["Detecting objects by using light waves", "Reflecting sound waves to detect objects", "Determining the presence and location of objects with radio wave", "Tracking rain-bearing clouds"],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: Determining the presence and location of objects with radio wave (C)**\n\nRADAR (Radio Detection and Ranging) uses microwave pulses. DRDO’s LRDE develops indigenous radars (e.g., Rajendra for Akash, Swordfish for BMD) for air surveillance and missile guidance.\n\n**Option-wise Analysis:**\n• **Light waves (A):** LIDAR.\n• **Sound waves (B):** SONAR.\n• **Radio wave (C):** Electromagnetic radar.\n• **Rain clouds (D):** Weather radar application.\n\n**Important Exam Concept:** Microwave radar principles & DRDO integrated air defence systems."
+    },
+    {
+      "id": 18,
+      "text": "Which one of the following is not correctly matched?",
+      "options": ["Manometer - Pressure", "Carburetor - Internal combustion engine", "Cardiograph - Heart movement", "Seismometer - Curvature of surface"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Seismometer - Curvature of surface (D)**\n\nSeismometer measures ground motion (earthquakes). DRDO seismic stations monitor nuclear test compliance. Correct: Manometer-pressure, Carburetor-fuel mix, Cardiograph-heart.\n\n**Option-wise Analysis:**\n• **Manometer (A):** Correct.\n• **Carburetor (B):** Correct.\n• **Cardiograph (C):** Correct.\n• **Seismometer (D):** Incorrect (earthquakes, not curvature).\n\n**Important Exam Concept:** Instrument matching & DRDO geophysical monitoring."
+    },
+    {
+      "id": 19,
+      "text": "Phonometer is used to measure which one of the following?",
+      "options": ["The power of brightness of light", "Extremely high temperature", "Frequency of electromagnetic wave", "Testing the force of the human voice in speaking"],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: Testing the force of the human voice in speaking (D)**\n\nPhonometer quantifies sound intensity/voice power. DRDO uses in voice communication systems for noisy environments (tanks, aircraft).\n\n**Option-wise Analysis:**\n• **Brightness (A):** Photometer.\n• **High temp (B):** Pyrometer.\n• **Frequency (C):** Wavemeter.\n• **Voice force (D):** Phonometer.\n\n**Important Exam Concept:** Sound measurement & DRDO C4I systems."
+    },
+    {
+      "id": 20,
+      "text": "The apparatus used for detecting lie is known as",
+      "options": ["Polygraph", "Pyrometer", "Gyroscope", "Kymograph"],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: Polygraph (A)**\n\nPolygraph records physiological responses (heart rate, respiration). DRDO psychological evaluation uses for security clearance in sensitive projects.\n\n**Option-wise Analysis:**\n• **Pyrometer (B):** Temp.\n• **Gyroscope (C):** Orientation.\n• **Kymograph (D):** Muscle movement.\n• **Polygraph (A):** Lie detection.\n\n**Important Exam Concept:** Psychophysiology & DRDO personnel security screening."
+    }
+  ]
 }
