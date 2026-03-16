@@ -1,0 +1,246 @@
+{
+  "title": "Physics Test 5 #PT005 (Mechanics & Motion Under Gravity)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "A man is standing on a sensitive balance. If he inhales deeply, the reading of the balance:",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains unaffected",
+        "May increase or decrease depending on the atmospheric pressure"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: A — Increases\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion; also Class 11, Chapter 7 – System of Particles.\n\n🔬 Concept: This question tests your understanding of Newton's Third Law and the principle of action-reaction within a system.\n\nWhen a person inhales deeply, they draw air (which has mass) into their lungs. The lungs expand and temporarily hold this extra mass of air. Since the balance measures the normal reaction force (which equals the total gravitational pull of the body including all mass inside it), the reading increases momentarily.\n\n🔑 Key Points:\n• Air has mass (~1.2 kg/m³ at sea level).\n• When air enters the lungs, it becomes part of the person's system — the balance now supports that extra mass too.\n• The reading returns to normal after exhalation.\n\n❌ Option B (Decreases): Incorrect. Inhaling adds mass to the system, it does not remove mass.\n❌ Option C (Remains unaffected): Incorrect. Mass of air inside the lungs is real and measurable — the balance IS sensitive enough to detect it.\n❌ Option D (May increase or decrease): Incorrect. The outcome is deterministic — it always increases regardless of atmospheric pressure, because the air drawn in always has positive mass."
+    },
+    {
+      "id": 2,
+      "text": "Which of the following is a vector quantity?",
+      "options": [
+        "Time",
+        "Speed",
+        "Displacement",
+        "Distance"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: C — Displacement\n\n📘 NCERT Reference: Class 11 Physics, Chapter 4 – Motion in a Plane (Scalars and Vectors).\n\n🔬 Concept: This is a fundamental classification question. Physical quantities are classified as:\n• **Scalar**: Only magnitude (e.g., time, speed, distance, mass, temperature).\n• **Vector**: Both magnitude AND direction (e.g., displacement, velocity, force, acceleration, momentum).\n\n🔑 Key Differences:\n| Quantity | Type | Reason |\n|---|---|---|\n| Time | Scalar | Has no direction |\n| Speed | Scalar | Distance per unit time, no direction |\n| Distance | Scalar | Total path length, no direction |\n| **Displacement** | **Vector** | Shortest path with direction from start to end |\n\n❌ Option A (Time): Scalar — time always moves forward but has no spatial direction.\n❌ Option B (Speed): Scalar — it is the magnitude of velocity. Speed = |velocity|.\n❌ Option D (Distance): Scalar — it is the total path length regardless of direction.\n✅ Option C (Displacement): Vector — it is the change in position with both magnitude and direction."
+    },
+    {
+      "id": 3,
+      "text": "A simple machine helps a person in doing:",
+      "options": [
+        "Less work",
+        "The same amount of work with lesser force",
+        "The same amount of work slowly",
+        "The same amount of work much faster"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: B — The same amount of work with lesser force\n\n📘 NCERT Reference: Class 11 Physics, Chapter 6 – Work, Energy and Power.\n\n🔬 Concept: This is the golden rule of machines. A simple machine does NOT reduce the total amount of work done (assuming ideal, frictionless conditions). It only changes the way force is applied.\n\n🧮 Mathematical Basis:\nWork = Force × Displacement\nIf Force is reduced, Displacement increases proportionally so that Work remains constant.\nW = F₁ × d₁ = F₂ × d₂ (where F₂ < F₁ and d₂ > d₁)\n\n🔑 Key Points:\n• Machines provide **mechanical advantage** (MA = Load / Effort).\n• Examples: Lever, pulley, inclined plane, screw, wheel & axle.\n• In real machines, due to friction, output work < input work (efficiency < 100%).\n\n❌ Option A (Less work): Wrong. An ideal machine conserves work. A real machine actually WASTES some work due to friction — so output work is less than input, not the work YOU do.\n❌ Option C (Same work slowly): Wrong. Machines don't necessarily make work slower — some machines like gears can speed things up.\n❌ Option D (Same work faster): Wrong. Speed is not the primary purpose of a simple machine — force multiplication is."
+    },
+    {
+      "id": 4,
+      "text": "Which of the following is a vector quantity?",
+      "options": [
+        "Momentum",
+        "Pressure",
+        "Energy",
+        "Work"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: A — Momentum\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion; Chapter 6 – Work, Energy and Power.\n\n🔬 Concept: Among the options, only Momentum is a vector quantity.\n\n🔑 Analysis of Each Option:\n✅ **Momentum (p = mv)**: Vector — it has both magnitude AND direction (same direction as velocity). It follows vector addition. Newton's 2nd Law: F = dp/dt (rate of change of momentum).\n\n❌ **Pressure**: Scalar — it is force per unit area but acts equally in all directions (isotropic), so it has no specific direction. P = F/A.\n\n❌ **Energy (Kinetic/Potential)**: Scalar — energy is a scalar quantity. KE = ½mv², PE = mgh. Neither has direction.\n\n❌ **Work**: Scalar — even though Work = F·d (dot product of two vectors), the result is a scalar. W = Fd cosθ.\n\n🧠 Memory Trick: VFDAM are vectors — Velocity, Force, Displacement, Acceleration, Momentum. STEP are scalars — Speed, Time, Energy, Pressure."
+    },
+    {
+      "id": 5,
+      "text": "Which physical quantity is represented by the ratio of momentum and velocity of the body?",
+      "options": [
+        "Velocity",
+        "Acceleration",
+        "Mass",
+        "Force"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: C — Mass\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion.\n\n🔬 Concept: Direct application of the definition of momentum.\n\n🧮 Mathematical Derivation:\nMomentum: p = m × v\nTherefore: m = p / v\n\nThis is a direct rearrangement of the momentum formula.\n\n🔑 Key Points:\n• Momentum is a vector (p), velocity is a vector (v), but Mass (m = p/v) is a scalar.\n• This relationship confirms that mass is an intrinsic property — it does not depend on direction.\n• SI unit of momentum = kg·m/s; SI unit of velocity = m/s → Ratio = kg (unit of mass) ✓\n\n❌ Option A (Velocity): Velocity = Displacement/Time, not p/v.\n❌ Option B (Acceleration): Acceleration = Change in velocity/Time = Δv/t, not p/v.\n❌ Option D (Force): Force = mass × acceleration = m × a = (p/v) × a. More complex — not simply p/v.\n\n🧠 Quick Formula Check: p/v = mv/v = m ✓"
+    },
+    {
+      "id": 6,
+      "text": "Force is the product of:",
+      "options": [
+        "Mass and velocity",
+        "Mass and acceleration",
+        "Weight and velocity",
+        "Weight and acceleration"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: B — Mass and acceleration\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Newton's Second Law).\n\n🔬 Concept: This is directly Newton's Second Law of Motion.\n\nF = ma\nwhere F = Net Force (N), m = Mass (kg), a = Acceleration (m/s²)\n\n🔑 Key Points:\n• This is the most fundamental equation in classical mechanics.\n• Force is a vector (same direction as acceleration).\n• SI unit: 1 Newton (N) = 1 kg·m/s²\n• In terms of momentum: F = dp/dt = d(mv)/dt = m(dv/dt) = ma (when mass is constant)\n\n❌ Option A (Mass × Velocity): This gives Momentum (p = mv), not Force.\n❌ Option C (Weight × Velocity): Dimensionally inconsistent. Weight (N) × Velocity (m/s) = Watts (Power), not Force.\n❌ Option D (Weight × Acceleration): Weight itself = mg (already a force). Weight × acceleration = mg × a = m·g·a, which is NOT standard force.\n\n🧠 Key Distinction:\n• p = mv → Momentum\n• F = ma → Force\n• W = mg → Weight (a specific force due to gravity)"
+    },
+    {
+      "id": 7,
+      "text": "If the number representing the volume and surface area of a cube are equal, then the length of the edge of the cube in terms of the unit of measurement will be:",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: D — 6\n\n📘 NCERT Reference: Class 11 Mathematics, Chapter 12 – Three Dimensional Geometry (applied geometry); also relevant to Physics Chapter 2 – Units & Measurement.\n\n🔬 Concept: Pure mathematical reasoning applied to geometry.\n\n🧮 Derivation:\nLet side of cube = a\nVolume of cube = a³\nSurface area of cube = 6a² (cube has 6 faces, each of area a²)\n\nGiven: Volume = Surface Area (numerically)\na³ = 6a²\na³ / a² = 6\na = 6\n\n✅ So the edge length = 6 units.\n\n🔑 Key Points:\n• This only works numerically when units are the same.\n• If a = 6 cm: Volume = 216 cm³, Surface Area = 6 × 36 = 216 cm².\n• The numbers are equal but units are different (cm³ ≠ cm²) — the question says 'numbers representing', not actual values.\n\n❌ Option A (3): a³ = 27, 6a² = 54 → Not equal.\n❌ Option B (4): a³ = 64, 6a² = 96 → Not equal.\n❌ Option C (5): a³ = 125, 6a² = 150 → Not equal.\n✅ Option D (6): a³ = 216, 6a² = 216 → Equal ✓"
+    },
+    {
+      "id": 8,
+      "text": "Energy conservation means:",
+      "options": [
+        "Generation and destruction of energy",
+        "Energy could be created",
+        "Energy could not be created but destroyed",
+        "Energy can neither be created nor destroyed"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: D — Energy can neither be created nor destroyed\n\n📘 NCERT Reference: Class 11 Physics, Chapter 6 – Work, Energy and Power (Law of Conservation of Energy).\n\n🔬 Concept: This is the First Law of Thermodynamics / Law of Conservation of Energy — one of the most fundamental laws of physics.\n\n📜 Statement: Energy can neither be created nor destroyed; it can only be converted from one form to another. The total energy of an isolated system remains constant.\n\n🔑 Examples of Energy Conversion:\n• Electric bulb: Electrical → Light + Heat\n• Hydroelectric plant: Potential → Kinetic → Electrical\n• Nuclear reactor: Nuclear → Thermal → Electrical\n• Photosynthesis: Light → Chemical\n\n❌ Option A (Generation and destruction): Directly contradicts the law.\n❌ Option B (Energy could be created): Violates conservation — no scientific evidence supports energy creation from nothing.\n❌ Option C (Cannot be created but can be destroyed): Also wrong — energy cannot be destroyed either. It only transforms.\n✅ Option D: Correctly states the Law of Conservation of Energy.\n\n🧠 Einstein's Mass-Energy Equivalence: E = mc² extends conservation to include mass-energy interconversion, but the TOTAL is still conserved."
+    },
+    {
+      "id": 9,
+      "text": "The energy of wind is:",
+      "options": [
+        "Only potential",
+        "Only kinetic",
+        "Electrical",
+        "Potential and kinetic both"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: B — Only kinetic\n\n📘 NCERT Reference: Class 11 Physics, Chapter 6 – Work, Energy and Power; also NCERT Class 10 Chapter 14 – Sources of Energy.\n\n🔬 Concept: Wind is moving air. Any moving object possesses kinetic energy.\n\nKE = ½mv²\nwhere m = mass of air, v = speed of wind\n\n🔑 Key Points:\n• Wind energy is purely kinetic energy of moving air masses.\n• Wind turbines convert this kinetic energy of wind → mechanical rotation → electrical energy.\n• Wind does NOT have significant potential energy in the context of wind power (it's not elevated stored water — that's hydropower).\n\n❌ Option A (Only potential): Potential energy requires height/position change (PE = mgh). Wind energy is not based on height.\n✅ Option B (Only kinetic): Moving air = kinetic energy. This is the correct characterization.\n❌ Option C (Electrical): Wind energy is converted INTO electrical energy, but wind itself is not electrical.\n❌ Option D (Potential and kinetic both): While air at height does technically have PE, the ENERGY OF WIND (wind power) is defined as kinetic energy of air in motion.\n\n🧠 DRDO Tip: Wind power = ½ρAv³ (where ρ = air density, A = swept area, v = wind speed) — power scales with cube of wind speed!"
+    },
+    {
+      "id": 10,
+      "text": "In wind power, which form of energy is converted into electrical energy?",
+      "options": [
+        "Kinetic energy",
+        "Potential energy",
+        "Solar energy",
+        "Radiant energy"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: A — Kinetic energy\n\n📘 NCERT Reference: Class 10 Physics, Chapter 14 – Sources of Energy; Class 11 Chapter 6.\n\n🔬 Concept: Wind energy conversion chain:\nKinetic Energy of Wind → Mechanical Energy (rotation of turbine blades) → Electrical Energy (via generator)\n\n🔑 Key Points:\n• Wind turbines capture kinetic energy of moving air.\n• The rotor blades are designed (aerodynamically) to extract maximum KE from wind.\n• A generator then converts mechanical rotation into electricity.\n• This is a renewable, clean energy source.\n\n❌ Option A ✅: Kinetic energy — wind = moving air = KE = ½mv².\n❌ Option B (Potential energy): This is for hydroelectric power, where stored water at height has PE.\n❌ Option C (Solar energy): Solar panels/concentrators use solar energy. Wind farms use wind (kinetic), not direct solar.\n❌ Option D (Radiant energy): Radiant energy is electromagnetic radiation (light, heat). Photovoltaic cells convert radiant energy.\n\n🧠 Comparison:\n| Source | Energy Type |\n|---|---|\n| Wind | Kinetic |\n| Dam/Hydro | Potential |\n| Solar PV | Radiant/Light |\n| Thermal | Chemical/Heat |"
+    },
+    {
+      "id": 11,
+      "text": "As the train starts moving, the head of the passenger sitting inside leans backward because of:",
+      "options": [
+        "Inertia of Rest",
+        "Inertia of Motion",
+        "Moment of Inertia",
+        "Conservation of Mass"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: A — Inertia of Rest\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Newton's First Law / Inertia).\n\n🔬 Concept: Newton's First Law — Every object continues to be in its state of rest or uniform motion unless acted upon by an external force.\n\n🔑 Explanation:\n• When the train starts moving forward, the body of the passenger is dragged forward by the seat.\n• However, the HEAD (not directly in contact with the seat) tends to stay at REST due to Inertia of Rest.\n• This causes the head to appear to lean BACKWARD relative to the body.\n• The passenger experiences a backward jerk.\n\n🔑 Types of Inertia:\n1. **Inertia of Rest**: Tendency to remain at rest (e.g., head jerks back when vehicle starts).\n2. **Inertia of Motion**: Tendency to continue moving (e.g., passenger falls forward when brakes applied).\n3. **Inertia of Direction**: Tendency to continue in same direction (e.g., passenger thrown outward in a turn).\n\n❌ Option B (Inertia of Motion): This applies when a moving object tends to KEEP moving — like when brakes are applied, passenger lurches forward.\n❌ Option C (Moment of Inertia): This is a rotational concept (I = Σmr²) — resistance to rotational change. Not applicable here.\n❌ Option D (Conservation of Mass): Mass is always conserved — has nothing to do with the jerking motion."
+    },
+    {
+      "id": 12,
+      "text": "It is difficult to walk on ice than on the road because:",
+      "options": [
+        "Ice is harder than the road",
+        "Road is harder than the ice",
+        "Ice does not offer any reaction when we push it with our foot",
+        "Ice has a lesser friction than the road"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: D — Ice has lesser friction than the road\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Friction).\n\n🔬 Concept: Walking relies on friction between feet and ground. When we push backward on the ground, friction pushes us forward (Newton's 3rd Law). Less friction = less forward push = harder to walk.\n\n🔑 Friction Analysis:\n• **Road (concrete/asphalt)**: High coefficient of friction (μ ≈ 0.6–0.8) → Good grip.\n• **Ice**: Very low coefficient of friction (μ ≈ 0.03–0.1) → Very slippery.\n\nWhy is ice slippery?\n• Ice under pressure (from foot) melts slightly, forming a thin water film.\n• This water film acts as a lubricant, drastically reducing friction.\n\n❌ Option A (Ice is harder): Hardness ≠ Friction. Diamond is hard but can be slippery.\n❌ Option B (Road is harder): Hardness of road doesn't explain the difficulty of walking on ice.\n❌ Option C (No reaction from ice): Ice DOES exert reaction (Newton's 3rd Law). The problem is NOT absent reaction but absent friction.\n✅ Option D: Correct. Less friction → less grip → difficult to walk.\n\n🧠 DRDO Tip: Friction force f = μN, where μ = coefficient of friction, N = normal force. For ice, μ is very small."
+    },
+    {
+      "id": 13,
+      "text": "A man jumped at a speed of 5 metre per second from a stationary boat and the boat moved off with the speed of 0.5 metre per second. How many times is the mass of the boat greater than that of the man?",
+      "options": [
+        "5.5 times",
+        "4.5 times",
+        "2.5 times",
+        "10 times"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: D — 10 times\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Conservation of Linear Momentum).\n\n🔬 Concept: Law of Conservation of Momentum — In an isolated system (no external force), total momentum before = total momentum after.\n\n🧮 Derivation:\nInitial state: Both man and boat are at rest → Total initial momentum = 0\n\nLet mass of man = m, speed of man = 5 m/s\nLet mass of boat = M, speed of boat = 0.5 m/s (in opposite direction)\n\nBy Conservation of Momentum:\nm × 5 + M × (−0.5) = 0\n5m = 0.5M\nM/m = 5/0.5 = 10\n\n✅ Mass of boat = 10 times mass of man.\n\n❌ Option A (5.5): Would require: 5m = 5.5 × 0.5m → Not matching.\n❌ Option B (4.5): Doesn't satisfy the momentum equation.\n❌ Option C (2.5): Doesn't satisfy the momentum equation.\n✅ Option D (10): M = 10m → 10 × 0.5 = 5 ✓\n\n🔑 Key Points:\n• This is a classic recoil problem (similar to gun recoil).\n• Total momentum is always zero when starting from rest in an isolated system.\n• Heavier object moves slower; lighter object moves faster — inversely proportional."
+    },
+    {
+      "id": 14,
+      "text": "A truck, a car and a motorcycle have equal kinetic energies. If equal, stopping forces are applied and they stop after travelling a distance of X, Y and Z respectively, then:",
+      "options": [
+        "X > Y > Z",
+        "X < Y < Z",
+        "X = Y = Z",
+        "X ≅ 4Y ≅ 8Z"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: C — X = Y = Z\n\n📘 NCERT Reference: Class 11 Physics, Chapter 6 – Work, Energy and Power (Work-Energy Theorem).\n\n🔬 Concept: Work-Energy Theorem — The work done by net force equals change in kinetic energy.\n\n🧮 Derivation:\nWork done by stopping force = Change in KE\nF × d = KE (since final KE = 0)\nd = KE / F\n\nGiven:\n• KE of truck = KE of car = KE of motorcycle (equal)\n• Stopping force F is also equal for all three\n\nTherefore: d_truck = d_car = d_motorcycle\nX = Y = Z\n\n🔑 Key Points:\n• The stopping distance depends ONLY on the ratio of KE to stopping force.\n• Mass does NOT matter independently here — it's already embedded in the KE value.\n• If KE and F are equal, the stopping distance MUST be equal.\n\n❌ Option A (X > Y > Z): Would be correct only if same VELOCITY was given, not same KE. (Heavier vehicle has more momentum at same KE, needs more distance.)\n❌ Option B (X < Y < Z): Reverse reasoning — also wrong under equal KE condition.\n✅ Option C (X = Y = Z): Correct. Equal KE + Equal Force → Equal stopping distance.\n❌ Option D: Numerically inconsistent with the given data.\n\n🧠 DRDO Trap: If same SPEED (not KE) was given: KE_truck > KE_car > KE_motorcycle → X > Y > Z. The key word is 'equal kinetic energies'!"
+    },
+    {
+      "id": 15,
+      "text": "A person is sitting in a car which is at rest. The reaction from the road at each of the four wheels of the car is R. When the car runs on a straight level road, how will the reaction at either of the front wheels vary?",
+      "options": [
+        "It will be greater than R",
+        "It will be less than R",
+        "It will be equal to R",
+        "It shall depend on the material of the road"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: B — It will be less than R\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion; Rotational Mechanics concepts.\n\n🔬 Concept: This is about load distribution on wheels of a moving car.\n\n🔑 Explanation:\nWhen the car is at rest, weight is distributed evenly — all 4 wheels share equal load = R.\n\nWhen the car accelerates forward:\n• The engine drives the rear wheels (in rear-wheel drive cars), pushing backward on the road.\n• The car's inertia causes weight to shift BACKWARD (like how your body leans back in a seat).\n• This increases the load on REAR wheels and DECREASES the load on FRONT wheels.\n• Therefore, normal reaction at front wheels < R.\n\nWhen moving at constant velocity on level road:\n• There is still aerodynamic lift at front (not relevant at low speed), but due to car's center of mass position and drivetrain effects, FRONT wheels generally carry less load while moving.\n\n❌ Option A (Greater than R): Front wheels would carry MORE only during braking (weight shifts forward).\n✅ Option B (Less than R): During acceleration/motion, front wheels carry less — CORRECT.\n❌ Option C (Equal to R): True only at rest with perfect weight distribution.\n❌ Option D (Depends on road material): Road material is irrelevant to this reaction force balance.\n\n🧠 Practical Tip: This is why performance cars have rear-wheel drive — better traction during acceleration since rear wheels have more weight on them."
+    },
+    {
+      "id": 16,
+      "text": "An oil tanker is partially filled with oil and moves forward on a level road with uniform acceleration. The free surface of oil, then:",
+      "options": [
+        "Remains horizontal",
+        "Is inclined to the horizontal with smaller depth at the rear end",
+        "Is inclined to the horizontal with larger depth at the rear end",
+        "Assumes parabolic curve"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: C — Is inclined to the horizontal with larger depth at the rear end\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Pseudo-force / Non-inertial frames); Class 11 Chapter 10 – Mechanical Properties of Fluids.\n\n🔬 Concept: When a container of liquid accelerates forward, the liquid experiences a pseudo-force backward.\n\n🔑 Explanation:\nFrom ground frame:\n• As the tanker accelerates forward, the oil (due to inertia) tends to stay behind.\n• The oil therefore piles up at the REAR end of the tanker.\n• The surface tilts: HIGHER at rear, LOWER at front.\n\nFrom tanker's frame:\n• A pseudo-force F_pseudo = ma acts backward on every oil particle.\n• This is like an effective gravity component pointing backward.\n• The free surface of a fluid is always perpendicular to the effective gravity.\n\n❌ Option A (Remains horizontal): Only true when acceleration = 0 (constant velocity or at rest).\n❌ Option B (Smaller depth at rear): Opposite — inertia causes accumulation at rear, so depth at rear is MORE.\n✅ Option C (Larger depth at rear): Correct — oil piles up at rear due to inertia.\n❌ Option D (Parabolic curve): A parabolic surface forms when a cylindrical container ROTATES about its vertical axis, not for linear acceleration.\n\n🧠 DRDO Tip: For a decelerating tanker, oil piles up at the FRONT (inertia of motion carries oil forward). These pseudo-force fluid problems are common in advanced physics."
+    },
+    {
+      "id": 17,
+      "text": "What is the correct equation for finding the acceleration?",
+      "options": [
+        "a = (v - u) / t",
+        "a = u + vt",
+        "a = (v + u) / t",
+        "a = (v + u) / 2"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: A — a = (v - u) / t\n\n📘 NCERT Reference: Class 11 Physics, Chapter 3 – Motion in a Straight Line (Equations of Motion).\n\n🔬 Concept: Acceleration is defined as the rate of change of velocity.\n\n🧮 Derivation:\nAcceleration = Change in velocity / Time taken\na = (Final velocity − Initial velocity) / Time\na = (v − u) / t\n\nRearranging: v = u + at (First equation of motion)\n\n🔑 Three Equations of Motion (Uniform Acceleration):\n1. v = u + at\n2. s = ut + ½at²\n3. v² = u² + 2as\n\nwhere: u = initial velocity, v = final velocity, a = acceleration, t = time, s = displacement\n\n❌ Option B (a = u + vt): Dimensionally wrong. u has units m/s, vt has units m (distance). Can't add these.\n❌ Option C (a = (v + u)/t): This is not acceleration. It would give average velocity-related quantity but incorrectly. Average velocity = (v+u)/2.\n❌ Option D (a = (v+u)/2): This is average velocity (for uniform acceleration), not acceleration.\n✅ Option A (a = (v-u)/t): Correct definition of acceleration.\n\n🧠 Sign Convention: If v > u → positive acceleration. If v < u → deceleration (negative acceleration)."
+    },
+    {
+      "id": 18,
+      "text": "Assertion (A): A man standing on a completely frictionless surface can propel himself by whistling. Reason (R): If no external force acts on a system, its momentum cannot change.",
+      "options": [
+        "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Both (A) and (R) are true, but (R) is not the correct explanation of (A)",
+        "(A) is true, but (R) is false",
+        "(A) is false, but (R) is true"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: D — (A) is false, but (R) is true\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Conservation of Momentum).\n\n🔬 Analysis:\n\n**Assertion (A) Analysis — 'Man can propel himself by whistling':**\n• When whistling, the man expels air from his mouth.\n• By Newton's 3rd Law (or conservation of momentum), the expelled air goes forward → man should go backward.\n• BUT: the air used for whistling was already INSIDE the man's body — it was part of the system.\n• After whistling, the air leaves the system. Initially, the air was part of his body mass.\n• By conservation of momentum: before whistling, p_total = 0 (at rest).\n• After: p_man (backward) + p_air (forward) = 0.\n• So the man DOES get a tiny push backward — he CAN propel (backward)!\n• Wait — actually this is TRUE for exhaling, but WHISTLING involves oscillating air — the net effect over a full cycle might cancel.\n• The standard physics answer: **A is FALSE** because whistling is an internal process — the expelled air eventually comes back as inhaled air, and net momentum change ≈ 0 in cycles. More specifically, the whistled air is not a projectile expelled permanently — unlike a rocket.\n\n**Reason (R) Analysis — 'No external force → momentum cannot change':**\n• This is the Law of Conservation of Momentum. ✅ ABSOLUTELY TRUE.\n• p = constant when F_external = 0.\n\n✅ Therefore: A is False (whistling cannot sustainably propel), R is True.\n\n❌ Options A, B (Both true): R is true but A is false.\n❌ Option C (A true, R false): R is always true."
+    },
+    {
+      "id": 19,
+      "text": "In starting a loaded cart, one has to push harder than to keep it moving. This is because:",
+      "options": [
+        "The weight of a moving object is less",
+        "The wheels tend to slip initially",
+        "There is less friction once the cart starts moving",
+        "Practice makes perfect"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: C — There is less friction once the cart starts moving\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Static and Kinetic Friction).\n\n🔬 Concept: This is the fundamental difference between static friction and kinetic (dynamic) friction.\n\n🔑 Two Types of Friction:\n1. **Static Friction (f_s)**: Acts when surfaces are NOT moving relative to each other. It can be as large as μ_s × N.\n   - Maximum static friction = μ_s × N (this is what you must overcome to START motion)\n\n2. **Kinetic Friction (f_k)**: Acts when surfaces ARE sliding. f_k = μ_k × N\n   - Always LESS than maximum static friction: μ_k < μ_s\n\n📊 Comparison:\n| Friction Type | Value | Condition |\n|---|---|---|\n| Static (max) | μ_s × N | Just before motion |\n| Kinetic | μ_k × N | During motion |\n| μ_k < μ_s | Always | A fact of nature |\n\n🔑 Application:\n• To START the cart: Must overcome maximum static friction (large force needed).\n• To KEEP it moving: Only need to overcome kinetic friction (smaller force needed).\n\n❌ Option A (Weight decreases when moving): Mass and weight don't change with motion.\n❌ Option B (Wheels slip initially): Wheels are meant to roll, not slip. This is not the primary reason.\n✅ Option C: Correct — μ_static > μ_kinetic always.\n❌ Option D (Practice makes perfect): Not a physics explanation at all."
+    },
+    {
+      "id": 20,
+      "text": "A 4-wheel vehicle moving in a sharp circular path at high speed will:",
+      "options": [
+        "Overturn about its outer wheels and skid outwards",
+        "Overturn about its inner wheels and skid inwards",
+        "Overturn about its inner wheels and skid outwards",
+        "Overturn about its outer wheels and skid inwards"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: C — Overturn about its inner wheels AND skid outwards\n\n📘 NCERT Reference: Class 11 Physics, Chapter 5 – Laws of Motion (Circular Motion, Centripetal force); Chapter 4 – Motion in a Plane.\n\n🔬 Concept: Two simultaneous effects occur during fast circular motion:\n\n**Effect 1 — Overturning:**\n• During a sharp turn, centrifugal force (pseudo-force in car's frame) acts OUTWARD.\n• This outward force tends to tip the vehicle.\n• The vehicle rotates/overturns about the INNER wheels (inner wheels act as the pivot/fulcrum).\n• The outer part of the vehicle lifts up.\n\n**Effect 2 — Skidding:**\n• If the road friction is insufficient to provide the required centripetal force, the vehicle skids.\n• Centripetal force must point INWARD (toward center of circle).\n• If this is insufficient, vehicle tends to continue in a straight line → skids OUTWARD (away from center).\n\n🔑 Combined Result:\n• Overturn: about INNER wheels (2)\n• Skid: OUTWARD (3)\n• Original answer from source: Statements 2 and 3 are correct → Option C\n\n❌ Option A (outer wheels + outward): Wrong — overturn is about INNER wheels.\n❌ Option B (inner wheels + inward): Skidding is outward, not inward.\n✅ Option C (inner wheels + outward): CORRECT combination.\n❌ Option D (outer wheels + inward): Both parts wrong.\n\n🧠 DRDO Tip: To prevent overturning — lower center of gravity (wider/lower vehicles). To prevent skidding — higher friction (banked roads, rubber tires, slower speed).\n\n📌 Also note: This is Q22 (last question) of Mechanics section, bridging into the Motion Under Gravity topic. The very next question in the PDF asks: 'Who propounded the universal law of gravitation?' (Newton) — Q1 of Motion Under Gravity."
+    }
+  ]
+}
