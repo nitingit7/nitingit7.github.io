@@ -1,0 +1,246 @@
+{
+  "title": "Physics Test 4 #PT004 (Measuring Devices and Scales and  Mechanics)",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Radar is used for",
+      "options": [
+        "Detecting objects by using light waves",
+        "Reflecting sound waves to detect objects",
+        "Determining the presence and location of objects with radio waves",
+        "Tracking rain-bearing clouds"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (C) Determining the presence and location of objects with radio waves**\n\n📚 **NCERT Mapping:** Class 12 Physics | Chapter 8 — Electromagnetic Waves | Topic: Radio waves and their applications\n\n⭐ **Exam Relevance: Very High** — RADAR is a core DRDO technology. Questions on RADAR, SONAR, and their wave-physics appear in almost every DRDO CEPTAM exam.\n\n---\n\n**RADAR** stands for **Radio Detection And Ranging**.\n\n**Principle:** RADAR emits short pulses of **radio waves (microwave frequency, ~1 GHz to 100 GHz)**. These waves travel at the speed of light, hit a target, and reflect back. By measuring the **time delay** between transmission and reception:\n\n**Distance = (Speed of light × Time) / 2**\n\nThe direction of the returned signal gives the **location/bearing** of the object.\n\n---\n\n**(A) Light waves — INCORRECT:**\nLight waves (400–700 nm wavelength) cannot penetrate clouds, fog, rain, or darkness effectively. RADAR uses **radio/microwaves** because they penetrate adverse weather. Laser-based detection (LIDAR) uses light, but it is NOT RADAR.\n\n**(B) Sound waves — INCORRECT:**\nSound wave-based detection is called **SONAR** (used underwater). Sound cannot travel through vacuum and is too slow (340 m/s vs 3×10⁸ m/s for radio waves) for long-range aerial detection. RADAR never uses sound.\n\n**(C) Radio waves — CORRECT:**\nRADAR uses radio/microwave electromagnetic waves. It can penetrate clouds, rain, fog, and work in total darkness. It detects range, speed (Doppler RADAR), and direction of objects.\n\n**Types used in defence:**\n- **Pulse RADAR** — standard detection\n- **Doppler RADAR** — detects speed of moving objects\n- **SAR (Synthetic Aperture RADAR)** — high-resolution imaging from aircraft/satellites\n- **Phased Array RADAR** — electronically steerable beam (Agni, Prithvi missiles)\n\n**(D) Tracking rain-bearing clouds — INCORRECT:**\nWhile weather RADAR does track rain clouds, this is only ONE specific application. The primary purpose of RADAR is detecting ALL objects — aircraft, ships, missiles, vehicles. Option (D) is too narrow.\n\n🔬 **DRDO Relevance:** DRDO's **LRDE (Electronics & Radar Development Establishment), Bengaluru** develops RADAR systems for Indian defence including Arudhra, Rohini, and Revathi RADARs."
+    },
+    {
+      "id": 2,
+      "text": "Which of the following quantities is measured on the Richter scale?",
+      "options": [
+        "Speed of a glacier",
+        "Population growth",
+        "Intensity of an Earthquake",
+        "Temperature inside the Earth"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (C) Intensity of an Earthquake**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Seismic waves; also Class 11 Geography — Interior of Earth\n\n⭐ **Exam Relevance: High** — Richter scale is a standard GK+Science fact asked in all competitive exams including DRDO CEPTAM. Simple factual recall — high probability of appearance.\n\n---\n\nThe **Richter Scale** measures the **magnitude/intensity of earthquakes** by quantifying the energy released by seismic waves.\n\n**Key Facts:**\n- Developed by **Charles F. Richter** in **1935** at Caltech, USA\n- **Logarithmic scale** — each whole number increase = 10× amplitude increase and ~31.6× energy increase\n- Measured using a **Seismograph**\n- Scale values: < 2.0 Micro → 2.0–3.9 Minor → 4.0–4.9 Light → 5.0–5.9 Moderate → 6.0–6.9 Strong → 7.0+ Major/Great\n\n---\n\n**(A) Speed of a glacier — INCORRECT:**\nGlacier speed is measured using GPS tracking or satellite imagery. Not related to Richter scale.\n\n**(B) Population growth — INCORRECT:**\nPopulation growth uses census data and demographic rates. Completely unrelated to physics.\n\n**(C) Intensity of an Earthquake — CORRECT:**\nRichter scale quantifies earthquake magnitude. Modern seismologists prefer the **Moment Magnitude Scale (Mw)** for large earthquakes, but Richter remains the commonly referenced scale in general science exams.\n\n**(D) Temperature inside the Earth — INCORRECT:**\nEarth's internal temperature is measured using geothermal probes and borehole measurements. Earth's core temperature ~5,000–6,000°C. Not measured by Richter scale.\n\n🔬 **DRDO Relevance:** DRDO and BARC use seismographs to detect underground nuclear tests. Seismic monitoring is part of **CTBTO (Comprehensive Nuclear-Test-Ban Treaty Organization)** compliance obligations for India."
+    },
+    {
+      "id": 3,
+      "text": "Richter scale is used for measuring",
+      "options": [
+        "Velocity of sound",
+        "Intensity of light",
+        "Amplitude of seismic waves",
+        "Intensity of sound"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (C) Amplitude of seismic waves**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Wave amplitude and energy; seismic waves\n\n⭐ **Exam Relevance: High** — Tests whether candidates know the physical basis (amplitude of seismic waves) rather than just 'earthquake intensity'. Important for DRDO CEPTAM technical STAB candidates.\n\n---\n\nThe Richter scale specifically measures the **amplitude of seismic waves** recorded by a seismograph at a standard distance from the epicenter.\n\n**Technical Detail:**\nRichter magnitude (M) = log₁₀(A) − log₁₀(A₀)\nWhere A = amplitude of the seismic wave recorded, A₀ = reference amplitude. Since it uses the **logarithm of amplitude**, the Richter scale is logarithmic.\n\n**Types of seismic waves:**\n- **P-waves (Primary/Longitudinal)** — fastest, travel through solid and liquid\n- **S-waves (Secondary/Transverse)** — travel only through solids\n- **Surface waves (Rayleigh & Love)** — cause most damage to structures\n\n---\n\n**(A) Velocity of sound — INCORRECT:**\nVelocity of sound (~340 m/s in air) is measured using resonance method or time-of-flight method. Not related to Richter scale.\n\n**(B) Intensity of light — INCORRECT:**\nLight intensity is measured in candela (cd) or Lux (lx) using a photometer or luxmeter. No connection to Richter scale.\n\n**(C) Amplitude of seismic waves — CORRECT:**\nThe Richter scale directly measures the **logarithmic amplitude of seismic waves**. The amplitude of P-waves and S-waves correlates directly to the energy released at the earthquake's focus.\n\n**(D) Intensity of sound — INCORRECT:**\nSound intensity is measured in **decibels (dB)** using an audiometer or sound level meter. Both decibels and Richter use logarithmic scales, but they measure completely different phenomena — acoustic energy vs seismic wave amplitude.\n\n🔬 **DRDO Relevance:** DRDO's seismic monitoring is used to detect **underground nuclear explosions** and to design **seismic hardening** of military bunkers and command-and-control facilities against enemy nuclear/conventional strikes."
+    },
+    {
+      "id": 4,
+      "text": "The intensity of Earthquake is measured in",
+      "options": [
+        "Richter scale",
+        "Decibel scale",
+        "pH scale",
+        "Celsius scale"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: (A) Richter scale**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Seismic activity and measurement scales\n\n⭐ **Exam Relevance: Very High** — One of the most frequently repeated questions in all state PSC and central government exams. Pure factual recall — certain to appear in DRDO CEPTAM Tier-1 General Science section.\n\n---\n\n**(A) Richter scale — CORRECT:**\nThe **Richter scale** (and its modern equivalent, the **Moment Magnitude Scale**) measures earthquake intensity/magnitude. It is a **logarithmic scale** based on the amplitude of seismic waves.\n\n**Important scales to memorise for DRDO CEPTAM:**\n- Richter scale → Earthquake magnitude\n- Decibel scale → Sound intensity\n- pH scale → Acidity/alkalinity\n- Celsius/Fahrenheit/Kelvin → Temperature\n- Beaufort scale → Wind speed\n- Saffir-Simpson scale → Hurricane intensity\n- Mercalli scale → Earthquake intensity by human perception (different from Richter)\n\n---\n\n**(B) Decibel scale — INCORRECT:**\n**Decibel (dB)** measures **sound intensity/loudness**. Also logarithmic: 0 dB = threshold of hearing, 60 dB = normal conversation, 120 dB = threshold of pain, 140+ dB = jet engine. Has no relation to earthquakes.\n\n**(C) pH scale — INCORRECT:**\n**pH scale** (0–14) measures **hydrogen ion concentration** in a solution. pH < 7 = Acidic, pH = 7 = Neutral, pH > 7 = Basic/Alkaline. Invented by **Søren Sørensen** (1909). Completely unrelated to earthquake measurement.\n\n**(D) Celsius scale — INCORRECT:**\n**Celsius scale** measures **temperature** (°C). Devised by **Anders Celsius** (1742). 0°C = freezing point of water, 100°C = boiling point. Not related to earthquake measurement.\n\n🔬 **DRDO Relevance:** Understanding measurement scales is fundamental for DRDO scientists across all domains — acoustic measurements in submarines (dB), lab chemistry (pH), seismic monitoring for nuclear test detection, and temperature in propellant testing (°C/K)."
+    },
+    {
+      "id": 5,
+      "text": "Which one is not correctly matched?\n(A) Celsius — Temperature\n(B) Kilowatt hour — Electricity\n(C) Rh factor — Blood\n(D) Richter scale — Humidity",
+      "options": [
+        "Celsius — Temperature",
+        "Kilowatt hour — Electricity",
+        "Rh factor — Blood",
+        "Richter scale — Humidity"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: (D) Richter scale — Humidity** [This is the INCORRECT match]\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 2 — Units and Measurements | Topic: Physical quantities and their measurement units\n\n⭐ **Exam Relevance: Very High** — 'Not correctly matched' questions are very common in DRDO CEPTAM Tier-1. Tests ability to distinguish between scientific instruments, units, and what they measure.\n\n---\n\n**(A) Celsius — Temperature — CORRECTLY MATCHED ✓:**\nCelsius (°C) is the standard unit of temperature named after Swedish astronomer **Anders Celsius (1701–1744)**. Water freezes at 0°C and boils at 100°C at standard pressure. This is a correct pairing.\n\n**(B) Kilowatt hour — Electricity — CORRECTLY MATCHED ✓:**\n**kWh** is the commercial unit of **electrical energy** consumption.\n1 kWh = 1000 W × 3600 s = **3.6 × 10⁶ Joules** = 1 unit of electricity on your bill. This is a correct pairing.\n\n**(C) Rh factor — Blood — CORRECTLY MATCHED ✓:**\n**Rh factor** (Rhesus factor) is a protein antigen on red blood cells. If present → Rh+ (positive), if absent → Rh− (negative). Critical in blood transfusions and pregnancy. Discovered by **Karl Landsteiner and Alexander Wiener** (1940). This is a correct pairing.\n\n**(D) Richter scale — Humidity — INCORRECTLY MATCHED ✗ (This is the answer):**\nRichter scale does NOT measure humidity. It measures **earthquake magnitude/amplitude of seismic waves**.\n\n**Humidity is measured by:**\n- Instrument: **Hygrometer**\n- Unit: **Relative Humidity (%)**\n- Method: Wet and dry bulb readings (psychrometer)\n\nRichter scale ↔ Humidity is a completely wrong pairing. This is the answer.\n\n🔬 **DRDO Relevance:** Cross-checking knowledge of units vs. measurements vs. instruments is directly tested in DRDO CEPTAM STAB Tier-1 General Awareness and Science sections. Humidity measurement is critical in DRDO labs for explosive storage and electronics testing."
+    },
+    {
+      "id": 6,
+      "text": "Which of the following is a seismometer device?",
+      "options": [
+        "Crescograph",
+        "Seismograph",
+        "Geiger Counter",
+        "Raingauge"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: (B) Seismograph**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Mechanical waves; seismic waves and their detection\n\n⭐ **Exam Relevance: High** — All four options are famous scientific instruments from different fields. Testing ability to distinguish between them is important for DRDO CEPTAM STAB Tier-1.\n\n---\n\n**(A) Crescograph — INCORRECT:**\nA **Crescograph** was invented by **Sir Jagadish Chandra Bose** (Indian scientist) to measure the **growth rate of plants**. It detects growth as small as 1/100,000th of an inch per second, proving plants respond to stimuli. It is a botanical instrument, NOT a seismometer.\n\n**(B) Seismograph — CORRECT:**\nA **Seismograph** (also called Seismometer) records **earthquake vibrations (seismic waves)** as a seismogram.\n\n**How it works:**\n- Heavy pendulum mass suspended from a frame\n- When ground shakes, the frame moves but the pendulum stays still (inertia)\n- Relative motion is recorded as a seismogram\n- Modern seismographs use electronic accelerometer sensors\n\n**Can detect:** Natural earthquakes, underground nuclear explosions, large surface explosions, volcanic eruptions.\n\n**(C) Geiger Counter — INCORRECT:**\nA **Geiger Counter (Geiger-Müller Counter)** detects **ionising radiation** — alpha (α), beta (β), and gamma (γ) rays. Invented by **Hans Geiger and Walther Müller** (1928). Produces a clicking sound per detected particle. Used at nuclear plants and for radiation safety. NOT a seismometer.\n\n**(D) Raingauge — INCORRECT:**\nA **Raingauge (Pluviometer)** measures the **amount of rainfall** in millimetres (mm) over a period. Simple cylindrical collecting vessel. Used in meteorology. NOT a seismometer.\n\n🔬 **DRDO Relevance:** DRDO uses seismographs to detect underground nuclear explosions and monitor blast signatures at test sites. The Geiger Counter is used in DRDO's nuclear and radiological safety programs and at BARC facilities."
+    },
+    {
+      "id": 7,
+      "text": "Which one of the following devices is used to measure the intensity of Earthquake?",
+      "options": [
+        "Seismograph",
+        "Stethoscope",
+        "Cosmograph",
+        "Periscope"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: (A) Seismograph**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Seismic waves; wave detection instruments\n\n⭐ **Exam Relevance: Very High** — All four options are well-known instruments from different fields — testing cross-domain scientific awareness, a hallmark of DRDO CEPTAM papers.\n\n---\n\n**(A) Seismograph — CORRECT:**\nA **Seismograph** records earthquake vibrations. The seismogram shows the **amplitude, frequency, and duration** of seismic waves, from which the Richter magnitude is calculated.\n\n**Key components:** Inertial mass, boom/pendulum arm, recording drum (paper or digital), damping mechanism.\n\n**(B) Stethoscope — INCORRECT:**\nA **Stethoscope** is a medical acoustic instrument used to listen to **heart sounds, lung sounds, and bowel sounds**. Invented by **René Laennec** (France, 1816). Works on sound conduction through tubes. No role in earthquake measurement.\n\n**(C) Cosmograph — INCORRECT:**\nA **Cosmograph** is used in **astronomy** to map and track celestial objects. Also a type of watch with multiple functions. NOT used for earthquake measurement.\n\n**(D) Periscope — INCORRECT:**\nA **Periscope** is an optical instrument using mirrors or prisms to observe objects not in the direct line of sight (looking above water from a submarine, over obstacles in trenches). Works on **total internal reflection** principle. Not related to earthquake measurement.\n\n**Important pairs to remember:**\n- Seismograph → Earthquakes\n- Stethoscope → Heart/lung sounds\n- Periscope → Indirect optical viewing (submarines)\n- Cosmograph → Celestial observation\n\n🔬 **DRDO Relevance:** Periscopes are manufactured for Indian Navy submarines by DRDO's **IRDE (Instruments Research and Development Establishment)**. Seismographs are used by DRDO for nuclear test detection and blast wave monitoring at weapons test sites."
+    },
+    {
+      "id": 8,
+      "text": "What does a 'seismograph' record?",
+      "options": [
+        "Heart-beats",
+        "Atmospheric pressure",
+        "Earthquake",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (C) Earthquake**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Mechanical waves and seismic wave recording\n\n⭐ **Exam Relevance: High** — Deceptive option (A) tries to confuse seismograph with cardiograph. Frequently seen in government exam GK+science sections. Tests careful reading of 'seismo' vs 'cardio' terminology.\n\n---\n\n**(A) Heart-beats — INCORRECT:**\nHeartbeats are recorded by a **Cardiograph / ECG (Electrocardiograph)**. ECG records the **electrical activity of the heart** as P, QRS, T waves. 'Cardio' = heart in Greek. 'Seismos' = earthquake in Greek. These are completely different instruments.\n\n**(B) Atmospheric pressure — INCORRECT:**\nAtmospheric pressure is recorded continuously by a **Barograph** — a recording barometer with an aneroid capsule driving an inked pen on a rotating paper drum. NOT a seismograph.\n\n**(C) Earthquake — CORRECT:**\nThe **seismograph records earthquake vibrations** as a **seismogram** — a wavy line trace on paper or digital display.\nEtymology: 'Seismos' (Greek) = earthquake + 'graphein' (Greek) = to write.\n\nCan also detect: Underground nuclear explosions, large surface explosions, mining collapses, volcanic eruptions.\n\n**(D) None of the above — INCORRECT:**\nOption (C) is clearly correct, so 'none of the above' is wrong.\n\n**Commonly confused instrument pairs for DRDO CEPTAM:**\n- Seismograph → Earthquakes\n- Cardiograph/ECG → Heart electrical activity\n- Encephalograph/EEG → Brain electrical activity\n- Barograph → Atmospheric pressure (continuous recording)\n- Hydrograph → Water level / river flow\n- Thermograph → Temperature (continuous recording)\n\n🔬 **DRDO Relevance:** India's **CTBTO International Monitoring System** has seismic monitoring stations that DRDO helps maintain to detect nuclear tests by adversarial nations."
+    },
+    {
+      "id": 9,
+      "text": "Fathometer is used to measure",
+      "options": [
+        "Earthquake",
+        "Rain",
+        "Depth of sea",
+        "Sound intensity"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (C) Depth of sea**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Sound waves; echo and SONAR principle; ultrasonic applications\n\n⭐ **Exam Relevance: Very High** — Fathometer directly relates to SONAR and naval technology — a core DRDO domain. High probability in DRDO CEPTAM papers.\n\n---\n\n**Fathometer** measures the **depth of water (sea/ocean)** using the principle of **echo sounding**.\n\n**Working Principle:**\nA fathometer emits **ultrasonic sound pulses** downward. They travel through water, reflect off the sea bed, and return. Measuring the round-trip time (t):\n\n**Depth = (v × t) / 2**\n\nWhere v = speed of sound in sea water ≈ **1500 m/s**. Factor of 2 because sound travels down AND back up.\n\n**Etymology:** 'Fathom' = old unit of depth (1 fathom = 6 feet = 1.83 m). Fathometer = depth measurer.\n\n---\n\n**(A) Earthquake — INCORRECT:**\nEarthquake measurement is done by **Seismograph**. No relation to fathometer.\n\n**(B) Rain — INCORRECT:**\nRainfall is measured by a **Raingauge (Pluviometer)** in millimetres (mm). No relation to fathometer.\n\n**(C) Depth of sea — CORRECT:**\nFathometer measures ocean/sea depth using ultrasonic echo sounding. Used in:\n- Submarine navigation (avoid seabed collision)\n- Ocean floor mapping\n- Ship navigation in shallow ports\n- Hydrographic surveys\n\n**(D) Sound intensity — INCORRECT:**\nSound intensity is measured in **decibels (dB)** using a Sound Level Meter or Audiometer. Fathometer uses sound waves but measures **distance/depth**, not sound intensity itself.\n\n🔬 **DRDO Relevance:** DRDO's **NPOL (Naval Physical and Oceanographic Laboratory), Kochi** develops fathometers, underwater acoustic systems, and sonar equipment for Indian Navy submarines and surface ships."
+    },
+    {
+      "id": 10,
+      "text": "Which one of the following is not correctly matched?\n(A) Manometer — Pressure\n(B) Carburetor — Internal combustion engine\n(C) Cardiograph — Heart movement\n(D) Seismometer — Curvature of surface",
+      "options": [
+        "Manometer — Pressure",
+        "Carburetor — Internal combustion engine",
+        "Cardiograph — Heart movement",
+        "Seismometer — Curvature of surface"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: (D) Seismometer — Curvature of surface** [This is the INCORRECT match]\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 10 — Mechanical Properties of Fluids (Manometer); Chapter 15 — Waves (Seismometer)\n\n⭐ **Exam Relevance: Very High** — Classic 'incorrectly matched' MCQ format testing broad interdisciplinary knowledge. Frequently repeated in DRDO CEPTAM, SSC CGL, UPSC.\n\n---\n\n**(A) Manometer — Pressure — CORRECTLY MATCHED ✓:**\n**Manometer** measures **gas pressure** in enclosed containers and pipelines. Types: U-tube manometer, Bourdon gauge, digital manometer. SI unit of pressure: Pascal (Pa). Correct match.\n\n**(B) Carburetor — Internal combustion engine — CORRECTLY MATCHED ✓:**\n**Carburetor** mixes air and fuel in the correct proportion for combustion in **petrol/gasoline internal combustion engines**. Now largely replaced by **fuel injection systems (FIS)** in modern vehicles, but the pairing is correct.\n\n**(C) Cardiograph — Heart movement — CORRECTLY MATCHED ✓:**\n**Cardiograph (ECG)** records the **electrical activity and movement of the heart** as P, QRS, T wave traces. Used to diagnose heart conditions. Correct match.\n\n**(D) Seismometer — Curvature of surface — INCORRECTLY MATCHED ✗ (This is the answer):**\n**Seismometer** records **earthquake vibrations/seismic waves** — NOT the curvature of a surface.\n\nThe correct instrument for measuring curvature of a surface:\n- **Spherometer** → curvature of spherical surfaces (lenses and mirrors)\n- **Geodimeter** → Earth surface curvature over large distances\n\nSeismometer ≠ Curvature. Seismometer = Earthquake detector. This is the wrong match.\n\n🔬 **DRDO Relevance:** DRDO uses manometers in propellant testing, carburetors in military vehicle engines, cardiographs for soldier health monitoring, and seismometers for nuclear test detection and blast wave characterisation."
+    },
+    {
+      "id": 11,
+      "text": "Phonometer is used to measure which one of the following?",
+      "options": [
+        "The power of brightness of light",
+        "Extremely high temperature",
+        "Frequency of electromagnetic wave",
+        "Testing the force of the human voice in speaking"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: (D) Testing the force of the human voice in speaking**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 15 — Waves | Topic: Sound waves; intensity and characteristics of sound\n\n⭐ **Exam Relevance: Moderate** — Less frequently asked but appears in higher-difficulty DRDO CEPTAM rounds. Confusing options require deep instrument knowledge to answer correctly.\n\n---\n\n**Phonometer** measures the **intensity/force/power of sound** — specifically the force of the human voice in speech.\n\n**Etymology:** 'Phono' = sound (Greek) + 'meter' = measure.\n\n---\n\n**(A) Power of brightness of light — INCORRECT:**\nThe power/brightness of light is measured by a **Photometer** ('photo' = light). Compares luminous intensity of light sources. Used in photography and spectroscopy.\n**Photo ≠ Phono** — a very common exam confusion. Remember: Photo = Light, Phono = Sound.\n\n**(B) Extremely high temperature — INCORRECT:**\nExtremely high temperature is measured by a **Pyrometer** ('pyro' = fire/heat). Non-contact radiation thermometer for temperatures above 600°C.\n**Pyro ≠ Phono** — another common exam confusion. Remember: Pyro = Fire/Heat.\n\n**(C) Frequency of electromagnetic wave — INCORRECT:**\nEM wave frequency is measured by a **Wavemeter / Ondometer / Frequency Meter**. An **ondometer** specifically measures EM wave frequency in the radio spectrum.\n**Ondo/frequency meter ≠ Phonometer.**\n\n**(D) Force of the human voice — CORRECT:**\nPhonometer measures the **acoustic energy/power/force of the human voice** or other sound sources. Used in voice strength testing, acoustic research, speech therapy, and concert hall acoustics design.\n\n**Quick memory trick:**\n- **Photo**meter → Light (photography)\n- **Pyro**meter → High temperature (fire)\n- **Phono**meter → Sound/voice (phonograph)\n- **Ondo**meter → EM wave frequency\n\n🔬 **DRDO Relevance:** Acoustic measurements are important in DRDO for stealth technology (minimising acoustic signatures of submarines and military vehicles), voice recognition systems for authentication, and electronic warfare systems."
+    },
+    {
+      "id": 12,
+      "text": "The apparatus used for detecting lie is known as",
+      "options": [
+        "Polygraph",
+        "Pyrometer",
+        "Gyroscope",
+        "Kymograph"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: (A) Polygraph**\n\n📚 **NCERT Mapping:** Class 11/12 Applied Physics / Human Physiology | Topic: Physiological measurement instruments; applied science\n\n⭐ **Exam Relevance: High** — Polygraph is a well-known GK fact. The distractor 'Gyroscope' is a strategic DRDO technology, making this question especially tricky for DRDO CEPTAM candidates.\n\n---\n\n**(A) Polygraph — CORRECT:**\nA **Polygraph** (lie detector) simultaneously records multiple physiological parameters that change when a person is stressed while lying:\n- **Blood pressure** (cardiovascular changes)\n- **Pulse rate** (heart rate)\n- **Respiration rate** (breathing patterns)\n- **Skin conductance (galvanic skin response)** — sweating changes electrical resistance of skin\n\nThe **sympathetic nervous system** (fight-or-flight) triggers these changes under the stress of deception. All are recorded as line graphs on paper or digitally.\n('Poly' = many, 'graph' = write)\n\n**Note:** Polygraph results are NOT admissible as sole evidence in Indian courts (Supreme Court judgment 2010).\n\n**(B) Pyrometer — INCORRECT:**\n**Pyrometer** measures **extremely high temperatures** using thermal radiation. Nothing to do with lie detection. Common wrong answer chosen due to name similarity to 'polygraph' in some minds.\n\n**(C) Gyroscope — INCORRECT:**\nA **Gyroscope** is a spinning wheel/disk that maintains its orientation due to **conservation of angular momentum**. Used in INS (Inertial Navigation Systems) in India's **Agni and BrahMos missiles**, navigation in aircraft, ships, and satellites, and smartphone orientation sensors. It does NOT detect lies — but it is one of DRDO's most strategic technologies.\n\n**(D) Kymograph — INCORRECT:**\nA **Kymograph** records physiological movements as wavy lines — measures muscle contractions, blood pressure waves, and breathing. It is a physiological recording device but records body functions, NOT deception-related stress responses. ('Kymo' = wave in Greek).\n\n🔬 **DRDO Relevance:** DRDO's **RCI (Research Centre Imarat)** develops **gyroscopes and INS** for guided missiles. Polygraph understanding is relevant for DRDO's personnel security screening protocols."
+    },
+    {
+      "id": 13,
+      "text": "Match List-I (Instrument) with List-II (Measuring quantity).\nList-I: (a) Ammeter  (b) Hygrometer  (c) Spring balance  (d) Barometer\nList-II: 1. Pressure  2. Weight  3. Electric current  4. Relative humidity\n(A) a-2, b-3, c-4, d-1\n(B) a-3, b-4, c-2, d-1\n(C) a-4, b-1, c-2, d-3\n(D) a-1, b-2, c-3, d-4",
+      "options": [
+        "a-2, b-3, c-4, d-1",
+        "a-3, b-4, c-2, d-1",
+        "a-4, b-1, c-2, d-3",
+        "a-1, b-2, c-3, d-4"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: (B) a-3, b-4, c-2, d-1**\n\n📚 **NCERT Mapping:** Class 11 & 12 Physics | Multiple chapters — Fluids (Barometer), Current Electricity (Ammeter), Waves/Atmosphere (Hygrometer), Laws of Motion (Spring balance)\n\n⭐ **Exam Relevance: Very High** — Match-the-following questions covering multiple instruments are extremely common in DRDO CEPTAM Tier-1 Science section. Tests comprehensive knowledge.\n\n---\n\n**Correct matching:**\n- **(a) Ammeter → 3. Electric current**\n- **(b) Hygrometer → 4. Relative humidity**\n- **(c) Spring balance → 2. Weight**\n- **(d) Barometer → 1. Pressure**\n\n---\n\n**(a) Ammeter → Electric current:**\nMeasures **current in Amperes (A)**. Connected in **series** in the circuit. Has **very low resistance** so it does not disturb circuit current. A galvanometer is a sensitive type for tiny currents.\n\n**(b) Hygrometer → Relative humidity:**\nMeasures **moisture content/humidity** in air as **Relative Humidity (RH%)** = (Actual vapour pressure / Saturation vapour pressure) × 100. Types: hair hygrometer, wet-dry bulb psychrometer, digital capacitive.\n\n**(c) Spring balance → Weight:**\nUses **Hooke's Law (F = kx)** — spring extension is proportional to applied force. Measures **weight in Newtons (N)**. Note: measures **weight** (a force), NOT mass. A beam balance measures mass.\n\n**(d) Barometer → Pressure:**\nMeasures **atmospheric pressure** in Pa, mbar, or mmHg. Standard atmosphere = 1013.25 mbar = 760 mmHg = 101,325 Pa.\n\n**Why other options fail:**\n(A) Incorrectly pairs ammeter with weight (2).\n(C) Incorrectly pairs ammeter with humidity (4).\n(D) Incorrectly pairs ammeter with pressure (1).\n\n🔬 **DRDO Relevance:** All four instruments are used in DRDO labs — ammeters in electronics testing, hygrometers in equipment storage rooms, spring balances in basic weight measurements, and barometers in aerodynamics and atmospheric research at missile test ranges."
+    },
+    {
+      "id": 14,
+      "text": "Match List-I with List-II.\nList-I: (a) Stethoscope  (b) Sphygmomanometer  (c) Caratometer  (d) Lux meter\nList-II: 1. To measure intensity of light  2. To check purity of gold  3. To hear heart sound  4. To measure blood pressure\n(A) a-1, b-2, c-3, d-4\n(B) a-4, b-3, c-2, d-1\n(C) a-3, b-4, c-2, d-1\n(D) a-2, b-1, c-4, d-3",
+      "options": [
+        "a-1, b-2, c-3, d-4",
+        "a-4, b-3, c-2, d-1",
+        "a-3, b-4, c-2, d-1",
+        "a-2, b-1, c-4, d-3"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ **Correct Answer: (C) a-3, b-4, c-2, d-1**\n\n📚 **NCERT Mapping:** Class 12 Physics / Applied Science | Chapter 9 — Ray Optics (Luxmeter); Applied Science for medical instruments\n\n⭐ **Exam Relevance: Very High** — Multi-instrument matching covering medical and physics instruments are extremely frequent in DRDO CEPTAM. Tests breadth of scientific knowledge across disciplines.\n\n---\n\n**Correct matching:**\n- **(a) Stethoscope → 3. To hear heart sound**\n- **(b) Sphygmomanometer → 4. To measure blood pressure**\n- **(c) Caratometer → 2. To check purity of gold**\n- **(d) Lux meter → 1. To measure intensity of light**\n\n---\n\n**(a) Stethoscope → Hear heart sound:**\nTransmits low-frequency body sounds (heart, lungs, bowels) to the doctor's ears through acoustic tubes. Invented by **René Laennec (1816)**. Modern digital stethoscopes amplify sounds electronically.\n\n**(b) Sphygmomanometer → Blood pressure:**\nMeasures systolic and diastolic blood pressure in **mmHg**. Normal = 120/80 mmHg. Uses inflatable arm cuff compressing the brachial artery + mercury/aneroid gauge + stethoscope (Korotkoff sounds).\n\n**(c) Caratometer → Purity of gold:**\nMeasures **gold content/purity** in alloys. 24 carat = pure gold (99.9%), 22 carat = 91.7%, 18 carat = 75% gold. Uses **X-ray fluorescence (XRF)** or electronic testing methods.\n\n**(d) Lux meter → Intensity of light:**\nMeasures **illuminance in Lux (lx)**. 1 Lux = 1 lumen per square metre. Used in workplace lighting compliance, photography, and agriculture.\n\n**Why other options fail:**\nAll options (A), (B), and (D) incorrectly pair stethoscope with something other than heart sound — the key trap in this question.\n\n🔬 **DRDO Relevance:** Luxmeters are used in DRDO's **IRDE** for optical instrument calibration. XRF analysis (caratometer principle) is used in DRDO materials labs for alloy composition verification in armour and structural components."
+    },
+    {
+      "id": 15,
+      "text": "Match List-I with List-II.\nList-I: (a) Earthquake  (b) Height  (c) Electric current  (d) Resistance\nList-II: 1. Ammeter  2. Seismograph  3. Altimeter  4. Ohm\n(A) a-2, b-3, c-1, d-4\n(B) a-2, b-3, c-4, d-1\n(C) a-1, b-3, c-4, d-2\n(D) a-2, b-3, c-4, d-1",
+      "options": [
+        "a-2, b-3, c-1, d-4",
+        "a-2, b-3, c-4, d-1",
+        "a-1, b-3, c-4, d-2",
+        "a-2, b-3, c-4, d-1"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: (A) a-2, b-3, c-1, d-4**\n\n📚 **NCERT Mapping:** Class 11 & 12 Physics | Chapter 2 (Units & Measurements), Chapter 12 (Current Electricity), Chapter 15 (Waves)\n\n⭐ **Exam Relevance: High** — This question uses both instruments AND a unit (Ohm), testing whether candidates notice this subtlety — typical of DRDO CEPTAM precision-testing questions.\n\n---\n\n**Correct matching:**\n- **(a) Earthquake → 2. Seismograph**\n- **(b) Height → 3. Altimeter**\n- **(c) Electric current → 1. Ammeter**\n- **(d) Resistance → 4. Ohm**\n\n---\n\n**(a) Earthquake → Seismograph:**\nEarthquakes are detected and recorded by a Seismograph. Output is a seismogram showing wave amplitude vs time.\n\n**(b) Height → Altimeter:**\n**Altimeter** measures **altitude (height above sea level)**. Types:\n- **Barometric Altimeter** — uses pressure decrease with altitude (~1 mmHg per 11 m)\n- **Radar Altimeter** — uses radio waves reflected from ground (used in aircraft and cruise missiles)\n- **GPS Altimeter** — uses satellite signals\n\n**(c) Electric current → Ammeter:**\nAmmeter measures current in **Amperes (A)**. Connected in series, has very low resistance.\n\n**(d) Resistance → Ohm:**\n**Important:** **Ohm (Ω)** is the **SI unit** of electrical resistance, NOT an instrument. The measuring instrument for resistance is an **Ohmmeter or Multimeter**. In this question, 'Ohm' is the correct unit-to-quantity pairing for resistance.\n\n**Why options B and D fail:**\nOptions B and D appear identical (a-2, b-3, c-4, d-1) — both incorrectly assign Ammeter (1) to d-Resistance instead of c-Electric current. Option A correctly places Ammeter (1) with current (c) and Ohm (4) with resistance (d).\n\n🔬 **DRDO Relevance:** DRDO's **DARE (Defence Avionics Research Establishment)** develops **radar altimeters** for Indian military aircraft and cruise missiles — BrahMos uses radar altimeter for terrain-hugging low-altitude flight."
+    },
+    {
+      "id": 16,
+      "text": "Match List-I with List-II.\nList-I: (a) Fathometer  (b) Barometer  (c) Hygrometer  (d) Altimeter\nList-II: 1. Atmospheric pressure  2. Atmospheric humidity  3. Height  4. Depth of sea\n(A) a-2, b-3, c-1, d-4\n(B) a-4, b-1, c-2, d-3\n(C) a-4, b-2, c-3, d-1\n(D) a-3, b-1, c-2, d-4",
+      "options": [
+        "a-2, b-3, c-1, d-4",
+        "a-4, b-1, c-2, d-3",
+        "a-4, b-2, c-3, d-1",
+        "a-3, b-1, c-2, d-4"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: (B) a-4, b-1, c-2, d-3**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 10 — Mechanical Properties of Fluids; Chapter 15 — Waves | Topic: Pressure, sound, humidity, and altitude measurement instruments\n\n⭐ **Exam Relevance: Very High** — This exact match question with these four instruments is repeatedly asked across IAS, UPSC, DRDO CEPTAM, and state PSC exams. A must-know for any competitive science candidate.\n\n---\n\n**Correct matching:**\n- **(a) Fathometer → 4. Depth of sea**\n- **(b) Barometer → 1. Atmospheric pressure**\n- **(c) Hygrometer → 2. Atmospheric humidity**\n- **(d) Altimeter → 3. Height**\n\n---\n\n**(a) Fathometer → Depth of sea:**\nUses ultrasonic echo-sounding: Depth = (speed of sound in water × time for echo) / 2. Speed of sound in sea water ≈ 1500 m/s. Used in naval hydrography and submarine navigation.\n\n**(b) Barometer → Atmospheric pressure:**\nMercury barometer: atmospheric pressure = weight of mercury column per unit area. Standard = 760 mmHg = 1013.25 mbar = 101,325 Pa.\n\n**(c) Hygrometer → Atmospheric humidity:**\nMeasures relative humidity (%). Wet-dry bulb type most common in weather stations.\n\n**(d) Altimeter → Height:**\nBarometric altimeter uses pressure gradient with altitude. For every ~11 m increase in altitude, pressure drops by approximately 1 mmHg.\n\n**Quick memory trick (F-B-H-A):**\n- **F**athometer → **F**loor of sea (depth)\n- **B**arometer → **B**arometric pressure (atmospheric)\n- **H**ygrometer → **H**umidity\n- **A**ltimeter → **A**ltitude (height)\n\n🔬 **DRDO Relevance:** All four instruments support DRDO defence systems — fathometer in naval sonar (NPOL), barometer in artillery ballistic calculations, hygrometer in electronics lab environments, altimeter in missile and aircraft guidance systems (DARE, DRDL)."
+    },
+    {
+      "id": 17,
+      "text": "Match List-I with List-II and select the correct answer.\nList-I: (a) Anemometer  (b) Seismograph  (c) Barograph  (d) Hygrometer\nList-II: 1. Earthquakes  2. Atmospheric Pressure  3. Wind velocity  4. Humidity\n(A) a-1, b-2, c-3, d-4\n(B) a-4, b-1, c-2, d-3\n(C) a-4, b-1, c-3, d-2\n(D) a-3, b-1, c-2, d-4",
+      "options": [
+        "a-1, b-2, c-3, d-4",
+        "a-4, b-1, c-2, d-3",
+        "a-4, b-1, c-3, d-2",
+        "a-3, b-1, c-2, d-4"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: (D) a-3, b-1, c-2, d-4**\n\n📚 **NCERT Mapping:** Class 11 Physics / Geography | Chapter 15 (Waves — Seismograph), Chapter 10 (Fluids — Barograph) | Topic: Meteorological and geophysical measurement instruments\n\n⭐ **Exam Relevance: Very High** — This 4-instrument matching is among the most frequently asked in competitive exams. 'Barograph' instead of 'Barometer' tests more precise knowledge — typical of DRDO CEPTAM higher-difficulty questions.\n\n---\n\n**Correct matching:**\n- **(a) Anemometer → 3. Wind velocity**\n- **(b) Seismograph → 1. Earthquakes**\n- **(c) Barograph → 2. Atmospheric Pressure**\n- **(d) Hygrometer → 4. Humidity**\n\n---\n\n**Key distinction — Barometer vs Barograph:**\n- **Barometer** → Measures atmospheric pressure at a single point in time (static reading)\n- **Barograph** → A **recording barometer** — continuously records pressure changes over time on a rotating paper drum using an inked pen. Uses an **aneroid capsule** (portable, no mercury). Output is a **barogram** (pressure vs time chart). Used for continuous weather monitoring.\n\n**(a) Anemometer → Wind velocity:**\nCup anemometer: rotation speed proportional to wind speed. Used in meteorology, aviation, and missile range operations.\n\n**(b) Seismograph → Earthquakes:**\nDetects and records seismic wave amplitude — P-waves, S-waves, and surface waves.\n\n**(c) Barograph → Atmospheric Pressure (continuous):**\nAneroid capsule deformation with pressure drives a pen on a rotating paper drum.\n\n**(d) Hygrometer → Humidity:**\nMeasures relative humidity %. Types: hair hygrometer, psychrometer, capacitive digital.\n\n**Why other options fail:**\n(A) Incorrectly maps anemometer to earthquake (1). (B) and (C) incorrectly mix anemometer and hygrometer mappings.\n\n🔬 **DRDO Relevance:** All these instruments support DRDO's **missile test range meteorological teams** at DRDL Hyderabad and ITR Chandipur — wind speed, humidity, and pressure must be precisely known before any missile test launch."
+    },
+    {
+      "id": 18,
+      "text": "The working principle of a washing machine is",
+      "options": [
+        "Centrifugation",
+        "Dialysis",
+        "Reverse osmosis",
+        "Diffusion"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ **Correct Answer: (A) Centrifugation**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 7 — System of Particles and Rotational Motion | Topic: Centripetal force; circular motion; centrifugation\n\n⭐ **Exam Relevance: Very High** — Washing machine and centrifugation is a classic IAS/UPSC/DRDO CEPTAM question. Tests application of circular motion physics to everyday technology.\n\n---\n\n**Washing machine works on the principle of CENTRIFUGATION.**\n\n**How it works:**\nWhen the drum spins at high speed, wet clothes are pressed against the drum walls due to the **centrifugal effect**. Water molecules, being free, are flung outward through small holes in the drum at high velocity. Clothes, held by the drum structure, lose water.\n\n**Physics behind it:**\nCentripetal acceleration = v²/r = ω²r\nCentrifugal force (rotating frame) = mω²r\nAt high spin speed ω, this force far exceeds gravity, effectively separating water from clothes.\n\n---\n\n**(A) Centrifugation — CORRECT:**\nIndustrial centrifuges also use this principle for:\n- Separating blood components (RBCs, plasma, platelets)\n- Enriching uranium (gas centrifuges for U-235 separation)\n- Cream separation from milk\n- Industrial chemical separation\n\n**(B) Dialysis — INCORRECT:**\nDialysis separates small molecules from large molecules through a **semi-permeable membrane** using molecular size difference. Used in **kidney dialysis machines**. NOT washing machines.\n\n**(C) Reverse Osmosis — INCORRECT:**\nRO forces water through a semi-permeable membrane under pressure, rejecting dissolved salts. Used in **water purifiers**. NOT washing machines.\n\n**(D) Diffusion — INCORRECT:**\nDiffusion is passive movement of molecules from high to low concentration. Used in dye spreading, gas mixing. NOT the operating principle of washing machines.\n\n🔬 **DRDO Relevance:** Centrifugation principles are used in DRDO's uranium enrichment research and gas centrifuges for isotope separation. Reverse osmosis is used in DRDO's field-deployable water purification units for soldiers in remote deployments."
+    },
+    {
+      "id": 19,
+      "text": "Which of the following is not a vector quantity?",
+      "options": [
+        "Displacement",
+        "Velocity",
+        "Force",
+        "Volume"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ **Correct Answer: (D) Volume**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 4 — Motion in a Plane | Topic: Scalars and Vectors — definitions, examples, and properties\n\n⭐ **Exam Relevance: Very High** — Scalar vs Vector distinction is a fundamental concept tested in every physics-based competitive exam. DRDO CEPTAM Tier-1 STAB regularly includes this. High-scoring easy question if concepts are clear.\n\n---\n\n**VOLUME is a SCALAR quantity** — it has magnitude only, no direction.\n\n**Core Concept (NCERT Class 11, Chapter 4):**\n- **Scalar quantities:** Have only **magnitude** (size). No direction.\n- **Vector quantities:** Have both **magnitude AND direction**.\n\n---\n\n**(A) Displacement — Vector ✓ (Not the answer):**\n**Displacement** = shortest distance from start to end point WITH direction. e.g., 5 km North-East. It is a vector.\n(Contrast: Distance = scalar — just magnitude, no direction)\n\n**(B) Velocity — Vector ✓ (Not the answer):**\n**Velocity** = speed + direction. e.g., 60 km/h towards North. It is a vector.\n(Contrast: Speed = scalar — just magnitude)\n\n**(C) Force — Vector ✓ (Not the answer):**\n**Force** has magnitude (in Newtons) AND direction of application. Newton's Second Law: F = ma (both F and a are vectors).\n\n**(D) Volume — Scalar ✗ (This IS the answer — NOT a vector):**\n**Volume** (e.g., 5 litres, 2 m³) is a **scalar** — it has only magnitude. There is no 'direction' to volume. This is the correct answer to the question.\n\n**Complete Scalars vs Vectors table for DRDO exam:**\n\nScalars: Distance, Speed, Time, Mass, Volume, Density, Temperature, Energy, Power, Electric charge, Pressure, Work, Frequency\n\nVectors: Displacement, Velocity, Acceleration, Force, Weight, Momentum, Torque, Angular momentum, Electric field, Magnetic field, Gravitational field\n\n🔬 **DRDO Relevance:** Vector analysis is fundamental in DRDO's missile trajectory calculations, radar beam direction analysis, force analysis in structural testing, and navigation systems (INS). Understanding scalars and vectors is a prerequisite for all physics-based DRDO technical work."
+    },
+    {
+      "id": 20,
+      "text": "A simple machine helps a person in doing",
+      "options": [
+        "Less work",
+        "The same amount of work with lesser force",
+        "The same amount of work slowly",
+        "The same amount of work much faster"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ **Correct Answer: (B) The same amount of work with lesser force**\n\n📚 **NCERT Mapping:** Class 11 Physics | Chapter 6 — Work, Energy and Power | Topic: Work, machines, mechanical advantage; also Chapter 5 — Laws of Motion\n\n⭐ **Exam Relevance: Very High** — Simple machines and mechanical advantage is a fundamental physics concept tested across IAS, DRDO, UPSC, SSC. Tests conceptual clarity about conservation of energy in machines — a common trap question.\n\n---\n\n**A simple machine does NOT reduce the amount of work done — it only reduces the required FORCE by increasing the distance over which force is applied.**\n\n**Law of Conservation of Energy in Machines:**\nWork Input = Work Output (ideal machine, no friction)\nWork = Force × Distance\nSo: F₁ × d₁ = F₂ × d₂\n\nIf you apply a **smaller force (F₂ < F₁)**, you must apply it over a **larger distance (d₂ > d₁)**. Total work = same.\n\n**Six types of simple machines and how they help:**\n- **Lever** — crowbar lifts rock with small force over large distance\n- **Inclined plane (ramp)** — push heavy object up gentle slope instead of straight up\n- **Pulley system** — reduces required force, increases rope distance pulled\n- **Screw** — small rotational force over many turns = large linear force over short distance\n- **Wheel and axle** — small force at rim = large force at axle\n- **Wedge** — force over wedge length = splitting force at thin edge\n\n---\n\n**(A) Less work — INCORRECT:**\nA simple machine **NEVER reduces total work** done. In real machines, friction causes energy loss — you actually do MORE work than the useful output (efficiency < 100%). Work is never reduced.\n\n**(B) Same work with lesser force — CORRECT:**\n**Mechanical Advantage (MA)** = Load / Effort = Output force / Input force. For force-multiplying machines, MA > 1. This is the defining benefit of a simple machine.\n\n**(C) Same work slowly — INCORRECT:**\nSpeed is not the key benefit of all simple machines. The characteristic benefit is force multiplication, not speed reduction.\n\n**(D) Same work much faster — INCORRECT:**\nSome machines (bicycle gears) can multiply speed at the cost of force, but simple machines in general are designed to **multiply force**, not necessarily speed.\n\n🔬 **DRDO Relevance:** Mechanical advantage principles are applied in DRDO's weapon loading mechanisms, artillery breech mechanisms, vehicle hydraulic systems (Pascal's law), and heavy armament component lifting at ordnance factories and ARDE."
+    }
+  ]
+}
