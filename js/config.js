@@ -145,6 +145,7 @@ var GITHUB_FILES = {
         { name: "Physics Test 2 (Measurement/Unit & Measuring Devices)", tags: "Measurement/Unit & Measuring Devices", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Physics/PT002.json" },
         { name: "Physics Test 3 (Measuring Devices and Scales)", tags: "Measuring Devices and Scales", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Physics/PT003.json" },
         { name: "Physics Test 4 Measuring Devices and Scales and  Mechanics)", tags: "Measuring Devices and Scales and  Mechanics", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Physics/PT004.json" },
+        { name: "Physics Test 5 (Mechanics & Motion Under Gravity)", tags: "Mechanics & Motion Under Gravity", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/DRDO/Physics/PT005.json" },
         // Add your full physics tests here
     ],
 
