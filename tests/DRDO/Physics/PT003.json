@@ -1,0 +1,267 @@
+{
+"title": "Physics Test 3 #PT003 (Measuring Devices and Scales)",
+"timeLimit": 10,
+"questions":[
+
+{
+"id":1,
+"text":"SONAR is mostly used by",
+"options":[
+"Astronauts",
+"Doctors",
+"Engineers",
+"Navigators"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: Navigators**\n\nSONAR (Sound Navigation and Ranging) uses ultrasonic waves to detect underwater objects.\n\nOption Analysis:\n• Astronauts → Work in space, not underwater detection.\n• Doctors → Use ultrasound imaging, not SONAR navigation.\n• Engineers → May design SONAR but do not primarily use it.\n• Navigators → Correct. Used in submarines and ships to detect objects and measure ocean depth."
+},
+
+{
+"id":2,
+"text":"Which of the following is measured by ‘Anemometer’?",
+"options":[
+"Velocity of water-flow",
+"Depth of water",
+"Force of the wind",
+"Intensity of light"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Force of the wind**\n\nAn anemometer measures **wind speed or wind force**.\n\nOption Analysis:\n• Velocity of water flow → Measured by flow meter.\n• Depth of water → Measured by fathometer.\n• Force of wind → Correct.\n• Intensity of light → Measured by luxmeter."
+},
+
+{
+"id":3,
+"text":"The velocity of wind is measured by",
+"options":[
+"Barometer",
+"Anemometer",
+"Hydrometer",
+"Wind vane"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Anemometer**\n\nWind speed measurement is an important parameter in meteorology.\n\nOption Analysis:\n• Barometer → Measures atmospheric pressure.\n• Anemometer → Correct.\n• Hydrometer → Measures density of liquids.\n• Wind vane → Measures wind direction, not velocity."
+},
+
+{
+"id":4,
+"text":"Which one of the following is not correctly matched?",
+"options":[
+"Anemometer - Wind speed",
+"Ammeter - Electric current",
+"Tacheometer - Pressure difference",
+"Pyrometer - High temperature"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Tacheometer - Pressure difference**\n\nA tacheometer measures **distance or horizontal/vertical angles in surveying**, not pressure."
+},
+
+{
+"id":5,
+"text":"Pyrometer is used to measure",
+"options":[
+"Air pressure",
+"Humidity",
+"High temperature",
+"Density"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: High temperature**\n\nPyrometers measure temperatures above **700°C**, often used in furnaces and metallurgy."
+},
+
+{
+"id":6,
+"text":"Which one of the following devices is used to measure extremely high temperature?",
+"options":[
+"Pyrometer",
+"Photometer",
+"Phonometer",
+"Pycnometer"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Pyrometer**\n\nUsed in industries such as **steel production and ceramics**."
+},
+
+{
+"id":7,
+"text":"Which one of the following thermometers is known as pyrometer?",
+"options":[
+"Thermo-electric thermometer",
+"Radiation thermometer",
+"Gas thermometer",
+"Liquid thermometer"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Radiation thermometer**\n\nRadiation thermometers measure temperature based on emitted thermal radiation."
+},
+
+{
+"id":8,
+"text":"The thermometer which used to measure 2000ºC temperature is",
+"options":[
+"Gas thermometer",
+"Mercury thermometer",
+"Total radiation pyrometer",
+"Steam pressure thermometer"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Total radiation pyrometer**\n\nMercury thermometers cannot measure very high temperatures."
+},
+
+{
+"id":9,
+"text":"‘Pyrheliometer’ is used for measuring",
+"options":[
+"Sun spots",
+"Solar radiation",
+"Air temperature",
+"Temperature of plants"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Solar radiation**\n\nPyrheliometers measure **direct beam solar radiation**."
+},
+
+{
+"id":10,
+"text":"What is measured by manometer?",
+"options":[
+"Air pressure",
+"Pressure of gas",
+"Density of liquids",
+"Pressure of oil on the surface"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Pressure of gas**\n\nManometers measure pressure difference between gases."
+},
+
+{
+"id":11,
+"text":"Which instrument is used to measure atmospheric pressure?",
+"options":[
+"Hydrometer",
+"Barometer",
+"Manometer",
+"Hygrometer"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Barometer**\n\nBarometers measure **atmospheric pressure**, important in weather prediction."
+},
+
+{
+"id":12,
+"text":"The liquid/liquids used in the simple barometer is/are",
+"options":[
+"Water",
+"Mercury",
+"Alcohol",
+"All of these"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Mercury**\n\nMercury is used due to **high density and low vapour pressure**."
+},
+
+{
+"id":13,
+"text":"The density of milk can be obtained by the use of",
+"options":[
+"Hydrometer",
+"Butyrometer",
+"Lactometer",
+"Thermometer"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Lactometer**\n\nA lactometer determines **purity of milk by density measurement**."
+},
+
+{
+"id":14,
+"text":"Which instrument is used for measuring humidity in the air?",
+"options":[
+"Hydrometer",
+"Hygrometer",
+"Spectrometer",
+"Eudiometer"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Hygrometer**\n\nHumidity is the **amount of water vapour in air**."
+},
+
+{
+"id":15,
+"text":"Hygrometer is used to measure",
+"options":[
+"Humidity in atmosphere",
+"Atmospheric pressure",
+"High temperature",
+"Velocity of wind"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Humidity in atmosphere**"
+},
+
+{
+"id":16,
+"text":"Which of the following is correctly matched?",
+"options":[
+"Thermoresistor - Electronic thermometer",
+"Capacitor - Thermometer",
+"Bipolar Junction Transistor - Rectifier",
+"Junction Diode - Amplifier"
+],
+"correctIndex":0,
+"solution":"**Correct Answer: Thermoresistor – Electronic thermometer**"
+},
+
+{
+"id":17,
+"text":"The name of the equipment used for measuring blood pressure is",
+"options":[
+"Teachometer",
+"Sphygmomanometer",
+"Actiometer",
+"Barometer"
+],
+"correctIndex":1,
+"solution":"**Correct Answer: Sphygmomanometer**"
+},
+
+{
+"id":18,
+"text":"Which one of the following can be used to measure temperature above 1500ºC?",
+"options":[
+"Clinical thermometer",
+"Thermoelectric couple thermometer",
+"Platinum resistance thermometer",
+"Pyrometer"
+],
+"correctIndex":3,
+"solution":"**Correct Answer: Pyrometer**"
+},
+
+{
+"id":19,
+"text":"The apparatus used to measure the intensity of light is known as",
+"options":[
+"Anemometer",
+"Calorimeter",
+"Luxmeter",
+"Altimeter"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Luxmeter**"
+},
+
+{
+"id":20,
+"text":"Radar is used for",
+"options":[
+"Detecting objects by using light waves",
+"Reflecting sound waves to detect objects",
+"Determining the presence and location of objects with radio wave",
+"Tracking rain-bearing clouds"
+],
+"correctIndex":2,
+"solution":"**Correct Answer: Determining the presence and location of objects with radio wave**"
+}
+
+]
+}
