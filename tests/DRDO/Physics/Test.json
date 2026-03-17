@@ -1,0 +1,6 @@
+{
+  "text": "What is \\( \\sqrt{16} \\)?",
+  "options": ["2", "4", "8", "16"],
+  "correctIndex": 1,
+  "solution": "We need to find the number which when multiplied by itself gives 16.\n\n\\( \\sqrt{16} = 4 \\) because \\( 4 \\times 4 = 16 \\).\n\nIn general: \\( \\sqrt{x^2} = |x| \\)"
+}
