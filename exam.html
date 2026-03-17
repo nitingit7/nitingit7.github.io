@@ -685,7 +685,7 @@
                     // row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
                     // Creates a 2-column layout: [Letter] [Text]
                     var letter = ['A', 'B', 'C', 'D', 'E'][i];
-                    var text = self.formatText(opt); // Uses your bold formatter
+                    var text = self.formatText(opt);
 
                     row.innerHTML = `
                     <div style="width: 30px; font-weight: bold; font-size: 1.1rem; flex-shrink: 0; color: var(--text-primary);">
@@ -695,21 +695,50 @@
                         ${text}
                     </div>
                 `;
-                // Apply KaTeX rendering to this option's text container
-                const optionTextDiv = row.querySelector('div:last-child');
-                if (optionTextDiv && window.renderMathInElement) {
-                    renderMathInElement(optionTextDiv, {
-                        delimiters: [
-                            { left: "$$", right: "$$", display: false },
-                            { left: "\\(", right: "\\)", display: false },
-                            { left: "\\[", right: "\\]", display: true }
-                        ],
-                        throwOnError: false,
-                        strict: "ignore"
-                    });
-                }
                     box.appendChild(row);
                 });
+
+                // === Render KaTeX in options (and question/solution for safety) ===
+                try {
+                    if (window.renderMathInElement) {
+                        renderMathInElement(document.getElementById('q-text'), {
+                            delimiters: [
+                                { left: "$$", right: "$$", display: false },
+                                { left: "\\(", right: "\\)", display: false },
+                                { left: "\\[", right: "\\]", display: true }
+                            ],
+                            throwOnError: false,
+                            strict: "ignore"
+                        });
+
+                        renderMathInElement(document.getElementById('options-box'), {
+                            delimiters: [
+                                { left: "$$", right: "$$", display: false },
+                                { left: "\\(", right: "\\)", display: false },
+                                { left: "\\[", right: "\\]", display: true }
+                            ],
+                            throwOnError: false,
+                            strict: "ignore"
+                        });
+
+                        if (showSolution) {
+                            renderMathInElement(document.getElementById('sol-text'), {
+                                delimiters: [
+                                    { left: "$$", right: "$$", display: false },
+                                    { left: "\\(", right: "\\)", display: false },
+                                    { left: "\\[", right: "\\]", display: true }
+                                ],
+                                throwOnError: false,
+                                strict: "ignore"
+                            });
+                        }
+                    }
+                } catch (e) {
+                    console.error("KaTeX error:", e);
+                }
+
+                // REFRESH PALETTE ...
+                this.renderPalette();
 
                 var solBox = document.getElementById('solution-box');
 
@@ -760,23 +789,6 @@
 
                 // REFRESH PALETTE (Ensures Submit button hides if in review)
                 this.renderPalette();
-                // KaTeX Rendering Configuration
-                try {
-                    if (window.renderMathInElement) {
-                        renderMathInElement(document.body, {
-                            delimiters: [
-                                // ⚠️ CHANGED: display: false means "Keep it on the same line"
-                                { left: "$$", right: "$$", display: false },
-
-                                // Standard LaTeX delimiters (keep these just in case)
-                                { left: "\\(", right: "\\)", display: false },
-                                { left: "\\[", right: "\\]", display: true }
-                            ],
-                            throwOnError: false
-                        });
-                    }
-                } catch (e) { console.error(e); }
-
                 // === SCROLL TO TOP ON NEXT/PREV (Fix for Review Solutions) ===
                 if (this.isReview) {
                     const qContentArea = document.querySelector('.q-content');
