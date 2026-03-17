@@ -2321,3 +2321,13 @@ body.dark-mode .tc-metadata {
         opacity: 1 !important;
     }
 }
+
+#sol-text .katex {
+    font-size: 1.1em !important;           /* Slightly larger than normal text */
+    color: var(--text-primary);
+}
+
+#sol-text .katex-display {
+    margin: 1em 0;
+    text-align: center;
+}
