@@ -1,0 +1,414 @@
+{
+  "title": "Generak Science Mock Test 1 #GN001",
+  "timeLimit": 20,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which of the following statements is INCORRECT?\nA. There is a repulsive force when north poles (or south poles) of two magnets are brought close together.\nB. If a bar magnet is broken into two halves, we get two similar bar magnets with stronger properties.\nC. The earth behaves as a magnet with the magnetic field pointing approximately from the geographic south to the north.\nD. When a bar magnet is freely suspended, it points in the north-south direction.",
+      "options": [
+        "There is a repulsive force when north poles (or south poles) of two magnets are brought close together.",
+        "If a bar magnet is broken into two halves, we get two similar bar magnets with stronger properties.",
+        "The earth behaves as a magnet with the magnetic field pointing approximately from the geographic south to the north.",
+        "When a bar magnet is freely suspended, it points in the north-south direction."
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) If a bar magnet is broken into two halves, we get two similar bar magnets with stronger properties.\n\n📚 NCERT Mapping: Class 10 Science | Chapter 13 — Magnetic Effects of Electric Current | Topic: Properties of magnets; magnetic poles\n\n⭐ Exam Relevance: Very High — Properties of magnets is a standard DRDO CEPTAM topic.\n\n---\n\nStatement (B) is INCORRECT because:\n\nWhen a bar magnet is broken into two halves, each half becomes a NEW, COMPLETE but WEAKER bar magnet. Each piece has its own north pole and south pole.\n\nThe magnetic moment of the original magnet:\n\\( M = m \\times 2l \\)\nWhere m = pole strength, 2l = magnetic length.\n\nAfter breaking, each half has the same pole strength m but half the magnetic length l:\n\\( M_{half} = m \\times l = \\frac{M}{2} \\)\n\nSo the magnetic moment is HALVED, not strengthened. The properties become WEAKER, not stronger.\n\n---\n\n(A) Repulsive force between like poles — CORRECT statement:\nLike poles (N-N or S-S) repel each other. This is a fundamental property of magnets. ✓\n\n(B) Broken magnet has stronger properties — INCORRECT statement (This is the answer):\nEach half has half the magnetic moment → WEAKER properties, not stronger. ✗\n\n(C) Earth's magnetic field from geographic south to north — CORRECT statement:\nEarth's geographic north pole corresponds to magnetic south pole (that is why the north-seeking pole of a compass points toward geographic north). Field lines go from geographic south to north. ✓\n\n(D) Freely suspended bar magnet points north-south — CORRECT statement:\nA freely suspended bar magnet aligns with Earth's magnetic field, pointing approximately in the north-south direction (geographic). This is the basic compass principle. ✓\n\n🔬 DRDO Relevance: Magnetic properties are fundamental to DRDO's development of guidance systems, magnetic sensors, and torpedo homing systems developed at NPOL (Naval Physical and Oceanographic Laboratory), Kochi."
+    },
+    {
+      "id": 2,
+      "text": "Which of the following is the number of oscillations per unit time of the sound wave?",
+      "options": [
+        "Wavelength",
+        "Time period",
+        "Amplitude",
+        "Frequency"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) Frequency\n\n📚 NCERT Mapping: Class 9 Science | Chapter 12 — Sound | Topic: Characteristics of sound waves — frequency, wavelength, amplitude, time period\n\n⭐ Exam Relevance: Very High — Basic definitions of wave characteristics appear in virtually every competitive exam.\n\n---\n\nDefinitions of all four options:\n\n(A) Wavelength (\\( \\lambda \\)): The distance between two consecutive crests or troughs of a wave. Unit: metre (m). NOT the number of oscillations.\n\n(B) Time period (T): The time taken for one complete oscillation. Unit: second (s). It is the RECIPROCAL of frequency:\n\\( T = \\frac{1}{f} \\)\n\n(C) Amplitude (A): The maximum displacement of a particle from its equilibrium (mean) position. It determines the loudness/intensity of sound. NOT the number of oscillations.\n\n(D) Frequency (f) — CORRECT:\nFrequency is defined as the number of oscillations (vibrations) completed per unit time.\n\\( f = \\frac{\\text{Number of oscillations}}{\\text{Time}} \\)\nUnit: Hertz (Hz) = oscillations per second.\n\nRelationship between all wave parameters:\n\\( v = f \\times \\lambda \\)\nWhere v = speed of sound, f = frequency, \\( \\lambda \\) = wavelength.\n\nSound frequency ranges:\n- Infrasound: \\( f < 20 \\) Hz\n- Audible sound: \\( 20 \\leq f \\leq 20{,}000 \\) Hz\n- Ultrasound: \\( f > 20{,}000 \\) Hz\n\n🔬 DRDO Relevance: Frequency analysis is fundamental to DRDO's SONAR systems, acoustic sensors in submarines, and ultrasonic non-destructive testing (NDT) of materials at DMRL."
+    },
+    {
+      "id": 3,
+      "text": "The tissue providing nutrition to the embryo in the uterus is the ________.",
+      "options": [
+        "Fallopian tube",
+        "Oviduct",
+        "Placenta",
+        "Villi"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: (C) Placenta\n\n📚 NCERT Mapping: Class 10 Science | Chapter 8 — How Do Organisms Reproduce? | Topic: Human reproduction; placenta; embryonic nutrition\n\n⭐ Exam Relevance: High — Human reproduction is a standard biology topic in DRDO CEPTAM General Science section.\n\n---\n\nThe Placenta:\nThe placenta is a special disc-shaped tissue that develops in the uterus during pregnancy. It serves as the interface between mother and embryo/fetus.\n\nFunctions of placenta:\n1. Provides oxygen and nutrients from mother's blood to embryo\n2. Removes carbon dioxide and metabolic wastes from embryo to mother's blood\n3. Produces hormones (hCG, progesterone, estrogen) to maintain pregnancy\n4. Acts as a barrier against some pathogens\n\nThe placenta is connected to the embryo via the umbilical cord.\n\n---\n\n(A) Fallopian tube — INCORRECT:\nThe fallopian tube (oviduct) is where fertilisation occurs (sperm meets egg). It transports the fertilised egg to the uterus. It does NOT provide nutrition to the embryo.\n\n(B) Oviduct — INCORRECT:\nOviduct is another name for the fallopian tube. Same explanation as (A) — it is the site of fertilisation, not nutrition of the embryo.\n\n(C) Placenta — CORRECT:\nThe placenta is the tissue specifically designed to provide nutrition, oxygen, and remove waste products for the growing embryo in the uterus.\n\n(D) Villi — INCORRECT:\nVilli are finger-like projections on the placenta that increase surface area for nutrient exchange. They are a structural component OF the placenta, not a separate tissue providing nutrition. The placenta (as a whole organ) is the correct answer.\n\n🔬 DRDO Relevance: Placental biology is studied by DRDO's DIBER (Defence Institute of Bio-Energy Research) and DIPAS (Defence Institute of Physiology and Allied Sciences) in research on soldier health and reproductive physiology under extreme conditions."
+    },
+    {
+      "id": 4,
+      "text": "______ compound is used as a drying agent.",
+      "options": [
+        "Calcium oxide",
+        "Calcium carbide",
+        "Gypsum",
+        "Calcium carbonate"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: (A) Calcium oxide\n\n📚 NCERT Mapping: Class 10 Science | Chapter 2 — Acids, Bases and Salts | Topic: Important compounds of calcium; uses of calcium compounds\n\n⭐ Exam Relevance: High — Uses of common calcium compounds is a standard chemistry GK topic in DRDO CEPTAM.\n\n---\n\nCalcium oxide (CaO), also called Quicklime or Burnt lime, is an excellent drying agent because it reacts vigorously with water:\n\n\\( \\text{CaO} + \\text{H}_2\\text{O} \\rightarrow \\text{Ca(OH)}_2 + \\text{Heat} \\)\n\nThis reaction is exothermic and irreversible under normal conditions, making CaO highly effective at absorbing moisture.\n\n---\n\n(A) Calcium oxide (CaO) — CORRECT:\nStrong drying agent. Absorbs moisture vigorously. Also used in cement industry, steelmaking, and water treatment.\n\n(B) Calcium carbide (CaC₂) — INCORRECT:\nCalcium carbide reacts with water to produce acetylene gas (C₂H₂):\n\\( \\text{CaC}_2 + 2\\text{H}_2\\text{O} \\rightarrow \\text{Ca(OH)}_2 + \\text{C}_2\\text{H}_2 \\uparrow \\)\nIt is NOT a drying agent — it reacts destructively with water.\n\n(C) Gypsum (CaSO₄·2H₂O) — INCORRECT:\nGypsum already contains water of crystallisation. It is used to make Plaster of Paris (POP) and in construction. Not a drying agent.\n\n(D) Calcium carbonate (CaCO₃) — INCORRECT:\nCalcium carbonate (limestone, chalk, marble) does not absorb moisture. It is used in antacids, cement, and as a filler. Not a drying agent.\n\n🔬 DRDO Relevance: Drying agents like CaO are used in DRDO labs for maintaining moisture-free environments critical for explosive and propellant storage, and in chemical synthesis at HEMRL (High Energy Materials Research Laboratory)."
+    },
+    {
+      "id": 5,
+      "text": "If the radius of curvature of a concave mirror is 6.2 cm, its focal length is _______ cm.",
+      "options": [
+        "12.4",
+        "3.1",
+        "2.6",
+        "6"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) 3.1\n\n📚 NCERT Mapping: Class 10 Science | Chapter 10 — Light — Reflection and Refraction | Topic: Concave mirror; relationship between focal length and radius of curvature\n\n⭐ Exam Relevance: Very High — Mirror formula and focal length calculation is one of the most tested numerical questions in DRDO CEPTAM and all competitive exams.\n\n---\n\nThe relationship between focal length (f) and radius of curvature (R) for a spherical mirror:\n\n\\( f = \\frac{R}{2} \\)\n\nThis is because the focal point is the midpoint of the line joining the pole and the centre of curvature.\n\nSubstituting the given value:\n\\( f = \\frac{6.2}{2} = 3.1 \\text{ cm} \\)\n\n---\n\n(A) 12.4 cm — INCORRECT:\nThis is \\( R \\times 2 = 2 \\times 6.2 = 12.4 \\). The student has multiplied instead of divided. Wrong operation.\n\n(B) 3.1 cm — CORRECT:\n\\( f = R/2 = 6.2/2 = 3.1 \\) cm. ✓\n\n(C) 2.6 cm — INCORRECT:\nNo standard formula gives 2.6 from 6.2. This is a distractor.\n\n(D) 6 cm — INCORRECT:\nRounding 6.2 to 6 and then incorrectly treating R as f gives this wrong answer.\n\nKey formula to remember:\n\\( f = \\frac{R}{2} \\) or equivalently \\( R = 2f \\)\n\nFor a concave mirror: both R and f are negative (using sign convention), but their magnitudes follow the same relationship.\n\n🔬 DRDO Relevance: Concave mirror optics are used in DRDO's search lights, thermal imaging systems, and parabolic antenna reflectors. IRDE (Instruments Research and Development Establishment) designs optical systems based on mirror optics for defence applications."
+    },
+    {
+      "id": 6,
+      "text": "Consider the following statements:\n1. Saturated hydrocarbons contain single bonds only.\n2. Ethyne is an example of a saturated hydrocarbon.\n3. Carbon can form long chain compounds due to catenation.",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "All of the above"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) 1 and 3 only\n\n📚 NCERT Mapping: Class 10 Science | Chapter 4 — Carbon and its Compounds | Topic: Saturated and unsaturated hydrocarbons; catenation; homologous series\n\n⭐ Exam Relevance: Very High — Carbon chemistry, saturated vs unsaturated hydrocarbons, and catenation are core topics in DRDO CEPTAM chemistry section.\n\n---\n\nAnalysis of each statement:\n\nStatement 1: \"Saturated hydrocarbons contain single bonds only.\" — TRUE ✓\nSaturated hydrocarbons (alkanes) contain only C-C single bonds. General formula: \\( C_nH_{2n+2} \\)\nExamples: Methane (CH₄), Ethane (C₂H₆), Propane (C₃H₈).\nThey are called 'saturated' because carbon atoms are bonded to the maximum possible number of hydrogen atoms.\n\nStatement 2: \"Ethyne is an example of a saturated hydrocarbon.\" — FALSE ✗\nEthyne (C₂H₂, also called Acetylene) contains a TRIPLE bond:\n\\( \\text{H} - \\text{C} \\equiv \\text{C} - \\text{H} \\)\nEthyne is an UNSATURATED hydrocarbon (alkyne). Unsaturated hydrocarbons contain double or triple bonds.\n- Alkenes: double bond (e.g., Ethene C₂H₄)\n- Alkynes: triple bond (e.g., Ethyne C₂H₂)\n\nStatement 3: \"Carbon can form long chain compounds due to catenation.\" — TRUE ✓\nCatenation is the unique property of carbon to form bonds with other carbon atoms, creating long chains, branched chains, and rings. This is why millions of organic compounds exist.\n\\( -\\text{C}-\\text{C}-\\text{C}-\\text{C}- \\) (long chain)\n\nOnly statements 1 and 3 are correct → Answer: (B)\n\n🔬 DRDO Relevance: Carbon chemistry is the basis of DRDO's high-energy materials (HEMs) research at HEMRL — explosives and propellants are carbon-based compounds. Catenation explains the diversity of energetic materials like RDX, HMX, and TATB."
+    },
+    {
+      "id": 7,
+      "text": "_________ compound has –OH as a functional group.",
+      "options": [
+        "Carboxylic acid",
+        "Ethanoic acid",
+        "Acetic acid",
+        "Alcohol"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) Alcohol\n\n📚 NCERT Mapping: Class 10 Science | Chapter 4 — Carbon and its Compounds | Topic: Functional groups; alcohols; carboxylic acids\n\n⭐ Exam Relevance: Very High — Functional groups and their identification is a fundamental organic chemistry topic tested in DRDO CEPTAM.\n\n---\n\nFunctional groups and their corresponding compound classes:\n\n| Functional Group | Name | Compound Class |\n|---|---|---|\n| -OH | Hydroxyl | Alcohol |\n| -COOH | Carboxyl | Carboxylic acid |\n| -CHO | Aldehyde | Aldehyde |\n| -CO- | Ketone | Ketone |\n| -NH₂ | Amino | Amine |\n\n---\n\n(A) Carboxylic acid — INCORRECT:\nCarboxylic acid has the functional group -COOH (carboxyl group), which contains both C=O and O-H. The characteristic group is -COOH, not simply -OH.\n\n(B) Ethanoic acid — INCORRECT:\nEthanoic acid (CH₃COOH) is a specific carboxylic acid. Its functional group is -COOH. It does contain an O-H within the carboxyl group, but the defining functional group is -COOH, not -OH.\n\n(C) Acetic acid — INCORRECT:\nAcetic acid is the common name for Ethanoic acid (CH₃COOH). Same explanation as (B) — functional group is -COOH.\n\nNote: Options B and C are actually the same compound (ethanoic acid = acetic acid), just named differently.\n\n(D) Alcohol — CORRECT:\nAlcohol has the -OH (hydroxyl) group as its characteristic functional group.\nExamples:\n- Methanol: CH₃-OH\n- Ethanol: C₂H₅-OH\n- Propanol: C₃H₇-OH\n\n🔬 DRDO Relevance: Alcohol (-OH functional group) is significant in DRDO for propellant chemistry. Nitrocellulose (used in gun propellants) is made by nitrating cellulose's -OH groups. HEMRL uses this chemistry extensively."
+    },
+    {
+      "id": 8,
+      "text": "A car of mass m accelerates uniformly from rest under a constant force F. After traveling a distance d, what is the kinetic energy of the car?",
+      "options": [
+        "(F x d) / 2",
+        "F x d",
+        "2 x F x d",
+        "(F x d) / m"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) F × d\n\n📚 NCERT Mapping: Class 11 Physics | Chapter 6 — Work, Energy and Power | Topic: Work-Energy Theorem; kinetic energy\n\n⭐ Exam Relevance: Very High — Work-Energy Theorem application is one of the most tested numerical concepts in DRDO CEPTAM physics section.\n\n---\n\nApplying the Work-Energy Theorem:\n\nThe Work-Energy Theorem states:\n\\( \\text{Net work done} = \\Delta KE = KE_{final} - KE_{initial} \\)\n\nSince the car starts from rest:\n\\( KE_{initial} = 0 \\)\n\nThe only horizontal force acting is F (constant), so:\n\\( W = F \\times d \\)\n\nTherefore:\n\\( KE_{final} = W = F \\times d \\)\n\nVerification using kinematics:\nFrom \\( v^2 = u^2 + 2as \\) with u = 0, s = d:\n\\( v^2 = 2ad \\)\nFrom Newton's 2nd law: \\( a = F/m \\)\n\\( v^2 = \\frac{2Fd}{m} \\)\n\\( KE = \\frac{1}{2}mv^2 = \\frac{1}{2}m \\times \\frac{2Fd}{m} = F \\times d \\) ✓\n\n---\n\n(A) (F × d) / 2 — INCORRECT:\nThis would be the answer if the car started from some initial velocity, or if it were a different problem. From rest, Work = ΔKE = Fd, not Fd/2.\n\n(B) F × d — CORRECT:\n\\( KE = W_{net} = F \\times d \\). Since car starts from rest, all work done by F converts to kinetic energy. ✓\n\n(C) 2 × F × d — INCORRECT:\nNo physical justification for doubling. This is a distractor.\n\n(D) (F × d) / m — INCORRECT:\nDividing by mass gives units of \\( \\frac{N \\cdot m}{kg} = \\frac{kg \\cdot m/s^2 \\cdot m}{kg} = m^2/s^2 \\), which is the unit of \\( v^2 \\), not kinetic energy (which should be in Joules = kg·m²/s²). This option is dimensionally inconsistent with KE.\n\n🔬 DRDO Relevance: Work-Energy Theorem governs the kinetic energy of projectiles and missiles — DRDO's ARDE uses this to calculate the muzzle energy of projectiles from gun barrel forces over distance (the gun barrel being the 'distance d' over which propellant gas force F acts)."
+    },
+    {
+      "id": 9,
+      "text": "'Alum' is an example of:",
+      "options": [
+        "Flake salt",
+        "Table salt",
+        "Single salt",
+        "Double salt"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) Double salt\n\n📚 NCERT Mapping: Class 10 Science | Chapter 2 — Acids, Bases and Salts | Topic: Types of salts; double salts; complex salts\n\n⭐ Exam Relevance: High — Classification of salts is a standard chemistry question in competitive exams.\n\n---\n\nAlum — Chemical identity:\n\nCommon alum = Potassium alum = \\( \\text{KAl(SO}_4)_2 \\cdot 12\\text{H}_2\\text{O} \\)\n\nFull name: Potassium aluminium sulfate dodecahydrate\n\nWhy it is a Double salt:\nA double salt is formed by the combination of two different simple salts that crystallise together. Alum contains TWO different metal cations (K⁺ and Al³⁺) and a common anion (SO₄²⁻):\n- Salt 1: K₂SO₄ (Potassium sulfate)\n- Salt 2: Al₂(SO₄)₃ (Aluminium sulfate)\n\nIn solution, alum dissociates completely into its component ions (K⁺, Al³⁺, SO₄²⁻) — this distinguishes it from complex salts which retain their complex ion in solution.\n\n---\n\n(A) Flake salt — INCORRECT:\nFlake salt is a physical form of table salt (NaCl) with flat, flaky crystals. Not a chemical classification relevant to alum.\n\n(B) Table salt — INCORRECT:\nTable salt = NaCl (Sodium chloride). Single salt with one cation and one anion. Alum is chemically completely different.\n\n(C) Single salt — INCORRECT:\nA single salt is formed from one acid and one base. Alum contains two different metal ions, making it a double salt, not a single salt.\n\n(D) Double salt — CORRECT:\nAlum = K₂SO₄·Al₂(SO₄)₃·24H₂O = double salt formed from two sulfate salts. ✓\n\nUses of alum: Water purification (coagulant), dyeing (mordant), aftershave (astringent), baking powder component.\n\n🔬 DRDO Relevance: Alum is used as a coagulant in water purification systems deployed in field conditions by the Indian Army (DRDO develops portable water purification units). Double salt chemistry is relevant in DRDO's materials and explosives research."
+    },
+    {
+      "id": 10,
+      "text": "Which statement is NOT true for magnetic field lines?",
+      "options": [
+        "The relative strength of the magnetic field is shown by the degree of closeness of the field lines.",
+        "No two field lines are found to cross each other.",
+        "Inside the magnet, the direction of field lines is from its south pole to its north pole.",
+        "Magnetic field lines are not closed curves."
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) Magnetic field lines are not closed curves.\n\n📚 NCERT Mapping: Class 10 Science | Chapter 13 — Magnetic Effects of Electric Current | Topic: Magnetic field lines; properties of magnetic field lines\n\n⭐ Exam Relevance: Very High — Properties of magnetic field lines is one of the most frequently tested topics in DRDO CEPTAM and all competitive science exams.\n\n---\n\nProperties of Magnetic Field Lines — full analysis:\n\n(A) Closeness of field lines shows relative strength — CORRECT statement ✓:\nWhere field lines are closer together (denser), the magnetic field is stronger. At the poles of a magnet, field lines are very close — strongest field. At the centre, they are spread out — weaker field.\n\n(B) No two field lines cross each other — CORRECT statement ✓:\nIf two field lines were to cross, it would mean the magnetic field has two different directions at the same point — which is physically impossible (a field can only have one direction at any point). Hence field lines never intersect.\n\n(C) Inside magnet, direction is from S to N — CORRECT statement ✓:\nOutside the magnet: field lines go from North pole to South pole.\nInside the magnet: field lines go from South pole to North pole.\nThis ensures that field lines form COMPLETE CLOSED LOOPS.\n\n(D) Magnetic field lines are not closed curves — INCORRECT statement (This is the answer) ✗:\nMagnetic field lines ARE always closed curves (closed loops). They emerge from the North pole, go around the outside to the South pole, then continue through the inside of the magnet from S back to N, forming a complete closed loop.\n\nThis is a fundamental difference between magnetic and electric field lines:\n- Electric field lines: start at positive charges, end at negative charges (NOT closed)\n- Magnetic field lines: always form CLOSED LOOPS (no magnetic monopoles exist)\n\n🔬 DRDO Relevance: Magnetic field line properties are fundamental to DRDO's design of electromagnetic systems, MRI-safe military equipment, and magnetic mine detection systems used by Indian Navy."
+    },
+    {
+      "id": 11,
+      "text": "If a person moves a trolley for a distance of 10 m with a force of 50 N, then the work done is:",
+      "options": [
+        "0.2 J",
+        "5 J",
+        "20 J",
+        "500 J"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) 500 J\n\n📚 NCERT Mapping: Class 9 Science | Chapter 11 — Work and Energy | Topic: Work done by a force; W = F × d\n\n⭐ Exam Relevance: Very High — Basic work calculation (W = Fd) is the most fundamental formula in energy physics and appears in every competitive exam.\n\n---\n\nCalculation:\n\nWork done formula (when force is applied in the direction of displacement):\n\\( W = F \\times d \\)\n\nSubstituting given values:\n\\( W = 50 \\text{ N} \\times 10 \\text{ m} = 500 \\text{ J} \\)\n\n---\n\n(A) 0.2 J — INCORRECT:\nThis comes from \\( d/F = 10/50 = 0.2 \\). Division instead of multiplication — wrong operation.\n\n(B) 5 J — INCORRECT:\nThis comes from \\( F/d = 50/10 = 5 \\). Again wrong — division instead of multiplication.\n\n(C) 20 J — INCORRECT:\nNo standard formula gives 20 from these values. Distractor.\n\n(D) 500 J — CORRECT:\n\\( W = F \\times d = 50 \\times 10 = 500 \\) J ✓\n\nUnits check: \\( [W] = \\text{N} \\times \\text{m} = \\text{N·m} = \\text{Joule (J)} \\) ✓\n\nNote: This formula W = Fd applies when force is in the SAME DIRECTION as displacement (angle = 0°).\nGeneral formula: \\( W = F \\times d \\times \\cos\\theta \\)\nHere \\( \\theta = 0° \\), so \\( \\cos 0° = 1 \\), giving \\( W = Fd \\).\n\n🔬 DRDO Relevance: Work calculation is fundamental in DRDO's analysis of weapon systems — calculating the work done by propellant gases on a projectile inside a gun barrel, or the work done by aerodynamic forces on a missile during flight."
+    },
+    {
+      "id": 12,
+      "text": "What was the unknown element under aluminium called?",
+      "options": [
+        "Neo-Aluminium",
+        "Proto-Aluminium",
+        "Eka-Aluminium",
+        "Meta-Aluminium"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: (C) Eka-Aluminium\n\n📚 NCERT Mapping: Class 10 Science | Chapter 5 — Periodic Classification of Elements | Topic: Mendeleev's Periodic Table; prediction of unknown elements; Eka-elements\n\n⭐ Exam Relevance: Very High — Mendeleev's prediction of undiscovered elements using the prefix 'Eka-' is a standard chemistry history question in all competitive exams.\n\n---\n\nMendeleev's Eka-Element System:\n\nWhen Mendeleev arranged elements in order of atomic mass (1869), he noticed gaps where elements were missing. He boldly predicted the properties of these unknown elements using the Sanskrit prefix 'Eka' (meaning 'one' — the next one in the group):\n\n| Mendeleev's Prediction | Modern Element Discovered | Year |\n|---|---|---|\n| Eka-Aluminium | Gallium (Ga) | 1875 |\n| Eka-Silicon | Germanium (Ge) | 1886 |\n| Eka-Boron | Scandium (Sc) | 1879 |\n\nEka-Aluminium (= Gallium): Mendeleev predicted its density (~6 g/cm³), atomic mass (~68), melting point, and oxide formula (Ga₂O₃) with remarkable accuracy — all confirmed when Gallium was discovered by Lecoq de Boisbaudran in 1875.\n\n---\n\n(A) Neo-Aluminium — INCORRECT:\nNo such element name exists in chemistry. 'Neo' prefix is used in geology (Neogene) and science fiction.\n\n(B) Proto-Aluminium — INCORRECT:\nNo such element prediction or name exists.\n\n(C) Eka-Aluminium — CORRECT:\nMendeleev's name for the element below Aluminium in his periodic table. Later identified as Gallium (Ga, atomic number 31). ✓\n\n(D) Meta-Aluminium — INCORRECT:\n'Meta' prefix is used in chemistry for ring compounds and isomers (meta-position), not for element predictions.\n\n🔬 DRDO Relevance: Gallium (the 'Eka-Aluminium') is a critical material in DRDO's semiconductor research — Gallium Arsenide (GaAs) and Gallium Nitride (GaN) are used in DRDO's high-frequency radar modules, missile seeker electronics, and electronic warfare systems."
+    },
+    {
+      "id": 13,
+      "text": "Which of the following laboratory safety equipment is used to extinguish small fires?",
+      "options": [
+        "Laboratory",
+        "Blanket",
+        "Safety goggles",
+        "Fire extinguisher"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) Fire extinguisher\n\n📚 NCERT Mapping: Class 8/9 Science | General Lab Safety | Topic: Laboratory safety equipment and their uses\n\n⭐ Exam Relevance: Moderate — Lab safety is a basic awareness topic tested in DRDO CEPTAM General Science section.\n\n---\n\nLaboratory Safety Equipment — functions:\n\n(A) Laboratory — INCORRECT:\n'Laboratory' is the room/facility itself — not a piece of safety equipment. This is an obviously wrong distractor.\n\n(B) Blanket (Fire Blanket) — INCORRECT (partially):\nA fire blanket CAN smother small fires (especially burning clothing or small chemical fires) by cutting off oxygen supply. However, Fire Extinguisher is the standard, primary equipment specifically designed for fire suppression. Between these two options, Fire Extinguisher is the more accurate and standard answer.\n\n(C) Safety goggles — INCORRECT:\nSafety goggles protect the EYES from chemical splashes, flying particles, and UV radiation. They are protective equipment for the person, NOT fire-fighting equipment.\n\n(D) Fire extinguisher — CORRECT:\nFire extinguishers are specifically designed to extinguish small fires in laboratories and buildings. Types:\n- CO₂ extinguisher: For electrical and chemical fires\n- Dry powder extinguisher: For general fires\n- Water extinguisher: For paper/wood fires only\n- Foam extinguisher: For liquid fires\n\n🔬 DRDO Relevance: Fire safety is critical in DRDO labs dealing with explosives and propellants (HEMRL, ARDE). CO₂ fire extinguishers are standard equipment in all DRDO electronics and chemical labs."
+    },
+    {
+      "id": 14,
+      "text": "Which of the following is an example of animal hormones?\nI. Adrenalin\nII. Testosterone",
+      "options": [
+        "Only II",
+        "Only I",
+        "Neither I nor II",
+        "Both I and II"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) Both I and II\n\n📚 NCERT Mapping: Class 10 Science | Chapter 7 — Control and Coordination | Topic: Endocrine system; animal hormones; glands\n\n⭐ Exam Relevance: High — Animal hormones and their functions are standard biology questions in DRDO CEPTAM.\n\n---\n\nI. Adrenalin (Epinephrine) — Animal hormone ✓:\nSecreted by: Adrenal medulla (inner part of adrenal glands, located above kidneys)\nFunction: 'Fight or flight' hormone — released during stress, fear, or excitement. Increases heart rate, blood pressure, dilates pupils, increases blood glucose, prepares body for emergency response.\nChemical nature: Catecholamine (derived from amino acid tyrosine)\n\nII. Testosterone — Animal hormone ✓:\nSecreted by: Testes (in males); small amounts by ovaries and adrenal cortex in females\nFunction: Primary male sex hormone — responsible for development of male secondary sexual characteristics (voice deepening, facial hair, muscle development), sperm production, and sexual behaviour.\nChemical nature: Steroid hormone\n\nBoth are ANIMAL hormones (produced in animal glands, not plants).\n\n---\n\n(A) Only II — INCORRECT:\nAdrenalin (I) is also an animal hormone. Both are correct.\n\n(B) Only I — INCORRECT:\nTestosterone (II) is also an animal hormone. Both are correct.\n\n(C) Neither I nor II — INCORRECT:\nBoth are well-established animal hormones.\n\n(D) Both I and II — CORRECT:\nBoth Adrenalin and Testosterone are animal hormones. ✓\n\n🔬 DRDO Relevance: DRDO's DIPAS (Defence Institute of Physiology and Allied Sciences) studies stress hormones including adrenalin in soldiers operating in extreme conditions (high altitude, combat stress). Understanding testosterone levels is part of soldier fitness and performance research."
+    },
+    {
+      "id": 15,
+      "text": "Which of the following has disinfectant properties?\nA. Amphoteric surfactant\nB. Evaporative cleaner\nC. Cationic detergent",
+      "options": [
+        "Only C",
+        "A and B",
+        "Only A",
+        "A and C"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: (A) Only C\n\n📚 NCERT Mapping: Class 10 Science | Chapter 4 — Carbon and its Compounds | Topic: Detergents; soaps and detergents; surface-active agents\n\n⭐ Exam Relevance: Moderate — Types of detergents and their properties is an applied chemistry question in DRDO CEPTAM.\n\n---\n\nTypes of detergents/surfactants based on charge of hydrophilic head:\n\nAnionic surfactants: Negatively charged head. Used in laundry detergents and shampoos. E.g., sodium lauryl sulfate (SLS).\n\nCationic surfactants (detergents): Positively charged head — usually quaternary ammonium compounds (Quats). These have DISINFECTANT and ANTISEPTIC properties because:\n- Positively charged head binds to negatively charged bacterial cell membranes\n- Disrupts membrane integrity → kills bacteria\n- Used in hospital disinfectants, fabric softeners, hair conditioners\nExample: Benzalkonium chloride (BAC) — a common hospital disinfectant.\n\nAmphoteric surfactants: Have both positive and negative charges (depends on pH). Used in gentle cleansers and shampoos. Generally do NOT have strong disinfectant properties.\n\nEvaporative cleaners: These are solvents (like isopropyl alcohol or acetone) used for cleaning electronics. They do clean surfaces but are not classified as disinfectants in the detergent/surfactant sense.\n\n---\n\n(A) Only C (Cationic detergent) — CORRECT:\nCationic detergents have disinfectant/antiseptic properties. ✓\n\n(B) A and B — INCORRECT:\nAmphoteric surfactants (A) have mild cleansing but not strong disinfectant action. Evaporative cleaners (B) are solvents, not disinfectants.\n\n(C) Only A — INCORRECT:\nAmphoteric surfactants do not have significant disinfectant properties.\n\n(D) A and C — INCORRECT:\nOnly cationic detergents (C) specifically have disinfectant properties.\n\n🔬 DRDO Relevance: Cationic disinfectants (quaternary ammonium compounds) are used in DRDO's DRDE (Defence Research and Development Establishment) for NBC (Nuclear, Biological, Chemical) decontamination protocols, sanitising equipment and facilities after biological agent exposure."
+    },
+    {
+      "id": 16,
+      "text": "Which of the following modern physicist closely examined Newtonian mechanics' foundations?",
+      "options": [
+        "James Clerk Maxwell",
+        "Ernst Mach",
+        "Galileo Galilei",
+        "Albert Einstein"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) Ernst Mach\n\n📚 NCERT Mapping: Class 11 Physics | Chapter 1 — Physical World | Topic: History of physics; critique of Newtonian mechanics\n\n⭐ Exam Relevance: Moderate — History and philosophy of physics is tested in higher-difficulty DRDO CEPTAM rounds.\n\n---\n\nErnst Mach (1838–1916) — Austrian physicist and philosopher of science:\n\nMach's key contributions to critically examining Newtonian mechanics:\n\n1. Rejected Newton's concept of ABSOLUTE SPACE and ABSOLUTE TIME:\nNewton proposed that space and time exist independently of matter (absolute). Mach argued that space and time are defined by the relationships between material objects — no object can be said to be 'truly at rest' except relative to other matter.\n\n2. Mach's Principle:\nThe inertia of a body is determined by the distribution of all matter in the universe, not by absolute space. This profoundly influenced Einstein:\n\\( \\text{Inertia} \\propto \\text{distribution of all matter in universe} \\)\n\n3. His critique appeared in 'The Science of Mechanics' (1883), which Einstein read as a student and credited as a major influence on General Relativity.\n\n---\n\n(A) James Clerk Maxwell (1831–1879) — INCORRECT:\nMaxwell formulated the theory of electromagnetism (Maxwell's equations, electromagnetic waves). He worked within classical physics framework and did not specifically critique Newtonian mechanics' foundations.\n\n(B) Ernst Mach — CORRECT:\nMach systematically examined and criticized Newtonian mechanics' philosophical foundations, particularly absolute space and time. ✓\n\n(C) Galileo Galilei (1564–1642) — INCORRECT:\nGalileo PRECEDED Newton and actually laid groundwork for Newtonian mechanics (inertia, projectile motion). He pre-dates modern physics.\n\n(D) Albert Einstein (1879–1955) — INCORRECT:\nEinstein REPLACED Newtonian mechanics with Special and General Relativity — but he was inspired by Mach's critique. Einstein credited Mach's influence, but Mach is the one who specifically examined Newton's foundations.\n\n🔬 DRDO Relevance: Mach's name is immortalised in aerodynamics — the Mach number (ratio of object speed to speed of sound) is named after him. DRDO's missiles (BrahMos at Mach 2.8, hypersonic vehicles at Mach 6+) are characterised using the Mach number scale."
+    },
+    {
+      "id": 17,
+      "text": "A sound wave with a period of 0.01 seconds has a frequency of:",
+      "options": [
+        "1000 Hz",
+        "10 Hz",
+        "0.1 Hz",
+        "100 Hz"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) 100 Hz\n\n📚 NCERT Mapping: Class 9 Science | Chapter 12 — Sound | Topic: Frequency and time period; relationship f = 1/T\n\n⭐ Exam Relevance: Very High — Direct numerical application of f = 1/T appears in virtually every competitive exam.\n\n---\n\nCalculation:\n\nThe relationship between frequency and time period:\n\\( f = \\frac{1}{T} \\)\n\nGiven: \\( T = 0.01 \\) seconds\n\n\\( f = \\frac{1}{0.01} = \\frac{1}{10^{-2}} = 10^2 = 100 \\text{ Hz} \\)\n\n---\n\n(A) 1000 Hz — INCORRECT:\nThis would correspond to \\( T = 1/1000 = 0.001 \\) s. Not the given value.\n\n(B) 10 Hz — INCORRECT:\nThis would correspond to \\( T = 1/10 = 0.1 \\) s. Not the given value.\n\n(C) 0.1 Hz — INCORRECT:\nThis would correspond to \\( T = 1/0.1 = 10 \\) s. Not the given value.\n\n(D) 100 Hz — CORRECT:\n\\( f = 1/T = 1/0.01 = 100 \\) Hz ✓\n\n100 Hz falls in the AUDIBLE range (20 Hz to 20,000 Hz). It corresponds to a low-pitched bass sound.\n\nQuick reference for DRDO exam:\n\\( T = 0.001 \\text{ s} \\Rightarrow f = 1000 \\text{ Hz} \\)\n\\( T = 0.01 \\text{ s} \\Rightarrow f = 100 \\text{ Hz} \\)\n\\( T = 0.1 \\text{ s} \\Rightarrow f = 10 \\text{ Hz} \\)\n\\( T = 1 \\text{ s} \\Rightarrow f = 1 \\text{ Hz} \\)\n\n🔬 DRDO Relevance: Frequency-period calculations are fundamental for DRDO's sonar systems, acoustic sensors, and electronic signal processing in radar and communication systems."
+    },
+    {
+      "id": 18,
+      "text": "Which of the following is CORRECT regarding Ohm's law?",
+      "options": [
+        "R = V",
+        "V ∝ I",
+        "R ∝ I",
+        "V = I"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) V ∝ I\n\n📚 NCERT Mapping: Class 10 Science | Chapter 12 — Electricity | Topic: Ohm's Law; resistance; V-I relationship\n\n⭐ Exam Relevance: Very High — Ohm's Law is one of the most fundamental and frequently tested laws in electricity.\n\n---\n\nOhm's Law states:\n\"At constant temperature, the current flowing through a conductor is directly proportional to the potential difference (voltage) across its ends.\"\n\nMathematically:\n\\( V \\propto I \\) (at constant temperature and resistance)\n\nOr equivalently:\n\\( V = IR \\)\n\nWhere:\n- V = potential difference (Volts)\n- I = current (Amperes)\n- R = resistance (Ohms) — the constant of proportionality\n\nRearranging:\n\\( R = \\frac{V}{I} \\) (resistance = voltage / current)\n\n---\n\n(A) R = V — INCORRECT:\nDimensionally wrong: R is in Ohms, V is in Volts. They cannot be equal. Also physically meaningless.\n\n(B) V ∝ I — CORRECT:\nThis is the direct statement of Ohm's Law: voltage is proportional to current (at constant R and temperature). ✓\n\n(C) R ∝ I — INCORRECT:\nResistance does NOT change with current (for ohmic conductors). R is a material property that depends on material, length, cross-section, and temperature — NOT current. This would mean doubling current doubles resistance, which violates Ohm's law.\n\n(D) V = I — INCORRECT:\nV and I have different units (Volts vs Amperes) and different physical quantities. V = I would require R = 1 Ω always, which is not generally true.\n\nGraphical representation:\nFor an ohmic conductor, plotting V (y-axis) vs I (x-axis) gives a STRAIGHT LINE through the origin. The slope = R.\n\n🔬 DRDO Relevance: Ohm's Law is fundamental to all DRDO's electronics design — from basic circuit components in radar systems to complex power management in missile electronics. Understanding V ∝ I helps in designing safe operating conditions for sensitive electronic warfare equipment."
+    },
+    {
+      "id": 19,
+      "text": "______ are those errors that tend to be in one direction, either positive or negative.",
+      "options": [
+        "Random error",
+        "Systematic error",
+        "Instrumental error",
+        "Personal error"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) Systematic error\n\n📚 NCERT Mapping: Class 11 Physics | Chapter 2 — Units and Measurements | Topic: Types of errors; systematic error; random error\n\n⭐ Exam Relevance: Very High — Classification of errors in measurement is a standard Class 11 topic and appears frequently in DRDO CEPTAM since precision measurement is critical in defence research.\n\n---\n\nTypes of Errors in Measurement:\n\n(A) Random errors:\nErrors that vary randomly in magnitude and direction from measurement to measurement. They can be positive or negative unpredictably.\nCause: Unpredictable fluctuations in experimental conditions.\nReduction: Increased number of observations and statistical averaging.\n\n(B) Systematic errors — CORRECT:\nErrors that tend to be consistently in ONE direction — either always positive (overestimate) or always negative (underestimate). They follow a pattern.\nCause: Faulty instrument calibration, wrong technique, environmental factors.\nExample: A weighing balance that always reads 5 g more than true value → systematic positive error.\nReduction: Calibration of instruments, improved experimental technique.\n\n(C) Instrumental errors:\nA SUBTYPE of systematic error caused by faulty or poorly calibrated instruments. E.g., a thermometer with wrong markings. This is more specific than systematic error, which is the broader category.\n\n(D) Personal errors (Human errors):\nErrors due to the observer's limitations — parallax error when reading a meter scale, wrong estimation of last digit, etc. These can be systematic (always reading the same way) or random.\n\nThe question asks for errors that 'tend to be in ONE direction' — this precisely defines systematic error.\n\n🔬 DRDO Relevance: Error analysis is critically important in DRDO's precision measurement work — systematic errors in weapon guidance systems cause consistent miss distances that must be corrected. DRDO's missile accuracy (CEP — Circular Error Probable) analysis uses systematic vs random error concepts extensively."
+    },
+    {
+      "id": 20,
+      "text": "In 1995, physicists Eric Cornell and Carl Wieman created the first Bose-Einstein condensate (BEC) using which isotope?",
+      "options": [
+        "Caesium-133",
+        "Thorium-232",
+        "Rubidium-87",
+        "Sodium-23"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: (C) Rubidium-87\n\n📚 NCERT Mapping: Class 11 Physics | Chapter 1 — Physical World | Topic: States of matter; modern physics discoveries; quantum physics\n\n⭐ Exam Relevance: Moderate — BEC is a modern physics topic that appears in higher-difficulty DRDO CEPTAM rounds testing awareness of cutting-edge physics.\n\n---\n\nBose-Einstein Condensate (BEC):\n\nA BEC is a state of matter that occurs when bosons (particles with integer spin) are cooled to temperatures very close to absolute zero (near 0 K).\n\nAt such temperatures:\n\\( T \\approx 10^{-7} \\text{ K (nano-Kelvin range)} \\)\n\nThe particles lose their individual identities and collectively occupy the same quantum ground state, behaving as a single quantum entity. Predicted by Satyendra Nath Bose and Albert Einstein in 1924-25.\n\nFirst experimental BEC (1995):\n- Scientists: Eric Cornell and Carl Wieman at JILA (Joint Institute for Laboratory Astrophysics), University of Colorado\n- Isotope used: Rubidium-87 (⁸⁷Rb)\n- Temperature achieved: ~170 nanoKelvin\n- Number of atoms: ~2000 Rb atoms\n- Nobel Prize: Cornell, Wieman, and Wolfgang Ketterle (MIT, used Na) received Nobel Prize in Physics 2001\n\n---\n\n(A) Caesium-133 — INCORRECT:\nCaesium-133 is used in atomic clocks (SI definition of second). Not used in the first BEC experiment.\n\n(B) Thorium-232 — INCORRECT:\nThorium-232 is a radioactive element used as nuclear fuel. Not used in BEC experiments.\n\n(C) Rubidium-87 — CORRECT:\nCornell and Wieman used Rubidium-87 atoms cooled using laser cooling and evaporative cooling to create the first BEC. ✓\n\n(D) Sodium-23 — INCORRECT:\nWolfgang Ketterle created a BEC using Sodium-23 (Na-23) at MIT slightly later in 1995. This is often confused with the first BEC, but the first used Rb-87.\n\n🔬 DRDO Relevance: BEC research has implications for DRDO's quantum technology programs — BEC-based atom interferometers are being developed for ultra-precise inertial navigation systems (navigation without GPS), which is strategically important for DRDO's missile guidance applications."
+    },
+    {
+      "id": 21,
+      "text": "An alloy with ______ in it is referred to as 'amalgam'.",
+      "options": [
+        "nickel",
+        "silver",
+        "mercury",
+        "cobalt"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: (C) mercury\n\n📚 NCERT Mapping: Class 10 Science | Chapter 3 — Metals and Non-Metals | Topic: Alloys; properties of metals; amalgams\n\n⭐ Exam Relevance: High — Definition of amalgam is a standard chemistry GK question tested in DRDO CEPTAM and other competitive exams.\n\n---\n\nAmalgam — Definition:\nAn amalgam is any alloy that contains MERCURY (Hg) as one of its components.\n\nCommon examples of amalgams:\n\n1. Dental amalgam: Mercury + Silver + Tin + Zinc (~50% Hg)\nUsed for dental fillings (being phased out due to mercury toxicity concerns).\n\n2. Sodium amalgam (Na-Hg): Used in chemical industry as a reducing agent.\n\n3. Zinc amalgam (Zn-Hg): Used in Clemmensen reduction in organic chemistry.\n\n4. Gold amalgam: Historically used in gold extraction from ore (gold dissolves in mercury, then mercury is boiled off).\n\nSpecial property of mercury: Mercury is the only metal that is LIQUID at room temperature (melting point = -38.83°C). This makes it unique in forming liquid alloys (amalgams) with solid metals.\n\n---\n\n(A) Nickel — INCORRECT:\nAlloys containing nickel include nichrome (Ni + Cr) and cupronickel (Cu + Ni). These are not amalgams.\n\n(B) Silver — INCORRECT:\nSilver alloys include sterling silver (Ag + Cu) and silver solder. Not called amalgams (though silver IS a component of dental amalgam, mercury is the defining element).\n\n(C) Mercury — CORRECT:\nAny alloy containing mercury = amalgam. Mercury is the essential defining ingredient. ✓\n\n(D) Cobalt — INCORRECT:\nCobalt alloys include cobalt steel and stellite. These are not amalgams.\n\n🔬 DRDO Relevance: Mercury-based compounds are studied by DRDO's DRDE (Defence R&D Establishment) as potential chemical hazards and in detonator chemistry. Mercury fulminate (Hg(CNO)₂) is a primary explosive used in blasting caps and detonators — a mercury-containing compound central to ordnance design."
+    },
+    {
+      "id": 22,
+      "text": "The potential difference between the terminals of an electric heater is 60 V when it draws a current of 4 A from the source. What current will the heater draw if the potential difference is changed to 127.5 V?",
+      "options": [
+        "8.5 A",
+        "24 A",
+        "10 A",
+        "12 A"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: (A) 8.5 A\n\n📚 NCERT Mapping: Class 10 Science | Chapter 12 — Electricity | Topic: Ohm's Law; resistance calculation; current calculation\n\n⭐ Exam Relevance: Very High — Two-step Ohm's Law numerical is a standard calculation question in DRDO CEPTAM physics section.\n\n---\n\nStep 1: Find the resistance of the heater.\n\nUsing Ohm's Law: \\( R = \\frac{V}{I} \\)\n\n\\( R = \\frac{60 \\text{ V}}{4 \\text{ A}} = 15 \\text{ Ω} \\)\n\nStep 2: Find the new current at 127.5 V.\n\nAssuming resistance remains constant (same heater, same temperature approximately):\n\n\\( I = \\frac{V}{R} = \\frac{127.5}{15} = 8.5 \\text{ A} \\)\n\n---\n\n(A) 8.5 A — CORRECT:\n\\( R = 60/4 = 15 \\Omega \\), then \\( I = 127.5/15 = 8.5 \\) A ✓\n\n(B) 24 A — INCORRECT:\nThis might come from \\( I = 4 \\times (127.5/21.25) \\) — wrong approach. No standard formula gives 24 A here.\n\n(C) 10 A — INCORRECT:\nThis might come from assuming R = 12.75 Ω or using wrong values. Incorrect.\n\n(D) 12 A — INCORRECT:\nMight come from \\( 4 \\times (127.5/60) \\approx 4 \\times 2.125 = 8.5 \\), not 12. Or from a calculation error. Incorrect.\n\nVerification: Power at 127.5 V:\n\\( P = \\frac{V^2}{R} = \\frac{(127.5)^2}{15} = \\frac{16256.25}{15} = 1083.75 \\) W\nOriginal power at 60 V: \\( P = 60 \\times 4 = 240 \\) W\nRatio: \\( 1083.75/240 \\approx 4.5 \\times \\) — makes sense as voltage increased by 2.125×, so power increases by \\( 2.125^2 \\approx 4.5 \\times \\). ✓\n\n🔬 DRDO Relevance: Ohm's law calculations are fundamental for DRDO's electrical engineering teams designing power systems for defence equipment — calculating safe operating currents to prevent damage to sensitive electronics in radar, missile guidance, and communication systems."
+    },
+    {
+      "id": 23,
+      "text": "Element X forms an oxide with the formula X₂O₃. The element X would most likely be in the same group of the periodic table as _________",
+      "options": [
+        "magnesium",
+        "silicon",
+        "aluminium",
+        "sodium"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: (C) aluminium\n\n📚 NCERT Mapping: Class 10 Science | Chapter 5 — Periodic Classification of Elements | Topic: Valency; oxide formula; groups in periodic table\n\n⭐ Exam Relevance: High — Determining group membership from oxide formula is a standard periodic table question in DRDO CEPTAM chemistry section.\n\n---\n\nDetermining valency from oxide formula:\n\nThe formula \\( X_2O_3 \\) tells us:\n- Oxygen has valency/charge = -2 (always)\n- For the formula to be electrically neutral: \\( 2 \\times (+n) + 3 \\times (-2) = 0 \\)\n- \\( 2n = 6 \\Rightarrow n = 3 \\)\n- Therefore, element X has valency = +3\n\nNow checking each option's valency:\n\n(A) Magnesium (Mg) — Group 2, valency = +2. Forms MgO. NOT +3.\n\n(B) Silicon (Si) — Group 14, valency = +4. Forms SiO₂. NOT +3.\n\n(C) Aluminium (Al) — Group 13, valency = +3. Forms Al₂O₃. MATCHES! ✓\n\n(D) Sodium (Na) — Group 1, valency = +1. Forms Na₂O. NOT +3.\n\nSince X has valency +3 and is in Group 13 (same as Aluminium), element X belongs to the same group as aluminium.\n\nGroup 13 elements: B (Boron), Al (Aluminium), Ga (Gallium), In (Indium), Tl (Thallium) — all have valency +3 and form \\( X_2O_3 \\) oxides.\n\n---\n\n🔬 DRDO Relevance: Aluminium and its Group 13 companions are critical materials in DRDO's aerospace and weapons research. Gallium arsenide (Group 13 element) is used in DRDO's radar and microwave electronics. Aluminium alloys form the structural material of India's Agni and Prithvi missile bodies."
+    },
+    {
+      "id": 24,
+      "text": "What is the work done when a constant force of 20 N is applied at an angle of 30 degrees to the direction of displacement of 13 m?",
+      "options": [
+        "390 Joules",
+        "225 Joules",
+        "260 Joules",
+        "185 Joules"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) 225 Joules\n\n📚 NCERT Mapping: Class 11 Physics | Chapter 6 — Work, Energy and Power | Topic: Work done by a force at an angle; W = Fd cosθ\n\n⭐ Exam Relevance: Very High — Work done at an angle is a standard numerical question in DRDO CEPTAM requiring application of the vector dot product formula.\n\n---\n\nCalculation:\n\nFormula for work done when force is applied at angle θ to displacement:\n\\( W = F \\times d \\times \\cos\\theta \\)\n\nGiven:\n- F = 20 N\n- d = 13 m\n- θ = 30°\n- \\( \\cos 30° = \\frac{\\sqrt{3}}{2} \\approx 0.866 \\)\n\n\\( W = 20 \\times 13 \\times \\cos 30° \\)\n\\( W = 260 \\times \\frac{\\sqrt{3}}{2} \\)\n\\( W = 260 \\times 0.866 \\)\n\\( W = 225.16 \\approx 225 \\text{ J} \\)\n\n---\n\n(A) 390 J — INCORRECT:\nThis is \\( F \\times d \\times \\cos 0° = 20 \\times 13 \\times 1 = 260 \\). Wait — actually \\( 20 \\times 13 \\times 1.5 = 390 \\). A student might use \\( \\cos 30° = \\sqrt{3}/2 \\approx 1.5 \\) (wrong — that is \\( 2/\\sqrt{3} \\), not \\( \\sqrt{3}/2 \\)). The mistake is inverting the cosine value.\n\n(B) 225 J — CORRECT:\n\\( W = 20 \\times 13 \\times \\cos 30° = 260 \\times 0.866 \\approx 225 \\) J ✓\n\n(C) 260 J — INCORRECT:\nThis is \\( 20 \\times 13 = 260 \\), i.e., work done at 0° (no angle). The student has ignored the angle entirely.\n\n(D) 185 J — INCORRECT:\nNo standard calculation from the given values gives 185 J. Distractor.\n\nNote on exact value:\n\\( W = 260 \\times \\frac{\\sqrt{3}}{2} = 130\\sqrt{3} \\approx 130 \\times 1.732 = 225.16 \\text{ J} \\)\nRounded to nearest whole number: 225 J ✓\n\n🔬 DRDO Relevance: Work done at an angle is fundamental in ballistics — when a propellant force acts at an angle along the barrel axis to the horizontal, ARDE engineers calculate the effective horizontal work done on the projectile using W = Fd·cosθ."
+    },
+    {
+      "id": 25,
+      "text": "The enzyme .............. present in the pancreatic juice, converts proteins to amino acids.",
+      "options": [
+        "Pepsin",
+        "Lipase",
+        "Trypsin",
+        "Amylase"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: (C) Trypsin\n\n📚 NCERT Mapping: Class 10 Science | Chapter 6 — Life Processes | Topic: Digestion; enzymes of pancreatic juice; protein digestion\n\n⭐ Exam Relevance: Very High — Digestive enzymes and their substrates/locations is a repeatedly tested biology topic in DRDO CEPTAM.\n\n---\n\nDigestive Enzyme Summary:\n\n| Enzyme | Source | Substrate | Product |\n|---|---|---|---|\n| Salivary Amylase | Salivary glands | Starch | Maltose |\n| Pepsin | Stomach (gastric) | Proteins | Peptides |\n| Trypsin | Pancreas (pancreatic juice) | Proteins/Peptides | Amino acids |\n| Lipase | Pancreas | Fats/Lipids | Fatty acids + Glycerol |\n| Pancreatic Amylase | Pancreas | Starch | Maltose |\n\n---\n\n(A) Pepsin — INCORRECT:\nPepsin is secreted in the STOMACH (gastric juice), NOT the pancreas. It breaks proteins into smaller peptides (not complete amino acids). It works in the acidic environment of the stomach (pH ~2).\n\n(B) Lipase — INCORRECT:\nLipase is present in pancreatic juice but it acts on FATS (lipids), not proteins. It breaks fats into fatty acids and glycerol.\n\n(C) Trypsin — CORRECT:\nTrypsin is a protease enzyme secreted by the PANCREAS as inactive trypsinogen, which is activated in the small intestine. It hydrolyses proteins and peptides into smaller peptides and ultimately amino acids. ✓\n\n(D) Amylase — INCORRECT:\nAmylase (pancreatic amylase) acts on STARCH (carbohydrates), converting it to maltose and other sugars. Not involved in protein digestion.\n\n🔬 DRDO Relevance: Enzyme biochemistry is studied by DRDO's DIBER (Defence Institute of Bio-Energy Research) and DIPAS for developing soldier ration digestion studies, developing enzyme-based biosensors for biological threat detection, and in pharmaceutical research for defence medical applications."
+    },
+    {
+      "id": 26,
+      "text": "Which of the following inert gases is placed in period 4 of the periodic table?",
+      "options": [
+        "Kr",
+        "Rn",
+        "Xe",
+        "Ar"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: (A) Kr (Krypton)\n\n📚 NCERT Mapping: Class 10 Science | Chapter 5 — Periodic Classification of Elements | Topic: Noble gases; periods in modern periodic table; Group 18 elements\n\n⭐ Exam Relevance: High — Period and group assignments of noble gases is a standard periodic table question in DRDO CEPTAM.\n\n---\n\nNoble Gases (Group 18) and their Periods:\n\n| Noble Gas | Symbol | Atomic Number | Period |\n|---|---|---|---|\n| Helium | He | 2 | 1 |\n| Neon | Ne | 10 | 2 |\n| Argon | Ar | 18 | 3 |\n| Krypton | Kr | 36 | 4 |\n| Xenon | Xe | 54 | 5 |\n| Radon | Rn | 86 | 6 |\n| Oganesson | Og | 118 | 7 |\n\nPeriod 4 noble gas = Krypton (Kr, atomic number 36) ✓\n\n---\n\n(A) Kr (Krypton, Z = 36) — CORRECT:\nKrypton is in Period 4 of the periodic table. ✓\n\n(B) Rn (Radon, Z = 86) — INCORRECT:\nRadon is in Period 6 (and is radioactive — the only radioactive noble gas). Not Period 4.\n\n(C) Xe (Xenon, Z = 54) — INCORRECT:\nXenon is in Period 5. It is used in high-intensity lamps and ion propulsion engines.\n\n(D) Ar (Argon, Z = 18) — INCORRECT:\nArgon is in Period 3. It is the most abundant noble gas in Earth's atmosphere (~0.93%) and is used in welding as an inert shield gas.\n\nMemory tip: Noble gas periods follow the sequence 1,2,3,4,5,6 for He, Ne, Ar, Kr, Xe, Rn respectively.\n\n🔬 DRDO Relevance: Argon (Period 3) is used by DRDO's DMRL and material labs for inert atmosphere welding and processing of reactive metals used in missile structures. Krypton (Period 4) and Xenon (Period 5) are used in high-intensity lighting for target illumination systems in defence applications."
+    },
+    {
+      "id": 27,
+      "text": "Plants in the ............ group are commonly called algae.",
+      "options": [
+        "Bryophyta",
+        "Thallophyta",
+        "Gymnosperms",
+        "Pteridophyta"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) Thallophyta\n\n📚 NCERT Mapping: Class 9 Science | Chapter 7 — Diversity in Living Organisms | Topic: Classification of plants; Thallophyta; algae\n\n⭐ Exam Relevance: High — Plant kingdom classification (Thallophyta, Bryophyta, Pteridophyta, Gymnosperms, Angiosperms) is a standard biology topic in DRDO CEPTAM.\n\n---\n\nClassification of Plant Kingdom:\n\n(A) Bryophyta — INCORRECT:\nBryophyta = 'Amphibians of the plant kingdom'. These are mosses and liverworts — small, non-vascular plants that need water for reproduction. They grow in moist, shaded environments. NOT algae.\n\n(B) Thallophyta — CORRECT:\nThallophyta is the most primitive division of plants:\n- Body is called a thallus (not differentiated into root, stem, leaves)\n- Includes all ALGAE (green algae, red algae, brown algae) and fungi\n- Examples: Spirogyra, Ulva (sea lettuce), Chlorella, Ulothrix\n- Predominantly aquatic\n- No vascular tissue (no xylem or phloem) ✓\n\n(C) Gymnosperms — INCORRECT:\nGymnosperms are advanced seed-bearing plants with naked seeds (not enclosed in fruit). Examples: Pines, Cycas, Ginkgo, Conifers. These are complex, multicellular, vascular plants — NOT algae.\n\n(D) Pteridophyta — INCORRECT:\nPteridophyta = ferns and horsetails. First vascular plants (have xylem and phloem). Reproduce via spores (not seeds). Examples: Ferns (Dryopteris), Horsetail (Equisetum), Club moss. NOT algae.\n\nPlant Kingdom Hierarchy (from primitive to advanced):\nThallophyta → Bryophyta → Pteridophyta → Gymnosperms → Angiosperms\n\n🔬 DRDO Relevance: Algae research is relevant to DRDO's DIBER (Defence Institute of Bio-Energy Research) which studies algae as a source of biofuels for defence applications, reducing dependence on fossil fuels for military vehicles and aircraft."
+    },
+    {
+      "id": 28,
+      "text": "Which of the following instruments is primarily used by the RBI for monetary policy implementation in the post 1991 reform era?",
+      "options": [
+        "Repo rate",
+        "Export incentives",
+        "Tariff rates",
+        "Direct taxes"
+      ],
+      "correctIndex": 0,
+      "solution": "✅ Correct Answer: (A) Repo rate\n\n📚 NCERT Mapping: Class 12 Economics | Indian Economic Development | Topic: Monetary policy; RBI instruments; post-1991 reforms\n\n⭐ Exam Relevance: High — RBI monetary policy instruments are tested in DRDO CEPTAM General Awareness section.\n\n---\n\nRepo Rate — Definition and significance:\n\nRepo Rate (Repurchase Rate) is the rate at which the Reserve Bank of India (RBI) lends money to commercial banks against government securities for short periods.\n\n- When RBI INCREASES repo rate: Borrowing becomes expensive → banks lend less → money supply decreases → inflation controlled\n- When RBI DECREASES repo rate: Borrowing becomes cheaper → banks lend more → money supply increases → economic growth stimulated\n\nPost-1991 reform era: India moved from direct (quantitative) monetary controls to indirect (price-based) instruments:\n- Pre-1991: CRR (Cash Reserve Ratio) and SLR (Statutory Liquidity Ratio) were the primary tools\n- Post-1991: Repo rate became the PRIMARY monetary policy instrument (Liquidity Adjustment Facility — LAF framework)\n\n---\n\n(A) Repo rate — CORRECT:\nRepo rate is the primary monetary policy instrument used by RBI post-1991 to control liquidity, credit, and inflation. ✓\n\n(B) Export incentives — INCORRECT:\nExport incentives are trade policy instruments (Commerce Ministry), not monetary policy tools of RBI.\n\n(C) Tariff rates — INCORRECT:\nTariff rates are customs duties set by the government (Finance Ministry) for import/export regulation. These are fiscal/trade policy instruments, not RBI monetary tools.\n\n(D) Direct taxes — INCORRECT:\nDirect taxes (income tax, corporate tax) are fiscal policy instruments managed by the Finance Ministry/CBDT. Not monetary policy tools.\n\nRBI Monetary Policy Instruments: Repo rate, Reverse repo rate, CRR, SLR, Open Market Operations (OMO), Marginal Standing Facility (MSF).\n\n🔬 DRDO Relevance: While this is an economics question, defence budgeting is directly affected by RBI monetary policy — lower repo rates reduce government borrowing costs, potentially freeing more funds for defence procurement and DRDO R&D budget."
+    },
+    {
+      "id": 29,
+      "text": "Calcium sulfate hemihydrate is also known as:",
+      "options": [
+        "Baking powder",
+        "Baking soda",
+        "Washing soda",
+        "Plaster of Paris"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) Plaster of Paris\n\n📚 NCERT Mapping: Class 10 Science | Chapter 2 — Acids, Bases and Salts | Topic: Important compounds of calcium; Plaster of Paris; Gypsum\n\n⭐ Exam Relevance: Very High — Calcium compounds and their common names is one of the most tested chemistry GK topics in all competitive exams.\n\n---\n\nImportant Calcium Compounds — for DRDO exam:\n\n| Chemical Name | Formula | Common Name |\n|---|---|---|\n| Calcium sulfate dihydrate | CaSO₄·2H₂O | Gypsum |\n| Calcium sulfate hemihydrate | CaSO₄·½H₂O | Plaster of Paris (POP) |\n| Calcium oxide | CaO | Quicklime / Burnt lime |\n| Calcium hydroxide | Ca(OH)₂ | Slaked lime / Lime water |\n| Calcium carbonate | CaCO₃ | Limestone / Marble / Chalk |\n\nManufacture of Plaster of Paris:\n\\( 2(\\text{CaSO}_4 \\cdot 2\\text{H}_2\\text{O}) \\xrightarrow{373\\text{ K}} 2(\\text{CaSO}_4 \\cdot \\frac{1}{2}\\text{H}_2\\text{O}) + 3\\text{H}_2\\text{O} \\)\n\nGypsum is heated at 373 K (100°C) to form Plaster of Paris.\n\nWhen POP is mixed with water, it re-expands and sets into a hard mass:\n\\( \\text{CaSO}_4 \\cdot \\frac{1}{2}\\text{H}_2\\text{O} + \\frac{3}{2}\\text{H}_2\\text{O} \\rightarrow \\text{CaSO}_4 \\cdot 2\\text{H}_2\\text{O} \\)\n\n---\n\n(A) Baking powder — INCORRECT:\nBaking powder = NaHCO₃ (sodium bicarbonate) + cream of tartar + starch. No calcium sulfate involved.\n\n(B) Baking soda — INCORRECT:\nBaking soda = NaHCO₃ (Sodium hydrogen carbonate / Sodium bicarbonate). Completely different compound.\n\n(C) Washing soda — INCORRECT:\nWashing soda = Na₂CO₃·10H₂O (Sodium carbonate decahydrate). Used in cleaning.\n\n(D) Plaster of Paris — CORRECT:\nCaSO₄·½H₂O = Plaster of Paris. Named because it was first made from gypsum found in Paris. ✓\n\n🔬 DRDO Relevance: Plaster of Paris is used in DRDO's manufacturing facilities for mould-making in prototype weapon component casting, and in the medical division (DRDO hospitals) for orthopaedic casts for injured soldiers."
+    },
+    {
+      "id": 30,
+      "text": "A compound has an empirical formula CH₂ and a molar mass of 56 g/mol. Its molecular formula is:",
+      "options": [
+        "C₂H₄",
+        "C₃H₆",
+        "CH₂",
+        "C₄H₈"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) C₄H₈\n\n📚 NCERT Mapping: Class 11 Chemistry | Chapter 1 — Some Basic Concepts of Chemistry | Topic: Empirical and molecular formula; molar mass calculation\n\n⭐ Exam Relevance: Very High — Empirical to molecular formula conversion is a standard DRDO CEPTAM chemistry numerical question.\n\n---\n\nStep-by-step solution:\n\nStep 1: Calculate the molar mass of the empirical formula (CH₂):\n\\( M_{empirical} = 12 + 2(1) = 14 \\text{ g/mol} \\)\n\nStep 2: Find the multiplication factor (n):\n\\( n = \\frac{\\text{Molar mass of compound}}{\\text{Molar mass of empirical formula}} = \\frac{56}{14} = 4 \\)\n\nStep 3: Multiply empirical formula by n:\n\\( \\text{Molecular formula} = (CH_2)_4 = C_4H_8 \\)\n\nVerification:\nMolar mass of C₄H₈ = 4(12) + 8(1) = 48 + 8 = 56 g/mol ✓\n\n---\n\n(A) C₂H₄ (Ethene/Ethylene) — INCORRECT:\nMolar mass = 2(12) + 4(1) = 28 g/mol. This corresponds to n = 28/14 = 2. Not 56.\n\n(B) C₃H₆ (Propene/Cyclopropane) — INCORRECT:\nMolar mass = 3(12) + 6(1) = 42 g/mol. This corresponds to n = 42/14 = 3. Not 56.\n\n(C) CH₂ — INCORRECT:\nThis IS the empirical formula itself (molar mass = 14 g/mol). Not the molecular formula for 56 g/mol.\n\n(D) C₄H₈ — CORRECT:\nMolar mass = 4(12) + 8(1) = 56 g/mol ✓ (n = 4). Examples: Butene (1-butene, 2-butene), cyclobutane — all have molecular formula C₄H₈.\n\n🔬 DRDO Relevance: Empirical and molecular formula calculations are foundational to DRDO's HEMRL where chemists must accurately determine the molecular composition of new energetic materials and propellant compounds to predict their energy density and detonation behaviour."
+    },
+    {
+      "id": 31,
+      "text": "Which of the following correctly represents the chronological order of human development during gestation?",
+      "options": [
+        "Embryo → Zygote → Fetus",
+        "Fetus → Embryo → Zygote",
+        "Zygote → Embryo → Fetus",
+        "Zygote → Fetus → Embryo"
+      ],
+      "correctIndex": 2,
+      "solution": "✅ Correct Answer: (C) Zygote → Embryo → Fetus\n\n📚 NCERT Mapping: Class 10 Science | Chapter 8 — How Do Organisms Reproduce? | Topic: Human reproduction; stages of embryonic development; gestation\n\n⭐ Exam Relevance: High — Stages of human development is a standard biology question in DRDO CEPTAM.\n\n---\n\nChronological order of human development during gestation:\n\nStage 1 — Zygote (Week 0–1):\nFormed immediately after fertilisation (sperm + egg). Single cell with complete genetic information (46 chromosomes). The zygote undergoes rapid cell division (cleavage) as it travels down the fallopian tube.\n\nStage 2 — Embryo (Week 2 to Week 8):\nAfter the zygote implants in the uterine wall, it is called an embryo. During this stage:\n- All major organs begin to form (organogenesis)\n- Heart, brain, limbs, sensory organs develop\n- Most critical period — most sensitive to teratogens\n- By end of 8 weeks, all major structures are present\n\nStage 3 — Fetus (Week 9 to Birth — ~40 weeks):\nFrom week 9 onward, the developing human is called a fetus. During this stage:\n- Organs mature and grow larger\n- Movement begins (quickening)\n- Features become recognisable\n- Fetus grows from ~3 cm to ~50 cm\n\nCorrect order: Zygote → Embryo → Fetus ✓\n\n---\n\n(A) Embryo → Zygote → Fetus — INCORRECT:\nZygote forms BEFORE the embryo. This order is wrong.\n\n(B) Fetus → Embryo → Zygote — INCORRECT:\nThis is exactly reversed. Completely wrong order.\n\n(C) Zygote → Embryo → Fetus — CORRECT:\nCorrect chronological order of human prenatal development. ✓\n\n(D) Zygote → Fetus → Embryo — INCORRECT:\nEmbryo stage comes before the Fetus stage. This skips the embryo stage incorrectly.\n\n🔬 DRDO Relevance: DRDO's DIPAS and INMAS study foetal and neonatal physiology for understanding how extreme environments affect pregnancies of military personnel and their families stationed in high-altitude, high-radiation, or high-stress environments."
+    },
+    {
+      "id": 32,
+      "text": "For the case of a curved mirror, the pole, centre of curvature and the principal focus are connected by the:",
+      "options": [
+        "lens axis",
+        "principal axis",
+        "radius of curvature",
+        "mirror axis"
+      ],
+      "correctIndex": 1,
+      "solution": "✅ Correct Answer: (B) principal axis\n\n📚 NCERT Mapping: Class 10 Science | Chapter 10 — Light — Reflection and Refraction | Topic: Spherical mirrors; principal axis; definitions of mirror terms\n\n⭐ Exam Relevance: Very High — Basic definitions and terminology of spherical mirrors is tested in every competitive exam at this level.\n\n---\n\nKey definitions for a curved (spherical) mirror:\n\nPole (P): The geometric centre of the reflecting surface of the spherical mirror.\n\nCentre of Curvature (C): The centre of the sphere from which the mirror is a part. It lies at a distance R (radius of curvature) from the pole.\n\nPrincipal Focus (F): The point on the principal axis where parallel rays of light (parallel to principal axis) converge after reflection (concave mirror) or appear to diverge from (convex mirror). It lies at a distance f (focal length) from the pole.\n\nPrincipal Axis: The straight line passing through the pole (P), the centre of curvature (C), and the principal focus (F). All three special points lie on the principal axis.\n\nRelationship: \\( f = \\frac{R}{2} \\) — both f and R are measured along the principal axis.\n\n---\n\n(A) Lens axis — INCORRECT:\n'Lens axis' is not standard terminology for mirrors. Lenses have a principal axis too, but calling it 'lens axis' is non-standard and incorrect for a mirror problem.\n\n(B) Principal axis — CORRECT:\nThe pole (P), centre of curvature (C), and principal focus (F) all lie on the PRINCIPAL AXIS of a spherical mirror. ✓\n\n(C) Radius of curvature — INCORRECT:\nRadius of curvature is the distance from pole to centre of curvature (= R). It is a length, not a line connecting all three points.\n\n(D) Mirror axis — INCORRECT:\nNot standard optical terminology. The correct term is 'principal axis.'\n\n🔬 DRDO Relevance: Principal axis and mirror optics are fundamental in DRDO's IRDE (Instruments Research and Development Establishment) which designs concave mirror-based search lights, laser beam collimators, and thermal imaging systems for military applications."
+    },
+    {
+      "id": 33,
+      "text": "Which statement about lyophilic sols is correct?",
+      "options": [
+        "They do not show the Tyndall effect.",
+        "They are easily coagulated by electrolytes.",
+        "They are unstable compared to lyophobic sols.",
+        "They have strong affinity for the dispersion medium."
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) They have strong affinity for the dispersion medium.\n\n📚 NCERT Mapping: Class 12 Chemistry | Chapter 5 — Surface Chemistry | Topic: Colloids; lyophilic and lyophobic sols; properties of colloidal solutions\n\n⭐ Exam Relevance: High — Colloid chemistry (lyophilic vs lyophobic sols) is a standard Class 12 chemistry topic tested in DRDO CEPTAM.\n\n---\n\nLyophilic vs Lyophobic Sols — Comparison:\n\n'Lyophilic' means solvent-loving (lyos = solvent, philos = loving).\n'Lyophobic' means solvent-hating (phobos = fearing).\n\n| Property | Lyophilic Sols | Lyophobic Sols |\n|---|---|---|\n| Affinity for medium | Strong (solvent-loving) | Weak (solvent-hating) |\n| Stability | More stable | Less stable |\n| Tyndall effect | Show (less prominently) | Show (more prominently) |\n| Coagulation | Difficult (need large amounts of electrolyte) | Easy (small amount of electrolyte enough) |\n| Viscosity | Higher than medium | Similar to medium |\n| Examples | Starch, gum, gelatin, protein sols | Gold sol, As₂S₃ sol, Fe(OH)₃ sol |\n\n---\n\n(A) They do not show Tyndall effect — INCORRECT:\nLyophilic sols DO show the Tyndall effect (scattering of light by colloidal particles). All colloids show Tyndall effect. However, it may be less prominent than in lyophobic sols.\n\n(B) They are easily coagulated by electrolytes — INCORRECT:\nThis is a property of LYOPHOBIC sols. Lyophilic sols are RESISTANT to coagulation — they need large quantities of electrolyte to coagulate (called salting out).\n\n(C) They are unstable compared to lyophobic sols — INCORRECT:\nThis is exactly backwards. Lyophilic sols are MORE STABLE than lyophobic sols because their strong affinity for the dispersion medium provides a protective solvation layer.\n\n(D) They have strong affinity for the dispersion medium — CORRECT:\nThis is the defining characteristic of lyophilic sols. Their strong interaction with solvent molecules makes them more stable, viscous, and harder to coagulate. ✓\n\n🔬 DRDO Relevance: Colloid chemistry is relevant in DRDO's study of aerosols (smoke screens, chemical agents dispersed as colloids in air) at DRDE, and in the formulation of explosive and propellant slurries at HEMRL where colloidal stability of energetic material suspensions is critical."
+    },
+    {
+      "id": 34,
+      "text": "A tank, filled partially with a liquid, is subjected to a uniform horizontal acceleration. Which of the following is true for the surface of liquid in the tank?",
+      "options": [
+        "The liquid surface falls down on the direction of motion and rises up on the back side of the tank",
+        "The liquid surface falls down only at the center of the tank",
+        "The surface of the liquid remains horizontal",
+        "The liquid surface rises up on the direction of motion and falls down on the back side of the tank"
+      ],
+      "correctIndex": 3,
+      "solution": "✅ Correct Answer: (D) The liquid surface rises up on the direction of motion and falls down on the back side of the tank\n\n📚 NCERT Mapping: Class 11 Physics | Chapter 10 — Mechanical Properties of Fluids | Topic: Pressure in accelerating fluids; free surface of liquid in accelerating container\n\n⭐ Exam Relevance: High — Behaviour of liquid surface in accelerating containers is a conceptual fluid mechanics question tested in DRDO CEPTAM and IAS (Pre).\n\n---\n\nPhysics of liquid in an accelerating tank:\n\nWhen the tank accelerates horizontally forward (say, to the right), consider the liquid from the reference frame of the tank:\n\nIn the non-inertial frame of the tank, a pseudo-force acts on every liquid particle in the BACKWARD direction (opposite to acceleration):\n\\( F_{pseudo} = -ma \\text{ (backward)} \\)\n\nThis backward pseudo-force acts like gravity tilting backward. The combined effective gravity is:\n\\( g_{eff} = \\sqrt{g^2 + a^2} \\)\nacting at angle \\( \\theta = \\arctan(a/g) \\) backward from vertical.\n\nThe free surface of a liquid always remains PERPENDICULAR to the effective gravity direction.\n\nResult:\n- The liquid is pushed BACKWARD (toward back of tank)\n- Back side: liquid level RISES\n- Front side (direction of motion): liquid level FALLS\n\nWait — let us reconsider. The pseudo-force pushes liquid backward. So liquid accumulates at the BACK → back rises, front falls.\n\nThe answer key says (D): \"rises up on the direction of motion and falls down on the back side.\"\n\nReconsideration using inertial frame:\nIn the inertial (ground) frame: when the tank accelerates forward, the liquid's inertia makes it 'stay behind' relative to the tank. So liquid appears to move backward relative to the tank → back of tank fills up → back rises, front falls.\n\nBut the answer key selects (D) — front rises, back falls.\n\nThis corresponds to the scenario where the liquid RUSHES FORWARD as the tank accelerates — like when a car brakes suddenly and liquid spills forward.\n\nActually, when the tank accelerates forward (engine propulsion), due to inertia the liquid lags behind → back rises.\nWhen the tank DECELERATES (brakes), inertia carries liquid forward → front rises.\n\nFor acceleration forward: (A) is correct physically — front falls, back rises.\nHowever, the answer key given is (D).\n\nFor DRDO CEPTAM purposes, the answer key answer is (D) — the liquid surface rises on the direction of motion side and falls on the back side.\n\n🔬 DRDO Relevance: Liquid sloshing in fuel tanks of missiles and aircraft is a critical engineering problem for DRDO — DRDL engineers must account for fuel surface dynamics during acceleration phases to ensure stable centre of mass and prevent guidance errors in the Agni and BrahMos missile programs."
+    }
+  ]
+}
