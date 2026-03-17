@@ -703,9 +703,22 @@
                 if (showSolution) {
                     solBox.style.display = 'block';
 
-                    // Render solution text
-                    document.getElementById('sol-text').innerHTML =
-                        self.formatText(q.solution || "No solution.");
+                    // Render solution text + apply KaTeX
+                    const solTextDiv = document.getElementById('sol-text');
+                    solTextDiv.innerHTML = self.formatText(q.solution || "No solution.");
+
+                    // Important: Tell KaTeX to render math inside the solution area
+                    if (window.renderMathInElement) {
+                        renderMathInElement(solTextDiv, {
+                            delimiters: [
+                                { left: "$$", right: "$$", display: false },   // inline
+                                { left: "\\(", right: "\\)", display: false }, // inline
+                                { left: "\\[", right: "\\]", display: true }   // display/block
+                            ],
+                            throwOnError: false,
+                            strict: "ignore"
+                        });
+                    }
 
                     // Render solution image ONLY in solution
                     var solImgBox = document.getElementById('sol-image');
