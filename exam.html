@@ -695,13 +695,10 @@
                         ${text}
                     </div>
                 `;
-                    box.appendChild(row);
-                });
-
-                // After all options are inserted → render math in the whole options container
-                const optionsBox = document.getElementById('options-box');
-                if (optionsBox && window.renderMathInElement) {
-                    renderMathInElement(optionsBox, {
+                // Apply KaTeX rendering to this option's text container
+                const optionTextDiv = row.querySelector('div:last-child');
+                if (optionTextDiv && window.renderMathInElement) {
+                    renderMathInElement(optionTextDiv, {
                         delimiters: [
                             { left: "$$", right: "$$", display: false },
                             { left: "\\(", right: "\\)", display: false },
@@ -711,6 +708,8 @@
                         strict: "ignore"
                     });
                 }
+                    box.appendChild(row);
+                });
 
                 var solBox = document.getElementById('solution-box');
 
