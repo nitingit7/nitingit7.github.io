@@ -26,6 +26,7 @@ var GITHUB_FILES = {
         { name: "DRDO PYQ 14 Nov 2022 Shift 3", tags: "DRDO PYQ", questions: 120, time: 96, marks: 120, file: BASE_URL + "tests/DRDO/Full_Test/FT001.json" },
         { name: "[DRDO] General Science Mock Test 1", tags: "DRDO PYQ", questions: 34, time: 15, marks: 34, file: BASE_URL + "tests/DRDO/Full_Test/GN001.json" },
         { name: "[DRDO] English Mock Test 1", tags: "DRDO PYQ", questions: 25, time: 20, marks: 25, file: BASE_URL + "tests/DRDO/Full_Test/ET001.json" },
+        { name: "[DRDO] English Mock Test 1 Copy", tags: "DRDO PYQ", questions: 25, time: 20, marks: 25, file: BASE_URL + "tests/DRDO/Full_Test/GN001_Copy.json" },
     ],
 
     'quant_sectional': [
