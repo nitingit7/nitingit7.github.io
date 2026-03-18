@@ -1,0 +1,211 @@
+{
+  "title": "[DRDO]English Mock Test - PYQ #ET001",
+  "timeLimit": 20,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Q.96 Fill in the blank with an appropriate article:\nDo you remember the saying: Even the darkest cloud has ________ silver lining?",
+      "options": ["an", "the", "no article", "a"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) a\n\nTopic: Articles (a, an, the)\nExam Relevance: Very High\n\n---\n\nRule for 'a' vs 'an':\n- Use 'a' before words beginning with a CONSONANT sound.\n- Use 'an' before words beginning with a VOWEL sound.\n\n'Silver' begins with the consonant sound /s/, so we use 'a'.\nCorrect phrase: 'a silver lining'\n\n'Every cloud has a silver lining' is a well-known proverb meaning there is something positive even in difficult situations.\n\n---\n\n(A) an — INCORRECT: 'An' is for vowel sounds. 'Silver' starts with /s/ (consonant), so 'an' is wrong.\n\n(B) the — INCORRECT: 'The' (definite article) is for specific, already-known nouns. In this proverb, 'silver lining' is being introduced generally, so an indefinite article is needed.\n\n(C) no article — INCORRECT: 'Silver lining' is a singular countable noun. Singular countable nouns always need 'a' or 'an'.\n\n(D) a — CORRECT: 'Silver' starts with consonant /s', so 'a' is correct. 'A silver lining' is the standard phrase in this proverb."
+    },
+    {
+      "id": 2,
+      "text": "Q.97 Select the most appropriate ANTONYM of the given word.\nPraise",
+      "options": ["Improve", "Appreciate", "Condemn", "Command"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: (C) Condemn\n\nTopic: Antonyms — Vocabulary\nExam Relevance: Very High\n\n---\n\nPraise (verb/noun): To express warm approval or admiration; to commend someone.\nExample: 'The teacher praised the student for his excellent work.'\n\nAntonym = opposite meaning\n\nCondemn (verb): To express complete disapproval of; to criticise severely.\nExample: 'The judge condemned the criminal's actions.'\n\n---\n\n(A) Improve — INCORRECT: 'Improve' means to make better. Unrelated to praise/disapproval. Not an antonym.\n\n(B) Appreciate — INCORRECT: 'Appreciate' means to recognise the full worth of something. It is a SYNONYM of praise, not an antonym.\n\n(C) Condemn — CORRECT: Direct opposite of praise. Praise = express approval; Condemn = express strong disapproval.\n\n(D) Command — INCORRECT: 'Command' means to give an authoritative order. Related to authority, not to the approval/disapproval axis."
+    },
+    {
+      "id": 3,
+      "text": "Q.98 Select the most appropriate synonym of the given word.\nImpertinent",
+      "options": ["Impolite", "Utilitarian", "Arrogant", "Important"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: (A) Impolite\n\nTopic: Synonyms — Vocabulary\nExam Relevance: Very High\n\n---\n\nImpertinent (adjective): Not showing proper respect; rude or insolent.\nExample: 'His impertinent reply shocked the interviewer.'\n\nSynonym = same or similar meaning\n\nImpolite (adjective): Not having good manners; rude.\nBoth 'impertinent' and 'impolite' share the core meaning of being rude and disrespectful.\n\n---\n\n(A) Impolite — CORRECT: Both mean rude/disrespectful. Closest synonym.\n\n(B) Utilitarian — INCORRECT: Means focused on practical usefulness. Completely unrelated to impertinent.\n\n(C) Arrogant — INCORRECT: Means having an exaggerated sense of one's own importance. Not a direct synonym of impertinent.\n\n(D) Important — INCORRECT: A visual trap playing on similarity to 'impertinent'. Meanings are completely different — a classic vocabulary trick."
+    },
+    {
+      "id": 4,
+      "text": "Q.99 Select the most appropriate idiom or phrase to complete the given sentence.\nWhen my father lost his job, we had to live on my mother's earnings. Then we really started to _________.",
+      "options": ["put two and two together", "keep the ball rolling", "feel the pinch", "measure half"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: (C) feel the pinch\n\nTopic: Idioms and Phrases — Vocabulary\nExam Relevance: Very High\n\n---\n\nContext: The sentence describes a family living on one income after father lost his job — a situation of financial hardship.\n\n'Feel the pinch' = to experience financial difficulty or hardship.\nExample: 'Many families are feeling the pinch due to rising inflation.'\n\nPerfectly fits the context of financial struggle.\n\n---\n\n(A) Put two and two together — INCORRECT: Means to draw an obvious conclusion from evidence. About logical deduction, not financial hardship.\n\n(B) Keep the ball rolling — INCORRECT: Means to maintain momentum. About sustaining progress, not financial struggle.\n\n(C) Feel the pinch — CORRECT: Perfectly describes the financial difficulty faced by the family after the father lost his job.\n\n(D) Measure half — INCORRECT: Not a standard English idiom. Has no established idiomatic meaning."
+    },
+    {
+      "id": 5,
+      "text": "Q.100 Find the meaning of the highlighted idiom in the given options:\nUnless we pull together as a nation, we can't make it progress at a fast pace.",
+      "options": ["pull the rope", "labour hard", "maintain peace", "work unitedly"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) work unitedly\n\nTopic: Idioms and Phrases — Vocabulary\nExam Relevance: Very High\n\n---\n\n'Pull together' (idiom): To cooperate; to work as a team in a unified manner toward a common goal.\nExample: 'The team pulled together to complete the project on time.'\n\nContext: 'Unless we pull together as a nation' = unless we work collectively and cooperatively.\n\n---\n\n(A) Pull the rope — INCORRECT: Literal interpretation of 'pull'. Idioms almost never mean what they say literally.\n\n(B) Labour hard — INCORRECT: Means working with great effort, but does not capture the 'unified/together' aspect. You can labour hard individually; 'pull together' requires collective action.\n\n(C) Maintain peace — INCORRECT: Means to keep order and avoid conflict. Unrelated to cooperative effort.\n\n(D) Work unitedly — CORRECT: 'Pull together' precisely means to work unitedly and cooperatively. The national progress context confirms the collective meaning."
+    },
+    {
+      "id": 6,
+      "text": "Q.101 Select the correct option that converts the given sentence from active to passive voice.\n\"Historians had been analyzing the social impact of the industrial revolution long before the discovery of primary labor records.\"",
+      "options": [
+        "The social impact of the industrial revolution had been analyzed by historians long before the discovery of primary labor records.",
+        "The social impact of the industrial revolution was analyzed by historians long before the discovery of primary labor records.",
+        "The social impact of the industrial revolution had been being analyzed by historians long before the discovery of primary labor records.",
+        "The social impact of the industrial revolution has been analyzed by historians long before the discovery of primary labor records."
+      ],
+      "correctIndex": 2,
+      "solution": "Correct Answer: (C) The social impact of the industrial revolution had been being analyzed by historians long before the discovery of primary labor records.\n\nTopic: Active and Passive Voice — Grammar\nExam Relevance: Very High\n\n---\n\nStep 1 — Identify the tense:\nActive: 'Historians had been analyzing...'\nTense: Past Perfect Continuous (had been + verb-ing)\n\nStep 2 — Rule for Past Perfect Continuous -> Passive:\nActive: Subject + had been + V-ing + Object\nPassive: Object + had been being + V3 + by + Subject\n\nActive: Historians | had been analyzing | the social impact...\nPassive: The social impact... | had been being analyzed | by historians...\n\n---\n\n(A) 'had been analyzed' — INCORRECT: Passive of Past Perfect SIMPLE, not Continuous. Loses the continuous aspect.\n\n(B) 'was analyzed' — INCORRECT: Simple Past Passive — completely different tense from Past Perfect Continuous.\n\n(C) 'had been being analyzed' — CORRECT:\n- 'had been being' = correct passive auxiliary for Past Perfect Continuous\n- 'analyzed' = past participle (V3)\nCorrectly preserves the Past Perfect Continuous tense in passive form.\n\n(D) 'has been analyzed' — INCORRECT: Present Perfect Passive — wrong tense. The original is in the past."
+    },
+    {
+      "id": 7,
+      "text": "Q.102 Select the most appropriate synonym of the given word.\nDilettante",
+      "options": ["Maestro", "Actor", "Addict", "Amateur"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) Amateur\n\nTopic: Synonyms — Advanced Vocabulary\nExam Relevance: High\n\n---\n\nDilettante (noun): A person who cultivates an area of interest such as art, music, or science without real commitment or professional knowledge; a dabbler; someone without deep expertise.\n\nSynonym = Amateur\n\nAmateur (noun/adjective): A person who pursues an activity without professional skill or serious training; someone who does something as a hobby rather than professionally.\n\nBoth describe someone who lacks professional expertise or serious commitment.\n\n---\n\n(A) Maestro — INCORRECT: Maestro means a distinguished EXPERT — especially in music. This is actually an ANTONYM of dilettante.\n\n(B) Actor — INCORRECT: An actor describes a role/profession, not the level of expertise. Not a synonym of dilettante.\n\n(C) Addict — INCORRECT: Someone with compulsive dependence. Completely different from the casual, uncommitted connotation of dilettante.\n\n(D) Amateur — CORRECT: Both dilettante and amateur describe someone who engages in an activity without professional expertise. Closest synonym."
+    },
+    {
+      "id": 8,
+      "text": "Q.103 Parts of a sentence are given below in jumbled order. Arrange the parts in the correct order to form a meaningful sentence.\nIn the new millennium / essential / peace education / is / for human survival",
+      "options": [
+        "In the new millennium for human survival peace education is essential.",
+        "Essential peace education is in the new millennium for human survival.",
+        "Peace education for human survival is in the new millennium essential.",
+        "Peace education is essential for human survival in the new millennium."
+      ],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) Peace education is essential for human survival in the new millennium.\n\nTopic: Sentence Rearrangement — Grammar\nExam Relevance: Very High\n\n---\n\nIdentifying the role of each part:\n- 'Peace education' = Subject\n- 'is' = Main verb (linking verb)\n- 'essential' = Subject complement (adjective)\n- 'for human survival' = Prepositional phrase (explains WHY)\n- 'in the new millennium' = Adverbial phrase (WHEN)\n\nCorrect structure: Subject + Verb + Complement + Purpose + Time\n'Peace education | is | essential | for human survival | in the new millennium.'\n\n---\n\n(A) INCORRECT: Begins with two prepositional phrases before the subject. Awkward and unnatural.\n\n(B) INCORRECT: Places 'essential' as a modifier before the subject — changes the meaning, sounds unnatural.\n\n(C) INCORRECT: 'In the new millennium' comes before 'essential' — unnatural word order. Subject complement should immediately follow the linking verb 'is'.\n\n(D) CORRECT: Natural English structure: Subject + Verb + Complement + Purpose + Time."
+    },
+    {
+      "id": 9,
+      "text": "Q.104 Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\n\nA. There are numerous forms of violence in societal structure, but the most visible are domestic, sexual, and race and class based violence.\nB. The term 'violence' ranges from mental to physical conflict and wounds, which may result in war and armed conflicts.\nC. Sexual violence encompasses both, forced sexual interaction and unwanted sexual conduct, such as paraphilia and bullying.\nD. Violence is the use of verbal or physical force against oneself or another person, or other coercive activity against another person on the fear of being attacked.",
+      "options": ["DCAB", "DBAC", "ABDC", "BCAD"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: (B) DBAC\n\nTopic: Paragraph Arrangement — Reading Comprehension\nExam Relevance: High\n\n---\n\nLogical flow analysis:\n\nD: 'Violence is the use of verbal or physical force...'\nRole: OPENING / DEFINITION. Introduces and defines the topic. Must come FIRST.\n\nB: 'The term violence ranges from mental to physical conflict...'\nRole: ELABORATION on the definition. Expands the scope of violence from D. Comes SECOND.\n\nA: 'There are numerous forms of violence in societal structure...'\nRole: CATEGORISATION. Lists the types including 'sexual violence'. Must come AFTER defining and elaborating. Comes THIRD.\n\nC: 'Sexual violence encompasses both, forced sexual interaction...'\nRole: SPECIFIC DETAIL about one type (sexual violence) introduced in A. Must come AFTER A. Comes FOURTH.\n\nCorrect order: D -> B -> A -> C = DBAC\n\n---\n\n(A) DCAB — INCORRECT: Places C (detail about sexual violence) before A which introduces sexual violence as a category. C must follow A.\n\n(B) DBAC — CORRECT: Definition -> Elaboration -> Types listed -> One type detailed.\n\n(C) ABDC — INCORRECT: Starts with A (types) before defining violence in D. Cannot categorise before defining.\n\n(D) BCAD — INCORRECT: Starts with B (elaboration) before the definition D. Cannot elaborate before defining."
+    },
+    {
+      "id": 10,
+      "text": "Q.105 Select the most appropriate option to fill in the blank (1).\n\nEven today, Ganga Prasad Tiwari does not hesitate to juggle multiple jobs to support his family and the hockey dreams of his son, Sharda Nand Tiwari. Once a (1) ______ born of necessity, his night shifts as a driver and wedding guard have now become a routine he refuses to abandon.",
+      "options": ["compulsion", "indulgence", "whim", "luxury"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: (A) compulsion\n\nTopic: Reading Comprehension — Fill in the Blank (Vocabulary in Context)\nExam Relevance: High\n\n---\n\nContext: 'Once a (1) ______ born of necessity' — the blank describes what the night shifts WERE originally, before becoming routine.\n\n'Born of necessity' = it happened because there was no choice.\n\nCompulsion = something one is forced to do; a necessity; an irresistible obligation.\nThe night shifts started as a compulsion — forced on him by financial necessity.\n\n---\n\n(A) Compulsion — CORRECT: 'A compulsion born of necessity' = perfectly coherent. He was compelled by financial necessity, not choosing freely.\n\n(B) Indulgence — INCORRECT: 'Indulgence' means allowing oneself a pleasure. Working night shifts for survival is the opposite of indulgence. Contradicts 'necessity'.\n\n(C) Whim — INCORRECT: 'Whim' means a sudden impulsive desire. Something 'born of necessity' cannot be a whim — whims are freely chosen, not forced.\n\n(D) Luxury — INCORRECT: 'Luxury' means an inessential desirable experience. Something 'born of necessity' is by definition NOT a luxury. Direct contradiction."
+    },
+    {
+      "id": 11,
+      "text": "Q.106 Select the most appropriate option to fill in the blank (2).\n\n[Passage about Ganga Prasad Tiwari who juggles multiple jobs to support his son's hockey dreams.]\nHe does not hesitate to ______ himself for his family.",
+      "options": ["overexert", "flaunt", "isolate", "indulge"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: (A) overexert\n\nTopic: Reading Comprehension — Fill in the Blank (Vocabulary in Context)\nExam Relevance: High\n\n---\n\nContext: Ganga Prasad Tiwari juggles multiple demanding night jobs (driver, wedding guard) to support his family and his son's hockey dreams.\n\nBlank (2) describes the nature of his physical effort and dedication.\n\nOverexert = to exert oneself excessively; to push oneself too hard beyond normal limits.\n\n'He does not hesitate to overexert himself' = he willingly pushes himself beyond his limits for his family. Perfectly matches the theme of selfless dedication.\n\n---\n\n(A) Overexert — CORRECT: Perfectly describes working harder than what is normal. Fits the theme of a man pushing himself with multiple demanding night jobs.\n\n(B) Flaunt — INCORRECT: 'Flaunt' means to display ostentatiously. Tiwari works humbly out of necessity, not showing off. Contradicts the tone.\n\n(C) Isolate — INCORRECT: 'Isolate' means to set apart from others. The passage is about connection (supporting family and son's dreams), not isolation.\n\n(D) Indulge — INCORRECT: 'Indulge' means to allow oneself a pleasure. Working night shifts out of necessity is not indulgence. Wrong connotation entirely."
+    },
+    {
+      "id": 12,
+      "text": "Q.107 Select the most appropriate option to fill in the blank (3).\n\n[Passage about a father's sacrifices for his son's hockey career.]\nHis years of sacrifice and hard work were finally ______ when his son achieved success.",
+      "options": ["vindicated", "undermined", "eclipsed", "trivialized"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: (A) vindicated\n\nTopic: Reading Comprehension — Fill in the Blank (Vocabulary in Context)\nExam Relevance: High\n\n---\n\nVindicated = shown or proved to be right or justified; having one's sacrifices or beliefs proven worthwhile.\n\nContext: After years of hard work by Ganga Prasad Tiwari, his dedication is ultimately 'vindicated' — proven right and justified — by his son's success in hockey.\n\n'His years of sacrifice were finally vindicated when his son achieved success.' = his sacrifices were proven to have been worthwhile.\n\n---\n\n(A) Vindicated — CORRECT: Precisely captures the idea of sacrifices being proven worthwhile. Fits the positive outcome context.\n\n(B) Undermined — INCORRECT: 'Undermined' means weakened or damaged gradually. Suggests efforts were weakened — contradicts the positive narrative of success.\n\n(C) Eclipsed — INCORRECT: 'Eclipsed' means overshadowed or surpassed. Does not carry the specific meaning of justification or proving right.\n\n(D) Trivialized — INCORRECT: 'Trivialized' means made to seem less important. Diminishes Tiwari's efforts — directly contradicts the admiring tone."
+    },
+    {
+      "id": 13,
+      "text": "Q.108 Select the most appropriate option to fill in the blank (4).\n\n[Passage about a father's sacrifice for his son's hockey career.]\nThe story of Ganga Prasad Tiwari is a fitting ______ to every parent who sacrifices everything for their child's dreams.",
+      "options": ["tribute", "reprieve", "digression", "anomaly"],
+      "correctIndex": 0,
+      "solution": "Correct Answer: (A) tribute\n\nTopic: Reading Comprehension — Fill in the Blank (Vocabulary in Context)\nExam Relevance: High\n\n---\n\nTribute (noun): An act, statement, or gift intended to show gratitude, respect, or admiration; something that demonstrates the excellence or value of a person.\nExample: 'The film was a tribute to his father's sacrifices.'\n\nContext: 'The story of Tiwari is a fitting tribute to every parent who sacrifices everything for their child's dreams.' = the story honours and celebrates parental sacrifice.\n\nBlank (4) requires a word meaning an act of honour or recognition — 'tribute' fits perfectly.\n\n---\n\n(A) Tribute — CORRECT: The story as a tribute = an expression of honour and respect. Fits the admiring, celebratory tone.\n\n(B) Reprieve — INCORRECT: 'Reprieve' means a postponement of punishment or temporary relief. Unrelated to honouring someone's dedication.\n\n(C) Digression — INCORRECT: 'Digression' means a departure from the main subject. Implies going off-topic — contradicts the context.\n\n(D) Anomaly — INCORRECT: 'Anomaly' means something that deviates from the norm. Carries a detached, analytical tone that does not suit the admiring context."
+    },
+    {
+      "id": 14,
+      "text": "Q.109 The following sentence has been split into four segments. Identify the segment that contains a grammatical error.\n\n\"After a long discussion / over a period of ten hours, / the management / finally agreed to the agitating workers' demands.\"",
+      "options": [
+        "finally agreed to the agitating workers' demands",
+        "over a period of ten hours",
+        "After a long discussion",
+        "the management"
+      ],
+      "correctIndex": 1,
+      "solution": "Correct Answer: (B) over a period of ten hours\n\nTopic: Error Identification — Preposition Usage\nExam Relevance: Very High\n\n---\n\nThe error is in segment (B): 'over a period of ten hours'\n\nThe preposition 'over' is incorrect here. The correct preposition is 'for'.\n\nCorrect: 'After a long discussion for a period of ten hours' OR 'After a ten-hour discussion'\n\nPreposition rules for duration:\n- 'for' = used to indicate a DURATION of time: 'for ten hours', 'for a period of ten hours'\n- 'over' = used for a broader span: 'over the years', 'over the weekend' — not for a specific measured period like 'ten hours'\n\n'For a period of ten hours' is the correct, idiomatic expression.\n\n---\n\n(A) 'finally agreed to the agitating workers demands' — No error.\n\n(B) 'over a period of ten hours' — ERROR: 'over' should be 'for'. This is the incorrect segment.\n\n(C) 'After a long discussion' — No error.\n\n(D) 'the management' — No error."
+    },
+    {
+      "id": 15,
+      "text": "Q.110 Select the option that can be used as a one-word substitute for the given group of words.\nWalk or move in a leisurely or aimless way",
+      "options": ["Wonder", "Yonder", "Perch", "Wander"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) Wander\n\nTopic: One-Word Substitution — Vocabulary\nExam Relevance: Very High\n\n---\n\nWander (verb): To walk or move in a leisurely, casual, or aimless way without a fixed destination or purpose.\nExample: 'We wandered through the old city streets for hours.'\n\nThis precisely matches: 'walk or move in a leisurely or aimless way.'\n\n---\n\n(A) Wonder — INCORRECT: 'Wonder' means to feel curious or amazed. It is a mental state, not physical movement. Also a common spelling confusion — wonder vs wander.\n\n(B) Yonder — INCORRECT: An archaic/poetic word meaning 'over there'. An adjective/adverb indicating a distant place, not a verb of movement.\n\n(C) Perch — INCORRECT: Means to sit or rest on a high or narrow surface. Implies staying in one place, not moving aimlessly.\n\n(D) Wander — CORRECT: Exactly matches the definition. To move about without a fixed course or purpose, leisurely or aimlessly."
+    },
+    {
+      "id": 16,
+      "text": "Q.111 Select the most appropriate antonym of the given word.\nPerfidious",
+      "options": ["Betraying", "Faithless", "loyal", "Treacherous"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: (C) loyal\n\nTopic: Antonyms — Advanced Vocabulary\nExam Relevance: High\n\n---\n\nPerfidious (adjective): Guilty of betrayal or treachery; deceitful and untrustworthy.\nExample: 'The perfidious ally secretly shared classified information with the enemy.'\n\nAntonym = Loyal\n\nLoyal (adjective): Giving or showing firm and constant support or allegiance; faithful and trustworthy.\nExample: 'A loyal friend always keeps your secrets.'\n\nPerfidious (betraying/treacherous) is directly opposite to Loyal (faithful/trustworthy).\n\n---\n\n(A) Betraying — INCORRECT: 'Betraying' means being disloyal or treacherous. A SYNONYM of perfidious.\n\n(B) Faithless — INCORRECT: 'Faithless' means lacking loyalty. Another SYNONYM of perfidious.\n\n(C) loyal — CORRECT: Direct antonym. Perfidious = disloyal/treacherous; Loyal = faithful/trustworthy.\n\n(D) Treacherous — INCORRECT: 'Treacherous' means guilty of betrayal. Yet another SYNONYM of perfidious.\n\nKey point: Options A, B, and D are all synonyms of perfidious. Only C (loyal) is the antonym."
+    },
+    {
+      "id": 17,
+      "text": "Q.112 Select the most appropriate option that can substitute the highlighted segment in the given sentence.\nThey carefully tended a large group of sheep for their personal use.",
+      "options": ["a band of sheep", "a flock of sheep", "a pack of sheep", "many sheep"],
+      "correctIndex": 1,
+      "solution": "Correct Answer: (B) a flock of sheep\n\nTopic: Collective Nouns — Vocabulary\nExam Relevance: High\n\n---\n\nCollective nouns for animals (important for DRDO CEPTAM):\n- Sheep -> Flock\n- Wolves/Dogs -> Pack\n- Fish -> School/Shoal\n- Cows -> Herd\n- Lions -> Pride\n- Bees -> Swarm\n- Birds -> Flock\n- Ants -> Colony\n\n---\n\n(A) A band of sheep — INCORRECT: 'Band' is used for musicians or a group of humans. NOT used for sheep.\n\n(B) A flock of sheep — CORRECT: 'Flock' is the standard collective noun for sheep (also used for birds). Grammatically and idiomatically correct.\n\n(C) A pack of sheep — INCORRECT: 'Pack' is for wolves, dogs, or cards. NOT used for sheep.\n\n(D) Many sheep — INCORRECT: 'Many' is merely a quantifier, not a collective noun. The question asks for the specific collective noun phrase."
+    },
+    {
+      "id": 18,
+      "text": "Q.113 Find the part of the given sentence that has an error in it. If there is no error, choose 'No error'.\n\n\"Educational platforms can be a productive way (1) / for parents to use technology (2) / to support there child's early learning (3) / No error (4)\"",
+      "options": ["1", "2", "3", "4"],
+      "correctIndex": 2,
+      "solution": "Correct Answer: (C) 3\n\nTopic: Error Identification — Homophone/Spelling Error\nExam Relevance: Very High\n\n---\n\nThe error is in segment (3): 'to support there child's early learning'\n\n'there' is incorrectly used. The correct word should be 'their'.\n\nHomophone confusion:\n- 'There' = refers to a place. Example: 'The book is over there.'\n- 'Their' = possessive pronoun belonging to them. Example: 'Their child is talented.'\n- 'They're' = contraction of 'they are'. Example: 'They're going to school.'\n\nIn the sentence, the child belongs to the parents (them) -> possessive 'their' is required.\n\nCorrected: 'to support their child's early learning'\n\n---\n\n(A) Segment 1 — No error: 'Educational platforms can be a productive way' is correct.\n\n(B) Segment 2 — No error: 'For parents to use technology' is correct.\n\n(C) Segment 3 — ERROR: 'there' should be 'their'. Classic homophone error.\n\n(D) No error — INCORRECT: There is a clear error in segment (3)."
+    },
+    {
+      "id": 19,
+      "text": "Q.114 A sentence is provided in indirect speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding direct speech.\n\nHe said that he would join the meeting after lunch.",
+      "options": [
+        "\"I will join the meeting after lunch,\" he said.",
+        "\"I would join the meeting after lunch,\" he said.",
+        "\"I shall join the meeting after lunch,\" he said.",
+        "\"I can join the meeting after lunch,\" he said."
+      ],
+      "correctIndex": 0,
+      "solution": "Correct Answer: (A) \"I will join the meeting after lunch,\" he said.\n\nTopic: Direct and Indirect Speech (Narration) — Grammar\nExam Relevance: Very High\n\n---\n\nRule for converting Indirect -> Direct Speech:\nWhen the reporting verb is past tense ('said'), modals are back-shifted in indirect speech.\n\nBack-shift reversal table:\n- 'would' in indirect -> 'will' in direct\n- 'could' in indirect -> 'can' in direct\n- 'might' in indirect -> 'may' in direct\n- 'should' in indirect -> 'shall' in direct\n\nIndirect: 'He said that he would join...' -> 'would' in indirect = 'will' in direct\n\nAlso: pronoun 'he' -> 'I' (original speaker), remove 'that', add inverted commas.\n\nDirect: '\"I will join the meeting after lunch,\" he said.' ✓\n\n---\n\n(A) 'I will join the meeting after lunch' — CORRECT: 'would' reversed to 'will'. 'He' reversed to 'I'. Correct direct speech.\n\n(B) 'I would join the meeting after lunch' — INCORRECT: Keeping 'would' in direct speech is wrong. 'Would' is only for indirect speech.\n\n(C) 'I shall join the meeting after lunch' — INCORRECT: 'Shall' back-shifts to 'should' in indirect, NOT 'would'. Since indirect has 'would', direct should have 'will' not 'shall'.\n\n(D) 'I can join the meeting after lunch' — INCORRECT: 'Can' back-shifts to 'could'. Indirect has 'would' (not 'could'), so direct should not use 'can'."
+    },
+    {
+      "id": 20,
+      "text": "Q.115 Identify the error in tense and choose the correct form of the verb in present tense from the following options.\n\nThe train is arriving in Bangalore at 9 o'clock tomorrow morning.",
+      "options": ["has to arrive", "will be arriving", "have been arriving", "arrives"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) arrives\n\nTopic: Tense — Simple Present for Scheduled Future Events\nExam Relevance: Very High\n\n---\n\nThe error: 'The train IS ARRIVING...' — Present Continuous is INCORRECT for scheduled/timetabled events.\n\nKey Rule: For FIXED, SCHEDULED, TIMETABLED future events (trains, flights, buses, shows) — use SIMPLE PRESENT tense.\n\nSimple Present for scheduled future:\n- 'The train arrives at 9 o'clock tomorrow.' (correct)\n- 'The flight departs at 6 AM.' (correct)\n- 'The show starts at 8 PM.' (correct)\n\nCorrected sentence: 'The train ARRIVES in Bangalore at 9 o'clock tomorrow morning.'\n\n---\n\n(A) has to arrive — INCORRECT: Expresses obligation or necessity, not a timetable. Changes the meaning.\n\n(B) will be arriving — INCORRECT: Future Continuous — not in the present tense as the question requires. Also, Simple Present is preferred for fixed schedules.\n\n(C) have been arriving — INCORRECT: Present Perfect Continuous — describes an ongoing past action. Wrong for a scheduled future event.\n\n(D) arrives — CORRECT: Simple Present for a fixed, timetabled future event. The standard, idiomatic form for train/flight schedules."
+    },
+    {
+      "id": 21,
+      "text": "Q.116 Which word is the ANTONYM of 'pioneering' as used in the passage?",
+      "options": ["Revolutionary", "Progressive", "Innovative", "Traditional"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) Traditional\n\nTopic: Antonyms in Context — Reading Comprehension Vocabulary\nExam Relevance: High\n\n---\n\nPioneering (adjective): Being the first to do or use something new; innovative, groundbreaking, original.\n\nAntonym = Traditional\n\nTraditional (adjective): Following long-established custom; NOT new or innovative; adhering to what has always been done.\n\nPioneering = introducing new ideas, breaking new ground.\nTraditional = following established norms, doing things as they have always been done.\n\n---\n\n(A) Revolutionary — INCORRECT: Means causing radical change — a SYNONYM of pioneering. Both suggest newness.\n\n(B) Progressive — INCORRECT: Means moving forward and advancing — another SYNONYM of pioneering.\n\n(C) Innovative — INCORRECT: Means featuring new methods or ideas — a direct SYNONYM of pioneering.\n\n(D) Traditional — CORRECT: Direct antonym. Pioneering = doing something new and first; Traditional = doing things exactly as they have always been done."
+    },
+    {
+      "id": 22,
+      "text": "Q.117 Which of the following was NOT a major focus of the First Wave of Feminism?",
+      "options": ["Equal access to education", "Property rights", "Women's suffrage", "Workplace discrimination laws"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) Workplace discrimination laws\n\nTopic: Reading Comprehension — Historical/Social Content\nExam Relevance: High\n\n---\n\nThe First Wave of Feminism (approximately 1848 to 1920s) major focuses:\n\n(A) Equal access to education — YES, major focus: Feminists fought for women's right to attend universities and professional schools.\n\n(B) Property rights — YES, major focus: Women historically could not own property independently. First Wave feminists fought for women's right to own and inherit property.\n\n(C) Women's suffrage — YES, THE defining focus: Culminated in the 19th Amendment (USA, 1920) granting women the right to vote.\n\n(D) Workplace discrimination laws — NOT a major focus of the First Wave:\nWorkplace discrimination, equal pay, maternity rights, and sexual harassment laws were primarily concerns of the SECOND Wave of Feminism (1960s to 1980s) and beyond.\n\nThe First Wave predated widespread female industrial employment and these specific legal frameworks. Such issues became prominent only in the 20th-century industrial and corporate era.\n\n(D) is correct — workplace discrimination laws were NOT a major focus of the First Wave."
+    },
+    {
+      "id": 23,
+      "text": "Q.118 What is the tone of the passage?",
+      "options": ["Sarcastic and dismissive", "Romanticised and exaggerated", "Passionate and biased", "Neutral and historical"],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) Neutral and historical\n\nTopic: Tone Analysis — Reading Comprehension\nExam Relevance: High\n\n---\n\nA neutral and historical tone in a passage about the First Wave of Feminism would:\n- Present facts and events chronologically and objectively\n- Describe the movement's goals and achievements without advocating for or against them\n- Use formal, measured language without emotional bias\n- Not express personal opinions or moral judgment\n\n---\n\n(A) Sarcastic and dismissive — INCORRECT: Sarcastic tone uses irony to mock; dismissive tone downplays importance. A factual, balanced historical account is neither.\n\n(B) Romanticised and exaggerated — INCORRECT: Romanticised tone idealises events beyond reality. A neutral historical account avoids this.\n\n(C) Passionate and biased — INCORRECT: Passionate tone shows strong emotion; biased tone unfairly favours one side. The passage presents information neutrally, not emotionally or one-sidedly.\n\n(D) Neutral and historical — CORRECT: The passage presents First Wave Feminism in a factual, objective, historical manner — describing events and achievements without emotional advocacy or bias."
+    },
+    {
+      "id": 24,
+      "text": "Q.119 Which title best captures the essence of the passage?",
+      "options": [
+        "Women's Struggles in the 21st Century",
+        "The Political Impact of the Nineteenth Amendment",
+        "The First Wave of Feminism: A Fight for Equality",
+        "The Evolution of Modern Feminism"
+      ],
+      "correctIndex": 2,
+      "solution": "Correct Answer: (C) The First Wave of Feminism: A Fight for Equality\n\nTopic: Main Idea / Title Selection — Reading Comprehension\nExam Relevance: High\n\n---\n\nAnalysing each option:\n\n(A) Women's Struggles in the 21st Century — INCORRECT:\nThe passage covers the First Wave (approximately 1848 to 1920s). It has nothing to do with the 21st century. Completely misrepresents the time period.\n\n(B) The Political Impact of the Nineteenth Amendment — INCORRECT:\nWhile the 19th Amendment was a significant outcome, the passage covers MULTIPLE aspects (education, property rights, suffrage, equality). Too narrow — focuses only on one element.\n\n(C) The First Wave of Feminism: A Fight for Equality — CORRECT:\n- Specific subject: The First Wave of Feminism (correct era)\n- Core theme: A Fight for Equality (overarching purpose)\n- Broad enough to encompass voting rights, education, property rights — all aspects\nMost comprehensive, accurate, and representative title.\n\n(D) The Evolution of Modern Feminism — INCORRECT:\nImplies a broader, multi-wave discussion of feminism's evolution over time. The passage focuses specifically on the FIRST Wave only."
+    },
+    {
+      "id": 25,
+      "text": "Q.120 What can be inferred about the limitations of the First Wave of Feminism?",
+      "options": [
+        "It was largely ineffective and failed to achieve its goals.",
+        "It successfully addressed all issues of gender inequality.",
+        "It did not influence later feminist movements.",
+        "It only benefited elite women and ignored other marginalised groups."
+      ],
+      "correctIndex": 3,
+      "solution": "Correct Answer: (D) It only benefited elite women and ignored other marginalised groups.\n\nTopic: Inference Questions — Reading Comprehension\nExam Relevance: High\n\n---\n\nInference about limitations of the First Wave of Feminism:\n\nThe First Wave (1848 to 1920s) has been consistently criticised by later scholars for:\n- Being led by and focused on middle-class and upper-class White women\n- Excluding or ignoring Black women, working-class women, and other marginalised groups\n- Focusing on legal/political rights (suffrage, property, education) relevant mainly to women with existing social privilege\n- Failing to address intersectional issues of race, class, and ethnicity\n\nThis is the standard academic criticism — the movement's benefits were largely limited to already-privileged women.\n\n---\n\n(A) Largely ineffective and failed to achieve goals — INCORRECT:\nThe First Wave achieved significant goals — women's suffrage (19th Amendment, 1920), property rights, educational access. Calling it 'largely ineffective' is factually wrong.\n\n(B) Successfully addressed all gender inequality issues — INCORRECT:\nMany issues were left unaddressed (workplace discrimination, reproductive rights, intersectionality) — which is why the Second and Third Waves emerged.\n\n(C) Did not influence later feminist movements — INCORRECT:\nThe First Wave directly inspired and provided the foundation for all subsequent waves. Factually incorrect.\n\n(D) Only benefited elite women, ignored other marginalised groups — CORRECT:\nThe key inferred limitation — the First Wave narrowly focused on privileged women while marginalising women of colour, working-class women, and other vulnerable groups. Standard critical inference from historical analysis."
+    }
+  ]
+}
