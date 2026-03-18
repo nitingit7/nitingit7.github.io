@@ -98,6 +98,7 @@ var GITHUB_FILES = {
         { name: "Vocab 9", tags: "Vocab", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/english/EV009.json" },
         { name: "Vocab 10", tags: "Vocab", questions: 20, time: 10, marks: 20, file: BASE_URL + "tests/english/EV0010.json" },
         { name: "Vocab 11", tags: "Vocab", questions: 20, time: 5, marks: 20, file: BASE_URL + "tests/english/EV0011.json" },
+        { name: "Vocab 12", tags: "Vocab", questions: 20, time: 5, marks: 20, file: BASE_URL + "tests/english/EV012.json" },
     ],
 
     // --- 4. GENERAL AWARENESS ---
