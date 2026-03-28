@@ -167,16 +167,7 @@
             padding: 16px 20px;
         }
 
-        .q-number-header {
-            font-size: 1rem;
-            font-weight: bold;
-            color: #222;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-            margin-bottom: 14px;
-        }
-
-        /* Split layout for DI questions */
+/* Split layout for DI questions */
         #q-split-wrap {
             display: flex;
             gap: 0;
@@ -952,7 +943,7 @@
         <!-- LEFT: QUESTION PANEL -->
         <div id="q-panel">
             <div id="q-scroll">
-                <div class="q-number-header" id="q-number-header">Question No 1</div>
+
 
                 <div id="question-header-container"></div>
                 <div id="q-extra-info" class="q-extra-info"></div>
@@ -1419,8 +1410,7 @@
 
             if (!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
 
-            // Question number header
-            document.getElementById('q-number-header').textContent = "Question No " + (this.currQ + 1);
+
 
             // Header container
             var hc = document.getElementById('question-header-container');
