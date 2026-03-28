@@ -1308,6 +1308,7 @@
         questionStartTime: 0,
         isPaused: false,
         isReview: false,
+        intentionalExit: false,
         currentFileUrl: "",
         reviewGuesses: {},
 
@@ -1360,6 +1361,7 @@
                         "Leave Test?",
                         "Your test will be paused and you can resume later. Are you sure you want to leave?",
                         () => {
+                            this.intentionalExit = true;
                             this.saveProgress();
                             window.onbeforeunload = null;
                             if (this.timerInterval) clearInterval(this.timerInterval);
@@ -1982,6 +1984,7 @@
                 var res = { score, correct: corr, wrong, unatt, totalMarks: total, fullData: this.fullData, sectionResponses: this.sectionResponses };
                 localStorage.setItem(this.currentFileUrl, JSON.stringify(res));
                 this.clearProgress();
+                this.intentionalExit = true;
                 window.onbeforeunload = null; // Don't warn on redirect to result page
                 window.location.replace("exam.html?showResult=true&file=" + encodeURIComponent(this.currentFileUrl));
                 return;
@@ -2037,6 +2040,7 @@
                 "Exit Test?",
                 "Your test will be paused and you can resume later. Are you sure you want to leave?",
                 () => {
+                    this.intentionalExit = true;
                     this.saveProgress();
                     window.onbeforeunload = null;
                     if (this.timerInterval) clearInterval(this.timerInterval);
@@ -2156,6 +2160,7 @@
                 "Re-attempt Test?",
                 "This will clear your previous result. Are you sure?",
                 () => {
+                    this.intentionalExit = true;
                     localStorage.removeItem(this.currentFileUrl);
                     this.clearProgress();
                     var newUrl = "exam.html?file=" + this.currentFileUrl;
@@ -2166,6 +2171,7 @@
         },
 
         goBackToList: function() {
+            this.intentionalExit = true;
             var last = localStorage.getItem('last_subject_viewed');
             window.location.href = last ? "list.html?subject=" + last : "index.html";
         },
@@ -2193,8 +2199,8 @@
 
         // Warn user before closing/refreshing tab during test
         window.addEventListener('beforeunload', function(e) {
-            // Only warn if test is active (not in review, not on result page)
-            if (window.app && window.app.data && !window.app.isReview) {
+            // Only warn if test is active AND it's not an intentional exit
+            if (window.app && window.app.data && !window.app.isReview && !window.app.intentionalExit) {
                 var msg = "The test will be cancelled and all your answers will be lost. Are you sure you want to close?";
                 e.preventDefault();
                 e.returnValue = msg;
