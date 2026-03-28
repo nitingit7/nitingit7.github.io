@@ -1123,6 +1123,18 @@
     <img class="modal-img-content" id="img-modal-content">
 </div>
 
+<!-- ============ CUSTOM CONFIRM MODAL ============ -->
+<div id="custom-confirm-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
+    <div style="background:white; border-radius:10px; padding:28px 28px 20px; max-width:380px; width:90%; box-shadow:0 8px 32px rgba(0,0,0,0.3); font-family:Arial,sans-serif;">
+        <div id="ccm-title" style="font-size:1rem; font-weight:bold; color:#222; margin-bottom:10px;"></div>
+        <div id="ccm-message" style="font-size:0.92rem; color:#444; margin-bottom:22px; line-height:1.5;"></div>
+        <div style="display:flex; justify-content:flex-end; gap:10px;">
+            <button id="ccm-cancel" style="padding:9px 22px; border-radius:6px; border:1px solid #ccc; background:white; color:#333; font-weight:bold; font-size:0.88rem; cursor:pointer;">Cancel</button>
+            <button id="ccm-ok" style="padding:9px 22px; border-radius:6px; border:none; background:#1565C0; color:white; font-weight:bold; font-size:0.88rem; cursor:pointer;">OK</button>
+        </div>
+    </div>
+</div>
+
 <script>
     /* ===== GLOBAL HELPERS ===== */
     function openImgModal(src) {
@@ -1133,6 +1145,28 @@
 
     function closeImgModal() {
         document.getElementById("img-modal").classList.remove("open");
+    }
+
+    /* ---- CUSTOM CONFIRM (keeps fullscreen) ---- */
+    function customConfirm(title, message, onOk, onCancel) {
+        var modal = document.getElementById('custom-confirm-modal');
+        document.getElementById('ccm-title').textContent = title;
+        document.getElementById('ccm-message').textContent = message;
+        modal.style.display = 'flex';
+
+        var okBtn = document.getElementById('ccm-ok');
+        var cancelBtn = document.getElementById('ccm-cancel');
+
+        // Clone to remove any old listeners
+        var newOk = okBtn.cloneNode(true);
+        var newCancel = cancelBtn.cloneNode(true);
+        okBtn.parentNode.replaceChild(newOk, okBtn);
+        cancelBtn.parentNode.replaceChild(newCancel, cancelBtn);
+
+        function close() { modal.style.display = 'none'; }
+
+        newOk.addEventListener('click', function() { close(); if (onOk) onOk(); });
+        newCancel.addEventListener('click', function() { close(); if (onCancel) onCancel(); });
     }
 
     /* ===== MAIN APP ===== */
@@ -1199,13 +1233,17 @@
             } else {
                 window.onpopstate = () => {
                     if (this.isReview) { this.exitReview(); return; }
-                    if (!confirm("Your test will be paused. Sure you want to leave?")) {
-                        history.pushState(null, null, location.href); return;
-                    }
-                    this.saveProgress();
-                    window.onbeforeunload = null;
-                    if (this.timerInterval) clearInterval(this.timerInterval);
-                    this.goBackToList();
+                    customConfirm(
+                        "Leave Test?",
+                        "Your test will be paused and you can resume later. Are you sure you want to leave?",
+                        () => {
+                            this.saveProgress();
+                            window.onbeforeunload = null;
+                            if (this.timerInterval) clearInterval(this.timerInterval);
+                            this.goBackToList();
+                        },
+                        () => { history.pushState(null, null, location.href); }
+                    );
                 };
             }
 
@@ -1749,9 +1787,19 @@
             this.questionStartTime = Date.now();
         },
 
-        /* ---- SUBMIT ---- */
         submitSection: function(force) {
-            if (!this.isReview && !force && !confirm("Submit this section? You cannot return to it.")) return;
+            if (!this.isReview && !force) {
+                customConfirm(
+                    "Submit Section?",
+                    "Submit this section? You cannot return to it.",
+                    () => { this._doSubmitSection(); }
+                );
+                return;
+            }
+            this._doSubmitSection();
+        },
+
+        _doSubmitSection: function() {
             this.captureQuestionTime();
             this.sectionResponses[this.currentSectionIdx] = this.responses;
             clearInterval(this.timerInterval);
@@ -1833,14 +1881,18 @@
             }
         },
 
-        /* ---- EXIT ---- */
         exitTest: function() {
-            if (!confirm("Your test will be paused. Sure you want to leave?")) return;
-            this.saveProgress();
-            window.onbeforeunload = null;
-            if (this.timerInterval) clearInterval(this.timerInterval);
-            var last = localStorage.getItem('last_subject_viewed');
-            window.location.href = last ? "list.html?subject=" + last : "index.html";
+            customConfirm(
+                "Exit Test?",
+                "Your test will be paused and you can resume later. Are you sure you want to leave?",
+                () => {
+                    this.saveProgress();
+                    window.onbeforeunload = null;
+                    if (this.timerInterval) clearInterval(this.timerInterval);
+                    var last = localStorage.getItem('last_subject_viewed');
+                    window.location.href = last ? "list.html?subject=" + last : "index.html";
+                }
+            );
         },
 
         /* ---- PROGRESS SAVE/LOAD ---- */
@@ -1949,13 +2001,17 @@
         },
 
         reattemptTest: function() {
-            if (confirm("Clear previous result and re-attempt?")) {
-                localStorage.removeItem(this.currentFileUrl);
-                this.clearProgress();
-                var newUrl = "exam.html?file=" + this.currentFileUrl;
-                history.back();
-                setTimeout(function() { location.replace(newUrl); }, 50);
-            }
+            customConfirm(
+                "Re-attempt Test?",
+                "This will clear your previous result. Are you sure?",
+                () => {
+                    localStorage.removeItem(this.currentFileUrl);
+                    this.clearProgress();
+                    var newUrl = "exam.html?file=" + this.currentFileUrl;
+                    history.back();
+                    setTimeout(function() { location.replace(newUrl); }, 50);
+                }
+            );
         },
 
         goBackToList: function() {
@@ -1971,7 +2027,13 @@
             var base = GOOGLE_FORM_URL.split('?')[0];
             var finalUrl = base + "?usp=pp_url&entry.57428168=" + encodeURIComponent(testName) + "&entry.1889905698=" + encodeURIComponent(qNum);
             if (this.isReview) { window.open(finalUrl, '_blank'); }
-            else if (confirm("Open report form? (Tab will open)")) { window.open(finalUrl, '_blank'); }
+            else {
+                customConfirm(
+                    "Report Error?",
+                    "A report form will open in a new tab. Your test will continue.",
+                    () => { window.open(finalUrl, '_blank'); }
+                );
+            }
         }
     };
 
