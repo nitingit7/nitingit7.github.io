@@ -497,13 +497,13 @@
         .leg-ans-marked::after {
             content: '';
             position: absolute;
-            bottom: 2px;
-            right: 2px;
-            width: 10px;
-            height: 10px;
+            bottom: -3px;
+            right: -3px;
+            width: 12px;
+            height: 12px;
             background: #4caf50;
             border-radius: 50%;
-            border: 1px solid white;
+            border: 1.5px solid white;
         }
 
         /* Question section label */
@@ -555,10 +555,22 @@
         .pal-ans-marked::after {
             content: '✓';
             position: absolute;
-            bottom: 1px;
-            right: 2px;
-            font-size: 9px;
-            color: #a5d6a7;
+            bottom: -3px;
+            right: -3px;
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
+            background: #4caf50;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 16px;
+            text-align: center;
+            border: 1.5px solid white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
         .pal-not-visited   { background: #e0e0e0 !important; color: #333 !important; }
 
