@@ -139,6 +139,62 @@
 
         .btn-pause-test:hover { background: rgba(255,255,255,0.25); }
 
+        /* ---- TEXT SIZE BAR ---- */
+        #text-size-bar {
+            background: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            padding: 5px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .text-size-label {
+            font-size: 0.82rem;
+            font-weight: bold;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        #text-size-select {
+            font-size: 0.82rem;
+            padding: 3px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #text-size-select:focus { border-color: #1565C0; }
+
+        /* ---- QUESTION CONTENT FONT SIZES (only q-text, options, direction, solution) ---- */
+        #q-scroll.ts-small  #q-text,
+        #q-scroll.ts-small  .opt-row,
+        #q-scroll.ts-small  .q-direction,
+        #q-scroll.ts-small  .solution-box,
+        #q-scroll.ts-small  #q-extra-info { font-size: 0.82rem !important; }
+
+        #q-scroll.ts-medium #q-text,
+        #q-scroll.ts-medium .opt-row,
+        #q-scroll.ts-medium .q-direction,
+        #q-scroll.ts-medium .solution-box,
+        #q-scroll.ts-medium #q-extra-info { font-size: 0.95rem !important; }
+
+        #q-scroll.ts-large  #q-text,
+        #q-scroll.ts-large  .opt-row,
+        #q-scroll.ts-large  .q-direction,
+        #q-scroll.ts-large  .solution-box,
+        #q-scroll.ts-large  #q-extra-info { font-size: 1.1rem !important; }
+
+        #q-scroll.ts-xlarge #q-text,
+        #q-scroll.ts-xlarge .opt-row,
+        #q-scroll.ts-xlarge .q-direction,
+        #q-scroll.ts-xlarge .solution-box,
+        #q-scroll.ts-xlarge #q-extra-info { font-size: 1.28rem !important; }
+
         /* ---- SECTIONS BAR ---- */
         #sections-bar {
             background: white;
@@ -988,6 +1044,17 @@
     <!-- SECTIONS BAR -->
     <div id="sections-bar"></div>
 
+    <!-- TEXT SIZE BAR -->
+    <div id="text-size-bar">
+        <span class="text-size-label">Text Size:</span>
+        <select id="text-size-select">
+            <option value="small">Small</option>
+            <option value="medium" selected>Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">Extra Large</option>
+        </select>
+    </div>
+
     <!-- EXAM BODY -->
     <div id="exam-body">
 
@@ -1078,7 +1145,10 @@
                         <div class="legend-item" style="grid-column:span 2; flex-direction:column; align-items:flex-start; gap:3px;">
                             <div style="display:flex; align-items:center; gap:6px;">
                                 <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
-                                <span>Answered &amp; Marked for Review (will not be considered for evaluation)</span>
+                                <span>Answered &amp; Marked for Review</span>
+                            </div>
+                            <div style="font-size:0.72rem; color:#c62828; font-weight:bold; padding-left:2px;">
+                                ⚠ Not evaluated — marked for review only
                             </div>
                         </div>
                     </div>
@@ -1317,6 +1387,24 @@
             this.bind('btn-exit-review', () => this.exitReview());
             this.bind('btn-view-sols', () => this.startReviewMode());
             this.bind('btn-reattempt', () => this.reattemptTest());
+
+            // ---- TEXT SIZE CONTROL ----
+            var qScroll = document.getElementById('q-scroll');
+            var textSizeSelect = document.getElementById('text-size-select');
+            var savedSize = localStorage.getItem('exam-text-size') || 'medium';
+
+            function applyTextSize(size) {
+                qScroll.classList.remove('ts-small','ts-medium','ts-large','ts-xlarge');
+                qScroll.classList.add('ts-' + size);
+                localStorage.setItem('exam-text-size', size);
+            }
+
+            textSizeSelect.value = savedSize;
+            applyTextSize(savedSize);
+
+            textSizeSelect.addEventListener('change', function() {
+                applyTextSize(this.value);
+            });
 
             // ---- FULLSCREEN TOGGLE ----
             var fsBtn = document.getElementById('btn-fullscreen');
