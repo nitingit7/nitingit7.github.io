@@ -1985,6 +1985,7 @@
                 var res = { score, correct: corr, wrong, unatt, totalMarks: total, fullData: this.fullData, sectionResponses: this.sectionResponses };
                 localStorage.setItem(this.currentFileUrl, JSON.stringify(res));
                 this.clearProgress();
+                window.onbeforeunload = null; // Don't warn on redirect to result page
                 window.location.replace("exam.html?showResult=true&file=" + encodeURIComponent(this.currentFileUrl));
                 return;
             }
@@ -2192,6 +2193,18 @@
 
     window.onload = function() {
         window.app.init();
+
+        // Warn user before closing/refreshing tab during test
+        window.addEventListener('beforeunload', function(e) {
+            // Only warn if test is active (not in review, not on result page)
+            if (window.app && window.app.data && !window.app.isReview) {
+                var msg = "The test will be cancelled and all your answers will be lost. Are you sure you want to close?";
+                e.preventDefault();
+                e.returnValue = msg;
+                return msg;
+            }
+        });
+
         // Disable context menu & copy
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', function(e) {
