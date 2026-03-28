@@ -34,6 +34,19 @@
             -webkit-user-select: none;
         }
 
+        /* Cover the browser's "press Esc" fullscreen notification bar */
+        #fs-notification-cover {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: #1565C0;
+            z-index: 999999;
+            pointer-events: none;
+        }
+
         /* Suppress fullscreen notification bar visual disruption */
         :fullscreen { top: 0 !important; }
         :-webkit-full-screen { top: 0 !important; }
@@ -956,6 +969,9 @@
 </head>
 <body>
 
+<!-- Covers browser fullscreen notification bar -->
+<div id="fs-notification-cover"></div>
+
 <!-- ============ EXAM VIEW ============ -->
 <div id="view-exam" style="display:none; flex-direction:column; height:100vh;">
 
@@ -1078,7 +1094,10 @@
                         <div class="legend-item" style="grid-column:span 2; flex-direction:column; align-items:flex-start; gap:3px;">
                             <div style="display:flex; align-items:center; gap:6px;">
                                 <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
-                                <span>Answered &amp; Marked for Review (will not be considered for evaluation)</span>
+                                <span>Answered &amp; Marked for Review</span>
+                            </div>
+                            <div style="font-size:0.72rem; color:#c62828; font-weight:bold; padding-left:2px;">
+                                ⚠ Not evaluated — marked for review only
                             </div>
                         </div>
                     </div>
@@ -1322,6 +1341,18 @@
             var fsBtn = document.getElementById('btn-fullscreen');
             var fsExpand = document.getElementById('fs-icon-expand');
             var fsCompress = document.getElementById('fs-icon-compress');
+            var fsCover = document.getElementById('fs-notification-cover');
+            var fsCoverTimer = null;
+
+            function showFsCover() {
+                // Show blue cover over where browser shows its notification bar
+                fsCover.style.display = 'block';
+                if (fsCoverTimer) clearTimeout(fsCoverTimer);
+                // Browser notification disappears after ~3s, hide cover after 3.5s
+                fsCoverTimer = setTimeout(function() {
+                    fsCover.style.display = 'none';
+                }, 3500);
+            }
 
             function updateFsIcon() {
                 var isFs = !!document.fullscreenElement;
@@ -1331,7 +1362,9 @@
 
             fsBtn.addEventListener('click', function() {
                 if (!document.fullscreenElement) {
-                    document.documentElement.requestFullscreen().catch(function(){});
+                    document.documentElement.requestFullscreen().then(function() {
+                        showFsCover();
+                    }).catch(function(){});
                 } else {
                     document.exitFullscreen().catch(function(){});
                 }
