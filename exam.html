@@ -336,63 +336,22 @@
         /* Mobile: review footer */
         #review-footer { display: none; }
 
-        /* ---- SIDEBAR WRAPPER (holds toggle tab + panel together) ---- */
+        /* ---- SIDEBAR WRAPPER ---- */
         #sidebar-wrapper {
-            display: flex;
-            flex-direction: row;
-            align-items: stretch;
-            flex-shrink: 0;
             position: relative;
-            transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        /* The sticky >/< tab on the left edge of the sidebar */
-        #sidebar-toggle-tab {
-            width: 18px;
-            background: #1565C0;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border-radius: 6px 0 0 6px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            writing-mode: horizontal-tb;
             flex-shrink: 0;
-            z-index: 10;
-            border-left: 1px solid #0d47a1;
-            border-top: 1px solid #0d47a1;
-            border-bottom: 1px solid #0d47a1;
-            transition: background 0.15s;
-            user-select: none;
-        }
-
-        #sidebar-toggle-tab:hover { background: #0d47a1; }
-
-        #sidebar-toggle-tab .toggle-arrow {
-            font-size: 0.9rem;
-            line-height: 1;
-            transition: transform 0.3s;
-            display: inline-block;
-        }
-
-        /* When sidebar is collapsed, arrow flips */
-        #sidebar-wrapper.collapsed #sidebar-toggle-tab .toggle-arrow {
-            transform: rotate(180deg);
         }
 
         /* ---- RIGHT: SIDEBAR PANEL ---- */
         #sidebar-panel {
             width: 290px;
-            flex-shrink: 0;
+            height: 100%;
             background: #fafafa;
             display: flex;
             flex-direction: column;
             overflow: hidden;
             border-left: 1px solid #ccc;
-            transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-                        opacity 0.3s ease;
+            transition: width 0.3s cubic-bezier(0.25,0.8,0.25,1), opacity 0.25s ease;
         }
 
         /* Collapsed state — desktop */
@@ -401,6 +360,41 @@
             opacity: 0;
             pointer-events: none;
             border-left: none;
+        }
+
+        /* Tab is absolutely on the LEFT edge of sidebar-panel — zero layout cost */
+        #sidebar-toggle-tab {
+            position: absolute;
+            left: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 52px;
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 6px 0 0 6px;
+            z-index: 50;
+            box-shadow: -2px 0 6px rgba(0,0,0,0.25);
+            user-select: none;
+            transition: background 0.15s;
+        }
+
+        #sidebar-toggle-tab:hover { background: #111; }
+
+        #sidebar-toggle-tab .toggle-arrow {
+            font-size: 1rem;
+            line-height: 1;
+            color: white;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        #sidebar-wrapper.collapsed #sidebar-toggle-tab .toggle-arrow {
+            transform: rotate(180deg);
         }
 
         /* User info box */
