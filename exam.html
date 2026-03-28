@@ -92,7 +92,26 @@
 
         #timer-display.warning { color: #ff5252; }
 
-        .btn-pause-test {
+        .btn-fullscreen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.15s;
+            flex-shrink: 0;
+        }
+
+        .btn-fullscreen:hover { background: rgba(255,255,255,0.28); }
+
+        /* Hide fullscreen button on mobile — not useful there */
+        @media (max-width: 768px) { .btn-fullscreen { display: none; } }
+
+        
             display: flex;
             align-items: center;
             gap: 6px;
@@ -917,6 +936,14 @@
         <div class="header-center-logo">Practice King</div>
 
         <div class="header-right-info">
+            <button class="btn-fullscreen" id="btn-fullscreen" title="Toggle Fullscreen">
+                <svg id="fs-icon-expand" width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:block;">
+                    <path d="M3 3h6v2H5v4H3V3zm12 0h6v6h-2V5h-4V3zM3 15h2v4h4v2H3v-6zm16 4h-4v2h6v-6h-2v4z"/>
+                </svg>
+                <svg id="fs-icon-compress" width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:none;">
+                    <path d="M9 3H7v4H3v2h6V3zm6 0v6h6V7h-4V3h-2zM3 13v2h4v4h2v-6H3zm14 6v-4h4v-2h-6v6h2z"/>
+                </svg>
+            </button>
             <div class="timer-wrap">
                 <span class="timer-label">Time Left</span>
                 <span id="timer-display">00:00</span>
@@ -1196,6 +1223,27 @@
             this.bind('btn-exit-review', () => this.exitReview());
             this.bind('btn-view-sols', () => this.startReviewMode());
             this.bind('btn-reattempt', () => this.reattemptTest());
+
+            // ---- FULLSCREEN TOGGLE ----
+            var fsBtn = document.getElementById('btn-fullscreen');
+            var fsExpand = document.getElementById('fs-icon-expand');
+            var fsCompress = document.getElementById('fs-icon-compress');
+
+            function updateFsIcon() {
+                var isFs = !!document.fullscreenElement;
+                fsExpand.style.display = isFs ? 'none' : 'block';
+                fsCompress.style.display = isFs ? 'block' : 'none';
+            }
+
+            fsBtn.addEventListener('click', function() {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(function(){});
+                } else {
+                    document.exitFullscreen().catch(function(){});
+                }
+            });
+
+            document.addEventListener('fullscreenchange', updateFsIcon);
 
             // ---- DESKTOP sidebar toggle tab ----
             var sidebarWrapper = document.getElementById('sidebar-wrapper');
