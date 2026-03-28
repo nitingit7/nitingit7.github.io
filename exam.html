@@ -336,6 +336,52 @@
         /* Mobile: review footer */
         #review-footer { display: none; }
 
+        /* ---- SIDEBAR WRAPPER (holds toggle tab + panel together) ---- */
+        #sidebar-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            flex-shrink: 0;
+            position: relative;
+            transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* The sticky >/< tab on the left edge of the sidebar */
+        #sidebar-toggle-tab {
+            width: 18px;
+            background: #1565C0;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 6px 0 0 6px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            writing-mode: horizontal-tb;
+            flex-shrink: 0;
+            z-index: 10;
+            border-left: 1px solid #0d47a1;
+            border-top: 1px solid #0d47a1;
+            border-bottom: 1px solid #0d47a1;
+            transition: background 0.15s;
+            user-select: none;
+        }
+
+        #sidebar-toggle-tab:hover { background: #0d47a1; }
+
+        #sidebar-toggle-tab .toggle-arrow {
+            font-size: 0.9rem;
+            line-height: 1;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        /* When sidebar is collapsed, arrow flips */
+        #sidebar-wrapper.collapsed #sidebar-toggle-tab .toggle-arrow {
+            transform: rotate(180deg);
+        }
+
         /* ---- RIGHT: SIDEBAR PANEL ---- */
         #sidebar-panel {
             width: 290px;
@@ -345,6 +391,16 @@
             flex-direction: column;
             overflow: hidden;
             border-left: 1px solid #ccc;
+            transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                        opacity 0.3s ease;
+        }
+
+        /* Collapsed state — desktop */
+        #sidebar-wrapper.collapsed #sidebar-panel {
+            width: 0;
+            opacity: 0;
+            pointer-events: none;
+            border-left: none;
         }
 
         /* User info box */
@@ -743,8 +799,56 @@
             z-index: 500;
         }
 
+        /* ---- MOBILE FIXED TOGGLE TAB (right edge of screen) ---- */
+        #mobile-palette-tab {
+            display: none; /* shown only on mobile via JS/media */
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 700;
+            width: 22px;
+            height: 64px;
+            background: #1565C0;
+            color: white;
+            border-radius: 8px 0 0 8px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid #0d47a1;
+            border-right: none;
+            box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+            flex-direction: column;
+            gap: 2px;
+            transition: background 0.15s;
+            user-select: none;
+        }
+
+        #mobile-palette-tab:hover { background: #0d47a1; }
+
+        #mobile-palette-tab .mob-arrow {
+            font-size: 0.9rem;
+            line-height: 1;
+            transition: transform 0.3s;
+        }
+
+        #mobile-palette-tab.panel-open .mob-arrow {
+            transform: rotate(180deg);
+        }
+
         /* ---- RESPONSIVE ---- */
         @media (max-width: 768px) {
+            /* Hide the desktop toggle tab on mobile */
+            #sidebar-toggle-tab { display: none !important; }
+
+            #sidebar-wrapper {
+                position: static;
+                width: 0 !important;
+                overflow: visible;
+            }
+
             #sidebar-panel {
                 position: fixed;
                 right: 0;
@@ -753,7 +857,9 @@
                 z-index: 600;
                 transform: translateX(100%);
                 transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-                width: 280px;
+                width: 280px !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
                 box-shadow: -4px 0 20px rgba(0,0,0,0.25);
             }
 
@@ -840,8 +946,6 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
                 <span>Pause Test</span>
             </button>
-            <!-- Mobile sidebar toggle -->
-            <button class="btn-pause-test" id="btn-mobile-palette" style="display:none;">☰</button>
         </div>
     </header>
 
@@ -891,72 +995,87 @@
             </div>
         </div>
 
-        <!-- RIGHT: SIDEBAR -->
-        <div id="sidebar-panel">
+        <!-- RIGHT: SIDEBAR WRAPPER (toggle tab + panel) -->
+        <div id="sidebar-wrapper">
 
-            <!-- User + Timer box -->
-            <div id="user-info-box">
-                <div class="user-avatar">👤</div>
-                <div class="user-meta">
-                    <div class="user-timer-label">Time Left</div>
-                    <div class="user-timer-val" id="sidebar-timer">00:00</div>
+            <!-- Desktop >/< toggle tab (sticks to left edge of sidebar) -->
+            <div id="sidebar-toggle-tab" title="Toggle Question Palette">
+                <span class="toggle-arrow">&#8250;</span>
+            </div>
+
+            <!-- Sidebar Panel -->
+            <div id="sidebar-panel">
+
+                <!-- User + Timer box -->
+                <div id="user-info-box">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-meta">
+                        <div class="user-timer-label">Time Left</div>
+                        <div class="user-timer-val" id="sidebar-timer">00:00</div>
+                    </div>
+                    <button class="user-pause-btn" id="btn-pause-sidebar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#555"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        Pause
+                    </button>
                 </div>
-                <button class="user-pause-btn" id="btn-pause-sidebar">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#555"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-                    Pause
-                </button>
-            </div>
 
-            <!-- Legend -->
-            <div id="legend-box">
-                <div class="legend-title">Legend</div>
-                <div class="legend-grid">
-                    <div class="legend-item">
-                        <div class="leg-icon leg-answered" id="count-answered">0</div>
-                        <span>Answered</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="leg-icon leg-not-answered" id="count-not-answered">0</div>
-                        <span>Not Answered</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="leg-icon leg-marked" id="count-marked">0</div>
-                        <span>Marked</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="leg-icon leg-not-visited" id="count-not-visited" style="color:#333!important;">0</div>
-                        <span>Not Visited</span>
-                    </div>
-                    <div class="legend-item" style="grid-column:span 2;">
-                        <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
-                        <span>Answered &amp; Marked</span>
+                <!-- Legend -->
+                <div id="legend-box">
+                    <div class="legend-title">Legend</div>
+                    <div class="legend-grid">
+                        <div class="legend-item">
+                            <div class="leg-icon leg-answered" id="count-answered">0</div>
+                            <span>Answered</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="leg-icon leg-not-answered" id="count-not-answered">0</div>
+                            <span>Not Answered</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="leg-icon leg-marked" id="count-marked">0</div>
+                            <span>Marked</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="leg-icon leg-not-visited" id="count-not-visited" style="color:#333!important;">0</div>
+                            <span>Not Visited</span>
+                        </div>
+                        <div class="legend-item" style="grid-column:span 2;">
+                            <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
+                            <span>Answered &amp; Marked</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Section label -->
-            <div id="palette-section-label">Question Palette</div>
+                <!-- Section label -->
+                <div id="palette-section-label">Question Palette</div>
 
-            <!-- Palette Grid -->
-            <div id="palette-grid-wrap">
-                <div class="palette-grid" id="palette-grid"></div>
-            </div>
+                <!-- Palette Grid -->
+                <div id="palette-grid-wrap">
+                    <div class="palette-grid" id="palette-grid"></div>
+                </div>
 
-            <!-- Sidebar Actions -->
-            <div id="sidebar-actions">
-                <button class="sb-action-btn" id="btn-question-paper">Question Paper</button>
-                <button class="sb-action-btn" id="btn-instructions">Instructions</button>
-                <button class="sb-action-btn" id="btn-profile-sb">Profile</button>
-                <button class="sb-action-btn" id="btn-exit-sb">Exit Test</button>
-                <button class="sb-submit-btn" id="btn-submit">Submit</button>
-            </div>
-        </div>
+                <!-- Sidebar Actions -->
+                <div id="sidebar-actions">
+                    <button class="sb-action-btn" id="btn-question-paper">Question Paper</button>
+                    <button class="sb-action-btn" id="btn-instructions">Instructions</button>
+                    <button class="sb-action-btn" id="btn-profile-sb">Profile</button>
+                    <button class="sb-action-btn" id="btn-exit-sb">Exit Test</button>
+                    <button class="sb-submit-btn" id="btn-submit">Submit</button>
+                </div>
+
+            </div><!-- end sidebar-panel -->
+        </div><!-- end sidebar-wrapper -->
 
     </div><!-- end exam-body -->
 </div><!-- end view-exam -->
 
 <!-- Mobile sidebar backdrop -->
 <div id="mobile-sidebar-overlay"></div>
+
+<!-- Mobile fixed right-edge palette tab -->
+<div id="mobile-palette-tab" title="Question Palette">
+    <span class="mob-arrow">&#8249;</span>
+</div>
 
 <!-- ============ PAUSE OVERLAY ============ -->
 <div id="pause-overlay">
@@ -1105,29 +1224,51 @@
             this.bind('btn-exit-sb', () => this.exitTest());
             this.bind('btn-instructions', () => alert("Instructions: Answer all questions. +1 for correct, -0.25 for wrong. Marked for Review questions ARE evaluated if answered."));
 
-            // Mobile palette toggle
-            var mobileBtn = document.getElementById('btn-mobile-palette');
-            if (mobileBtn) {
-                mobileBtn.addEventListener('click', () => {
-                    var sp = document.getElementById('sidebar-panel');
-                    var ov = document.getElementById('mobile-sidebar-overlay');
-                    sp.classList.toggle('open');
-                    ov.classList.toggle('show');
-                });
-            }
-
-            // Show mobile toggle on small screens
-            if (window.innerWidth <= 768) {
-                if (mobileBtn) mobileBtn.style.display = 'flex';
-            }
-
-            window.addEventListener('resize', () => {
-                if (mobileBtn) mobileBtn.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
-                if (window.innerWidth > 768) {
-                    document.getElementById('sidebar-panel').classList.remove('open');
-                    document.getElementById('mobile-sidebar-overlay').classList.remove('show');
-                }
+            // ---- DESKTOP sidebar toggle tab ----
+            var sidebarWrapper = document.getElementById('sidebar-wrapper');
+            var sidebarToggleTab = document.getElementById('sidebar-toggle-tab');
+            sidebarToggleTab.addEventListener('click', function() {
+                sidebarWrapper.classList.toggle('collapsed');
             });
+
+            // ---- MOBILE palette tab (fixed right edge) ----
+            var mobilePaletteTab = document.getElementById('mobile-palette-tab');
+            var overlay = document.getElementById('mobile-sidebar-overlay');
+            var sidebarPanel = document.getElementById('sidebar-panel');
+
+            function openMobileSidebar() {
+                sidebarPanel.classList.add('open');
+                overlay.classList.add('show');
+                mobilePaletteTab.classList.add('panel-open');
+            }
+
+            function closeMobileSidebar() {
+                sidebarPanel.classList.remove('open');
+                overlay.classList.remove('show');
+                mobilePaletteTab.classList.remove('panel-open');
+            }
+
+            mobilePaletteTab.addEventListener('click', function() {
+                if (sidebarPanel.classList.contains('open')) closeMobileSidebar();
+                else openMobileSidebar();
+            });
+
+            overlay.addEventListener('click', closeMobileSidebar);
+
+            // Show/hide correct controls based on screen size
+            function applyResponsiveMode() {
+                if (window.innerWidth <= 768) {
+                    mobilePaletteTab.style.display = 'flex';
+                    // Reset desktop collapsed state so panel is properly hidden via mobile CSS
+                    sidebarWrapper.classList.remove('collapsed');
+                } else {
+                    mobilePaletteTab.style.display = 'none';
+                    closeMobileSidebar();
+                }
+            }
+
+            applyResponsiveMode();
+            window.addEventListener('resize', applyResponsiveMode);
 
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
@@ -1531,6 +1672,8 @@
                         if (window.innerWidth <= 768) {
                             document.getElementById('sidebar-panel').classList.remove('open');
                             document.getElementById('mobile-sidebar-overlay').classList.remove('show');
+                            var mpt = document.getElementById('mobile-palette-tab');
+                            if (mpt) mpt.classList.remove('panel-open');
                         }
                     };
 
