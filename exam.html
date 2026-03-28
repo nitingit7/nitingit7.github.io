@@ -585,28 +585,10 @@
             background: white;
             border-top: 1px solid #ddd;
             padding: 10px 12px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 7px;
         }
-
-        .sb-action-btn {
-            padding: 8px 6px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: white;
-            font-size: 0.78rem;
-            font-weight: bold;
-            cursor: pointer;
-            text-align: center;
-            color: #333;
-            transition: background 0.12s;
-        }
-
-        .sb-action-btn:hover { background: #e3f2fd; border-color: #1565C0; color: #1565C0; }
 
         .sb-submit-btn {
-            grid-column: span 2;
+            width: 100%;
             background: #1565C0;
             color: white;
             border: none;
@@ -1053,10 +1035,6 @@
 
                 <!-- Sidebar Actions -->
                 <div id="sidebar-actions">
-                    <button class="sb-action-btn" id="btn-question-paper">Question Paper</button>
-                    <button class="sb-action-btn" id="btn-instructions">Instructions</button>
-                    <button class="sb-action-btn" id="btn-profile-sb">Profile</button>
-                    <button class="sb-action-btn" id="btn-exit-sb">Exit Test</button>
                     <button class="sb-submit-btn" id="btn-submit">Submit</button>
                 </div>
 
@@ -1218,8 +1196,6 @@
             this.bind('btn-exit-review', () => this.exitReview());
             this.bind('btn-view-sols', () => this.startReviewMode());
             this.bind('btn-reattempt', () => this.reattemptTest());
-            this.bind('btn-exit-sb', () => this.exitTest());
-            this.bind('btn-instructions', () => alert("Instructions: Answer all questions. +1 for correct, -0.25 for wrong. Marked for Review questions ARE evaluated if answered."));
 
             // ---- DESKTOP sidebar toggle tab ----
             var sidebarWrapper = document.getElementById('sidebar-wrapper');
