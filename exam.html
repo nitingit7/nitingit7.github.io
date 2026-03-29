@@ -139,6 +139,30 @@
 
         .btn-pause-test:hover { background: rgba(255,255,255,0.25); }
 
+        /* ---- SCROLL WHEEL TOAST ---- */
+        #scroll-toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: rgba(30,30,30,0.92);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 24px;
+            font-size: 0.88rem;
+            font-weight: bold;
+            z-index: 99998;
+            opacity: 0;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        #scroll-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
         /* ---- TEXT SIZE BAR ---- */
         #text-size-bar {
             background: #f8f9fa;
@@ -1145,7 +1169,10 @@
                         <div class="legend-item" style="grid-column:span 2; flex-direction:column; align-items:flex-start; gap:3px;">
                             <div style="display:flex; align-items:center; gap:6px;">
                                 <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
-                                <span>Answered &amp; Marked for Review (will not be considered for evaluation)</span>
+                                <span>Answered &amp; Marked for Review</span>
+                            </div>
+                            <div style="font-size:0.72rem; color:#c62828; font-weight:bold; padding-left:2px;">
+                                ⚠ Not evaluated — marked for review only
                             </div>
                         </div>
                     </div>
@@ -1221,6 +1248,9 @@
     <span class="close-modal">&times;</span>
     <img class="modal-img-content" id="img-modal-content">
 </div>
+
+<!-- Scroll wheel blocked toast -->
+<div id="scroll-toast">🚫 You cannot use scroll wheel during the test</div>
 
 <!-- ============ CUSTOM CONFIRM MODAL ============ -->
 <div id="custom-confirm-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
@@ -1652,11 +1682,6 @@
 
             var reviewBar = "";
             if (this.isReview) {
-                var badge = "";
-                if (r.sel === q.correctIndex) badge = `<span class="pro-badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✓ Correct</span>`;
-                else if (r.sel !== null) badge = `<span class="pro-badge" style="background:#ffebee;color:#c62828;border:1px solid #ef9a9a;">✗ Wrong</span>`;
-                else badge = `<span class="pro-badge" style="background:#f5f5f5;color:#666;border:1px solid #ddd;">— Skipped</span>`;
-
                 var spent = r.timeSpent || 0;
                 var tm = Math.floor(spent/60), ts = Math.floor(spent%60);
                 var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
@@ -1667,8 +1692,7 @@
                 reviewBar = `
                     <div class="review-toolbar">
                         <div class="badges-group">
-                            ${badge}
-                            <span class="pro-badge" style="background:#f5f5f5;color:#555;border:1px solid #ddd;">⏱ ${timeStr}</span>
+                            <span class="pro-badge" style="background:#f5f5f5;color:#555;border:1px solid #ddd;">⏱ Time spent: ${timeStr}</span>
                         </div>
                         <div class="toggle-group">
                             <span class="toggle-label">Re-attempt</span>
@@ -1723,30 +1747,49 @@
 
             var showSol = false;
             if (this.isReview) {
-                if (!isPractice) showSol = true;
-                else if (isPractice && self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) showSol = true;
+                // Only show solution in re-attempt mode after user has made a guess
+                if (isPractice && self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) showSol = true;
+                // Normal review: never show solution automatically
             }
 
             q.options.forEach(function(opt, i) {
                 var row = document.createElement('div');
                 row.className = 'opt-row';
-
                 var letter = ['a','b','c','d','e'][i];
+
+                // Build the indicator prefix (small sign before letter in re-attempt mode)
+                var originalIndicator = '';
 
                 if (self.isReview) {
                     if (isPractice) {
+                        // RE-ATTEMPT MODE
+                        // Show original attempt indicator (small ✓ or ✗) if this was the original selection
+                        if (r.sel === i) {
+                            if (r.sel === q.correctIndex) {
+                                originalIndicator = '<span style="font-size:0.75rem;color:#2e7d32;margin-right:4px;font-weight:bold;">✓</span>';
+                            } else {
+                                originalIndicator = '<span style="font-size:0.75rem;color:#c62828;margin-right:4px;font-weight:bold;">✗</span>';
+                            }
+                        }
+
                         if (showSol) {
+                            // After re-attempt selection: highlight correct green, wrong red
                             row.style.pointerEvents = 'none';
                             if (i === q.correctIndex) row.classList.add('correct');
-                            if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong');
+                            else if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong');
+                            else if (r.sel === i && i !== q.correctIndex && userSelected !== i) {
+                                // original wrong selection, not re-attempted yet - no highlight, just indicator
+                            }
                         } else {
+                            // Waiting for re-attempt selection
                             row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
                             if (userSelected === i) row.classList.add('selected');
                         }
                     } else {
+                        // NORMAL REVIEW MODE - show original selection only (blue), no correct/wrong
                         row.style.pointerEvents = 'none';
-                        if (i === q.correctIndex) row.classList.add('correct');
-                        if (r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
+                        if (r.sel === i) row.classList.add('selected');
+                        // No green/red highlighting in normal review
                     }
                 } else {
                     if (r.sel === i) row.classList.add('selected');
@@ -1755,7 +1798,7 @@
 
                 row.innerHTML = `
                     <div class="opt-letter">${letter.toUpperCase()}</div>
-                    <div style="flex:1;line-height:1.55;">${self.formatText(opt)}</div>
+                    <div style="flex:1;line-height:1.55;">${originalIndicator}${self.formatText(opt)}</div>
                 `;
                 box.appendChild(row);
             });
@@ -1854,14 +1897,13 @@
                     var s = self.responses[idx].status;
 
                     if (self.isReview) {
-                        var r = self.responses[idx];
-                        if (r.sel === self.data.questions[idx].correctIndex) {
-                            btn.classList.add('pal-answered');
-                        } else if (r.sel !== null) {
-                            btn.classList.add('pal-not-answered');
-                        } else {
-                            btn.classList.add('pal-not-visited');
-                        }
+                        var s = self.responses[idx].status;
+                        // Show original attempt status in review palette
+                        if (s === 'ans') { btn.classList.add('pal-answered'); }
+                        else if (s === 'ans-rev') { btn.classList.add('pal-ans-marked'); }
+                        else if (s === 'rev') { btn.classList.add('pal-marked'); }
+                        else if (s === 'not-answered') { btn.classList.add('pal-not-answered'); }
+                        else { btn.classList.add('pal-not-visited'); }
                     } else {
                         if (s === 'ans') { btn.classList.add('pal-answered'); counts.answered++; }
                         else if (s === 'ans-rev') { btn.classList.add('pal-ans-marked'); counts.ansMarked++; }
@@ -2112,8 +2154,12 @@
             document.getElementById('exam-footer').style.display = 'none';
             document.getElementById('review-footer').style.display = 'flex';
 
-            // Hide exam-specific header elements
+            // Hide timer, pause button, user info box, legend — not needed in review
             document.getElementById('user-info-box').style.display = 'none';
+            document.getElementById('timer-display').closest('.timer-wrap') && (document.querySelector('.timer-wrap').style.display = 'none');
+            document.getElementById('btn-pause').style.display = 'none';
+            document.getElementById('legend-box').style.display = 'none';
+            document.getElementById('text-size-bar').style.display = 'none';
 
             this.switchReviewSection(0);
             this.renderSectionsBar();
@@ -2196,6 +2242,22 @@
 
     window.onload = function() {
         window.app.init();
+
+        // Block mouse scroll wheel during test (not in review)
+        var scrollToast = document.getElementById('scroll-toast');
+        var scrollToastTimer = null;
+
+        window.addEventListener('wheel', function(e) {
+            if (window.app && window.app.data && !window.app.isReview && !window.app.isPaused) {
+                e.preventDefault();
+                // Show toast
+                scrollToast.classList.add('show');
+                if (scrollToastTimer) clearTimeout(scrollToastTimer);
+                scrollToastTimer = setTimeout(function() {
+                    scrollToast.classList.remove('show');
+                }, 2000);
+            }
+        }, { passive: false });
 
         // Warn user before closing/refreshing tab during test
         window.addEventListener('beforeunload', function(e) {
