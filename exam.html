@@ -1200,10 +1200,7 @@
                         <div class="legend-item" style="grid-column:span 2; flex-direction:column; align-items:flex-start; gap:3px;">
                             <div style="display:flex; align-items:center; gap:6px;">
                                 <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
-                                <span>Answered &amp; Marked for Review</span>
-                            </div>
-                            <div style="font-size:0.72rem; color:#c62828; font-weight:bold; padding-left:2px;">
-                                ⚠ Not evaluated — marked for review only
+                                <span>Answered &amp; Marked for Review (will not be evaluated)</span>
                             </div>
                         </div>
                     </div>
@@ -1739,9 +1736,9 @@
                 } else if (originalSel === null || originalSel === undefined || r.status === 'not-answered') {
                     statusBadge = `<span class="pro-badge" style="background:#eeeeee;color:#424242;border:1px solid #bdbdbd;">— Skipped</span>`;
                 } else if (r.status === 'ans-rev') {
-                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🔖 Marked (Not Evaluated)</span>`;
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">Marked (Not Evaluated)</span>`;
                 } else if (r.status === 'rev') {
-                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🔖 Marked (Not Evaluated)</span>`;
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">Marked (Not Evaluated)</span>`;
                 } else if (originalSel === q.correctIndex) {
                     statusBadge = `<span class="pro-badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✓ Correct</span>`;
                 } else {
