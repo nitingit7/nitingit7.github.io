@@ -139,6 +139,31 @@
 
         .btn-pause-test:hover { background: rgba(255,255,255,0.25); }
 
+        /* ---- ORIGINAL SELECTION END SIGN ---- */
+        .opt-end-sign {
+            flex-shrink: 0;
+            margin-left: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+        }
+
+        .sign-correct {
+            background: #2e7d32;
+            color: white;
+        }
+
+        .sign-wrong {
+            background: #c62828;
+            color: white;
+        }
+
         /* ---- SCROLL WHEEL TOAST ---- */
         #scroll-toast {
             position: fixed;
@@ -1776,15 +1801,29 @@
                 row.className = 'opt-row';
                 var letter = ['a','b','c','d','e'][i];
 
-                // --- ORIGINAL SELECTION INDICATOR (always shown when relevant) ---
-                // Small ✓ green if original was correct, ✗ red if original was wrong
+                // --- ORIGINAL SELECTION SIGN (end of row) ---
+                // Rules:
+                // - Never show when re-attempt is ON and no guess made yet (hide until after pick)
+                // - Never show sign for ans-rev (Answered & Marked) — not evaluated
+                // - Show ✓ if original was correct, ✗ if original was wrong
+                // - In re-attempt mode after guess: only show if this option is the original pick
                 var origSign = '';
-                if (self.isReview && originalSel === i) {
-                    if (originalSel === q.correctIndex) {
-                        origSign = '<span style="font-size:0.8rem;color:#2e7d32;font-weight:bold;margin-right:5px;flex-shrink:0;">✓</span>';
-                    } else {
-                        origSign = '<span style="font-size:0.8rem;color:#c62828;font-weight:bold;margin-right:5px;flex-shrink:0;">✗</span>';
+                var isAnsMarked = (r.status === 'ans-rev'); // not evaluated
+
+                if (self.isReview && originalSel === i && !isAnsMarked) {
+                    var signCorrect = (originalSel === q.correctIndex);
+                    if (!isPractice) {
+                        // Normal review (re-attempt OFF) — always show sign
+                        origSign = signCorrect
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
+                    } else if (isPractice && reattemptSel !== null) {
+                        // Re-attempt ON, after guess — show sign for original pick
+                        origSign = signCorrect
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
                     }
+                    // Re-attempt ON, no guess yet → origSign stays '' (hidden)
                 }
 
                 if (!self.isReview) {
@@ -1794,40 +1833,31 @@
 
                 } else if (!isPractice) {
                     // ---- NORMAL REVIEW (re-attempt OFF) ----
-                    // Always highlight correct option green
-                    // Original selection: blue if correct, red if wrong
                     row.style.pointerEvents = 'none';
                     if (i === q.correctIndex) {
                         row.classList.add('correct');
-                    } else if (originalSel === i) {
+                    } else if (originalSel === i && !isAnsMarked) {
                         row.classList.add('wrong');
                     }
 
                 } else if (isPractice && reattemptSel === null) {
-                    // ---- RE-ATTEMPT MODE: waiting for user to pick ----
-                    // Do NOT reveal correct answer yet - options plain, just show original sign
+                    // ---- RE-ATTEMPT ON: waiting for pick — no highlights, no signs ----
                     row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
 
                 } else {
-                    // ---- RE-ATTEMPT MODE: user has made a guess (showSol = true) ----
+                    // ---- RE-ATTEMPT ON: after guess ----
                     row.style.pointerEvents = 'none';
-                    // Correct always green
                     if (i === q.correctIndex) {
                         row.classList.add('correct');
                     } else if (reattemptSel === i) {
-                        // Re-attempt wrong selection → red
                         row.classList.add('wrong');
                     }
-                    // Original selection: no bg highlight, just sign (handled below)
                 }
 
                 row.innerHTML = `
-                    <div style="display:flex;align-items:center;width:100%;gap:0;">
-                        <div class="opt-letter" style="flex-shrink:0;">${letter.toUpperCase()}</div>
-                        <div style="display:flex;align-items:center;flex:1;line-height:1.55;gap:0;">
-                            ${origSign}<span>${self.formatText(opt)}</span>
-                        </div>
-                    </div>
+                    <div class="opt-letter" style="flex-shrink:0;">${letter.toUpperCase()}</div>
+                    <div style="flex:1;line-height:1.55;">${self.formatText(opt)}</div>
+                    ${origSign}
                 `;
                 box.appendChild(row);
             });
