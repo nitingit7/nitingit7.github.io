@@ -139,6 +139,55 @@
 
         .btn-pause-test:hover { background: rgba(255,255,255,0.25); }
 
+        /* ---- ORIGINAL SELECTION END SIGN ---- */
+        .opt-end-sign {
+            flex-shrink: 0;
+            margin-left: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+        }
+
+        .sign-correct {
+            background: #2e7d32;
+            color: white;
+        }
+
+        .sign-wrong {
+            background: #c62828;
+            color: white;
+        }
+
+        /* ---- SCROLL WHEEL TOAST ---- */
+        #scroll-toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: rgba(30,30,30,0.92);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 24px;
+            font-size: 0.88rem;
+            font-weight: bold;
+            z-index: 99998;
+            opacity: 0;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        #scroll-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
         /* ---- TEXT SIZE BAR ---- */
         #text-size-bar {
             background: #f8f9fa;
@@ -660,6 +709,12 @@
         }
         .pal-not-visited   { background: #e0e0e0 !important; color: #333 !important; }
 
+        /* Review palette colors */
+        .pal-review-correct  { background: #4caf50 !important; color: white !important; border-color: #388e3c !important; }
+        .pal-review-wrong    { background: #f44336 !important; color: white !important; border-color: #c62828 !important; }
+        .pal-review-skipped  { background: #616161 !important; color: white !important; border-color: #424242 !important; } /* dark grey - visited, not answered */
+        .pal-review-unseen   { background: #e0e0e0 !important; color: #666 !important; border-color: #bdbdbd !important; } /* light grey - never opened */
+
         /* Current question ring */
         .pal-btn-current {
             box-shadow: 0 0 0 2px #1565C0, 0 0 0 4px rgba(21,101,192,0.3) !important;
@@ -1145,7 +1200,7 @@
                         <div class="legend-item" style="grid-column:span 2; flex-direction:column; align-items:flex-start; gap:3px;">
                             <div style="display:flex; align-items:center; gap:6px;">
                                 <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
-                                <span>Answered &amp; Marked for Review (will not be considered for evaluation)</span>
+                                <span>Answered &amp; Marked for Review (will not be evaluated)</span>
                             </div>
                         </div>
                     </div>
@@ -1221,6 +1276,9 @@
     <span class="close-modal">&times;</span>
     <img class="modal-img-content" id="img-modal-content">
 </div>
+
+<!-- Scroll wheel blocked toast -->
+<div id="scroll-toast">🚫 You cannot use scroll wheel during the test</div>
 
 <!-- ============ CUSTOM CONFIRM MODAL ============ -->
 <div id="custom-confirm-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
@@ -1628,9 +1686,24 @@
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
 
+            // isPractice = global re-attempt mode (ON by default in review)
             var isPractice = false;
+            if (this.isReview) {
+                // Use global toggle state; default true unless explicitly set false
+                isPractice = (this.globalReattempt !== false);
+            }
+
+            // Sync from DOM toggle if it exists
             var toggle = document.getElementById('btn-practice-mode');
-            if (this.isReview && toggle && toggle.checked) isPractice = true;
+            if (this.isReview && toggle) {
+                isPractice = toggle.checked;
+            }
+
+            // originalSel = what user picked during actual test
+            var originalSel = r.sel;
+            // reattemptSel = what user picked in re-attempt (null if not yet)
+            var reattemptSel = (this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined)
+                               ? this.reviewGuesses[this.currQ] : null;
 
             if (!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
 
@@ -1652,28 +1725,39 @@
 
             var reviewBar = "";
             if (this.isReview) {
-                var badge = "";
-                if (r.sel === q.correctIndex) badge = `<span class="pro-badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✓ Correct</span>`;
-                else if (r.sel !== null) badge = `<span class="pro-badge" style="background:#ffebee;color:#c62828;border:1px solid #ef9a9a;">✗ Wrong</span>`;
-                else badge = `<span class="pro-badge" style="background:#f5f5f5;color:#666;border:1px solid #ddd;">— Skipped</span>`;
-
                 var spent = r.timeSpent || 0;
                 var tm = Math.floor(spent/60), ts = Math.floor(spent%60);
                 var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
 
-                var chk = (this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined) || (toggle && toggle.checked) ? "checked" : "";
-                if (toggle && toggle.checked) chk = "checked";
+                // Status badge - show precise original test status
+                var statusBadge = '';
+                if (r.status === 'not-visited') {
+                    statusBadge = `<span class="pro-badge" style="background:#f5f5f5;color:#888;border:1px solid #ddd;">◌ Unseen</span>`;
+                } else if (originalSel === null || originalSel === undefined || r.status === 'not-answered') {
+                    statusBadge = `<span class="pro-badge" style="background:#eeeeee;color:#424242;border:1px solid #bdbdbd;">— Skipped</span>`;
+                } else if (r.status === 'ans-rev') {
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">Marked (Not Evaluated)</span>`;
+                } else if (r.status === 'rev') {
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">Marked (Not Evaluated)</span>`;
+                } else if (originalSel === q.correctIndex) {
+                    statusBadge = `<span class="pro-badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✓ Correct</span>`;
+                } else {
+                    statusBadge = `<span class="pro-badge" style="background:#ffebee;color:#c62828;border:1px solid #ef9a9a;">✗ Wrong</span>`;
+                }
+
+                // Global re-attempt toggle state (ON by default)
+                var chk = (this.globalReattempt !== false) ? "checked" : "";
 
                 reviewBar = `
                     <div class="review-toolbar">
                         <div class="badges-group">
-                            ${badge}
+                            ${statusBadge}
                             <span class="pro-badge" style="background:#f5f5f5;color:#555;border:1px solid #ddd;">⏱ ${timeStr}</span>
                         </div>
                         <div class="toggle-group">
                             <span class="toggle-label">Re-attempt</span>
                             <label class="switch">
-                                <input type="checkbox" id="btn-practice-mode" ${chk} onchange="window.app.loadQ()">
+                                <input type="checkbox" id="btn-practice-mode" ${chk} onchange="window.app.onReattemptToggle(this)">
                                 <span class="slider"></span>
                             </label>
                         </div>
@@ -1716,53 +1800,83 @@
             box.innerHTML = '';
             var self = this;
 
-            var userSelected = null;
-            if (isPractice && self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) {
-                userSelected = self.reviewGuesses[self.currQ];
-            } else { userSelected = r.sel; }
-
             var showSol = false;
-            if (this.isReview) {
-                if (!isPractice) showSol = true;
-                else if (isPractice && self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) showSol = true;
-            }
+            if (this.isReview && isPractice && reattemptSel !== null) showSol = true;
 
             q.options.forEach(function(opt, i) {
                 var row = document.createElement('div');
                 row.className = 'opt-row';
-
                 var letter = ['a','b','c','d','e'][i];
 
-                if (self.isReview) {
-                    if (isPractice) {
-                        if (showSol) {
-                            row.style.pointerEvents = 'none';
-                            if (i === q.correctIndex) row.classList.add('correct');
-                            if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong');
-                        } else {
-                            row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
-                            if (userSelected === i) row.classList.add('selected');
-                        }
-                    } else {
-                        row.style.pointerEvents = 'none';
-                        if (i === q.correctIndex) row.classList.add('correct');
-                        if (r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
+                // --- ORIGINAL SELECTION SIGN (end of row) ---
+                // Rules:
+                // - Never show when re-attempt is ON and no guess made yet (hide until after pick)
+                // - Never show sign for ans-rev (Answered & Marked) — not evaluated
+                // - Show ✓ if original was correct, ✗ if original was wrong
+                // - In re-attempt mode after guess: only show if this option is the original pick
+                var origSign = '';
+                var isAnsMarked = (r.status === 'ans-rev'); // not evaluated
+
+                if (self.isReview && originalSel === i && !isAnsMarked) {
+                    var signCorrect = (originalSel === q.correctIndex);
+                    if (!isPractice) {
+                        // Normal review (re-attempt OFF) — always show sign
+                        origSign = signCorrect
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
+                    } else if (isPractice && reattemptSel !== null) {
+                        // Re-attempt ON, after guess — show sign for original pick
+                        origSign = signCorrect
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
                     }
-                } else {
-                    if (r.sel === i) row.classList.add('selected');
+                    // Re-attempt ON, no guess yet → origSign stays '' (hidden)
+                }
+
+                if (!self.isReview) {
+                    // ---- DURING TEST ----
+                    if (originalSel === i) row.classList.add('selected');
                     row.onclick = function() { r.sel = i; self.loadQ(); };
+
+                } else if (!isPractice) {
+                    // ---- NORMAL REVIEW (re-attempt OFF) ----
+                    row.style.pointerEvents = 'none';
+                    if (i === q.correctIndex) {
+                        row.classList.add('correct');
+                    } else if (originalSel === i && !isAnsMarked) {
+                        row.classList.add('wrong');
+                    }
+
+                } else if (isPractice && reattemptSel === null) {
+                    // ---- RE-ATTEMPT ON: waiting for pick — no highlights, no signs ----
+                    row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
+
+                } else {
+                    // ---- RE-ATTEMPT ON: after guess ----
+                    row.style.pointerEvents = 'none';
+                    if (i === q.correctIndex) {
+                        row.classList.add('correct');
+                    } else if (reattemptSel === i) {
+                        row.classList.add('wrong');
+                    }
                 }
 
                 row.innerHTML = `
-                    <div class="opt-letter">${letter.toUpperCase()}</div>
+                    <div class="opt-letter" style="flex-shrink:0;">${letter.toUpperCase()}</div>
                     <div style="flex:1;line-height:1.55;">${self.formatText(opt)}</div>
+                    ${origSign}
                 `;
                 box.appendChild(row);
             });
 
-            // Solution box
+            // Solution box — show in normal review always, in re-attempt after guess
             var solBox = document.getElementById('solution-box');
-            if (showSol) {
+            var showSolBox = false;
+            if (this.isReview) {
+                if (!isPractice) showSolBox = true; // normal review always shows solution
+                else if (isPractice && reattemptSel !== null) showSolBox = true; // re-attempt after guess
+            }
+            if (showSolBox) {
                 solBox.style.display = 'block';
                 var solText = document.getElementById('sol-text');
                 solText.innerHTML = self.formatText(q.solution || "No solution provided.");
@@ -1793,8 +1907,6 @@
             }
 
             this.renderPalette();
-
-            // KaTeX
             try {
                 if (window.renderMathInElement) {
                     renderMathInElement(document.getElementById('q-text'), {
@@ -1854,13 +1966,28 @@
                     var s = self.responses[idx].status;
 
                     if (self.isReview) {
-                        var r = self.responses[idx];
-                        if (r.sel === self.data.questions[idx].correctIndex) {
-                            btn.classList.add('pal-answered');
-                        } else if (r.sel !== null) {
-                            btn.classList.add('pal-not-answered');
+                        var resp = self.responses[idx];
+                        var s = resp.status;
+                        var q = self.data.questions[idx];
+
+                        // ans-rev (Answered & Marked) — keep purple, not evaluated
+                        if (s === 'ans-rev') {
+                            btn.classList.add('pal-ans-marked');
+                        } else if (s === 'rev') {
+                            // Marked only (no answer) — keep purple
+                            btn.classList.add('pal-marked');
+                        } else if (s === 'not-visited') {
+                            // Never opened — light grey (unseen)
+                            btn.classList.add('pal-review-unseen');
+                        } else if (resp.sel === null || s === 'not-answered') {
+                            // Visited but not answered — dark grey (skipped)
+                            btn.classList.add('pal-review-skipped');
+                        } else if (resp.sel === q.correctIndex) {
+                            // Correct — green
+                            btn.classList.add('pal-review-correct');
                         } else {
-                            btn.classList.add('pal-not-visited');
+                            // Wrong — red
+                            btn.classList.add('pal-review-wrong');
                         }
                     } else {
                         if (s === 'ans') { btn.classList.add('pal-answered'); counts.answered++; }
@@ -2107,13 +2234,18 @@
         startReviewMode: function() {
             this.isReview = true;
             this.currentSectionIdx = 0;
+            this.globalReattempt = true; // default ON for all questions
 
             // Swap footers
             document.getElementById('exam-footer').style.display = 'none';
             document.getElementById('review-footer').style.display = 'flex';
 
-            // Hide exam-specific header elements
+            // Hide timer, pause button, user info box, legend — not needed in review
             document.getElementById('user-info-box').style.display = 'none';
+            document.getElementById('timer-display').closest('.timer-wrap') && (document.querySelector('.timer-wrap').style.display = 'none');
+            document.getElementById('btn-pause').style.display = 'none';
+            document.getElementById('legend-box').style.display = 'none';
+            document.getElementById('text-size-bar').style.display = 'none';
 
             this.switchReviewSection(0);
             this.renderSectionsBar();
@@ -2133,11 +2265,23 @@
             }
             this.responses = saved;
             this.reviewGuesses = {};
+            this.reviewGuessesToggle = {};
+            this.globalReattempt = true; // reset to ON for each section
             this.renderSectionsBar();
             this.loadQ();
         },
 
         exitReview: function() { this.switchView('result'); },
+
+        onReattemptToggle: function(checkbox) {
+            // Global toggle — applies to ALL questions
+            this.globalReattempt = checkbox.checked;
+            // When toggling OFF, clear ALL re-attempt guesses so everything resets
+            if (!checkbox.checked) {
+                this.reviewGuesses = {};
+            }
+            this.loadQ();
+        },
 
         /* ---- RESULT PAGE (STORED) ---- */
         showStoredResult: function(url) {
@@ -2196,6 +2340,22 @@
 
     window.onload = function() {
         window.app.init();
+
+        // Block mouse scroll wheel during test (not in review)
+        var scrollToast = document.getElementById('scroll-toast');
+        var scrollToastTimer = null;
+
+        window.addEventListener('wheel', function(e) {
+            if (window.app && window.app.data && !window.app.isReview && !window.app.isPaused) {
+                e.preventDefault();
+                // Show toast
+                scrollToast.classList.add('show');
+                if (scrollToastTimer) clearTimeout(scrollToastTimer);
+                scrollToastTimer = setTimeout(function() {
+                    scrollToast.classList.remove('show');
+                }, 2000);
+            }
+        }, { passive: false });
 
         // Warn user before closing/refreshing tab during test
         window.addEventListener('beforeunload', function(e) {
