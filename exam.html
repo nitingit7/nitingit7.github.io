@@ -709,6 +709,11 @@
         }
         .pal-not-visited   { background: #e0e0e0 !important; color: #333 !important; }
 
+        /* Review palette colors */
+        .pal-review-correct  { background: #4caf50 !important; color: white !important; border-color: #388e3c !important; }
+        .pal-review-wrong    { background: #f44336 !important; color: white !important; border-color: #c62828 !important; }
+        .pal-review-skipped  { background: #9e9e9e !important; color: white !important; border-color: #757575 !important; }
+
         /* Current question ring */
         .pal-btn-current {
             box-shadow: 0 0 0 2px #1565C0, 0 0 0 4px rgba(21,101,192,0.3) !important;
@@ -1959,13 +1964,26 @@
                     var s = self.responses[idx].status;
 
                     if (self.isReview) {
-                        var s = self.responses[idx].status;
-                        // Show original attempt status in review palette
-                        if (s === 'ans') { btn.classList.add('pal-answered'); }
-                        else if (s === 'ans-rev') { btn.classList.add('pal-ans-marked'); }
-                        else if (s === 'rev') { btn.classList.add('pal-marked'); }
-                        else if (s === 'not-answered') { btn.classList.add('pal-not-answered'); }
-                        else { btn.classList.add('pal-not-visited'); }
+                        var resp = self.responses[idx];
+                        var s = resp.status;
+                        var q = self.data.questions[idx];
+
+                        // ans-rev (Answered & Marked) — keep purple, not evaluated
+                        if (s === 'ans-rev') {
+                            btn.classList.add('pal-ans-marked');
+                        } else if (s === 'rev') {
+                            // Marked only (no answer) — keep purple
+                            btn.classList.add('pal-marked');
+                        } else if (resp.sel === null || s === 'not-answered' || s === 'not-visited') {
+                            // Skipped — darker grey
+                            btn.classList.add('pal-review-skipped');
+                        } else if (resp.sel === q.correctIndex) {
+                            // Correct — green
+                            btn.classList.add('pal-review-correct');
+                        } else {
+                            // Wrong — red
+                            btn.classList.add('pal-review-wrong');
+                        }
                     } else {
                         if (s === 'ans') { btn.classList.add('pal-answered'); counts.answered++; }
                         else if (s === 'ans-rev') { btn.classList.add('pal-ans-marked'); counts.ansMarked++; }
