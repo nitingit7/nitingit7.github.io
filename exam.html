@@ -1658,9 +1658,25 @@
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
 
+            // isPractice = re-attempt mode. Default ON in review unless explicitly toggled off.
             var isPractice = false;
+            if (this.isReview) {
+                if (!this.reviewGuessesToggle) this.reviewGuessesToggle = {};
+                // Default is ON (true) unless user turned it off (false)
+                isPractice = this.reviewGuessesToggle[this.currQ] !== false;
+            }
+
+            // Also sync from DOM toggle if it exists (for immediate re-renders)
             var toggle = document.getElementById('btn-practice-mode');
-            if (this.isReview && toggle && toggle.checked) isPractice = true;
+            if (this.isReview && toggle) {
+                isPractice = toggle.checked;
+            }
+
+            // originalSel = what user picked during actual test
+            var originalSel = r.sel;
+            // reattemptSel = what user picked in re-attempt (null if not yet)
+            var reattemptSel = (this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined)
+                               ? this.reviewGuesses[this.currQ] : null;
 
             if (!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
 
@@ -1686,13 +1702,25 @@
                 var tm = Math.floor(spent/60), ts = Math.floor(spent%60);
                 var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
 
-                var chk = (this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined) || (toggle && toggle.checked) ? "checked" : "";
-                if (toggle && toggle.checked) chk = "checked";
+                // Status badge - always show original test result
+                var statusBadge = '';
+                if (originalSel === null || originalSel === undefined) {
+                    statusBadge = `<span class="pro-badge" style="background:#f5f5f5;color:#666;border:1px solid #ddd;">— Skipped</span>`;
+                } else if (originalSel === q.correctIndex) {
+                    statusBadge = `<span class="pro-badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✓ Correct</span>`;
+                } else {
+                    statusBadge = `<span class="pro-badge" style="background:#ffebee;color:#c62828;border:1px solid #ef9a9a;">✗ Wrong</span>`;
+                }
+
+                // Default re-attempt to ON (checked) unless explicitly toggled off
+                var chk = "checked"; // default ON
+                if (this.reviewGuessesToggle && this.reviewGuessesToggle[this.currQ] === false) chk = "";
 
                 reviewBar = `
                     <div class="review-toolbar">
                         <div class="badges-group">
-                            <span class="pro-badge" style="background:#f5f5f5;color:#555;border:1px solid #ddd;">⏱ Time spent: ${timeStr}</span>
+                            ${statusBadge}
+                            <span class="pro-badge" style="background:#f5f5f5;color:#555;border:1px solid #ddd;">⏱ ${timeStr}</span>
                         </div>
                         <div class="toggle-group">
                             <span class="toggle-label">Re-attempt</span>
@@ -1740,12 +1768,6 @@
             box.innerHTML = '';
             var self = this;
 
-            // originalSel = what user picked during the actual test
-            var originalSel = r.sel;
-            // reattemptSel = what user picked in re-attempt mode (null if not yet picked)
-            var reattemptSel = (self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined)
-                               ? self.reviewGuesses[self.currQ] : null;
-
             var showSol = false;
             if (this.isReview && isPractice && reattemptSel !== null) showSol = true;
 
@@ -1783,12 +1805,8 @@
 
                 } else if (isPractice && reattemptSel === null) {
                     // ---- RE-ATTEMPT MODE: waiting for user to pick ----
-                    // Correct always shown green, original shown with sign only, no bg highlight
+                    // Do NOT reveal correct answer yet - options plain, just show original sign
                     row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
-                    if (i === q.correctIndex) {
-                        row.classList.add('correct');
-                    }
-                    // Original selection: no background, just the sign indicator (handled below)
 
                 } else {
                     // ---- RE-ATTEMPT MODE: user has made a guess (showSol = true) ----
@@ -2193,6 +2211,7 @@
             }
             this.responses = saved;
             this.reviewGuesses = {};
+            this.reviewGuessesToggle = {}; // reset toggle states per section
             this.renderSectionsBar();
             this.loadQ();
         },
@@ -2200,7 +2219,10 @@
         exitReview: function() { this.switchView('result'); },
 
         onReattemptToggle: function(checkbox) {
-            // When toggling OFF re-attempt, clear the guess for current question so it resets cleanly
+            if (!this.reviewGuessesToggle) this.reviewGuessesToggle = {};
+            // Save toggle state per question
+            this.reviewGuessesToggle[this.currQ] = checkbox.checked;
+            // When toggling OFF, clear the re-attempt guess so it resets cleanly
             if (!checkbox.checked) {
                 if (this.reviewGuesses) delete this.reviewGuesses[this.currQ];
             }
