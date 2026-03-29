@@ -1733,10 +1733,16 @@
                 var tm = Math.floor(spent/60), ts = Math.floor(spent%60);
                 var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
 
-                // Status badge - always show original test result
+                // Status badge - show precise original test status
                 var statusBadge = '';
-                if (originalSel === null || originalSel === undefined) {
-                    statusBadge = `<span class="pro-badge" style="background:#f5f5f5;color:#666;border:1px solid #ddd;">— Skipped</span>`;
+                if (r.status === 'not-visited') {
+                    statusBadge = `<span class="pro-badge" style="background:#f5f5f5;color:#888;border:1px solid #ddd;">◌ Unseen</span>`;
+                } else if (originalSel === null || originalSel === undefined || r.status === 'not-answered') {
+                    statusBadge = `<span class="pro-badge" style="background:#eeeeee;color:#424242;border:1px solid #bdbdbd;">— Skipped</span>`;
+                } else if (r.status === 'ans-rev') {
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🔖 Marked (Not Evaluated)</span>`;
+                } else if (r.status === 'rev') {
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🔖 Marked (Not Evaluated)</span>`;
                 } else if (originalSel === q.correctIndex) {
                     statusBadge = `<span class="pro-badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✓ Correct</span>`;
                 } else {
