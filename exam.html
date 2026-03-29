@@ -712,7 +712,8 @@
         /* Review palette colors */
         .pal-review-correct  { background: #4caf50 !important; color: white !important; border-color: #388e3c !important; }
         .pal-review-wrong    { background: #f44336 !important; color: white !important; border-color: #c62828 !important; }
-        .pal-review-skipped  { background: #9e9e9e !important; color: white !important; border-color: #757575 !important; }
+        .pal-review-skipped  { background: #616161 !important; color: white !important; border-color: #424242 !important; } /* dark grey - visited, not answered */
+        .pal-review-unseen   { background: #e0e0e0 !important; color: #666 !important; border-color: #bdbdbd !important; } /* light grey - never opened */
 
         /* Current question ring */
         .pal-btn-current {
@@ -1974,8 +1975,11 @@
                         } else if (s === 'rev') {
                             // Marked only (no answer) — keep purple
                             btn.classList.add('pal-marked');
-                        } else if (resp.sel === null || s === 'not-answered' || s === 'not-visited') {
-                            // Skipped — darker grey
+                        } else if (s === 'not-visited') {
+                            // Never opened — light grey (unseen)
+                            btn.classList.add('pal-review-unseen');
+                        } else if (resp.sel === null || s === 'not-answered') {
+                            // Visited but not answered — dark grey (skipped)
                             btn.classList.add('pal-review-skipped');
                         } else if (resp.sel === q.correctIndex) {
                             // Correct — green
