@@ -1697,7 +1697,7 @@
                         <div class="toggle-group">
                             <span class="toggle-label">Re-attempt</span>
                             <label class="switch">
-                                <input type="checkbox" id="btn-practice-mode" ${chk} onchange="window.app.loadQ()">
+                                <input type="checkbox" id="btn-practice-mode" ${chk} onchange="window.app.onReattemptToggle(this)">
                                 <span class="slider"></span>
                             </label>
                         </div>
@@ -1740,72 +1740,88 @@
             box.innerHTML = '';
             var self = this;
 
-            var userSelected = null;
-            if (isPractice && self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) {
-                userSelected = self.reviewGuesses[self.currQ];
-            } else { userSelected = r.sel; }
+            // originalSel = what user picked during the actual test
+            var originalSel = r.sel;
+            // reattemptSel = what user picked in re-attempt mode (null if not yet picked)
+            var reattemptSel = (self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined)
+                               ? self.reviewGuesses[self.currQ] : null;
 
             var showSol = false;
-            if (this.isReview) {
-                // Only show solution in re-attempt mode after user has made a guess
-                if (isPractice && self.reviewGuesses && self.reviewGuesses[self.currQ] !== undefined) showSol = true;
-                // Normal review: never show solution automatically
-            }
+            if (this.isReview && isPractice && reattemptSel !== null) showSol = true;
 
             q.options.forEach(function(opt, i) {
                 var row = document.createElement('div');
                 row.className = 'opt-row';
                 var letter = ['a','b','c','d','e'][i];
 
-                // Build the indicator prefix (small sign before letter in re-attempt mode)
-                var originalIndicator = '';
-
-                if (self.isReview) {
-                    if (isPractice) {
-                        // RE-ATTEMPT MODE
-                        // Show original attempt indicator (small ✓ or ✗) if this was the original selection
-                        if (r.sel === i) {
-                            if (r.sel === q.correctIndex) {
-                                originalIndicator = '<span style="font-size:0.75rem;color:#2e7d32;margin-right:4px;font-weight:bold;">✓</span>';
-                            } else {
-                                originalIndicator = '<span style="font-size:0.75rem;color:#c62828;margin-right:4px;font-weight:bold;">✗</span>';
-                            }
-                        }
-
-                        if (showSol) {
-                            // After re-attempt selection: highlight correct green, wrong red
-                            row.style.pointerEvents = 'none';
-                            if (i === q.correctIndex) row.classList.add('correct');
-                            else if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong');
-                            else if (r.sel === i && i !== q.correctIndex && userSelected !== i) {
-                                // original wrong selection, not re-attempted yet - no highlight, just indicator
-                            }
-                        } else {
-                            // Waiting for re-attempt selection
-                            row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
-                            if (userSelected === i) row.classList.add('selected');
-                        }
+                // --- ORIGINAL SELECTION INDICATOR (always shown when relevant) ---
+                // Small ✓ green if original was correct, ✗ red if original was wrong
+                var origSign = '';
+                if (self.isReview && originalSel === i) {
+                    if (originalSel === q.correctIndex) {
+                        origSign = '<span style="font-size:0.8rem;color:#2e7d32;font-weight:bold;margin-right:5px;flex-shrink:0;">✓</span>';
                     } else {
-                        // NORMAL REVIEW MODE - show original selection only (blue), no correct/wrong
-                        row.style.pointerEvents = 'none';
-                        if (r.sel === i) row.classList.add('selected');
-                        // No green/red highlighting in normal review
+                        origSign = '<span style="font-size:0.8rem;color:#c62828;font-weight:bold;margin-right:5px;flex-shrink:0;">✗</span>';
                     }
-                } else {
-                    if (r.sel === i) row.classList.add('selected');
+                }
+
+                if (!self.isReview) {
+                    // ---- DURING TEST ----
+                    if (originalSel === i) row.classList.add('selected');
                     row.onclick = function() { r.sel = i; self.loadQ(); };
+
+                } else if (!isPractice) {
+                    // ---- NORMAL REVIEW (re-attempt OFF) ----
+                    // Always highlight correct option green
+                    // Original selection: blue if correct, red if wrong
+                    row.style.pointerEvents = 'none';
+                    if (i === q.correctIndex) {
+                        row.classList.add('correct');
+                    } else if (originalSel === i) {
+                        row.classList.add('wrong');
+                    }
+
+                } else if (isPractice && reattemptSel === null) {
+                    // ---- RE-ATTEMPT MODE: waiting for user to pick ----
+                    // Correct always shown green, original shown with sign only, no bg highlight
+                    row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
+                    if (i === q.correctIndex) {
+                        row.classList.add('correct');
+                    }
+                    // Original selection: no background, just the sign indicator (handled below)
+
+                } else {
+                    // ---- RE-ATTEMPT MODE: user has made a guess (showSol = true) ----
+                    row.style.pointerEvents = 'none';
+                    // Correct always green
+                    if (i === q.correctIndex) {
+                        row.classList.add('correct');
+                    } else if (reattemptSel === i) {
+                        // Re-attempt wrong selection → red
+                        row.classList.add('wrong');
+                    }
+                    // Original selection: no bg highlight, just sign (handled below)
                 }
 
                 row.innerHTML = `
-                    <div class="opt-letter">${letter.toUpperCase()}</div>
-                    <div style="flex:1;line-height:1.55;">${originalIndicator}${self.formatText(opt)}</div>
+                    <div style="display:flex;align-items:center;width:100%;gap:0;">
+                        <div class="opt-letter" style="flex-shrink:0;">${letter.toUpperCase()}</div>
+                        <div style="display:flex;align-items:center;flex:1;line-height:1.55;gap:0;">
+                            ${origSign}<span>${self.formatText(opt)}</span>
+                        </div>
+                    </div>
                 `;
                 box.appendChild(row);
             });
 
-            // Solution box
+            // Solution box — show in normal review always, in re-attempt after guess
             var solBox = document.getElementById('solution-box');
-            if (showSol) {
+            var showSolBox = false;
+            if (this.isReview) {
+                if (!isPractice) showSolBox = true; // normal review always shows solution
+                else if (isPractice && reattemptSel !== null) showSolBox = true; // re-attempt after guess
+            }
+            if (showSolBox) {
                 solBox.style.display = 'block';
                 var solText = document.getElementById('sol-text');
                 solText.innerHTML = self.formatText(q.solution || "No solution provided.");
@@ -1836,8 +1852,6 @@
             }
 
             this.renderPalette();
-
-            // KaTeX
             try {
                 if (window.renderMathInElement) {
                     renderMathInElement(document.getElementById('q-text'), {
@@ -2184,6 +2198,14 @@
         },
 
         exitReview: function() { this.switchView('result'); },
+
+        onReattemptToggle: function(checkbox) {
+            // When toggling OFF re-attempt, clear the guess for current question so it resets cleanly
+            if (!checkbox.checked) {
+                if (this.reviewGuesses) delete this.reviewGuesses[this.currQ];
+            }
+            this.loadQ();
+        },
 
         /* ---- RESULT PAGE (STORED) ---- */
         showStoredResult: function(url) {
