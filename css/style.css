@@ -2,39 +2,22 @@
 @import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
 
 :root {
-    /* --- BRAND COLORS --- */
     --blue: #3F72AF;
     --yellow: #DBE2EF;
     --dark: #112D4E;
-    /* Default Header Color */
     --light: #F9F7F7;
     --green: #28a745;
     --red: #dc3545;
     --purple: #6f42c1;
 
-    /* --- LIGHT THEME (Default) --- */
     --bg-color: #dfe3eb;
     --card-bg: #fbfbfb;
     --text-primary: #112D4E;
     --text-secondary: #555555;
     --border-color: #cfd7de;
     --header-bg: #112D4E;
-    /* Dark Blue */
     --hover-bg: #f3f4f6;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* --- DARK THEME OVERRIDES --- */
-body.dark-mode {
-    --bg-color: #0d1117;
-    --card-bg: #161b22;
-    --text-primary: #e6edf3;
-    --text-secondary: #8b949e;
-    --border-color: #30363d;
-    --header-bg: #010409;
-    /* Black */
-    --hover-bg: #21262d;
-    --shadow: none;
 }
 
 * {
@@ -51,32 +34,20 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* transition removed to stop flickering */
 }
 
-/* --- TYPOGRAPHY FIXES --- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
+h1, h2, h3, h4, h5, h6, strong, b {
     color: var(--text-primary) !important;
 }
 
-.stat-label,
-p {
+.stat-label, p {
     color: var(--text-secondary) !important;
 }
 
-/* HEADER (Always Dark Background) */
 header {
     height: 60px;
     background: var(--header-bg);
     color: white !important;
-    /* Force white text in header always */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +66,6 @@ header {
     color: white !important;
 }
 
-/* HEADER BUTTONS */
 .btn-header {
     padding: 6px 10px;
     font-size: 12px;
@@ -106,34 +76,20 @@ header {
     margin-left: 5px;
 }
 
-.btn-pause {
-    background: var(--yellow);
-    color: #112D4E;
-}
+.btn-pause { background: var(--yellow); color: #112D4E; }
+.btn-exit  { background: var(--red); color: white; }
 
-.btn-exit {
-    background: var(--red);
-    color: white;
-}
-
-/* SPECIAL: Sidebar Toggle (Always White Border/Text) */
 .btn-header-outline {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255,255,255,0.4);
     color: white !important;
 }
+.btn-header-outline:hover { background: rgba(255,255,255,0.1); }
 
-.btn-header-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* MARKS BADGE (Updated for visibility) */
 .marks-badge {
     font-size: 0.8rem;
     background: #eef3f8;
-    /* Light gray-blue background */
     color: var(--dark) !important;
-    /* Dark text (Visible in Light Mode) */
     padding: 5px 12px;
     border-radius: 4px;
     border: 1px solid #d0d7de;
@@ -141,14 +97,6 @@ header {
     white-space: nowrap;
 }
 
-/* Dark Mode override (Keeps it white when background is black) */
-body.dark-mode .marks-badge {
-    background: rgba(255, 255, 255, 0.15);
-    color: white !important;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* --- GENERAL UI BUTTONS --- */
 .btn {
     padding: 10px 20px;
     border: none;
@@ -158,40 +106,20 @@ body.dark-mode .marks-badge {
     cursor: pointer;
 }
 
-.btn-green {
-    background: var(--green);
-}
+.btn-green  { background: var(--green); }
+.btn-red    { background: var(--red); }
+.btn-blue   { background: var(--blue); }
+.btn-purple { background: var(--purple); }
+.btn-orange { background: #fd7e14; }
 
-.btn-red {
-    background: var(--red);
-}
-
-.btn-blue {
-    background: var(--blue);
-}
-
-.btn-purple {
-    background: var(--purple);
-}
-
-.btn-orange {
-    background: #fd7e14;
-}
-
-/* STANDARD OUTLINE BUTTON (For Result Screen - Adapts to Theme) */
 .btn-outline {
     background: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
-    /* Dark in Light Mode, Light in Dark Mode */
     font-weight: bold;
 }
+.btn-outline:hover { background: var(--hover-bg); }
 
-.btn-outline:hover {
-    background: var(--hover-bg);
-}
-
-/* LAYOUT & CARDS */
 .container {
     width: 100%;
     max-width: 600px;
@@ -202,17 +130,6 @@ body.dark-mode .marks-badge {
     align-items: center;
 }
 
-
-
-.icon {
-    font-size: 24px;
-    margin-right: 15px;
-    color: var(--blue);
-}
-
-
-
-/* EXAM UI */
 .exam-body {
     display: flex;
     flex: 1;
@@ -236,6 +153,7 @@ body.dark-mode .marks-badge {
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--text-primary);
+    touch-action: pan-y;
 }
 
 .q-footer {
@@ -246,51 +164,22 @@ body.dark-mode .marks-badge {
     justify-content: space-between;
 }
 
-/* BADGES (Skipped/Time) */
-.review-badges-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-}
-
-.review-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--hover-bg);
-    color: var(--text-primary);
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    border: 1px solid var(--border-color);
-}
-
-/* QUESTIONS & OPTIONS */
 .opt-row {
     display: flex;
     padding: 12px;
     border: 1px solid var(--border-color);
     background: var(--card-bg);
-    /* Better contrast */
     margin-bottom: 10px;
     border-radius: 8px;
-    /* Slightly smoother */
     cursor: pointer;
     align-items: flex-start;
-    /* <--- THIS FIXES THE FLOATING 'A' */
     color: var(--text-primary);
     transition: background 0.2s ease;
-    /* Fix for mobile: disable tap highlight */
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Only apply hover on devices that support hover (not touch screens) */
 @media (hover: hover) and (pointer: fine) {
-    .opt-row:hover {
-        background: var(--hover-bg);
-    }
+    .opt-row:hover { background: var(--hover-bg); }
 }
 
 .opt-row.selected {
@@ -300,24 +189,14 @@ body.dark-mode .marks-badge {
     color: #333 !important;
 }
 
-/* FIX 1: DARK MODE SELECTED OPTION COLOR (Transparent Dark Blue) */
-body.dark-mode .opt-row.selected {
-    background: rgba(31, 111, 235, 0.25);
-    border-color: #58a6ff;
-    color: #fff !important;
-}
-
 .opt-row.correct {
-    background: rgba(40, 167, 69, 0.25) !important;
-    /* Transparent Green */
+    background: rgba(40,167,69,0.25) !important;
     border-color: var(--green) !important;
     color: var(--text-primary) !important;
-    /* Keeps text readable in Dark Mode */
 }
 
 .opt-row.wrong {
-    background: rgba(220, 53, 69, 0.25) !important;
-    /* Transparent Red */
+    background: rgba(220,53,69,0.25) !important;
     border-color: var(--red) !important;
     color: var(--text-primary) !important;
 }
@@ -333,44 +212,24 @@ body.dark-mode .opt-row.selected {
     color: var(--text-primary);
 }
 
-/* --- SMOOTH SIDEBAR ANIMATION --- */
 #sidebar {
     position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    right: 0; top: 0; bottom: 0;
     width: 280px;
     background: var(--card-bg);
     border-left: 1px solid var(--border-color);
     z-index: 1000;
-    /* Ensure it's above everything */
     display: flex;
     flex-direction: column;
     color: var(--text-primary);
-
-    /* 1. Start hidden off-screen to the right */
     transform: translateX(100%);
-
-    /* 2. THE MAGIC SAUCE: Use a custom bezier curve for smoothness */
-    /* This specific curve (fast start, slow stop) feels very "App-like" */
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-
-    /* Optional: Add a subtle shadow when opening */
     box-shadow: none;
 }
 
-/* When the sidebar is open */
-#sidebar.open {
-    /* 3. Slide it into view */
-    transform: translateX(0);
-
-    /* Add a deep shadow so it looks like it's floating above the content */
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
-}
-
 #sidebar.open {
     transform: translateX(0);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
 }
 
 .palette-grid {
@@ -400,18 +259,14 @@ body.dark-mode .opt-row.selected {
     justify-content: center;
     align-items: center;
     background: var(--bg-color);
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     flex-direction: column;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     z-index: 100;
 }
 
-.view-result.active {
-    display: flex;
-}
+.view-result.active { display: flex; }
 
 .score-card {
     text-align: center;
@@ -441,22 +296,7 @@ body.dark-mode .opt-row.selected {
     border: 1px solid var(--border-color);
 }
 
-.stat-val {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--text-primary);
-}
-
-.switch-container {
-    display: flex;
-    align-items: center;
-    background: var(--bg-color);
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    color: var(--text-primary);
-}
+.stat-val { font-weight: bold; font-size: 1.2rem; color: var(--text-primary); }
 
 .switch {
     position: relative;
@@ -466,19 +306,12 @@ body.dark-mode .opt-row.selected {
     margin-right: 12px;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
+.switch input { opacity: 0; width: 0; height: 0; }
 
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-color: #ccc;
     transition: .4s;
     border-radius: 34px;
@@ -487,30 +320,21 @@ body.dark-mode .opt-row.selected {
 .slider:before {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
+    height: 18px; width: 18px;
+    left: 3px; bottom: 3px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
 }
 
-input:checked+.slider {
-    background-color: var(--blue);
-}
-
-input:checked+.slider:before {
-    transform: translateX(22px);
-}
+input:checked + .slider { background-color: var(--blue); }
+input:checked + .slider:before { transform: translateX(22px); }
 
 #pause-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgb(0,0,0);
     z-index: 9999;
     display: none;
     flex-direction: column;
@@ -519,22 +343,6 @@ input:checked+.slider:before {
     color: white;
 }
 
-.theme-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    color: var(--text-primary);
-    padding: 6px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9rem;
-    z-index: 1000;
-}
-
-/* FIX 2: BACK BUTTON BOX COLOR (Redefined as Outline Button) */
 .back-btn {
     display: inline-flex;
     align-items: center;
@@ -549,31 +357,10 @@ input:checked+.slider:before {
     margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: none;
 }
 
-.back-btn:hover {
-    background-color: var(--blue);
-    color: white;
-}
+.back-btn:hover { background-color: var(--blue); color: white; }
 
-/* Adapt back button for dark mode */
-body.dark-mode .back-btn {
-    border-color: var(--text-primary);
-    color: var(--text-primary);
-}
-
-body.dark-mode .back-btn:hover {
-    background-color: var(--text-primary);
-    color: var(--bg-color);
-    border-color: var(--text-primary);
-}
-
-/* =========================================
-   ADD THIS TO THE BOTTOM OF STYLE.CSS
-   ========================================= */
-
-/* Instruction Page Container */
 .inst-container {
     background: var(--card-bg);
     max-width: 95%;
@@ -582,7 +369,6 @@ body.dark-mode .back-btn:hover {
     border-radius: 8px;
     box-shadow: var(--shadow);
     color: var(--text-primary);
-    /* Ensures text is white in dark mode */
     border: 1px solid var(--border-color);
 }
 
@@ -595,25 +381,13 @@ body.dark-mode .back-btn:hover {
 .inst-content {
     height: 60vh;
     overflow-y: auto;
-    padding-right: 10px;
-    border: 1px solid var(--border-color);
     padding: 15px;
     margin-bottom: 20px;
-
-    /* CHANGE HERE: Use white instead of grey */
     background: #ffffff;
-
-    /* Optional: Smooth transition if you toggle themes */
+    border: 1px solid var(--border-color);
     transition: background 0.3s ease;
 }
 
-/* Ensure it stays dark in Dark Mode */
-body.dark-mode .inst-content {
-    background: var(--card-bg);
-    /* Uses the dark card color */
-}
-
-/* Palette Legend Styles */
 .legend-row {
     display: flex;
     align-items: center;
@@ -622,8 +396,7 @@ body.dark-mode .inst-content {
 }
 
 .legend-icon {
-    width: 30px;
-    height: 30px;
+    width: 30px; height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -635,50 +408,15 @@ body.dark-mode .inst-content {
     flex-shrink: 0;
 }
 
-/* Specific Colors matching your exam */
-.l-not-visit {
-    background: #e0e0e0;
-    color: black;
-    border-radius: 4px;
-}
-
-/* Fix for dark mode "Not Visited" square */
-body.dark-mode .l-not-visit {
-    background: #333;
-    color: white;
-    border-color: #555;
-}
-
-.l-not-ans {
-    background: var(--red);
-    color: white;
-    border: none;
-}
-
-.l-ans {
-    background: var(--green);
-    color: white;
-    border: none;
-}
-
-.l-mark {
-    background: var(--purple);
-    color: white;
-    border: none;
-}
-
-.l-ans-mark {
-    background: var(--purple);
-    color: white;
-    border: none;
-    position: relative;
-}
-
+.l-not-visit { background: #e0e0e0; color: black; border-radius: 4px; }
+.l-not-ans   { background: var(--red); color: white; border: none; }
+.l-ans       { background: var(--green); color: white; border: none; }
+.l-mark      { background: var(--purple); color: white; border: none; }
+.l-ans-mark  { background: var(--purple); color: white; border: none; position: relative; }
 .l-ans-mark::after {
     content: '✔';
     position: absolute;
-    bottom: -2px;
-    right: -2px;
+    bottom: -2px; right: -2px;
     font-size: 10px;
     background: var(--green);
     color: white;
@@ -700,13 +438,8 @@ body.dark-mode .l-not-visit {
     color: var(--text-primary);
 }
 
-.chk-input {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-}
+.chk-input { width: 18px; height: 18px; margin-right: 10px; }
 
-/* Disabled button style */
 .btn-start {
     width: 100%;
     margin-top: 15px;
@@ -721,207 +454,63 @@ body.dark-mode .l-not-visit {
     font-weight: bold;
 }
 
-.btn-start.active {
-    opacity: 1;
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-/* =========================================
-   ADD THIS TO STYLE.CSS FOR PROFESSIONAL BADGE
-   ========================================= */
+.btn-start.active { opacity: 1; pointer-events: auto; cursor: pointer; }
 
 .feedback-badge {
     font-size: 1rem;
-    /* Larger text */
     font-weight: 700;
-    /* Extra Bold */
     text-transform: uppercase;
-    /* Make it all CAPS */
     letter-spacing: 2px;
-    /* Spacing between letters for clean look */
     color: white !important;
-    /* Force white text */
-
     padding: 12px 30px;
-    /* More breathing room */
     border-radius: 50px;
-    /* Pill/Rounded shape instead of box */
     margin: 20px auto;
-    /* Center it with space */
     width: fit-content;
-    /* Shrink to fit text width */
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    /* Soft shadow for depth */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    /* Slight text shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     transition: transform 0.2s ease;
 }
 
-/* Optional: Slight hover effect */
-.feedback-badge:hover {
-    transform: scale(1.05);
-}
+.feedback-badge:hover { transform: scale(1.05); }
 
-/* =========================================
-   MOBILE APP UI UPGRADE (Add to bottom of style.css)
-   ========================================= */
-
-/* 1. Smooth Fade-in Animation for the whole page */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .container {
     animation: fadeInUp 0.6s ease-out;
     padding-bottom: 80px;
-    /* Space for scrolling on mobile */
 }
 
-/* 2. Modern Header Styling */
 .container h2 {
     font-size: 28px;
     font-weight: 800;
     letter-spacing: -0.5px;
-
-    /* Gradient Text Effect */
     background: linear-gradient(135deg, var(--blue), var(--purple));
-
-    /* The Fix: Add the standard property below the webkit one */
     -webkit-background-clip: text;
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
     margin-bottom: 40px !important;
     text-align: center;
 }
 
-/* 3. App-Style Cards */
-
-
-/* =========================================
-   1. SLIDER TOGGLE SWITCH (Modern & Smooth)
-   ========================================= */
-.theme-switch-wrapper {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-    /* Ensure it stays on top */
-}
-
-.theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-}
-
-.theme-switch input {
-    display: none;
-    /* Hide default checkbox */
-}
-
-.slider-round {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-    border-radius: 34px;
-}
-
-.slider-round:before {
-    background-color: white;
-    bottom: 4px;
-    content: "";
-    /* This is the moving circle */
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
-    border-radius: 50%;
-
-    /* Add an icon inside the circle */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* When checked (Dark Mode) */
-input:checked+.slider-round {
-    background-color: var(--blue);
-}
-
-input:checked+.slider-round:before {
-    transform: translateX(26px);
-    /* Change icon to Moon */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>');
-}
-
-/* =========================================
-   2. MODERN LIST ITEMS (For list.html)
-   ========================================= */
-/* Container spacing to prevent toggle overlap on mobile */
 .container {
-    padding-top: 80px !important;
-    /* Pushes content down so toggle doesn't cover text */
+    padding-top: 20px !important;
 }
 
-/* The New Test Card */
-
-
-/* --- FIX FOR REVIEW MODE PALETTE COLORS --- */
-
-/* 1. Light Mode (Default): Skipped questions become Gray with Dark Text */
 .pal-rev-skipped {
     background-color: #d1d5db !important;
-    /* Soft Gray */
     color: #333333 !important;
-    /* Dark Text for contrast */
     border: 1px solid #adb5bd !important;
 }
 
-/* 2. Dark Mode: Skipped questions stay Dark with White Text */
-body.dark-mode .pal-rev-skipped {
-    background-color: #444444 !important;
-    /* Original Dark Grey */
-    color: #ffffff !important;
-    /* White Text */
-    border: 1px solid #666666 !important;
-}
-
-/* FIX FOR HIDDEN BETA TAG */
 .container h2 span {
     -webkit-text-fill-color: var(--text-primary) !important;
-    /* Force solid color */
     color: var(--text-primary) !important;
     opacity: 0.6;
-    /* Keep the transparency effect */
 }
 
-/* Optional: Make it look better in Dark Mode */
-body.dark-mode .container h2 span {
-    -webkit-text-fill-color: #8b949e !important;
-    color: #8b949e !important;
-}
-
-/* DI TABLE STYLING */
 .q-extra-info table {
     width: 100%;
     max-width: 100%;
@@ -945,24 +534,10 @@ body.dark-mode .container h2 span {
     font-weight: bold;
 }
 
-/* Striped rows for better readability */
-.q-extra-info tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.05);
-}
+.q-extra-info tr:nth-child(even) { background-color: rgba(0,0,0,0.05); }
 
-/* Dark mode adjustment for striped rows */
-body.dark-mode .q-extra-info tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.05);
-}
+@keyframes blink { 50% { opacity: 0.5; } }
 
-
-@keyframes blink {
-    50% {
-        opacity: 0.5;
-    }
-}
-
-/* 2. Report Error Button Styling */
 #btn-report {
     display: inline-block;
     background-color: transparent;
@@ -970,7 +545,6 @@ body.dark-mode .q-extra-info tr:nth-child(even) {
     border: 1px solid var(--red);
     padding: 5px 12px;
     border-radius: 20px;
-    /* Pill shape */
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -978,207 +552,105 @@ body.dark-mode .q-extra-info tr:nth-child(even) {
     transition: all 0.2s ease;
     margin-left: 10px;
     text-decoration: none;
-    /* Remove underline */
 }
 
 #btn-report:hover {
     background-color: var(--red);
     color: white;
-    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.4);
+    box-shadow: 0 2px 5px rgba(220,53,69,0.4);
     transform: translateY(-1px);
 }
 
-/* Dark mode adjustment for visibility */
-body.dark-mode #btn-report {
-    border-color: #ff6b6b;
-    color: #ff6b6b;
-}
-
-body.dark-mode #btn-report:hover {
-    background-color: #ff6b6b;
-    color: #1a1a1a;
-}
-
-/* --- PROFESSIONAL TIMER & REPORT BUTTON STYLES --- */
-
-/* --- MODERN HEADER LAYOUT --- */
-
-
-
-/* 2. Clean Typography for Timer */
 .timer {
     font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
-    /* Clean font */
     font-size: 1.25rem;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 0.5px;
     background: transparent;
-    /* No box background */
     border: none;
     box-shadow: none;
     padding: 0;
     min-width: auto;
 }
 
-/* Optional Icon Styling */
-.timer-icon {
-    font-size: 1.1rem;
-    margin-right: 8px;
-    opacity: 0.8;
-}
+.timer-icon { font-size: 1.1rem; margin-right: 8px; opacity: 0.8; }
 
-/* 3. Group the Right-Side Buttons */
 .header-actions {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Space between the buttons */
     z-index: 10;
-    /* Ensure buttons are clickable */
 }
 
-/* 4. Warning State (Subtle Red Text, no flashing box) */
-.timer.warning {
-    color: #ff6b6b;
-    /* Soft red */
-    animation: none;
-    /* Remove annoying blink */
-}
+.timer.warning { color: #ff6b6b; animation: none; }
+.timer-container.warning-bg { border-color: #ff6b6b; background: rgba(255,0,0,0.1); }
 
-.timer-container.warning-bg {
-    border-color: #ff6b6b;
-    background: rgba(255, 0, 0, 0.1);
-}
-
-/* 5. Mobile Adjustment: Hide Title to fit Timer */
-@media (max-width: 600px) {
-    #exam-title {
-        display: none;
-    }
-
-    .timer-container {
-        position: relative;
-        left: 0;
-        transform: none;
-    }
-}
-
-/* --- FIX: HEADER LAYOUT (RIGHT-ALIGNED TIMER) --- */
-
-/* 1. Main Header Layout */
 header {
     display: flex;
     justify-content: space-between;
-    /* Title Left, Group Right */
     align-items: center;
     padding: 0 15px;
     height: 60px;
     width: 100%;
 }
 
-/* 2. Group for Timer & Buttons */
 .header-right-group {
     display: flex;
     align-items: center;
     gap: 15px;
-    /* Space between Timer and Buttons */
 }
 
-/* 3. Fix Timer Position (Resetting previous centering code) */
 .timer-container {
     position: static !important;
-    /* Stop floating in center */
     transform: none !important;
-    /* Remove centering shift */
     margin: 0;
-
-    /* Keep the professional look */
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
     padding: 5px 15px;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255,255,255,0.15);
     display: flex;
     align-items: center;
     white-space: nowrap;
 }
 
-/* 4. Ensure Title is Always Visible */
 #exam-title {
     display: block !important;
-    /* Force visible on mobile */
     font-size: 1.1rem;
     font-weight: bold;
     color: white !important;
-
-    /* Prevent title from overlapping timer on small phones */
     max-width: 40%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* Adds "..." if title is too long */
 }
 
-/* 5. Mobile Optimizations (Small Screens) */
 @media (max-width: 500px) {
-    .header-right-group {
-        gap: 8px;
-    }
-
-    /* Tighter spacing */
-    .timer-container {
-        padding: 4px 10px;
-    }
-
-    /* Smaller timer box */
-    .timer {
-        font-size: 1rem;
-    }
-
-    /* Smaller text */
-    .timer-icon {
-        display: none;
-    }
-
-    /* Hide hourglass icon on tiny screens */
-    #exam-title {
-        font-size: 0.9rem;
-        max-width: 35%;
-    }
+    .header-right-group { gap: 8px; }
+    .timer-container { padding: 4px 10px; }
+    .timer { font-size: 1rem; }
+    .timer-icon { display: none; }
+    #exam-title { font-size: 0.9rem; max-width: 35%; }
 }
 
-/* --- RESPONSIVE IMAGE FIX --- */
 .q-image {
     max-width: 100%;
-    /* Force image to never exceed screen width */
     height: auto;
-    /* Keep the aspect ratio correct */
     display: block;
-    /* Make it a block element so centering works */
     margin: 15px auto;
-    /* Center horizontally + add top/bottom spacing */
-
-    /* Optional: Makes it look cleaner */
     border-radius: 8px;
     border: 1px solid var(--border-color);
 }
 
-/* --- IMAGE ZOOM MODAL STYLES --- */
 .img-modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
     z-index: 99999;
-    /* Sit on top of everything */
     padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
     overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.9);
 }
 
 .modal-content {
@@ -1186,37 +658,22 @@ header {
     display: block;
     max-width: 90%;
     max-height: 90vh;
-
-    /* --- THE FIX IS HERE --- */
     background-color: #ffffff;
-    /* Force white background so charts are readable */
     padding: 10px;
-    /* Add a little white frame around the image */
     border-radius: 8px;
-    /* Round the corners */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    /* Make it pop */
-
-    /* Keep animation */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
     animation-name: zoom;
     animation-duration: 0.3s;
 }
 
 @keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-
-    to {
-        transform: scale(1)
-    }
+    from { transform: scale(0); }
+    to   { transform: scale(1); }
 }
 
-/* Close Button */
 .close-modal {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 15px; right: 35px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
@@ -1224,23 +681,12 @@ header {
     cursor: pointer;
 }
 
-.close-modal:hover,
-.close-modal:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
+.close-modal:hover { color: #bbb; }
 
-/* Mobile: Allow pinch zoom feel by letting width expand */
 @media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
+    .modal-content { width: 100%; }
 }
 
-/* --- FILTER SYSTEM STYLES --- */
-
-/* The Filter Toggle Button */
 .btn-filter {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -1249,51 +695,32 @@ header {
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
     gap: 5px;
     transition: 0.2s;
 }
 
-.btn-filter:hover {
-    background: var(--hover-bg);
-    transform: translateY(-1px);
-}
+.btn-filter:hover { background: var(--hover-bg); transform: translateY(-1px); }
+.btn-filter.active { background: var(--blue); color: white; border-color: var(--blue); }
 
-.btn-filter.active {
-    background: var(--blue);
-    color: white;
-    border-color: var(--blue);
-}
-
-/* The Dropdown Menu */
 .filter-dropdown {
     display: none;
-    /* Hidden by default */
     position: absolute;
-    right: 0;
-    top: 45px;
-    /* Pushes it below the button */
+    right: 0; top: 45px;
     width: 220px;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     z-index: 100;
     flex-direction: column;
 }
 
-.filter-dropdown.show {
-    display: flex;
-}
+.filter-dropdown.show { display: flex; }
 
-/* The List of Keywords inside */
-.filter-list {
-    max-height: 250px;
-    overflow-y: auto;
-    padding: 10px;
-}
+.filter-list { max-height: 250px; overflow-y: auto; padding: 10px; }
 
 .filter-option {
     padding: 8px 10px;
@@ -1307,59 +734,38 @@ header {
     border: 1px solid transparent;
 }
 
-.filter-option:hover {
-    background: var(--hover-bg);
-}
+.filter-option:hover { background: var(--hover-bg); }
 
 .filter-option.selected {
-    background: rgba(63, 114, 175, 0.15);
-    /* Light blue tint */
+    background: rgba(63,114,175,0.15);
     color: var(--blue);
     border-color: var(--blue);
     font-weight: bold;
 }
 
-/* --- GLOWING RED CLEAR FILTER BUTTON --- */
 .btn-clear-filter {
     width: 100%;
-    /* Red Gradient Background */
     background: linear-gradient(135deg, #dc3545, #c82333);
     border: none;
     color: white;
-    /* White Text */
     padding: 12px;
     font-weight: bold;
     cursor: pointer;
     font-size: 0.9rem;
     border-radius: 0 0 8px 8px;
-    /* Rounded at bottom only */
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-
-    /* Initial Red Glow */
-    box-shadow: 0 -2px 10px rgba(220, 53, 69, 0.3);
+    box-shadow: 0 -2px 10px rgba(220,53,69,0.3);
 }
 
 .btn-clear-filter:hover {
     background: linear-gradient(135deg, #e4606d, #dc3545);
-    /* Stronger Glow on Hover */
-    box-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
+    box-shadow: 0 0 20px rgba(220,53,69,0.6);
 }
 
-.btn-clear-filter:active {
-    transform: scale(0.98);
-}
-
-/* Ensure it looks good in Dark Mode too */
-body.dark-mode .btn-clear-filter {
-    background: linear-gradient(135deg, #dc3545, #a71d2a);
-    color: white;
-}
-
-/* --- SIDEBAR SECTION TABS --- */
 .section-list {
     display: flex;
     flex-direction: column;
@@ -1384,63 +790,26 @@ body.dark-mode .btn-clear-filter {
     transition: all 0.2s ease;
 }
 
-.sec-btn:hover {
-    background: var(--hover-bg);
-}
+.sec-btn:hover { background: var(--hover-bg); }
+.sec-btn.active { background: var(--blue); color: white; border-color: var(--blue); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.sec-btn.locked { opacity: 0.6; background: #eee; color: #999; cursor: not-allowed; }
+.sec-badge { font-size: 0.75rem; background: rgba(0,0,0,0.1); padding: 2px 6px; border-radius: 4px; }
 
-/* The Active Section (The one you are currently viewing) */
-.sec-btn.active {
-    background: var(--blue);
-    color: white;
-    border-color: var(--blue);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Locked Sections (Future sections in Test Mode) */
-.sec-btn.locked {
-    opacity: 0.6;
-    background: #eee;
-    color: #999;
-    cursor: not-allowed;
-}
-
-body.dark-mode .sec-btn.locked {
-    background: #333;
-    color: #666;
-}
-
-/* Badge inside the button (e.g., "Q: 40") */
-.sec-badge {
-    font-size: 0.75rem;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-/* --- PROFESSIONAL REVIEW TOOLBAR --- */
 .review-toolbar {
     display: flex;
     justify-content: space-between;
-    /* Badges Left, Toggle Right */
     align-items: center;
     background: transparent;
-    /* No ugly background box */
     padding: 10px 0;
     margin-bottom: 15px;
     border-bottom: 1px solid var(--border-color);
-    /* Subtle divider */
 }
 
-/* Badges Group */
-.badges-group {
-    display: flex;
-    gap: 10px;
-}
+.badges-group { display: flex; gap: 10px; }
 
 .pro-badge {
     padding: 5px 12px;
     border-radius: 20px;
-    /* Pill shape is more modern */
     font-size: 0.85rem;
     font-weight: 600;
     display: flex;
@@ -1448,252 +817,86 @@ body.dark-mode .sec-btn.locked {
     gap: 5px;
 }
 
-/* Toggle Group (Right Side) */
-.toggle-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+.toggle-group { display: flex; align-items: center; gap: 10px; }
+.toggle-label { font-size: 0.9rem; font-weight: 600; color: var(--text-primary) !important; }
 
-.toggle-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-}
-
-/* Mobile: Stack them if screen is too small */
 @media (max-width: 500px) {
-    .review-toolbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .toggle-group {
-        width: 100%;
-        justify-content: space-between;
-        /* Spread toggle across width on phone */
-    }
+    .review-toolbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .toggle-group { width: 100%; justify-content: space-between; }
 }
 
-/* FIX: Make toggle text visible in Dark Mode */
-.toggle-label {
-    color: var(--text-primary) !important;
-    /* Adapts: Dark in Light Mode, White in Dark Mode */
-}
+body { transition: none !important; }
 
-/* =========================================
-   SMOOTH THEME TRANSITION FIX 
-   (Add this to the very bottom of style.css)
-   ========================================= */
-
-/* 1. By default, force NO transition on body to stop load flickering */
-body {
-    transition: none !important;
-}
-
-/* 2. We add this class via JavaScript 0.1s after load */
-body.enable-transition {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* 3. Ensure all major UI components transition smoothly */
-/* This makes the header, cards, buttons, and sidebar fade nicely */
-body.enable-transition header,
-body.enable-transition .subject-card,
-body.enable-transition .q-area,
-body.enable-transition .q-content,
-body.enable-transition .q-footer,
-body.enable-transition #sidebar,
-body.enable-transition .btn,
-body.enable-transition .sec-btn,
-body.enable-transition .opt-row,
-body.enable-transition .timer-container,
-body.enable-transition .marks-badge,
-body.enable-transition .inst-container,
-body.enable-transition .inst-content {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* --- CIRCULAR REVEAL THEME TRANSITION --- */
-
-/* 1. Allow the animation to sit on top of everything */
 ::view-transition-old(root),
-::view-transition-new(root) {
-    animation: none;
-    /* Disable the default browser fade */
-    mix-blend-mode: normal;
-}
+::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 9999; }
 
-/* 2. Order the layers correctly (Dark mode circle on top) */
-::view-transition-old(root) {
-    z-index: 1;
-}
+.pause-title { color: #ffffff !important; margin-bottom: 10px; }
+.pause-msg   { color: #cccccc !important; margin-bottom: 30px; }
 
-::view-transition-new(root) {
-    z-index: 9999;
-    /* Ensure the new theme spreads ON TOP */
-}
+#pause-overlay { background: rgb(255,255,255); }
 
-/* 3. Fallback for browsers that don't support this API yet */
-/* Your existing body.enable-transition code handles this automatically */
-
-/* --- PAUSE SCREEN TEXT FIXES --- */
-
-/* Default (Light Mode): Dark Text */
-.pause-title {
-    color: var(--text-primary);
-    /* Uses your main dark text color */
-    margin-bottom: 10px;
-}
-
-.pause-msg {
-    color: var(--text-secondary);
-    /* Uses your main grey text color */
-    margin-bottom: 30px;
-}
-
-/* Dark Mode Override: White Text */
-body.dark-mode .pause-title {
-    color: #ffffff !important;
-    /* Force White */
-}
-
-body.dark-mode .pause-msg {
-    color: #cccccc !important;
-    /* Force Light Grey */
-}
-
-/* Ensure the overlay background itself is correct */
-#pause-overlay {
-    /* If you want it fully black in dark mode */
-    background: rgb(255, 255, 255);
-    /* Light mode background */
-}
-
-body.dark-mode #pause-overlay {
-    background: rgb(0, 0, 0);
-    /* Dark mode background */
-}
-
-/* --- PROFESSIONAL RESULT BUTTONS UPGRADE --- */
-
-/* 1. General Button Shape & Feel */
 .score-card .btn {
     width: 100%;
-    /* Ensure full width */
     padding: 14px 20px;
-    /* Taller, more touch-friendly */
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    /* Slight spacing for readability */
     text-transform: uppercase;
-    /* Professional look */
     border-radius: 12px;
-    /* Modern rounded corners */
     border: none;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-    /* Smooth movement */
-
-    /* Subtle Shadow for Depth */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin-bottom: 12px;
-    /* Spacing between buttons */
 }
 
-/* 2. Hover Effect (Lift Up) */
-.score-card .btn:hover {
-    transform: translateY(-2px);
-    /* Moves up slightly */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    /* Shadow grows */
-}
+.score-card .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.15); }
 
-/* 3. Re-attempt Button (Professional Deep Orange - No Pink) */
 .btn-orange {
-    /* Moves from vibrant orange to deep burnt orange */
     background: linear-gradient(135deg, #faa538, #e65100);
     color: white;
-    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.2);
-    /* Matching orange shadow */
+    box-shadow: 0 4px 15px rgba(230,81,0,0.2);
 }
 
-/* Optional: Hover effect to make it glow slightly */
 .btn-orange:hover {
     background: linear-gradient(135deg, #ffb74d, #f57c00);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(230, 81, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(230,81,0,0.3);
 }
 
-/* 4. Review Solutions Button (Professional Blue) */
 .btn-blue {
     background: linear-gradient(135deg, #3F72AF, #112D4E);
     color: white;
 }
 
-/* 5. Back to List Button (The Adaptive Outline) */
 .btn-outline {
     background: transparent;
     border: 2px solid var(--border-color);
-    /* Matches theme border */
     color: var(--text-secondary);
-    /* Grey text by default */
     box-shadow: none;
-    /* No shadow for flat look */
 }
 
 .btn-outline:hover {
     border-color: var(--text-primary);
-    /* Darker border on hover */
     color: var(--text-primary);
-    /* Darker text on hover */
     background: var(--hover-bg);
-    /* Subtle background fill */
     transform: translateY(-1px);
 }
 
-/* --- DARK MODE ADJUSTMENTS --- */
-body.dark-mode .btn-outline {
-    border-color: #30363d;
-    /* Dark grey border */
-    color: #8b949e;
-    /* Soft grey text */
-}
-
-body.dark-mode .btn-outline:hover {
-    border-color: #f0f6fc;
-    /* White border on hover */
-    color: #f0f6fc;
-    /* White text on hover */
-    background: rgba(255, 255, 255, 0.05);
-}
-
-/* =========================================
-   DASHBOARD REFORM (PROFESSIONAL UI)
-   ========================================= */
-
-/* 1. Header Styling */
-.header-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
+.header-section { text-align: center; margin-bottom: 40px; }
 
 .app-title {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 5px;
     background: linear-gradient(135deg, #3F72AF, #6f42c1);
-    /* Blue to Purple Gradient */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
 
-/* --- FIX FOR BETA BADGE VISIBILITY --- */
-/* --- FIX: SOLID BETA BADGE --- */
 .beta-badge {
     background: linear-gradient(135deg, #ff9966, #ff5e62);
     color: white !important;
@@ -1702,29 +905,14 @@ body.dark-mode .btn-outline:hover {
     padding: 4px 10px;
     border-radius: 20px;
     letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(255, 94, 98, 0.3);
-
-    /* Ensure it behaves like a solid box */
+    box-shadow: 0 4px 10px rgba(255,94,98,0.3);
     display: inline-block;
-
-    /* These resets ensure the parent gradient doesn't touch it */
     -webkit-text-fill-color: white !important;
     text-shadow: none;
 }
 
-/* Double-check for Dark Mode just in case */
-body.dark-mode .beta-badge {
-    color: white !important;
-    -webkit-text-fill-color: white !important;
-}
+.subtitle { font-size: 1rem; color: var(--text-secondary); margin-top: 0; }
 
-.subtitle {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin-top: 0;
-}
-
-/* 2. Responsive Grid Layout */
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1732,7 +920,6 @@ body.dark-mode .beta-badge {
     width: 100%;
 }
 
-/* 3. Professional Card Styling */
 .subject-card {
     display: flex;
     justify-content: space-between;
@@ -1747,39 +934,20 @@ body.dark-mode .beta-badge {
     overflow: hidden;
 }
 
-.card-content {
-    display: flex;
-    align-items: center;
-}
+.card-content { display: flex; align-items: center; }
+.text-group { display: flex; flex-direction: column; }
+.text-group strong { font-size: 1.1rem; margin-bottom: 4px; }
+.sub-text { font-size: 0.85rem; color: var(--text-secondary); opacity: 0.8; }
 
-.text-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.text-group strong {
-    font-size: 1.1rem;
-    margin-bottom: 4px;
-}
-
-.sub-text {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    opacity: 0.8;
-}
-
-/* Icon Box Styling */
 .icon-box {
-    width: 50px;
-    height: 50px;
+    width: 50px; height: 50px;
     border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     margin-right: 15px;
-    background: rgba(63, 114, 175, 0.1);
-    /* Light Blue Tint */
+    background: rgba(63,114,175,0.1);
     transition: background 0.3s ease;
 }
 
@@ -1789,32 +957,14 @@ body.dark-mode .beta-badge {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* 4. Hover Effects */
-.subject-card:hover {
-    transform: translateY(-5px);
-    /* Lift Up */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    /* Soft shadow */
-    border-color: var(--blue);
-}
+.subject-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--blue); }
+.subject-card:hover .icon-box { background: var(--blue); color: white; }
+.subject-card:hover .arrow-icon { color: var(--blue); transform: translateX(5px); }
 
-.subject-card:hover .icon-box {
-    background: var(--blue);
-    color: white;
-    /* Icon turns white on blue bg */
-}
-
-.subject-card:hover .arrow-icon {
-    color: var(--blue);
-    transform: translateX(5px);
-    /* Arrow moves right */
-}
-
-/* 5. Footer Tip Styling */
 .footer-tip {
     margin-top: 50px;
     padding: 15px;
-    background: rgba(63, 114, 175, 0.05);
+    background: rgba(63,114,175,0.05);
     border-radius: 8px;
     border: 1px dashed var(--border-color);
     text-align: center;
@@ -1822,53 +972,17 @@ body.dark-mode .beta-badge {
     color: var(--text-secondary);
 }
 
-/* --- DARK MODE SPECIFICS --- */
-body.dark-mode .app-title {
-    background: linear-gradient(135deg, #a2d2ff, #c4a7e7);
-    /* Lighter pastel gradient for dark mode */
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-body.dark-mode .icon-box {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .subject-card:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-    /* Darker shadow */
-    border-color: #58a6ff;
-}
-
-/* --- FIX: HEADER LAYOUT --- */
 .title-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* Space between Title and Badge */
     margin-bottom: 5px;
 }
 
-/* Remove bottom margin from title so it aligns perfectly */
-.app-title {
-    margin-bottom: 0 !important;
-    /* Keep your existing gradient styles for the text */
-}
+.app-title { margin-bottom: 0 !important; }
+.card-content strong { margin-bottom: 0 !important; font-size: 1.1rem; }
 
-/* Fix Alignment for Simple Cards */
-.card-content strong {
-    margin-bottom: 0 !important;
-    /* Remove spacing reserved for subtitle */
-    font-size: 1.1rem;
-    /* Keep it readable */
-}
-
-/* =========================================
-   PROFESSIONAL TEST LIST UI
-   ========================================= */
-
-/* 1. List Header Layout */
 .list-header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -1879,34 +993,20 @@ body.dark-mode .subject-card:hover {
     border-bottom: 1px solid var(--border-color);
 }
 
-.text-area {
-    display: flex;
-    flex-direction: column;
-}
+.text-area { display: flex; flex-direction: column; }
 
 #list-title {
     font-size: 1.8rem;
     margin: 0;
-    /* Gradient Text */
     background: linear-gradient(135deg, #3F72AF, #6f42c1);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.list-subtitle {
-    font-size: 0.9rem;
-    color: var(--text-secondary) !important;
-    margin: 5px 0 0 0;
-}
+.list-subtitle { font-size: 0.9rem; color: var(--text-secondary) !important; margin: 5px 0 0 0; }
 
-/* 2. The Modern Test Card */
-.test-list-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-}
+.test-list-grid { display: flex; flex-direction: column; gap: 15px; width: 100%; }
 
 .test-card-modern {
     background: var(--card-bg);
@@ -1921,25 +1021,13 @@ body.dark-mode .subject-card:hover {
     overflow: hidden;
 }
 
-/* Hover Effect */
-.test-card-modern:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    border-color: var(--blue);
-}
+.test-card-modern:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-color: var(--blue); }
 
-/* Left Side: Icon + Text */
-.tc-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex: 1;
-}
+.tc-left { display: flex; align-items: center; gap: 15px; flex: 1; }
 
 .tc-icon {
-    width: 45px;
-    height: 45px;
-    background: rgba(63, 114, 175, 0.1);
+    width: 45px; height: 45px;
+    background: rgba(63,114,175,0.1);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -1947,27 +1035,10 @@ body.dark-mode .subject-card:hover {
     font-size: 1.2rem;
 }
 
-.tc-info {
-    display: flex;
-    flex-direction: column;
-}
+.tc-info { display: flex; flex-direction: column; }
+.tc-title { font-weight: 700; font-size: 1rem; color: var(--text-primary); margin-bottom: 3px; }
+.tc-status { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
 
-.tc-title {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text-primary);
-    margin-bottom: 3px;
-}
-
-.tc-status {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-}
-
-/* 3. Action Buttons */
 .btn-action {
     padding: 10px 24px;
     border-radius: 50px;
@@ -1981,125 +1052,60 @@ body.dark-mode .subject-card:hover {
     color: white;
     flex-shrink: 0;
     margin-left: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.btn-action:hover {
-    transform: scale(1.05);
-}
+.btn-action:hover { transform: scale(1.05); }
 
-/* --- FIX FOR DULL BUTTONS --- */
-
-/* 1. Renamed class to avoid conflict with disabled buttons */
 .btn-list-start {
-    /* Vibrant Gradient */
     background: linear-gradient(135deg, #00b09b, #96c93d);
-
-    /* Force Opacity to 1 (Fixes the dullness) */
     opacity: 1 !important;
-
-    /* Glow Effect */
-    box-shadow: 0 0 15px rgba(0, 176, 155, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0,176,155,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* 2. Hover Effect for Start Button */
-.test-card-modern:hover .btn-list-start {
-    /* Make it shine brighter on hover */
-    box-shadow: 0 0 25px rgba(0, 176, 155, 0.9);
-    transform: scale(1.05);
-}
+.test-card-modern:hover .btn-list-start { box-shadow: 0 0 25px rgba(0,176,155,0.9); transform: scale(1.05); }
 
-/* 3. Keep the Blue Result Button Professional */
 .btn-result {
     background: linear-gradient(135deg, #3F72AF, #112D4E);
     opacity: 1 !important;
-    box-shadow: 0 4px 15px rgba(63, 114, 175, 0.3);
+    box-shadow: 0 4px 15px rgba(63,114,175,0.3);
 }
 
-/* Gradient Blue for Result */
-.btn-result {
-    background: linear-gradient(135deg, #3F72AF, #112D4E);
-}
-
-/* --- DARK MODE ADJUSTMENTS --- */
-body.dark-mode .tc-icon {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-mode .test-card-modern:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    border-color: #58a6ff;
-}
-
-/* Mobile Adjustments */
 @media (max-width: 500px) {
-    .test-card-modern {
-        padding: 15px;
-    }
-
-    .tc-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1rem;
-    }
-
-    .btn-action {
-        padding: 6px 14px;
-        font-size: 0.7rem;
-    }
-
-    .tc-title {
-        font-size: 0.95rem;
-    }
+    .test-card-modern { padding: 15px; }
+    .tc-icon { width: 38px; height: 38px; font-size: 1.1rem; }
+    .btn-action { padding: 6px 14px; font-size: 0.7rem; }
+    .tc-title { font-size: 0.95rem; }
 }
 
-/* Disable Text Selection Globally */
 body {
     -webkit-user-select: none;
-    /* Safari */
     -moz-user-select: none;
-    /* Firefox */
     -ms-user-select: none;
-    /* IE10+/Edge */
     user-select: none;
-    /* Standard */
 }
 
-/* Optional: Allow selection on input fields so users can still type */
-input,
-textarea {
+input, textarea {
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
 }
 
-/* =========================================
-   SELECTION MODAL STYLES
-   ========================================= */
-
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
     backdrop-filter: blur(5px);
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* Mobile: slide from bottom */
 }
 
-/* On Desktop: Center it */
-@media (min-width: 600px) {
-    .modal-overlay {
-        align-items: center;
-    }
-}
+@media (min-width: 600px) { .modal-overlay { align-items: center; } }
 
 .modal-content {
     background: var(--card-bg);
@@ -2107,15 +1113,13 @@ textarea {
     max-width: 400px;
     padding: 25px;
     border-radius: 20px 20px 0 0;
-    /* Rounded top for mobile */
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     gap: 15px;
     border: 1px solid var(--border-color);
 }
 
-/* Modal Buttons */
 .btn-modal {
     display: flex;
     flex-direction: column;
@@ -2131,71 +1135,37 @@ textarea {
     color: white;
 }
 
-.btn-modal:active {
-    transform: scale(0.98);
-}
-
-.btn-sectional {
-    background: linear-gradient(135deg, #3F72AF, #112D4E);
-    box-shadow: 0 4px 15px rgba(63, 114, 175, 0.3);
-}
-
-.btn-topic {
-    background: linear-gradient(135deg, #6f42c1, #4a2c85);
-    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
-}
-
-.btn-icon {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.btn-modal small {
-    font-size: 0.75rem;
-    opacity: 0.8;
-    font-weight: 400;
-    margin-top: 2px;
-    display: block;
-}
+.btn-modal:active { transform: scale(0.98); }
+.btn-sectional { background: linear-gradient(135deg, #3F72AF, #112D4E); box-shadow: 0 4px 15px rgba(63,114,175,0.3); }
+.btn-topic { background: linear-gradient(135deg, #6f42c1, #4a2c85); box-shadow: 0 4px 15px rgba(111,66,193,0.3); }
+.btn-icon { font-size: 1.5rem; margin-bottom: 5px; }
+.btn-modal small { font-size: 0.75rem; opacity: 0.8; font-weight: 400; margin-top: 2px; display: block; }
 
 .btn-text-close {
     background: linear-gradient(135deg, #dc3545, #c82333) !important;
-    /* Red Gradient */
     color: white !important;
-    /* Force white text */
     border: none;
     font-weight: bold;
     padding: 12px 20px;
     border-radius: 12px;
-    /* Match other buttons */
     cursor: pointer;
     margin-top: 15px;
-    /* Add some space above */
     width: 100%;
-    /* Full width */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 0 15px rgba(220, 53, 69, 0.5);
-    /* Initial Red Glow */
+    box-shadow: 0 0 15px rgba(220,53,69,0.5);
     transition: all 0.3s ease;
 }
 
 .btn-text-close:hover {
     background: linear-gradient(135deg, #e4606d, #dc3545) !important;
-    box-shadow: 0 0 25px rgba(220, 53, 69, 0.8);
-    /* Intensify Glow */
+    box-shadow: 0 0 25px rgba(220,53,69,0.8);
     transform: translateY(-2px);
 }
 
-.btn-text-close:active {
-    transform: scale(0.98);
-    box-shadow: 0 0 10px rgba(220, 53, 69, 0.4);
-}
-
-/* Tiny badge inside the test card */
 .tag-badge {
-    background-color: rgba(63, 114, 175, 0.15);
+    background-color: rgba(63,114,175,0.15);
     color: var(--blue);
     padding: 2px 6px;
     border-radius: 4px;
@@ -2205,80 +1175,26 @@ textarea {
     text-transform: uppercase;
 }
 
-/* Dark mode adjustment */
-body.dark-mode .tag-badge {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #a2d2ff;
-}
-
-.q-content {
-    touch-action: pan-y;
-    /* Allows vertical scroll but captures horizontal swipes */
-}
-
-#sol-image img {
-    margin-top: 12px;
-    max-width: 100%;
-    border-radius: 6px;
-}
-
-/* =========================================
-   PALETTE CURRENT QUESTION HIGHLIGHT (Professional Style)
-   ========================================= */
-
-/* Base styling for current question - smooth transition */
-.pal-btn {
-    transition: all 0.2s ease;
-}
-
-/* Light Mode: Subtle ring with professional blue accent */
 .pal-btn-current {
     border: 2px solid #3F72AF !important;
-    box-shadow: 0 0 0 3px rgba(63, 114, 175, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(63,114,175,0.2) !important;
     font-weight: 700;
     position: relative;
 }
 
-/* Dark Mode: Bright accent with subtle glow */
-body.dark-mode .pal-btn-current {
-    border: 2px solid #58a6ff !important;
-    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15) !important;
-}
-
-/* =========================================
-   RESUME BUTTON STYLING
-   ========================================= */
-
-/* Resume button for in-progress tests - matches theme gradient style */
 .btn-resume {
     background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%) !important;
     color: white !important;
-    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3) !important;
+    box-shadow: 0 4px 10px rgba(74,144,226,0.3) !important;
     border: none !important;
 }
 
 .btn-resume:hover {
     background: linear-gradient(135deg, #357abd 0%, #2a5f99 100%) !important;
-    box-shadow: 0 6px 15px rgba(74, 144, 226, 0.4) !important;
+    box-shadow: 0 6px 15px rgba(74,144,226,0.4) !important;
     transform: translateY(-1px);
 }
 
-/* Dark mode adjustment */
-body.dark-mode .btn-resume {
-    background: linear-gradient(135deg, #58a6ff 0%, #3d8fd1 100%) !important;
-    box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3) !important;
-}
-
-body.dark-mode .btn-resume:hover {
-    background: linear-gradient(135deg, #3d8fd1 0%, #2a6fa8 100%) !important;
-    box-shadow: 0 6px 15px rgba(88, 166, 255, 0.4) !important;
-}
-
-/* =========================================
-   TEST CARD METADATA STYLING
-   ========================================= */
-
-/* Metadata row showing questions, time, marks */
 .tc-metadata {
     display: block;
     font-size: 0.75rem;
@@ -2289,17 +1205,8 @@ body.dark-mode .btn-resume:hover {
     line-height: 1.4;
 }
 
-/* Dark mode adjustment */
-body.dark-mode .tc-metadata {
-    color: #8b949e;
-}
+.main-dashboard { max-width: 1200px !important; }
 
-/* Expand container specifically for the homepage dashboard */
-.main-dashboard {
-    max-width: 1200px !important; 
-}
-
-/* === GROK FORCE NO ANIMATION - PUT AT VERY BOTTOM === */
 #selection-modal.modal-overlay,
 #selection-modal .modal-content,
 .modal-overlay .modal-content,
@@ -2310,24 +1217,7 @@ body.dark-mode .tc-metadata {
     animation: none !important;
 }
 
-#selection-modal.modal-overlay.active .modal-content {
-    transform: none !important;
-    opacity: 1 !important;
-}
+#sol-text .katex { font-size: 1.1em !important; color: var(--text-primary); }
+#sol-text .katex-display { margin: 1em 0; text-align: center; }
 
-@media (min-width: 600px) {
-    #selection-modal .modal-content {
-        transform: none !important;
-        opacity: 1 !important;
-    }
-}
-
-#sol-text .katex {
-    font-size: 1.1em !important;           /* Slightly larger than normal text */
-    color: var(--text-primary);
-}
-
-#sol-text .katex-display {
-    margin: 1em 0;
-    text-align: center;
-}
+.list-view-container { max-width: 800px !important; padding-top: 20px !important; }
