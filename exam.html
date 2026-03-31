@@ -188,6 +188,29 @@
             transform: translateX(-50%) translateY(0);
         }
 
+        #review-end-toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: rgba(21, 101, 192, 0.93);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 24px;
+            font-size: 0.88rem;
+            font-weight: bold;
+            z-index: 99998;
+            opacity: 0;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        #review-end-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
         /* ---- TEXT SIZE BAR ---- */
         #text-size-bar {
             background: #f8f9fa;
@@ -1144,11 +1167,11 @@
             <!-- REVIEW FOOTER BUTTONS -->
             <div class="q-footer" id="review-footer" style="display:none;">
                 <div class="footer-left">
-                    <button class="exam-btn btn-prev-q" id="btn-prev">◀ Prev</button>
-                    <button class="exam-btn btn-next-q" id="btn-next">Next ▶</button>
+                    <button class="exam-btn btn-exit-review" id="btn-exit-review">Exit Review</button>
                 </div>
                 <div class="footer-right">
-                    <button class="exam-btn btn-exit-review" id="btn-exit-review">Exit Review</button>
+                    <button class="exam-btn btn-prev-q" id="btn-prev">◀ Prev</button>
+                    <button class="exam-btn btn-next-q" id="btn-next">Next ▶</button>
                 </div>
             </div>
         </div>
@@ -1200,7 +1223,10 @@
                         <div class="legend-item" style="grid-column:span 2; flex-direction:column; align-items:flex-start; gap:3px;">
                             <div style="display:flex; align-items:center; gap:6px;">
                                 <div class="leg-icon leg-ans-marked" id="count-ans-marked">0</div>
-                                <span>Answered &amp; Marked for Review (will not be evaluated)</span>
+                                <span>Answered &amp; Marked for Review</span>
+                            </div>
+                            <div style="font-size:0.72rem; color:#c62828; font-weight:bold; padding-left:2px;">
+                                ⚠ Not evaluated — marked for review only
                             </div>
                         </div>
                     </div>
@@ -1280,6 +1306,9 @@
 <!-- Scroll wheel blocked toast -->
 <div id="scroll-toast">🚫 You cannot use scroll wheel during the test</div>
 
+<!-- Review boundary toast -->
+<div id="review-end-toast"></div>
+
 <!-- ============ CUSTOM CONFIRM MODAL ============ -->
 <div id="custom-confirm-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
     <div style="background:white; border-radius:10px; padding:28px 28px 20px; max-width:380px; width:90%; box-shadow:0 8px 32px rgba(0,0,0,0.3); font-family:Arial,sans-serif;">
@@ -1326,6 +1355,18 @@
         }
 
         newOk.addEventListener('click', function() { close(); if (onOk) onOk(); });
+    }
+
+    /* ---- REVIEW BOUNDARY TOAST ---- */
+    var reviewEndToastTimer = null;
+    function showReviewEndToast(msg) {
+        var toast = document.getElementById('review-end-toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        if (reviewEndToastTimer) clearTimeout(reviewEndToastTimer);
+        reviewEndToastTimer = setTimeout(function() {
+            toast.classList.remove('show');
+        }, 2200);
     }
 
     /* ---- CUSTOM CONFIRM (keeps fullscreen) ---- */
@@ -1736,9 +1777,9 @@
                 } else if (originalSel === null || originalSel === undefined || r.status === 'not-answered') {
                     statusBadge = `<span class="pro-badge" style="background:#eeeeee;color:#424242;border:1px solid #bdbdbd;">— Skipped</span>`;
                 } else if (r.status === 'ans-rev') {
-                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">Marked (Not Evaluated)</span>`;
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🔖 Marked (Not Evaluated)</span>`;
                 } else if (r.status === 'rev') {
-                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">Marked (Not Evaluated)</span>`;
+                    statusBadge = `<span class="pro-badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🔖 Marked (Not Evaluated)</span>`;
                 } else if (originalSel === q.correctIndex) {
                     statusBadge = `<span class="pro-badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✓ Correct</span>`;
                 } else {
@@ -1803,52 +1844,68 @@
             var showSol = false;
             if (this.isReview && isPractice && reattemptSel !== null) showSol = true;
 
+            // isAnsMarked needs to be in scope for both options loop and message below
+            var isAnsMarked = (r.status === 'ans-rev');
+
             q.options.forEach(function(opt, i) {
                 var row = document.createElement('div');
                 row.className = 'opt-row';
                 var letter = ['a','b','c','d','e'][i];
 
-                // --- ORIGINAL SELECTION SIGN (end of row) ---
-                // Rules:
-                // - Never show when re-attempt is ON and no guess made yet (hide until after pick)
-                // - Never show sign for ans-rev (Answered & Marked) — not evaluated
-                // - Show ✓ if original was correct, ✗ if original was wrong
-                // - In re-attempt mode after guess: only show if this option is the original pick
-                var origSign = '';
-                var isAnsMarked = (r.status === 'ans-rev'); // not evaluated
-
-                if (self.isReview && originalSel === i && !isAnsMarked) {
-                    var signCorrect = (originalSel === q.correctIndex);
-                    if (!isPractice) {
-                        // Normal review (re-attempt OFF) — always show sign
-                        origSign = signCorrect
-                            ? '<span class="opt-end-sign sign-correct">✓</span>'
-                            : '<span class="opt-end-sign sign-wrong">✗</span>';
-                    } else if (isPractice && reattemptSel !== null) {
-                        // Re-attempt ON, after guess — show sign for original pick
-                        origSign = signCorrect
-                            ? '<span class="opt-end-sign sign-correct">✓</span>'
-                            : '<span class="opt-end-sign sign-wrong">✗</span>';
-                    }
-                    // Re-attempt ON, no guess yet → origSign stays '' (hidden)
-                }
+                // --- END LABEL/SIGN ---
+                var endLabel = '';
 
                 if (!self.isReview) {
                     // ---- DURING TEST ----
                     if (originalSel === i) row.classList.add('selected');
                     row.onclick = function() { r.sel = i; self.loadQ(); };
 
+                } else if (isAnsMarked) {
+                    // ---- ANSWERED & MARKED FOR REVIEW ----
+                    if (!isPractice) {
+                        // Re-attempt OFF: show selected in blue, no green/red
+                        row.style.pointerEvents = 'none';
+                        if (originalSel === i) {
+                            row.classList.add('selected');
+                            endLabel = '<span style="font-size:0.75rem;color:#1565C0;font-weight:bold;margin-left:10px;flex-shrink:0;white-space:nowrap;">Your Choice</span>';
+                        }
+                    } else if (isPractice && reattemptSel === null) {
+                        // Re-attempt ON, waiting for pick: clickable, "Your Choice" label on original
+                        row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
+                        if (originalSel === i) {
+                            row.classList.add('selected');
+                            endLabel = '<span style="font-size:0.75rem;color:#1565C0;font-weight:bold;margin-left:10px;flex-shrink:0;white-space:nowrap;">Your Choice</span>';
+                        }
+                    } else {
+                        // Re-attempt ON, after guess: green=correct, red=wrong, "Your Choice" on original
+                        row.style.pointerEvents = 'none';
+                        if (i === q.correctIndex) {
+                            row.classList.add('correct');
+                        } else if (reattemptSel === i && i !== q.correctIndex) {
+                            row.classList.add('wrong');
+                        }
+                        if (originalSel === i) {
+                            endLabel = '<span style="font-size:0.75rem;color:#555;font-weight:bold;margin-left:10px;flex-shrink:0;white-space:nowrap;">Your Choice</span>';
+                        }
+                    }
+
                 } else if (!isPractice) {
                     // ---- NORMAL REVIEW (re-attempt OFF) ----
                     row.style.pointerEvents = 'none';
                     if (i === q.correctIndex) {
                         row.classList.add('correct');
-                    } else if (originalSel === i && !isAnsMarked) {
+                    } else if (originalSel === i) {
                         row.classList.add('wrong');
+                    }
+                    if (originalSel === i && !isAnsMarked) {
+                        var signCorrect = (originalSel === q.correctIndex);
+                        endLabel = signCorrect
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
                     }
 
                 } else if (isPractice && reattemptSel === null) {
-                    // ---- RE-ATTEMPT ON: waiting for pick — no highlights, no signs ----
+                    // ---- RE-ATTEMPT ON: waiting for pick ----
                     row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
 
                 } else {
@@ -1859,22 +1916,66 @@
                     } else if (reattemptSel === i) {
                         row.classList.add('wrong');
                     }
+                    if (originalSel === i) {
+                        var signCorrect2 = (originalSel === q.correctIndex);
+                        endLabel = signCorrect2
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
+                    }
                 }
 
                 row.innerHTML = `
                     <div class="opt-letter" style="flex-shrink:0;">${letter.toUpperCase()}</div>
                     <div style="flex:1;line-height:1.55;">${self.formatText(opt)}</div>
-                    ${origSign}
+                    ${endLabel}
                 `;
                 box.appendChild(row);
             });
+
+            // Inline message for Answered & Marked — only show when re-attempt is OFF
+            if (this.isReview && isAnsMarked && !isPractice && originalSel !== null && originalSel !== undefined) {
+                var msgDiv = document.createElement('div');
+                var wasCorrect = (originalSel === q.correctIndex);
+                msgDiv.style.cssText = 'margin-top:10px; padding:10px 14px; border-radius:8px; font-weight:bold; font-size:0.9rem;';
+                if (wasCorrect) {
+                    msgDiv.style.color = '#2e7d32';
+                    msgDiv.style.background = '#e8f5e9';
+                    msgDiv.style.border = '1px solid #a5d6a7';
+                    msgDiv.textContent = '✓ Your answer was correct (not evaluated — marked for review)';
+                } else {
+                    msgDiv.style.color = '#c62828';
+                    msgDiv.style.background = '#ffebee';
+                    msgDiv.style.border = '1px solid #ef9a9a';
+                    msgDiv.textContent = '✗ Your answer was incorrect (not evaluated — marked for review)';
+                }
+                box.appendChild(msgDiv);
+            }
+
+            // When re-attempt ON + ans-rev + after guess: show result message too
+            if (this.isReview && isAnsMarked && isPractice && reattemptSel !== null && originalSel !== null && originalSel !== undefined) {
+                var msgDiv2 = document.createElement('div');
+                var wasCorrect2 = (originalSel === q.correctIndex);
+                msgDiv2.style.cssText = 'margin-top:10px; padding:10px 14px; border-radius:8px; font-weight:bold; font-size:0.9rem;';
+                if (wasCorrect2) {
+                    msgDiv2.style.color = '#2e7d32';
+                    msgDiv2.style.background = '#e8f5e9';
+                    msgDiv2.style.border = '1px solid #a5d6a7';
+                    msgDiv2.textContent = '✓ Your original answer was correct (not evaluated — marked for review)';
+                } else {
+                    msgDiv2.style.color = '#c62828';
+                    msgDiv2.style.background = '#ffebee';
+                    msgDiv2.style.border = '1px solid #ef9a9a';
+                    msgDiv2.textContent = '✗ Your original answer was incorrect (not evaluated — marked for review)';
+                }
+                box.appendChild(msgDiv2);
+            }
 
             // Solution box — show in normal review always, in re-attempt after guess
             var solBox = document.getElementById('solution-box');
             var showSolBox = false;
             if (this.isReview) {
-                if (!isPractice) showSolBox = true; // normal review always shows solution
-                else if (isPractice && reattemptSel !== null) showSolBox = true; // re-attempt after guess
+                if (!isPractice) showSolBox = true;
+                else if (isPractice && reattemptSel !== null) showSolBox = true;
             }
             if (showSolBox) {
                 solBox.style.display = 'block';
@@ -2054,8 +2155,25 @@
             this.loadQ();
         },
 
-        prevQ: function() { if (this.currQ > 0) { this.captureQuestionTime(); this.currQ--; this.loadQ(); } },
-        nextQ: function() { if (this.currQ < this.data.questions.length - 1) { this.captureQuestionTime(); this.currQ++; this.loadQ(); } },
+        prevQ: function() {
+            if (this.currQ > 0) {
+                this.captureQuestionTime();
+                this.currQ--;
+                this.loadQ();
+            } else if (this.isReview) {
+                showReviewEndToast('⬅ You are already at the first question');
+            }
+        },
+
+        nextQ: function() {
+            if (this.currQ < this.data.questions.length - 1) {
+                this.captureQuestionTime();
+                this.currQ++;
+                this.loadQ();
+            } else if (this.isReview) {
+                showReviewEndToast('✅ You have reached the last question');
+            }
+        },
 
         captureQuestionTime: function() {
             if (this.isReview || this.isPaused) return;
