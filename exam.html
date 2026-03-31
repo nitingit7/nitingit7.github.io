@@ -1844,34 +1844,28 @@
             var showSol = false;
             if (this.isReview && isPractice && reattemptSel !== null) showSol = true;
 
+            // isAnsMarked needs to be in scope for both options loop and message below
+            var isAnsMarked = (r.status === 'ans-rev');
+
             q.options.forEach(function(opt, i) {
                 var row = document.createElement('div');
                 row.className = 'opt-row';
                 var letter = ['a','b','c','d','e'][i];
 
                 // --- ORIGINAL SELECTION SIGN (end of row) ---
-                // Rules:
-                // - Never show when re-attempt is ON and no guess made yet (hide until after pick)
-                // - Never show sign for ans-rev (Answered & Marked) — not evaluated
-                // - Show ✓ if original was correct, ✗ if original was wrong
-                // - In re-attempt mode after guess: only show if this option is the original pick
                 var origSign = '';
-                var isAnsMarked = (r.status === 'ans-rev'); // not evaluated
 
                 if (self.isReview && originalSel === i && !isAnsMarked) {
                     var signCorrect = (originalSel === q.correctIndex);
                     if (!isPractice) {
-                        // Normal review (re-attempt OFF) — always show sign
                         origSign = signCorrect
                             ? '<span class="opt-end-sign sign-correct">✓</span>'
                             : '<span class="opt-end-sign sign-wrong">✗</span>';
                     } else if (isPractice && reattemptSel !== null) {
-                        // Re-attempt ON, after guess — show sign for original pick
                         origSign = signCorrect
                             ? '<span class="opt-end-sign sign-correct">✓</span>'
                             : '<span class="opt-end-sign sign-wrong">✗</span>';
                     }
-                    // Re-attempt ON, no guess yet → origSign stays '' (hidden)
                 }
 
                 if (!self.isReview) {
@@ -1879,17 +1873,22 @@
                     if (originalSel === i) row.classList.add('selected');
                     row.onclick = function() { r.sel = i; self.loadQ(); };
 
+                } else if (isAnsMarked) {
+                    // ---- ANSWERED & MARKED FOR REVIEW — show selected only, no green/red ----
+                    row.style.pointerEvents = 'none';
+                    if (originalSel === i) row.classList.add('selected'); // blue highlight only
+
                 } else if (!isPractice) {
                     // ---- NORMAL REVIEW (re-attempt OFF) ----
                     row.style.pointerEvents = 'none';
                     if (i === q.correctIndex) {
                         row.classList.add('correct');
-                    } else if (originalSel === i && !isAnsMarked) {
+                    } else if (originalSel === i) {
                         row.classList.add('wrong');
                     }
 
                 } else if (isPractice && reattemptSel === null) {
-                    // ---- RE-ATTEMPT ON: waiting for pick — no highlights, no signs ----
+                    // ---- RE-ATTEMPT ON: waiting for pick ----
                     row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
 
                 } else {
@@ -1909,6 +1908,25 @@
                 `;
                 box.appendChild(row);
             });
+
+            // Inline message for Answered & Marked questions — show correct/wrong info as text
+            if (this.isReview && isAnsMarked && originalSel !== null && originalSel !== undefined) {
+                var msgDiv = document.createElement('div');
+                var wasCorrect = (originalSel === q.correctIndex);
+                msgDiv.style.cssText = 'margin-top:10px; padding:10px 14px; border-radius:8px; font-weight:bold; font-size:0.9rem;';
+                if (wasCorrect) {
+                    msgDiv.style.color = '#2e7d32';
+                    msgDiv.style.background = '#e8f5e9';
+                    msgDiv.style.border = '1px solid #a5d6a7';
+                    msgDiv.textContent = '✓ Your answer was correct (not evaluated — marked for review)';
+                } else {
+                    msgDiv.style.color = '#c62828';
+                    msgDiv.style.background = '#ffebee';
+                    msgDiv.style.border = '1px solid #ef9a9a';
+                    msgDiv.textContent = '✗ Your answer was incorrect (not evaluated — marked for review)';
+                }
+                box.appendChild(msgDiv);
+            }
 
             // Solution box — show in normal review always, in re-attempt after guess
             var solBox = document.getElementById('solution-box');
