@@ -1852,21 +1852,8 @@
                 row.className = 'opt-row';
                 var letter = ['a','b','c','d','e'][i];
 
-                // --- ORIGINAL SELECTION SIGN (end of row) ---
-                var origSign = '';
-
-                if (self.isReview && originalSel === i && !isAnsMarked) {
-                    var signCorrect = (originalSel === q.correctIndex);
-                    if (!isPractice) {
-                        origSign = signCorrect
-                            ? '<span class="opt-end-sign sign-correct">✓</span>'
-                            : '<span class="opt-end-sign sign-wrong">✗</span>';
-                    } else if (isPractice && reattemptSel !== null) {
-                        origSign = signCorrect
-                            ? '<span class="opt-end-sign sign-correct">✓</span>'
-                            : '<span class="opt-end-sign sign-wrong">✗</span>';
-                    }
-                }
+                // --- END LABEL/SIGN ---
+                var endLabel = '';
 
                 if (!self.isReview) {
                     // ---- DURING TEST ----
@@ -1874,9 +1861,33 @@
                     row.onclick = function() { r.sel = i; self.loadQ(); };
 
                 } else if (isAnsMarked) {
-                    // ---- ANSWERED & MARKED FOR REVIEW — show selected only, no green/red ----
-                    row.style.pointerEvents = 'none';
-                    if (originalSel === i) row.classList.add('selected'); // blue highlight only
+                    // ---- ANSWERED & MARKED FOR REVIEW ----
+                    if (!isPractice) {
+                        // Re-attempt OFF: show selected in blue, no green/red
+                        row.style.pointerEvents = 'none';
+                        if (originalSel === i) {
+                            row.classList.add('selected');
+                            endLabel = '<span style="font-size:0.75rem;color:#1565C0;font-weight:bold;margin-left:10px;flex-shrink:0;white-space:nowrap;">Your Choice</span>';
+                        }
+                    } else if (isPractice && reattemptSel === null) {
+                        // Re-attempt ON, waiting for pick: clickable, "Your Choice" label on original
+                        row.onclick = function() { self.reviewGuesses[self.currQ] = i; self.loadQ(); };
+                        if (originalSel === i) {
+                            row.classList.add('selected');
+                            endLabel = '<span style="font-size:0.75rem;color:#1565C0;font-weight:bold;margin-left:10px;flex-shrink:0;white-space:nowrap;">Your Choice</span>';
+                        }
+                    } else {
+                        // Re-attempt ON, after guess: green=correct, red=wrong, "Your Choice" on original
+                        row.style.pointerEvents = 'none';
+                        if (i === q.correctIndex) {
+                            row.classList.add('correct');
+                        } else if (reattemptSel === i && i !== q.correctIndex) {
+                            row.classList.add('wrong');
+                        }
+                        if (originalSel === i) {
+                            endLabel = '<span style="font-size:0.75rem;color:#555;font-weight:bold;margin-left:10px;flex-shrink:0;white-space:nowrap;">Your Choice</span>';
+                        }
+                    }
 
                 } else if (!isPractice) {
                     // ---- NORMAL REVIEW (re-attempt OFF) ----
@@ -1885,6 +1896,12 @@
                         row.classList.add('correct');
                     } else if (originalSel === i) {
                         row.classList.add('wrong');
+                    }
+                    if (originalSel === i && !isAnsMarked) {
+                        var signCorrect = (originalSel === q.correctIndex);
+                        endLabel = signCorrect
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
                     }
 
                 } else if (isPractice && reattemptSel === null) {
@@ -1899,18 +1916,24 @@
                     } else if (reattemptSel === i) {
                         row.classList.add('wrong');
                     }
+                    if (originalSel === i) {
+                        var signCorrect2 = (originalSel === q.correctIndex);
+                        endLabel = signCorrect2
+                            ? '<span class="opt-end-sign sign-correct">✓</span>'
+                            : '<span class="opt-end-sign sign-wrong">✗</span>';
+                    }
                 }
 
                 row.innerHTML = `
                     <div class="opt-letter" style="flex-shrink:0;">${letter.toUpperCase()}</div>
                     <div style="flex:1;line-height:1.55;">${self.formatText(opt)}</div>
-                    ${origSign}
+                    ${endLabel}
                 `;
                 box.appendChild(row);
             });
 
-            // Inline message for Answered & Marked questions — show correct/wrong info as text
-            if (this.isReview && isAnsMarked && originalSel !== null && originalSel !== undefined) {
+            // Inline message for Answered & Marked — only show when re-attempt is OFF
+            if (this.isReview && isAnsMarked && !isPractice && originalSel !== null && originalSel !== undefined) {
                 var msgDiv = document.createElement('div');
                 var wasCorrect = (originalSel === q.correctIndex);
                 msgDiv.style.cssText = 'margin-top:10px; padding:10px 14px; border-radius:8px; font-weight:bold; font-size:0.9rem;';
@@ -1928,12 +1951,31 @@
                 box.appendChild(msgDiv);
             }
 
+            // When re-attempt ON + ans-rev + after guess: show result message too
+            if (this.isReview && isAnsMarked && isPractice && reattemptSel !== null && originalSel !== null && originalSel !== undefined) {
+                var msgDiv2 = document.createElement('div');
+                var wasCorrect2 = (originalSel === q.correctIndex);
+                msgDiv2.style.cssText = 'margin-top:10px; padding:10px 14px; border-radius:8px; font-weight:bold; font-size:0.9rem;';
+                if (wasCorrect2) {
+                    msgDiv2.style.color = '#2e7d32';
+                    msgDiv2.style.background = '#e8f5e9';
+                    msgDiv2.style.border = '1px solid #a5d6a7';
+                    msgDiv2.textContent = '✓ Your original answer was correct (not evaluated — marked for review)';
+                } else {
+                    msgDiv2.style.color = '#c62828';
+                    msgDiv2.style.background = '#ffebee';
+                    msgDiv2.style.border = '1px solid #ef9a9a';
+                    msgDiv2.textContent = '✗ Your original answer was incorrect (not evaluated — marked for review)';
+                }
+                box.appendChild(msgDiv2);
+            }
+
             // Solution box — show in normal review always, in re-attempt after guess
             var solBox = document.getElementById('solution-box');
             var showSolBox = false;
             if (this.isReview) {
-                if (!isPractice) showSolBox = true; // normal review always shows solution
-                else if (isPractice && reattemptSel !== null) showSolBox = true; // re-attempt after guess
+                if (!isPractice) showSolBox = true;
+                else if (isPractice && reattemptSel !== null) showSolBox = true;
             }
             if (showSolBox) {
                 solBox.style.display = 'block';
